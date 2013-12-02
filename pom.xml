@@ -70,6 +70,13 @@
             <version>1.4</version>
         </dependency>
 
+		<!-- Needed for SOAP clients -->
+		<dependency>
+			<groupId>org.apache.axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4</version>
+		</dependency>
+
     </dependencies>
 
     <build>
