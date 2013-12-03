@@ -1,4 +1,5 @@
 <%@ page import="canvas.SignedRequest" %>
+<%@ page import="sonoma.SFDoc" %>
 <%@ page import="java.util.Map" %>
 <%
     // Pull the signed request out of the request body and verify/decode it.
@@ -11,13 +12,16 @@
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
     //String yourConsumerSecret="1818663124211010887";
     String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);
+
+	SFDoc mydoc = new SFDoc();
+	mydoc.initMetadataBinding("https://cs8.salesforce.com", signedRequestJson);
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 
-    <title>Hello World Canvas Example</title>
+    <title>Salesforce Documentation</title>
 
     <link rel="stylesheet" type="text/css" href="/sdk/css/canvas.css" />
 
@@ -42,7 +46,14 @@
     </script>
 </head>
 <body>
-    <br/>
-    <h1>Hello <span id='username'></span></h1>
+	<div>PROFILE: System Administrator</div>
+	<br/>
+	<div>Applications</div>
+	<table>
+		<th>Name</th>
+		<% for (String my : mydoc.getProfiles()) { %>
+			<%= my %>
+		<% } %>
+	</table>
 </body>
 </html>
