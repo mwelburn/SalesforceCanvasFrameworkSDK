@@ -62,7 +62,6 @@ public class SFDoc
 		if (metadatabinding == null)
 		{
 			metadatabinding = (MetadataBindingStub)new MetadataServiceLocator().getMetadata();
-	        // TODO - remove hardcoded url
 			metadatabinding._setProperty(MetadataBindingStub.ENDPOINT_ADDRESS_PROPERTY, instanceUrl);
 	
 	        SessionHeader sh = new SessionHeader();

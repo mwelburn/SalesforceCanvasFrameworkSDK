@@ -1,4 +1,5 @@
 <%@ page import="canvas.SignedRequest" %>
+<%@ page import="canvas.CanvasRequest" %>
 <%@ page import="sonoma.SFDoc" %>
 <%@ page import="java.util.Map" %>
 <%
@@ -11,10 +12,10 @@
     }
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
     //String yourConsumerSecret="1818663124211010887";
-    String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);
-
+    CanvasRequest cr = SignedRequest.verifyAndDecode(signedRequest[0], yourConsumerSecret);
+    
 	SFDoc mydoc = new SFDoc();
-	mydoc.initMetadataBinding("https://cs8.salesforce.com", signedRequestJson);
+	mydoc.initMetadataBinding(cr.getClient().getInstanceUrl(), cr.getClient().getOAuthToken());
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -35,13 +36,6 @@
             // Not in Iframe
             alert("This canvas app must be included within an iframe");
         }
-
-        Sfdc.canvas(function() {
-            var sr = JSON.parse('<%=signedRequestJson%>');
-            // Save the token
-            Sfdc.canvas.oauth.token(sr.oauthToken);
-            Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
-        });
 
     </script>
 </head>
