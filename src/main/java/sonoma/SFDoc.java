@@ -26,6 +26,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import sforce.soap._2006._04.metadata.SessionHeader;
+
 import com.sforce.soap._2006._04.metadata.AsyncRequestState;
 import com.sforce.soap._2006._04.metadata.AsyncResult;
 import com.sforce.soap._2006._04.metadata.FileProperties;
@@ -33,7 +35,6 @@ import com.sforce.soap._2006._04.metadata.ListMetadataQuery;
 import com.sforce.soap._2006._04.metadata.MetadataBindingStub;
 import com.sforce.soap._2006._04.metadata.MetadataServiceLocator;
 import com.sforce.soap._2006._04.metadata.PackageTypeMembers;
-import com.sforce.soap._2006._04.metadata.Profile;
 import com.sforce.soap._2006._04.metadata.RetrieveMessage;
 import com.sforce.soap._2006._04.metadata.RetrieveRequest;
 import com.sforce.soap._2006._04.metadata.RetrieveResult;
@@ -293,19 +294,4 @@ public class SFDoc
         
         //ZipFile zip = new ZipFile()
     }
-    
-	public class SessionHeader
-	{
-		public String _sessionId;
-		
-		public void setSessionId(String sessionId)
-		{
-			this._sessionId = sessionId;
-		}
-		
-		public String getSessionId()
-		{
-			return this._sessionId;
-		}
-	}
 }
