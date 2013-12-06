@@ -65,8 +65,8 @@ public class SFDoc
 		ListMetadataQuery query = new ListMetadataQuery();
 		query.setType("Profile");
 		//query.setFolder(null);
-		ListMetadataQuery query2 = new ListMetadataQuery();
-		query2.setType("CustomTab");
+//		ListMetadataQuery query2 = new ListMetadataQuery();
+//		query2.setType("CustomTab");
 		//query2.setFolder(null);
 		
 		List<String> mylist = new ArrayList<String>();
