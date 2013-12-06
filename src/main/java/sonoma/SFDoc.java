@@ -72,15 +72,15 @@ public class SFDoc
 		List<String> mylist = new ArrayList<String>();
 		double asOfVersion = 29.0;
 		// Assuming that the SOAP binding has already been established.
-		FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[] {query}, asOfVersion);
+//		FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[] {query}, asOfVersion);
 //		FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[] {query, query2}, asOfVersion);
-		if (lmr != null) {
-			for (FileProperties n : lmr) {
-				System.out.println("Component fullName: " + n.getFullName());
-				System.out.println("Component type: " + n.getType());
-				mylist.add(n.getFullName() + " : " + n.getType());
-			}
-		}
+//		if (lmr != null) {
+//			for (FileProperties n : lmr) {
+//				System.out.println("Component fullName: " + n.getFullName());
+//				System.out.println("Component type: " + n.getType());
+//				mylist.add(n.getFullName() + " : " + n.getType());
+//			}
+//		}
 		return mylist;
 	}
 	
