@@ -12,12 +12,12 @@
     }
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
     //String yourConsumerSecret="1818663124211010887";
-    %>Before canvas request<%
+    %><br>Before canvas request<%
     CanvasRequest cr = SignedRequest.verifyAndDecode(signedRequest[0], yourConsumerSecret);
-    %>after canvas request<%
+    %><br>after canvas request<%
 //    cr.toString();
     
-//	SFDoc mydoc = new SFDoc();
+	SFDoc mydoc = new SFDoc();
 //	mydoc.initMetadataBinding(cr.getClient().getInstanceUrl(), cr.getClient().getOAuthToken());
 %>
 
