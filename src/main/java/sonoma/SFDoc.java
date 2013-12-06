@@ -72,6 +72,7 @@ public class SFDoc
 		List<String> mylist = new ArrayList<String>();
 		double asOfVersion = 29.0;
 		// Assuming that the SOAP binding has already been established.
+        FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[]{}, asOfVersion);
 //		FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[] {query}, asOfVersion);
 //		FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[] {query, query2}, asOfVersion);
 //		if (lmr != null) {
