@@ -42,14 +42,12 @@
 <body>
 	<div>PROFILE: System Administrator</div>
     <br/>
-    <%= yourConsumerSecret %>
-	<br/>
 	<div>Applications</div>
 	<table>
 		<th>Name</th>
-		<%--<% for (String my : mydoc.getProfiles()) { %>--%>
-			<%--<%= my %>--%>
-		<%--<% } %>--%>
+		<% for (String my : mydoc.getProfiles()) { %>
+			<%= my %>
+		<% } %>
 	</table>
 </body>
 </html>
