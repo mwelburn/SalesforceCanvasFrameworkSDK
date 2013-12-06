@@ -12,10 +12,8 @@
     }
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
     //String yourConsumerSecret="1818663124211010887";
-    %><br>Before canvas request<%
     CanvasRequest cr = SignedRequest.verifyAndDecode(signedRequest[0], yourConsumerSecret);
-    %><br>after canvas request<%
-    
+
 	SFDoc mydoc = new SFDoc();
 	mydoc.initMetadataBinding(cr.getClient().getInstanceUrl(), cr.getClient().getOAuthToken());
 %>
@@ -47,9 +45,9 @@
 	<div>Applications</div>
 	<table>
 		<th>Name</th>
-		<%--<% for (String my : mydoc.getProfiles()) { %>--%>
-			<%--<%= my %>--%>
-		<%--<% } %>--%>
+		<% for (String my : mydoc.getProfiles()) { %>
+			<%= my %>
+		<% } %>
 	</table>
 </body>
 </html>
