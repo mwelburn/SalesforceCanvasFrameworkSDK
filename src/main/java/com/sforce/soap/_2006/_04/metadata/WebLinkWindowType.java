@@ -1,76 +1,60 @@
-/**
- * WebLinkWindowType.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class WebLinkWindowType implements java.io.Serializable {
-    private java.lang.String _value_;
-    private static java.util.HashMap _table_ = new java.util.HashMap();
+import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
+import javax.xml.bind.annotation.XmlType;
 
-    // Constructor
-    protected WebLinkWindowType(java.lang.String value) {
-        _value_ = value;
-        _table_.put(_value_,this);
+
+/**
+ * <p>Java class for WebLinkWindowType.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="WebLinkWindowType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="newWindow"/>
+ *     &lt;enumeration value="sidebar"/>
+ *     &lt;enumeration value="noSidebar"/>
+ *     &lt;enumeration value="replace"/>
+ *     &lt;enumeration value="onClickJavaScript"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
+ * </pre>
+ * 
+ */
+@XmlType(name = "WebLinkWindowType", namespace = "http://soap.sforce.com/2006/04/metadata")
+@XmlEnum
+public enum WebLinkWindowType {
+
+    @XmlEnumValue("newWindow")
+    NEW_WINDOW("newWindow"),
+    @XmlEnumValue("sidebar")
+    SIDEBAR("sidebar"),
+    @XmlEnumValue("noSidebar")
+    NO_SIDEBAR("noSidebar"),
+    @XmlEnumValue("replace")
+    REPLACE("replace"),
+    @XmlEnumValue("onClickJavaScript")
+    ON_CLICK_JAVA_SCRIPT("onClickJavaScript");
+    private final String value;
+
+    WebLinkWindowType(String v) {
+        value = v;
     }
 
-    public static final java.lang.String _newWindow = "newWindow";
-    public static final java.lang.String _sidebar = "sidebar";
-    public static final java.lang.String _noSidebar = "noSidebar";
-    public static final java.lang.String _replace = "replace";
-    public static final java.lang.String _onClickJavaScript = "onClickJavaScript";
-    public static final WebLinkWindowType newWindow = new WebLinkWindowType(_newWindow);
-    public static final WebLinkWindowType sidebar = new WebLinkWindowType(_sidebar);
-    public static final WebLinkWindowType noSidebar = new WebLinkWindowType(_noSidebar);
-    public static final WebLinkWindowType replace = new WebLinkWindowType(_replace);
-    public static final WebLinkWindowType onClickJavaScript = new WebLinkWindowType(_onClickJavaScript);
-    public java.lang.String getValue() { return _value_;}
-    public static WebLinkWindowType fromValue(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        WebLinkWindowType enumeration = (WebLinkWindowType)
-            _table_.get(value);
-        if (enumeration==null) throw new java.lang.IllegalArgumentException();
-        return enumeration;
+    public String value() {
+        return value;
     }
-    public static WebLinkWindowType fromString(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        return fromValue(value);
-    }
-    public boolean equals(java.lang.Object obj) {return (obj == this);}
-    public int hashCode() { return toString().hashCode();}
-    public java.lang.String toString() { return _value_;}
-    public java.lang.Object readResolve() throws java.io.ObjectStreamException { return fromValue(_value_);}
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumSerializer(
-            _javaType, _xmlType);
-    }
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumDeserializer(
-            _javaType, _xmlType);
-    }
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(WebLinkWindowType.class);
 
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WebLinkWindowType"));
-    }
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public static WebLinkWindowType fromValue(String v) {
+        for (WebLinkWindowType c: WebLinkWindowType.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

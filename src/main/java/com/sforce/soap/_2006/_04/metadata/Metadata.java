@@ -1,120 +1,157 @@
-/**
- * Metadata.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Metadata  implements java.io.Serializable {
-    private java.lang.String fullName;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
-    public Metadata() {
-    }
 
-    public Metadata(
-           java.lang.String fullName) {
-           this.fullName = fullName;
-    }
+/**
+ * <p>Java class for Metadata complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Metadata">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="fullName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Metadata", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "fullName"
+})
+@XmlSeeAlso({
+    WorkflowRule.class,
+    Skill.class,
+    ExternalDataSource.class,
+    IdeasSettings.class,
+    LiveAgentSettings.class,
+    ActivitiesSettings.class,
+    CustomSite.class,
+    ReportType.class,
+    CustomPageWebLink.class,
+    InstalledPackage.class,
+    Queue.class,
+    CustomField.class,
+    AssignmentRule.class,
+    LiveChatAgentConfig.class,
+    BusinessProcess.class,
+    PermissionSet.class,
+    ForecastingSettings.class,
+    Package.class,
+    CustomApplicationComponent.class,
+    FieldSet.class,
+    CustomLabel.class,
+    BusinessHoursEntry.class,
+    ChatterAnswersSettings.class,
+    ProductSettings.class,
+    OpportunitySettings.class,
+    LiveChatDeployment.class,
+    CompanySettings.class,
+    HomePageLayout.class,
+    AssignmentRules.class,
+    EscalationRule.class,
+    EntitlementTemplate.class,
+    ContractSettings.class,
+    CallCenter.class,
+    PicklistValue.class,
+    RemoteSiteSetting.class,
+    QuoteSettings.class,
+    LiveChatButton.class,
+    Network.class,
+    AccountSettings.class,
+    KnowledgeSettings.class,
+    AutoResponseRules.class,
+    HomePageComponent.class,
+    SamlSsoConfig.class,
+    MobileSettings.class,
+    EscalationRules.class,
+    CustomDataType.class,
+    EntitlementProcess.class,
+    RecordType.class,
+    Profile.class,
+    ConnectedApp.class,
+    Layout.class,
+    WebLink.class,
+    AnalyticSnapshot.class,
+    QuickAction.class,
+    MetadataWithContent.class,
+    FlexiPage.class,
+    Workflow.class,
+    AddressSettings.class,
+    SecuritySettings.class,
+    PostTemplate.class,
+    AuthProvider.class,
+    NamedFilter.class,
+    ApprovalProcess.class,
+    MilestoneType.class,
+    AutoResponseRule.class,
+    Flow.class,
+    BusinessHoursSettings.class,
+    Report.class,
+    ListView.class,
+    CaseSettings.class,
+    Portal.class,
+    RoleOrTerritory.class,
+    Group.class,
+    DataCategoryGroup.class,
+    ValidationRule.class,
+    Dashboard.class,
+    CustomObject.class,
+    Translations.class,
+    CustomLabels.class,
+    WorkflowAction.class,
+    BaseSharingRule.class,
+    SynonymDictionary.class,
+    CustomTab.class,
+    Letterhead.class,
+    EntitlementSettings.class,
+    Folder.class,
+    SharingReason.class,
+    CompactLayout.class,
+    CustomObjectTranslation.class,
+    CustomApplication.class,
+    Community.class,
+    SharingRules.class
+})
+public class Metadata {
 
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String fullName;
 
     /**
-     * Gets the fullName value for this Metadata.
+     * Gets the value of the fullName property.
      * 
-     * @return fullName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFullName() {
+    public String getFullName() {
         return fullName;
     }
 
-
     /**
-     * Sets the fullName value for this Metadata.
+     * Sets the value of the fullName property.
      * 
-     * @param fullName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFullName(java.lang.String fullName) {
-        this.fullName = fullName;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Metadata)) return false;
-        Metadata other = (Metadata) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.fullName==null && other.getFullName()==null) || 
-             (this.fullName!=null &&
-              this.fullName.equals(other.getFullName())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getFullName() != null) {
-            _hashCode += getFullName().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Metadata.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Metadata"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fullName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fullName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setFullName(String value) {
+        this.fullName = value;
     }
 
 }

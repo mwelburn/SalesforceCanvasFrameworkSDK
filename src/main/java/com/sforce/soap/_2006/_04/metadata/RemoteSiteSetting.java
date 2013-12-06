@@ -1,223 +1,132 @@
-/**
- * RemoteSiteSetting.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class RemoteSiteSetting  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String description;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private boolean disableProtocolSecurity;
 
-    private boolean isActive;
+/**
+ * <p>Java class for RemoteSiteSetting complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="RemoteSiteSetting">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="disableProtocolSecurity" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="isActive" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="url" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "RemoteSiteSetting", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "description",
+    "disableProtocolSecurity",
+    "isActive",
+    "url"
+})
+public class RemoteSiteSetting
+    extends Metadata
+{
 
-    private java.lang.String url;
-
-    public RemoteSiteSetting() {
-    }
-
-    public RemoteSiteSetting(
-           java.lang.String fullName,
-           java.lang.String description,
-           boolean disableProtocolSecurity,
-           boolean isActive,
-           java.lang.String url) {
-        super(
-            fullName);
-        this.description = description;
-        this.disableProtocolSecurity = disableProtocolSecurity;
-        this.isActive = isActive;
-        this.url = url;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean disableProtocolSecurity;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean isActive;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String url;
 
     /**
-     * Gets the description value for this RemoteSiteSetting.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this RemoteSiteSetting.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the disableProtocolSecurity value for this RemoteSiteSetting.
+     * Gets the value of the disableProtocolSecurity property.
      * 
-     * @return disableProtocolSecurity
      */
     public boolean isDisableProtocolSecurity() {
         return disableProtocolSecurity;
     }
 
-
     /**
-     * Sets the disableProtocolSecurity value for this RemoteSiteSetting.
+     * Sets the value of the disableProtocolSecurity property.
      * 
-     * @param disableProtocolSecurity
      */
-    public void setDisableProtocolSecurity(boolean disableProtocolSecurity) {
-        this.disableProtocolSecurity = disableProtocolSecurity;
+    public void setDisableProtocolSecurity(boolean value) {
+        this.disableProtocolSecurity = value;
     }
 
-
     /**
-     * Gets the isActive value for this RemoteSiteSetting.
+     * Gets the value of the isActive property.
      * 
-     * @return isActive
      */
     public boolean isIsActive() {
         return isActive;
     }
 
-
     /**
-     * Sets the isActive value for this RemoteSiteSetting.
+     * Sets the value of the isActive property.
      * 
-     * @param isActive
      */
-    public void setIsActive(boolean isActive) {
-        this.isActive = isActive;
+    public void setIsActive(boolean value) {
+        this.isActive = value;
     }
 
-
     /**
-     * Gets the url value for this RemoteSiteSetting.
+     * Gets the value of the url property.
      * 
-     * @return url
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUrl() {
+    public String getUrl() {
         return url;
     }
 
-
     /**
-     * Sets the url value for this RemoteSiteSetting.
+     * Sets the value of the url property.
      * 
-     * @param url
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUrl(java.lang.String url) {
-        this.url = url;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof RemoteSiteSetting)) return false;
-        RemoteSiteSetting other = (RemoteSiteSetting) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            this.disableProtocolSecurity == other.isDisableProtocolSecurity() &&
-            this.isActive == other.isIsActive() &&
-            ((this.url==null && other.getUrl()==null) || 
-             (this.url!=null &&
-              this.url.equals(other.getUrl())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        _hashCode += (isDisableProtocolSecurity() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isIsActive() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getUrl() != null) {
-            _hashCode += getUrl().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RemoteSiteSetting.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RemoteSiteSetting"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("disableProtocolSecurity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "disableProtocolSecurity"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isActive");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isActive"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("url");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "url"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUrl(String value) {
+        this.url = value;
     }
 
 }

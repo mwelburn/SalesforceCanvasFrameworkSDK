@@ -1,412 +1,270 @@
-/**
- * CustomFieldTranslation.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomFieldTranslation  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ObjectNameCaseValue[] caseValues;
-
-    private com.sforce.soap._2006._04.metadata.Gender gender;
-
-    private java.lang.String help;
-
-    private java.lang.String label;
-
-    private java.lang.String name;
-
-    private com.sforce.soap._2006._04.metadata.PicklistValueTranslation[] picklistValues;
-
-    private java.lang.String relationshipLabel;
-
-    private com.sforce.soap._2006._04.metadata.StartsWith startsWith;
-
-    public CustomFieldTranslation() {
-    }
-
-    public CustomFieldTranslation(
-           com.sforce.soap._2006._04.metadata.ObjectNameCaseValue[] caseValues,
-           com.sforce.soap._2006._04.metadata.Gender gender,
-           java.lang.String help,
-           java.lang.String label,
-           java.lang.String name,
-           com.sforce.soap._2006._04.metadata.PicklistValueTranslation[] picklistValues,
-           java.lang.String relationshipLabel,
-           com.sforce.soap._2006._04.metadata.StartsWith startsWith) {
-           this.caseValues = caseValues;
-           this.gender = gender;
-           this.help = help;
-           this.label = label;
-           this.name = name;
-           this.picklistValues = picklistValues;
-           this.relationshipLabel = relationshipLabel;
-           this.startsWith = startsWith;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the caseValues value for this CustomFieldTranslation.
-     * 
-     * @return caseValues
-     */
-    public com.sforce.soap._2006._04.metadata.ObjectNameCaseValue[] getCaseValues() {
-        return caseValues;
-    }
+/**
+ * <p>Java class for CustomFieldTranslation complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomFieldTranslation">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="caseValues" type="{http://soap.sforce.com/2006/04/metadata}ObjectNameCaseValue" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="gender" type="{http://soap.sforce.com/2006/04/metadata}Gender" minOccurs="0"/>
+ *         &lt;element name="help" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="picklistValues" type="{http://soap.sforce.com/2006/04/metadata}PicklistValueTranslation" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="relationshipLabel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="startsWith" type="{http://soap.sforce.com/2006/04/metadata}StartsWith" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomFieldTranslation", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "caseValues",
+    "gender",
+    "help",
+    "label",
+    "name",
+    "picklistValues",
+    "relationshipLabel",
+    "startsWith"
+})
+public class CustomFieldTranslation {
 
-
-    /**
-     * Sets the caseValues value for this CustomFieldTranslation.
-     * 
-     * @param caseValues
-     */
-    public void setCaseValues(com.sforce.soap._2006._04.metadata.ObjectNameCaseValue[] caseValues) {
-        this.caseValues = caseValues;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ObjectNameCaseValue getCaseValues(int i) {
-        return this.caseValues[i];
-    }
-
-    public void setCaseValues(int i, com.sforce.soap._2006._04.metadata.ObjectNameCaseValue _value) {
-        this.caseValues[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ObjectNameCaseValue> caseValues;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Gender gender;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String help;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PicklistValueTranslation> picklistValues;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String relationshipLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected StartsWith startsWith;
 
     /**
-     * Gets the gender value for this CustomFieldTranslation.
+     * Gets the value of the caseValues property.
      * 
-     * @return gender
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the caseValues property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCaseValues().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ObjectNameCaseValue }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.Gender getGender() {
+    public List<ObjectNameCaseValue> getCaseValues() {
+        if (caseValues == null) {
+            caseValues = new ArrayList<ObjectNameCaseValue>();
+        }
+        return this.caseValues;
+    }
+
+    /**
+     * Gets the value of the gender property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Gender }
+     *     
+     */
+    public Gender getGender() {
         return gender;
     }
 
-
     /**
-     * Sets the gender value for this CustomFieldTranslation.
+     * Sets the value of the gender property.
      * 
-     * @param gender
+     * @param value
+     *     allowed object is
+     *     {@link Gender }
+     *     
      */
-    public void setGender(com.sforce.soap._2006._04.metadata.Gender gender) {
-        this.gender = gender;
+    public void setGender(Gender value) {
+        this.gender = value;
     }
 
-
     /**
-     * Gets the help value for this CustomFieldTranslation.
+     * Gets the value of the help property.
      * 
-     * @return help
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getHelp() {
+    public String getHelp() {
         return help;
     }
 
-
     /**
-     * Sets the help value for this CustomFieldTranslation.
+     * Sets the value of the help property.
      * 
-     * @param help
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setHelp(java.lang.String help) {
-        this.help = help;
+    public void setHelp(String value) {
+        this.help = value;
     }
 
-
     /**
-     * Gets the label value for this CustomFieldTranslation.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this CustomFieldTranslation.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the name value for this CustomFieldTranslation.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
+    /**
+     * Sets the value of the name property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
 
     /**
-     * Sets the name value for this CustomFieldTranslation.
+     * Gets the value of the picklistValues property.
      * 
-     * @param name
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the picklistValues property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPicklistValues().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PicklistValueTranslation }
+     * 
+     * 
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public List<PicklistValueTranslation> getPicklistValues() {
+        if (picklistValues == null) {
+            picklistValues = new ArrayList<PicklistValueTranslation>();
+        }
+        return this.picklistValues;
     }
-
 
     /**
-     * Gets the picklistValues value for this CustomFieldTranslation.
+     * Gets the value of the relationshipLabel property.
      * 
-     * @return picklistValues
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.PicklistValueTranslation[] getPicklistValues() {
-        return picklistValues;
-    }
-
-
-    /**
-     * Sets the picklistValues value for this CustomFieldTranslation.
-     * 
-     * @param picklistValues
-     */
-    public void setPicklistValues(com.sforce.soap._2006._04.metadata.PicklistValueTranslation[] picklistValues) {
-        this.picklistValues = picklistValues;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PicklistValueTranslation getPicklistValues(int i) {
-        return this.picklistValues[i];
-    }
-
-    public void setPicklistValues(int i, com.sforce.soap._2006._04.metadata.PicklistValueTranslation _value) {
-        this.picklistValues[i] = _value;
-    }
-
-
-    /**
-     * Gets the relationshipLabel value for this CustomFieldTranslation.
-     * 
-     * @return relationshipLabel
-     */
-    public java.lang.String getRelationshipLabel() {
+    public String getRelationshipLabel() {
         return relationshipLabel;
     }
 
-
     /**
-     * Sets the relationshipLabel value for this CustomFieldTranslation.
+     * Sets the value of the relationshipLabel property.
      * 
-     * @param relationshipLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRelationshipLabel(java.lang.String relationshipLabel) {
-        this.relationshipLabel = relationshipLabel;
+    public void setRelationshipLabel(String value) {
+        this.relationshipLabel = value;
     }
 
-
     /**
-     * Gets the startsWith value for this CustomFieldTranslation.
+     * Gets the value of the startsWith property.
      * 
-     * @return startsWith
+     * @return
+     *     possible object is
+     *     {@link StartsWith }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.StartsWith getStartsWith() {
+    public StartsWith getStartsWith() {
         return startsWith;
     }
 
-
     /**
-     * Sets the startsWith value for this CustomFieldTranslation.
+     * Sets the value of the startsWith property.
      * 
-     * @param startsWith
+     * @param value
+     *     allowed object is
+     *     {@link StartsWith }
+     *     
      */
-    public void setStartsWith(com.sforce.soap._2006._04.metadata.StartsWith startsWith) {
-        this.startsWith = startsWith;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomFieldTranslation)) return false;
-        CustomFieldTranslation other = (CustomFieldTranslation) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.caseValues==null && other.getCaseValues()==null) || 
-             (this.caseValues!=null &&
-              java.util.Arrays.equals(this.caseValues, other.getCaseValues()))) &&
-            ((this.gender==null && other.getGender()==null) || 
-             (this.gender!=null &&
-              this.gender.equals(other.getGender()))) &&
-            ((this.help==null && other.getHelp()==null) || 
-             (this.help!=null &&
-              this.help.equals(other.getHelp()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.picklistValues==null && other.getPicklistValues()==null) || 
-             (this.picklistValues!=null &&
-              java.util.Arrays.equals(this.picklistValues, other.getPicklistValues()))) &&
-            ((this.relationshipLabel==null && other.getRelationshipLabel()==null) || 
-             (this.relationshipLabel!=null &&
-              this.relationshipLabel.equals(other.getRelationshipLabel()))) &&
-            ((this.startsWith==null && other.getStartsWith()==null) || 
-             (this.startsWith!=null &&
-              this.startsWith.equals(other.getStartsWith())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCaseValues() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCaseValues());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCaseValues(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getGender() != null) {
-            _hashCode += getGender().hashCode();
-        }
-        if (getHelp() != null) {
-            _hashCode += getHelp().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getPicklistValues() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPicklistValues());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPicklistValues(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRelationshipLabel() != null) {
-            _hashCode += getRelationshipLabel().hashCode();
-        }
-        if (getStartsWith() != null) {
-            _hashCode += getStartsWith().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomFieldTranslation.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomFieldTranslation"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("caseValues");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "caseValues"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ObjectNameCaseValue"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("gender");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "gender"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Gender"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("help");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "help"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("picklistValues");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "picklistValues"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PicklistValueTranslation"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relationshipLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relationshipLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("startsWith");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "startsWith"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "StartsWith"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStartsWith(StartsWith value) {
+        this.startsWith = value;
     }
 
 }

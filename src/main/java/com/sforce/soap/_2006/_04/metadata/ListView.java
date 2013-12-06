@@ -1,451 +1,300 @@
-/**
- * ListView.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ListView  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String booleanFilter;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String[] columns;
 
-    private java.lang.String division;
+/**
+ * <p>Java class for ListView complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ListView">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="booleanFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="columns" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="division" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="filterScope" type="{http://soap.sforce.com/2006/04/metadata}FilterScope"/>
+ *         &lt;element name="filters" type="{http://soap.sforce.com/2006/04/metadata}ListViewFilter" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="language" type="{http://soap.sforce.com/2006/04/metadata}Language" minOccurs="0"/>
+ *         &lt;element name="queue" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="sharedTo" type="{http://soap.sforce.com/2006/04/metadata}SharedTo" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ListView", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "booleanFilter",
+    "columns",
+    "division",
+    "filterScope",
+    "filters",
+    "label",
+    "language",
+    "queue",
+    "sharedTo"
+})
+public class ListView
+    extends Metadata
+{
 
-    private com.sforce.soap._2006._04.metadata.FilterScope filterScope;
-
-    private com.sforce.soap._2006._04.metadata.ListViewFilter[] filters;
-
-    private java.lang.String label;
-
-    private com.sforce.soap._2006._04.metadata.Language language;
-
-    private java.lang.String queue;
-
-    private com.sforce.soap._2006._04.metadata.SharedTo sharedTo;
-
-    public ListView() {
-    }
-
-    public ListView(
-           java.lang.String fullName,
-           java.lang.String booleanFilter,
-           java.lang.String[] columns,
-           java.lang.String division,
-           com.sforce.soap._2006._04.metadata.FilterScope filterScope,
-           com.sforce.soap._2006._04.metadata.ListViewFilter[] filters,
-           java.lang.String label,
-           com.sforce.soap._2006._04.metadata.Language language,
-           java.lang.String queue,
-           com.sforce.soap._2006._04.metadata.SharedTo sharedTo) {
-        super(
-            fullName);
-        this.booleanFilter = booleanFilter;
-        this.columns = columns;
-        this.division = division;
-        this.filterScope = filterScope;
-        this.filters = filters;
-        this.label = label;
-        this.language = language;
-        this.queue = queue;
-        this.sharedTo = sharedTo;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String booleanFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> columns;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String division;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected FilterScope filterScope;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ListViewFilter> filters;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Language language;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String queue;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SharedTo sharedTo;
 
     /**
-     * Gets the booleanFilter value for this ListView.
+     * Gets the value of the booleanFilter property.
      * 
-     * @return booleanFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBooleanFilter() {
+    public String getBooleanFilter() {
         return booleanFilter;
     }
 
+    /**
+     * Sets the value of the booleanFilter property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBooleanFilter(String value) {
+        this.booleanFilter = value;
+    }
 
     /**
-     * Sets the booleanFilter value for this ListView.
+     * Gets the value of the columns property.
      * 
-     * @param booleanFilter
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the columns property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getColumns().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public void setBooleanFilter(java.lang.String booleanFilter) {
-        this.booleanFilter = booleanFilter;
+    public List<String> getColumns() {
+        if (columns == null) {
+            columns = new ArrayList<String>();
+        }
+        return this.columns;
     }
-
 
     /**
-     * Gets the columns value for this ListView.
+     * Gets the value of the division property.
      * 
-     * @return columns
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String[] getColumns() {
-        return columns;
-    }
-
-
-    /**
-     * Sets the columns value for this ListView.
-     * 
-     * @param columns
-     */
-    public void setColumns(java.lang.String[] columns) {
-        this.columns = columns;
-    }
-
-    public java.lang.String getColumns(int i) {
-        return this.columns[i];
-    }
-
-    public void setColumns(int i, java.lang.String _value) {
-        this.columns[i] = _value;
-    }
-
-
-    /**
-     * Gets the division value for this ListView.
-     * 
-     * @return division
-     */
-    public java.lang.String getDivision() {
+    public String getDivision() {
         return division;
     }
 
-
     /**
-     * Sets the division value for this ListView.
+     * Sets the value of the division property.
      * 
-     * @param division
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDivision(java.lang.String division) {
-        this.division = division;
+    public void setDivision(String value) {
+        this.division = value;
     }
 
-
     /**
-     * Gets the filterScope value for this ListView.
+     * Gets the value of the filterScope property.
      * 
-     * @return filterScope
+     * @return
+     *     possible object is
+     *     {@link FilterScope }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FilterScope getFilterScope() {
+    public FilterScope getFilterScope() {
         return filterScope;
     }
 
+    /**
+     * Sets the value of the filterScope property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FilterScope }
+     *     
+     */
+    public void setFilterScope(FilterScope value) {
+        this.filterScope = value;
+    }
 
     /**
-     * Sets the filterScope value for this ListView.
+     * Gets the value of the filters property.
      * 
-     * @param filterScope
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the filters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFilters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ListViewFilter }
+     * 
+     * 
      */
-    public void setFilterScope(com.sforce.soap._2006._04.metadata.FilterScope filterScope) {
-        this.filterScope = filterScope;
+    public List<ListViewFilter> getFilters() {
+        if (filters == null) {
+            filters = new ArrayList<ListViewFilter>();
+        }
+        return this.filters;
     }
-
 
     /**
-     * Gets the filters value for this ListView.
+     * Gets the value of the label property.
      * 
-     * @return filters
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ListViewFilter[] getFilters() {
-        return filters;
-    }
-
-
-    /**
-     * Sets the filters value for this ListView.
-     * 
-     * @param filters
-     */
-    public void setFilters(com.sforce.soap._2006._04.metadata.ListViewFilter[] filters) {
-        this.filters = filters;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ListViewFilter getFilters(int i) {
-        return this.filters[i];
-    }
-
-    public void setFilters(int i, com.sforce.soap._2006._04.metadata.ListViewFilter _value) {
-        this.filters[i] = _value;
-    }
-
-
-    /**
-     * Gets the label value for this ListView.
-     * 
-     * @return label
-     */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this ListView.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the language value for this ListView.
+     * Gets the value of the language property.
      * 
-     * @return language
+     * @return
+     *     possible object is
+     *     {@link Language }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.Language getLanguage() {
+    public Language getLanguage() {
         return language;
     }
 
-
     /**
-     * Sets the language value for this ListView.
+     * Sets the value of the language property.
      * 
-     * @param language
+     * @param value
+     *     allowed object is
+     *     {@link Language }
+     *     
      */
-    public void setLanguage(com.sforce.soap._2006._04.metadata.Language language) {
-        this.language = language;
+    public void setLanguage(Language value) {
+        this.language = value;
     }
 
-
     /**
-     * Gets the queue value for this ListView.
+     * Gets the value of the queue property.
      * 
-     * @return queue
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getQueue() {
+    public String getQueue() {
         return queue;
     }
 
-
     /**
-     * Sets the queue value for this ListView.
+     * Sets the value of the queue property.
      * 
-     * @param queue
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setQueue(java.lang.String queue) {
-        this.queue = queue;
+    public void setQueue(String value) {
+        this.queue = value;
     }
 
-
     /**
-     * Gets the sharedTo value for this ListView.
+     * Gets the value of the sharedTo property.
      * 
-     * @return sharedTo
+     * @return
+     *     possible object is
+     *     {@link SharedTo }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SharedTo getSharedTo() {
+    public SharedTo getSharedTo() {
         return sharedTo;
     }
 
-
     /**
-     * Sets the sharedTo value for this ListView.
+     * Sets the value of the sharedTo property.
      * 
-     * @param sharedTo
+     * @param value
+     *     allowed object is
+     *     {@link SharedTo }
+     *     
      */
-    public void setSharedTo(com.sforce.soap._2006._04.metadata.SharedTo sharedTo) {
-        this.sharedTo = sharedTo;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ListView)) return false;
-        ListView other = (ListView) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.booleanFilter==null && other.getBooleanFilter()==null) || 
-             (this.booleanFilter!=null &&
-              this.booleanFilter.equals(other.getBooleanFilter()))) &&
-            ((this.columns==null && other.getColumns()==null) || 
-             (this.columns!=null &&
-              java.util.Arrays.equals(this.columns, other.getColumns()))) &&
-            ((this.division==null && other.getDivision()==null) || 
-             (this.division!=null &&
-              this.division.equals(other.getDivision()))) &&
-            ((this.filterScope==null && other.getFilterScope()==null) || 
-             (this.filterScope!=null &&
-              this.filterScope.equals(other.getFilterScope()))) &&
-            ((this.filters==null && other.getFilters()==null) || 
-             (this.filters!=null &&
-              java.util.Arrays.equals(this.filters, other.getFilters()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.language==null && other.getLanguage()==null) || 
-             (this.language!=null &&
-              this.language.equals(other.getLanguage()))) &&
-            ((this.queue==null && other.getQueue()==null) || 
-             (this.queue!=null &&
-              this.queue.equals(other.getQueue()))) &&
-            ((this.sharedTo==null && other.getSharedTo()==null) || 
-             (this.sharedTo!=null &&
-              this.sharedTo.equals(other.getSharedTo())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getBooleanFilter() != null) {
-            _hashCode += getBooleanFilter().hashCode();
-        }
-        if (getColumns() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getColumns());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getColumns(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDivision() != null) {
-            _hashCode += getDivision().hashCode();
-        }
-        if (getFilterScope() != null) {
-            _hashCode += getFilterScope().hashCode();
-        }
-        if (getFilters() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFilters());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFilters(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getLanguage() != null) {
-            _hashCode += getLanguage().hashCode();
-        }
-        if (getQueue() != null) {
-            _hashCode += getQueue().hashCode();
-        }
-        if (getSharedTo() != null) {
-            _hashCode += getSharedTo().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ListView.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ListView"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("booleanFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "booleanFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("columns");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "columns"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("division");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "division"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("filterScope");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "filterScope"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FilterScope"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("filters");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "filters"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ListViewFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("language");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "language"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Language"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("queue");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "queue"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sharedTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sharedTo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SharedTo"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSharedTo(SharedTo value) {
+        this.sharedTo = value;
     }
 
 }

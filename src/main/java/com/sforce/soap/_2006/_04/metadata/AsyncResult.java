@@ -1,261 +1,166 @@
-/**
- * AsyncResult.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class AsyncResult  implements java.io.Serializable {
-    private boolean done;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String id;
 
-    private java.lang.String message;
+/**
+ * <p>Java class for AsyncResult complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="AsyncResult">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="done" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="id" type="{http://soap.sforce.com/2006/04/metadata}ID"/>
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="state" type="{http://soap.sforce.com/2006/04/metadata}AsyncRequestState"/>
+ *         &lt;element name="statusCode" type="{http://soap.sforce.com/2006/04/metadata}StatusCode" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "AsyncResult", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "done",
+    "id",
+    "message",
+    "state",
+    "statusCode"
+})
+public class AsyncResult {
 
-    private com.sforce.soap._2006._04.metadata.AsyncRequestState state;
-
-    private com.sforce.soap._2006._04.metadata.StatusCode statusCode;
-
-    public AsyncResult() {
-    }
-
-    public AsyncResult(
-           boolean done,
-           java.lang.String id,
-           java.lang.String message,
-           com.sforce.soap._2006._04.metadata.AsyncRequestState state,
-           com.sforce.soap._2006._04.metadata.StatusCode statusCode) {
-           this.done = done;
-           this.id = id;
-           this.message = message;
-           this.state = state;
-           this.statusCode = statusCode;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean done;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String id;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String message;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected AsyncRequestState state;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected StatusCode statusCode;
 
     /**
-     * Gets the done value for this AsyncResult.
+     * Gets the value of the done property.
      * 
-     * @return done
      */
     public boolean isDone() {
         return done;
     }
 
-
     /**
-     * Sets the done value for this AsyncResult.
+     * Sets the value of the done property.
      * 
-     * @param done
      */
-    public void setDone(boolean done) {
-        this.done = done;
+    public void setDone(boolean value) {
+        this.done = value;
     }
 
-
     /**
-     * Gets the id value for this AsyncResult.
+     * Gets the value of the id property.
      * 
-     * @return id
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getId() {
+    public String getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this AsyncResult.
+     * Sets the value of the id property.
      * 
-     * @param id
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(java.lang.String id) {
-        this.id = id;
+    public void setId(String value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the message value for this AsyncResult.
+     * Gets the value of the message property.
      * 
-     * @return message
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMessage() {
+    public String getMessage() {
         return message;
     }
 
-
     /**
-     * Sets the message value for this AsyncResult.
+     * Sets the value of the message property.
      * 
-     * @param message
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMessage(java.lang.String message) {
-        this.message = message;
+    public void setMessage(String value) {
+        this.message = value;
     }
 
-
     /**
-     * Gets the state value for this AsyncResult.
+     * Gets the value of the state property.
      * 
-     * @return state
+     * @return
+     *     possible object is
+     *     {@link AsyncRequestState }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.AsyncRequestState getState() {
+    public AsyncRequestState getState() {
         return state;
     }
 
-
     /**
-     * Sets the state value for this AsyncResult.
+     * Sets the value of the state property.
      * 
-     * @param state
+     * @param value
+     *     allowed object is
+     *     {@link AsyncRequestState }
+     *     
      */
-    public void setState(com.sforce.soap._2006._04.metadata.AsyncRequestState state) {
-        this.state = state;
+    public void setState(AsyncRequestState value) {
+        this.state = value;
     }
 
-
     /**
-     * Gets the statusCode value for this AsyncResult.
+     * Gets the value of the statusCode property.
      * 
-     * @return statusCode
+     * @return
+     *     possible object is
+     *     {@link StatusCode }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.StatusCode getStatusCode() {
+    public StatusCode getStatusCode() {
         return statusCode;
     }
 
-
     /**
-     * Sets the statusCode value for this AsyncResult.
+     * Sets the value of the statusCode property.
      * 
-     * @param statusCode
+     * @param value
+     *     allowed object is
+     *     {@link StatusCode }
+     *     
      */
-    public void setStatusCode(com.sforce.soap._2006._04.metadata.StatusCode statusCode) {
-        this.statusCode = statusCode;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof AsyncResult)) return false;
-        AsyncResult other = (AsyncResult) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            this.done == other.isDone() &&
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            ((this.message==null && other.getMessage()==null) || 
-             (this.message!=null &&
-              this.message.equals(other.getMessage()))) &&
-            ((this.state==null && other.getState()==null) || 
-             (this.state!=null &&
-              this.state.equals(other.getState()))) &&
-            ((this.statusCode==null && other.getStatusCode()==null) || 
-             (this.statusCode!=null &&
-              this.statusCode.equals(other.getStatusCode())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        _hashCode += (isDone() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getId() != null) {
-            _hashCode += getId().hashCode();
-        }
-        if (getMessage() != null) {
-            _hashCode += getMessage().hashCode();
-        }
-        if (getState() != null) {
-            _hashCode += getState().hashCode();
-        }
-        if (getStatusCode() != null) {
-            _hashCode += getStatusCode().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(AsyncResult.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AsyncResult"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("done");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "done"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("message");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "message"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("state");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "state"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AsyncRequestState"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("statusCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "statusCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "StatusCode"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStatusCode(StatusCode value) {
+        this.statusCode = value;
     }
 
 }

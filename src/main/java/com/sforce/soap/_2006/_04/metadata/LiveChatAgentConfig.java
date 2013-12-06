@@ -1,760 +1,540 @@
-/**
- * LiveChatAgentConfig.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class LiveChatAgentConfig  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.AgentConfigAssignments assignments;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String autoGreeting;
 
-    private java.lang.Integer capacity;
+/**
+ * <p>Java class for LiveChatAgentConfig complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="LiveChatAgentConfig">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="assignments" type="{http://soap.sforce.com/2006/04/metadata}AgentConfigAssignments" minOccurs="0"/>
+ *         &lt;element name="autoGreeting" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="capacity" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="criticalWaitTime" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="customAgentName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="enableAgentSneakPeek" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableAutoAwayOnDecline" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableChatMonitoring" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableLogoutSound" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableNotifications" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableRequestSound" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableSneakPeek" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableWhisperMessage" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="supervisorDefaultAgentStatusFilter" type="{http://soap.sforce.com/2006/04/metadata}SupervisorAgentStatusFilter" minOccurs="0"/>
+ *         &lt;element name="supervisorDefaultButtonFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="supervisorDefaultSkillFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="supervisorSkills" type="{http://soap.sforce.com/2006/04/metadata}SupervisorAgentConfigSkills" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "LiveChatAgentConfig", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "assignments",
+    "autoGreeting",
+    "capacity",
+    "criticalWaitTime",
+    "customAgentName",
+    "enableAgentSneakPeek",
+    "enableAutoAwayOnDecline",
+    "enableChatMonitoring",
+    "enableLogoutSound",
+    "enableNotifications",
+    "enableRequestSound",
+    "enableSneakPeek",
+    "enableWhisperMessage",
+    "label",
+    "supervisorDefaultAgentStatusFilter",
+    "supervisorDefaultButtonFilter",
+    "supervisorDefaultSkillFilter",
+    "supervisorSkills"
+})
+public class LiveChatAgentConfig
+    extends Metadata
+{
 
-    private java.lang.Integer criticalWaitTime;
-
-    private java.lang.String customAgentName;
-
-    private java.lang.Boolean enableAgentSneakPeek;
-
-    private java.lang.Boolean enableAutoAwayOnDecline;
-
-    private java.lang.Boolean enableChatMonitoring;
-
-    private java.lang.Boolean enableLogoutSound;
-
-    private java.lang.Boolean enableNotifications;
-
-    private java.lang.Boolean enableRequestSound;
-
-    private java.lang.Boolean enableSneakPeek;
-
-    private java.lang.Boolean enableWhisperMessage;
-
-    private java.lang.String label;
-
-    private com.sforce.soap._2006._04.metadata.SupervisorAgentStatusFilter supervisorDefaultAgentStatusFilter;
-
-    private java.lang.String supervisorDefaultButtonFilter;
-
-    private java.lang.String supervisorDefaultSkillFilter;
-
-    private java.lang.String[] supervisorSkills;
-
-    public LiveChatAgentConfig() {
-    }
-
-    public LiveChatAgentConfig(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.AgentConfigAssignments assignments,
-           java.lang.String autoGreeting,
-           java.lang.Integer capacity,
-           java.lang.Integer criticalWaitTime,
-           java.lang.String customAgentName,
-           java.lang.Boolean enableAgentSneakPeek,
-           java.lang.Boolean enableAutoAwayOnDecline,
-           java.lang.Boolean enableChatMonitoring,
-           java.lang.Boolean enableLogoutSound,
-           java.lang.Boolean enableNotifications,
-           java.lang.Boolean enableRequestSound,
-           java.lang.Boolean enableSneakPeek,
-           java.lang.Boolean enableWhisperMessage,
-           java.lang.String label,
-           com.sforce.soap._2006._04.metadata.SupervisorAgentStatusFilter supervisorDefaultAgentStatusFilter,
-           java.lang.String supervisorDefaultButtonFilter,
-           java.lang.String supervisorDefaultSkillFilter,
-           java.lang.String[] supervisorSkills) {
-        super(
-            fullName);
-        this.assignments = assignments;
-        this.autoGreeting = autoGreeting;
-        this.capacity = capacity;
-        this.criticalWaitTime = criticalWaitTime;
-        this.customAgentName = customAgentName;
-        this.enableAgentSneakPeek = enableAgentSneakPeek;
-        this.enableAutoAwayOnDecline = enableAutoAwayOnDecline;
-        this.enableChatMonitoring = enableChatMonitoring;
-        this.enableLogoutSound = enableLogoutSound;
-        this.enableNotifications = enableNotifications;
-        this.enableRequestSound = enableRequestSound;
-        this.enableSneakPeek = enableSneakPeek;
-        this.enableWhisperMessage = enableWhisperMessage;
-        this.label = label;
-        this.supervisorDefaultAgentStatusFilter = supervisorDefaultAgentStatusFilter;
-        this.supervisorDefaultButtonFilter = supervisorDefaultButtonFilter;
-        this.supervisorDefaultSkillFilter = supervisorDefaultSkillFilter;
-        this.supervisorSkills = supervisorSkills;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected AgentConfigAssignments assignments;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String autoGreeting;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer capacity;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer criticalWaitTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customAgentName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableAgentSneakPeek;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableAutoAwayOnDecline;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableChatMonitoring;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableLogoutSound;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableNotifications;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableRequestSound;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableSneakPeek;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableWhisperMessage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SupervisorAgentStatusFilter supervisorDefaultAgentStatusFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String supervisorDefaultButtonFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String supervisorDefaultSkillFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SupervisorAgentConfigSkills supervisorSkills;
 
     /**
-     * Gets the assignments value for this LiveChatAgentConfig.
+     * Gets the value of the assignments property.
      * 
-     * @return assignments
+     * @return
+     *     possible object is
+     *     {@link AgentConfigAssignments }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.AgentConfigAssignments getAssignments() {
+    public AgentConfigAssignments getAssignments() {
         return assignments;
     }
 
-
     /**
-     * Sets the assignments value for this LiveChatAgentConfig.
+     * Sets the value of the assignments property.
      * 
-     * @param assignments
+     * @param value
+     *     allowed object is
+     *     {@link AgentConfigAssignments }
+     *     
      */
-    public void setAssignments(com.sforce.soap._2006._04.metadata.AgentConfigAssignments assignments) {
-        this.assignments = assignments;
+    public void setAssignments(AgentConfigAssignments value) {
+        this.assignments = value;
     }
 
-
     /**
-     * Gets the autoGreeting value for this LiveChatAgentConfig.
+     * Gets the value of the autoGreeting property.
      * 
-     * @return autoGreeting
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAutoGreeting() {
+    public String getAutoGreeting() {
         return autoGreeting;
     }
 
-
     /**
-     * Sets the autoGreeting value for this LiveChatAgentConfig.
+     * Sets the value of the autoGreeting property.
      * 
-     * @param autoGreeting
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAutoGreeting(java.lang.String autoGreeting) {
-        this.autoGreeting = autoGreeting;
+    public void setAutoGreeting(String value) {
+        this.autoGreeting = value;
     }
 
-
     /**
-     * Gets the capacity value for this LiveChatAgentConfig.
+     * Gets the value of the capacity property.
      * 
-     * @return capacity
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getCapacity() {
+    public Integer getCapacity() {
         return capacity;
     }
 
-
     /**
-     * Sets the capacity value for this LiveChatAgentConfig.
+     * Sets the value of the capacity property.
      * 
-     * @param capacity
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setCapacity(java.lang.Integer capacity) {
-        this.capacity = capacity;
+    public void setCapacity(Integer value) {
+        this.capacity = value;
     }
 
-
     /**
-     * Gets the criticalWaitTime value for this LiveChatAgentConfig.
+     * Gets the value of the criticalWaitTime property.
      * 
-     * @return criticalWaitTime
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getCriticalWaitTime() {
+    public Integer getCriticalWaitTime() {
         return criticalWaitTime;
     }
 
-
     /**
-     * Sets the criticalWaitTime value for this LiveChatAgentConfig.
+     * Sets the value of the criticalWaitTime property.
      * 
-     * @param criticalWaitTime
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setCriticalWaitTime(java.lang.Integer criticalWaitTime) {
-        this.criticalWaitTime = criticalWaitTime;
+    public void setCriticalWaitTime(Integer value) {
+        this.criticalWaitTime = value;
     }
 
-
     /**
-     * Gets the customAgentName value for this LiveChatAgentConfig.
+     * Gets the value of the customAgentName property.
      * 
-     * @return customAgentName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomAgentName() {
+    public String getCustomAgentName() {
         return customAgentName;
     }
 
-
     /**
-     * Sets the customAgentName value for this LiveChatAgentConfig.
+     * Sets the value of the customAgentName property.
      * 
-     * @param customAgentName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomAgentName(java.lang.String customAgentName) {
-        this.customAgentName = customAgentName;
+    public void setCustomAgentName(String value) {
+        this.customAgentName = value;
     }
 
-
     /**
-     * Gets the enableAgentSneakPeek value for this LiveChatAgentConfig.
+     * Gets the value of the enableAgentSneakPeek property.
      * 
-     * @return enableAgentSneakPeek
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableAgentSneakPeek() {
+    public Boolean isEnableAgentSneakPeek() {
         return enableAgentSneakPeek;
     }
 
-
     /**
-     * Sets the enableAgentSneakPeek value for this LiveChatAgentConfig.
+     * Sets the value of the enableAgentSneakPeek property.
      * 
-     * @param enableAgentSneakPeek
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableAgentSneakPeek(java.lang.Boolean enableAgentSneakPeek) {
-        this.enableAgentSneakPeek = enableAgentSneakPeek;
+    public void setEnableAgentSneakPeek(Boolean value) {
+        this.enableAgentSneakPeek = value;
     }
 
-
     /**
-     * Gets the enableAutoAwayOnDecline value for this LiveChatAgentConfig.
+     * Gets the value of the enableAutoAwayOnDecline property.
      * 
-     * @return enableAutoAwayOnDecline
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableAutoAwayOnDecline() {
+    public Boolean isEnableAutoAwayOnDecline() {
         return enableAutoAwayOnDecline;
     }
 
-
     /**
-     * Sets the enableAutoAwayOnDecline value for this LiveChatAgentConfig.
+     * Sets the value of the enableAutoAwayOnDecline property.
      * 
-     * @param enableAutoAwayOnDecline
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableAutoAwayOnDecline(java.lang.Boolean enableAutoAwayOnDecline) {
-        this.enableAutoAwayOnDecline = enableAutoAwayOnDecline;
+    public void setEnableAutoAwayOnDecline(Boolean value) {
+        this.enableAutoAwayOnDecline = value;
     }
 
-
     /**
-     * Gets the enableChatMonitoring value for this LiveChatAgentConfig.
+     * Gets the value of the enableChatMonitoring property.
      * 
-     * @return enableChatMonitoring
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableChatMonitoring() {
+    public Boolean isEnableChatMonitoring() {
         return enableChatMonitoring;
     }
 
-
     /**
-     * Sets the enableChatMonitoring value for this LiveChatAgentConfig.
+     * Sets the value of the enableChatMonitoring property.
      * 
-     * @param enableChatMonitoring
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableChatMonitoring(java.lang.Boolean enableChatMonitoring) {
-        this.enableChatMonitoring = enableChatMonitoring;
+    public void setEnableChatMonitoring(Boolean value) {
+        this.enableChatMonitoring = value;
     }
 
-
     /**
-     * Gets the enableLogoutSound value for this LiveChatAgentConfig.
+     * Gets the value of the enableLogoutSound property.
      * 
-     * @return enableLogoutSound
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableLogoutSound() {
+    public Boolean isEnableLogoutSound() {
         return enableLogoutSound;
     }
 
-
     /**
-     * Sets the enableLogoutSound value for this LiveChatAgentConfig.
+     * Sets the value of the enableLogoutSound property.
      * 
-     * @param enableLogoutSound
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableLogoutSound(java.lang.Boolean enableLogoutSound) {
-        this.enableLogoutSound = enableLogoutSound;
+    public void setEnableLogoutSound(Boolean value) {
+        this.enableLogoutSound = value;
     }
 
-
     /**
-     * Gets the enableNotifications value for this LiveChatAgentConfig.
+     * Gets the value of the enableNotifications property.
      * 
-     * @return enableNotifications
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableNotifications() {
+    public Boolean isEnableNotifications() {
         return enableNotifications;
     }
 
-
     /**
-     * Sets the enableNotifications value for this LiveChatAgentConfig.
+     * Sets the value of the enableNotifications property.
      * 
-     * @param enableNotifications
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableNotifications(java.lang.Boolean enableNotifications) {
-        this.enableNotifications = enableNotifications;
+    public void setEnableNotifications(Boolean value) {
+        this.enableNotifications = value;
     }
 
-
     /**
-     * Gets the enableRequestSound value for this LiveChatAgentConfig.
+     * Gets the value of the enableRequestSound property.
      * 
-     * @return enableRequestSound
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableRequestSound() {
+    public Boolean isEnableRequestSound() {
         return enableRequestSound;
     }
 
-
     /**
-     * Sets the enableRequestSound value for this LiveChatAgentConfig.
+     * Sets the value of the enableRequestSound property.
      * 
-     * @param enableRequestSound
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableRequestSound(java.lang.Boolean enableRequestSound) {
-        this.enableRequestSound = enableRequestSound;
+    public void setEnableRequestSound(Boolean value) {
+        this.enableRequestSound = value;
     }
 
-
     /**
-     * Gets the enableSneakPeek value for this LiveChatAgentConfig.
+     * Gets the value of the enableSneakPeek property.
      * 
-     * @return enableSneakPeek
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableSneakPeek() {
+    public Boolean isEnableSneakPeek() {
         return enableSneakPeek;
     }
 
-
     /**
-     * Sets the enableSneakPeek value for this LiveChatAgentConfig.
+     * Sets the value of the enableSneakPeek property.
      * 
-     * @param enableSneakPeek
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableSneakPeek(java.lang.Boolean enableSneakPeek) {
-        this.enableSneakPeek = enableSneakPeek;
+    public void setEnableSneakPeek(Boolean value) {
+        this.enableSneakPeek = value;
     }
 
-
     /**
-     * Gets the enableWhisperMessage value for this LiveChatAgentConfig.
+     * Gets the value of the enableWhisperMessage property.
      * 
-     * @return enableWhisperMessage
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableWhisperMessage() {
+    public Boolean isEnableWhisperMessage() {
         return enableWhisperMessage;
     }
 
-
     /**
-     * Sets the enableWhisperMessage value for this LiveChatAgentConfig.
+     * Sets the value of the enableWhisperMessage property.
      * 
-     * @param enableWhisperMessage
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableWhisperMessage(java.lang.Boolean enableWhisperMessage) {
-        this.enableWhisperMessage = enableWhisperMessage;
+    public void setEnableWhisperMessage(Boolean value) {
+        this.enableWhisperMessage = value;
     }
 
-
     /**
-     * Gets the label value for this LiveChatAgentConfig.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this LiveChatAgentConfig.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the supervisorDefaultAgentStatusFilter value for this LiveChatAgentConfig.
+     * Gets the value of the supervisorDefaultAgentStatusFilter property.
      * 
-     * @return supervisorDefaultAgentStatusFilter
+     * @return
+     *     possible object is
+     *     {@link SupervisorAgentStatusFilter }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SupervisorAgentStatusFilter getSupervisorDefaultAgentStatusFilter() {
+    public SupervisorAgentStatusFilter getSupervisorDefaultAgentStatusFilter() {
         return supervisorDefaultAgentStatusFilter;
     }
 
-
     /**
-     * Sets the supervisorDefaultAgentStatusFilter value for this LiveChatAgentConfig.
+     * Sets the value of the supervisorDefaultAgentStatusFilter property.
      * 
-     * @param supervisorDefaultAgentStatusFilter
+     * @param value
+     *     allowed object is
+     *     {@link SupervisorAgentStatusFilter }
+     *     
      */
-    public void setSupervisorDefaultAgentStatusFilter(com.sforce.soap._2006._04.metadata.SupervisorAgentStatusFilter supervisorDefaultAgentStatusFilter) {
-        this.supervisorDefaultAgentStatusFilter = supervisorDefaultAgentStatusFilter;
+    public void setSupervisorDefaultAgentStatusFilter(SupervisorAgentStatusFilter value) {
+        this.supervisorDefaultAgentStatusFilter = value;
     }
 
-
     /**
-     * Gets the supervisorDefaultButtonFilter value for this LiveChatAgentConfig.
+     * Gets the value of the supervisorDefaultButtonFilter property.
      * 
-     * @return supervisorDefaultButtonFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSupervisorDefaultButtonFilter() {
+    public String getSupervisorDefaultButtonFilter() {
         return supervisorDefaultButtonFilter;
     }
 
-
     /**
-     * Sets the supervisorDefaultButtonFilter value for this LiveChatAgentConfig.
+     * Sets the value of the supervisorDefaultButtonFilter property.
      * 
-     * @param supervisorDefaultButtonFilter
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSupervisorDefaultButtonFilter(java.lang.String supervisorDefaultButtonFilter) {
-        this.supervisorDefaultButtonFilter = supervisorDefaultButtonFilter;
+    public void setSupervisorDefaultButtonFilter(String value) {
+        this.supervisorDefaultButtonFilter = value;
     }
 
-
     /**
-     * Gets the supervisorDefaultSkillFilter value for this LiveChatAgentConfig.
+     * Gets the value of the supervisorDefaultSkillFilter property.
      * 
-     * @return supervisorDefaultSkillFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSupervisorDefaultSkillFilter() {
+    public String getSupervisorDefaultSkillFilter() {
         return supervisorDefaultSkillFilter;
     }
 
-
     /**
-     * Sets the supervisorDefaultSkillFilter value for this LiveChatAgentConfig.
+     * Sets the value of the supervisorDefaultSkillFilter property.
      * 
-     * @param supervisorDefaultSkillFilter
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSupervisorDefaultSkillFilter(java.lang.String supervisorDefaultSkillFilter) {
-        this.supervisorDefaultSkillFilter = supervisorDefaultSkillFilter;
+    public void setSupervisorDefaultSkillFilter(String value) {
+        this.supervisorDefaultSkillFilter = value;
     }
 
-
     /**
-     * Gets the supervisorSkills value for this LiveChatAgentConfig.
+     * Gets the value of the supervisorSkills property.
      * 
-     * @return supervisorSkills
+     * @return
+     *     possible object is
+     *     {@link SupervisorAgentConfigSkills }
+     *     
      */
-    public java.lang.String[] getSupervisorSkills() {
+    public SupervisorAgentConfigSkills getSupervisorSkills() {
         return supervisorSkills;
     }
 
-
     /**
-     * Sets the supervisorSkills value for this LiveChatAgentConfig.
+     * Sets the value of the supervisorSkills property.
      * 
-     * @param supervisorSkills
+     * @param value
+     *     allowed object is
+     *     {@link SupervisorAgentConfigSkills }
+     *     
      */
-    public void setSupervisorSkills(java.lang.String[] supervisorSkills) {
-        this.supervisorSkills = supervisorSkills;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof LiveChatAgentConfig)) return false;
-        LiveChatAgentConfig other = (LiveChatAgentConfig) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.assignments==null && other.getAssignments()==null) || 
-             (this.assignments!=null &&
-              this.assignments.equals(other.getAssignments()))) &&
-            ((this.autoGreeting==null && other.getAutoGreeting()==null) || 
-             (this.autoGreeting!=null &&
-              this.autoGreeting.equals(other.getAutoGreeting()))) &&
-            ((this.capacity==null && other.getCapacity()==null) || 
-             (this.capacity!=null &&
-              this.capacity.equals(other.getCapacity()))) &&
-            ((this.criticalWaitTime==null && other.getCriticalWaitTime()==null) || 
-             (this.criticalWaitTime!=null &&
-              this.criticalWaitTime.equals(other.getCriticalWaitTime()))) &&
-            ((this.customAgentName==null && other.getCustomAgentName()==null) || 
-             (this.customAgentName!=null &&
-              this.customAgentName.equals(other.getCustomAgentName()))) &&
-            ((this.enableAgentSneakPeek==null && other.getEnableAgentSneakPeek()==null) || 
-             (this.enableAgentSneakPeek!=null &&
-              this.enableAgentSneakPeek.equals(other.getEnableAgentSneakPeek()))) &&
-            ((this.enableAutoAwayOnDecline==null && other.getEnableAutoAwayOnDecline()==null) || 
-             (this.enableAutoAwayOnDecline!=null &&
-              this.enableAutoAwayOnDecline.equals(other.getEnableAutoAwayOnDecline()))) &&
-            ((this.enableChatMonitoring==null && other.getEnableChatMonitoring()==null) || 
-             (this.enableChatMonitoring!=null &&
-              this.enableChatMonitoring.equals(other.getEnableChatMonitoring()))) &&
-            ((this.enableLogoutSound==null && other.getEnableLogoutSound()==null) || 
-             (this.enableLogoutSound!=null &&
-              this.enableLogoutSound.equals(other.getEnableLogoutSound()))) &&
-            ((this.enableNotifications==null && other.getEnableNotifications()==null) || 
-             (this.enableNotifications!=null &&
-              this.enableNotifications.equals(other.getEnableNotifications()))) &&
-            ((this.enableRequestSound==null && other.getEnableRequestSound()==null) || 
-             (this.enableRequestSound!=null &&
-              this.enableRequestSound.equals(other.getEnableRequestSound()))) &&
-            ((this.enableSneakPeek==null && other.getEnableSneakPeek()==null) || 
-             (this.enableSneakPeek!=null &&
-              this.enableSneakPeek.equals(other.getEnableSneakPeek()))) &&
-            ((this.enableWhisperMessage==null && other.getEnableWhisperMessage()==null) || 
-             (this.enableWhisperMessage!=null &&
-              this.enableWhisperMessage.equals(other.getEnableWhisperMessage()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.supervisorDefaultAgentStatusFilter==null && other.getSupervisorDefaultAgentStatusFilter()==null) || 
-             (this.supervisorDefaultAgentStatusFilter!=null &&
-              this.supervisorDefaultAgentStatusFilter.equals(other.getSupervisorDefaultAgentStatusFilter()))) &&
-            ((this.supervisorDefaultButtonFilter==null && other.getSupervisorDefaultButtonFilter()==null) || 
-             (this.supervisorDefaultButtonFilter!=null &&
-              this.supervisorDefaultButtonFilter.equals(other.getSupervisorDefaultButtonFilter()))) &&
-            ((this.supervisorDefaultSkillFilter==null && other.getSupervisorDefaultSkillFilter()==null) || 
-             (this.supervisorDefaultSkillFilter!=null &&
-              this.supervisorDefaultSkillFilter.equals(other.getSupervisorDefaultSkillFilter()))) &&
-            ((this.supervisorSkills==null && other.getSupervisorSkills()==null) || 
-             (this.supervisorSkills!=null &&
-              java.util.Arrays.equals(this.supervisorSkills, other.getSupervisorSkills())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAssignments() != null) {
-            _hashCode += getAssignments().hashCode();
-        }
-        if (getAutoGreeting() != null) {
-            _hashCode += getAutoGreeting().hashCode();
-        }
-        if (getCapacity() != null) {
-            _hashCode += getCapacity().hashCode();
-        }
-        if (getCriticalWaitTime() != null) {
-            _hashCode += getCriticalWaitTime().hashCode();
-        }
-        if (getCustomAgentName() != null) {
-            _hashCode += getCustomAgentName().hashCode();
-        }
-        if (getEnableAgentSneakPeek() != null) {
-            _hashCode += getEnableAgentSneakPeek().hashCode();
-        }
-        if (getEnableAutoAwayOnDecline() != null) {
-            _hashCode += getEnableAutoAwayOnDecline().hashCode();
-        }
-        if (getEnableChatMonitoring() != null) {
-            _hashCode += getEnableChatMonitoring().hashCode();
-        }
-        if (getEnableLogoutSound() != null) {
-            _hashCode += getEnableLogoutSound().hashCode();
-        }
-        if (getEnableNotifications() != null) {
-            _hashCode += getEnableNotifications().hashCode();
-        }
-        if (getEnableRequestSound() != null) {
-            _hashCode += getEnableRequestSound().hashCode();
-        }
-        if (getEnableSneakPeek() != null) {
-            _hashCode += getEnableSneakPeek().hashCode();
-        }
-        if (getEnableWhisperMessage() != null) {
-            _hashCode += getEnableWhisperMessage().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getSupervisorDefaultAgentStatusFilter() != null) {
-            _hashCode += getSupervisorDefaultAgentStatusFilter().hashCode();
-        }
-        if (getSupervisorDefaultButtonFilter() != null) {
-            _hashCode += getSupervisorDefaultButtonFilter().hashCode();
-        }
-        if (getSupervisorDefaultSkillFilter() != null) {
-            _hashCode += getSupervisorDefaultSkillFilter().hashCode();
-        }
-        if (getSupervisorSkills() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSupervisorSkills());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSupervisorSkills(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(LiveChatAgentConfig.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatAgentConfig"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignments");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AgentConfigAssignments"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoGreeting");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoGreeting"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("capacity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "capacity"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("criticalWaitTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "criticalWaitTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customAgentName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customAgentName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableAgentSneakPeek");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableAgentSneakPeek"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableAutoAwayOnDecline");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableAutoAwayOnDecline"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableChatMonitoring");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableChatMonitoring"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableLogoutSound");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableLogoutSound"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableNotifications");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableNotifications"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableRequestSound");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableRequestSound"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableSneakPeek");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableSneakPeek"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableWhisperMessage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableWhisperMessage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("supervisorDefaultAgentStatusFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "supervisorDefaultAgentStatusFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SupervisorAgentStatusFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("supervisorDefaultButtonFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "supervisorDefaultButtonFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("supervisorDefaultSkillFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "supervisorDefaultSkillFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("supervisorSkills");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "supervisorSkills"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "skill"));
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSupervisorSkills(SupervisorAgentConfigSkills value) {
+        this.supervisorSkills = value;
     }
 
 }

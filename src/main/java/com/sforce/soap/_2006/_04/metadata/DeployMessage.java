@@ -1,468 +1,310 @@
-/**
- * DeployMessage.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class DeployMessage  implements java.io.Serializable {
-    private boolean changed;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Integer columnNumber;
 
-    private boolean created;
+/**
+ * <p>Java class for DeployMessage complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DeployMessage">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="changed" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="columnNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="created" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="deleted" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="fileName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="fullName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="lineNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="problem" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="problemType" type="{http://soap.sforce.com/2006/04/metadata}DeployProblemType" minOccurs="0"/>
+ *         &lt;element name="success" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DeployMessage", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "changed",
+    "columnNumber",
+    "created",
+    "deleted",
+    "fileName",
+    "fullName",
+    "id",
+    "lineNumber",
+    "problem",
+    "problemType",
+    "success"
+})
+public class DeployMessage {
 
-    private boolean deleted;
-
-    private java.lang.String fileName;
-
-    private java.lang.String fullName;
-
-    private java.lang.String id;
-
-    private java.lang.Integer lineNumber;
-
-    private java.lang.String problem;
-
-    private com.sforce.soap._2006._04.metadata.DeployProblemType problemType;
-
-    private boolean success;
-
-    public DeployMessage() {
-    }
-
-    public DeployMessage(
-           boolean changed,
-           java.lang.Integer columnNumber,
-           boolean created,
-           boolean deleted,
-           java.lang.String fileName,
-           java.lang.String fullName,
-           java.lang.String id,
-           java.lang.Integer lineNumber,
-           java.lang.String problem,
-           com.sforce.soap._2006._04.metadata.DeployProblemType problemType,
-           boolean success) {
-           this.changed = changed;
-           this.columnNumber = columnNumber;
-           this.created = created;
-           this.deleted = deleted;
-           this.fileName = fileName;
-           this.fullName = fullName;
-           this.id = id;
-           this.lineNumber = lineNumber;
-           this.problem = problem;
-           this.problemType = problemType;
-           this.success = success;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean changed;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer columnNumber;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean created;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean deleted;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String fileName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String fullName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String id;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer lineNumber;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String problem;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DeployProblemType problemType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean success;
 
     /**
-     * Gets the changed value for this DeployMessage.
+     * Gets the value of the changed property.
      * 
-     * @return changed
      */
     public boolean isChanged() {
         return changed;
     }
 
-
     /**
-     * Sets the changed value for this DeployMessage.
+     * Sets the value of the changed property.
      * 
-     * @param changed
      */
-    public void setChanged(boolean changed) {
-        this.changed = changed;
+    public void setChanged(boolean value) {
+        this.changed = value;
     }
 
-
     /**
-     * Gets the columnNumber value for this DeployMessage.
+     * Gets the value of the columnNumber property.
      * 
-     * @return columnNumber
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getColumnNumber() {
+    public Integer getColumnNumber() {
         return columnNumber;
     }
 
-
     /**
-     * Sets the columnNumber value for this DeployMessage.
+     * Sets the value of the columnNumber property.
      * 
-     * @param columnNumber
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setColumnNumber(java.lang.Integer columnNumber) {
-        this.columnNumber = columnNumber;
+    public void setColumnNumber(Integer value) {
+        this.columnNumber = value;
     }
 
-
     /**
-     * Gets the created value for this DeployMessage.
+     * Gets the value of the created property.
      * 
-     * @return created
      */
     public boolean isCreated() {
         return created;
     }
 
-
     /**
-     * Sets the created value for this DeployMessage.
+     * Sets the value of the created property.
      * 
-     * @param created
      */
-    public void setCreated(boolean created) {
-        this.created = created;
+    public void setCreated(boolean value) {
+        this.created = value;
     }
 
-
     /**
-     * Gets the deleted value for this DeployMessage.
+     * Gets the value of the deleted property.
      * 
-     * @return deleted
      */
     public boolean isDeleted() {
         return deleted;
     }
 
-
     /**
-     * Sets the deleted value for this DeployMessage.
+     * Sets the value of the deleted property.
      * 
-     * @param deleted
      */
-    public void setDeleted(boolean deleted) {
-        this.deleted = deleted;
+    public void setDeleted(boolean value) {
+        this.deleted = value;
     }
 
-
     /**
-     * Gets the fileName value for this DeployMessage.
+     * Gets the value of the fileName property.
      * 
-     * @return fileName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFileName() {
+    public String getFileName() {
         return fileName;
     }
 
-
     /**
-     * Sets the fileName value for this DeployMessage.
+     * Sets the value of the fileName property.
      * 
-     * @param fileName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFileName(java.lang.String fileName) {
-        this.fileName = fileName;
+    public void setFileName(String value) {
+        this.fileName = value;
     }
 
-
     /**
-     * Gets the fullName value for this DeployMessage.
+     * Gets the value of the fullName property.
      * 
-     * @return fullName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFullName() {
+    public String getFullName() {
         return fullName;
     }
 
-
     /**
-     * Sets the fullName value for this DeployMessage.
+     * Sets the value of the fullName property.
      * 
-     * @param fullName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFullName(java.lang.String fullName) {
-        this.fullName = fullName;
+    public void setFullName(String value) {
+        this.fullName = value;
     }
 
-
     /**
-     * Gets the id value for this DeployMessage.
+     * Gets the value of the id property.
      * 
-     * @return id
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getId() {
+    public String getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this DeployMessage.
+     * Sets the value of the id property.
      * 
-     * @param id
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(java.lang.String id) {
-        this.id = id;
+    public void setId(String value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the lineNumber value for this DeployMessage.
+     * Gets the value of the lineNumber property.
      * 
-     * @return lineNumber
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getLineNumber() {
+    public Integer getLineNumber() {
         return lineNumber;
     }
 
-
     /**
-     * Sets the lineNumber value for this DeployMessage.
+     * Sets the value of the lineNumber property.
      * 
-     * @param lineNumber
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setLineNumber(java.lang.Integer lineNumber) {
-        this.lineNumber = lineNumber;
+    public void setLineNumber(Integer value) {
+        this.lineNumber = value;
     }
 
-
     /**
-     * Gets the problem value for this DeployMessage.
+     * Gets the value of the problem property.
      * 
-     * @return problem
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getProblem() {
+    public String getProblem() {
         return problem;
     }
 
-
     /**
-     * Sets the problem value for this DeployMessage.
+     * Sets the value of the problem property.
      * 
-     * @param problem
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setProblem(java.lang.String problem) {
-        this.problem = problem;
+    public void setProblem(String value) {
+        this.problem = value;
     }
 
-
     /**
-     * Gets the problemType value for this DeployMessage.
+     * Gets the value of the problemType property.
      * 
-     * @return problemType
+     * @return
+     *     possible object is
+     *     {@link DeployProblemType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DeployProblemType getProblemType() {
+    public DeployProblemType getProblemType() {
         return problemType;
     }
 
-
     /**
-     * Sets the problemType value for this DeployMessage.
+     * Sets the value of the problemType property.
      * 
-     * @param problemType
+     * @param value
+     *     allowed object is
+     *     {@link DeployProblemType }
+     *     
      */
-    public void setProblemType(com.sforce.soap._2006._04.metadata.DeployProblemType problemType) {
-        this.problemType = problemType;
+    public void setProblemType(DeployProblemType value) {
+        this.problemType = value;
     }
 
-
     /**
-     * Gets the success value for this DeployMessage.
+     * Gets the value of the success property.
      * 
-     * @return success
      */
     public boolean isSuccess() {
         return success;
     }
 
-
     /**
-     * Sets the success value for this DeployMessage.
+     * Sets the value of the success property.
      * 
-     * @param success
      */
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DeployMessage)) return false;
-        DeployMessage other = (DeployMessage) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            this.changed == other.isChanged() &&
-            ((this.columnNumber==null && other.getColumnNumber()==null) || 
-             (this.columnNumber!=null &&
-              this.columnNumber.equals(other.getColumnNumber()))) &&
-            this.created == other.isCreated() &&
-            this.deleted == other.isDeleted() &&
-            ((this.fileName==null && other.getFileName()==null) || 
-             (this.fileName!=null &&
-              this.fileName.equals(other.getFileName()))) &&
-            ((this.fullName==null && other.getFullName()==null) || 
-             (this.fullName!=null &&
-              this.fullName.equals(other.getFullName()))) &&
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            ((this.lineNumber==null && other.getLineNumber()==null) || 
-             (this.lineNumber!=null &&
-              this.lineNumber.equals(other.getLineNumber()))) &&
-            ((this.problem==null && other.getProblem()==null) || 
-             (this.problem!=null &&
-              this.problem.equals(other.getProblem()))) &&
-            ((this.problemType==null && other.getProblemType()==null) || 
-             (this.problemType!=null &&
-              this.problemType.equals(other.getProblemType()))) &&
-            this.success == other.isSuccess();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        _hashCode += (isChanged() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getColumnNumber() != null) {
-            _hashCode += getColumnNumber().hashCode();
-        }
-        _hashCode += (isCreated() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isDeleted() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getFileName() != null) {
-            _hashCode += getFileName().hashCode();
-        }
-        if (getFullName() != null) {
-            _hashCode += getFullName().hashCode();
-        }
-        if (getId() != null) {
-            _hashCode += getId().hashCode();
-        }
-        if (getLineNumber() != null) {
-            _hashCode += getLineNumber().hashCode();
-        }
-        if (getProblem() != null) {
-            _hashCode += getProblem().hashCode();
-        }
-        if (getProblemType() != null) {
-            _hashCode += getProblemType().hashCode();
-        }
-        _hashCode += (isSuccess() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DeployMessage.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployMessage"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("changed");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "changed"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("columnNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "columnNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("created");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "created"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deleted");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "deleted"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fileName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fileName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fullName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fullName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("lineNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "lineNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("problem");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "problem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("problemType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "problemType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployProblemType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("success");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "success"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSuccess(boolean value) {
+        this.success = value;
     }
 
 }

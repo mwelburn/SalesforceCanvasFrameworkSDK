@@ -1,789 +1,568 @@
-/**
- * ActivitiesSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ActivitiesSettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean allowUsersToRelateMultipleContactsToTasksAndEvents;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean enableActivityReminders;
 
-    private java.lang.Boolean enableClickCreateEvents;
+/**
+ * <p>Java class for ActivitiesSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ActivitiesSettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="allowUsersToRelateMultipleContactsToTasksAndEvents" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableActivityReminders" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableClickCreateEvents" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableDragAndDropScheduling" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableEmailTracking" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableEventScheduler" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableGroupTasks" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableListViewScheduling" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableLogNote" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableMultidayEvents" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableRecurringEvents" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableRecurringTasks" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableSidebarCalendarShortcut" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="meetingRequestsLogo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="showCustomLogoMeetingRequests" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showEventDetailsMultiUserCalendar" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showHomePageHoverLinksForEvents" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showMyTasksHoverLinks" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showRequestedMeetingsOnHomePage" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ActivitiesSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "allowUsersToRelateMultipleContactsToTasksAndEvents",
+    "enableActivityReminders",
+    "enableClickCreateEvents",
+    "enableDragAndDropScheduling",
+    "enableEmailTracking",
+    "enableEventScheduler",
+    "enableGroupTasks",
+    "enableListViewScheduling",
+    "enableLogNote",
+    "enableMultidayEvents",
+    "enableRecurringEvents",
+    "enableRecurringTasks",
+    "enableSidebarCalendarShortcut",
+    "meetingRequestsLogo",
+    "showCustomLogoMeetingRequests",
+    "showEventDetailsMultiUserCalendar",
+    "showHomePageHoverLinksForEvents",
+    "showMyTasksHoverLinks",
+    "showRequestedMeetingsOnHomePage"
+})
+public class ActivitiesSettings
+    extends Metadata
+{
 
-    private java.lang.Boolean enableDragAndDropScheduling;
-
-    private java.lang.Boolean enableEmailTracking;
-
-    private java.lang.Boolean enableEventScheduler;
-
-    private java.lang.Boolean enableGroupTasks;
-
-    private java.lang.Boolean enableListViewScheduling;
-
-    private java.lang.Boolean enableLogNote;
-
-    private java.lang.Boolean enableMultidayEvents;
-
-    private java.lang.Boolean enableRecurringEvents;
-
-    private java.lang.Boolean enableRecurringTasks;
-
-    private java.lang.Boolean enableSidebarCalendarShortcut;
-
-    private java.lang.String meetingRequestsLogo;
-
-    private java.lang.Boolean showCustomLogoMeetingRequests;
-
-    private java.lang.Boolean showEventDetailsMultiUserCalendar;
-
-    private java.lang.Boolean showHomePageHoverLinksForEvents;
-
-    private java.lang.Boolean showMyTasksHoverLinks;
-
-    private java.lang.Boolean showRequestedMeetingsOnHomePage;
-
-    public ActivitiesSettings() {
-    }
-
-    public ActivitiesSettings(
-           java.lang.String fullName,
-           java.lang.Boolean allowUsersToRelateMultipleContactsToTasksAndEvents,
-           java.lang.Boolean enableActivityReminders,
-           java.lang.Boolean enableClickCreateEvents,
-           java.lang.Boolean enableDragAndDropScheduling,
-           java.lang.Boolean enableEmailTracking,
-           java.lang.Boolean enableEventScheduler,
-           java.lang.Boolean enableGroupTasks,
-           java.lang.Boolean enableListViewScheduling,
-           java.lang.Boolean enableLogNote,
-           java.lang.Boolean enableMultidayEvents,
-           java.lang.Boolean enableRecurringEvents,
-           java.lang.Boolean enableRecurringTasks,
-           java.lang.Boolean enableSidebarCalendarShortcut,
-           java.lang.String meetingRequestsLogo,
-           java.lang.Boolean showCustomLogoMeetingRequests,
-           java.lang.Boolean showEventDetailsMultiUserCalendar,
-           java.lang.Boolean showHomePageHoverLinksForEvents,
-           java.lang.Boolean showMyTasksHoverLinks,
-           java.lang.Boolean showRequestedMeetingsOnHomePage) {
-        super(
-            fullName);
-        this.allowUsersToRelateMultipleContactsToTasksAndEvents = allowUsersToRelateMultipleContactsToTasksAndEvents;
-        this.enableActivityReminders = enableActivityReminders;
-        this.enableClickCreateEvents = enableClickCreateEvents;
-        this.enableDragAndDropScheduling = enableDragAndDropScheduling;
-        this.enableEmailTracking = enableEmailTracking;
-        this.enableEventScheduler = enableEventScheduler;
-        this.enableGroupTasks = enableGroupTasks;
-        this.enableListViewScheduling = enableListViewScheduling;
-        this.enableLogNote = enableLogNote;
-        this.enableMultidayEvents = enableMultidayEvents;
-        this.enableRecurringEvents = enableRecurringEvents;
-        this.enableRecurringTasks = enableRecurringTasks;
-        this.enableSidebarCalendarShortcut = enableSidebarCalendarShortcut;
-        this.meetingRequestsLogo = meetingRequestsLogo;
-        this.showCustomLogoMeetingRequests = showCustomLogoMeetingRequests;
-        this.showEventDetailsMultiUserCalendar = showEventDetailsMultiUserCalendar;
-        this.showHomePageHoverLinksForEvents = showHomePageHoverLinksForEvents;
-        this.showMyTasksHoverLinks = showMyTasksHoverLinks;
-        this.showRequestedMeetingsOnHomePage = showRequestedMeetingsOnHomePage;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean allowUsersToRelateMultipleContactsToTasksAndEvents;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableActivityReminders;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableClickCreateEvents;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableDragAndDropScheduling;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableEmailTracking;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableEventScheduler;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableGroupTasks;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableListViewScheduling;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableLogNote;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableMultidayEvents;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableRecurringEvents;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableRecurringTasks;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableSidebarCalendarShortcut;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String meetingRequestsLogo;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showCustomLogoMeetingRequests;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showEventDetailsMultiUserCalendar;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showHomePageHoverLinksForEvents;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showMyTasksHoverLinks;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showRequestedMeetingsOnHomePage;
 
     /**
-     * Gets the allowUsersToRelateMultipleContactsToTasksAndEvents value for this ActivitiesSettings.
+     * Gets the value of the allowUsersToRelateMultipleContactsToTasksAndEvents property.
      * 
-     * @return allowUsersToRelateMultipleContactsToTasksAndEvents
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAllowUsersToRelateMultipleContactsToTasksAndEvents() {
+    public Boolean isAllowUsersToRelateMultipleContactsToTasksAndEvents() {
         return allowUsersToRelateMultipleContactsToTasksAndEvents;
     }
 
-
     /**
-     * Sets the allowUsersToRelateMultipleContactsToTasksAndEvents value for this ActivitiesSettings.
+     * Sets the value of the allowUsersToRelateMultipleContactsToTasksAndEvents property.
      * 
-     * @param allowUsersToRelateMultipleContactsToTasksAndEvents
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAllowUsersToRelateMultipleContactsToTasksAndEvents(java.lang.Boolean allowUsersToRelateMultipleContactsToTasksAndEvents) {
-        this.allowUsersToRelateMultipleContactsToTasksAndEvents = allowUsersToRelateMultipleContactsToTasksAndEvents;
+    public void setAllowUsersToRelateMultipleContactsToTasksAndEvents(Boolean value) {
+        this.allowUsersToRelateMultipleContactsToTasksAndEvents = value;
     }
 
-
     /**
-     * Gets the enableActivityReminders value for this ActivitiesSettings.
+     * Gets the value of the enableActivityReminders property.
      * 
-     * @return enableActivityReminders
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableActivityReminders() {
+    public Boolean isEnableActivityReminders() {
         return enableActivityReminders;
     }
 
-
     /**
-     * Sets the enableActivityReminders value for this ActivitiesSettings.
+     * Sets the value of the enableActivityReminders property.
      * 
-     * @param enableActivityReminders
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableActivityReminders(java.lang.Boolean enableActivityReminders) {
-        this.enableActivityReminders = enableActivityReminders;
+    public void setEnableActivityReminders(Boolean value) {
+        this.enableActivityReminders = value;
     }
 
-
     /**
-     * Gets the enableClickCreateEvents value for this ActivitiesSettings.
+     * Gets the value of the enableClickCreateEvents property.
      * 
-     * @return enableClickCreateEvents
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableClickCreateEvents() {
+    public Boolean isEnableClickCreateEvents() {
         return enableClickCreateEvents;
     }
 
-
     /**
-     * Sets the enableClickCreateEvents value for this ActivitiesSettings.
+     * Sets the value of the enableClickCreateEvents property.
      * 
-     * @param enableClickCreateEvents
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableClickCreateEvents(java.lang.Boolean enableClickCreateEvents) {
-        this.enableClickCreateEvents = enableClickCreateEvents;
+    public void setEnableClickCreateEvents(Boolean value) {
+        this.enableClickCreateEvents = value;
     }
 
-
     /**
-     * Gets the enableDragAndDropScheduling value for this ActivitiesSettings.
+     * Gets the value of the enableDragAndDropScheduling property.
      * 
-     * @return enableDragAndDropScheduling
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableDragAndDropScheduling() {
+    public Boolean isEnableDragAndDropScheduling() {
         return enableDragAndDropScheduling;
     }
 
-
     /**
-     * Sets the enableDragAndDropScheduling value for this ActivitiesSettings.
+     * Sets the value of the enableDragAndDropScheduling property.
      * 
-     * @param enableDragAndDropScheduling
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableDragAndDropScheduling(java.lang.Boolean enableDragAndDropScheduling) {
-        this.enableDragAndDropScheduling = enableDragAndDropScheduling;
+    public void setEnableDragAndDropScheduling(Boolean value) {
+        this.enableDragAndDropScheduling = value;
     }
 
-
     /**
-     * Gets the enableEmailTracking value for this ActivitiesSettings.
+     * Gets the value of the enableEmailTracking property.
      * 
-     * @return enableEmailTracking
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableEmailTracking() {
+    public Boolean isEnableEmailTracking() {
         return enableEmailTracking;
     }
 
-
     /**
-     * Sets the enableEmailTracking value for this ActivitiesSettings.
+     * Sets the value of the enableEmailTracking property.
      * 
-     * @param enableEmailTracking
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableEmailTracking(java.lang.Boolean enableEmailTracking) {
-        this.enableEmailTracking = enableEmailTracking;
+    public void setEnableEmailTracking(Boolean value) {
+        this.enableEmailTracking = value;
     }
 
-
     /**
-     * Gets the enableEventScheduler value for this ActivitiesSettings.
+     * Gets the value of the enableEventScheduler property.
      * 
-     * @return enableEventScheduler
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableEventScheduler() {
+    public Boolean isEnableEventScheduler() {
         return enableEventScheduler;
     }
 
-
     /**
-     * Sets the enableEventScheduler value for this ActivitiesSettings.
+     * Sets the value of the enableEventScheduler property.
      * 
-     * @param enableEventScheduler
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableEventScheduler(java.lang.Boolean enableEventScheduler) {
-        this.enableEventScheduler = enableEventScheduler;
+    public void setEnableEventScheduler(Boolean value) {
+        this.enableEventScheduler = value;
     }
 
-
     /**
-     * Gets the enableGroupTasks value for this ActivitiesSettings.
+     * Gets the value of the enableGroupTasks property.
      * 
-     * @return enableGroupTasks
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableGroupTasks() {
+    public Boolean isEnableGroupTasks() {
         return enableGroupTasks;
     }
 
-
     /**
-     * Sets the enableGroupTasks value for this ActivitiesSettings.
+     * Sets the value of the enableGroupTasks property.
      * 
-     * @param enableGroupTasks
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableGroupTasks(java.lang.Boolean enableGroupTasks) {
-        this.enableGroupTasks = enableGroupTasks;
+    public void setEnableGroupTasks(Boolean value) {
+        this.enableGroupTasks = value;
     }
 
-
     /**
-     * Gets the enableListViewScheduling value for this ActivitiesSettings.
+     * Gets the value of the enableListViewScheduling property.
      * 
-     * @return enableListViewScheduling
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableListViewScheduling() {
+    public Boolean isEnableListViewScheduling() {
         return enableListViewScheduling;
     }
 
-
     /**
-     * Sets the enableListViewScheduling value for this ActivitiesSettings.
+     * Sets the value of the enableListViewScheduling property.
      * 
-     * @param enableListViewScheduling
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableListViewScheduling(java.lang.Boolean enableListViewScheduling) {
-        this.enableListViewScheduling = enableListViewScheduling;
+    public void setEnableListViewScheduling(Boolean value) {
+        this.enableListViewScheduling = value;
     }
 
-
     /**
-     * Gets the enableLogNote value for this ActivitiesSettings.
+     * Gets the value of the enableLogNote property.
      * 
-     * @return enableLogNote
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableLogNote() {
+    public Boolean isEnableLogNote() {
         return enableLogNote;
     }
 
-
     /**
-     * Sets the enableLogNote value for this ActivitiesSettings.
+     * Sets the value of the enableLogNote property.
      * 
-     * @param enableLogNote
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableLogNote(java.lang.Boolean enableLogNote) {
-        this.enableLogNote = enableLogNote;
+    public void setEnableLogNote(Boolean value) {
+        this.enableLogNote = value;
     }
 
-
     /**
-     * Gets the enableMultidayEvents value for this ActivitiesSettings.
+     * Gets the value of the enableMultidayEvents property.
      * 
-     * @return enableMultidayEvents
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableMultidayEvents() {
+    public Boolean isEnableMultidayEvents() {
         return enableMultidayEvents;
     }
 
-
     /**
-     * Sets the enableMultidayEvents value for this ActivitiesSettings.
+     * Sets the value of the enableMultidayEvents property.
      * 
-     * @param enableMultidayEvents
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableMultidayEvents(java.lang.Boolean enableMultidayEvents) {
-        this.enableMultidayEvents = enableMultidayEvents;
+    public void setEnableMultidayEvents(Boolean value) {
+        this.enableMultidayEvents = value;
     }
 
-
     /**
-     * Gets the enableRecurringEvents value for this ActivitiesSettings.
+     * Gets the value of the enableRecurringEvents property.
      * 
-     * @return enableRecurringEvents
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableRecurringEvents() {
+    public Boolean isEnableRecurringEvents() {
         return enableRecurringEvents;
     }
 
-
     /**
-     * Sets the enableRecurringEvents value for this ActivitiesSettings.
+     * Sets the value of the enableRecurringEvents property.
      * 
-     * @param enableRecurringEvents
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableRecurringEvents(java.lang.Boolean enableRecurringEvents) {
-        this.enableRecurringEvents = enableRecurringEvents;
+    public void setEnableRecurringEvents(Boolean value) {
+        this.enableRecurringEvents = value;
     }
 
-
     /**
-     * Gets the enableRecurringTasks value for this ActivitiesSettings.
+     * Gets the value of the enableRecurringTasks property.
      * 
-     * @return enableRecurringTasks
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableRecurringTasks() {
+    public Boolean isEnableRecurringTasks() {
         return enableRecurringTasks;
     }
 
-
     /**
-     * Sets the enableRecurringTasks value for this ActivitiesSettings.
+     * Sets the value of the enableRecurringTasks property.
      * 
-     * @param enableRecurringTasks
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableRecurringTasks(java.lang.Boolean enableRecurringTasks) {
-        this.enableRecurringTasks = enableRecurringTasks;
+    public void setEnableRecurringTasks(Boolean value) {
+        this.enableRecurringTasks = value;
     }
 
-
     /**
-     * Gets the enableSidebarCalendarShortcut value for this ActivitiesSettings.
+     * Gets the value of the enableSidebarCalendarShortcut property.
      * 
-     * @return enableSidebarCalendarShortcut
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableSidebarCalendarShortcut() {
+    public Boolean isEnableSidebarCalendarShortcut() {
         return enableSidebarCalendarShortcut;
     }
 
-
     /**
-     * Sets the enableSidebarCalendarShortcut value for this ActivitiesSettings.
+     * Sets the value of the enableSidebarCalendarShortcut property.
      * 
-     * @param enableSidebarCalendarShortcut
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableSidebarCalendarShortcut(java.lang.Boolean enableSidebarCalendarShortcut) {
-        this.enableSidebarCalendarShortcut = enableSidebarCalendarShortcut;
+    public void setEnableSidebarCalendarShortcut(Boolean value) {
+        this.enableSidebarCalendarShortcut = value;
     }
 
-
     /**
-     * Gets the meetingRequestsLogo value for this ActivitiesSettings.
+     * Gets the value of the meetingRequestsLogo property.
      * 
-     * @return meetingRequestsLogo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMeetingRequestsLogo() {
+    public String getMeetingRequestsLogo() {
         return meetingRequestsLogo;
     }
 
-
     /**
-     * Sets the meetingRequestsLogo value for this ActivitiesSettings.
+     * Sets the value of the meetingRequestsLogo property.
      * 
-     * @param meetingRequestsLogo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMeetingRequestsLogo(java.lang.String meetingRequestsLogo) {
-        this.meetingRequestsLogo = meetingRequestsLogo;
+    public void setMeetingRequestsLogo(String value) {
+        this.meetingRequestsLogo = value;
     }
 
-
     /**
-     * Gets the showCustomLogoMeetingRequests value for this ActivitiesSettings.
+     * Gets the value of the showCustomLogoMeetingRequests property.
      * 
-     * @return showCustomLogoMeetingRequests
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowCustomLogoMeetingRequests() {
+    public Boolean isShowCustomLogoMeetingRequests() {
         return showCustomLogoMeetingRequests;
     }
 
-
     /**
-     * Sets the showCustomLogoMeetingRequests value for this ActivitiesSettings.
+     * Sets the value of the showCustomLogoMeetingRequests property.
      * 
-     * @param showCustomLogoMeetingRequests
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowCustomLogoMeetingRequests(java.lang.Boolean showCustomLogoMeetingRequests) {
-        this.showCustomLogoMeetingRequests = showCustomLogoMeetingRequests;
+    public void setShowCustomLogoMeetingRequests(Boolean value) {
+        this.showCustomLogoMeetingRequests = value;
     }
 
-
     /**
-     * Gets the showEventDetailsMultiUserCalendar value for this ActivitiesSettings.
+     * Gets the value of the showEventDetailsMultiUserCalendar property.
      * 
-     * @return showEventDetailsMultiUserCalendar
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowEventDetailsMultiUserCalendar() {
+    public Boolean isShowEventDetailsMultiUserCalendar() {
         return showEventDetailsMultiUserCalendar;
     }
 
-
     /**
-     * Sets the showEventDetailsMultiUserCalendar value for this ActivitiesSettings.
+     * Sets the value of the showEventDetailsMultiUserCalendar property.
      * 
-     * @param showEventDetailsMultiUserCalendar
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowEventDetailsMultiUserCalendar(java.lang.Boolean showEventDetailsMultiUserCalendar) {
-        this.showEventDetailsMultiUserCalendar = showEventDetailsMultiUserCalendar;
+    public void setShowEventDetailsMultiUserCalendar(Boolean value) {
+        this.showEventDetailsMultiUserCalendar = value;
     }
 
-
     /**
-     * Gets the showHomePageHoverLinksForEvents value for this ActivitiesSettings.
+     * Gets the value of the showHomePageHoverLinksForEvents property.
      * 
-     * @return showHomePageHoverLinksForEvents
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowHomePageHoverLinksForEvents() {
+    public Boolean isShowHomePageHoverLinksForEvents() {
         return showHomePageHoverLinksForEvents;
     }
 
-
     /**
-     * Sets the showHomePageHoverLinksForEvents value for this ActivitiesSettings.
+     * Sets the value of the showHomePageHoverLinksForEvents property.
      * 
-     * @param showHomePageHoverLinksForEvents
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowHomePageHoverLinksForEvents(java.lang.Boolean showHomePageHoverLinksForEvents) {
-        this.showHomePageHoverLinksForEvents = showHomePageHoverLinksForEvents;
+    public void setShowHomePageHoverLinksForEvents(Boolean value) {
+        this.showHomePageHoverLinksForEvents = value;
     }
 
-
     /**
-     * Gets the showMyTasksHoverLinks value for this ActivitiesSettings.
+     * Gets the value of the showMyTasksHoverLinks property.
      * 
-     * @return showMyTasksHoverLinks
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowMyTasksHoverLinks() {
+    public Boolean isShowMyTasksHoverLinks() {
         return showMyTasksHoverLinks;
     }
 
-
     /**
-     * Sets the showMyTasksHoverLinks value for this ActivitiesSettings.
+     * Sets the value of the showMyTasksHoverLinks property.
      * 
-     * @param showMyTasksHoverLinks
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowMyTasksHoverLinks(java.lang.Boolean showMyTasksHoverLinks) {
-        this.showMyTasksHoverLinks = showMyTasksHoverLinks;
+    public void setShowMyTasksHoverLinks(Boolean value) {
+        this.showMyTasksHoverLinks = value;
     }
 
-
     /**
-     * Gets the showRequestedMeetingsOnHomePage value for this ActivitiesSettings.
+     * Gets the value of the showRequestedMeetingsOnHomePage property.
      * 
-     * @return showRequestedMeetingsOnHomePage
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowRequestedMeetingsOnHomePage() {
+    public Boolean isShowRequestedMeetingsOnHomePage() {
         return showRequestedMeetingsOnHomePage;
     }
 
-
     /**
-     * Sets the showRequestedMeetingsOnHomePage value for this ActivitiesSettings.
+     * Sets the value of the showRequestedMeetingsOnHomePage property.
      * 
-     * @param showRequestedMeetingsOnHomePage
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowRequestedMeetingsOnHomePage(java.lang.Boolean showRequestedMeetingsOnHomePage) {
-        this.showRequestedMeetingsOnHomePage = showRequestedMeetingsOnHomePage;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ActivitiesSettings)) return false;
-        ActivitiesSettings other = (ActivitiesSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.allowUsersToRelateMultipleContactsToTasksAndEvents==null && other.getAllowUsersToRelateMultipleContactsToTasksAndEvents()==null) || 
-             (this.allowUsersToRelateMultipleContactsToTasksAndEvents!=null &&
-              this.allowUsersToRelateMultipleContactsToTasksAndEvents.equals(other.getAllowUsersToRelateMultipleContactsToTasksAndEvents()))) &&
-            ((this.enableActivityReminders==null && other.getEnableActivityReminders()==null) || 
-             (this.enableActivityReminders!=null &&
-              this.enableActivityReminders.equals(other.getEnableActivityReminders()))) &&
-            ((this.enableClickCreateEvents==null && other.getEnableClickCreateEvents()==null) || 
-             (this.enableClickCreateEvents!=null &&
-              this.enableClickCreateEvents.equals(other.getEnableClickCreateEvents()))) &&
-            ((this.enableDragAndDropScheduling==null && other.getEnableDragAndDropScheduling()==null) || 
-             (this.enableDragAndDropScheduling!=null &&
-              this.enableDragAndDropScheduling.equals(other.getEnableDragAndDropScheduling()))) &&
-            ((this.enableEmailTracking==null && other.getEnableEmailTracking()==null) || 
-             (this.enableEmailTracking!=null &&
-              this.enableEmailTracking.equals(other.getEnableEmailTracking()))) &&
-            ((this.enableEventScheduler==null && other.getEnableEventScheduler()==null) || 
-             (this.enableEventScheduler!=null &&
-              this.enableEventScheduler.equals(other.getEnableEventScheduler()))) &&
-            ((this.enableGroupTasks==null && other.getEnableGroupTasks()==null) || 
-             (this.enableGroupTasks!=null &&
-              this.enableGroupTasks.equals(other.getEnableGroupTasks()))) &&
-            ((this.enableListViewScheduling==null && other.getEnableListViewScheduling()==null) || 
-             (this.enableListViewScheduling!=null &&
-              this.enableListViewScheduling.equals(other.getEnableListViewScheduling()))) &&
-            ((this.enableLogNote==null && other.getEnableLogNote()==null) || 
-             (this.enableLogNote!=null &&
-              this.enableLogNote.equals(other.getEnableLogNote()))) &&
-            ((this.enableMultidayEvents==null && other.getEnableMultidayEvents()==null) || 
-             (this.enableMultidayEvents!=null &&
-              this.enableMultidayEvents.equals(other.getEnableMultidayEvents()))) &&
-            ((this.enableRecurringEvents==null && other.getEnableRecurringEvents()==null) || 
-             (this.enableRecurringEvents!=null &&
-              this.enableRecurringEvents.equals(other.getEnableRecurringEvents()))) &&
-            ((this.enableRecurringTasks==null && other.getEnableRecurringTasks()==null) || 
-             (this.enableRecurringTasks!=null &&
-              this.enableRecurringTasks.equals(other.getEnableRecurringTasks()))) &&
-            ((this.enableSidebarCalendarShortcut==null && other.getEnableSidebarCalendarShortcut()==null) || 
-             (this.enableSidebarCalendarShortcut!=null &&
-              this.enableSidebarCalendarShortcut.equals(other.getEnableSidebarCalendarShortcut()))) &&
-            ((this.meetingRequestsLogo==null && other.getMeetingRequestsLogo()==null) || 
-             (this.meetingRequestsLogo!=null &&
-              this.meetingRequestsLogo.equals(other.getMeetingRequestsLogo()))) &&
-            ((this.showCustomLogoMeetingRequests==null && other.getShowCustomLogoMeetingRequests()==null) || 
-             (this.showCustomLogoMeetingRequests!=null &&
-              this.showCustomLogoMeetingRequests.equals(other.getShowCustomLogoMeetingRequests()))) &&
-            ((this.showEventDetailsMultiUserCalendar==null && other.getShowEventDetailsMultiUserCalendar()==null) || 
-             (this.showEventDetailsMultiUserCalendar!=null &&
-              this.showEventDetailsMultiUserCalendar.equals(other.getShowEventDetailsMultiUserCalendar()))) &&
-            ((this.showHomePageHoverLinksForEvents==null && other.getShowHomePageHoverLinksForEvents()==null) || 
-             (this.showHomePageHoverLinksForEvents!=null &&
-              this.showHomePageHoverLinksForEvents.equals(other.getShowHomePageHoverLinksForEvents()))) &&
-            ((this.showMyTasksHoverLinks==null && other.getShowMyTasksHoverLinks()==null) || 
-             (this.showMyTasksHoverLinks!=null &&
-              this.showMyTasksHoverLinks.equals(other.getShowMyTasksHoverLinks()))) &&
-            ((this.showRequestedMeetingsOnHomePage==null && other.getShowRequestedMeetingsOnHomePage()==null) || 
-             (this.showRequestedMeetingsOnHomePage!=null &&
-              this.showRequestedMeetingsOnHomePage.equals(other.getShowRequestedMeetingsOnHomePage())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAllowUsersToRelateMultipleContactsToTasksAndEvents() != null) {
-            _hashCode += getAllowUsersToRelateMultipleContactsToTasksAndEvents().hashCode();
-        }
-        if (getEnableActivityReminders() != null) {
-            _hashCode += getEnableActivityReminders().hashCode();
-        }
-        if (getEnableClickCreateEvents() != null) {
-            _hashCode += getEnableClickCreateEvents().hashCode();
-        }
-        if (getEnableDragAndDropScheduling() != null) {
-            _hashCode += getEnableDragAndDropScheduling().hashCode();
-        }
-        if (getEnableEmailTracking() != null) {
-            _hashCode += getEnableEmailTracking().hashCode();
-        }
-        if (getEnableEventScheduler() != null) {
-            _hashCode += getEnableEventScheduler().hashCode();
-        }
-        if (getEnableGroupTasks() != null) {
-            _hashCode += getEnableGroupTasks().hashCode();
-        }
-        if (getEnableListViewScheduling() != null) {
-            _hashCode += getEnableListViewScheduling().hashCode();
-        }
-        if (getEnableLogNote() != null) {
-            _hashCode += getEnableLogNote().hashCode();
-        }
-        if (getEnableMultidayEvents() != null) {
-            _hashCode += getEnableMultidayEvents().hashCode();
-        }
-        if (getEnableRecurringEvents() != null) {
-            _hashCode += getEnableRecurringEvents().hashCode();
-        }
-        if (getEnableRecurringTasks() != null) {
-            _hashCode += getEnableRecurringTasks().hashCode();
-        }
-        if (getEnableSidebarCalendarShortcut() != null) {
-            _hashCode += getEnableSidebarCalendarShortcut().hashCode();
-        }
-        if (getMeetingRequestsLogo() != null) {
-            _hashCode += getMeetingRequestsLogo().hashCode();
-        }
-        if (getShowCustomLogoMeetingRequests() != null) {
-            _hashCode += getShowCustomLogoMeetingRequests().hashCode();
-        }
-        if (getShowEventDetailsMultiUserCalendar() != null) {
-            _hashCode += getShowEventDetailsMultiUserCalendar().hashCode();
-        }
-        if (getShowHomePageHoverLinksForEvents() != null) {
-            _hashCode += getShowHomePageHoverLinksForEvents().hashCode();
-        }
-        if (getShowMyTasksHoverLinks() != null) {
-            _hashCode += getShowMyTasksHoverLinks().hashCode();
-        }
-        if (getShowRequestedMeetingsOnHomePage() != null) {
-            _hashCode += getShowRequestedMeetingsOnHomePage().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ActivitiesSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ActivitiesSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowUsersToRelateMultipleContactsToTasksAndEvents");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowUsersToRelateMultipleContactsToTasksAndEvents"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableActivityReminders");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableActivityReminders"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableClickCreateEvents");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableClickCreateEvents"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableDragAndDropScheduling");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableDragAndDropScheduling"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableEmailTracking");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableEmailTracking"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableEventScheduler");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableEventScheduler"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableGroupTasks");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableGroupTasks"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableListViewScheduling");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableListViewScheduling"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableLogNote");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableLogNote"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableMultidayEvents");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableMultidayEvents"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableRecurringEvents");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableRecurringEvents"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableRecurringTasks");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableRecurringTasks"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableSidebarCalendarShortcut");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableSidebarCalendarShortcut"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("meetingRequestsLogo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "meetingRequestsLogo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showCustomLogoMeetingRequests");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showCustomLogoMeetingRequests"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showEventDetailsMultiUserCalendar");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showEventDetailsMultiUserCalendar"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showHomePageHoverLinksForEvents");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showHomePageHoverLinksForEvents"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showMyTasksHoverLinks");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showMyTasksHoverLinks"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showRequestedMeetingsOnHomePage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showRequestedMeetingsOnHomePage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setShowRequestedMeetingsOnHomePage(Boolean value) {
+        this.showRequestedMeetingsOnHomePage = value;
     }
 
 }

@@ -1,287 +1,190 @@
-/**
- * Folder.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Folder  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.FolderAccessTypes accessType;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.FolderShare[] folderShares;
 
-    private java.lang.String name;
+/**
+ * <p>Java class for Folder complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Folder">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="accessType" type="{http://soap.sforce.com/2006/04/metadata}FolderAccessTypes" minOccurs="0"/>
+ *         &lt;element name="folderShares" type="{http://soap.sforce.com/2006/04/metadata}FolderShare" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="publicFolderAccess" type="{http://soap.sforce.com/2006/04/metadata}PublicFolderAccess" minOccurs="0"/>
+ *         &lt;element name="sharedTo" type="{http://soap.sforce.com/2006/04/metadata}SharedTo" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Folder", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "accessType",
+    "folderShares",
+    "name",
+    "publicFolderAccess",
+    "sharedTo"
+})
+@XmlSeeAlso({
+    EmailFolder.class,
+    ReportFolder.class,
+    DashboardFolder.class,
+    DocumentFolder.class
+})
+public class Folder
+    extends Metadata
+{
 
-    private com.sforce.soap._2006._04.metadata.PublicFolderAccess publicFolderAccess;
-
-    private com.sforce.soap._2006._04.metadata.SharedTo sharedTo;
-
-    public Folder() {
-    }
-
-    public Folder(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.FolderAccessTypes accessType,
-           com.sforce.soap._2006._04.metadata.FolderShare[] folderShares,
-           java.lang.String name,
-           com.sforce.soap._2006._04.metadata.PublicFolderAccess publicFolderAccess,
-           com.sforce.soap._2006._04.metadata.SharedTo sharedTo) {
-        super(
-            fullName);
-        this.accessType = accessType;
-        this.folderShares = folderShares;
-        this.name = name;
-        this.publicFolderAccess = publicFolderAccess;
-        this.sharedTo = sharedTo;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FolderAccessTypes accessType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FolderShare> folderShares;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected PublicFolderAccess publicFolderAccess;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SharedTo sharedTo;
 
     /**
-     * Gets the accessType value for this Folder.
+     * Gets the value of the accessType property.
      * 
-     * @return accessType
+     * @return
+     *     possible object is
+     *     {@link FolderAccessTypes }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FolderAccessTypes getAccessType() {
+    public FolderAccessTypes getAccessType() {
         return accessType;
     }
 
+    /**
+     * Sets the value of the accessType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FolderAccessTypes }
+     *     
+     */
+    public void setAccessType(FolderAccessTypes value) {
+        this.accessType = value;
+    }
 
     /**
-     * Sets the accessType value for this Folder.
+     * Gets the value of the folderShares property.
      * 
-     * @param accessType
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the folderShares property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFolderShares().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FolderShare }
+     * 
+     * 
      */
-    public void setAccessType(com.sforce.soap._2006._04.metadata.FolderAccessTypes accessType) {
-        this.accessType = accessType;
+    public List<FolderShare> getFolderShares() {
+        if (folderShares == null) {
+            folderShares = new ArrayList<FolderShare>();
+        }
+        return this.folderShares;
     }
-
 
     /**
-     * Gets the folderShares value for this Folder.
+     * Gets the value of the name property.
      * 
-     * @return folderShares
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FolderShare[] getFolderShares() {
-        return folderShares;
-    }
-
-
-    /**
-     * Sets the folderShares value for this Folder.
-     * 
-     * @param folderShares
-     */
-    public void setFolderShares(com.sforce.soap._2006._04.metadata.FolderShare[] folderShares) {
-        this.folderShares = folderShares;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FolderShare getFolderShares(int i) {
-        return this.folderShares[i];
-    }
-
-    public void setFolderShares(int i, com.sforce.soap._2006._04.metadata.FolderShare _value) {
-        this.folderShares[i] = _value;
-    }
-
-
-    /**
-     * Gets the name value for this Folder.
-     * 
-     * @return name
-     */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this Folder.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the publicFolderAccess value for this Folder.
+     * Gets the value of the publicFolderAccess property.
      * 
-     * @return publicFolderAccess
+     * @return
+     *     possible object is
+     *     {@link PublicFolderAccess }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.PublicFolderAccess getPublicFolderAccess() {
+    public PublicFolderAccess getPublicFolderAccess() {
         return publicFolderAccess;
     }
 
-
     /**
-     * Sets the publicFolderAccess value for this Folder.
+     * Sets the value of the publicFolderAccess property.
      * 
-     * @param publicFolderAccess
+     * @param value
+     *     allowed object is
+     *     {@link PublicFolderAccess }
+     *     
      */
-    public void setPublicFolderAccess(com.sforce.soap._2006._04.metadata.PublicFolderAccess publicFolderAccess) {
-        this.publicFolderAccess = publicFolderAccess;
+    public void setPublicFolderAccess(PublicFolderAccess value) {
+        this.publicFolderAccess = value;
     }
 
-
     /**
-     * Gets the sharedTo value for this Folder.
+     * Gets the value of the sharedTo property.
      * 
-     * @return sharedTo
+     * @return
+     *     possible object is
+     *     {@link SharedTo }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SharedTo getSharedTo() {
+    public SharedTo getSharedTo() {
         return sharedTo;
     }
 
-
     /**
-     * Sets the sharedTo value for this Folder.
+     * Sets the value of the sharedTo property.
      * 
-     * @param sharedTo
+     * @param value
+     *     allowed object is
+     *     {@link SharedTo }
+     *     
      */
-    public void setSharedTo(com.sforce.soap._2006._04.metadata.SharedTo sharedTo) {
-        this.sharedTo = sharedTo;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Folder)) return false;
-        Folder other = (Folder) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.accessType==null && other.getAccessType()==null) || 
-             (this.accessType!=null &&
-              this.accessType.equals(other.getAccessType()))) &&
-            ((this.folderShares==null && other.getFolderShares()==null) || 
-             (this.folderShares!=null &&
-              java.util.Arrays.equals(this.folderShares, other.getFolderShares()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.publicFolderAccess==null && other.getPublicFolderAccess()==null) || 
-             (this.publicFolderAccess!=null &&
-              this.publicFolderAccess.equals(other.getPublicFolderAccess()))) &&
-            ((this.sharedTo==null && other.getSharedTo()==null) || 
-             (this.sharedTo!=null &&
-              this.sharedTo.equals(other.getSharedTo())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAccessType() != null) {
-            _hashCode += getAccessType().hashCode();
-        }
-        if (getFolderShares() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFolderShares());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFolderShares(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getPublicFolderAccess() != null) {
-            _hashCode += getPublicFolderAccess().hashCode();
-        }
-        if (getSharedTo() != null) {
-            _hashCode += getSharedTo().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Folder.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Folder"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("accessType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "accessType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FolderAccessTypes"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("folderShares");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "folderShares"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FolderShare"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("publicFolderAccess");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "publicFolderAccess"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PublicFolderAccess"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sharedTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sharedTo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SharedTo"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSharedTo(SharedTo value) {
+        this.sharedTo = value;
     }
 
 }

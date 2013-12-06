@@ -1,234 +1,148 @@
-/**
- * FlowChoice.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowChoice  extends com.sforce.soap._2006._04.metadata.FlowElement  implements java.io.Serializable {
-    private java.lang.String choiceText;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.FlowDataType dataType;
 
-    private com.sforce.soap._2006._04.metadata.FlowChoiceUserInput userInput;
+/**
+ * <p>Java class for FlowChoice complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowChoice">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowElement">
+ *       &lt;sequence>
+ *         &lt;element name="choiceText" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="dataType" type="{http://soap.sforce.com/2006/04/metadata}FlowDataType"/>
+ *         &lt;element name="userInput" type="{http://soap.sforce.com/2006/04/metadata}FlowChoiceUserInput" minOccurs="0"/>
+ *         &lt;element name="value" type="{http://soap.sforce.com/2006/04/metadata}FlowElementReferenceOrValue" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowChoice", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "choiceText",
+    "dataType",
+    "userInput",
+    "value"
+})
+public class FlowChoice
+    extends FlowElement
+{
 
-    private com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue value;
-
-    public FlowChoice() {
-    }
-
-    public FlowChoice(
-           java.lang.String description,
-           java.lang.String name,
-           java.lang.String choiceText,
-           com.sforce.soap._2006._04.metadata.FlowDataType dataType,
-           com.sforce.soap._2006._04.metadata.FlowChoiceUserInput userInput,
-           com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue value) {
-        super(
-            description,
-            name);
-        this.choiceText = choiceText;
-        this.dataType = dataType;
-        this.userInput = userInput;
-        this.value = value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String choiceText;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected FlowDataType dataType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowChoiceUserInput userInput;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowElementReferenceOrValue value;
 
     /**
-     * Gets the choiceText value for this FlowChoice.
+     * Gets the value of the choiceText property.
      * 
-     * @return choiceText
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChoiceText() {
+    public String getChoiceText() {
         return choiceText;
     }
 
-
     /**
-     * Sets the choiceText value for this FlowChoice.
+     * Sets the value of the choiceText property.
      * 
-     * @param choiceText
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setChoiceText(java.lang.String choiceText) {
-        this.choiceText = choiceText;
+    public void setChoiceText(String value) {
+        this.choiceText = value;
     }
 
-
     /**
-     * Gets the dataType value for this FlowChoice.
+     * Gets the value of the dataType property.
      * 
-     * @return dataType
+     * @return
+     *     possible object is
+     *     {@link FlowDataType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowDataType getDataType() {
+    public FlowDataType getDataType() {
         return dataType;
     }
 
-
     /**
-     * Sets the dataType value for this FlowChoice.
+     * Sets the value of the dataType property.
      * 
-     * @param dataType
+     * @param value
+     *     allowed object is
+     *     {@link FlowDataType }
+     *     
      */
-    public void setDataType(com.sforce.soap._2006._04.metadata.FlowDataType dataType) {
-        this.dataType = dataType;
+    public void setDataType(FlowDataType value) {
+        this.dataType = value;
     }
 
-
     /**
-     * Gets the userInput value for this FlowChoice.
+     * Gets the value of the userInput property.
      * 
-     * @return userInput
+     * @return
+     *     possible object is
+     *     {@link FlowChoiceUserInput }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowChoiceUserInput getUserInput() {
+    public FlowChoiceUserInput getUserInput() {
         return userInput;
     }
 
-
     /**
-     * Sets the userInput value for this FlowChoice.
+     * Sets the value of the userInput property.
      * 
-     * @param userInput
+     * @param value
+     *     allowed object is
+     *     {@link FlowChoiceUserInput }
+     *     
      */
-    public void setUserInput(com.sforce.soap._2006._04.metadata.FlowChoiceUserInput userInput) {
-        this.userInput = userInput;
+    public void setUserInput(FlowChoiceUserInput value) {
+        this.userInput = value;
     }
 
-
     /**
-     * Gets the value value for this FlowChoice.
+     * Gets the value of the value property.
      * 
-     * @return value
+     * @return
+     *     possible object is
+     *     {@link FlowElementReferenceOrValue }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue getValue() {
+    public FlowElementReferenceOrValue getValue() {
         return value;
     }
 
-
     /**
-     * Sets the value value for this FlowChoice.
+     * Sets the value of the value property.
      * 
      * @param value
+     *     allowed object is
+     *     {@link FlowElementReferenceOrValue }
+     *     
      */
-    public void setValue(com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue value) {
+    public void setValue(FlowElementReferenceOrValue value) {
         this.value = value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowChoice)) return false;
-        FlowChoice other = (FlowChoice) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.choiceText==null && other.getChoiceText()==null) || 
-             (this.choiceText!=null &&
-              this.choiceText.equals(other.getChoiceText()))) &&
-            ((this.dataType==null && other.getDataType()==null) || 
-             (this.dataType!=null &&
-              this.dataType.equals(other.getDataType()))) &&
-            ((this.userInput==null && other.getUserInput()==null) || 
-             (this.userInput!=null &&
-              this.userInput.equals(other.getUserInput()))) &&
-            ((this.value==null && other.getValue()==null) || 
-             (this.value!=null &&
-              this.value.equals(other.getValue())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getChoiceText() != null) {
-            _hashCode += getChoiceText().hashCode();
-        }
-        if (getDataType() != null) {
-            _hashCode += getDataType().hashCode();
-        }
-        if (getUserInput() != null) {
-            _hashCode += getUserInput().hashCode();
-        }
-        if (getValue() != null) {
-            _hashCode += getValue().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowChoice.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowChoice"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("choiceText");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "choiceText"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dataType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDataType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userInput");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "userInput"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowChoiceUserInput"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("value");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "value"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowElementReferenceOrValue"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
     }
 
 }

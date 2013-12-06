@@ -1,155 +1,90 @@
-/**
- * FlowOutputFieldAssignment.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowOutputFieldAssignment  implements java.io.Serializable {
-    private java.lang.String assignToReference;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String field;
 
-    public FlowOutputFieldAssignment() {
-    }
+/**
+ * <p>Java class for FlowOutputFieldAssignment complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowOutputFieldAssignment">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="assignToReference" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="field" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowOutputFieldAssignment", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "assignToReference",
+    "field"
+})
+public class FlowOutputFieldAssignment {
 
-    public FlowOutputFieldAssignment(
-           java.lang.String assignToReference,
-           java.lang.String field) {
-           this.assignToReference = assignToReference;
-           this.field = field;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String assignToReference;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String field;
 
     /**
-     * Gets the assignToReference value for this FlowOutputFieldAssignment.
+     * Gets the value of the assignToReference property.
      * 
-     * @return assignToReference
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAssignToReference() {
+    public String getAssignToReference() {
         return assignToReference;
     }
 
-
     /**
-     * Sets the assignToReference value for this FlowOutputFieldAssignment.
+     * Sets the value of the assignToReference property.
      * 
-     * @param assignToReference
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAssignToReference(java.lang.String assignToReference) {
-        this.assignToReference = assignToReference;
+    public void setAssignToReference(String value) {
+        this.assignToReference = value;
     }
 
-
     /**
-     * Gets the field value for this FlowOutputFieldAssignment.
+     * Gets the value of the field property.
      * 
-     * @return field
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getField() {
+    public String getField() {
         return field;
     }
 
-
     /**
-     * Sets the field value for this FlowOutputFieldAssignment.
+     * Sets the value of the field property.
      * 
-     * @param field
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setField(java.lang.String field) {
-        this.field = field;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowOutputFieldAssignment)) return false;
-        FlowOutputFieldAssignment other = (FlowOutputFieldAssignment) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.assignToReference==null && other.getAssignToReference()==null) || 
-             (this.assignToReference!=null &&
-              this.assignToReference.equals(other.getAssignToReference()))) &&
-            ((this.field==null && other.getField()==null) || 
-             (this.field!=null &&
-              this.field.equals(other.getField())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAssignToReference() != null) {
-            _hashCode += getAssignToReference().hashCode();
-        }
-        if (getField() != null) {
-            _hashCode += getField().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowOutputFieldAssignment.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowOutputFieldAssignment"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignToReference");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignToReference"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("field");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setField(String value) {
+        this.field = value;
     }
 
 }

@@ -1,211 +1,125 @@
-/**
- * ReportFilter.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportFilter  implements java.io.Serializable {
-    private java.lang.String booleanFilter;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.ReportFilterItem[] criteriaItems;
 
-    private com.sforce.soap._2006._04.metadata.Language language;
+/**
+ * <p>Java class for ReportFilter complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportFilter">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="booleanFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="criteriaItems" type="{http://soap.sforce.com/2006/04/metadata}ReportFilterItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="language" type="{http://soap.sforce.com/2006/04/metadata}Language" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportFilter", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "booleanFilter",
+    "criteriaItems",
+    "language"
+})
+public class ReportFilter {
 
-    public ReportFilter() {
-    }
-
-    public ReportFilter(
-           java.lang.String booleanFilter,
-           com.sforce.soap._2006._04.metadata.ReportFilterItem[] criteriaItems,
-           com.sforce.soap._2006._04.metadata.Language language) {
-           this.booleanFilter = booleanFilter;
-           this.criteriaItems = criteriaItems;
-           this.language = language;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String booleanFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportFilterItem> criteriaItems;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Language language;
 
     /**
-     * Gets the booleanFilter value for this ReportFilter.
+     * Gets the value of the booleanFilter property.
      * 
-     * @return booleanFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBooleanFilter() {
+    public String getBooleanFilter() {
         return booleanFilter;
     }
 
+    /**
+     * Sets the value of the booleanFilter property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBooleanFilter(String value) {
+        this.booleanFilter = value;
+    }
 
     /**
-     * Sets the booleanFilter value for this ReportFilter.
+     * Gets the value of the criteriaItems property.
      * 
-     * @param booleanFilter
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the criteriaItems property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCriteriaItems().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportFilterItem }
+     * 
+     * 
      */
-    public void setBooleanFilter(java.lang.String booleanFilter) {
-        this.booleanFilter = booleanFilter;
+    public List<ReportFilterItem> getCriteriaItems() {
+        if (criteriaItems == null) {
+            criteriaItems = new ArrayList<ReportFilterItem>();
+        }
+        return this.criteriaItems;
     }
-
 
     /**
-     * Gets the criteriaItems value for this ReportFilter.
+     * Gets the value of the language property.
      * 
-     * @return criteriaItems
+     * @return
+     *     possible object is
+     *     {@link Language }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportFilterItem[] getCriteriaItems() {
-        return criteriaItems;
-    }
-
-
-    /**
-     * Sets the criteriaItems value for this ReportFilter.
-     * 
-     * @param criteriaItems
-     */
-    public void setCriteriaItems(com.sforce.soap._2006._04.metadata.ReportFilterItem[] criteriaItems) {
-        this.criteriaItems = criteriaItems;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportFilterItem getCriteriaItems(int i) {
-        return this.criteriaItems[i];
-    }
-
-    public void setCriteriaItems(int i, com.sforce.soap._2006._04.metadata.ReportFilterItem _value) {
-        this.criteriaItems[i] = _value;
-    }
-
-
-    /**
-     * Gets the language value for this ReportFilter.
-     * 
-     * @return language
-     */
-    public com.sforce.soap._2006._04.metadata.Language getLanguage() {
+    public Language getLanguage() {
         return language;
     }
 
-
     /**
-     * Sets the language value for this ReportFilter.
+     * Sets the value of the language property.
      * 
-     * @param language
+     * @param value
+     *     allowed object is
+     *     {@link Language }
+     *     
      */
-    public void setLanguage(com.sforce.soap._2006._04.metadata.Language language) {
-        this.language = language;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportFilter)) return false;
-        ReportFilter other = (ReportFilter) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.booleanFilter==null && other.getBooleanFilter()==null) || 
-             (this.booleanFilter!=null &&
-              this.booleanFilter.equals(other.getBooleanFilter()))) &&
-            ((this.criteriaItems==null && other.getCriteriaItems()==null) || 
-             (this.criteriaItems!=null &&
-              java.util.Arrays.equals(this.criteriaItems, other.getCriteriaItems()))) &&
-            ((this.language==null && other.getLanguage()==null) || 
-             (this.language!=null &&
-              this.language.equals(other.getLanguage())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getBooleanFilter() != null) {
-            _hashCode += getBooleanFilter().hashCode();
-        }
-        if (getCriteriaItems() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCriteriaItems());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCriteriaItems(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLanguage() != null) {
-            _hashCode += getLanguage().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportFilter.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportFilter"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("booleanFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "booleanFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("criteriaItems");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "criteriaItems"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportFilterItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("language");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "language"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Language"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setLanguage(Language value) {
+        this.language = value;
     }
 
 }

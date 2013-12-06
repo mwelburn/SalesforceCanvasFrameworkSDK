@@ -1,194 +1,118 @@
-/**
- * FlowChoiceUserInput.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowChoiceUserInput  implements java.io.Serializable {
-    private java.lang.Boolean isRequired;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String promptText;
 
-    private com.sforce.soap._2006._04.metadata.FlowInputValidationRule validationRule;
+/**
+ * <p>Java class for FlowChoiceUserInput complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowChoiceUserInput">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="isRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="promptText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="validationRule" type="{http://soap.sforce.com/2006/04/metadata}FlowInputValidationRule" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowChoiceUserInput", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "isRequired",
+    "promptText",
+    "validationRule"
+})
+public class FlowChoiceUserInput {
 
-    public FlowChoiceUserInput() {
-    }
-
-    public FlowChoiceUserInput(
-           java.lang.Boolean isRequired,
-           java.lang.String promptText,
-           com.sforce.soap._2006._04.metadata.FlowInputValidationRule validationRule) {
-           this.isRequired = isRequired;
-           this.promptText = promptText;
-           this.validationRule = validationRule;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isRequired;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String promptText;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowInputValidationRule validationRule;
 
     /**
-     * Gets the isRequired value for this FlowChoiceUserInput.
+     * Gets the value of the isRequired property.
      * 
-     * @return isRequired
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsRequired() {
+    public Boolean isIsRequired() {
         return isRequired;
     }
 
-
     /**
-     * Sets the isRequired value for this FlowChoiceUserInput.
+     * Sets the value of the isRequired property.
      * 
-     * @param isRequired
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsRequired(java.lang.Boolean isRequired) {
-        this.isRequired = isRequired;
+    public void setIsRequired(Boolean value) {
+        this.isRequired = value;
     }
 
-
     /**
-     * Gets the promptText value for this FlowChoiceUserInput.
+     * Gets the value of the promptText property.
      * 
-     * @return promptText
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPromptText() {
+    public String getPromptText() {
         return promptText;
     }
 
-
     /**
-     * Sets the promptText value for this FlowChoiceUserInput.
+     * Sets the value of the promptText property.
      * 
-     * @param promptText
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPromptText(java.lang.String promptText) {
-        this.promptText = promptText;
+    public void setPromptText(String value) {
+        this.promptText = value;
     }
 
-
     /**
-     * Gets the validationRule value for this FlowChoiceUserInput.
+     * Gets the value of the validationRule property.
      * 
-     * @return validationRule
+     * @return
+     *     possible object is
+     *     {@link FlowInputValidationRule }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowInputValidationRule getValidationRule() {
+    public FlowInputValidationRule getValidationRule() {
         return validationRule;
     }
 
-
     /**
-     * Sets the validationRule value for this FlowChoiceUserInput.
+     * Sets the value of the validationRule property.
      * 
-     * @param validationRule
+     * @param value
+     *     allowed object is
+     *     {@link FlowInputValidationRule }
+     *     
      */
-    public void setValidationRule(com.sforce.soap._2006._04.metadata.FlowInputValidationRule validationRule) {
-        this.validationRule = validationRule;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowChoiceUserInput)) return false;
-        FlowChoiceUserInput other = (FlowChoiceUserInput) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.isRequired==null && other.getIsRequired()==null) || 
-             (this.isRequired!=null &&
-              this.isRequired.equals(other.getIsRequired()))) &&
-            ((this.promptText==null && other.getPromptText()==null) || 
-             (this.promptText!=null &&
-              this.promptText.equals(other.getPromptText()))) &&
-            ((this.validationRule==null && other.getValidationRule()==null) || 
-             (this.validationRule!=null &&
-              this.validationRule.equals(other.getValidationRule())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getIsRequired() != null) {
-            _hashCode += getIsRequired().hashCode();
-        }
-        if (getPromptText() != null) {
-            _hashCode += getPromptText().hashCode();
-        }
-        if (getValidationRule() != null) {
-            _hashCode += getValidationRule().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowChoiceUserInput.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowChoiceUserInput"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isRequired");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isRequired"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("promptText");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "promptText"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("validationRule");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "validationRule"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowInputValidationRule"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setValidationRule(FlowInputValidationRule value) {
+        this.validationRule = value;
     }
 
 }

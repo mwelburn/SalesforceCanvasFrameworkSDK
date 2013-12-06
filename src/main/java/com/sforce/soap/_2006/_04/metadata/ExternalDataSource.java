@@ -1,711 +1,512 @@
-/**
- * ExternalDataSource.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ExternalDataSource  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String apiKey;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String authProvider;
 
-    private java.lang.String certificate;
+/**
+ * <p>Java class for ExternalDataSource complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ExternalDataSource">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="apiKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="authProvider" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="certificate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="customConfiguration" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="endpoint" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="oauthRefreshToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="oauthScope" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="oauthToken" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="principalType" type="{http://soap.sforce.com/2006/04/metadata}ExternalPrincipalType"/>
+ *         &lt;element name="protocol" type="{http://soap.sforce.com/2006/04/metadata}AuthenticationProtocol"/>
+ *         &lt;element name="remoteIdentifier" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="repository" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="type" type="{http://soap.sforce.com/2006/04/metadata}ExternalDataSourceType"/>
+ *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="version" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ExternalDataSource", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "apiKey",
+    "authProvider",
+    "certificate",
+    "customConfiguration",
+    "endpoint",
+    "label",
+    "oauthRefreshToken",
+    "oauthScope",
+    "oauthToken",
+    "password",
+    "principalType",
+    "protocol",
+    "remoteIdentifier",
+    "repository",
+    "type",
+    "username",
+    "version"
+})
+public class ExternalDataSource
+    extends Metadata
+{
 
-    private java.lang.String customConfiguration;
-
-    private java.lang.String endpoint;
-
-    private java.lang.String label;
-
-    private java.lang.String oauthRefreshToken;
-
-    private java.lang.String oauthScope;
-
-    private java.lang.String oauthToken;
-
-    private java.lang.String password;
-
-    private com.sforce.soap._2006._04.metadata.ExternalPrincipalType principalType;
-
-    private com.sforce.soap._2006._04.metadata.AuthenticationProtocol protocol;
-
-    private java.lang.String remoteIdentifier;
-
-    private java.lang.String repository;
-
-    private java.lang.String type;
-
-    private java.lang.String username;
-
-    private java.lang.String version;
-
-    public ExternalDataSource() {
-    }
-
-    public ExternalDataSource(
-           java.lang.String fullName,
-           java.lang.String apiKey,
-           java.lang.String authProvider,
-           java.lang.String certificate,
-           java.lang.String customConfiguration,
-           java.lang.String endpoint,
-           java.lang.String label,
-           java.lang.String oauthRefreshToken,
-           java.lang.String oauthScope,
-           java.lang.String oauthToken,
-           java.lang.String password,
-           com.sforce.soap._2006._04.metadata.ExternalPrincipalType principalType,
-           com.sforce.soap._2006._04.metadata.AuthenticationProtocol protocol,
-           java.lang.String remoteIdentifier,
-           java.lang.String repository,
-           java.lang.String type,
-           java.lang.String username,
-           java.lang.String version) {
-        super(
-            fullName);
-        this.apiKey = apiKey;
-        this.authProvider = authProvider;
-        this.certificate = certificate;
-        this.customConfiguration = customConfiguration;
-        this.endpoint = endpoint;
-        this.label = label;
-        this.oauthRefreshToken = oauthRefreshToken;
-        this.oauthScope = oauthScope;
-        this.oauthToken = oauthToken;
-        this.password = password;
-        this.principalType = principalType;
-        this.protocol = protocol;
-        this.remoteIdentifier = remoteIdentifier;
-        this.repository = repository;
-        this.type = type;
-        this.username = username;
-        this.version = version;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String apiKey;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String authProvider;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String certificate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customConfiguration;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String endpoint;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String oauthRefreshToken;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String oauthScope;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String oauthToken;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String password;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected ExternalPrincipalType principalType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected AuthenticationProtocol protocol;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String remoteIdentifier;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String repository;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String type;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String username;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String version;
 
     /**
-     * Gets the apiKey value for this ExternalDataSource.
+     * Gets the value of the apiKey property.
      * 
-     * @return apiKey
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getApiKey() {
+    public String getApiKey() {
         return apiKey;
     }
 
-
     /**
-     * Sets the apiKey value for this ExternalDataSource.
+     * Sets the value of the apiKey property.
      * 
-     * @param apiKey
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setApiKey(java.lang.String apiKey) {
-        this.apiKey = apiKey;
+    public void setApiKey(String value) {
+        this.apiKey = value;
     }
 
-
     /**
-     * Gets the authProvider value for this ExternalDataSource.
+     * Gets the value of the authProvider property.
      * 
-     * @return authProvider
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAuthProvider() {
+    public String getAuthProvider() {
         return authProvider;
     }
 
-
     /**
-     * Sets the authProvider value for this ExternalDataSource.
+     * Sets the value of the authProvider property.
      * 
-     * @param authProvider
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAuthProvider(java.lang.String authProvider) {
-        this.authProvider = authProvider;
+    public void setAuthProvider(String value) {
+        this.authProvider = value;
     }
 
-
     /**
-     * Gets the certificate value for this ExternalDataSource.
+     * Gets the value of the certificate property.
      * 
-     * @return certificate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCertificate() {
+    public String getCertificate() {
         return certificate;
     }
 
-
     /**
-     * Sets the certificate value for this ExternalDataSource.
+     * Sets the value of the certificate property.
      * 
-     * @param certificate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCertificate(java.lang.String certificate) {
-        this.certificate = certificate;
+    public void setCertificate(String value) {
+        this.certificate = value;
     }
 
-
     /**
-     * Gets the customConfiguration value for this ExternalDataSource.
+     * Gets the value of the customConfiguration property.
      * 
-     * @return customConfiguration
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomConfiguration() {
+    public String getCustomConfiguration() {
         return customConfiguration;
     }
 
-
     /**
-     * Sets the customConfiguration value for this ExternalDataSource.
+     * Sets the value of the customConfiguration property.
      * 
-     * @param customConfiguration
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomConfiguration(java.lang.String customConfiguration) {
-        this.customConfiguration = customConfiguration;
+    public void setCustomConfiguration(String value) {
+        this.customConfiguration = value;
     }
 
-
     /**
-     * Gets the endpoint value for this ExternalDataSource.
+     * Gets the value of the endpoint property.
      * 
-     * @return endpoint
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEndpoint() {
+    public String getEndpoint() {
         return endpoint;
     }
 
-
     /**
-     * Sets the endpoint value for this ExternalDataSource.
+     * Sets the value of the endpoint property.
      * 
-     * @param endpoint
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEndpoint(java.lang.String endpoint) {
-        this.endpoint = endpoint;
+    public void setEndpoint(String value) {
+        this.endpoint = value;
     }
 
-
     /**
-     * Gets the label value for this ExternalDataSource.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this ExternalDataSource.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the oauthRefreshToken value for this ExternalDataSource.
+     * Gets the value of the oauthRefreshToken property.
      * 
-     * @return oauthRefreshToken
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOauthRefreshToken() {
+    public String getOauthRefreshToken() {
         return oauthRefreshToken;
     }
 
-
     /**
-     * Sets the oauthRefreshToken value for this ExternalDataSource.
+     * Sets the value of the oauthRefreshToken property.
      * 
-     * @param oauthRefreshToken
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOauthRefreshToken(java.lang.String oauthRefreshToken) {
-        this.oauthRefreshToken = oauthRefreshToken;
+    public void setOauthRefreshToken(String value) {
+        this.oauthRefreshToken = value;
     }
 
-
     /**
-     * Gets the oauthScope value for this ExternalDataSource.
+     * Gets the value of the oauthScope property.
      * 
-     * @return oauthScope
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOauthScope() {
+    public String getOauthScope() {
         return oauthScope;
     }
 
-
     /**
-     * Sets the oauthScope value for this ExternalDataSource.
+     * Sets the value of the oauthScope property.
      * 
-     * @param oauthScope
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOauthScope(java.lang.String oauthScope) {
-        this.oauthScope = oauthScope;
+    public void setOauthScope(String value) {
+        this.oauthScope = value;
     }
 
-
     /**
-     * Gets the oauthToken value for this ExternalDataSource.
+     * Gets the value of the oauthToken property.
      * 
-     * @return oauthToken
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOauthToken() {
+    public String getOauthToken() {
         return oauthToken;
     }
 
-
     /**
-     * Sets the oauthToken value for this ExternalDataSource.
+     * Sets the value of the oauthToken property.
      * 
-     * @param oauthToken
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOauthToken(java.lang.String oauthToken) {
-        this.oauthToken = oauthToken;
+    public void setOauthToken(String value) {
+        this.oauthToken = value;
     }
 
-
     /**
-     * Gets the password value for this ExternalDataSource.
+     * Gets the value of the password property.
      * 
-     * @return password
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPassword() {
+    public String getPassword() {
         return password;
     }
 
-
     /**
-     * Sets the password value for this ExternalDataSource.
+     * Sets the value of the password property.
      * 
-     * @param password
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPassword(java.lang.String password) {
-        this.password = password;
+    public void setPassword(String value) {
+        this.password = value;
     }
 
-
     /**
-     * Gets the principalType value for this ExternalDataSource.
+     * Gets the value of the principalType property.
      * 
-     * @return principalType
+     * @return
+     *     possible object is
+     *     {@link ExternalPrincipalType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ExternalPrincipalType getPrincipalType() {
+    public ExternalPrincipalType getPrincipalType() {
         return principalType;
     }
 
-
     /**
-     * Sets the principalType value for this ExternalDataSource.
+     * Sets the value of the principalType property.
      * 
-     * @param principalType
+     * @param value
+     *     allowed object is
+     *     {@link ExternalPrincipalType }
+     *     
      */
-    public void setPrincipalType(com.sforce.soap._2006._04.metadata.ExternalPrincipalType principalType) {
-        this.principalType = principalType;
+    public void setPrincipalType(ExternalPrincipalType value) {
+        this.principalType = value;
     }
 
-
     /**
-     * Gets the protocol value for this ExternalDataSource.
+     * Gets the value of the protocol property.
      * 
-     * @return protocol
+     * @return
+     *     possible object is
+     *     {@link AuthenticationProtocol }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.AuthenticationProtocol getProtocol() {
+    public AuthenticationProtocol getProtocol() {
         return protocol;
     }
 
-
     /**
-     * Sets the protocol value for this ExternalDataSource.
+     * Sets the value of the protocol property.
      * 
-     * @param protocol
+     * @param value
+     *     allowed object is
+     *     {@link AuthenticationProtocol }
+     *     
      */
-    public void setProtocol(com.sforce.soap._2006._04.metadata.AuthenticationProtocol protocol) {
-        this.protocol = protocol;
+    public void setProtocol(AuthenticationProtocol value) {
+        this.protocol = value;
     }
 
-
     /**
-     * Gets the remoteIdentifier value for this ExternalDataSource.
+     * Gets the value of the remoteIdentifier property.
      * 
-     * @return remoteIdentifier
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRemoteIdentifier() {
+    public String getRemoteIdentifier() {
         return remoteIdentifier;
     }
 
-
     /**
-     * Sets the remoteIdentifier value for this ExternalDataSource.
+     * Sets the value of the remoteIdentifier property.
      * 
-     * @param remoteIdentifier
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRemoteIdentifier(java.lang.String remoteIdentifier) {
-        this.remoteIdentifier = remoteIdentifier;
+    public void setRemoteIdentifier(String value) {
+        this.remoteIdentifier = value;
     }
 
-
     /**
-     * Gets the repository value for this ExternalDataSource.
+     * Gets the value of the repository property.
      * 
-     * @return repository
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRepository() {
+    public String getRepository() {
         return repository;
     }
 
-
     /**
-     * Sets the repository value for this ExternalDataSource.
+     * Sets the value of the repository property.
      * 
-     * @param repository
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRepository(java.lang.String repository) {
-        this.repository = repository;
+    public void setRepository(String value) {
+        this.repository = value;
     }
 
-
     /**
-     * Gets the type value for this ExternalDataSource.
+     * Gets the value of the type property.
      * 
-     * @return type
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getType() {
+    public String getType() {
         return type;
     }
 
-
     /**
-     * Sets the type value for this ExternalDataSource.
+     * Sets the value of the type property.
      * 
-     * @param type
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setType(java.lang.String type) {
-        this.type = type;
+    public void setType(String value) {
+        this.type = value;
     }
 
-
     /**
-     * Gets the username value for this ExternalDataSource.
+     * Gets the value of the username property.
      * 
-     * @return username
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUsername() {
+    public String getUsername() {
         return username;
     }
 
-
     /**
-     * Sets the username value for this ExternalDataSource.
+     * Sets the value of the username property.
      * 
-     * @param username
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUsername(java.lang.String username) {
-        this.username = username;
+    public void setUsername(String value) {
+        this.username = value;
     }
 
-
     /**
-     * Gets the version value for this ExternalDataSource.
+     * Gets the value of the version property.
      * 
-     * @return version
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getVersion() {
+    public String getVersion() {
         return version;
     }
 
-
     /**
-     * Sets the version value for this ExternalDataSource.
+     * Sets the value of the version property.
      * 
-     * @param version
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setVersion(java.lang.String version) {
-        this.version = version;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ExternalDataSource)) return false;
-        ExternalDataSource other = (ExternalDataSource) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.apiKey==null && other.getApiKey()==null) || 
-             (this.apiKey!=null &&
-              this.apiKey.equals(other.getApiKey()))) &&
-            ((this.authProvider==null && other.getAuthProvider()==null) || 
-             (this.authProvider!=null &&
-              this.authProvider.equals(other.getAuthProvider()))) &&
-            ((this.certificate==null && other.getCertificate()==null) || 
-             (this.certificate!=null &&
-              this.certificate.equals(other.getCertificate()))) &&
-            ((this.customConfiguration==null && other.getCustomConfiguration()==null) || 
-             (this.customConfiguration!=null &&
-              this.customConfiguration.equals(other.getCustomConfiguration()))) &&
-            ((this.endpoint==null && other.getEndpoint()==null) || 
-             (this.endpoint!=null &&
-              this.endpoint.equals(other.getEndpoint()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.oauthRefreshToken==null && other.getOauthRefreshToken()==null) || 
-             (this.oauthRefreshToken!=null &&
-              this.oauthRefreshToken.equals(other.getOauthRefreshToken()))) &&
-            ((this.oauthScope==null && other.getOauthScope()==null) || 
-             (this.oauthScope!=null &&
-              this.oauthScope.equals(other.getOauthScope()))) &&
-            ((this.oauthToken==null && other.getOauthToken()==null) || 
-             (this.oauthToken!=null &&
-              this.oauthToken.equals(other.getOauthToken()))) &&
-            ((this.password==null && other.getPassword()==null) || 
-             (this.password!=null &&
-              this.password.equals(other.getPassword()))) &&
-            ((this.principalType==null && other.getPrincipalType()==null) || 
-             (this.principalType!=null &&
-              this.principalType.equals(other.getPrincipalType()))) &&
-            ((this.protocol==null && other.getProtocol()==null) || 
-             (this.protocol!=null &&
-              this.protocol.equals(other.getProtocol()))) &&
-            ((this.remoteIdentifier==null && other.getRemoteIdentifier()==null) || 
-             (this.remoteIdentifier!=null &&
-              this.remoteIdentifier.equals(other.getRemoteIdentifier()))) &&
-            ((this.repository==null && other.getRepository()==null) || 
-             (this.repository!=null &&
-              this.repository.equals(other.getRepository()))) &&
-            ((this.type==null && other.getType()==null) || 
-             (this.type!=null &&
-              this.type.equals(other.getType()))) &&
-            ((this.username==null && other.getUsername()==null) || 
-             (this.username!=null &&
-              this.username.equals(other.getUsername()))) &&
-            ((this.version==null && other.getVersion()==null) || 
-             (this.version!=null &&
-              this.version.equals(other.getVersion())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getApiKey() != null) {
-            _hashCode += getApiKey().hashCode();
-        }
-        if (getAuthProvider() != null) {
-            _hashCode += getAuthProvider().hashCode();
-        }
-        if (getCertificate() != null) {
-            _hashCode += getCertificate().hashCode();
-        }
-        if (getCustomConfiguration() != null) {
-            _hashCode += getCustomConfiguration().hashCode();
-        }
-        if (getEndpoint() != null) {
-            _hashCode += getEndpoint().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getOauthRefreshToken() != null) {
-            _hashCode += getOauthRefreshToken().hashCode();
-        }
-        if (getOauthScope() != null) {
-            _hashCode += getOauthScope().hashCode();
-        }
-        if (getOauthToken() != null) {
-            _hashCode += getOauthToken().hashCode();
-        }
-        if (getPassword() != null) {
-            _hashCode += getPassword().hashCode();
-        }
-        if (getPrincipalType() != null) {
-            _hashCode += getPrincipalType().hashCode();
-        }
-        if (getProtocol() != null) {
-            _hashCode += getProtocol().hashCode();
-        }
-        if (getRemoteIdentifier() != null) {
-            _hashCode += getRemoteIdentifier().hashCode();
-        }
-        if (getRepository() != null) {
-            _hashCode += getRepository().hashCode();
-        }
-        if (getType() != null) {
-            _hashCode += getType().hashCode();
-        }
-        if (getUsername() != null) {
-            _hashCode += getUsername().hashCode();
-        }
-        if (getVersion() != null) {
-            _hashCode += getVersion().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ExternalDataSource.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ExternalDataSource"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("apiKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "apiKey"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("authProvider");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "authProvider"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("certificate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "certificate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customConfiguration");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customConfiguration"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("endpoint");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "endpoint"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("oauthRefreshToken");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "oauthRefreshToken"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("oauthScope");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "oauthScope"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("oauthToken");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "oauthToken"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("password");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "password"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("principalType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "principalType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ExternalPrincipalType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("protocol");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "protocol"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AuthenticationProtocol"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("remoteIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "remoteIdentifier"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("repository");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "repository"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("type");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "type"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("username");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "username"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("version");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "version"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setVersion(String value) {
+        this.version = value;
     }
 
 }

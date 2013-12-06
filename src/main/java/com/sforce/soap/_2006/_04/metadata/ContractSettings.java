@@ -1,308 +1,204 @@
-/**
- * ContractSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ContractSettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean autoCalculateEndDate;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String autoExpirationDelay;
 
-    private java.lang.String autoExpirationRecipient;
+/**
+ * <p>Java class for ContractSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ContractSettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="autoCalculateEndDate" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="autoExpirationDelay" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="autoExpirationRecipient" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="autoExpireContracts" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableContractHistoryTracking" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="notifyOwnersOnContractExpiration" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ContractSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "autoCalculateEndDate",
+    "autoExpirationDelay",
+    "autoExpirationRecipient",
+    "autoExpireContracts",
+    "enableContractHistoryTracking",
+    "notifyOwnersOnContractExpiration"
+})
+public class ContractSettings
+    extends Metadata
+{
 
-    private java.lang.Boolean autoExpireContracts;
-
-    private java.lang.Boolean enableContractHistoryTracking;
-
-    private java.lang.Boolean notifyOwnersOnContractExpiration;
-
-    public ContractSettings() {
-    }
-
-    public ContractSettings(
-           java.lang.String fullName,
-           java.lang.Boolean autoCalculateEndDate,
-           java.lang.String autoExpirationDelay,
-           java.lang.String autoExpirationRecipient,
-           java.lang.Boolean autoExpireContracts,
-           java.lang.Boolean enableContractHistoryTracking,
-           java.lang.Boolean notifyOwnersOnContractExpiration) {
-        super(
-            fullName);
-        this.autoCalculateEndDate = autoCalculateEndDate;
-        this.autoExpirationDelay = autoExpirationDelay;
-        this.autoExpirationRecipient = autoExpirationRecipient;
-        this.autoExpireContracts = autoExpireContracts;
-        this.enableContractHistoryTracking = enableContractHistoryTracking;
-        this.notifyOwnersOnContractExpiration = notifyOwnersOnContractExpiration;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean autoCalculateEndDate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String autoExpirationDelay;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String autoExpirationRecipient;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean autoExpireContracts;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableContractHistoryTracking;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean notifyOwnersOnContractExpiration;
 
     /**
-     * Gets the autoCalculateEndDate value for this ContractSettings.
+     * Gets the value of the autoCalculateEndDate property.
      * 
-     * @return autoCalculateEndDate
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAutoCalculateEndDate() {
+    public Boolean isAutoCalculateEndDate() {
         return autoCalculateEndDate;
     }
 
-
     /**
-     * Sets the autoCalculateEndDate value for this ContractSettings.
+     * Sets the value of the autoCalculateEndDate property.
      * 
-     * @param autoCalculateEndDate
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAutoCalculateEndDate(java.lang.Boolean autoCalculateEndDate) {
-        this.autoCalculateEndDate = autoCalculateEndDate;
+    public void setAutoCalculateEndDate(Boolean value) {
+        this.autoCalculateEndDate = value;
     }
 
-
     /**
-     * Gets the autoExpirationDelay value for this ContractSettings.
+     * Gets the value of the autoExpirationDelay property.
      * 
-     * @return autoExpirationDelay
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAutoExpirationDelay() {
+    public String getAutoExpirationDelay() {
         return autoExpirationDelay;
     }
 
-
     /**
-     * Sets the autoExpirationDelay value for this ContractSettings.
+     * Sets the value of the autoExpirationDelay property.
      * 
-     * @param autoExpirationDelay
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAutoExpirationDelay(java.lang.String autoExpirationDelay) {
-        this.autoExpirationDelay = autoExpirationDelay;
+    public void setAutoExpirationDelay(String value) {
+        this.autoExpirationDelay = value;
     }
 
-
     /**
-     * Gets the autoExpirationRecipient value for this ContractSettings.
+     * Gets the value of the autoExpirationRecipient property.
      * 
-     * @return autoExpirationRecipient
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAutoExpirationRecipient() {
+    public String getAutoExpirationRecipient() {
         return autoExpirationRecipient;
     }
 
-
     /**
-     * Sets the autoExpirationRecipient value for this ContractSettings.
+     * Sets the value of the autoExpirationRecipient property.
      * 
-     * @param autoExpirationRecipient
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAutoExpirationRecipient(java.lang.String autoExpirationRecipient) {
-        this.autoExpirationRecipient = autoExpirationRecipient;
+    public void setAutoExpirationRecipient(String value) {
+        this.autoExpirationRecipient = value;
     }
 
-
     /**
-     * Gets the autoExpireContracts value for this ContractSettings.
+     * Gets the value of the autoExpireContracts property.
      * 
-     * @return autoExpireContracts
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAutoExpireContracts() {
+    public Boolean isAutoExpireContracts() {
         return autoExpireContracts;
     }
 
-
     /**
-     * Sets the autoExpireContracts value for this ContractSettings.
+     * Sets the value of the autoExpireContracts property.
      * 
-     * @param autoExpireContracts
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAutoExpireContracts(java.lang.Boolean autoExpireContracts) {
-        this.autoExpireContracts = autoExpireContracts;
+    public void setAutoExpireContracts(Boolean value) {
+        this.autoExpireContracts = value;
     }
 
-
     /**
-     * Gets the enableContractHistoryTracking value for this ContractSettings.
+     * Gets the value of the enableContractHistoryTracking property.
      * 
-     * @return enableContractHistoryTracking
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableContractHistoryTracking() {
+    public Boolean isEnableContractHistoryTracking() {
         return enableContractHistoryTracking;
     }
 
-
     /**
-     * Sets the enableContractHistoryTracking value for this ContractSettings.
+     * Sets the value of the enableContractHistoryTracking property.
      * 
-     * @param enableContractHistoryTracking
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableContractHistoryTracking(java.lang.Boolean enableContractHistoryTracking) {
-        this.enableContractHistoryTracking = enableContractHistoryTracking;
+    public void setEnableContractHistoryTracking(Boolean value) {
+        this.enableContractHistoryTracking = value;
     }
 
-
     /**
-     * Gets the notifyOwnersOnContractExpiration value for this ContractSettings.
+     * Gets the value of the notifyOwnersOnContractExpiration property.
      * 
-     * @return notifyOwnersOnContractExpiration
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getNotifyOwnersOnContractExpiration() {
+    public Boolean isNotifyOwnersOnContractExpiration() {
         return notifyOwnersOnContractExpiration;
     }
 
-
     /**
-     * Sets the notifyOwnersOnContractExpiration value for this ContractSettings.
+     * Sets the value of the notifyOwnersOnContractExpiration property.
      * 
-     * @param notifyOwnersOnContractExpiration
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setNotifyOwnersOnContractExpiration(java.lang.Boolean notifyOwnersOnContractExpiration) {
-        this.notifyOwnersOnContractExpiration = notifyOwnersOnContractExpiration;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ContractSettings)) return false;
-        ContractSettings other = (ContractSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.autoCalculateEndDate==null && other.getAutoCalculateEndDate()==null) || 
-             (this.autoCalculateEndDate!=null &&
-              this.autoCalculateEndDate.equals(other.getAutoCalculateEndDate()))) &&
-            ((this.autoExpirationDelay==null && other.getAutoExpirationDelay()==null) || 
-             (this.autoExpirationDelay!=null &&
-              this.autoExpirationDelay.equals(other.getAutoExpirationDelay()))) &&
-            ((this.autoExpirationRecipient==null && other.getAutoExpirationRecipient()==null) || 
-             (this.autoExpirationRecipient!=null &&
-              this.autoExpirationRecipient.equals(other.getAutoExpirationRecipient()))) &&
-            ((this.autoExpireContracts==null && other.getAutoExpireContracts()==null) || 
-             (this.autoExpireContracts!=null &&
-              this.autoExpireContracts.equals(other.getAutoExpireContracts()))) &&
-            ((this.enableContractHistoryTracking==null && other.getEnableContractHistoryTracking()==null) || 
-             (this.enableContractHistoryTracking!=null &&
-              this.enableContractHistoryTracking.equals(other.getEnableContractHistoryTracking()))) &&
-            ((this.notifyOwnersOnContractExpiration==null && other.getNotifyOwnersOnContractExpiration()==null) || 
-             (this.notifyOwnersOnContractExpiration!=null &&
-              this.notifyOwnersOnContractExpiration.equals(other.getNotifyOwnersOnContractExpiration())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAutoCalculateEndDate() != null) {
-            _hashCode += getAutoCalculateEndDate().hashCode();
-        }
-        if (getAutoExpirationDelay() != null) {
-            _hashCode += getAutoExpirationDelay().hashCode();
-        }
-        if (getAutoExpirationRecipient() != null) {
-            _hashCode += getAutoExpirationRecipient().hashCode();
-        }
-        if (getAutoExpireContracts() != null) {
-            _hashCode += getAutoExpireContracts().hashCode();
-        }
-        if (getEnableContractHistoryTracking() != null) {
-            _hashCode += getEnableContractHistoryTracking().hashCode();
-        }
-        if (getNotifyOwnersOnContractExpiration() != null) {
-            _hashCode += getNotifyOwnersOnContractExpiration().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ContractSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ContractSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoCalculateEndDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoCalculateEndDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoExpirationDelay");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoExpirationDelay"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoExpirationRecipient");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoExpirationRecipient"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoExpireContracts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoExpireContracts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableContractHistoryTracking");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableContractHistoryTracking"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyOwnersOnContractExpiration");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyOwnersOnContractExpiration"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setNotifyOwnersOnContractExpiration(Boolean value) {
+        this.notifyOwnersOnContractExpiration = value;
     }
 
 }

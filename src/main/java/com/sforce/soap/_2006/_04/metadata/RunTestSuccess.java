@@ -1,259 +1,166 @@
-/**
- * RunTestSuccess.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class RunTestSuccess  implements java.io.Serializable {
-    private java.lang.String id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String methodName;
 
-    private java.lang.String name;
+/**
+ * <p>Java class for RunTestSuccess complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="RunTestSuccess">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="id" type="{http://soap.sforce.com/2006/04/metadata}ID"/>
+ *         &lt;element name="methodName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="namespace" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="time" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "RunTestSuccess", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "id",
+    "methodName",
+    "name",
+    "namespace",
+    "time"
+})
+public class RunTestSuccess {
 
-    private java.lang.String namespace;
-
-    private double time;
-
-    public RunTestSuccess() {
-    }
-
-    public RunTestSuccess(
-           java.lang.String id,
-           java.lang.String methodName,
-           java.lang.String name,
-           java.lang.String namespace,
-           double time) {
-           this.id = id;
-           this.methodName = methodName;
-           this.name = name;
-           this.namespace = namespace;
-           this.time = time;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String id;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String methodName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true, nillable = true)
+    protected String namespace;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected double time;
 
     /**
-     * Gets the id value for this RunTestSuccess.
+     * Gets the value of the id property.
      * 
-     * @return id
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getId() {
+    public String getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this RunTestSuccess.
+     * Sets the value of the id property.
      * 
-     * @param id
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(java.lang.String id) {
-        this.id = id;
+    public void setId(String value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the methodName value for this RunTestSuccess.
+     * Gets the value of the methodName property.
      * 
-     * @return methodName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMethodName() {
+    public String getMethodName() {
         return methodName;
     }
 
-
     /**
-     * Sets the methodName value for this RunTestSuccess.
+     * Sets the value of the methodName property.
      * 
-     * @param methodName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMethodName(java.lang.String methodName) {
-        this.methodName = methodName;
+    public void setMethodName(String value) {
+        this.methodName = value;
     }
 
-
     /**
-     * Gets the name value for this RunTestSuccess.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this RunTestSuccess.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the namespace value for this RunTestSuccess.
+     * Gets the value of the namespace property.
      * 
-     * @return namespace
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNamespace() {
+    public String getNamespace() {
         return namespace;
     }
 
-
     /**
-     * Sets the namespace value for this RunTestSuccess.
+     * Sets the value of the namespace property.
      * 
-     * @param namespace
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNamespace(java.lang.String namespace) {
-        this.namespace = namespace;
+    public void setNamespace(String value) {
+        this.namespace = value;
     }
 
-
     /**
-     * Gets the time value for this RunTestSuccess.
+     * Gets the value of the time property.
      * 
-     * @return time
      */
     public double getTime() {
         return time;
     }
 
-
     /**
-     * Sets the time value for this RunTestSuccess.
+     * Sets the value of the time property.
      * 
-     * @param time
      */
-    public void setTime(double time) {
-        this.time = time;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof RunTestSuccess)) return false;
-        RunTestSuccess other = (RunTestSuccess) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            ((this.methodName==null && other.getMethodName()==null) || 
-             (this.methodName!=null &&
-              this.methodName.equals(other.getMethodName()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.namespace==null && other.getNamespace()==null) || 
-             (this.namespace!=null &&
-              this.namespace.equals(other.getNamespace()))) &&
-            this.time == other.getTime();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getId() != null) {
-            _hashCode += getId().hashCode();
-        }
-        if (getMethodName() != null) {
-            _hashCode += getMethodName().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getNamespace() != null) {
-            _hashCode += getNamespace().hashCode();
-        }
-        _hashCode += new Double(getTime()).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RunTestSuccess.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RunTestSuccess"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("methodName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "methodName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("namespace");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "namespace"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("time");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "time"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTime(double value) {
+        this.time = value;
     }
 
 }

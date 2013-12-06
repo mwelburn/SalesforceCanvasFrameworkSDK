@@ -1,1668 +1,1134 @@
-/**
- * CustomObject.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomObject  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ActionOverride[] actionOverrides;
-
-    private com.sforce.soap._2006._04.metadata.ArticleTypeTemplate[] articleTypeChannelDisplay;
-
-    private com.sforce.soap._2006._04.metadata.BusinessProcess[] businessProcesses;
-
-    private java.lang.String compactLayoutAssignment;
-
-    private com.sforce.soap._2006._04.metadata.CompactLayout[] compactLayouts;
-
-    private java.lang.String customHelp;
-
-    private java.lang.String customHelpPage;
-
-    private com.sforce.soap._2006._04.metadata.CustomSettingsType customSettingsType;
-
-    private com.sforce.soap._2006._04.metadata.CustomSettingsVisibility customSettingsVisibility;
-
-    private com.sforce.soap._2006._04.metadata.DeploymentStatus deploymentStatus;
-
-    private java.lang.Boolean deprecated;
-
-    private java.lang.String description;
-
-    private java.lang.Boolean enableActivities;
-
-    private java.lang.Boolean enableDivisions;
-
-    private java.lang.Boolean enableEnhancedLookup;
-
-    private java.lang.Boolean enableFeeds;
-
-    private java.lang.Boolean enableHistory;
-
-    private java.lang.Boolean enableReports;
-
-    private com.sforce.soap._2006._04.metadata.FieldSet[] fieldSets;
-
-    private com.sforce.soap._2006._04.metadata.CustomField[] fields;
-
-    private com.sforce.soap._2006._04.metadata.Gender gender;
-
-    private java.lang.Boolean household;
-
-    private java.lang.String label;
-
-    private com.sforce.soap._2006._04.metadata.ListView[] listViews;
-
-    private com.sforce.soap._2006._04.metadata.CustomField nameField;
-
-    private com.sforce.soap._2006._04.metadata.NamedFilter[] namedFilters;
-
-    private java.lang.String pluralLabel;
-
-    private java.lang.Boolean recordTypeTrackFeedHistory;
-
-    private java.lang.Boolean recordTypeTrackHistory;
-
-    private com.sforce.soap._2006._04.metadata.RecordType[] recordTypes;
-
-    private com.sforce.soap._2006._04.metadata.SearchLayouts searchLayouts;
-
-    private com.sforce.soap._2006._04.metadata.SharingModel sharingModel;
-
-    private com.sforce.soap._2006._04.metadata.SharingReason[] sharingReasons;
-
-    private com.sforce.soap._2006._04.metadata.SharingRecalculation[] sharingRecalculations;
-
-    private com.sforce.soap._2006._04.metadata.StartsWith startsWith;
-
-    private com.sforce.soap._2006._04.metadata.ValidationRule[] validationRules;
-
-    private com.sforce.soap._2006._04.metadata.WebLink[] webLinks;
-
-    public CustomObject() {
-    }
-
-    public CustomObject(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.ActionOverride[] actionOverrides,
-           com.sforce.soap._2006._04.metadata.ArticleTypeTemplate[] articleTypeChannelDisplay,
-           com.sforce.soap._2006._04.metadata.BusinessProcess[] businessProcesses,
-           java.lang.String compactLayoutAssignment,
-           com.sforce.soap._2006._04.metadata.CompactLayout[] compactLayouts,
-           java.lang.String customHelp,
-           java.lang.String customHelpPage,
-           com.sforce.soap._2006._04.metadata.CustomSettingsType customSettingsType,
-           com.sforce.soap._2006._04.metadata.CustomSettingsVisibility customSettingsVisibility,
-           com.sforce.soap._2006._04.metadata.DeploymentStatus deploymentStatus,
-           java.lang.Boolean deprecated,
-           java.lang.String description,
-           java.lang.Boolean enableActivities,
-           java.lang.Boolean enableDivisions,
-           java.lang.Boolean enableEnhancedLookup,
-           java.lang.Boolean enableFeeds,
-           java.lang.Boolean enableHistory,
-           java.lang.Boolean enableReports,
-           com.sforce.soap._2006._04.metadata.FieldSet[] fieldSets,
-           com.sforce.soap._2006._04.metadata.CustomField[] fields,
-           com.sforce.soap._2006._04.metadata.Gender gender,
-           java.lang.Boolean household,
-           java.lang.String label,
-           com.sforce.soap._2006._04.metadata.ListView[] listViews,
-           com.sforce.soap._2006._04.metadata.CustomField nameField,
-           com.sforce.soap._2006._04.metadata.NamedFilter[] namedFilters,
-           java.lang.String pluralLabel,
-           java.lang.Boolean recordTypeTrackFeedHistory,
-           java.lang.Boolean recordTypeTrackHistory,
-           com.sforce.soap._2006._04.metadata.RecordType[] recordTypes,
-           com.sforce.soap._2006._04.metadata.SearchLayouts searchLayouts,
-           com.sforce.soap._2006._04.metadata.SharingModel sharingModel,
-           com.sforce.soap._2006._04.metadata.SharingReason[] sharingReasons,
-           com.sforce.soap._2006._04.metadata.SharingRecalculation[] sharingRecalculations,
-           com.sforce.soap._2006._04.metadata.StartsWith startsWith,
-           com.sforce.soap._2006._04.metadata.ValidationRule[] validationRules,
-           com.sforce.soap._2006._04.metadata.WebLink[] webLinks) {
-        super(
-            fullName);
-        this.actionOverrides = actionOverrides;
-        this.articleTypeChannelDisplay = articleTypeChannelDisplay;
-        this.businessProcesses = businessProcesses;
-        this.compactLayoutAssignment = compactLayoutAssignment;
-        this.compactLayouts = compactLayouts;
-        this.customHelp = customHelp;
-        this.customHelpPage = customHelpPage;
-        this.customSettingsType = customSettingsType;
-        this.customSettingsVisibility = customSettingsVisibility;
-        this.deploymentStatus = deploymentStatus;
-        this.deprecated = deprecated;
-        this.description = description;
-        this.enableActivities = enableActivities;
-        this.enableDivisions = enableDivisions;
-        this.enableEnhancedLookup = enableEnhancedLookup;
-        this.enableFeeds = enableFeeds;
-        this.enableHistory = enableHistory;
-        this.enableReports = enableReports;
-        this.fieldSets = fieldSets;
-        this.fields = fields;
-        this.gender = gender;
-        this.household = household;
-        this.label = label;
-        this.listViews = listViews;
-        this.nameField = nameField;
-        this.namedFilters = namedFilters;
-        this.pluralLabel = pluralLabel;
-        this.recordTypeTrackFeedHistory = recordTypeTrackFeedHistory;
-        this.recordTypeTrackHistory = recordTypeTrackHistory;
-        this.recordTypes = recordTypes;
-        this.searchLayouts = searchLayouts;
-        this.sharingModel = sharingModel;
-        this.sharingReasons = sharingReasons;
-        this.sharingRecalculations = sharingRecalculations;
-        this.startsWith = startsWith;
-        this.validationRules = validationRules;
-        this.webLinks = webLinks;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the actionOverrides value for this CustomObject.
-     * 
-     * @return actionOverrides
-     */
-    public com.sforce.soap._2006._04.metadata.ActionOverride[] getActionOverrides() {
-        return actionOverrides;
-    }
+/**
+ * <p>Java class for CustomObject complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomObject">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="actionOverrides" type="{http://soap.sforce.com/2006/04/metadata}ActionOverride" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="articleTypeChannelDisplay" type="{http://soap.sforce.com/2006/04/metadata}ArticleTypeChannelDisplay" minOccurs="0"/>
+ *         &lt;element name="businessProcesses" type="{http://soap.sforce.com/2006/04/metadata}BusinessProcess" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="compactLayoutAssignment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="compactLayouts" type="{http://soap.sforce.com/2006/04/metadata}CompactLayout" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="customHelp" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="customHelpPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="customSettingsType" type="{http://soap.sforce.com/2006/04/metadata}CustomSettingsType" minOccurs="0"/>
+ *         &lt;element name="customSettingsVisibility" type="{http://soap.sforce.com/2006/04/metadata}CustomSettingsVisibility" minOccurs="0"/>
+ *         &lt;element name="deploymentStatus" type="{http://soap.sforce.com/2006/04/metadata}DeploymentStatus" minOccurs="0"/>
+ *         &lt;element name="deprecated" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="enableActivities" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableDivisions" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableEnhancedLookup" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableFeeds" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableHistory" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableReports" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="fieldSets" type="{http://soap.sforce.com/2006/04/metadata}FieldSet" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="fields" type="{http://soap.sforce.com/2006/04/metadata}CustomField" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="gender" type="{http://soap.sforce.com/2006/04/metadata}Gender" minOccurs="0"/>
+ *         &lt;element name="household" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="listViews" type="{http://soap.sforce.com/2006/04/metadata}ListView" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="nameField" type="{http://soap.sforce.com/2006/04/metadata}CustomField" minOccurs="0"/>
+ *         &lt;element name="namedFilters" type="{http://soap.sforce.com/2006/04/metadata}NamedFilter" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="pluralLabel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="recordTypeTrackFeedHistory" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="recordTypeTrackHistory" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="recordTypes" type="{http://soap.sforce.com/2006/04/metadata}RecordType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="searchLayouts" type="{http://soap.sforce.com/2006/04/metadata}SearchLayouts" minOccurs="0"/>
+ *         &lt;element name="sharingModel" type="{http://soap.sforce.com/2006/04/metadata}SharingModel" minOccurs="0"/>
+ *         &lt;element name="sharingReasons" type="{http://soap.sforce.com/2006/04/metadata}SharingReason" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="sharingRecalculations" type="{http://soap.sforce.com/2006/04/metadata}SharingRecalculation" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="startsWith" type="{http://soap.sforce.com/2006/04/metadata}StartsWith" minOccurs="0"/>
+ *         &lt;element name="validationRules" type="{http://soap.sforce.com/2006/04/metadata}ValidationRule" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="webLinks" type="{http://soap.sforce.com/2006/04/metadata}WebLink" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomObject", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "actionOverrides",
+    "articleTypeChannelDisplay",
+    "businessProcesses",
+    "compactLayoutAssignment",
+    "compactLayouts",
+    "customHelp",
+    "customHelpPage",
+    "customSettingsType",
+    "customSettingsVisibility",
+    "deploymentStatus",
+    "deprecated",
+    "description",
+    "enableActivities",
+    "enableDivisions",
+    "enableEnhancedLookup",
+    "enableFeeds",
+    "enableHistory",
+    "enableReports",
+    "fieldSets",
+    "fields",
+    "gender",
+    "household",
+    "label",
+    "listViews",
+    "nameField",
+    "namedFilters",
+    "pluralLabel",
+    "recordTypeTrackFeedHistory",
+    "recordTypeTrackHistory",
+    "recordTypes",
+    "searchLayouts",
+    "sharingModel",
+    "sharingReasons",
+    "sharingRecalculations",
+    "startsWith",
+    "validationRules",
+    "webLinks"
+})
+public class CustomObject
+    extends Metadata
+{
 
-
-    /**
-     * Sets the actionOverrides value for this CustomObject.
-     * 
-     * @param actionOverrides
-     */
-    public void setActionOverrides(com.sforce.soap._2006._04.metadata.ActionOverride[] actionOverrides) {
-        this.actionOverrides = actionOverrides;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ActionOverride getActionOverrides(int i) {
-        return this.actionOverrides[i];
-    }
-
-    public void setActionOverrides(int i, com.sforce.soap._2006._04.metadata.ActionOverride _value) {
-        this.actionOverrides[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ActionOverride> actionOverrides;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ArticleTypeChannelDisplay articleTypeChannelDisplay;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<BusinessProcess> businessProcesses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String compactLayoutAssignment;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<CompactLayout> compactLayouts;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customHelp;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customHelpPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected CustomSettingsType customSettingsType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected CustomSettingsVisibility customSettingsVisibility;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DeploymentStatus deploymentStatus;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean deprecated;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableActivities;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableDivisions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableEnhancedLookup;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableFeeds;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableHistory;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableReports;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FieldSet> fieldSets;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<CustomField> fields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Gender gender;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean household;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ListView> listViews;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected CustomField nameField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<NamedFilter> namedFilters;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String pluralLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean recordTypeTrackFeedHistory;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean recordTypeTrackHistory;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<RecordType> recordTypes;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SearchLayouts searchLayouts;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SharingModel sharingModel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<SharingReason> sharingReasons;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<SharingRecalculation> sharingRecalculations;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected StartsWith startsWith;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ValidationRule> validationRules;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<WebLink> webLinks;
 
     /**
-     * Gets the articleTypeChannelDisplay value for this CustomObject.
+     * Gets the value of the actionOverrides property.
      * 
-     * @return articleTypeChannelDisplay
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the actionOverrides property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getActionOverrides().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ActionOverride }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ArticleTypeTemplate[] getArticleTypeChannelDisplay() {
+    public List<ActionOverride> getActionOverrides() {
+        if (actionOverrides == null) {
+            actionOverrides = new ArrayList<ActionOverride>();
+        }
+        return this.actionOverrides;
+    }
+
+    /**
+     * Gets the value of the articleTypeChannelDisplay property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ArticleTypeChannelDisplay }
+     *     
+     */
+    public ArticleTypeChannelDisplay getArticleTypeChannelDisplay() {
         return articleTypeChannelDisplay;
     }
 
+    /**
+     * Sets the value of the articleTypeChannelDisplay property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ArticleTypeChannelDisplay }
+     *     
+     */
+    public void setArticleTypeChannelDisplay(ArticleTypeChannelDisplay value) {
+        this.articleTypeChannelDisplay = value;
+    }
 
     /**
-     * Sets the articleTypeChannelDisplay value for this CustomObject.
+     * Gets the value of the businessProcesses property.
      * 
-     * @param articleTypeChannelDisplay
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the businessProcesses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getBusinessProcesses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link BusinessProcess }
+     * 
+     * 
      */
-    public void setArticleTypeChannelDisplay(com.sforce.soap._2006._04.metadata.ArticleTypeTemplate[] articleTypeChannelDisplay) {
-        this.articleTypeChannelDisplay = articleTypeChannelDisplay;
+    public List<BusinessProcess> getBusinessProcesses() {
+        if (businessProcesses == null) {
+            businessProcesses = new ArrayList<BusinessProcess>();
+        }
+        return this.businessProcesses;
     }
-
 
     /**
-     * Gets the businessProcesses value for this CustomObject.
+     * Gets the value of the compactLayoutAssignment property.
      * 
-     * @return businessProcesses
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.BusinessProcess[] getBusinessProcesses() {
-        return businessProcesses;
-    }
-
-
-    /**
-     * Sets the businessProcesses value for this CustomObject.
-     * 
-     * @param businessProcesses
-     */
-    public void setBusinessProcesses(com.sforce.soap._2006._04.metadata.BusinessProcess[] businessProcesses) {
-        this.businessProcesses = businessProcesses;
-    }
-
-    public com.sforce.soap._2006._04.metadata.BusinessProcess getBusinessProcesses(int i) {
-        return this.businessProcesses[i];
-    }
-
-    public void setBusinessProcesses(int i, com.sforce.soap._2006._04.metadata.BusinessProcess _value) {
-        this.businessProcesses[i] = _value;
-    }
-
-
-    /**
-     * Gets the compactLayoutAssignment value for this CustomObject.
-     * 
-     * @return compactLayoutAssignment
-     */
-    public java.lang.String getCompactLayoutAssignment() {
+    public String getCompactLayoutAssignment() {
         return compactLayoutAssignment;
     }
 
+    /**
+     * Sets the value of the compactLayoutAssignment property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCompactLayoutAssignment(String value) {
+        this.compactLayoutAssignment = value;
+    }
 
     /**
-     * Sets the compactLayoutAssignment value for this CustomObject.
+     * Gets the value of the compactLayouts property.
      * 
-     * @param compactLayoutAssignment
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the compactLayouts property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCompactLayouts().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CompactLayout }
+     * 
+     * 
      */
-    public void setCompactLayoutAssignment(java.lang.String compactLayoutAssignment) {
-        this.compactLayoutAssignment = compactLayoutAssignment;
+    public List<CompactLayout> getCompactLayouts() {
+        if (compactLayouts == null) {
+            compactLayouts = new ArrayList<CompactLayout>();
+        }
+        return this.compactLayouts;
     }
-
 
     /**
-     * Gets the compactLayouts value for this CustomObject.
+     * Gets the value of the customHelp property.
      * 
-     * @return compactLayouts
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.CompactLayout[] getCompactLayouts() {
-        return compactLayouts;
-    }
-
-
-    /**
-     * Sets the compactLayouts value for this CustomObject.
-     * 
-     * @param compactLayouts
-     */
-    public void setCompactLayouts(com.sforce.soap._2006._04.metadata.CompactLayout[] compactLayouts) {
-        this.compactLayouts = compactLayouts;
-    }
-
-    public com.sforce.soap._2006._04.metadata.CompactLayout getCompactLayouts(int i) {
-        return this.compactLayouts[i];
-    }
-
-    public void setCompactLayouts(int i, com.sforce.soap._2006._04.metadata.CompactLayout _value) {
-        this.compactLayouts[i] = _value;
-    }
-
-
-    /**
-     * Gets the customHelp value for this CustomObject.
-     * 
-     * @return customHelp
-     */
-    public java.lang.String getCustomHelp() {
+    public String getCustomHelp() {
         return customHelp;
     }
 
-
     /**
-     * Sets the customHelp value for this CustomObject.
+     * Sets the value of the customHelp property.
      * 
-     * @param customHelp
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomHelp(java.lang.String customHelp) {
-        this.customHelp = customHelp;
+    public void setCustomHelp(String value) {
+        this.customHelp = value;
     }
 
-
     /**
-     * Gets the customHelpPage value for this CustomObject.
+     * Gets the value of the customHelpPage property.
      * 
-     * @return customHelpPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomHelpPage() {
+    public String getCustomHelpPage() {
         return customHelpPage;
     }
 
-
     /**
-     * Sets the customHelpPage value for this CustomObject.
+     * Sets the value of the customHelpPage property.
      * 
-     * @param customHelpPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomHelpPage(java.lang.String customHelpPage) {
-        this.customHelpPage = customHelpPage;
+    public void setCustomHelpPage(String value) {
+        this.customHelpPage = value;
     }
 
-
     /**
-     * Gets the customSettingsType value for this CustomObject.
+     * Gets the value of the customSettingsType property.
      * 
-     * @return customSettingsType
+     * @return
+     *     possible object is
+     *     {@link CustomSettingsType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.CustomSettingsType getCustomSettingsType() {
+    public CustomSettingsType getCustomSettingsType() {
         return customSettingsType;
     }
 
-
     /**
-     * Sets the customSettingsType value for this CustomObject.
+     * Sets the value of the customSettingsType property.
      * 
-     * @param customSettingsType
+     * @param value
+     *     allowed object is
+     *     {@link CustomSettingsType }
+     *     
      */
-    public void setCustomSettingsType(com.sforce.soap._2006._04.metadata.CustomSettingsType customSettingsType) {
-        this.customSettingsType = customSettingsType;
+    public void setCustomSettingsType(CustomSettingsType value) {
+        this.customSettingsType = value;
     }
 
-
     /**
-     * Gets the customSettingsVisibility value for this CustomObject.
+     * Gets the value of the customSettingsVisibility property.
      * 
-     * @return customSettingsVisibility
+     * @return
+     *     possible object is
+     *     {@link CustomSettingsVisibility }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.CustomSettingsVisibility getCustomSettingsVisibility() {
+    public CustomSettingsVisibility getCustomSettingsVisibility() {
         return customSettingsVisibility;
     }
 
-
     /**
-     * Sets the customSettingsVisibility value for this CustomObject.
+     * Sets the value of the customSettingsVisibility property.
      * 
-     * @param customSettingsVisibility
+     * @param value
+     *     allowed object is
+     *     {@link CustomSettingsVisibility }
+     *     
      */
-    public void setCustomSettingsVisibility(com.sforce.soap._2006._04.metadata.CustomSettingsVisibility customSettingsVisibility) {
-        this.customSettingsVisibility = customSettingsVisibility;
+    public void setCustomSettingsVisibility(CustomSettingsVisibility value) {
+        this.customSettingsVisibility = value;
     }
 
-
     /**
-     * Gets the deploymentStatus value for this CustomObject.
+     * Gets the value of the deploymentStatus property.
      * 
-     * @return deploymentStatus
+     * @return
+     *     possible object is
+     *     {@link DeploymentStatus }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DeploymentStatus getDeploymentStatus() {
+    public DeploymentStatus getDeploymentStatus() {
         return deploymentStatus;
     }
 
-
     /**
-     * Sets the deploymentStatus value for this CustomObject.
+     * Sets the value of the deploymentStatus property.
      * 
-     * @param deploymentStatus
+     * @param value
+     *     allowed object is
+     *     {@link DeploymentStatus }
+     *     
      */
-    public void setDeploymentStatus(com.sforce.soap._2006._04.metadata.DeploymentStatus deploymentStatus) {
-        this.deploymentStatus = deploymentStatus;
+    public void setDeploymentStatus(DeploymentStatus value) {
+        this.deploymentStatus = value;
     }
 
-
     /**
-     * Gets the deprecated value for this CustomObject.
+     * Gets the value of the deprecated property.
      * 
-     * @return deprecated
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getDeprecated() {
+    public Boolean isDeprecated() {
         return deprecated;
     }
 
-
     /**
-     * Sets the deprecated value for this CustomObject.
+     * Sets the value of the deprecated property.
      * 
-     * @param deprecated
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setDeprecated(java.lang.Boolean deprecated) {
-        this.deprecated = deprecated;
+    public void setDeprecated(Boolean value) {
+        this.deprecated = value;
     }
 
-
     /**
-     * Gets the description value for this CustomObject.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this CustomObject.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the enableActivities value for this CustomObject.
+     * Gets the value of the enableActivities property.
      * 
-     * @return enableActivities
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableActivities() {
+    public Boolean isEnableActivities() {
         return enableActivities;
     }
 
-
     /**
-     * Sets the enableActivities value for this CustomObject.
+     * Sets the value of the enableActivities property.
      * 
-     * @param enableActivities
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableActivities(java.lang.Boolean enableActivities) {
-        this.enableActivities = enableActivities;
+    public void setEnableActivities(Boolean value) {
+        this.enableActivities = value;
     }
 
-
     /**
-     * Gets the enableDivisions value for this CustomObject.
+     * Gets the value of the enableDivisions property.
      * 
-     * @return enableDivisions
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableDivisions() {
+    public Boolean isEnableDivisions() {
         return enableDivisions;
     }
 
-
     /**
-     * Sets the enableDivisions value for this CustomObject.
+     * Sets the value of the enableDivisions property.
      * 
-     * @param enableDivisions
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableDivisions(java.lang.Boolean enableDivisions) {
-        this.enableDivisions = enableDivisions;
+    public void setEnableDivisions(Boolean value) {
+        this.enableDivisions = value;
     }
 
-
     /**
-     * Gets the enableEnhancedLookup value for this CustomObject.
+     * Gets the value of the enableEnhancedLookup property.
      * 
-     * @return enableEnhancedLookup
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableEnhancedLookup() {
+    public Boolean isEnableEnhancedLookup() {
         return enableEnhancedLookup;
     }
 
-
     /**
-     * Sets the enableEnhancedLookup value for this CustomObject.
+     * Sets the value of the enableEnhancedLookup property.
      * 
-     * @param enableEnhancedLookup
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableEnhancedLookup(java.lang.Boolean enableEnhancedLookup) {
-        this.enableEnhancedLookup = enableEnhancedLookup;
+    public void setEnableEnhancedLookup(Boolean value) {
+        this.enableEnhancedLookup = value;
     }
 
-
     /**
-     * Gets the enableFeeds value for this CustomObject.
+     * Gets the value of the enableFeeds property.
      * 
-     * @return enableFeeds
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableFeeds() {
+    public Boolean isEnableFeeds() {
         return enableFeeds;
     }
 
-
     /**
-     * Sets the enableFeeds value for this CustomObject.
+     * Sets the value of the enableFeeds property.
      * 
-     * @param enableFeeds
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableFeeds(java.lang.Boolean enableFeeds) {
-        this.enableFeeds = enableFeeds;
+    public void setEnableFeeds(Boolean value) {
+        this.enableFeeds = value;
     }
 
-
     /**
-     * Gets the enableHistory value for this CustomObject.
+     * Gets the value of the enableHistory property.
      * 
-     * @return enableHistory
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableHistory() {
+    public Boolean isEnableHistory() {
         return enableHistory;
     }
 
-
     /**
-     * Sets the enableHistory value for this CustomObject.
+     * Sets the value of the enableHistory property.
      * 
-     * @param enableHistory
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableHistory(java.lang.Boolean enableHistory) {
-        this.enableHistory = enableHistory;
+    public void setEnableHistory(Boolean value) {
+        this.enableHistory = value;
     }
 
-
     /**
-     * Gets the enableReports value for this CustomObject.
+     * Gets the value of the enableReports property.
      * 
-     * @return enableReports
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableReports() {
+    public Boolean isEnableReports() {
         return enableReports;
     }
 
+    /**
+     * Sets the value of the enableReports property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setEnableReports(Boolean value) {
+        this.enableReports = value;
+    }
 
     /**
-     * Sets the enableReports value for this CustomObject.
+     * Gets the value of the fieldSets property.
      * 
-     * @param enableReports
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fieldSets property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFieldSets().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FieldSet }
+     * 
+     * 
      */
-    public void setEnableReports(java.lang.Boolean enableReports) {
-        this.enableReports = enableReports;
+    public List<FieldSet> getFieldSets() {
+        if (fieldSets == null) {
+            fieldSets = new ArrayList<FieldSet>();
+        }
+        return this.fieldSets;
     }
-
 
     /**
-     * Gets the fieldSets value for this CustomObject.
+     * Gets the value of the fields property.
      * 
-     * @return fieldSets
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CustomField }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FieldSet[] getFieldSets() {
-        return fieldSets;
+    public List<CustomField> getFields() {
+        if (fields == null) {
+            fields = new ArrayList<CustomField>();
+        }
+        return this.fields;
     }
-
 
     /**
-     * Sets the fieldSets value for this CustomObject.
+     * Gets the value of the gender property.
      * 
-     * @param fieldSets
+     * @return
+     *     possible object is
+     *     {@link Gender }
+     *     
      */
-    public void setFieldSets(com.sforce.soap._2006._04.metadata.FieldSet[] fieldSets) {
-        this.fieldSets = fieldSets;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FieldSet getFieldSets(int i) {
-        return this.fieldSets[i];
-    }
-
-    public void setFieldSets(int i, com.sforce.soap._2006._04.metadata.FieldSet _value) {
-        this.fieldSets[i] = _value;
-    }
-
-
-    /**
-     * Gets the fields value for this CustomObject.
-     * 
-     * @return fields
-     */
-    public com.sforce.soap._2006._04.metadata.CustomField[] getFields() {
-        return fields;
-    }
-
-
-    /**
-     * Sets the fields value for this CustomObject.
-     * 
-     * @param fields
-     */
-    public void setFields(com.sforce.soap._2006._04.metadata.CustomField[] fields) {
-        this.fields = fields;
-    }
-
-    public com.sforce.soap._2006._04.metadata.CustomField getFields(int i) {
-        return this.fields[i];
-    }
-
-    public void setFields(int i, com.sforce.soap._2006._04.metadata.CustomField _value) {
-        this.fields[i] = _value;
-    }
-
-
-    /**
-     * Gets the gender value for this CustomObject.
-     * 
-     * @return gender
-     */
-    public com.sforce.soap._2006._04.metadata.Gender getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-
     /**
-     * Sets the gender value for this CustomObject.
+     * Sets the value of the gender property.
      * 
-     * @param gender
+     * @param value
+     *     allowed object is
+     *     {@link Gender }
+     *     
      */
-    public void setGender(com.sforce.soap._2006._04.metadata.Gender gender) {
-        this.gender = gender;
+    public void setGender(Gender value) {
+        this.gender = value;
     }
 
-
     /**
-     * Gets the household value for this CustomObject.
+     * Gets the value of the household property.
      * 
-     * @return household
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getHousehold() {
+    public Boolean isHousehold() {
         return household;
     }
 
-
     /**
-     * Sets the household value for this CustomObject.
+     * Sets the value of the household property.
      * 
-     * @param household
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setHousehold(java.lang.Boolean household) {
-        this.household = household;
+    public void setHousehold(Boolean value) {
+        this.household = value;
     }
 
-
     /**
-     * Gets the label value for this CustomObject.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
+    /**
+     * Sets the value of the label property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLabel(String value) {
+        this.label = value;
+    }
 
     /**
-     * Sets the label value for this CustomObject.
+     * Gets the value of the listViews property.
      * 
-     * @param label
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the listViews property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getListViews().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ListView }
+     * 
+     * 
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public List<ListView> getListViews() {
+        if (listViews == null) {
+            listViews = new ArrayList<ListView>();
+        }
+        return this.listViews;
     }
-
 
     /**
-     * Gets the listViews value for this CustomObject.
+     * Gets the value of the nameField property.
      * 
-     * @return listViews
+     * @return
+     *     possible object is
+     *     {@link CustomField }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ListView[] getListViews() {
-        return listViews;
-    }
-
-
-    /**
-     * Sets the listViews value for this CustomObject.
-     * 
-     * @param listViews
-     */
-    public void setListViews(com.sforce.soap._2006._04.metadata.ListView[] listViews) {
-        this.listViews = listViews;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ListView getListViews(int i) {
-        return this.listViews[i];
-    }
-
-    public void setListViews(int i, com.sforce.soap._2006._04.metadata.ListView _value) {
-        this.listViews[i] = _value;
-    }
-
-
-    /**
-     * Gets the nameField value for this CustomObject.
-     * 
-     * @return nameField
-     */
-    public com.sforce.soap._2006._04.metadata.CustomField getNameField() {
+    public CustomField getNameField() {
         return nameField;
     }
 
+    /**
+     * Sets the value of the nameField property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CustomField }
+     *     
+     */
+    public void setNameField(CustomField value) {
+        this.nameField = value;
+    }
 
     /**
-     * Sets the nameField value for this CustomObject.
+     * Gets the value of the namedFilters property.
      * 
-     * @param nameField
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the namedFilters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getNamedFilters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link NamedFilter }
+     * 
+     * 
      */
-    public void setNameField(com.sforce.soap._2006._04.metadata.CustomField nameField) {
-        this.nameField = nameField;
+    public List<NamedFilter> getNamedFilters() {
+        if (namedFilters == null) {
+            namedFilters = new ArrayList<NamedFilter>();
+        }
+        return this.namedFilters;
     }
-
 
     /**
-     * Gets the namedFilters value for this CustomObject.
+     * Gets the value of the pluralLabel property.
      * 
-     * @return namedFilters
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.NamedFilter[] getNamedFilters() {
-        return namedFilters;
-    }
-
-
-    /**
-     * Sets the namedFilters value for this CustomObject.
-     * 
-     * @param namedFilters
-     */
-    public void setNamedFilters(com.sforce.soap._2006._04.metadata.NamedFilter[] namedFilters) {
-        this.namedFilters = namedFilters;
-    }
-
-    public com.sforce.soap._2006._04.metadata.NamedFilter getNamedFilters(int i) {
-        return this.namedFilters[i];
-    }
-
-    public void setNamedFilters(int i, com.sforce.soap._2006._04.metadata.NamedFilter _value) {
-        this.namedFilters[i] = _value;
-    }
-
-
-    /**
-     * Gets the pluralLabel value for this CustomObject.
-     * 
-     * @return pluralLabel
-     */
-    public java.lang.String getPluralLabel() {
+    public String getPluralLabel() {
         return pluralLabel;
     }
 
-
     /**
-     * Sets the pluralLabel value for this CustomObject.
+     * Sets the value of the pluralLabel property.
      * 
-     * @param pluralLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPluralLabel(java.lang.String pluralLabel) {
-        this.pluralLabel = pluralLabel;
+    public void setPluralLabel(String value) {
+        this.pluralLabel = value;
     }
 
-
     /**
-     * Gets the recordTypeTrackFeedHistory value for this CustomObject.
+     * Gets the value of the recordTypeTrackFeedHistory property.
      * 
-     * @return recordTypeTrackFeedHistory
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getRecordTypeTrackFeedHistory() {
+    public Boolean isRecordTypeTrackFeedHistory() {
         return recordTypeTrackFeedHistory;
     }
 
-
     /**
-     * Sets the recordTypeTrackFeedHistory value for this CustomObject.
+     * Sets the value of the recordTypeTrackFeedHistory property.
      * 
-     * @param recordTypeTrackFeedHistory
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setRecordTypeTrackFeedHistory(java.lang.Boolean recordTypeTrackFeedHistory) {
-        this.recordTypeTrackFeedHistory = recordTypeTrackFeedHistory;
+    public void setRecordTypeTrackFeedHistory(Boolean value) {
+        this.recordTypeTrackFeedHistory = value;
     }
 
-
     /**
-     * Gets the recordTypeTrackHistory value for this CustomObject.
+     * Gets the value of the recordTypeTrackHistory property.
      * 
-     * @return recordTypeTrackHistory
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getRecordTypeTrackHistory() {
+    public Boolean isRecordTypeTrackHistory() {
         return recordTypeTrackHistory;
     }
 
+    /**
+     * Sets the value of the recordTypeTrackHistory property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setRecordTypeTrackHistory(Boolean value) {
+        this.recordTypeTrackHistory = value;
+    }
 
     /**
-     * Sets the recordTypeTrackHistory value for this CustomObject.
+     * Gets the value of the recordTypes property.
      * 
-     * @param recordTypeTrackHistory
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the recordTypes property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRecordTypes().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link RecordType }
+     * 
+     * 
      */
-    public void setRecordTypeTrackHistory(java.lang.Boolean recordTypeTrackHistory) {
-        this.recordTypeTrackHistory = recordTypeTrackHistory;
+    public List<RecordType> getRecordTypes() {
+        if (recordTypes == null) {
+            recordTypes = new ArrayList<RecordType>();
+        }
+        return this.recordTypes;
     }
-
 
     /**
-     * Gets the recordTypes value for this CustomObject.
+     * Gets the value of the searchLayouts property.
      * 
-     * @return recordTypes
+     * @return
+     *     possible object is
+     *     {@link SearchLayouts }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.RecordType[] getRecordTypes() {
-        return recordTypes;
-    }
-
-
-    /**
-     * Sets the recordTypes value for this CustomObject.
-     * 
-     * @param recordTypes
-     */
-    public void setRecordTypes(com.sforce.soap._2006._04.metadata.RecordType[] recordTypes) {
-        this.recordTypes = recordTypes;
-    }
-
-    public com.sforce.soap._2006._04.metadata.RecordType getRecordTypes(int i) {
-        return this.recordTypes[i];
-    }
-
-    public void setRecordTypes(int i, com.sforce.soap._2006._04.metadata.RecordType _value) {
-        this.recordTypes[i] = _value;
-    }
-
-
-    /**
-     * Gets the searchLayouts value for this CustomObject.
-     * 
-     * @return searchLayouts
-     */
-    public com.sforce.soap._2006._04.metadata.SearchLayouts getSearchLayouts() {
+    public SearchLayouts getSearchLayouts() {
         return searchLayouts;
     }
 
-
     /**
-     * Sets the searchLayouts value for this CustomObject.
+     * Sets the value of the searchLayouts property.
      * 
-     * @param searchLayouts
+     * @param value
+     *     allowed object is
+     *     {@link SearchLayouts }
+     *     
      */
-    public void setSearchLayouts(com.sforce.soap._2006._04.metadata.SearchLayouts searchLayouts) {
-        this.searchLayouts = searchLayouts;
+    public void setSearchLayouts(SearchLayouts value) {
+        this.searchLayouts = value;
     }
 
-
     /**
-     * Gets the sharingModel value for this CustomObject.
+     * Gets the value of the sharingModel property.
      * 
-     * @return sharingModel
+     * @return
+     *     possible object is
+     *     {@link SharingModel }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SharingModel getSharingModel() {
+    public SharingModel getSharingModel() {
         return sharingModel;
     }
 
+    /**
+     * Sets the value of the sharingModel property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link SharingModel }
+     *     
+     */
+    public void setSharingModel(SharingModel value) {
+        this.sharingModel = value;
+    }
 
     /**
-     * Sets the sharingModel value for this CustomObject.
+     * Gets the value of the sharingReasons property.
      * 
-     * @param sharingModel
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the sharingReasons property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSharingReasons().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link SharingReason }
+     * 
+     * 
      */
-    public void setSharingModel(com.sforce.soap._2006._04.metadata.SharingModel sharingModel) {
-        this.sharingModel = sharingModel;
+    public List<SharingReason> getSharingReasons() {
+        if (sharingReasons == null) {
+            sharingReasons = new ArrayList<SharingReason>();
+        }
+        return this.sharingReasons;
     }
-
 
     /**
-     * Gets the sharingReasons value for this CustomObject.
+     * Gets the value of the sharingRecalculations property.
      * 
-     * @return sharingReasons
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the sharingRecalculations property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSharingRecalculations().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link SharingRecalculation }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.SharingReason[] getSharingReasons() {
-        return sharingReasons;
+    public List<SharingRecalculation> getSharingRecalculations() {
+        if (sharingRecalculations == null) {
+            sharingRecalculations = new ArrayList<SharingRecalculation>();
+        }
+        return this.sharingRecalculations;
     }
-
 
     /**
-     * Sets the sharingReasons value for this CustomObject.
+     * Gets the value of the startsWith property.
      * 
-     * @param sharingReasons
+     * @return
+     *     possible object is
+     *     {@link StartsWith }
+     *     
      */
-    public void setSharingReasons(com.sforce.soap._2006._04.metadata.SharingReason[] sharingReasons) {
-        this.sharingReasons = sharingReasons;
-    }
-
-    public com.sforce.soap._2006._04.metadata.SharingReason getSharingReasons(int i) {
-        return this.sharingReasons[i];
-    }
-
-    public void setSharingReasons(int i, com.sforce.soap._2006._04.metadata.SharingReason _value) {
-        this.sharingReasons[i] = _value;
-    }
-
-
-    /**
-     * Gets the sharingRecalculations value for this CustomObject.
-     * 
-     * @return sharingRecalculations
-     */
-    public com.sforce.soap._2006._04.metadata.SharingRecalculation[] getSharingRecalculations() {
-        return sharingRecalculations;
-    }
-
-
-    /**
-     * Sets the sharingRecalculations value for this CustomObject.
-     * 
-     * @param sharingRecalculations
-     */
-    public void setSharingRecalculations(com.sforce.soap._2006._04.metadata.SharingRecalculation[] sharingRecalculations) {
-        this.sharingRecalculations = sharingRecalculations;
-    }
-
-    public com.sforce.soap._2006._04.metadata.SharingRecalculation getSharingRecalculations(int i) {
-        return this.sharingRecalculations[i];
-    }
-
-    public void setSharingRecalculations(int i, com.sforce.soap._2006._04.metadata.SharingRecalculation _value) {
-        this.sharingRecalculations[i] = _value;
-    }
-
-
-    /**
-     * Gets the startsWith value for this CustomObject.
-     * 
-     * @return startsWith
-     */
-    public com.sforce.soap._2006._04.metadata.StartsWith getStartsWith() {
+    public StartsWith getStartsWith() {
         return startsWith;
     }
 
-
     /**
-     * Sets the startsWith value for this CustomObject.
+     * Sets the value of the startsWith property.
      * 
-     * @param startsWith
+     * @param value
+     *     allowed object is
+     *     {@link StartsWith }
+     *     
      */
-    public void setStartsWith(com.sforce.soap._2006._04.metadata.StartsWith startsWith) {
-        this.startsWith = startsWith;
+    public void setStartsWith(StartsWith value) {
+        this.startsWith = value;
     }
 
-
     /**
-     * Gets the validationRules value for this CustomObject.
+     * Gets the value of the validationRules property.
      * 
-     * @return validationRules
-     */
-    public com.sforce.soap._2006._04.metadata.ValidationRule[] getValidationRules() {
-        return validationRules;
-    }
-
-
-    /**
-     * Sets the validationRules value for this CustomObject.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the validationRules property.
      * 
-     * @param validationRules
-     */
-    public void setValidationRules(com.sforce.soap._2006._04.metadata.ValidationRule[] validationRules) {
-        this.validationRules = validationRules;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ValidationRule getValidationRules(int i) {
-        return this.validationRules[i];
-    }
-
-    public void setValidationRules(int i, com.sforce.soap._2006._04.metadata.ValidationRule _value) {
-        this.validationRules[i] = _value;
-    }
-
-
-    /**
-     * Gets the webLinks value for this CustomObject.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getValidationRules().add(newItem);
+     * </pre>
      * 
-     * @return webLinks
-     */
-    public com.sforce.soap._2006._04.metadata.WebLink[] getWebLinks() {
-        return webLinks;
-    }
-
-
-    /**
-     * Sets the webLinks value for this CustomObject.
      * 
-     * @param webLinks
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ValidationRule }
+     * 
+     * 
      */
-    public void setWebLinks(com.sforce.soap._2006._04.metadata.WebLink[] webLinks) {
-        this.webLinks = webLinks;
-    }
-
-    public com.sforce.soap._2006._04.metadata.WebLink getWebLinks(int i) {
-        return this.webLinks[i];
-    }
-
-    public void setWebLinks(int i, com.sforce.soap._2006._04.metadata.WebLink _value) {
-        this.webLinks[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomObject)) return false;
-        CustomObject other = (CustomObject) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<ValidationRule> getValidationRules() {
+        if (validationRules == null) {
+            validationRules = new ArrayList<ValidationRule>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.actionOverrides==null && other.getActionOverrides()==null) || 
-             (this.actionOverrides!=null &&
-              java.util.Arrays.equals(this.actionOverrides, other.getActionOverrides()))) &&
-            ((this.articleTypeChannelDisplay==null && other.getArticleTypeChannelDisplay()==null) || 
-             (this.articleTypeChannelDisplay!=null &&
-              java.util.Arrays.equals(this.articleTypeChannelDisplay, other.getArticleTypeChannelDisplay()))) &&
-            ((this.businessProcesses==null && other.getBusinessProcesses()==null) || 
-             (this.businessProcesses!=null &&
-              java.util.Arrays.equals(this.businessProcesses, other.getBusinessProcesses()))) &&
-            ((this.compactLayoutAssignment==null && other.getCompactLayoutAssignment()==null) || 
-             (this.compactLayoutAssignment!=null &&
-              this.compactLayoutAssignment.equals(other.getCompactLayoutAssignment()))) &&
-            ((this.compactLayouts==null && other.getCompactLayouts()==null) || 
-             (this.compactLayouts!=null &&
-              java.util.Arrays.equals(this.compactLayouts, other.getCompactLayouts()))) &&
-            ((this.customHelp==null && other.getCustomHelp()==null) || 
-             (this.customHelp!=null &&
-              this.customHelp.equals(other.getCustomHelp()))) &&
-            ((this.customHelpPage==null && other.getCustomHelpPage()==null) || 
-             (this.customHelpPage!=null &&
-              this.customHelpPage.equals(other.getCustomHelpPage()))) &&
-            ((this.customSettingsType==null && other.getCustomSettingsType()==null) || 
-             (this.customSettingsType!=null &&
-              this.customSettingsType.equals(other.getCustomSettingsType()))) &&
-            ((this.customSettingsVisibility==null && other.getCustomSettingsVisibility()==null) || 
-             (this.customSettingsVisibility!=null &&
-              this.customSettingsVisibility.equals(other.getCustomSettingsVisibility()))) &&
-            ((this.deploymentStatus==null && other.getDeploymentStatus()==null) || 
-             (this.deploymentStatus!=null &&
-              this.deploymentStatus.equals(other.getDeploymentStatus()))) &&
-            ((this.deprecated==null && other.getDeprecated()==null) || 
-             (this.deprecated!=null &&
-              this.deprecated.equals(other.getDeprecated()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.enableActivities==null && other.getEnableActivities()==null) || 
-             (this.enableActivities!=null &&
-              this.enableActivities.equals(other.getEnableActivities()))) &&
-            ((this.enableDivisions==null && other.getEnableDivisions()==null) || 
-             (this.enableDivisions!=null &&
-              this.enableDivisions.equals(other.getEnableDivisions()))) &&
-            ((this.enableEnhancedLookup==null && other.getEnableEnhancedLookup()==null) || 
-             (this.enableEnhancedLookup!=null &&
-              this.enableEnhancedLookup.equals(other.getEnableEnhancedLookup()))) &&
-            ((this.enableFeeds==null && other.getEnableFeeds()==null) || 
-             (this.enableFeeds!=null &&
-              this.enableFeeds.equals(other.getEnableFeeds()))) &&
-            ((this.enableHistory==null && other.getEnableHistory()==null) || 
-             (this.enableHistory!=null &&
-              this.enableHistory.equals(other.getEnableHistory()))) &&
-            ((this.enableReports==null && other.getEnableReports()==null) || 
-             (this.enableReports!=null &&
-              this.enableReports.equals(other.getEnableReports()))) &&
-            ((this.fieldSets==null && other.getFieldSets()==null) || 
-             (this.fieldSets!=null &&
-              java.util.Arrays.equals(this.fieldSets, other.getFieldSets()))) &&
-            ((this.fields==null && other.getFields()==null) || 
-             (this.fields!=null &&
-              java.util.Arrays.equals(this.fields, other.getFields()))) &&
-            ((this.gender==null && other.getGender()==null) || 
-             (this.gender!=null &&
-              this.gender.equals(other.getGender()))) &&
-            ((this.household==null && other.getHousehold()==null) || 
-             (this.household!=null &&
-              this.household.equals(other.getHousehold()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.listViews==null && other.getListViews()==null) || 
-             (this.listViews!=null &&
-              java.util.Arrays.equals(this.listViews, other.getListViews()))) &&
-            ((this.nameField==null && other.getNameField()==null) || 
-             (this.nameField!=null &&
-              this.nameField.equals(other.getNameField()))) &&
-            ((this.namedFilters==null && other.getNamedFilters()==null) || 
-             (this.namedFilters!=null &&
-              java.util.Arrays.equals(this.namedFilters, other.getNamedFilters()))) &&
-            ((this.pluralLabel==null && other.getPluralLabel()==null) || 
-             (this.pluralLabel!=null &&
-              this.pluralLabel.equals(other.getPluralLabel()))) &&
-            ((this.recordTypeTrackFeedHistory==null && other.getRecordTypeTrackFeedHistory()==null) || 
-             (this.recordTypeTrackFeedHistory!=null &&
-              this.recordTypeTrackFeedHistory.equals(other.getRecordTypeTrackFeedHistory()))) &&
-            ((this.recordTypeTrackHistory==null && other.getRecordTypeTrackHistory()==null) || 
-             (this.recordTypeTrackHistory!=null &&
-              this.recordTypeTrackHistory.equals(other.getRecordTypeTrackHistory()))) &&
-            ((this.recordTypes==null && other.getRecordTypes()==null) || 
-             (this.recordTypes!=null &&
-              java.util.Arrays.equals(this.recordTypes, other.getRecordTypes()))) &&
-            ((this.searchLayouts==null && other.getSearchLayouts()==null) || 
-             (this.searchLayouts!=null &&
-              this.searchLayouts.equals(other.getSearchLayouts()))) &&
-            ((this.sharingModel==null && other.getSharingModel()==null) || 
-             (this.sharingModel!=null &&
-              this.sharingModel.equals(other.getSharingModel()))) &&
-            ((this.sharingReasons==null && other.getSharingReasons()==null) || 
-             (this.sharingReasons!=null &&
-              java.util.Arrays.equals(this.sharingReasons, other.getSharingReasons()))) &&
-            ((this.sharingRecalculations==null && other.getSharingRecalculations()==null) || 
-             (this.sharingRecalculations!=null &&
-              java.util.Arrays.equals(this.sharingRecalculations, other.getSharingRecalculations()))) &&
-            ((this.startsWith==null && other.getStartsWith()==null) || 
-             (this.startsWith!=null &&
-              this.startsWith.equals(other.getStartsWith()))) &&
-            ((this.validationRules==null && other.getValidationRules()==null) || 
-             (this.validationRules!=null &&
-              java.util.Arrays.equals(this.validationRules, other.getValidationRules()))) &&
-            ((this.webLinks==null && other.getWebLinks()==null) || 
-             (this.webLinks!=null &&
-              java.util.Arrays.equals(this.webLinks, other.getWebLinks())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getActionOverrides() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getActionOverrides());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getActionOverrides(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getArticleTypeChannelDisplay() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getArticleTypeChannelDisplay());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getArticleTypeChannelDisplay(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getBusinessProcesses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getBusinessProcesses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getBusinessProcesses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getCompactLayoutAssignment() != null) {
-            _hashCode += getCompactLayoutAssignment().hashCode();
-        }
-        if (getCompactLayouts() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCompactLayouts());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCompactLayouts(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getCustomHelp() != null) {
-            _hashCode += getCustomHelp().hashCode();
-        }
-        if (getCustomHelpPage() != null) {
-            _hashCode += getCustomHelpPage().hashCode();
-        }
-        if (getCustomSettingsType() != null) {
-            _hashCode += getCustomSettingsType().hashCode();
-        }
-        if (getCustomSettingsVisibility() != null) {
-            _hashCode += getCustomSettingsVisibility().hashCode();
-        }
-        if (getDeploymentStatus() != null) {
-            _hashCode += getDeploymentStatus().hashCode();
-        }
-        if (getDeprecated() != null) {
-            _hashCode += getDeprecated().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getEnableActivities() != null) {
-            _hashCode += getEnableActivities().hashCode();
-        }
-        if (getEnableDivisions() != null) {
-            _hashCode += getEnableDivisions().hashCode();
-        }
-        if (getEnableEnhancedLookup() != null) {
-            _hashCode += getEnableEnhancedLookup().hashCode();
-        }
-        if (getEnableFeeds() != null) {
-            _hashCode += getEnableFeeds().hashCode();
-        }
-        if (getEnableHistory() != null) {
-            _hashCode += getEnableHistory().hashCode();
-        }
-        if (getEnableReports() != null) {
-            _hashCode += getEnableReports().hashCode();
-        }
-        if (getFieldSets() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFieldSets());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFieldSets(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getGender() != null) {
-            _hashCode += getGender().hashCode();
-        }
-        if (getHousehold() != null) {
-            _hashCode += getHousehold().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getListViews() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getListViews());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getListViews(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getNameField() != null) {
-            _hashCode += getNameField().hashCode();
-        }
-        if (getNamedFilters() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getNamedFilters());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getNamedFilters(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getPluralLabel() != null) {
-            _hashCode += getPluralLabel().hashCode();
-        }
-        if (getRecordTypeTrackFeedHistory() != null) {
-            _hashCode += getRecordTypeTrackFeedHistory().hashCode();
-        }
-        if (getRecordTypeTrackHistory() != null) {
-            _hashCode += getRecordTypeTrackHistory().hashCode();
-        }
-        if (getRecordTypes() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRecordTypes());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRecordTypes(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSearchLayouts() != null) {
-            _hashCode += getSearchLayouts().hashCode();
-        }
-        if (getSharingModel() != null) {
-            _hashCode += getSharingModel().hashCode();
-        }
-        if (getSharingReasons() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSharingReasons());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSharingReasons(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSharingRecalculations() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSharingRecalculations());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSharingRecalculations(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getStartsWith() != null) {
-            _hashCode += getStartsWith().hashCode();
-        }
-        if (getValidationRules() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getValidationRules());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getValidationRules(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getWebLinks() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getWebLinks());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getWebLinks(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomObject.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomObject"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("actionOverrides");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "actionOverrides"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ActionOverride"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("articleTypeChannelDisplay");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "articleTypeChannelDisplay"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ArticleTypeTemplate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "articleTypeTemplates"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("businessProcesses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "businessProcesses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "BusinessProcess"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("compactLayoutAssignment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "compactLayoutAssignment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("compactLayouts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "compactLayouts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CompactLayout"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customHelp");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customHelp"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customHelpPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customHelpPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customSettingsType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customSettingsType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomSettingsType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customSettingsVisibility");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customSettingsVisibility"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomSettingsVisibility"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deploymentStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "deploymentStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeploymentStatus"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deprecated");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "deprecated"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableActivities");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableActivities"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableDivisions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableDivisions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableEnhancedLookup");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableEnhancedLookup"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableFeeds");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableFeeds"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableHistory");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableHistory"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableReports");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableReports"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fieldSets");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fieldSets"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FieldSet"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomField"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("gender");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "gender"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Gender"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("household");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "household"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("listViews");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "listViews"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ListView"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("nameField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "nameField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomField"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("namedFilters");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "namedFilters"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "NamedFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("pluralLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "pluralLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordTypeTrackFeedHistory");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordTypeTrackFeedHistory"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordTypeTrackHistory");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordTypeTrackHistory"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordTypes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordTypes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RecordType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("searchLayouts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "searchLayouts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SearchLayouts"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sharingModel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sharingModel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SharingModel"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sharingReasons");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sharingReasons"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SharingReason"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sharingRecalculations");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sharingRecalculations"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SharingRecalculation"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("startsWith");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "startsWith"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "StartsWith"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("validationRules");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "validationRules"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ValidationRule"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("webLinks");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "webLinks"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WebLink"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
+        return this.validationRules;
     }
 
     /**
-     * Return type metadata object
+     * Gets the value of the webLinks property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the webLinks property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getWebLinks().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WebLink }
+     * 
+     * 
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public List<WebLink> getWebLinks() {
+        if (webLinks == null) {
+            webLinks = new ArrayList<WebLink>();
+        }
+        return this.webLinks;
     }
 
 }

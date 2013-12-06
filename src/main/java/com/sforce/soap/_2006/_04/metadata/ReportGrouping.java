@@ -1,192 +1,118 @@
-/**
- * ReportGrouping.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportGrouping  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.UserDateGranularity dateGranularity;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String field;
 
-    private com.sforce.soap._2006._04.metadata.SortOrder sortOrder;
+/**
+ * <p>Java class for ReportGrouping complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportGrouping">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="dateGranularity" type="{http://soap.sforce.com/2006/04/metadata}UserDateGranularity" minOccurs="0"/>
+ *         &lt;element name="field" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="sortOrder" type="{http://soap.sforce.com/2006/04/metadata}SortOrder"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportGrouping", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "dateGranularity",
+    "field",
+    "sortOrder"
+})
+public class ReportGrouping {
 
-    public ReportGrouping() {
-    }
-
-    public ReportGrouping(
-           com.sforce.soap._2006._04.metadata.UserDateGranularity dateGranularity,
-           java.lang.String field,
-           com.sforce.soap._2006._04.metadata.SortOrder sortOrder) {
-           this.dateGranularity = dateGranularity;
-           this.field = field;
-           this.sortOrder = sortOrder;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected UserDateGranularity dateGranularity;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String field;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SortOrder sortOrder;
 
     /**
-     * Gets the dateGranularity value for this ReportGrouping.
+     * Gets the value of the dateGranularity property.
      * 
-     * @return dateGranularity
+     * @return
+     *     possible object is
+     *     {@link UserDateGranularity }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.UserDateGranularity getDateGranularity() {
+    public UserDateGranularity getDateGranularity() {
         return dateGranularity;
     }
 
-
     /**
-     * Sets the dateGranularity value for this ReportGrouping.
+     * Sets the value of the dateGranularity property.
      * 
-     * @param dateGranularity
+     * @param value
+     *     allowed object is
+     *     {@link UserDateGranularity }
+     *     
      */
-    public void setDateGranularity(com.sforce.soap._2006._04.metadata.UserDateGranularity dateGranularity) {
-        this.dateGranularity = dateGranularity;
+    public void setDateGranularity(UserDateGranularity value) {
+        this.dateGranularity = value;
     }
 
-
     /**
-     * Gets the field value for this ReportGrouping.
+     * Gets the value of the field property.
      * 
-     * @return field
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getField() {
+    public String getField() {
         return field;
     }
 
-
     /**
-     * Sets the field value for this ReportGrouping.
+     * Sets the value of the field property.
      * 
-     * @param field
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setField(java.lang.String field) {
-        this.field = field;
+    public void setField(String value) {
+        this.field = value;
     }
 
-
     /**
-     * Gets the sortOrder value for this ReportGrouping.
+     * Gets the value of the sortOrder property.
      * 
-     * @return sortOrder
+     * @return
+     *     possible object is
+     *     {@link SortOrder }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SortOrder getSortOrder() {
+    public SortOrder getSortOrder() {
         return sortOrder;
     }
 
-
     /**
-     * Sets the sortOrder value for this ReportGrouping.
+     * Sets the value of the sortOrder property.
      * 
-     * @param sortOrder
+     * @param value
+     *     allowed object is
+     *     {@link SortOrder }
+     *     
      */
-    public void setSortOrder(com.sforce.soap._2006._04.metadata.SortOrder sortOrder) {
-        this.sortOrder = sortOrder;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportGrouping)) return false;
-        ReportGrouping other = (ReportGrouping) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.dateGranularity==null && other.getDateGranularity()==null) || 
-             (this.dateGranularity!=null &&
-              this.dateGranularity.equals(other.getDateGranularity()))) &&
-            ((this.field==null && other.getField()==null) || 
-             (this.field!=null &&
-              this.field.equals(other.getField()))) &&
-            ((this.sortOrder==null && other.getSortOrder()==null) || 
-             (this.sortOrder!=null &&
-              this.sortOrder.equals(other.getSortOrder())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDateGranularity() != null) {
-            _hashCode += getDateGranularity().hashCode();
-        }
-        if (getField() != null) {
-            _hashCode += getField().hashCode();
-        }
-        if (getSortOrder() != null) {
-            _hashCode += getSortOrder().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportGrouping.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportGrouping"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dateGranularity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dateGranularity"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "UserDateGranularity"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("field");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortOrder");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortOrder"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SortOrder"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSortOrder(SortOrder value) {
+        this.sortOrder = value;
     }
 
 }

@@ -1,413 +1,286 @@
-/**
- * CustomDataTypeComponent.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomDataTypeComponent  implements java.io.Serializable {
-    private java.lang.String developerSuffix;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean enforceFieldRequiredness;
 
-    private java.lang.String label;
+/**
+ * <p>Java class for CustomDataTypeComponent complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomDataTypeComponent">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="developerSuffix" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="enforceFieldRequiredness" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="length" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="precision" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="scale" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="sortOrder" type="{http://soap.sforce.com/2006/04/metadata}SortOrder" minOccurs="0"/>
+ *         &lt;element name="sortPriority" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="type" type="{http://soap.sforce.com/2006/04/metadata}FieldType"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomDataTypeComponent", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "developerSuffix",
+    "enforceFieldRequiredness",
+    "label",
+    "length",
+    "precision",
+    "scale",
+    "sortOrder",
+    "sortPriority",
+    "type"
+})
+public class CustomDataTypeComponent {
 
-    private java.lang.Integer length;
-
-    private java.lang.Integer precision;
-
-    private java.lang.Integer scale;
-
-    private com.sforce.soap._2006._04.metadata.SortOrder sortOrder;
-
-    private java.lang.Integer sortPriority;
-
-    private com.sforce.soap._2006._04.metadata.FieldType type;
-
-    public CustomDataTypeComponent() {
-    }
-
-    public CustomDataTypeComponent(
-           java.lang.String developerSuffix,
-           java.lang.Boolean enforceFieldRequiredness,
-           java.lang.String label,
-           java.lang.Integer length,
-           java.lang.Integer precision,
-           java.lang.Integer scale,
-           com.sforce.soap._2006._04.metadata.SortOrder sortOrder,
-           java.lang.Integer sortPriority,
-           com.sforce.soap._2006._04.metadata.FieldType type) {
-           this.developerSuffix = developerSuffix;
-           this.enforceFieldRequiredness = enforceFieldRequiredness;
-           this.label = label;
-           this.length = length;
-           this.precision = precision;
-           this.scale = scale;
-           this.sortOrder = sortOrder;
-           this.sortPriority = sortPriority;
-           this.type = type;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String developerSuffix;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enforceFieldRequiredness;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer length;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer precision;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer scale;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SortOrder sortOrder;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer sortPriority;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected FieldType type;
 
     /**
-     * Gets the developerSuffix value for this CustomDataTypeComponent.
+     * Gets the value of the developerSuffix property.
      * 
-     * @return developerSuffix
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDeveloperSuffix() {
+    public String getDeveloperSuffix() {
         return developerSuffix;
     }
 
-
     /**
-     * Sets the developerSuffix value for this CustomDataTypeComponent.
+     * Sets the value of the developerSuffix property.
      * 
-     * @param developerSuffix
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDeveloperSuffix(java.lang.String developerSuffix) {
-        this.developerSuffix = developerSuffix;
+    public void setDeveloperSuffix(String value) {
+        this.developerSuffix = value;
     }
 
-
     /**
-     * Gets the enforceFieldRequiredness value for this CustomDataTypeComponent.
+     * Gets the value of the enforceFieldRequiredness property.
      * 
-     * @return enforceFieldRequiredness
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnforceFieldRequiredness() {
+    public Boolean isEnforceFieldRequiredness() {
         return enforceFieldRequiredness;
     }
 
-
     /**
-     * Sets the enforceFieldRequiredness value for this CustomDataTypeComponent.
+     * Sets the value of the enforceFieldRequiredness property.
      * 
-     * @param enforceFieldRequiredness
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnforceFieldRequiredness(java.lang.Boolean enforceFieldRequiredness) {
-        this.enforceFieldRequiredness = enforceFieldRequiredness;
+    public void setEnforceFieldRequiredness(Boolean value) {
+        this.enforceFieldRequiredness = value;
     }
 
-
     /**
-     * Gets the label value for this CustomDataTypeComponent.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this CustomDataTypeComponent.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the length value for this CustomDataTypeComponent.
+     * Gets the value of the length property.
      * 
-     * @return length
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getLength() {
+    public Integer getLength() {
         return length;
     }
 
-
     /**
-     * Sets the length value for this CustomDataTypeComponent.
+     * Sets the value of the length property.
      * 
-     * @param length
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setLength(java.lang.Integer length) {
-        this.length = length;
+    public void setLength(Integer value) {
+        this.length = value;
     }
 
-
     /**
-     * Gets the precision value for this CustomDataTypeComponent.
+     * Gets the value of the precision property.
      * 
-     * @return precision
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getPrecision() {
+    public Integer getPrecision() {
         return precision;
     }
 
-
     /**
-     * Sets the precision value for this CustomDataTypeComponent.
+     * Sets the value of the precision property.
      * 
-     * @param precision
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPrecision(java.lang.Integer precision) {
-        this.precision = precision;
+    public void setPrecision(Integer value) {
+        this.precision = value;
     }
 
-
     /**
-     * Gets the scale value for this CustomDataTypeComponent.
+     * Gets the value of the scale property.
      * 
-     * @return scale
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getScale() {
+    public Integer getScale() {
         return scale;
     }
 
-
     /**
-     * Sets the scale value for this CustomDataTypeComponent.
+     * Sets the value of the scale property.
      * 
-     * @param scale
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setScale(java.lang.Integer scale) {
-        this.scale = scale;
+    public void setScale(Integer value) {
+        this.scale = value;
     }
 
-
     /**
-     * Gets the sortOrder value for this CustomDataTypeComponent.
+     * Gets the value of the sortOrder property.
      * 
-     * @return sortOrder
+     * @return
+     *     possible object is
+     *     {@link SortOrder }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SortOrder getSortOrder() {
+    public SortOrder getSortOrder() {
         return sortOrder;
     }
 
-
     /**
-     * Sets the sortOrder value for this CustomDataTypeComponent.
+     * Sets the value of the sortOrder property.
      * 
-     * @param sortOrder
+     * @param value
+     *     allowed object is
+     *     {@link SortOrder }
+     *     
      */
-    public void setSortOrder(com.sforce.soap._2006._04.metadata.SortOrder sortOrder) {
-        this.sortOrder = sortOrder;
+    public void setSortOrder(SortOrder value) {
+        this.sortOrder = value;
     }
 
-
     /**
-     * Gets the sortPriority value for this CustomDataTypeComponent.
+     * Gets the value of the sortPriority property.
      * 
-     * @return sortPriority
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getSortPriority() {
+    public Integer getSortPriority() {
         return sortPriority;
     }
 
-
     /**
-     * Sets the sortPriority value for this CustomDataTypeComponent.
+     * Sets the value of the sortPriority property.
      * 
-     * @param sortPriority
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setSortPriority(java.lang.Integer sortPriority) {
-        this.sortPriority = sortPriority;
+    public void setSortPriority(Integer value) {
+        this.sortPriority = value;
     }
 
-
     /**
-     * Gets the type value for this CustomDataTypeComponent.
+     * Gets the value of the type property.
      * 
-     * @return type
+     * @return
+     *     possible object is
+     *     {@link FieldType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FieldType getType() {
+    public FieldType getType() {
         return type;
     }
 
-
     /**
-     * Sets the type value for this CustomDataTypeComponent.
+     * Sets the value of the type property.
      * 
-     * @param type
+     * @param value
+     *     allowed object is
+     *     {@link FieldType }
+     *     
      */
-    public void setType(com.sforce.soap._2006._04.metadata.FieldType type) {
-        this.type = type;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomDataTypeComponent)) return false;
-        CustomDataTypeComponent other = (CustomDataTypeComponent) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.developerSuffix==null && other.getDeveloperSuffix()==null) || 
-             (this.developerSuffix!=null &&
-              this.developerSuffix.equals(other.getDeveloperSuffix()))) &&
-            ((this.enforceFieldRequiredness==null && other.getEnforceFieldRequiredness()==null) || 
-             (this.enforceFieldRequiredness!=null &&
-              this.enforceFieldRequiredness.equals(other.getEnforceFieldRequiredness()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.length==null && other.getLength()==null) || 
-             (this.length!=null &&
-              this.length.equals(other.getLength()))) &&
-            ((this.precision==null && other.getPrecision()==null) || 
-             (this.precision!=null &&
-              this.precision.equals(other.getPrecision()))) &&
-            ((this.scale==null && other.getScale()==null) || 
-             (this.scale!=null &&
-              this.scale.equals(other.getScale()))) &&
-            ((this.sortOrder==null && other.getSortOrder()==null) || 
-             (this.sortOrder!=null &&
-              this.sortOrder.equals(other.getSortOrder()))) &&
-            ((this.sortPriority==null && other.getSortPriority()==null) || 
-             (this.sortPriority!=null &&
-              this.sortPriority.equals(other.getSortPriority()))) &&
-            ((this.type==null && other.getType()==null) || 
-             (this.type!=null &&
-              this.type.equals(other.getType())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDeveloperSuffix() != null) {
-            _hashCode += getDeveloperSuffix().hashCode();
-        }
-        if (getEnforceFieldRequiredness() != null) {
-            _hashCode += getEnforceFieldRequiredness().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getLength() != null) {
-            _hashCode += getLength().hashCode();
-        }
-        if (getPrecision() != null) {
-            _hashCode += getPrecision().hashCode();
-        }
-        if (getScale() != null) {
-            _hashCode += getScale().hashCode();
-        }
-        if (getSortOrder() != null) {
-            _hashCode += getSortOrder().hashCode();
-        }
-        if (getSortPriority() != null) {
-            _hashCode += getSortPriority().hashCode();
-        }
-        if (getType() != null) {
-            _hashCode += getType().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomDataTypeComponent.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomDataTypeComponent"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("developerSuffix");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "developerSuffix"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enforceFieldRequiredness");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enforceFieldRequiredness"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("length");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "length"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("precision");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "precision"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scale");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scale"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortOrder");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortOrder"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SortOrder"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortPriority");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortPriority"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("type");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "type"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FieldType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setType(FieldType value) {
+        this.type = value;
     }
 
 }

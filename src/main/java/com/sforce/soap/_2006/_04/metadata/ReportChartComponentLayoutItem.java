@@ -1,341 +1,230 @@
-/**
- * ReportChartComponentLayoutItem.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportChartComponentLayoutItem  implements java.io.Serializable {
-    private java.lang.Boolean cacheData;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String contextFilterableField;
 
-    private java.lang.Boolean hideOnError;
+/**
+ * <p>Java class for ReportChartComponentLayoutItem complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportChartComponentLayoutItem">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="cacheData" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="contextFilterableField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="hideOnError" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="includeContext" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="reportName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="showTitle" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="size" type="{http://soap.sforce.com/2006/04/metadata}ReportChartComponentSize" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportChartComponentLayoutItem", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "cacheData",
+    "contextFilterableField",
+    "hideOnError",
+    "includeContext",
+    "reportName",
+    "showTitle",
+    "size"
+})
+public class ReportChartComponentLayoutItem {
 
-    private java.lang.Boolean includeContext;
-
-    private java.lang.String reportName;
-
-    private java.lang.Boolean showTitle;
-
-    private com.sforce.soap._2006._04.metadata.ReportChartComponentSize size;
-
-    public ReportChartComponentLayoutItem() {
-    }
-
-    public ReportChartComponentLayoutItem(
-           java.lang.Boolean cacheData,
-           java.lang.String contextFilterableField,
-           java.lang.Boolean hideOnError,
-           java.lang.Boolean includeContext,
-           java.lang.String reportName,
-           java.lang.Boolean showTitle,
-           com.sforce.soap._2006._04.metadata.ReportChartComponentSize size) {
-           this.cacheData = cacheData;
-           this.contextFilterableField = contextFilterableField;
-           this.hideOnError = hideOnError;
-           this.includeContext = includeContext;
-           this.reportName = reportName;
-           this.showTitle = showTitle;
-           this.size = size;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean cacheData;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String contextFilterableField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean hideOnError;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean includeContext;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String reportName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showTitle;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportChartComponentSize size;
 
     /**
-     * Gets the cacheData value for this ReportChartComponentLayoutItem.
+     * Gets the value of the cacheData property.
      * 
-     * @return cacheData
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getCacheData() {
+    public Boolean isCacheData() {
         return cacheData;
     }
 
-
     /**
-     * Sets the cacheData value for this ReportChartComponentLayoutItem.
+     * Sets the value of the cacheData property.
      * 
-     * @param cacheData
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setCacheData(java.lang.Boolean cacheData) {
-        this.cacheData = cacheData;
+    public void setCacheData(Boolean value) {
+        this.cacheData = value;
     }
 
-
     /**
-     * Gets the contextFilterableField value for this ReportChartComponentLayoutItem.
+     * Gets the value of the contextFilterableField property.
      * 
-     * @return contextFilterableField
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getContextFilterableField() {
+    public String getContextFilterableField() {
         return contextFilterableField;
     }
 
-
     /**
-     * Sets the contextFilterableField value for this ReportChartComponentLayoutItem.
+     * Sets the value of the contextFilterableField property.
      * 
-     * @param contextFilterableField
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setContextFilterableField(java.lang.String contextFilterableField) {
-        this.contextFilterableField = contextFilterableField;
+    public void setContextFilterableField(String value) {
+        this.contextFilterableField = value;
     }
 
-
     /**
-     * Gets the hideOnError value for this ReportChartComponentLayoutItem.
+     * Gets the value of the hideOnError property.
      * 
-     * @return hideOnError
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getHideOnError() {
+    public Boolean isHideOnError() {
         return hideOnError;
     }
 
-
     /**
-     * Sets the hideOnError value for this ReportChartComponentLayoutItem.
+     * Sets the value of the hideOnError property.
      * 
-     * @param hideOnError
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setHideOnError(java.lang.Boolean hideOnError) {
-        this.hideOnError = hideOnError;
+    public void setHideOnError(Boolean value) {
+        this.hideOnError = value;
     }
 
-
     /**
-     * Gets the includeContext value for this ReportChartComponentLayoutItem.
+     * Gets the value of the includeContext property.
      * 
-     * @return includeContext
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIncludeContext() {
+    public Boolean isIncludeContext() {
         return includeContext;
     }
 
-
     /**
-     * Sets the includeContext value for this ReportChartComponentLayoutItem.
+     * Sets the value of the includeContext property.
      * 
-     * @param includeContext
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIncludeContext(java.lang.Boolean includeContext) {
-        this.includeContext = includeContext;
+    public void setIncludeContext(Boolean value) {
+        this.includeContext = value;
     }
 
-
     /**
-     * Gets the reportName value for this ReportChartComponentLayoutItem.
+     * Gets the value of the reportName property.
      * 
-     * @return reportName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getReportName() {
+    public String getReportName() {
         return reportName;
     }
 
-
     /**
-     * Sets the reportName value for this ReportChartComponentLayoutItem.
+     * Sets the value of the reportName property.
      * 
-     * @param reportName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReportName(java.lang.String reportName) {
-        this.reportName = reportName;
+    public void setReportName(String value) {
+        this.reportName = value;
     }
 
-
     /**
-     * Gets the showTitle value for this ReportChartComponentLayoutItem.
+     * Gets the value of the showTitle property.
      * 
-     * @return showTitle
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowTitle() {
+    public Boolean isShowTitle() {
         return showTitle;
     }
 
-
     /**
-     * Sets the showTitle value for this ReportChartComponentLayoutItem.
+     * Sets the value of the showTitle property.
      * 
-     * @param showTitle
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowTitle(java.lang.Boolean showTitle) {
-        this.showTitle = showTitle;
+    public void setShowTitle(Boolean value) {
+        this.showTitle = value;
     }
 
-
     /**
-     * Gets the size value for this ReportChartComponentLayoutItem.
+     * Gets the value of the size property.
      * 
-     * @return size
+     * @return
+     *     possible object is
+     *     {@link ReportChartComponentSize }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportChartComponentSize getSize() {
+    public ReportChartComponentSize getSize() {
         return size;
     }
 
-
     /**
-     * Sets the size value for this ReportChartComponentLayoutItem.
+     * Sets the value of the size property.
      * 
-     * @param size
+     * @param value
+     *     allowed object is
+     *     {@link ReportChartComponentSize }
+     *     
      */
-    public void setSize(com.sforce.soap._2006._04.metadata.ReportChartComponentSize size) {
-        this.size = size;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportChartComponentLayoutItem)) return false;
-        ReportChartComponentLayoutItem other = (ReportChartComponentLayoutItem) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.cacheData==null && other.getCacheData()==null) || 
-             (this.cacheData!=null &&
-              this.cacheData.equals(other.getCacheData()))) &&
-            ((this.contextFilterableField==null && other.getContextFilterableField()==null) || 
-             (this.contextFilterableField!=null &&
-              this.contextFilterableField.equals(other.getContextFilterableField()))) &&
-            ((this.hideOnError==null && other.getHideOnError()==null) || 
-             (this.hideOnError!=null &&
-              this.hideOnError.equals(other.getHideOnError()))) &&
-            ((this.includeContext==null && other.getIncludeContext()==null) || 
-             (this.includeContext!=null &&
-              this.includeContext.equals(other.getIncludeContext()))) &&
-            ((this.reportName==null && other.getReportName()==null) || 
-             (this.reportName!=null &&
-              this.reportName.equals(other.getReportName()))) &&
-            ((this.showTitle==null && other.getShowTitle()==null) || 
-             (this.showTitle!=null &&
-              this.showTitle.equals(other.getShowTitle()))) &&
-            ((this.size==null && other.getSize()==null) || 
-             (this.size!=null &&
-              this.size.equals(other.getSize())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCacheData() != null) {
-            _hashCode += getCacheData().hashCode();
-        }
-        if (getContextFilterableField() != null) {
-            _hashCode += getContextFilterableField().hashCode();
-        }
-        if (getHideOnError() != null) {
-            _hashCode += getHideOnError().hashCode();
-        }
-        if (getIncludeContext() != null) {
-            _hashCode += getIncludeContext().hashCode();
-        }
-        if (getReportName() != null) {
-            _hashCode += getReportName().hashCode();
-        }
-        if (getShowTitle() != null) {
-            _hashCode += getShowTitle().hashCode();
-        }
-        if (getSize() != null) {
-            _hashCode += getSize().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportChartComponentLayoutItem.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportChartComponentLayoutItem"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cacheData");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "cacheData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("contextFilterableField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "contextFilterableField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("hideOnError");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "hideOnError"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("includeContext");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "includeContext"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("reportName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "reportName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showTitle");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showTitle"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("size");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "size"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportChartComponentSize"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSize(ReportChartComponentSize value) {
+        this.size = value;
     }
 
 }

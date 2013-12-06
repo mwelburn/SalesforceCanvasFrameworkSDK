@@ -1,433 +1,293 @@
-/**
- * EmailToCaseSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class EmailToCaseSettings  implements java.io.Serializable {
-    private java.lang.Boolean enableEmailToCase;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean enableHtmlEmail;
 
-    private java.lang.Boolean enableOnDemandEmailToCase;
+/**
+ * <p>Java class for EmailToCaseSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="EmailToCaseSettings">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="enableEmailToCase" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableHtmlEmail" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableOnDemandEmailToCase" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableThreadIDInBody" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableThreadIDInSubject" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="notifyOwnerOnNewCaseEmail" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="overEmailLimitAction" type="{http://soap.sforce.com/2006/04/metadata}EmailToCaseOnFailureActionType" minOccurs="0"/>
+ *         &lt;element name="routingAddresses" type="{http://soap.sforce.com/2006/04/metadata}EmailToCaseRoutingAddress" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="unauthorizedSenderAction" type="{http://soap.sforce.com/2006/04/metadata}EmailToCaseOnFailureActionType" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "EmailToCaseSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "enableEmailToCase",
+    "enableHtmlEmail",
+    "enableOnDemandEmailToCase",
+    "enableThreadIDInBody",
+    "enableThreadIDInSubject",
+    "notifyOwnerOnNewCaseEmail",
+    "overEmailLimitAction",
+    "routingAddresses",
+    "unauthorizedSenderAction"
+})
+public class EmailToCaseSettings {
 
-    private java.lang.Boolean enableThreadIDInBody;
-
-    private java.lang.Boolean enableThreadIDInSubject;
-
-    private java.lang.Boolean notifyOwnerOnNewCaseEmail;
-
-    private com.sforce.soap._2006._04.metadata.EmailToCaseOnFailureActionType overEmailLimitAction;
-
-    private com.sforce.soap._2006._04.metadata.EmailToCaseRoutingAddress[] routingAddresses;
-
-    private com.sforce.soap._2006._04.metadata.EmailToCaseOnFailureActionType unauthorizedSenderAction;
-
-    public EmailToCaseSettings() {
-    }
-
-    public EmailToCaseSettings(
-           java.lang.Boolean enableEmailToCase,
-           java.lang.Boolean enableHtmlEmail,
-           java.lang.Boolean enableOnDemandEmailToCase,
-           java.lang.Boolean enableThreadIDInBody,
-           java.lang.Boolean enableThreadIDInSubject,
-           java.lang.Boolean notifyOwnerOnNewCaseEmail,
-           com.sforce.soap._2006._04.metadata.EmailToCaseOnFailureActionType overEmailLimitAction,
-           com.sforce.soap._2006._04.metadata.EmailToCaseRoutingAddress[] routingAddresses,
-           com.sforce.soap._2006._04.metadata.EmailToCaseOnFailureActionType unauthorizedSenderAction) {
-           this.enableEmailToCase = enableEmailToCase;
-           this.enableHtmlEmail = enableHtmlEmail;
-           this.enableOnDemandEmailToCase = enableOnDemandEmailToCase;
-           this.enableThreadIDInBody = enableThreadIDInBody;
-           this.enableThreadIDInSubject = enableThreadIDInSubject;
-           this.notifyOwnerOnNewCaseEmail = notifyOwnerOnNewCaseEmail;
-           this.overEmailLimitAction = overEmailLimitAction;
-           this.routingAddresses = routingAddresses;
-           this.unauthorizedSenderAction = unauthorizedSenderAction;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableEmailToCase;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableHtmlEmail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableOnDemandEmailToCase;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableThreadIDInBody;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableThreadIDInSubject;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean notifyOwnerOnNewCaseEmail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected EmailToCaseOnFailureActionType overEmailLimitAction;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<EmailToCaseRoutingAddress> routingAddresses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected EmailToCaseOnFailureActionType unauthorizedSenderAction;
 
     /**
-     * Gets the enableEmailToCase value for this EmailToCaseSettings.
+     * Gets the value of the enableEmailToCase property.
      * 
-     * @return enableEmailToCase
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableEmailToCase() {
+    public Boolean isEnableEmailToCase() {
         return enableEmailToCase;
     }
 
-
     /**
-     * Sets the enableEmailToCase value for this EmailToCaseSettings.
+     * Sets the value of the enableEmailToCase property.
      * 
-     * @param enableEmailToCase
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableEmailToCase(java.lang.Boolean enableEmailToCase) {
-        this.enableEmailToCase = enableEmailToCase;
+    public void setEnableEmailToCase(Boolean value) {
+        this.enableEmailToCase = value;
     }
 
-
     /**
-     * Gets the enableHtmlEmail value for this EmailToCaseSettings.
+     * Gets the value of the enableHtmlEmail property.
      * 
-     * @return enableHtmlEmail
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableHtmlEmail() {
+    public Boolean isEnableHtmlEmail() {
         return enableHtmlEmail;
     }
 
-
     /**
-     * Sets the enableHtmlEmail value for this EmailToCaseSettings.
+     * Sets the value of the enableHtmlEmail property.
      * 
-     * @param enableHtmlEmail
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableHtmlEmail(java.lang.Boolean enableHtmlEmail) {
-        this.enableHtmlEmail = enableHtmlEmail;
+    public void setEnableHtmlEmail(Boolean value) {
+        this.enableHtmlEmail = value;
     }
 
-
     /**
-     * Gets the enableOnDemandEmailToCase value for this EmailToCaseSettings.
+     * Gets the value of the enableOnDemandEmailToCase property.
      * 
-     * @return enableOnDemandEmailToCase
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableOnDemandEmailToCase() {
+    public Boolean isEnableOnDemandEmailToCase() {
         return enableOnDemandEmailToCase;
     }
 
-
     /**
-     * Sets the enableOnDemandEmailToCase value for this EmailToCaseSettings.
+     * Sets the value of the enableOnDemandEmailToCase property.
      * 
-     * @param enableOnDemandEmailToCase
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableOnDemandEmailToCase(java.lang.Boolean enableOnDemandEmailToCase) {
-        this.enableOnDemandEmailToCase = enableOnDemandEmailToCase;
+    public void setEnableOnDemandEmailToCase(Boolean value) {
+        this.enableOnDemandEmailToCase = value;
     }
 
-
     /**
-     * Gets the enableThreadIDInBody value for this EmailToCaseSettings.
+     * Gets the value of the enableThreadIDInBody property.
      * 
-     * @return enableThreadIDInBody
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableThreadIDInBody() {
+    public Boolean isEnableThreadIDInBody() {
         return enableThreadIDInBody;
     }
 
-
     /**
-     * Sets the enableThreadIDInBody value for this EmailToCaseSettings.
+     * Sets the value of the enableThreadIDInBody property.
      * 
-     * @param enableThreadIDInBody
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableThreadIDInBody(java.lang.Boolean enableThreadIDInBody) {
-        this.enableThreadIDInBody = enableThreadIDInBody;
+    public void setEnableThreadIDInBody(Boolean value) {
+        this.enableThreadIDInBody = value;
     }
 
-
     /**
-     * Gets the enableThreadIDInSubject value for this EmailToCaseSettings.
+     * Gets the value of the enableThreadIDInSubject property.
      * 
-     * @return enableThreadIDInSubject
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableThreadIDInSubject() {
+    public Boolean isEnableThreadIDInSubject() {
         return enableThreadIDInSubject;
     }
 
-
     /**
-     * Sets the enableThreadIDInSubject value for this EmailToCaseSettings.
+     * Sets the value of the enableThreadIDInSubject property.
      * 
-     * @param enableThreadIDInSubject
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableThreadIDInSubject(java.lang.Boolean enableThreadIDInSubject) {
-        this.enableThreadIDInSubject = enableThreadIDInSubject;
+    public void setEnableThreadIDInSubject(Boolean value) {
+        this.enableThreadIDInSubject = value;
     }
 
-
     /**
-     * Gets the notifyOwnerOnNewCaseEmail value for this EmailToCaseSettings.
+     * Gets the value of the notifyOwnerOnNewCaseEmail property.
      * 
-     * @return notifyOwnerOnNewCaseEmail
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getNotifyOwnerOnNewCaseEmail() {
+    public Boolean isNotifyOwnerOnNewCaseEmail() {
         return notifyOwnerOnNewCaseEmail;
     }
 
-
     /**
-     * Sets the notifyOwnerOnNewCaseEmail value for this EmailToCaseSettings.
+     * Sets the value of the notifyOwnerOnNewCaseEmail property.
      * 
-     * @param notifyOwnerOnNewCaseEmail
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setNotifyOwnerOnNewCaseEmail(java.lang.Boolean notifyOwnerOnNewCaseEmail) {
-        this.notifyOwnerOnNewCaseEmail = notifyOwnerOnNewCaseEmail;
+    public void setNotifyOwnerOnNewCaseEmail(Boolean value) {
+        this.notifyOwnerOnNewCaseEmail = value;
     }
 
-
     /**
-     * Gets the overEmailLimitAction value for this EmailToCaseSettings.
+     * Gets the value of the overEmailLimitAction property.
      * 
-     * @return overEmailLimitAction
+     * @return
+     *     possible object is
+     *     {@link EmailToCaseOnFailureActionType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.EmailToCaseOnFailureActionType getOverEmailLimitAction() {
+    public EmailToCaseOnFailureActionType getOverEmailLimitAction() {
         return overEmailLimitAction;
     }
 
+    /**
+     * Sets the value of the overEmailLimitAction property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link EmailToCaseOnFailureActionType }
+     *     
+     */
+    public void setOverEmailLimitAction(EmailToCaseOnFailureActionType value) {
+        this.overEmailLimitAction = value;
+    }
 
     /**
-     * Sets the overEmailLimitAction value for this EmailToCaseSettings.
+     * Gets the value of the routingAddresses property.
      * 
-     * @param overEmailLimitAction
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the routingAddresses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRoutingAddresses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link EmailToCaseRoutingAddress }
+     * 
+     * 
      */
-    public void setOverEmailLimitAction(com.sforce.soap._2006._04.metadata.EmailToCaseOnFailureActionType overEmailLimitAction) {
-        this.overEmailLimitAction = overEmailLimitAction;
+    public List<EmailToCaseRoutingAddress> getRoutingAddresses() {
+        if (routingAddresses == null) {
+            routingAddresses = new ArrayList<EmailToCaseRoutingAddress>();
+        }
+        return this.routingAddresses;
     }
-
 
     /**
-     * Gets the routingAddresses value for this EmailToCaseSettings.
+     * Gets the value of the unauthorizedSenderAction property.
      * 
-     * @return routingAddresses
+     * @return
+     *     possible object is
+     *     {@link EmailToCaseOnFailureActionType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.EmailToCaseRoutingAddress[] getRoutingAddresses() {
-        return routingAddresses;
-    }
-
-
-    /**
-     * Sets the routingAddresses value for this EmailToCaseSettings.
-     * 
-     * @param routingAddresses
-     */
-    public void setRoutingAddresses(com.sforce.soap._2006._04.metadata.EmailToCaseRoutingAddress[] routingAddresses) {
-        this.routingAddresses = routingAddresses;
-    }
-
-    public com.sforce.soap._2006._04.metadata.EmailToCaseRoutingAddress getRoutingAddresses(int i) {
-        return this.routingAddresses[i];
-    }
-
-    public void setRoutingAddresses(int i, com.sforce.soap._2006._04.metadata.EmailToCaseRoutingAddress _value) {
-        this.routingAddresses[i] = _value;
-    }
-
-
-    /**
-     * Gets the unauthorizedSenderAction value for this EmailToCaseSettings.
-     * 
-     * @return unauthorizedSenderAction
-     */
-    public com.sforce.soap._2006._04.metadata.EmailToCaseOnFailureActionType getUnauthorizedSenderAction() {
+    public EmailToCaseOnFailureActionType getUnauthorizedSenderAction() {
         return unauthorizedSenderAction;
     }
 
-
     /**
-     * Sets the unauthorizedSenderAction value for this EmailToCaseSettings.
+     * Sets the value of the unauthorizedSenderAction property.
      * 
-     * @param unauthorizedSenderAction
+     * @param value
+     *     allowed object is
+     *     {@link EmailToCaseOnFailureActionType }
+     *     
      */
-    public void setUnauthorizedSenderAction(com.sforce.soap._2006._04.metadata.EmailToCaseOnFailureActionType unauthorizedSenderAction) {
-        this.unauthorizedSenderAction = unauthorizedSenderAction;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof EmailToCaseSettings)) return false;
-        EmailToCaseSettings other = (EmailToCaseSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.enableEmailToCase==null && other.getEnableEmailToCase()==null) || 
-             (this.enableEmailToCase!=null &&
-              this.enableEmailToCase.equals(other.getEnableEmailToCase()))) &&
-            ((this.enableHtmlEmail==null && other.getEnableHtmlEmail()==null) || 
-             (this.enableHtmlEmail!=null &&
-              this.enableHtmlEmail.equals(other.getEnableHtmlEmail()))) &&
-            ((this.enableOnDemandEmailToCase==null && other.getEnableOnDemandEmailToCase()==null) || 
-             (this.enableOnDemandEmailToCase!=null &&
-              this.enableOnDemandEmailToCase.equals(other.getEnableOnDemandEmailToCase()))) &&
-            ((this.enableThreadIDInBody==null && other.getEnableThreadIDInBody()==null) || 
-             (this.enableThreadIDInBody!=null &&
-              this.enableThreadIDInBody.equals(other.getEnableThreadIDInBody()))) &&
-            ((this.enableThreadIDInSubject==null && other.getEnableThreadIDInSubject()==null) || 
-             (this.enableThreadIDInSubject!=null &&
-              this.enableThreadIDInSubject.equals(other.getEnableThreadIDInSubject()))) &&
-            ((this.notifyOwnerOnNewCaseEmail==null && other.getNotifyOwnerOnNewCaseEmail()==null) || 
-             (this.notifyOwnerOnNewCaseEmail!=null &&
-              this.notifyOwnerOnNewCaseEmail.equals(other.getNotifyOwnerOnNewCaseEmail()))) &&
-            ((this.overEmailLimitAction==null && other.getOverEmailLimitAction()==null) || 
-             (this.overEmailLimitAction!=null &&
-              this.overEmailLimitAction.equals(other.getOverEmailLimitAction()))) &&
-            ((this.routingAddresses==null && other.getRoutingAddresses()==null) || 
-             (this.routingAddresses!=null &&
-              java.util.Arrays.equals(this.routingAddresses, other.getRoutingAddresses()))) &&
-            ((this.unauthorizedSenderAction==null && other.getUnauthorizedSenderAction()==null) || 
-             (this.unauthorizedSenderAction!=null &&
-              this.unauthorizedSenderAction.equals(other.getUnauthorizedSenderAction())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getEnableEmailToCase() != null) {
-            _hashCode += getEnableEmailToCase().hashCode();
-        }
-        if (getEnableHtmlEmail() != null) {
-            _hashCode += getEnableHtmlEmail().hashCode();
-        }
-        if (getEnableOnDemandEmailToCase() != null) {
-            _hashCode += getEnableOnDemandEmailToCase().hashCode();
-        }
-        if (getEnableThreadIDInBody() != null) {
-            _hashCode += getEnableThreadIDInBody().hashCode();
-        }
-        if (getEnableThreadIDInSubject() != null) {
-            _hashCode += getEnableThreadIDInSubject().hashCode();
-        }
-        if (getNotifyOwnerOnNewCaseEmail() != null) {
-            _hashCode += getNotifyOwnerOnNewCaseEmail().hashCode();
-        }
-        if (getOverEmailLimitAction() != null) {
-            _hashCode += getOverEmailLimitAction().hashCode();
-        }
-        if (getRoutingAddresses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRoutingAddresses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRoutingAddresses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getUnauthorizedSenderAction() != null) {
-            _hashCode += getUnauthorizedSenderAction().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(EmailToCaseSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EmailToCaseSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableEmailToCase");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableEmailToCase"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableHtmlEmail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableHtmlEmail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableOnDemandEmailToCase");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableOnDemandEmailToCase"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableThreadIDInBody");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableThreadIDInBody"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableThreadIDInSubject");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableThreadIDInSubject"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyOwnerOnNewCaseEmail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyOwnerOnNewCaseEmail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("overEmailLimitAction");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "overEmailLimitAction"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EmailToCaseOnFailureActionType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("routingAddresses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "routingAddresses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EmailToCaseRoutingAddress"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("unauthorizedSenderAction");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "unauthorizedSenderAction"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EmailToCaseOnFailureActionType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUnauthorizedSenderAction(EmailToCaseOnFailureActionType value) {
+        this.unauthorizedSenderAction = value;
     }
 
 }

@@ -1,296 +1,183 @@
-/**
- * FlowRecordDelete.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowRecordDelete  extends com.sforce.soap._2006._04.metadata.FlowNode  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.FlowConnector connector;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.FlowConnector faultConnector;
 
-    private com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters;
+/**
+ * <p>Java class for FlowRecordDelete complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowRecordDelete">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowNode">
+ *       &lt;sequence>
+ *         &lt;element name="connector" type="{http://soap.sforce.com/2006/04/metadata}FlowConnector" minOccurs="0"/>
+ *         &lt;element name="faultConnector" type="{http://soap.sforce.com/2006/04/metadata}FlowConnector" minOccurs="0"/>
+ *         &lt;element name="filters" type="{http://soap.sforce.com/2006/04/metadata}FlowRecordFilter" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="object" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="sObjectInputReference" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowRecordDelete", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "connector",
+    "faultConnector",
+    "filters",
+    "object",
+    "sObjectInputReference"
+})
+public class FlowRecordDelete
+    extends FlowNode
+{
 
-    private java.lang.String object;
-
-    private java.lang.String sObjectInputReference;
-
-    public FlowRecordDelete() {
-    }
-
-    public FlowRecordDelete(
-           java.lang.String description,
-           java.lang.String name,
-           java.lang.String label,
-           int locationX,
-           int locationY,
-           com.sforce.soap._2006._04.metadata.FlowConnector connector,
-           com.sforce.soap._2006._04.metadata.FlowConnector faultConnector,
-           com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters,
-           java.lang.String object,
-           java.lang.String sObjectInputReference) {
-        super(
-            description,
-            name,
-            label,
-            locationX,
-            locationY);
-        this.connector = connector;
-        this.faultConnector = faultConnector;
-        this.filters = filters;
-        this.object = object;
-        this.sObjectInputReference = sObjectInputReference;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowConnector connector;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowConnector faultConnector;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowRecordFilter> filters;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String object;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String sObjectInputReference;
 
     /**
-     * Gets the connector value for this FlowRecordDelete.
+     * Gets the value of the connector property.
      * 
-     * @return connector
+     * @return
+     *     possible object is
+     *     {@link FlowConnector }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowConnector getConnector() {
+    public FlowConnector getConnector() {
         return connector;
     }
 
-
     /**
-     * Sets the connector value for this FlowRecordDelete.
+     * Sets the value of the connector property.
      * 
-     * @param connector
+     * @param value
+     *     allowed object is
+     *     {@link FlowConnector }
+     *     
      */
-    public void setConnector(com.sforce.soap._2006._04.metadata.FlowConnector connector) {
-        this.connector = connector;
+    public void setConnector(FlowConnector value) {
+        this.connector = value;
     }
 
-
     /**
-     * Gets the faultConnector value for this FlowRecordDelete.
+     * Gets the value of the faultConnector property.
      * 
-     * @return faultConnector
+     * @return
+     *     possible object is
+     *     {@link FlowConnector }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowConnector getFaultConnector() {
+    public FlowConnector getFaultConnector() {
         return faultConnector;
     }
 
+    /**
+     * Sets the value of the faultConnector property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FlowConnector }
+     *     
+     */
+    public void setFaultConnector(FlowConnector value) {
+        this.faultConnector = value;
+    }
 
     /**
-     * Sets the faultConnector value for this FlowRecordDelete.
+     * Gets the value of the filters property.
      * 
-     * @param faultConnector
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the filters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFilters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowRecordFilter }
+     * 
+     * 
      */
-    public void setFaultConnector(com.sforce.soap._2006._04.metadata.FlowConnector faultConnector) {
-        this.faultConnector = faultConnector;
+    public List<FlowRecordFilter> getFilters() {
+        if (filters == null) {
+            filters = new ArrayList<FlowRecordFilter>();
+        }
+        return this.filters;
     }
-
 
     /**
-     * Gets the filters value for this FlowRecordDelete.
+     * Gets the value of the object property.
      * 
-     * @return filters
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowRecordFilter[] getFilters() {
-        return filters;
-    }
-
-
-    /**
-     * Sets the filters value for this FlowRecordDelete.
-     * 
-     * @param filters
-     */
-    public void setFilters(com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters) {
-        this.filters = filters;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowRecordFilter getFilters(int i) {
-        return this.filters[i];
-    }
-
-    public void setFilters(int i, com.sforce.soap._2006._04.metadata.FlowRecordFilter _value) {
-        this.filters[i] = _value;
-    }
-
-
-    /**
-     * Gets the object value for this FlowRecordDelete.
-     * 
-     * @return object
-     */
-    public java.lang.String getObject() {
+    public String getObject() {
         return object;
     }
 
-
     /**
-     * Sets the object value for this FlowRecordDelete.
+     * Sets the value of the object property.
      * 
-     * @param object
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setObject(java.lang.String object) {
-        this.object = object;
+    public void setObject(String value) {
+        this.object = value;
     }
 
-
     /**
-     * Gets the sObjectInputReference value for this FlowRecordDelete.
+     * Gets the value of the sObjectInputReference property.
      * 
-     * @return sObjectInputReference
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSObjectInputReference() {
+    public String getSObjectInputReference() {
         return sObjectInputReference;
     }
 
-
     /**
-     * Sets the sObjectInputReference value for this FlowRecordDelete.
+     * Sets the value of the sObjectInputReference property.
      * 
-     * @param sObjectInputReference
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSObjectInputReference(java.lang.String sObjectInputReference) {
-        this.sObjectInputReference = sObjectInputReference;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowRecordDelete)) return false;
-        FlowRecordDelete other = (FlowRecordDelete) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.connector==null && other.getConnector()==null) || 
-             (this.connector!=null &&
-              this.connector.equals(other.getConnector()))) &&
-            ((this.faultConnector==null && other.getFaultConnector()==null) || 
-             (this.faultConnector!=null &&
-              this.faultConnector.equals(other.getFaultConnector()))) &&
-            ((this.filters==null && other.getFilters()==null) || 
-             (this.filters!=null &&
-              java.util.Arrays.equals(this.filters, other.getFilters()))) &&
-            ((this.object==null && other.getObject()==null) || 
-             (this.object!=null &&
-              this.object.equals(other.getObject()))) &&
-            ((this.sObjectInputReference==null && other.getSObjectInputReference()==null) || 
-             (this.sObjectInputReference!=null &&
-              this.sObjectInputReference.equals(other.getSObjectInputReference())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getConnector() != null) {
-            _hashCode += getConnector().hashCode();
-        }
-        if (getFaultConnector() != null) {
-            _hashCode += getFaultConnector().hashCode();
-        }
-        if (getFilters() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFilters());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFilters(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getObject() != null) {
-            _hashCode += getObject().hashCode();
-        }
-        if (getSObjectInputReference() != null) {
-            _hashCode += getSObjectInputReference().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowRecordDelete.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordDelete"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("connector");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "connector"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowConnector"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("faultConnector");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "faultConnector"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowConnector"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("filters");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "filters"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("object");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "object"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("SObjectInputReference");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sObjectInputReference"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSObjectInputReference(String value) {
+        this.sObjectInputReference = value;
     }
 
 }

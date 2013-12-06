@@ -1,263 +1,168 @@
-/**
- * CustomLabel.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomLabel  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String categories;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String language;
 
-    private boolean _protected;
+/**
+ * <p>Java class for CustomLabel complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomLabel">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="categories" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="language" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="protected" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="shortDescription" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="value" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomLabel", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "categories",
+    "language",
+    "_protected",
+    "shortDescription",
+    "value"
+})
+public class CustomLabel
+    extends Metadata
+{
 
-    private java.lang.String shortDescription;
-
-    private java.lang.String value;
-
-    public CustomLabel() {
-    }
-
-    public CustomLabel(
-           java.lang.String fullName,
-           java.lang.String categories,
-           java.lang.String language,
-           boolean _protected,
-           java.lang.String shortDescription,
-           java.lang.String value) {
-        super(
-            fullName);
-        this.categories = categories;
-        this.language = language;
-        this._protected = _protected;
-        this.shortDescription = shortDescription;
-        this.value = value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String categories;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String language;
+    @XmlElement(name = "protected", namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean _protected;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String shortDescription;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String value;
 
     /**
-     * Gets the categories value for this CustomLabel.
+     * Gets the value of the categories property.
      * 
-     * @return categories
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCategories() {
+    public String getCategories() {
         return categories;
     }
 
-
     /**
-     * Sets the categories value for this CustomLabel.
+     * Sets the value of the categories property.
      * 
-     * @param categories
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCategories(java.lang.String categories) {
-        this.categories = categories;
+    public void setCategories(String value) {
+        this.categories = value;
     }
 
-
     /**
-     * Gets the language value for this CustomLabel.
+     * Gets the value of the language property.
      * 
-     * @return language
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLanguage() {
+    public String getLanguage() {
         return language;
     }
 
-
     /**
-     * Sets the language value for this CustomLabel.
+     * Sets the value of the language property.
      * 
-     * @param language
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLanguage(java.lang.String language) {
-        this.language = language;
+    public void setLanguage(String value) {
+        this.language = value;
     }
 
-
     /**
-     * Gets the _protected value for this CustomLabel.
+     * Gets the value of the protected property.
      * 
-     * @return _protected
      */
-    public boolean is_protected() {
+    public boolean isProtected() {
         return _protected;
     }
 
-
     /**
-     * Sets the _protected value for this CustomLabel.
+     * Sets the value of the protected property.
      * 
-     * @param _protected
      */
-    public void set_protected(boolean _protected) {
-        this._protected = _protected;
+    public void setProtected(boolean value) {
+        this._protected = value;
     }
 
-
     /**
-     * Gets the shortDescription value for this CustomLabel.
+     * Gets the value of the shortDescription property.
      * 
-     * @return shortDescription
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getShortDescription() {
+    public String getShortDescription() {
         return shortDescription;
     }
 
-
     /**
-     * Sets the shortDescription value for this CustomLabel.
+     * Sets the value of the shortDescription property.
      * 
-     * @param shortDescription
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setShortDescription(java.lang.String shortDescription) {
-        this.shortDescription = shortDescription;
+    public void setShortDescription(String value) {
+        this.shortDescription = value;
     }
 
-
     /**
-     * Gets the value value for this CustomLabel.
+     * Gets the value of the value property.
      * 
-     * @return value
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getValue() {
+    public String getValue() {
         return value;
     }
 
-
     /**
-     * Sets the value value for this CustomLabel.
+     * Sets the value of the value property.
      * 
      * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setValue(java.lang.String value) {
+    public void setValue(String value) {
         this.value = value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomLabel)) return false;
-        CustomLabel other = (CustomLabel) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.categories==null && other.getCategories()==null) || 
-             (this.categories!=null &&
-              this.categories.equals(other.getCategories()))) &&
-            ((this.language==null && other.getLanguage()==null) || 
-             (this.language!=null &&
-              this.language.equals(other.getLanguage()))) &&
-            this._protected == other.is_protected() &&
-            ((this.shortDescription==null && other.getShortDescription()==null) || 
-             (this.shortDescription!=null &&
-              this.shortDescription.equals(other.getShortDescription()))) &&
-            ((this.value==null && other.getValue()==null) || 
-             (this.value!=null &&
-              this.value.equals(other.getValue())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCategories() != null) {
-            _hashCode += getCategories().hashCode();
-        }
-        if (getLanguage() != null) {
-            _hashCode += getLanguage().hashCode();
-        }
-        _hashCode += (is_protected() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getShortDescription() != null) {
-            _hashCode += getShortDescription().hashCode();
-        }
-        if (getValue() != null) {
-            _hashCode += getValue().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomLabel.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomLabel"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("categories");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "categories"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("language");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "language"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("_protected");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "protected"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("shortDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "shortDescription"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("value");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "value"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
     }
 
 }

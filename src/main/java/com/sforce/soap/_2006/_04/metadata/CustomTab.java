@@ -1,598 +1,420 @@
-/**
- * CustomTab.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomTab  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean customObject;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String description;
 
-    private java.lang.String flexiPage;
+/**
+ * <p>Java class for CustomTab complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomTab">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="customObject" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="flexiPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="frameHeight" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="hasSidebar" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="icon" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="mobileReady" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="motif" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="page" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="scontrol" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="splashPageLink" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="url" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="urlEncodingKey" type="{http://soap.sforce.com/2006/04/metadata}Encoding" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomTab", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "customObject",
+    "description",
+    "flexiPage",
+    "frameHeight",
+    "hasSidebar",
+    "icon",
+    "label",
+    "mobileReady",
+    "motif",
+    "page",
+    "scontrol",
+    "splashPageLink",
+    "url",
+    "urlEncodingKey"
+})
+public class CustomTab
+    extends Metadata
+{
 
-    private java.lang.Integer frameHeight;
-
-    private java.lang.Boolean hasSidebar;
-
-    private java.lang.String icon;
-
-    private java.lang.String label;
-
-    private boolean mobileReady;
-
-    private java.lang.String motif;
-
-    private java.lang.String page;
-
-    private java.lang.String scontrol;
-
-    private java.lang.String splashPageLink;
-
-    private java.lang.String url;
-
-    private com.sforce.soap._2006._04.metadata.Encoding urlEncodingKey;
-
-    public CustomTab() {
-    }
-
-    public CustomTab(
-           java.lang.String fullName,
-           java.lang.Boolean customObject,
-           java.lang.String description,
-           java.lang.String flexiPage,
-           java.lang.Integer frameHeight,
-           java.lang.Boolean hasSidebar,
-           java.lang.String icon,
-           java.lang.String label,
-           boolean mobileReady,
-           java.lang.String motif,
-           java.lang.String page,
-           java.lang.String scontrol,
-           java.lang.String splashPageLink,
-           java.lang.String url,
-           com.sforce.soap._2006._04.metadata.Encoding urlEncodingKey) {
-        super(
-            fullName);
-        this.customObject = customObject;
-        this.description = description;
-        this.flexiPage = flexiPage;
-        this.frameHeight = frameHeight;
-        this.hasSidebar = hasSidebar;
-        this.icon = icon;
-        this.label = label;
-        this.mobileReady = mobileReady;
-        this.motif = motif;
-        this.page = page;
-        this.scontrol = scontrol;
-        this.splashPageLink = splashPageLink;
-        this.url = url;
-        this.urlEncodingKey = urlEncodingKey;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean customObject;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String flexiPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer frameHeight;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean hasSidebar;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String icon;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean mobileReady;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String motif;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String page;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String scontrol;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String splashPageLink;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String url;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Encoding urlEncodingKey;
 
     /**
-     * Gets the customObject value for this CustomTab.
+     * Gets the value of the customObject property.
      * 
-     * @return customObject
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getCustomObject() {
+    public Boolean isCustomObject() {
         return customObject;
     }
 
-
     /**
-     * Sets the customObject value for this CustomTab.
+     * Sets the value of the customObject property.
      * 
-     * @param customObject
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setCustomObject(java.lang.Boolean customObject) {
-        this.customObject = customObject;
+    public void setCustomObject(Boolean value) {
+        this.customObject = value;
     }
 
-
     /**
-     * Gets the description value for this CustomTab.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this CustomTab.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the flexiPage value for this CustomTab.
+     * Gets the value of the flexiPage property.
      * 
-     * @return flexiPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFlexiPage() {
+    public String getFlexiPage() {
         return flexiPage;
     }
 
-
     /**
-     * Sets the flexiPage value for this CustomTab.
+     * Sets the value of the flexiPage property.
      * 
-     * @param flexiPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFlexiPage(java.lang.String flexiPage) {
-        this.flexiPage = flexiPage;
+    public void setFlexiPage(String value) {
+        this.flexiPage = value;
     }
 
-
     /**
-     * Gets the frameHeight value for this CustomTab.
+     * Gets the value of the frameHeight property.
      * 
-     * @return frameHeight
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getFrameHeight() {
+    public Integer getFrameHeight() {
         return frameHeight;
     }
 
-
     /**
-     * Sets the frameHeight value for this CustomTab.
+     * Sets the value of the frameHeight property.
      * 
-     * @param frameHeight
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setFrameHeight(java.lang.Integer frameHeight) {
-        this.frameHeight = frameHeight;
+    public void setFrameHeight(Integer value) {
+        this.frameHeight = value;
     }
 
-
     /**
-     * Gets the hasSidebar value for this CustomTab.
+     * Gets the value of the hasSidebar property.
      * 
-     * @return hasSidebar
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getHasSidebar() {
+    public Boolean isHasSidebar() {
         return hasSidebar;
     }
 
-
     /**
-     * Sets the hasSidebar value for this CustomTab.
+     * Sets the value of the hasSidebar property.
      * 
-     * @param hasSidebar
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setHasSidebar(java.lang.Boolean hasSidebar) {
-        this.hasSidebar = hasSidebar;
+    public void setHasSidebar(Boolean value) {
+        this.hasSidebar = value;
     }
 
-
     /**
-     * Gets the icon value for this CustomTab.
+     * Gets the value of the icon property.
      * 
-     * @return icon
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIcon() {
+    public String getIcon() {
         return icon;
     }
 
-
     /**
-     * Sets the icon value for this CustomTab.
+     * Sets the value of the icon property.
      * 
-     * @param icon
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIcon(java.lang.String icon) {
-        this.icon = icon;
+    public void setIcon(String value) {
+        this.icon = value;
     }
 
-
     /**
-     * Gets the label value for this CustomTab.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this CustomTab.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the mobileReady value for this CustomTab.
+     * Gets the value of the mobileReady property.
      * 
-     * @return mobileReady
      */
     public boolean isMobileReady() {
         return mobileReady;
     }
 
-
     /**
-     * Sets the mobileReady value for this CustomTab.
+     * Sets the value of the mobileReady property.
      * 
-     * @param mobileReady
      */
-    public void setMobileReady(boolean mobileReady) {
-        this.mobileReady = mobileReady;
+    public void setMobileReady(boolean value) {
+        this.mobileReady = value;
     }
 
-
     /**
-     * Gets the motif value for this CustomTab.
+     * Gets the value of the motif property.
      * 
-     * @return motif
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMotif() {
+    public String getMotif() {
         return motif;
     }
 
-
     /**
-     * Sets the motif value for this CustomTab.
+     * Sets the value of the motif property.
      * 
-     * @param motif
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMotif(java.lang.String motif) {
-        this.motif = motif;
+    public void setMotif(String value) {
+        this.motif = value;
     }
 
-
     /**
-     * Gets the page value for this CustomTab.
+     * Gets the value of the page property.
      * 
-     * @return page
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPage() {
+    public String getPage() {
         return page;
     }
 
-
     /**
-     * Sets the page value for this CustomTab.
+     * Sets the value of the page property.
      * 
-     * @param page
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPage(java.lang.String page) {
-        this.page = page;
+    public void setPage(String value) {
+        this.page = value;
     }
 
-
     /**
-     * Gets the scontrol value for this CustomTab.
+     * Gets the value of the scontrol property.
      * 
-     * @return scontrol
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getScontrol() {
+    public String getScontrol() {
         return scontrol;
     }
 
-
     /**
-     * Sets the scontrol value for this CustomTab.
+     * Sets the value of the scontrol property.
      * 
-     * @param scontrol
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setScontrol(java.lang.String scontrol) {
-        this.scontrol = scontrol;
+    public void setScontrol(String value) {
+        this.scontrol = value;
     }
 
-
     /**
-     * Gets the splashPageLink value for this CustomTab.
+     * Gets the value of the splashPageLink property.
      * 
-     * @return splashPageLink
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSplashPageLink() {
+    public String getSplashPageLink() {
         return splashPageLink;
     }
 
-
     /**
-     * Sets the splashPageLink value for this CustomTab.
+     * Sets the value of the splashPageLink property.
      * 
-     * @param splashPageLink
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSplashPageLink(java.lang.String splashPageLink) {
-        this.splashPageLink = splashPageLink;
+    public void setSplashPageLink(String value) {
+        this.splashPageLink = value;
     }
 
-
     /**
-     * Gets the url value for this CustomTab.
+     * Gets the value of the url property.
      * 
-     * @return url
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUrl() {
+    public String getUrl() {
         return url;
     }
 
-
     /**
-     * Sets the url value for this CustomTab.
+     * Sets the value of the url property.
      * 
-     * @param url
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUrl(java.lang.String url) {
-        this.url = url;
+    public void setUrl(String value) {
+        this.url = value;
     }
 
-
     /**
-     * Gets the urlEncodingKey value for this CustomTab.
+     * Gets the value of the urlEncodingKey property.
      * 
-     * @return urlEncodingKey
+     * @return
+     *     possible object is
+     *     {@link Encoding }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.Encoding getUrlEncodingKey() {
+    public Encoding getUrlEncodingKey() {
         return urlEncodingKey;
     }
 
-
     /**
-     * Sets the urlEncodingKey value for this CustomTab.
+     * Sets the value of the urlEncodingKey property.
      * 
-     * @param urlEncodingKey
+     * @param value
+     *     allowed object is
+     *     {@link Encoding }
+     *     
      */
-    public void setUrlEncodingKey(com.sforce.soap._2006._04.metadata.Encoding urlEncodingKey) {
-        this.urlEncodingKey = urlEncodingKey;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomTab)) return false;
-        CustomTab other = (CustomTab) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.customObject==null && other.getCustomObject()==null) || 
-             (this.customObject!=null &&
-              this.customObject.equals(other.getCustomObject()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.flexiPage==null && other.getFlexiPage()==null) || 
-             (this.flexiPage!=null &&
-              this.flexiPage.equals(other.getFlexiPage()))) &&
-            ((this.frameHeight==null && other.getFrameHeight()==null) || 
-             (this.frameHeight!=null &&
-              this.frameHeight.equals(other.getFrameHeight()))) &&
-            ((this.hasSidebar==null && other.getHasSidebar()==null) || 
-             (this.hasSidebar!=null &&
-              this.hasSidebar.equals(other.getHasSidebar()))) &&
-            ((this.icon==null && other.getIcon()==null) || 
-             (this.icon!=null &&
-              this.icon.equals(other.getIcon()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            this.mobileReady == other.isMobileReady() &&
-            ((this.motif==null && other.getMotif()==null) || 
-             (this.motif!=null &&
-              this.motif.equals(other.getMotif()))) &&
-            ((this.page==null && other.getPage()==null) || 
-             (this.page!=null &&
-              this.page.equals(other.getPage()))) &&
-            ((this.scontrol==null && other.getScontrol()==null) || 
-             (this.scontrol!=null &&
-              this.scontrol.equals(other.getScontrol()))) &&
-            ((this.splashPageLink==null && other.getSplashPageLink()==null) || 
-             (this.splashPageLink!=null &&
-              this.splashPageLink.equals(other.getSplashPageLink()))) &&
-            ((this.url==null && other.getUrl()==null) || 
-             (this.url!=null &&
-              this.url.equals(other.getUrl()))) &&
-            ((this.urlEncodingKey==null && other.getUrlEncodingKey()==null) || 
-             (this.urlEncodingKey!=null &&
-              this.urlEncodingKey.equals(other.getUrlEncodingKey())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCustomObject() != null) {
-            _hashCode += getCustomObject().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getFlexiPage() != null) {
-            _hashCode += getFlexiPage().hashCode();
-        }
-        if (getFrameHeight() != null) {
-            _hashCode += getFrameHeight().hashCode();
-        }
-        if (getHasSidebar() != null) {
-            _hashCode += getHasSidebar().hashCode();
-        }
-        if (getIcon() != null) {
-            _hashCode += getIcon().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        _hashCode += (isMobileReady() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getMotif() != null) {
-            _hashCode += getMotif().hashCode();
-        }
-        if (getPage() != null) {
-            _hashCode += getPage().hashCode();
-        }
-        if (getScontrol() != null) {
-            _hashCode += getScontrol().hashCode();
-        }
-        if (getSplashPageLink() != null) {
-            _hashCode += getSplashPageLink().hashCode();
-        }
-        if (getUrl() != null) {
-            _hashCode += getUrl().hashCode();
-        }
-        if (getUrlEncodingKey() != null) {
-            _hashCode += getUrlEncodingKey().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomTab.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomTab"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customObject");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customObject"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("flexiPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "flexiPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("frameHeight");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "frameHeight"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("hasSidebar");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "hasSidebar"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("icon");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "icon"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("mobileReady");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "mobileReady"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("motif");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "motif"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("page");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "page"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scontrol");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scontrol"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("splashPageLink");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "splashPageLink"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("url");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "url"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("urlEncodingKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "urlEncodingKey"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Encoding"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUrlEncodingKey(Encoding value) {
+        this.urlEncodingKey = value;
     }
 
 }

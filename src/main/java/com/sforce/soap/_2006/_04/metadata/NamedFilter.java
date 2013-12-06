@@ -1,461 +1,307 @@
-/**
- * NamedFilter.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class NamedFilter  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private boolean active;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String booleanFilter;
 
-    private java.lang.String description;
+/**
+ * <p>Java class for NamedFilter complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="NamedFilter">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="booleanFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="errorMessage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="field" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="filterItems" type="{http://soap.sforce.com/2006/04/metadata}FilterItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="infoMessage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="isOptional" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="sourceObject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "NamedFilter", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "active",
+    "booleanFilter",
+    "description",
+    "errorMessage",
+    "field",
+    "filterItems",
+    "infoMessage",
+    "isOptional",
+    "name",
+    "sourceObject"
+})
+public class NamedFilter
+    extends Metadata
+{
 
-    private java.lang.String errorMessage;
-
-    private java.lang.String field;
-
-    private com.sforce.soap._2006._04.metadata.FilterItem[] filterItems;
-
-    private java.lang.String infoMessage;
-
-    private boolean isOptional;
-
-    private java.lang.String name;
-
-    private java.lang.String sourceObject;
-
-    public NamedFilter() {
-    }
-
-    public NamedFilter(
-           java.lang.String fullName,
-           boolean active,
-           java.lang.String booleanFilter,
-           java.lang.String description,
-           java.lang.String errorMessage,
-           java.lang.String field,
-           com.sforce.soap._2006._04.metadata.FilterItem[] filterItems,
-           java.lang.String infoMessage,
-           boolean isOptional,
-           java.lang.String name,
-           java.lang.String sourceObject) {
-        super(
-            fullName);
-        this.active = active;
-        this.booleanFilter = booleanFilter;
-        this.description = description;
-        this.errorMessage = errorMessage;
-        this.field = field;
-        this.filterItems = filterItems;
-        this.infoMessage = infoMessage;
-        this.isOptional = isOptional;
-        this.name = name;
-        this.sourceObject = sourceObject;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean active;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String booleanFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String errorMessage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String field;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FilterItem> filterItems;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String infoMessage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean isOptional;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String sourceObject;
 
     /**
-     * Gets the active value for this NamedFilter.
+     * Gets the value of the active property.
      * 
-     * @return active
      */
     public boolean isActive() {
         return active;
     }
 
-
     /**
-     * Sets the active value for this NamedFilter.
+     * Sets the value of the active property.
      * 
-     * @param active
      */
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setActive(boolean value) {
+        this.active = value;
     }
 
-
     /**
-     * Gets the booleanFilter value for this NamedFilter.
+     * Gets the value of the booleanFilter property.
      * 
-     * @return booleanFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBooleanFilter() {
+    public String getBooleanFilter() {
         return booleanFilter;
     }
 
-
     /**
-     * Sets the booleanFilter value for this NamedFilter.
+     * Sets the value of the booleanFilter property.
      * 
-     * @param booleanFilter
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBooleanFilter(java.lang.String booleanFilter) {
-        this.booleanFilter = booleanFilter;
+    public void setBooleanFilter(String value) {
+        this.booleanFilter = value;
     }
 
-
     /**
-     * Gets the description value for this NamedFilter.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this NamedFilter.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the errorMessage value for this NamedFilter.
+     * Gets the value of the errorMessage property.
      * 
-     * @return errorMessage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getErrorMessage() {
+    public String getErrorMessage() {
         return errorMessage;
     }
 
-
     /**
-     * Sets the errorMessage value for this NamedFilter.
+     * Sets the value of the errorMessage property.
      * 
-     * @param errorMessage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setErrorMessage(java.lang.String errorMessage) {
-        this.errorMessage = errorMessage;
+    public void setErrorMessage(String value) {
+        this.errorMessage = value;
     }
 
-
     /**
-     * Gets the field value for this NamedFilter.
+     * Gets the value of the field property.
      * 
-     * @return field
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getField() {
+    public String getField() {
         return field;
     }
 
+    /**
+     * Sets the value of the field property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setField(String value) {
+        this.field = value;
+    }
 
     /**
-     * Sets the field value for this NamedFilter.
+     * Gets the value of the filterItems property.
      * 
-     * @param field
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the filterItems property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFilterItems().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FilterItem }
+     * 
+     * 
      */
-    public void setField(java.lang.String field) {
-        this.field = field;
+    public List<FilterItem> getFilterItems() {
+        if (filterItems == null) {
+            filterItems = new ArrayList<FilterItem>();
+        }
+        return this.filterItems;
     }
-
 
     /**
-     * Gets the filterItems value for this NamedFilter.
+     * Gets the value of the infoMessage property.
      * 
-     * @return filterItems
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FilterItem[] getFilterItems() {
-        return filterItems;
-    }
-
-
-    /**
-     * Sets the filterItems value for this NamedFilter.
-     * 
-     * @param filterItems
-     */
-    public void setFilterItems(com.sforce.soap._2006._04.metadata.FilterItem[] filterItems) {
-        this.filterItems = filterItems;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FilterItem getFilterItems(int i) {
-        return this.filterItems[i];
-    }
-
-    public void setFilterItems(int i, com.sforce.soap._2006._04.metadata.FilterItem _value) {
-        this.filterItems[i] = _value;
-    }
-
-
-    /**
-     * Gets the infoMessage value for this NamedFilter.
-     * 
-     * @return infoMessage
-     */
-    public java.lang.String getInfoMessage() {
+    public String getInfoMessage() {
         return infoMessage;
     }
 
-
     /**
-     * Sets the infoMessage value for this NamedFilter.
+     * Sets the value of the infoMessage property.
      * 
-     * @param infoMessage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setInfoMessage(java.lang.String infoMessage) {
-        this.infoMessage = infoMessage;
+    public void setInfoMessage(String value) {
+        this.infoMessage = value;
     }
 
-
     /**
-     * Gets the isOptional value for this NamedFilter.
+     * Gets the value of the isOptional property.
      * 
-     * @return isOptional
      */
     public boolean isIsOptional() {
         return isOptional;
     }
 
-
     /**
-     * Sets the isOptional value for this NamedFilter.
+     * Sets the value of the isOptional property.
      * 
-     * @param isOptional
      */
-    public void setIsOptional(boolean isOptional) {
-        this.isOptional = isOptional;
+    public void setIsOptional(boolean value) {
+        this.isOptional = value;
     }
 
-
     /**
-     * Gets the name value for this NamedFilter.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this NamedFilter.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the sourceObject value for this NamedFilter.
+     * Gets the value of the sourceObject property.
      * 
-     * @return sourceObject
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSourceObject() {
+    public String getSourceObject() {
         return sourceObject;
     }
 
-
     /**
-     * Sets the sourceObject value for this NamedFilter.
+     * Sets the value of the sourceObject property.
      * 
-     * @param sourceObject
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSourceObject(java.lang.String sourceObject) {
-        this.sourceObject = sourceObject;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof NamedFilter)) return false;
-        NamedFilter other = (NamedFilter) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            this.active == other.isActive() &&
-            ((this.booleanFilter==null && other.getBooleanFilter()==null) || 
-             (this.booleanFilter!=null &&
-              this.booleanFilter.equals(other.getBooleanFilter()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.errorMessage==null && other.getErrorMessage()==null) || 
-             (this.errorMessage!=null &&
-              this.errorMessage.equals(other.getErrorMessage()))) &&
-            ((this.field==null && other.getField()==null) || 
-             (this.field!=null &&
-              this.field.equals(other.getField()))) &&
-            ((this.filterItems==null && other.getFilterItems()==null) || 
-             (this.filterItems!=null &&
-              java.util.Arrays.equals(this.filterItems, other.getFilterItems()))) &&
-            ((this.infoMessage==null && other.getInfoMessage()==null) || 
-             (this.infoMessage!=null &&
-              this.infoMessage.equals(other.getInfoMessage()))) &&
-            this.isOptional == other.isIsOptional() &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.sourceObject==null && other.getSourceObject()==null) || 
-             (this.sourceObject!=null &&
-              this.sourceObject.equals(other.getSourceObject())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        _hashCode += (isActive() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getBooleanFilter() != null) {
-            _hashCode += getBooleanFilter().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getErrorMessage() != null) {
-            _hashCode += getErrorMessage().hashCode();
-        }
-        if (getField() != null) {
-            _hashCode += getField().hashCode();
-        }
-        if (getFilterItems() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFilterItems());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFilterItems(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getInfoMessage() != null) {
-            _hashCode += getInfoMessage().hashCode();
-        }
-        _hashCode += (isIsOptional() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getSourceObject() != null) {
-            _hashCode += getSourceObject().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(NamedFilter.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "NamedFilter"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("active");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "active"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("booleanFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "booleanFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorMessage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "errorMessage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("field");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("filterItems");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "filterItems"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FilterItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("infoMessage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "infoMessage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isOptional");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isOptional"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sourceObject");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sourceObject"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSourceObject(String value) {
+        this.sourceObject = value;
     }
 
 }

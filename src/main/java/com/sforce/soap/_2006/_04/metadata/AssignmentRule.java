@@ -1,177 +1,99 @@
-/**
- * AssignmentRule.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class AssignmentRule  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean active;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.RuleEntry[] ruleEntry;
 
-    public AssignmentRule() {
-    }
+/**
+ * <p>Java class for AssignmentRule complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="AssignmentRule">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="ruleEntry" type="{http://soap.sforce.com/2006/04/metadata}RuleEntry" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "AssignmentRule", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "active",
+    "ruleEntry"
+})
+public class AssignmentRule
+    extends Metadata
+{
 
-    public AssignmentRule(
-           java.lang.String fullName,
-           java.lang.Boolean active,
-           com.sforce.soap._2006._04.metadata.RuleEntry[] ruleEntry) {
-        super(
-            fullName);
-        this.active = active;
-        this.ruleEntry = ruleEntry;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean active;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<RuleEntry> ruleEntry;
 
     /**
-     * Gets the active value for this AssignmentRule.
+     * Gets the value of the active property.
      * 
-     * @return active
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getActive() {
+    public Boolean isActive() {
         return active;
     }
 
-
     /**
-     * Sets the active value for this AssignmentRule.
+     * Sets the value of the active property.
      * 
-     * @param active
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setActive(java.lang.Boolean active) {
-        this.active = active;
+    public void setActive(Boolean value) {
+        this.active = value;
     }
 
-
     /**
-     * Gets the ruleEntry value for this AssignmentRule.
+     * Gets the value of the ruleEntry property.
      * 
-     * @return ruleEntry
-     */
-    public com.sforce.soap._2006._04.metadata.RuleEntry[] getRuleEntry() {
-        return ruleEntry;
-    }
-
-
-    /**
-     * Sets the ruleEntry value for this AssignmentRule.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the ruleEntry property.
      * 
-     * @param ruleEntry
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRuleEntry().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link RuleEntry }
+     * 
+     * 
      */
-    public void setRuleEntry(com.sforce.soap._2006._04.metadata.RuleEntry[] ruleEntry) {
-        this.ruleEntry = ruleEntry;
-    }
-
-    public com.sforce.soap._2006._04.metadata.RuleEntry getRuleEntry(int i) {
-        return this.ruleEntry[i];
-    }
-
-    public void setRuleEntry(int i, com.sforce.soap._2006._04.metadata.RuleEntry _value) {
-        this.ruleEntry[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof AssignmentRule)) return false;
-        AssignmentRule other = (AssignmentRule) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<RuleEntry> getRuleEntry() {
+        if (ruleEntry == null) {
+            ruleEntry = new ArrayList<RuleEntry>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.active==null && other.getActive()==null) || 
-             (this.active!=null &&
-              this.active.equals(other.getActive()))) &&
-            ((this.ruleEntry==null && other.getRuleEntry()==null) || 
-             (this.ruleEntry!=null &&
-              java.util.Arrays.equals(this.ruleEntry, other.getRuleEntry())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getActive() != null) {
-            _hashCode += getActive().hashCode();
-        }
-        if (getRuleEntry() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRuleEntry());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRuleEntry(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(AssignmentRule.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AssignmentRule"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("active");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "active"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ruleEntry");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ruleEntry"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RuleEntry"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.ruleEntry;
     }
 
 }

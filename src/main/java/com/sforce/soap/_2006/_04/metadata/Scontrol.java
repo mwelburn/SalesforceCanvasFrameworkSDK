@@ -1,347 +1,222 @@
-/**
- * Scontrol.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Scontrol  extends com.sforce.soap._2006._04.metadata.MetadataWithContent  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.SControlContentSource contentSource;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String description;
 
-    private com.sforce.soap._2006._04.metadata.Encoding encodingKey;
+/**
+ * <p>Java class for Scontrol complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Scontrol">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}MetadataWithContent">
+ *       &lt;sequence>
+ *         &lt;element name="contentSource" type="{http://soap.sforce.com/2006/04/metadata}SControlContentSource"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="encodingKey" type="{http://soap.sforce.com/2006/04/metadata}Encoding"/>
+ *         &lt;element name="fileContent" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
+ *         &lt;element name="fileName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="supportsCaching" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Scontrol", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "contentSource",
+    "description",
+    "encodingKey",
+    "fileContent",
+    "fileName",
+    "name",
+    "supportsCaching"
+})
+public class Scontrol
+    extends MetadataWithContent
+{
 
-    private byte[] fileContent;
-
-    private java.lang.String fileName;
-
-    private java.lang.String name;
-
-    private boolean supportsCaching;
-
-    public Scontrol() {
-    }
-
-    public Scontrol(
-           java.lang.String fullName,
-           byte[] content,
-           com.sforce.soap._2006._04.metadata.SControlContentSource contentSource,
-           java.lang.String description,
-           com.sforce.soap._2006._04.metadata.Encoding encodingKey,
-           byte[] fileContent,
-           java.lang.String fileName,
-           java.lang.String name,
-           boolean supportsCaching) {
-        super(
-            fullName,
-            content);
-        this.contentSource = contentSource;
-        this.description = description;
-        this.encodingKey = encodingKey;
-        this.fileContent = fileContent;
-        this.fileName = fileName;
-        this.name = name;
-        this.supportsCaching = supportsCaching;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SControlContentSource contentSource;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected Encoding encodingKey;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected byte[] fileContent;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String fileName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean supportsCaching;
 
     /**
-     * Gets the contentSource value for this Scontrol.
+     * Gets the value of the contentSource property.
      * 
-     * @return contentSource
+     * @return
+     *     possible object is
+     *     {@link SControlContentSource }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SControlContentSource getContentSource() {
+    public SControlContentSource getContentSource() {
         return contentSource;
     }
 
-
     /**
-     * Sets the contentSource value for this Scontrol.
+     * Sets the value of the contentSource property.
      * 
-     * @param contentSource
+     * @param value
+     *     allowed object is
+     *     {@link SControlContentSource }
+     *     
      */
-    public void setContentSource(com.sforce.soap._2006._04.metadata.SControlContentSource contentSource) {
-        this.contentSource = contentSource;
+    public void setContentSource(SControlContentSource value) {
+        this.contentSource = value;
     }
 
-
     /**
-     * Gets the description value for this Scontrol.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this Scontrol.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the encodingKey value for this Scontrol.
+     * Gets the value of the encodingKey property.
      * 
-     * @return encodingKey
+     * @return
+     *     possible object is
+     *     {@link Encoding }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.Encoding getEncodingKey() {
+    public Encoding getEncodingKey() {
         return encodingKey;
     }
 
-
     /**
-     * Sets the encodingKey value for this Scontrol.
+     * Sets the value of the encodingKey property.
      * 
-     * @param encodingKey
+     * @param value
+     *     allowed object is
+     *     {@link Encoding }
+     *     
      */
-    public void setEncodingKey(com.sforce.soap._2006._04.metadata.Encoding encodingKey) {
-        this.encodingKey = encodingKey;
+    public void setEncodingKey(Encoding value) {
+        this.encodingKey = value;
     }
 
-
     /**
-     * Gets the fileContent value for this Scontrol.
+     * Gets the value of the fileContent property.
      * 
-     * @return fileContent
+     * @return
+     *     possible object is
+     *     byte[]
      */
     public byte[] getFileContent() {
         return fileContent;
     }
 
-
     /**
-     * Sets the fileContent value for this Scontrol.
+     * Sets the value of the fileContent property.
      * 
-     * @param fileContent
+     * @param value
+     *     allowed object is
+     *     byte[]
      */
-    public void setFileContent(byte[] fileContent) {
-        this.fileContent = fileContent;
+    public void setFileContent(byte[] value) {
+        this.fileContent = ((byte[]) value);
     }
 
-
     /**
-     * Gets the fileName value for this Scontrol.
+     * Gets the value of the fileName property.
      * 
-     * @return fileName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFileName() {
+    public String getFileName() {
         return fileName;
     }
 
-
     /**
-     * Sets the fileName value for this Scontrol.
+     * Sets the value of the fileName property.
      * 
-     * @param fileName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFileName(java.lang.String fileName) {
-        this.fileName = fileName;
+    public void setFileName(String value) {
+        this.fileName = value;
     }
 
-
     /**
-     * Gets the name value for this Scontrol.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this Scontrol.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the supportsCaching value for this Scontrol.
+     * Gets the value of the supportsCaching property.
      * 
-     * @return supportsCaching
      */
     public boolean isSupportsCaching() {
         return supportsCaching;
     }
 
-
     /**
-     * Sets the supportsCaching value for this Scontrol.
+     * Sets the value of the supportsCaching property.
      * 
-     * @param supportsCaching
      */
-    public void setSupportsCaching(boolean supportsCaching) {
-        this.supportsCaching = supportsCaching;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Scontrol)) return false;
-        Scontrol other = (Scontrol) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.contentSource==null && other.getContentSource()==null) || 
-             (this.contentSource!=null &&
-              this.contentSource.equals(other.getContentSource()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.encodingKey==null && other.getEncodingKey()==null) || 
-             (this.encodingKey!=null &&
-              this.encodingKey.equals(other.getEncodingKey()))) &&
-            ((this.fileContent==null && other.getFileContent()==null) || 
-             (this.fileContent!=null &&
-              java.util.Arrays.equals(this.fileContent, other.getFileContent()))) &&
-            ((this.fileName==null && other.getFileName()==null) || 
-             (this.fileName!=null &&
-              this.fileName.equals(other.getFileName()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            this.supportsCaching == other.isSupportsCaching();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getContentSource() != null) {
-            _hashCode += getContentSource().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getEncodingKey() != null) {
-            _hashCode += getEncodingKey().hashCode();
-        }
-        if (getFileContent() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFileContent());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFileContent(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFileName() != null) {
-            _hashCode += getFileName().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        _hashCode += (isSupportsCaching() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Scontrol.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Scontrol"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("contentSource");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "contentSource"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SControlContentSource"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("encodingKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "encodingKey"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Encoding"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fileContent");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fileContent"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "base64Binary"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fileName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fileName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("supportsCaching");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "supportsCaching"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSupportsCaching(boolean value) {
+        this.supportsCaching = value;
     }
 
 }

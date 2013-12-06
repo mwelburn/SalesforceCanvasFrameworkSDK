@@ -1,173 +1,97 @@
-/**
- * DashboardFilter.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class DashboardFilter  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.DashboardFilterOption[] dashboardFilterOptions;
-
-    private java.lang.String name;
-
-    public DashboardFilter() {
-    }
-
-    public DashboardFilter(
-           com.sforce.soap._2006._04.metadata.DashboardFilterOption[] dashboardFilterOptions,
-           java.lang.String name) {
-           this.dashboardFilterOptions = dashboardFilterOptions;
-           this.name = name;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the dashboardFilterOptions value for this DashboardFilter.
-     * 
-     * @return dashboardFilterOptions
-     */
-    public com.sforce.soap._2006._04.metadata.DashboardFilterOption[] getDashboardFilterOptions() {
-        return dashboardFilterOptions;
-    }
+/**
+ * <p>Java class for DashboardFilter complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DashboardFilter">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="dashboardFilterOptions" type="{http://soap.sforce.com/2006/04/metadata}DashboardFilterOption" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DashboardFilter", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "dashboardFilterOptions",
+    "name"
+})
+public class DashboardFilter {
 
-
-    /**
-     * Sets the dashboardFilterOptions value for this DashboardFilter.
-     * 
-     * @param dashboardFilterOptions
-     */
-    public void setDashboardFilterOptions(com.sforce.soap._2006._04.metadata.DashboardFilterOption[] dashboardFilterOptions) {
-        this.dashboardFilterOptions = dashboardFilterOptions;
-    }
-
-    public com.sforce.soap._2006._04.metadata.DashboardFilterOption getDashboardFilterOptions(int i) {
-        return this.dashboardFilterOptions[i];
-    }
-
-    public void setDashboardFilterOptions(int i, com.sforce.soap._2006._04.metadata.DashboardFilterOption _value) {
-        this.dashboardFilterOptions[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<DashboardFilterOption> dashboardFilterOptions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
 
     /**
-     * Gets the name value for this DashboardFilter.
+     * Gets the value of the dashboardFilterOptions property.
      * 
-     * @return name
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the dashboardFilterOptions property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDashboardFilterOptions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DashboardFilterOption }
+     * 
+     * 
      */
-    public java.lang.String getName() {
+    public List<DashboardFilterOption> getDashboardFilterOptions() {
+        if (dashboardFilterOptions == null) {
+            dashboardFilterOptions = new ArrayList<DashboardFilterOption>();
+        }
+        return this.dashboardFilterOptions;
+    }
+
+    /**
+     * Gets the value of the name property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this DashboardFilter.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DashboardFilter)) return false;
-        DashboardFilter other = (DashboardFilter) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.dashboardFilterOptions==null && other.getDashboardFilterOptions()==null) || 
-             (this.dashboardFilterOptions!=null &&
-              java.util.Arrays.equals(this.dashboardFilterOptions, other.getDashboardFilterOptions()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDashboardFilterOptions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDashboardFilterOptions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDashboardFilterOptions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DashboardFilter.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardFilter"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dashboardFilterOptions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dashboardFilterOptions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardFilterOption"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setName(String value) {
+        this.name = value;
     }
 
 }

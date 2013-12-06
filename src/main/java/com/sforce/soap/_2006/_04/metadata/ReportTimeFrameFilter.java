@@ -1,229 +1,150 @@
-/**
- * ReportTimeFrameFilter.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportTimeFrameFilter  implements java.io.Serializable {
-    private java.lang.String dateColumn;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
-    private java.util.Date endDate;
 
-    private com.sforce.soap._2006._04.metadata.UserDateInterval interval;
+/**
+ * <p>Java class for ReportTimeFrameFilter complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportTimeFrameFilter">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="dateColumn" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="interval" type="{http://soap.sforce.com/2006/04/metadata}UserDateInterval"/>
+ *         &lt;element name="startDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportTimeFrameFilter", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "dateColumn",
+    "endDate",
+    "interval",
+    "startDate"
+})
+public class ReportTimeFrameFilter {
 
-    private java.util.Date startDate;
-
-    public ReportTimeFrameFilter() {
-    }
-
-    public ReportTimeFrameFilter(
-           java.lang.String dateColumn,
-           java.util.Date endDate,
-           com.sforce.soap._2006._04.metadata.UserDateInterval interval,
-           java.util.Date startDate) {
-           this.dateColumn = dateColumn;
-           this.endDate = endDate;
-           this.interval = interval;
-           this.startDate = startDate;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String dateColumn;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar endDate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected UserDateInterval interval;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar startDate;
 
     /**
-     * Gets the dateColumn value for this ReportTimeFrameFilter.
+     * Gets the value of the dateColumn property.
      * 
-     * @return dateColumn
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDateColumn() {
+    public String getDateColumn() {
         return dateColumn;
     }
 
-
     /**
-     * Sets the dateColumn value for this ReportTimeFrameFilter.
+     * Sets the value of the dateColumn property.
      * 
-     * @param dateColumn
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDateColumn(java.lang.String dateColumn) {
-        this.dateColumn = dateColumn;
+    public void setDateColumn(String value) {
+        this.dateColumn = value;
     }
 
-
     /**
-     * Gets the endDate value for this ReportTimeFrameFilter.
+     * Gets the value of the endDate property.
      * 
-     * @return endDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getEndDate() {
+    public XMLGregorianCalendar getEndDate() {
         return endDate;
     }
 
-
     /**
-     * Sets the endDate value for this ReportTimeFrameFilter.
+     * Sets the value of the endDate property.
      * 
-     * @param endDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setEndDate(java.util.Date endDate) {
-        this.endDate = endDate;
+    public void setEndDate(XMLGregorianCalendar value) {
+        this.endDate = value;
     }
 
-
     /**
-     * Gets the interval value for this ReportTimeFrameFilter.
+     * Gets the value of the interval property.
      * 
-     * @return interval
+     * @return
+     *     possible object is
+     *     {@link UserDateInterval }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.UserDateInterval getInterval() {
+    public UserDateInterval getInterval() {
         return interval;
     }
 
-
     /**
-     * Sets the interval value for this ReportTimeFrameFilter.
+     * Sets the value of the interval property.
      * 
-     * @param interval
+     * @param value
+     *     allowed object is
+     *     {@link UserDateInterval }
+     *     
      */
-    public void setInterval(com.sforce.soap._2006._04.metadata.UserDateInterval interval) {
-        this.interval = interval;
+    public void setInterval(UserDateInterval value) {
+        this.interval = value;
     }
 
-
     /**
-     * Gets the startDate value for this ReportTimeFrameFilter.
+     * Gets the value of the startDate property.
      * 
-     * @return startDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getStartDate() {
+    public XMLGregorianCalendar getStartDate() {
         return startDate;
     }
 
-
     /**
-     * Sets the startDate value for this ReportTimeFrameFilter.
+     * Sets the value of the startDate property.
      * 
-     * @param startDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setStartDate(java.util.Date startDate) {
-        this.startDate = startDate;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportTimeFrameFilter)) return false;
-        ReportTimeFrameFilter other = (ReportTimeFrameFilter) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.dateColumn==null && other.getDateColumn()==null) || 
-             (this.dateColumn!=null &&
-              this.dateColumn.equals(other.getDateColumn()))) &&
-            ((this.endDate==null && other.getEndDate()==null) || 
-             (this.endDate!=null &&
-              this.endDate.equals(other.getEndDate()))) &&
-            ((this.interval==null && other.getInterval()==null) || 
-             (this.interval!=null &&
-              this.interval.equals(other.getInterval()))) &&
-            ((this.startDate==null && other.getStartDate()==null) || 
-             (this.startDate!=null &&
-              this.startDate.equals(other.getStartDate())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDateColumn() != null) {
-            _hashCode += getDateColumn().hashCode();
-        }
-        if (getEndDate() != null) {
-            _hashCode += getEndDate().hashCode();
-        }
-        if (getInterval() != null) {
-            _hashCode += getInterval().hashCode();
-        }
-        if (getStartDate() != null) {
-            _hashCode += getStartDate().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportTimeFrameFilter.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportTimeFrameFilter"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dateColumn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dateColumn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("endDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "endDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("interval");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "interval"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "UserDateInterval"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("startDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "startDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStartDate(XMLGregorianCalendar value) {
+        this.startDate = value;
     }
 
 }

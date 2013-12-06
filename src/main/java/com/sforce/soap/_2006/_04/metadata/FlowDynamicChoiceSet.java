@@ -1,452 +1,300 @@
-/**
- * FlowDynamicChoiceSet.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowDynamicChoiceSet  extends com.sforce.soap._2006._04.metadata.FlowElement  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.FlowDataType dataType;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String displayField;
 
-    private com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters;
+/**
+ * <p>Java class for FlowDynamicChoiceSet complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowDynamicChoiceSet">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowElement">
+ *       &lt;sequence>
+ *         &lt;element name="dataType" type="{http://soap.sforce.com/2006/04/metadata}FlowDataType"/>
+ *         &lt;element name="displayField" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="filters" type="{http://soap.sforce.com/2006/04/metadata}FlowRecordFilter" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="limit" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="object" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="outputAssignments" type="{http://soap.sforce.com/2006/04/metadata}FlowOutputFieldAssignment" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="sortField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="sortOrder" type="{http://soap.sforce.com/2006/04/metadata}SortOrder" minOccurs="0"/>
+ *         &lt;element name="valueField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowDynamicChoiceSet", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "dataType",
+    "displayField",
+    "filters",
+    "limit",
+    "object",
+    "outputAssignments",
+    "sortField",
+    "sortOrder",
+    "valueField"
+})
+public class FlowDynamicChoiceSet
+    extends FlowElement
+{
 
-    private java.lang.Integer limit;
-
-    private java.lang.String object;
-
-    private com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment[] outputAssignments;
-
-    private java.lang.String sortField;
-
-    private com.sforce.soap._2006._04.metadata.SortOrder sortOrder;
-
-    private java.lang.String valueField;
-
-    public FlowDynamicChoiceSet() {
-    }
-
-    public FlowDynamicChoiceSet(
-           java.lang.String description,
-           java.lang.String name,
-           com.sforce.soap._2006._04.metadata.FlowDataType dataType,
-           java.lang.String displayField,
-           com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters,
-           java.lang.Integer limit,
-           java.lang.String object,
-           com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment[] outputAssignments,
-           java.lang.String sortField,
-           com.sforce.soap._2006._04.metadata.SortOrder sortOrder,
-           java.lang.String valueField) {
-        super(
-            description,
-            name);
-        this.dataType = dataType;
-        this.displayField = displayField;
-        this.filters = filters;
-        this.limit = limit;
-        this.object = object;
-        this.outputAssignments = outputAssignments;
-        this.sortField = sortField;
-        this.sortOrder = sortOrder;
-        this.valueField = valueField;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected FlowDataType dataType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String displayField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowRecordFilter> filters;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer limit;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String object;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowOutputFieldAssignment> outputAssignments;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String sortField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SortOrder sortOrder;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String valueField;
 
     /**
-     * Gets the dataType value for this FlowDynamicChoiceSet.
+     * Gets the value of the dataType property.
      * 
-     * @return dataType
+     * @return
+     *     possible object is
+     *     {@link FlowDataType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowDataType getDataType() {
+    public FlowDataType getDataType() {
         return dataType;
     }
 
-
     /**
-     * Sets the dataType value for this FlowDynamicChoiceSet.
+     * Sets the value of the dataType property.
      * 
-     * @param dataType
+     * @param value
+     *     allowed object is
+     *     {@link FlowDataType }
+     *     
      */
-    public void setDataType(com.sforce.soap._2006._04.metadata.FlowDataType dataType) {
-        this.dataType = dataType;
+    public void setDataType(FlowDataType value) {
+        this.dataType = value;
     }
 
-
     /**
-     * Gets the displayField value for this FlowDynamicChoiceSet.
+     * Gets the value of the displayField property.
      * 
-     * @return displayField
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDisplayField() {
+    public String getDisplayField() {
         return displayField;
     }
 
+    /**
+     * Sets the value of the displayField property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDisplayField(String value) {
+        this.displayField = value;
+    }
 
     /**
-     * Sets the displayField value for this FlowDynamicChoiceSet.
+     * Gets the value of the filters property.
      * 
-     * @param displayField
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the filters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFilters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowRecordFilter }
+     * 
+     * 
      */
-    public void setDisplayField(java.lang.String displayField) {
-        this.displayField = displayField;
+    public List<FlowRecordFilter> getFilters() {
+        if (filters == null) {
+            filters = new ArrayList<FlowRecordFilter>();
+        }
+        return this.filters;
     }
-
 
     /**
-     * Gets the filters value for this FlowDynamicChoiceSet.
+     * Gets the value of the limit property.
      * 
-     * @return filters
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowRecordFilter[] getFilters() {
-        return filters;
-    }
-
-
-    /**
-     * Sets the filters value for this FlowDynamicChoiceSet.
-     * 
-     * @param filters
-     */
-    public void setFilters(com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters) {
-        this.filters = filters;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowRecordFilter getFilters(int i) {
-        return this.filters[i];
-    }
-
-    public void setFilters(int i, com.sforce.soap._2006._04.metadata.FlowRecordFilter _value) {
-        this.filters[i] = _value;
-    }
-
-
-    /**
-     * Gets the limit value for this FlowDynamicChoiceSet.
-     * 
-     * @return limit
-     */
-    public java.lang.Integer getLimit() {
+    public Integer getLimit() {
         return limit;
     }
 
-
     /**
-     * Sets the limit value for this FlowDynamicChoiceSet.
+     * Sets the value of the limit property.
      * 
-     * @param limit
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setLimit(java.lang.Integer limit) {
-        this.limit = limit;
+    public void setLimit(Integer value) {
+        this.limit = value;
     }
 
-
     /**
-     * Gets the object value for this FlowDynamicChoiceSet.
+     * Gets the value of the object property.
      * 
-     * @return object
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getObject() {
+    public String getObject() {
         return object;
     }
 
+    /**
+     * Sets the value of the object property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setObject(String value) {
+        this.object = value;
+    }
 
     /**
-     * Sets the object value for this FlowDynamicChoiceSet.
+     * Gets the value of the outputAssignments property.
      * 
-     * @param object
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the outputAssignments property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getOutputAssignments().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowOutputFieldAssignment }
+     * 
+     * 
      */
-    public void setObject(java.lang.String object) {
-        this.object = object;
+    public List<FlowOutputFieldAssignment> getOutputAssignments() {
+        if (outputAssignments == null) {
+            outputAssignments = new ArrayList<FlowOutputFieldAssignment>();
+        }
+        return this.outputAssignments;
     }
-
 
     /**
-     * Gets the outputAssignments value for this FlowDynamicChoiceSet.
+     * Gets the value of the sortField property.
      * 
-     * @return outputAssignments
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment[] getOutputAssignments() {
-        return outputAssignments;
-    }
-
-
-    /**
-     * Sets the outputAssignments value for this FlowDynamicChoiceSet.
-     * 
-     * @param outputAssignments
-     */
-    public void setOutputAssignments(com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment[] outputAssignments) {
-        this.outputAssignments = outputAssignments;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment getOutputAssignments(int i) {
-        return this.outputAssignments[i];
-    }
-
-    public void setOutputAssignments(int i, com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment _value) {
-        this.outputAssignments[i] = _value;
-    }
-
-
-    /**
-     * Gets the sortField value for this FlowDynamicChoiceSet.
-     * 
-     * @return sortField
-     */
-    public java.lang.String getSortField() {
+    public String getSortField() {
         return sortField;
     }
 
-
     /**
-     * Sets the sortField value for this FlowDynamicChoiceSet.
+     * Sets the value of the sortField property.
      * 
-     * @param sortField
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSortField(java.lang.String sortField) {
-        this.sortField = sortField;
+    public void setSortField(String value) {
+        this.sortField = value;
     }
 
-
     /**
-     * Gets the sortOrder value for this FlowDynamicChoiceSet.
+     * Gets the value of the sortOrder property.
      * 
-     * @return sortOrder
+     * @return
+     *     possible object is
+     *     {@link SortOrder }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SortOrder getSortOrder() {
+    public SortOrder getSortOrder() {
         return sortOrder;
     }
 
-
     /**
-     * Sets the sortOrder value for this FlowDynamicChoiceSet.
+     * Sets the value of the sortOrder property.
      * 
-     * @param sortOrder
+     * @param value
+     *     allowed object is
+     *     {@link SortOrder }
+     *     
      */
-    public void setSortOrder(com.sforce.soap._2006._04.metadata.SortOrder sortOrder) {
-        this.sortOrder = sortOrder;
+    public void setSortOrder(SortOrder value) {
+        this.sortOrder = value;
     }
 
-
     /**
-     * Gets the valueField value for this FlowDynamicChoiceSet.
+     * Gets the value of the valueField property.
      * 
-     * @return valueField
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getValueField() {
+    public String getValueField() {
         return valueField;
     }
 
-
     /**
-     * Sets the valueField value for this FlowDynamicChoiceSet.
+     * Sets the value of the valueField property.
      * 
-     * @param valueField
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setValueField(java.lang.String valueField) {
-        this.valueField = valueField;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowDynamicChoiceSet)) return false;
-        FlowDynamicChoiceSet other = (FlowDynamicChoiceSet) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.dataType==null && other.getDataType()==null) || 
-             (this.dataType!=null &&
-              this.dataType.equals(other.getDataType()))) &&
-            ((this.displayField==null && other.getDisplayField()==null) || 
-             (this.displayField!=null &&
-              this.displayField.equals(other.getDisplayField()))) &&
-            ((this.filters==null && other.getFilters()==null) || 
-             (this.filters!=null &&
-              java.util.Arrays.equals(this.filters, other.getFilters()))) &&
-            ((this.limit==null && other.getLimit()==null) || 
-             (this.limit!=null &&
-              this.limit.equals(other.getLimit()))) &&
-            ((this.object==null && other.getObject()==null) || 
-             (this.object!=null &&
-              this.object.equals(other.getObject()))) &&
-            ((this.outputAssignments==null && other.getOutputAssignments()==null) || 
-             (this.outputAssignments!=null &&
-              java.util.Arrays.equals(this.outputAssignments, other.getOutputAssignments()))) &&
-            ((this.sortField==null && other.getSortField()==null) || 
-             (this.sortField!=null &&
-              this.sortField.equals(other.getSortField()))) &&
-            ((this.sortOrder==null && other.getSortOrder()==null) || 
-             (this.sortOrder!=null &&
-              this.sortOrder.equals(other.getSortOrder()))) &&
-            ((this.valueField==null && other.getValueField()==null) || 
-             (this.valueField!=null &&
-              this.valueField.equals(other.getValueField())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getDataType() != null) {
-            _hashCode += getDataType().hashCode();
-        }
-        if (getDisplayField() != null) {
-            _hashCode += getDisplayField().hashCode();
-        }
-        if (getFilters() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFilters());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFilters(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLimit() != null) {
-            _hashCode += getLimit().hashCode();
-        }
-        if (getObject() != null) {
-            _hashCode += getObject().hashCode();
-        }
-        if (getOutputAssignments() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getOutputAssignments());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getOutputAssignments(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSortField() != null) {
-            _hashCode += getSortField().hashCode();
-        }
-        if (getSortOrder() != null) {
-            _hashCode += getSortOrder().hashCode();
-        }
-        if (getValueField() != null) {
-            _hashCode += getValueField().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowDynamicChoiceSet.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDynamicChoiceSet"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dataType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDataType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("displayField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "displayField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("filters");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "filters"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("limit");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "limit"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("object");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "object"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("outputAssignments");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "outputAssignments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowOutputFieldAssignment"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortOrder");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortOrder"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SortOrder"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("valueField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "valueField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setValueField(String value) {
+        this.valueField = value;
     }
 
 }

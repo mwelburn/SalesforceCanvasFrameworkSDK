@@ -1,234 +1,148 @@
-/**
- * MobileSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class MobileSettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ChatterMobileSettings chatterMobile;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.DashboardMobileSettings dashboardMobile;
 
-    private com.sforce.soap._2006._04.metadata.SFDCMobileSettings salesforceMobile;
+/**
+ * <p>Java class for MobileSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="MobileSettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="chatterMobile" type="{http://soap.sforce.com/2006/04/metadata}ChatterMobileSettings" minOccurs="0"/>
+ *         &lt;element name="dashboardMobile" type="{http://soap.sforce.com/2006/04/metadata}DashboardMobileSettings" minOccurs="0"/>
+ *         &lt;element name="salesforceMobile" type="{http://soap.sforce.com/2006/04/metadata}SFDCMobileSettings" minOccurs="0"/>
+ *         &lt;element name="touchMobile" type="{http://soap.sforce.com/2006/04/metadata}TouchMobileSettings" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "MobileSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "chatterMobile",
+    "dashboardMobile",
+    "salesforceMobile",
+    "touchMobile"
+})
+public class MobileSettings
+    extends Metadata
+{
 
-    private com.sforce.soap._2006._04.metadata.TouchMobileSettings touchMobile;
-
-    public MobileSettings() {
-    }
-
-    public MobileSettings(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.ChatterMobileSettings chatterMobile,
-           com.sforce.soap._2006._04.metadata.DashboardMobileSettings dashboardMobile,
-           com.sforce.soap._2006._04.metadata.SFDCMobileSettings salesforceMobile,
-           com.sforce.soap._2006._04.metadata.TouchMobileSettings touchMobile) {
-        super(
-            fullName);
-        this.chatterMobile = chatterMobile;
-        this.dashboardMobile = dashboardMobile;
-        this.salesforceMobile = salesforceMobile;
-        this.touchMobile = touchMobile;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ChatterMobileSettings chatterMobile;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DashboardMobileSettings dashboardMobile;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SFDCMobileSettings salesforceMobile;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected TouchMobileSettings touchMobile;
 
     /**
-     * Gets the chatterMobile value for this MobileSettings.
+     * Gets the value of the chatterMobile property.
      * 
-     * @return chatterMobile
+     * @return
+     *     possible object is
+     *     {@link ChatterMobileSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChatterMobileSettings getChatterMobile() {
+    public ChatterMobileSettings getChatterMobile() {
         return chatterMobile;
     }
 
-
     /**
-     * Sets the chatterMobile value for this MobileSettings.
+     * Sets the value of the chatterMobile property.
      * 
-     * @param chatterMobile
+     * @param value
+     *     allowed object is
+     *     {@link ChatterMobileSettings }
+     *     
      */
-    public void setChatterMobile(com.sforce.soap._2006._04.metadata.ChatterMobileSettings chatterMobile) {
-        this.chatterMobile = chatterMobile;
+    public void setChatterMobile(ChatterMobileSettings value) {
+        this.chatterMobile = value;
     }
 
-
     /**
-     * Gets the dashboardMobile value for this MobileSettings.
+     * Gets the value of the dashboardMobile property.
      * 
-     * @return dashboardMobile
+     * @return
+     *     possible object is
+     *     {@link DashboardMobileSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DashboardMobileSettings getDashboardMobile() {
+    public DashboardMobileSettings getDashboardMobile() {
         return dashboardMobile;
     }
 
-
     /**
-     * Sets the dashboardMobile value for this MobileSettings.
+     * Sets the value of the dashboardMobile property.
      * 
-     * @param dashboardMobile
+     * @param value
+     *     allowed object is
+     *     {@link DashboardMobileSettings }
+     *     
      */
-    public void setDashboardMobile(com.sforce.soap._2006._04.metadata.DashboardMobileSettings dashboardMobile) {
-        this.dashboardMobile = dashboardMobile;
+    public void setDashboardMobile(DashboardMobileSettings value) {
+        this.dashboardMobile = value;
     }
 
-
     /**
-     * Gets the salesforceMobile value for this MobileSettings.
+     * Gets the value of the salesforceMobile property.
      * 
-     * @return salesforceMobile
+     * @return
+     *     possible object is
+     *     {@link SFDCMobileSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SFDCMobileSettings getSalesforceMobile() {
+    public SFDCMobileSettings getSalesforceMobile() {
         return salesforceMobile;
     }
 
-
     /**
-     * Sets the salesforceMobile value for this MobileSettings.
+     * Sets the value of the salesforceMobile property.
      * 
-     * @param salesforceMobile
+     * @param value
+     *     allowed object is
+     *     {@link SFDCMobileSettings }
+     *     
      */
-    public void setSalesforceMobile(com.sforce.soap._2006._04.metadata.SFDCMobileSettings salesforceMobile) {
-        this.salesforceMobile = salesforceMobile;
+    public void setSalesforceMobile(SFDCMobileSettings value) {
+        this.salesforceMobile = value;
     }
 
-
     /**
-     * Gets the touchMobile value for this MobileSettings.
+     * Gets the value of the touchMobile property.
      * 
-     * @return touchMobile
+     * @return
+     *     possible object is
+     *     {@link TouchMobileSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.TouchMobileSettings getTouchMobile() {
+    public TouchMobileSettings getTouchMobile() {
         return touchMobile;
     }
 
-
     /**
-     * Sets the touchMobile value for this MobileSettings.
+     * Sets the value of the touchMobile property.
      * 
-     * @param touchMobile
+     * @param value
+     *     allowed object is
+     *     {@link TouchMobileSettings }
+     *     
      */
-    public void setTouchMobile(com.sforce.soap._2006._04.metadata.TouchMobileSettings touchMobile) {
-        this.touchMobile = touchMobile;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof MobileSettings)) return false;
-        MobileSettings other = (MobileSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.chatterMobile==null && other.getChatterMobile()==null) || 
-             (this.chatterMobile!=null &&
-              this.chatterMobile.equals(other.getChatterMobile()))) &&
-            ((this.dashboardMobile==null && other.getDashboardMobile()==null) || 
-             (this.dashboardMobile!=null &&
-              this.dashboardMobile.equals(other.getDashboardMobile()))) &&
-            ((this.salesforceMobile==null && other.getSalesforceMobile()==null) || 
-             (this.salesforceMobile!=null &&
-              this.salesforceMobile.equals(other.getSalesforceMobile()))) &&
-            ((this.touchMobile==null && other.getTouchMobile()==null) || 
-             (this.touchMobile!=null &&
-              this.touchMobile.equals(other.getTouchMobile())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getChatterMobile() != null) {
-            _hashCode += getChatterMobile().hashCode();
-        }
-        if (getDashboardMobile() != null) {
-            _hashCode += getDashboardMobile().hashCode();
-        }
-        if (getSalesforceMobile() != null) {
-            _hashCode += getSalesforceMobile().hashCode();
-        }
-        if (getTouchMobile() != null) {
-            _hashCode += getTouchMobile().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(MobileSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "MobileSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chatterMobile");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chatterMobile"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChatterMobileSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dashboardMobile");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dashboardMobile"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardMobileSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("salesforceMobile");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "salesforceMobile"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SFDCMobileSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("touchMobile");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "touchMobile"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "TouchMobileSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTouchMobile(TouchMobileSettings value) {
+        this.touchMobile = value;
     }
 
 }

@@ -1,354 +1,232 @@
-/**
- * ForecastingSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ForecastingSettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.AdjustmentsSettings adjustmentsSettings;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.DataSourceSettings dataSourceSettings;
 
-    private com.sforce.soap._2006._04.metadata.DisplayCurrency displayCurrency;
+/**
+ * <p>Java class for ForecastingSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ForecastingSettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="adjustmentsSettings" type="{http://soap.sforce.com/2006/04/metadata}AdjustmentsSettings" minOccurs="0"/>
+ *         &lt;element name="dataSourceSettings" type="{http://soap.sforce.com/2006/04/metadata}DataSourceSettings" minOccurs="0"/>
+ *         &lt;element name="displayCurrency" type="{http://soap.sforce.com/2006/04/metadata}DisplayCurrency" minOccurs="0"/>
+ *         &lt;element name="enableForecasts" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="forecastRangeSettings" type="{http://soap.sforce.com/2006/04/metadata}ForecastRangeSettings" minOccurs="0"/>
+ *         &lt;element name="opportunityListFieldsSelectedSettings" type="{http://soap.sforce.com/2006/04/metadata}OpportunityListFieldsSelectedSettings" minOccurs="0"/>
+ *         &lt;element name="quotasSettings" type="{http://soap.sforce.com/2006/04/metadata}QuotasSettings" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ForecastingSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "adjustmentsSettings",
+    "dataSourceSettings",
+    "displayCurrency",
+    "enableForecasts",
+    "forecastRangeSettings",
+    "opportunityListFieldsSelectedSettings",
+    "quotasSettings"
+})
+public class ForecastingSettings
+    extends Metadata
+{
 
-    private java.lang.Boolean enableForecasts;
-
-    private com.sforce.soap._2006._04.metadata.ForecastRangeSettings forecastRangeSettings;
-
-    private java.lang.String[] opportunityListFieldsSelectedSettings;
-
-    private com.sforce.soap._2006._04.metadata.QuotasSettings quotasSettings;
-
-    public ForecastingSettings() {
-    }
-
-    public ForecastingSettings(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.AdjustmentsSettings adjustmentsSettings,
-           com.sforce.soap._2006._04.metadata.DataSourceSettings dataSourceSettings,
-           com.sforce.soap._2006._04.metadata.DisplayCurrency displayCurrency,
-           java.lang.Boolean enableForecasts,
-           com.sforce.soap._2006._04.metadata.ForecastRangeSettings forecastRangeSettings,
-           java.lang.String[] opportunityListFieldsSelectedSettings,
-           com.sforce.soap._2006._04.metadata.QuotasSettings quotasSettings) {
-        super(
-            fullName);
-        this.adjustmentsSettings = adjustmentsSettings;
-        this.dataSourceSettings = dataSourceSettings;
-        this.displayCurrency = displayCurrency;
-        this.enableForecasts = enableForecasts;
-        this.forecastRangeSettings = forecastRangeSettings;
-        this.opportunityListFieldsSelectedSettings = opportunityListFieldsSelectedSettings;
-        this.quotasSettings = quotasSettings;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected AdjustmentsSettings adjustmentsSettings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DataSourceSettings dataSourceSettings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DisplayCurrency displayCurrency;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableForecasts;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ForecastRangeSettings forecastRangeSettings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected OpportunityListFieldsSelectedSettings opportunityListFieldsSelectedSettings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected QuotasSettings quotasSettings;
 
     /**
-     * Gets the adjustmentsSettings value for this ForecastingSettings.
+     * Gets the value of the adjustmentsSettings property.
      * 
-     * @return adjustmentsSettings
+     * @return
+     *     possible object is
+     *     {@link AdjustmentsSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.AdjustmentsSettings getAdjustmentsSettings() {
+    public AdjustmentsSettings getAdjustmentsSettings() {
         return adjustmentsSettings;
     }
 
-
     /**
-     * Sets the adjustmentsSettings value for this ForecastingSettings.
+     * Sets the value of the adjustmentsSettings property.
      * 
-     * @param adjustmentsSettings
+     * @param value
+     *     allowed object is
+     *     {@link AdjustmentsSettings }
+     *     
      */
-    public void setAdjustmentsSettings(com.sforce.soap._2006._04.metadata.AdjustmentsSettings adjustmentsSettings) {
-        this.adjustmentsSettings = adjustmentsSettings;
+    public void setAdjustmentsSettings(AdjustmentsSettings value) {
+        this.adjustmentsSettings = value;
     }
 
-
     /**
-     * Gets the dataSourceSettings value for this ForecastingSettings.
+     * Gets the value of the dataSourceSettings property.
      * 
-     * @return dataSourceSettings
+     * @return
+     *     possible object is
+     *     {@link DataSourceSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DataSourceSettings getDataSourceSettings() {
+    public DataSourceSettings getDataSourceSettings() {
         return dataSourceSettings;
     }
 
-
     /**
-     * Sets the dataSourceSettings value for this ForecastingSettings.
+     * Sets the value of the dataSourceSettings property.
      * 
-     * @param dataSourceSettings
+     * @param value
+     *     allowed object is
+     *     {@link DataSourceSettings }
+     *     
      */
-    public void setDataSourceSettings(com.sforce.soap._2006._04.metadata.DataSourceSettings dataSourceSettings) {
-        this.dataSourceSettings = dataSourceSettings;
+    public void setDataSourceSettings(DataSourceSettings value) {
+        this.dataSourceSettings = value;
     }
 
-
     /**
-     * Gets the displayCurrency value for this ForecastingSettings.
+     * Gets the value of the displayCurrency property.
      * 
-     * @return displayCurrency
+     * @return
+     *     possible object is
+     *     {@link DisplayCurrency }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DisplayCurrency getDisplayCurrency() {
+    public DisplayCurrency getDisplayCurrency() {
         return displayCurrency;
     }
 
-
     /**
-     * Sets the displayCurrency value for this ForecastingSettings.
+     * Sets the value of the displayCurrency property.
      * 
-     * @param displayCurrency
+     * @param value
+     *     allowed object is
+     *     {@link DisplayCurrency }
+     *     
      */
-    public void setDisplayCurrency(com.sforce.soap._2006._04.metadata.DisplayCurrency displayCurrency) {
-        this.displayCurrency = displayCurrency;
+    public void setDisplayCurrency(DisplayCurrency value) {
+        this.displayCurrency = value;
     }
 
-
     /**
-     * Gets the enableForecasts value for this ForecastingSettings.
+     * Gets the value of the enableForecasts property.
      * 
-     * @return enableForecasts
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableForecasts() {
+    public Boolean isEnableForecasts() {
         return enableForecasts;
     }
 
-
     /**
-     * Sets the enableForecasts value for this ForecastingSettings.
+     * Sets the value of the enableForecasts property.
      * 
-     * @param enableForecasts
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableForecasts(java.lang.Boolean enableForecasts) {
-        this.enableForecasts = enableForecasts;
+    public void setEnableForecasts(Boolean value) {
+        this.enableForecasts = value;
     }
 
-
     /**
-     * Gets the forecastRangeSettings value for this ForecastingSettings.
+     * Gets the value of the forecastRangeSettings property.
      * 
-     * @return forecastRangeSettings
+     * @return
+     *     possible object is
+     *     {@link ForecastRangeSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ForecastRangeSettings getForecastRangeSettings() {
+    public ForecastRangeSettings getForecastRangeSettings() {
         return forecastRangeSettings;
     }
 
-
     /**
-     * Sets the forecastRangeSettings value for this ForecastingSettings.
+     * Sets the value of the forecastRangeSettings property.
      * 
-     * @param forecastRangeSettings
+     * @param value
+     *     allowed object is
+     *     {@link ForecastRangeSettings }
+     *     
      */
-    public void setForecastRangeSettings(com.sforce.soap._2006._04.metadata.ForecastRangeSettings forecastRangeSettings) {
-        this.forecastRangeSettings = forecastRangeSettings;
+    public void setForecastRangeSettings(ForecastRangeSettings value) {
+        this.forecastRangeSettings = value;
     }
 
-
     /**
-     * Gets the opportunityListFieldsSelectedSettings value for this ForecastingSettings.
+     * Gets the value of the opportunityListFieldsSelectedSettings property.
      * 
-     * @return opportunityListFieldsSelectedSettings
+     * @return
+     *     possible object is
+     *     {@link OpportunityListFieldsSelectedSettings }
+     *     
      */
-    public java.lang.String[] getOpportunityListFieldsSelectedSettings() {
+    public OpportunityListFieldsSelectedSettings getOpportunityListFieldsSelectedSettings() {
         return opportunityListFieldsSelectedSettings;
     }
 
-
     /**
-     * Sets the opportunityListFieldsSelectedSettings value for this ForecastingSettings.
+     * Sets the value of the opportunityListFieldsSelectedSettings property.
      * 
-     * @param opportunityListFieldsSelectedSettings
+     * @param value
+     *     allowed object is
+     *     {@link OpportunityListFieldsSelectedSettings }
+     *     
      */
-    public void setOpportunityListFieldsSelectedSettings(java.lang.String[] opportunityListFieldsSelectedSettings) {
-        this.opportunityListFieldsSelectedSettings = opportunityListFieldsSelectedSettings;
+    public void setOpportunityListFieldsSelectedSettings(OpportunityListFieldsSelectedSettings value) {
+        this.opportunityListFieldsSelectedSettings = value;
     }
 
-
     /**
-     * Gets the quotasSettings value for this ForecastingSettings.
+     * Gets the value of the quotasSettings property.
      * 
-     * @return quotasSettings
+     * @return
+     *     possible object is
+     *     {@link QuotasSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.QuotasSettings getQuotasSettings() {
+    public QuotasSettings getQuotasSettings() {
         return quotasSettings;
     }
 
-
     /**
-     * Sets the quotasSettings value for this ForecastingSettings.
+     * Sets the value of the quotasSettings property.
      * 
-     * @param quotasSettings
+     * @param value
+     *     allowed object is
+     *     {@link QuotasSettings }
+     *     
      */
-    public void setQuotasSettings(com.sforce.soap._2006._04.metadata.QuotasSettings quotasSettings) {
-        this.quotasSettings = quotasSettings;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ForecastingSettings)) return false;
-        ForecastingSettings other = (ForecastingSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.adjustmentsSettings==null && other.getAdjustmentsSettings()==null) || 
-             (this.adjustmentsSettings!=null &&
-              this.adjustmentsSettings.equals(other.getAdjustmentsSettings()))) &&
-            ((this.dataSourceSettings==null && other.getDataSourceSettings()==null) || 
-             (this.dataSourceSettings!=null &&
-              this.dataSourceSettings.equals(other.getDataSourceSettings()))) &&
-            ((this.displayCurrency==null && other.getDisplayCurrency()==null) || 
-             (this.displayCurrency!=null &&
-              this.displayCurrency.equals(other.getDisplayCurrency()))) &&
-            ((this.enableForecasts==null && other.getEnableForecasts()==null) || 
-             (this.enableForecasts!=null &&
-              this.enableForecasts.equals(other.getEnableForecasts()))) &&
-            ((this.forecastRangeSettings==null && other.getForecastRangeSettings()==null) || 
-             (this.forecastRangeSettings!=null &&
-              this.forecastRangeSettings.equals(other.getForecastRangeSettings()))) &&
-            ((this.opportunityListFieldsSelectedSettings==null && other.getOpportunityListFieldsSelectedSettings()==null) || 
-             (this.opportunityListFieldsSelectedSettings!=null &&
-              java.util.Arrays.equals(this.opportunityListFieldsSelectedSettings, other.getOpportunityListFieldsSelectedSettings()))) &&
-            ((this.quotasSettings==null && other.getQuotasSettings()==null) || 
-             (this.quotasSettings!=null &&
-              this.quotasSettings.equals(other.getQuotasSettings())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAdjustmentsSettings() != null) {
-            _hashCode += getAdjustmentsSettings().hashCode();
-        }
-        if (getDataSourceSettings() != null) {
-            _hashCode += getDataSourceSettings().hashCode();
-        }
-        if (getDisplayCurrency() != null) {
-            _hashCode += getDisplayCurrency().hashCode();
-        }
-        if (getEnableForecasts() != null) {
-            _hashCode += getEnableForecasts().hashCode();
-        }
-        if (getForecastRangeSettings() != null) {
-            _hashCode += getForecastRangeSettings().hashCode();
-        }
-        if (getOpportunityListFieldsSelectedSettings() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getOpportunityListFieldsSelectedSettings());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getOpportunityListFieldsSelectedSettings(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getQuotasSettings() != null) {
-            _hashCode += getQuotasSettings().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ForecastingSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ForecastingSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("adjustmentsSettings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "adjustmentsSettings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AdjustmentsSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataSourceSettings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dataSourceSettings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DataSourceSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("displayCurrency");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "displayCurrency"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DisplayCurrency"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableForecasts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableForecasts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("forecastRangeSettings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "forecastRangeSettings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ForecastRangeSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("opportunityListFieldsSelectedSettings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "opportunityListFieldsSelectedSettings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("quotasSettings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "quotasSettings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuotasSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setQuotasSettings(QuotasSettings value) {
+        this.quotasSettings = value;
     }
 
 }

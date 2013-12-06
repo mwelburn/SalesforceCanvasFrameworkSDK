@@ -1,726 +1,499 @@
-/**
- * RuleEntry.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class RuleEntry  implements java.io.Serializable {
-    private java.lang.String assignedTo;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.AssignToLookupValueType assignedToType;
 
-    private java.lang.String booleanFilter;
+/**
+ * <p>Java class for RuleEntry complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="RuleEntry">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="assignedTo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="assignedToType" type="{http://soap.sforce.com/2006/04/metadata}AssignToLookupValueType" minOccurs="0"/>
+ *         &lt;element name="booleanFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="businessHours" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="businessHoursSource" type="{http://soap.sforce.com/2006/04/metadata}BusinessHoursSourceType" minOccurs="0"/>
+ *         &lt;element name="criteriaItems" type="{http://soap.sforce.com/2006/04/metadata}FilterItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="disableEscalationWhenModified" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="escalationAction" type="{http://soap.sforce.com/2006/04/metadata}EscalationAction" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="escalationStartTime" type="{http://soap.sforce.com/2006/04/metadata}EscalationStartTimeType" minOccurs="0"/>
+ *         &lt;element name="formula" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="overrideExistingTeams" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="replyToEmail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="senderEmail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="senderName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="team" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="template" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "RuleEntry", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "assignedTo",
+    "assignedToType",
+    "booleanFilter",
+    "businessHours",
+    "businessHoursSource",
+    "criteriaItems",
+    "disableEscalationWhenModified",
+    "escalationAction",
+    "escalationStartTime",
+    "formula",
+    "overrideExistingTeams",
+    "replyToEmail",
+    "senderEmail",
+    "senderName",
+    "team",
+    "template"
+})
+public class RuleEntry {
 
-    private java.lang.String businessHours;
-
-    private com.sforce.soap._2006._04.metadata.BusinessHoursSourceType businessHoursSource;
-
-    private com.sforce.soap._2006._04.metadata.FilterItem[] criteriaItems;
-
-    private java.lang.Boolean disableEscalationWhenModified;
-
-    private com.sforce.soap._2006._04.metadata.EscalationAction[] escalationAction;
-
-    private com.sforce.soap._2006._04.metadata.EscalationStartTimeType escalationStartTime;
-
-    private java.lang.String formula;
-
-    private java.lang.Boolean overrideExistingTeams;
-
-    private java.lang.String replyToEmail;
-
-    private java.lang.String senderEmail;
-
-    private java.lang.String senderName;
-
-    private java.lang.String[] team;
-
-    private java.lang.String template;
-
-    public RuleEntry() {
-    }
-
-    public RuleEntry(
-           java.lang.String assignedTo,
-           com.sforce.soap._2006._04.metadata.AssignToLookupValueType assignedToType,
-           java.lang.String booleanFilter,
-           java.lang.String businessHours,
-           com.sforce.soap._2006._04.metadata.BusinessHoursSourceType businessHoursSource,
-           com.sforce.soap._2006._04.metadata.FilterItem[] criteriaItems,
-           java.lang.Boolean disableEscalationWhenModified,
-           com.sforce.soap._2006._04.metadata.EscalationAction[] escalationAction,
-           com.sforce.soap._2006._04.metadata.EscalationStartTimeType escalationStartTime,
-           java.lang.String formula,
-           java.lang.Boolean overrideExistingTeams,
-           java.lang.String replyToEmail,
-           java.lang.String senderEmail,
-           java.lang.String senderName,
-           java.lang.String[] team,
-           java.lang.String template) {
-           this.assignedTo = assignedTo;
-           this.assignedToType = assignedToType;
-           this.booleanFilter = booleanFilter;
-           this.businessHours = businessHours;
-           this.businessHoursSource = businessHoursSource;
-           this.criteriaItems = criteriaItems;
-           this.disableEscalationWhenModified = disableEscalationWhenModified;
-           this.escalationAction = escalationAction;
-           this.escalationStartTime = escalationStartTime;
-           this.formula = formula;
-           this.overrideExistingTeams = overrideExistingTeams;
-           this.replyToEmail = replyToEmail;
-           this.senderEmail = senderEmail;
-           this.senderName = senderName;
-           this.team = team;
-           this.template = template;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String assignedTo;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected AssignToLookupValueType assignedToType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String booleanFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String businessHours;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected BusinessHoursSourceType businessHoursSource;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FilterItem> criteriaItems;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean disableEscalationWhenModified;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<EscalationAction> escalationAction;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected EscalationStartTimeType escalationStartTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String formula;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean overrideExistingTeams;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String replyToEmail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String senderEmail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String senderName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> team;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String template;
 
     /**
-     * Gets the assignedTo value for this RuleEntry.
+     * Gets the value of the assignedTo property.
      * 
-     * @return assignedTo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAssignedTo() {
+    public String getAssignedTo() {
         return assignedTo;
     }
 
-
     /**
-     * Sets the assignedTo value for this RuleEntry.
+     * Sets the value of the assignedTo property.
      * 
-     * @param assignedTo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAssignedTo(java.lang.String assignedTo) {
-        this.assignedTo = assignedTo;
+    public void setAssignedTo(String value) {
+        this.assignedTo = value;
     }
 
-
     /**
-     * Gets the assignedToType value for this RuleEntry.
+     * Gets the value of the assignedToType property.
      * 
-     * @return assignedToType
+     * @return
+     *     possible object is
+     *     {@link AssignToLookupValueType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.AssignToLookupValueType getAssignedToType() {
+    public AssignToLookupValueType getAssignedToType() {
         return assignedToType;
     }
 
-
     /**
-     * Sets the assignedToType value for this RuleEntry.
+     * Sets the value of the assignedToType property.
      * 
-     * @param assignedToType
+     * @param value
+     *     allowed object is
+     *     {@link AssignToLookupValueType }
+     *     
      */
-    public void setAssignedToType(com.sforce.soap._2006._04.metadata.AssignToLookupValueType assignedToType) {
-        this.assignedToType = assignedToType;
+    public void setAssignedToType(AssignToLookupValueType value) {
+        this.assignedToType = value;
     }
 
-
     /**
-     * Gets the booleanFilter value for this RuleEntry.
+     * Gets the value of the booleanFilter property.
      * 
-     * @return booleanFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBooleanFilter() {
+    public String getBooleanFilter() {
         return booleanFilter;
     }
 
-
     /**
-     * Sets the booleanFilter value for this RuleEntry.
+     * Sets the value of the booleanFilter property.
      * 
-     * @param booleanFilter
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBooleanFilter(java.lang.String booleanFilter) {
-        this.booleanFilter = booleanFilter;
+    public void setBooleanFilter(String value) {
+        this.booleanFilter = value;
     }
 
-
     /**
-     * Gets the businessHours value for this RuleEntry.
+     * Gets the value of the businessHours property.
      * 
-     * @return businessHours
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBusinessHours() {
+    public String getBusinessHours() {
         return businessHours;
     }
 
-
     /**
-     * Sets the businessHours value for this RuleEntry.
+     * Sets the value of the businessHours property.
      * 
-     * @param businessHours
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBusinessHours(java.lang.String businessHours) {
-        this.businessHours = businessHours;
+    public void setBusinessHours(String value) {
+        this.businessHours = value;
     }
 
-
     /**
-     * Gets the businessHoursSource value for this RuleEntry.
+     * Gets the value of the businessHoursSource property.
      * 
-     * @return businessHoursSource
+     * @return
+     *     possible object is
+     *     {@link BusinessHoursSourceType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.BusinessHoursSourceType getBusinessHoursSource() {
+    public BusinessHoursSourceType getBusinessHoursSource() {
         return businessHoursSource;
     }
 
+    /**
+     * Sets the value of the businessHoursSource property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BusinessHoursSourceType }
+     *     
+     */
+    public void setBusinessHoursSource(BusinessHoursSourceType value) {
+        this.businessHoursSource = value;
+    }
 
     /**
-     * Sets the businessHoursSource value for this RuleEntry.
+     * Gets the value of the criteriaItems property.
      * 
-     * @param businessHoursSource
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the criteriaItems property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCriteriaItems().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FilterItem }
+     * 
+     * 
      */
-    public void setBusinessHoursSource(com.sforce.soap._2006._04.metadata.BusinessHoursSourceType businessHoursSource) {
-        this.businessHoursSource = businessHoursSource;
+    public List<FilterItem> getCriteriaItems() {
+        if (criteriaItems == null) {
+            criteriaItems = new ArrayList<FilterItem>();
+        }
+        return this.criteriaItems;
     }
-
 
     /**
-     * Gets the criteriaItems value for this RuleEntry.
+     * Gets the value of the disableEscalationWhenModified property.
      * 
-     * @return criteriaItems
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FilterItem[] getCriteriaItems() {
-        return criteriaItems;
-    }
-
-
-    /**
-     * Sets the criteriaItems value for this RuleEntry.
-     * 
-     * @param criteriaItems
-     */
-    public void setCriteriaItems(com.sforce.soap._2006._04.metadata.FilterItem[] criteriaItems) {
-        this.criteriaItems = criteriaItems;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FilterItem getCriteriaItems(int i) {
-        return this.criteriaItems[i];
-    }
-
-    public void setCriteriaItems(int i, com.sforce.soap._2006._04.metadata.FilterItem _value) {
-        this.criteriaItems[i] = _value;
-    }
-
-
-    /**
-     * Gets the disableEscalationWhenModified value for this RuleEntry.
-     * 
-     * @return disableEscalationWhenModified
-     */
-    public java.lang.Boolean getDisableEscalationWhenModified() {
+    public Boolean isDisableEscalationWhenModified() {
         return disableEscalationWhenModified;
     }
 
+    /**
+     * Sets the value of the disableEscalationWhenModified property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setDisableEscalationWhenModified(Boolean value) {
+        this.disableEscalationWhenModified = value;
+    }
 
     /**
-     * Sets the disableEscalationWhenModified value for this RuleEntry.
+     * Gets the value of the escalationAction property.
      * 
-     * @param disableEscalationWhenModified
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the escalationAction property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getEscalationAction().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link EscalationAction }
+     * 
+     * 
      */
-    public void setDisableEscalationWhenModified(java.lang.Boolean disableEscalationWhenModified) {
-        this.disableEscalationWhenModified = disableEscalationWhenModified;
+    public List<EscalationAction> getEscalationAction() {
+        if (escalationAction == null) {
+            escalationAction = new ArrayList<EscalationAction>();
+        }
+        return this.escalationAction;
     }
-
 
     /**
-     * Gets the escalationAction value for this RuleEntry.
+     * Gets the value of the escalationStartTime property.
      * 
-     * @return escalationAction
+     * @return
+     *     possible object is
+     *     {@link EscalationStartTimeType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.EscalationAction[] getEscalationAction() {
-        return escalationAction;
-    }
-
-
-    /**
-     * Sets the escalationAction value for this RuleEntry.
-     * 
-     * @param escalationAction
-     */
-    public void setEscalationAction(com.sforce.soap._2006._04.metadata.EscalationAction[] escalationAction) {
-        this.escalationAction = escalationAction;
-    }
-
-    public com.sforce.soap._2006._04.metadata.EscalationAction getEscalationAction(int i) {
-        return this.escalationAction[i];
-    }
-
-    public void setEscalationAction(int i, com.sforce.soap._2006._04.metadata.EscalationAction _value) {
-        this.escalationAction[i] = _value;
-    }
-
-
-    /**
-     * Gets the escalationStartTime value for this RuleEntry.
-     * 
-     * @return escalationStartTime
-     */
-    public com.sforce.soap._2006._04.metadata.EscalationStartTimeType getEscalationStartTime() {
+    public EscalationStartTimeType getEscalationStartTime() {
         return escalationStartTime;
     }
 
-
     /**
-     * Sets the escalationStartTime value for this RuleEntry.
+     * Sets the value of the escalationStartTime property.
      * 
-     * @param escalationStartTime
+     * @param value
+     *     allowed object is
+     *     {@link EscalationStartTimeType }
+     *     
      */
-    public void setEscalationStartTime(com.sforce.soap._2006._04.metadata.EscalationStartTimeType escalationStartTime) {
-        this.escalationStartTime = escalationStartTime;
+    public void setEscalationStartTime(EscalationStartTimeType value) {
+        this.escalationStartTime = value;
     }
 
-
     /**
-     * Gets the formula value for this RuleEntry.
+     * Gets the value of the formula property.
      * 
-     * @return formula
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFormula() {
+    public String getFormula() {
         return formula;
     }
 
-
     /**
-     * Sets the formula value for this RuleEntry.
+     * Sets the value of the formula property.
      * 
-     * @param formula
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFormula(java.lang.String formula) {
-        this.formula = formula;
+    public void setFormula(String value) {
+        this.formula = value;
     }
 
-
     /**
-     * Gets the overrideExistingTeams value for this RuleEntry.
+     * Gets the value of the overrideExistingTeams property.
      * 
-     * @return overrideExistingTeams
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getOverrideExistingTeams() {
+    public Boolean isOverrideExistingTeams() {
         return overrideExistingTeams;
     }
 
-
     /**
-     * Sets the overrideExistingTeams value for this RuleEntry.
+     * Sets the value of the overrideExistingTeams property.
      * 
-     * @param overrideExistingTeams
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setOverrideExistingTeams(java.lang.Boolean overrideExistingTeams) {
-        this.overrideExistingTeams = overrideExistingTeams;
+    public void setOverrideExistingTeams(Boolean value) {
+        this.overrideExistingTeams = value;
     }
 
-
     /**
-     * Gets the replyToEmail value for this RuleEntry.
+     * Gets the value of the replyToEmail property.
      * 
-     * @return replyToEmail
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getReplyToEmail() {
+    public String getReplyToEmail() {
         return replyToEmail;
     }
 
-
     /**
-     * Sets the replyToEmail value for this RuleEntry.
+     * Sets the value of the replyToEmail property.
      * 
-     * @param replyToEmail
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReplyToEmail(java.lang.String replyToEmail) {
-        this.replyToEmail = replyToEmail;
+    public void setReplyToEmail(String value) {
+        this.replyToEmail = value;
     }
 
-
     /**
-     * Gets the senderEmail value for this RuleEntry.
+     * Gets the value of the senderEmail property.
      * 
-     * @return senderEmail
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSenderEmail() {
+    public String getSenderEmail() {
         return senderEmail;
     }
 
-
     /**
-     * Sets the senderEmail value for this RuleEntry.
+     * Sets the value of the senderEmail property.
      * 
-     * @param senderEmail
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSenderEmail(java.lang.String senderEmail) {
-        this.senderEmail = senderEmail;
+    public void setSenderEmail(String value) {
+        this.senderEmail = value;
     }
 
-
     /**
-     * Gets the senderName value for this RuleEntry.
+     * Gets the value of the senderName property.
      * 
-     * @return senderName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSenderName() {
+    public String getSenderName() {
         return senderName;
     }
 
+    /**
+     * Sets the value of the senderName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSenderName(String value) {
+        this.senderName = value;
+    }
 
     /**
-     * Sets the senderName value for this RuleEntry.
+     * Gets the value of the team property.
      * 
-     * @param senderName
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the team property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getTeam().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public void setSenderName(java.lang.String senderName) {
-        this.senderName = senderName;
+    public List<String> getTeam() {
+        if (team == null) {
+            team = new ArrayList<String>();
+        }
+        return this.team;
     }
-
 
     /**
-     * Gets the team value for this RuleEntry.
+     * Gets the value of the template property.
      * 
-     * @return team
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String[] getTeam() {
-        return team;
-    }
-
-
-    /**
-     * Sets the team value for this RuleEntry.
-     * 
-     * @param team
-     */
-    public void setTeam(java.lang.String[] team) {
-        this.team = team;
-    }
-
-    public java.lang.String getTeam(int i) {
-        return this.team[i];
-    }
-
-    public void setTeam(int i, java.lang.String _value) {
-        this.team[i] = _value;
-    }
-
-
-    /**
-     * Gets the template value for this RuleEntry.
-     * 
-     * @return template
-     */
-    public java.lang.String getTemplate() {
+    public String getTemplate() {
         return template;
     }
 
-
     /**
-     * Sets the template value for this RuleEntry.
+     * Sets the value of the template property.
      * 
-     * @param template
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTemplate(java.lang.String template) {
-        this.template = template;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof RuleEntry)) return false;
-        RuleEntry other = (RuleEntry) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.assignedTo==null && other.getAssignedTo()==null) || 
-             (this.assignedTo!=null &&
-              this.assignedTo.equals(other.getAssignedTo()))) &&
-            ((this.assignedToType==null && other.getAssignedToType()==null) || 
-             (this.assignedToType!=null &&
-              this.assignedToType.equals(other.getAssignedToType()))) &&
-            ((this.booleanFilter==null && other.getBooleanFilter()==null) || 
-             (this.booleanFilter!=null &&
-              this.booleanFilter.equals(other.getBooleanFilter()))) &&
-            ((this.businessHours==null && other.getBusinessHours()==null) || 
-             (this.businessHours!=null &&
-              this.businessHours.equals(other.getBusinessHours()))) &&
-            ((this.businessHoursSource==null && other.getBusinessHoursSource()==null) || 
-             (this.businessHoursSource!=null &&
-              this.businessHoursSource.equals(other.getBusinessHoursSource()))) &&
-            ((this.criteriaItems==null && other.getCriteriaItems()==null) || 
-             (this.criteriaItems!=null &&
-              java.util.Arrays.equals(this.criteriaItems, other.getCriteriaItems()))) &&
-            ((this.disableEscalationWhenModified==null && other.getDisableEscalationWhenModified()==null) || 
-             (this.disableEscalationWhenModified!=null &&
-              this.disableEscalationWhenModified.equals(other.getDisableEscalationWhenModified()))) &&
-            ((this.escalationAction==null && other.getEscalationAction()==null) || 
-             (this.escalationAction!=null &&
-              java.util.Arrays.equals(this.escalationAction, other.getEscalationAction()))) &&
-            ((this.escalationStartTime==null && other.getEscalationStartTime()==null) || 
-             (this.escalationStartTime!=null &&
-              this.escalationStartTime.equals(other.getEscalationStartTime()))) &&
-            ((this.formula==null && other.getFormula()==null) || 
-             (this.formula!=null &&
-              this.formula.equals(other.getFormula()))) &&
-            ((this.overrideExistingTeams==null && other.getOverrideExistingTeams()==null) || 
-             (this.overrideExistingTeams!=null &&
-              this.overrideExistingTeams.equals(other.getOverrideExistingTeams()))) &&
-            ((this.replyToEmail==null && other.getReplyToEmail()==null) || 
-             (this.replyToEmail!=null &&
-              this.replyToEmail.equals(other.getReplyToEmail()))) &&
-            ((this.senderEmail==null && other.getSenderEmail()==null) || 
-             (this.senderEmail!=null &&
-              this.senderEmail.equals(other.getSenderEmail()))) &&
-            ((this.senderName==null && other.getSenderName()==null) || 
-             (this.senderName!=null &&
-              this.senderName.equals(other.getSenderName()))) &&
-            ((this.team==null && other.getTeam()==null) || 
-             (this.team!=null &&
-              java.util.Arrays.equals(this.team, other.getTeam()))) &&
-            ((this.template==null && other.getTemplate()==null) || 
-             (this.template!=null &&
-              this.template.equals(other.getTemplate())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAssignedTo() != null) {
-            _hashCode += getAssignedTo().hashCode();
-        }
-        if (getAssignedToType() != null) {
-            _hashCode += getAssignedToType().hashCode();
-        }
-        if (getBooleanFilter() != null) {
-            _hashCode += getBooleanFilter().hashCode();
-        }
-        if (getBusinessHours() != null) {
-            _hashCode += getBusinessHours().hashCode();
-        }
-        if (getBusinessHoursSource() != null) {
-            _hashCode += getBusinessHoursSource().hashCode();
-        }
-        if (getCriteriaItems() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCriteriaItems());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCriteriaItems(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDisableEscalationWhenModified() != null) {
-            _hashCode += getDisableEscalationWhenModified().hashCode();
-        }
-        if (getEscalationAction() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getEscalationAction());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getEscalationAction(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getEscalationStartTime() != null) {
-            _hashCode += getEscalationStartTime().hashCode();
-        }
-        if (getFormula() != null) {
-            _hashCode += getFormula().hashCode();
-        }
-        if (getOverrideExistingTeams() != null) {
-            _hashCode += getOverrideExistingTeams().hashCode();
-        }
-        if (getReplyToEmail() != null) {
-            _hashCode += getReplyToEmail().hashCode();
-        }
-        if (getSenderEmail() != null) {
-            _hashCode += getSenderEmail().hashCode();
-        }
-        if (getSenderName() != null) {
-            _hashCode += getSenderName().hashCode();
-        }
-        if (getTeam() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTeam());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTeam(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getTemplate() != null) {
-            _hashCode += getTemplate().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RuleEntry.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RuleEntry"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignedTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignedTo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignedToType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignedToType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AssignToLookupValueType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("booleanFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "booleanFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("businessHours");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "businessHours"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("businessHoursSource");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "businessHoursSource"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "BusinessHoursSourceType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("criteriaItems");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "criteriaItems"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FilterItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("disableEscalationWhenModified");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "disableEscalationWhenModified"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("escalationAction");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "escalationAction"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EscalationAction"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("escalationStartTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "escalationStartTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EscalationStartTimeType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("formula");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "formula"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("overrideExistingTeams");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "overrideExistingTeams"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("replyToEmail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "replyToEmail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("senderEmail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "senderEmail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("senderName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "senderName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("team");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "team"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("template");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "template"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTemplate(String value) {
+        this.template = value;
     }
 
 }

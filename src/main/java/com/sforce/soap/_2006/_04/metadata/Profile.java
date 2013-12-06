@@ -1,754 +1,457 @@
-/**
- * Profile.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Profile  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ProfileApplicationVisibility[] applicationVisibilities;
-
-    private com.sforce.soap._2006._04.metadata.ProfileApexClassAccess[] classAccesses;
-
-    private com.sforce.soap._2006._04.metadata.ProfileExternalDataSourceAccess[] externalDataSourceAccesses;
-
-    private com.sforce.soap._2006._04.metadata.ProfileFieldLevelSecurity[] fieldPermissions;
-
-    private com.sforce.soap._2006._04.metadata.ProfileLayoutAssignment[] layoutAssignments;
-
-    private com.sforce.soap._2006._04.metadata.ProfileLoginHours loginHours;
-
-    private com.sforce.soap._2006._04.metadata.ProfileLoginIpRange[] loginIpRanges;
-
-    private com.sforce.soap._2006._04.metadata.ProfileObjectPermissions[] objectPermissions;
-
-    private com.sforce.soap._2006._04.metadata.ProfileApexPageAccess[] pageAccesses;
-
-    private com.sforce.soap._2006._04.metadata.ProfileRecordTypeVisibility[] recordTypeVisibilities;
-
-    private com.sforce.soap._2006._04.metadata.ProfileTabVisibility[] tabVisibilities;
-
-    private java.lang.String userLicense;
-
-    private com.sforce.soap._2006._04.metadata.ProfileUserPermission[] userPermissions;
-
-    public Profile() {
-    }
-
-    public Profile(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.ProfileApplicationVisibility[] applicationVisibilities,
-           com.sforce.soap._2006._04.metadata.ProfileApexClassAccess[] classAccesses,
-           com.sforce.soap._2006._04.metadata.ProfileExternalDataSourceAccess[] externalDataSourceAccesses,
-           com.sforce.soap._2006._04.metadata.ProfileFieldLevelSecurity[] fieldPermissions,
-           com.sforce.soap._2006._04.metadata.ProfileLayoutAssignment[] layoutAssignments,
-           com.sforce.soap._2006._04.metadata.ProfileLoginHours loginHours,
-           com.sforce.soap._2006._04.metadata.ProfileLoginIpRange[] loginIpRanges,
-           com.sforce.soap._2006._04.metadata.ProfileObjectPermissions[] objectPermissions,
-           com.sforce.soap._2006._04.metadata.ProfileApexPageAccess[] pageAccesses,
-           com.sforce.soap._2006._04.metadata.ProfileRecordTypeVisibility[] recordTypeVisibilities,
-           com.sforce.soap._2006._04.metadata.ProfileTabVisibility[] tabVisibilities,
-           java.lang.String userLicense,
-           com.sforce.soap._2006._04.metadata.ProfileUserPermission[] userPermissions) {
-        super(
-            fullName);
-        this.applicationVisibilities = applicationVisibilities;
-        this.classAccesses = classAccesses;
-        this.externalDataSourceAccesses = externalDataSourceAccesses;
-        this.fieldPermissions = fieldPermissions;
-        this.layoutAssignments = layoutAssignments;
-        this.loginHours = loginHours;
-        this.loginIpRanges = loginIpRanges;
-        this.objectPermissions = objectPermissions;
-        this.pageAccesses = pageAccesses;
-        this.recordTypeVisibilities = recordTypeVisibilities;
-        this.tabVisibilities = tabVisibilities;
-        this.userLicense = userLicense;
-        this.userPermissions = userPermissions;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the applicationVisibilities value for this Profile.
-     * 
-     * @return applicationVisibilities
-     */
-    public com.sforce.soap._2006._04.metadata.ProfileApplicationVisibility[] getApplicationVisibilities() {
-        return applicationVisibilities;
-    }
+/**
+ * <p>Java class for Profile complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Profile">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="applicationVisibilities" type="{http://soap.sforce.com/2006/04/metadata}ProfileApplicationVisibility" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="classAccesses" type="{http://soap.sforce.com/2006/04/metadata}ProfileApexClassAccess" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="externalDataSourceAccesses" type="{http://soap.sforce.com/2006/04/metadata}ProfileExternalDataSourceAccess" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="fieldPermissions" type="{http://soap.sforce.com/2006/04/metadata}ProfileFieldLevelSecurity" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="layoutAssignments" type="{http://soap.sforce.com/2006/04/metadata}ProfileLayoutAssignment" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="loginHours" type="{http://soap.sforce.com/2006/04/metadata}ProfileLoginHours" minOccurs="0"/>
+ *         &lt;element name="loginIpRanges" type="{http://soap.sforce.com/2006/04/metadata}ProfileLoginIpRange" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="objectPermissions" type="{http://soap.sforce.com/2006/04/metadata}ProfileObjectPermissions" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="pageAccesses" type="{http://soap.sforce.com/2006/04/metadata}ProfileApexPageAccess" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="recordTypeVisibilities" type="{http://soap.sforce.com/2006/04/metadata}ProfileRecordTypeVisibility" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="tabVisibilities" type="{http://soap.sforce.com/2006/04/metadata}ProfileTabVisibility" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="userLicense" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="userPermissions" type="{http://soap.sforce.com/2006/04/metadata}ProfileUserPermission" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Profile", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "applicationVisibilities",
+    "classAccesses",
+    "externalDataSourceAccesses",
+    "fieldPermissions",
+    "layoutAssignments",
+    "loginHours",
+    "loginIpRanges",
+    "objectPermissions",
+    "pageAccesses",
+    "recordTypeVisibilities",
+    "tabVisibilities",
+    "userLicense",
+    "userPermissions"
+})
+public class Profile
+    extends Metadata
+{
 
-
-    /**
-     * Sets the applicationVisibilities value for this Profile.
-     * 
-     * @param applicationVisibilities
-     */
-    public void setApplicationVisibilities(com.sforce.soap._2006._04.metadata.ProfileApplicationVisibility[] applicationVisibilities) {
-        this.applicationVisibilities = applicationVisibilities;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ProfileApplicationVisibility getApplicationVisibilities(int i) {
-        return this.applicationVisibilities[i];
-    }
-
-    public void setApplicationVisibilities(int i, com.sforce.soap._2006._04.metadata.ProfileApplicationVisibility _value) {
-        this.applicationVisibilities[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileApplicationVisibility> applicationVisibilities;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileApexClassAccess> classAccesses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileExternalDataSourceAccess> externalDataSourceAccesses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileFieldLevelSecurity> fieldPermissions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileLayoutAssignment> layoutAssignments;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ProfileLoginHours loginHours;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileLoginIpRange> loginIpRanges;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileObjectPermissions> objectPermissions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileApexPageAccess> pageAccesses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileRecordTypeVisibility> recordTypeVisibilities;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileTabVisibility> tabVisibilities;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String userLicense;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ProfileUserPermission> userPermissions;
 
     /**
-     * Gets the classAccesses value for this Profile.
+     * Gets the value of the applicationVisibilities property.
      * 
-     * @return classAccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the applicationVisibilities property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getApplicationVisibilities().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileApplicationVisibility }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ProfileApexClassAccess[] getClassAccesses() {
-        return classAccesses;
+    public List<ProfileApplicationVisibility> getApplicationVisibilities() {
+        if (applicationVisibilities == null) {
+            applicationVisibilities = new ArrayList<ProfileApplicationVisibility>();
+        }
+        return this.applicationVisibilities;
     }
-
 
     /**
-     * Sets the classAccesses value for this Profile.
+     * Gets the value of the classAccesses property.
      * 
-     * @param classAccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the classAccesses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getClassAccesses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileApexClassAccess }
+     * 
+     * 
      */
-    public void setClassAccesses(com.sforce.soap._2006._04.metadata.ProfileApexClassAccess[] classAccesses) {
-        this.classAccesses = classAccesses;
+    public List<ProfileApexClassAccess> getClassAccesses() {
+        if (classAccesses == null) {
+            classAccesses = new ArrayList<ProfileApexClassAccess>();
+        }
+        return this.classAccesses;
     }
-
-    public com.sforce.soap._2006._04.metadata.ProfileApexClassAccess getClassAccesses(int i) {
-        return this.classAccesses[i];
-    }
-
-    public void setClassAccesses(int i, com.sforce.soap._2006._04.metadata.ProfileApexClassAccess _value) {
-        this.classAccesses[i] = _value;
-    }
-
 
     /**
-     * Gets the externalDataSourceAccesses value for this Profile.
+     * Gets the value of the externalDataSourceAccesses property.
      * 
-     * @return externalDataSourceAccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the externalDataSourceAccesses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getExternalDataSourceAccesses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileExternalDataSourceAccess }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ProfileExternalDataSourceAccess[] getExternalDataSourceAccesses() {
-        return externalDataSourceAccesses;
+    public List<ProfileExternalDataSourceAccess> getExternalDataSourceAccesses() {
+        if (externalDataSourceAccesses == null) {
+            externalDataSourceAccesses = new ArrayList<ProfileExternalDataSourceAccess>();
+        }
+        return this.externalDataSourceAccesses;
     }
-
 
     /**
-     * Sets the externalDataSourceAccesses value for this Profile.
+     * Gets the value of the fieldPermissions property.
      * 
-     * @param externalDataSourceAccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fieldPermissions property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFieldPermissions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileFieldLevelSecurity }
+     * 
+     * 
      */
-    public void setExternalDataSourceAccesses(com.sforce.soap._2006._04.metadata.ProfileExternalDataSourceAccess[] externalDataSourceAccesses) {
-        this.externalDataSourceAccesses = externalDataSourceAccesses;
+    public List<ProfileFieldLevelSecurity> getFieldPermissions() {
+        if (fieldPermissions == null) {
+            fieldPermissions = new ArrayList<ProfileFieldLevelSecurity>();
+        }
+        return this.fieldPermissions;
     }
-
-    public com.sforce.soap._2006._04.metadata.ProfileExternalDataSourceAccess getExternalDataSourceAccesses(int i) {
-        return this.externalDataSourceAccesses[i];
-    }
-
-    public void setExternalDataSourceAccesses(int i, com.sforce.soap._2006._04.metadata.ProfileExternalDataSourceAccess _value) {
-        this.externalDataSourceAccesses[i] = _value;
-    }
-
 
     /**
-     * Gets the fieldPermissions value for this Profile.
+     * Gets the value of the layoutAssignments property.
      * 
-     * @return fieldPermissions
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the layoutAssignments property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLayoutAssignments().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileLayoutAssignment }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ProfileFieldLevelSecurity[] getFieldPermissions() {
-        return fieldPermissions;
+    public List<ProfileLayoutAssignment> getLayoutAssignments() {
+        if (layoutAssignments == null) {
+            layoutAssignments = new ArrayList<ProfileLayoutAssignment>();
+        }
+        return this.layoutAssignments;
     }
-
 
     /**
-     * Sets the fieldPermissions value for this Profile.
+     * Gets the value of the loginHours property.
      * 
-     * @param fieldPermissions
+     * @return
+     *     possible object is
+     *     {@link ProfileLoginHours }
+     *     
      */
-    public void setFieldPermissions(com.sforce.soap._2006._04.metadata.ProfileFieldLevelSecurity[] fieldPermissions) {
-        this.fieldPermissions = fieldPermissions;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ProfileFieldLevelSecurity getFieldPermissions(int i) {
-        return this.fieldPermissions[i];
-    }
-
-    public void setFieldPermissions(int i, com.sforce.soap._2006._04.metadata.ProfileFieldLevelSecurity _value) {
-        this.fieldPermissions[i] = _value;
-    }
-
-
-    /**
-     * Gets the layoutAssignments value for this Profile.
-     * 
-     * @return layoutAssignments
-     */
-    public com.sforce.soap._2006._04.metadata.ProfileLayoutAssignment[] getLayoutAssignments() {
-        return layoutAssignments;
-    }
-
-
-    /**
-     * Sets the layoutAssignments value for this Profile.
-     * 
-     * @param layoutAssignments
-     */
-    public void setLayoutAssignments(com.sforce.soap._2006._04.metadata.ProfileLayoutAssignment[] layoutAssignments) {
-        this.layoutAssignments = layoutAssignments;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ProfileLayoutAssignment getLayoutAssignments(int i) {
-        return this.layoutAssignments[i];
-    }
-
-    public void setLayoutAssignments(int i, com.sforce.soap._2006._04.metadata.ProfileLayoutAssignment _value) {
-        this.layoutAssignments[i] = _value;
-    }
-
-
-    /**
-     * Gets the loginHours value for this Profile.
-     * 
-     * @return loginHours
-     */
-    public com.sforce.soap._2006._04.metadata.ProfileLoginHours getLoginHours() {
+    public ProfileLoginHours getLoginHours() {
         return loginHours;
     }
 
+    /**
+     * Sets the value of the loginHours property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ProfileLoginHours }
+     *     
+     */
+    public void setLoginHours(ProfileLoginHours value) {
+        this.loginHours = value;
+    }
 
     /**
-     * Sets the loginHours value for this Profile.
+     * Gets the value of the loginIpRanges property.
      * 
-     * @param loginHours
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the loginIpRanges property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLoginIpRanges().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileLoginIpRange }
+     * 
+     * 
      */
-    public void setLoginHours(com.sforce.soap._2006._04.metadata.ProfileLoginHours loginHours) {
-        this.loginHours = loginHours;
+    public List<ProfileLoginIpRange> getLoginIpRanges() {
+        if (loginIpRanges == null) {
+            loginIpRanges = new ArrayList<ProfileLoginIpRange>();
+        }
+        return this.loginIpRanges;
     }
-
 
     /**
-     * Gets the loginIpRanges value for this Profile.
+     * Gets the value of the objectPermissions property.
      * 
-     * @return loginIpRanges
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the objectPermissions property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getObjectPermissions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileObjectPermissions }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ProfileLoginIpRange[] getLoginIpRanges() {
-        return loginIpRanges;
+    public List<ProfileObjectPermissions> getObjectPermissions() {
+        if (objectPermissions == null) {
+            objectPermissions = new ArrayList<ProfileObjectPermissions>();
+        }
+        return this.objectPermissions;
     }
-
 
     /**
-     * Sets the loginIpRanges value for this Profile.
+     * Gets the value of the pageAccesses property.
      * 
-     * @param loginIpRanges
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the pageAccesses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPageAccesses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileApexPageAccess }
+     * 
+     * 
      */
-    public void setLoginIpRanges(com.sforce.soap._2006._04.metadata.ProfileLoginIpRange[] loginIpRanges) {
-        this.loginIpRanges = loginIpRanges;
+    public List<ProfileApexPageAccess> getPageAccesses() {
+        if (pageAccesses == null) {
+            pageAccesses = new ArrayList<ProfileApexPageAccess>();
+        }
+        return this.pageAccesses;
     }
-
-    public com.sforce.soap._2006._04.metadata.ProfileLoginIpRange getLoginIpRanges(int i) {
-        return this.loginIpRanges[i];
-    }
-
-    public void setLoginIpRanges(int i, com.sforce.soap._2006._04.metadata.ProfileLoginIpRange _value) {
-        this.loginIpRanges[i] = _value;
-    }
-
 
     /**
-     * Gets the objectPermissions value for this Profile.
+     * Gets the value of the recordTypeVisibilities property.
      * 
-     * @return objectPermissions
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the recordTypeVisibilities property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRecordTypeVisibilities().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileRecordTypeVisibility }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ProfileObjectPermissions[] getObjectPermissions() {
-        return objectPermissions;
+    public List<ProfileRecordTypeVisibility> getRecordTypeVisibilities() {
+        if (recordTypeVisibilities == null) {
+            recordTypeVisibilities = new ArrayList<ProfileRecordTypeVisibility>();
+        }
+        return this.recordTypeVisibilities;
     }
-
 
     /**
-     * Sets the objectPermissions value for this Profile.
+     * Gets the value of the tabVisibilities property.
      * 
-     * @param objectPermissions
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the tabVisibilities property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getTabVisibilities().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileTabVisibility }
+     * 
+     * 
      */
-    public void setObjectPermissions(com.sforce.soap._2006._04.metadata.ProfileObjectPermissions[] objectPermissions) {
-        this.objectPermissions = objectPermissions;
+    public List<ProfileTabVisibility> getTabVisibilities() {
+        if (tabVisibilities == null) {
+            tabVisibilities = new ArrayList<ProfileTabVisibility>();
+        }
+        return this.tabVisibilities;
     }
-
-    public com.sforce.soap._2006._04.metadata.ProfileObjectPermissions getObjectPermissions(int i) {
-        return this.objectPermissions[i];
-    }
-
-    public void setObjectPermissions(int i, com.sforce.soap._2006._04.metadata.ProfileObjectPermissions _value) {
-        this.objectPermissions[i] = _value;
-    }
-
 
     /**
-     * Gets the pageAccesses value for this Profile.
+     * Gets the value of the userLicense property.
      * 
-     * @return pageAccesses
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ProfileApexPageAccess[] getPageAccesses() {
-        return pageAccesses;
-    }
-
-
-    /**
-     * Sets the pageAccesses value for this Profile.
-     * 
-     * @param pageAccesses
-     */
-    public void setPageAccesses(com.sforce.soap._2006._04.metadata.ProfileApexPageAccess[] pageAccesses) {
-        this.pageAccesses = pageAccesses;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ProfileApexPageAccess getPageAccesses(int i) {
-        return this.pageAccesses[i];
-    }
-
-    public void setPageAccesses(int i, com.sforce.soap._2006._04.metadata.ProfileApexPageAccess _value) {
-        this.pageAccesses[i] = _value;
-    }
-
-
-    /**
-     * Gets the recordTypeVisibilities value for this Profile.
-     * 
-     * @return recordTypeVisibilities
-     */
-    public com.sforce.soap._2006._04.metadata.ProfileRecordTypeVisibility[] getRecordTypeVisibilities() {
-        return recordTypeVisibilities;
-    }
-
-
-    /**
-     * Sets the recordTypeVisibilities value for this Profile.
-     * 
-     * @param recordTypeVisibilities
-     */
-    public void setRecordTypeVisibilities(com.sforce.soap._2006._04.metadata.ProfileRecordTypeVisibility[] recordTypeVisibilities) {
-        this.recordTypeVisibilities = recordTypeVisibilities;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ProfileRecordTypeVisibility getRecordTypeVisibilities(int i) {
-        return this.recordTypeVisibilities[i];
-    }
-
-    public void setRecordTypeVisibilities(int i, com.sforce.soap._2006._04.metadata.ProfileRecordTypeVisibility _value) {
-        this.recordTypeVisibilities[i] = _value;
-    }
-
-
-    /**
-     * Gets the tabVisibilities value for this Profile.
-     * 
-     * @return tabVisibilities
-     */
-    public com.sforce.soap._2006._04.metadata.ProfileTabVisibility[] getTabVisibilities() {
-        return tabVisibilities;
-    }
-
-
-    /**
-     * Sets the tabVisibilities value for this Profile.
-     * 
-     * @param tabVisibilities
-     */
-    public void setTabVisibilities(com.sforce.soap._2006._04.metadata.ProfileTabVisibility[] tabVisibilities) {
-        this.tabVisibilities = tabVisibilities;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ProfileTabVisibility getTabVisibilities(int i) {
-        return this.tabVisibilities[i];
-    }
-
-    public void setTabVisibilities(int i, com.sforce.soap._2006._04.metadata.ProfileTabVisibility _value) {
-        this.tabVisibilities[i] = _value;
-    }
-
-
-    /**
-     * Gets the userLicense value for this Profile.
-     * 
-     * @return userLicense
-     */
-    public java.lang.String getUserLicense() {
+    public String getUserLicense() {
         return userLicense;
     }
 
-
     /**
-     * Sets the userLicense value for this Profile.
+     * Sets the value of the userLicense property.
      * 
-     * @param userLicense
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUserLicense(java.lang.String userLicense) {
-        this.userLicense = userLicense;
+    public void setUserLicense(String value) {
+        this.userLicense = value;
     }
 
-
     /**
-     * Gets the userPermissions value for this Profile.
+     * Gets the value of the userPermissions property.
      * 
-     * @return userPermissions
-     */
-    public com.sforce.soap._2006._04.metadata.ProfileUserPermission[] getUserPermissions() {
-        return userPermissions;
-    }
-
-
-    /**
-     * Sets the userPermissions value for this Profile.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the userPermissions property.
      * 
-     * @param userPermissions
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getUserPermissions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ProfileUserPermission }
+     * 
+     * 
      */
-    public void setUserPermissions(com.sforce.soap._2006._04.metadata.ProfileUserPermission[] userPermissions) {
-        this.userPermissions = userPermissions;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ProfileUserPermission getUserPermissions(int i) {
-        return this.userPermissions[i];
-    }
-
-    public void setUserPermissions(int i, com.sforce.soap._2006._04.metadata.ProfileUserPermission _value) {
-        this.userPermissions[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Profile)) return false;
-        Profile other = (Profile) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<ProfileUserPermission> getUserPermissions() {
+        if (userPermissions == null) {
+            userPermissions = new ArrayList<ProfileUserPermission>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.applicationVisibilities==null && other.getApplicationVisibilities()==null) || 
-             (this.applicationVisibilities!=null &&
-              java.util.Arrays.equals(this.applicationVisibilities, other.getApplicationVisibilities()))) &&
-            ((this.classAccesses==null && other.getClassAccesses()==null) || 
-             (this.classAccesses!=null &&
-              java.util.Arrays.equals(this.classAccesses, other.getClassAccesses()))) &&
-            ((this.externalDataSourceAccesses==null && other.getExternalDataSourceAccesses()==null) || 
-             (this.externalDataSourceAccesses!=null &&
-              java.util.Arrays.equals(this.externalDataSourceAccesses, other.getExternalDataSourceAccesses()))) &&
-            ((this.fieldPermissions==null && other.getFieldPermissions()==null) || 
-             (this.fieldPermissions!=null &&
-              java.util.Arrays.equals(this.fieldPermissions, other.getFieldPermissions()))) &&
-            ((this.layoutAssignments==null && other.getLayoutAssignments()==null) || 
-             (this.layoutAssignments!=null &&
-              java.util.Arrays.equals(this.layoutAssignments, other.getLayoutAssignments()))) &&
-            ((this.loginHours==null && other.getLoginHours()==null) || 
-             (this.loginHours!=null &&
-              this.loginHours.equals(other.getLoginHours()))) &&
-            ((this.loginIpRanges==null && other.getLoginIpRanges()==null) || 
-             (this.loginIpRanges!=null &&
-              java.util.Arrays.equals(this.loginIpRanges, other.getLoginIpRanges()))) &&
-            ((this.objectPermissions==null && other.getObjectPermissions()==null) || 
-             (this.objectPermissions!=null &&
-              java.util.Arrays.equals(this.objectPermissions, other.getObjectPermissions()))) &&
-            ((this.pageAccesses==null && other.getPageAccesses()==null) || 
-             (this.pageAccesses!=null &&
-              java.util.Arrays.equals(this.pageAccesses, other.getPageAccesses()))) &&
-            ((this.recordTypeVisibilities==null && other.getRecordTypeVisibilities()==null) || 
-             (this.recordTypeVisibilities!=null &&
-              java.util.Arrays.equals(this.recordTypeVisibilities, other.getRecordTypeVisibilities()))) &&
-            ((this.tabVisibilities==null && other.getTabVisibilities()==null) || 
-             (this.tabVisibilities!=null &&
-              java.util.Arrays.equals(this.tabVisibilities, other.getTabVisibilities()))) &&
-            ((this.userLicense==null && other.getUserLicense()==null) || 
-             (this.userLicense!=null &&
-              this.userLicense.equals(other.getUserLicense()))) &&
-            ((this.userPermissions==null && other.getUserPermissions()==null) || 
-             (this.userPermissions!=null &&
-              java.util.Arrays.equals(this.userPermissions, other.getUserPermissions())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getApplicationVisibilities() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getApplicationVisibilities());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getApplicationVisibilities(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getClassAccesses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getClassAccesses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getClassAccesses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getExternalDataSourceAccesses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getExternalDataSourceAccesses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getExternalDataSourceAccesses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFieldPermissions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFieldPermissions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFieldPermissions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLayoutAssignments() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLayoutAssignments());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLayoutAssignments(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLoginHours() != null) {
-            _hashCode += getLoginHours().hashCode();
-        }
-        if (getLoginIpRanges() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLoginIpRanges());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLoginIpRanges(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getObjectPermissions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getObjectPermissions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getObjectPermissions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getPageAccesses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPageAccesses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPageAccesses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRecordTypeVisibilities() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRecordTypeVisibilities());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRecordTypeVisibilities(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getTabVisibilities() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTabVisibilities());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTabVisibilities(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getUserLicense() != null) {
-            _hashCode += getUserLicense().hashCode();
-        }
-        if (getUserPermissions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getUserPermissions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getUserPermissions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Profile.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Profile"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("applicationVisibilities");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "applicationVisibilities"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileApplicationVisibility"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("classAccesses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "classAccesses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileApexClassAccess"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("externalDataSourceAccesses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "externalDataSourceAccesses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileExternalDataSourceAccess"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fieldPermissions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fieldPermissions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileFieldLevelSecurity"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("layoutAssignments");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "layoutAssignments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileLayoutAssignment"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("loginHours");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "loginHours"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileLoginHours"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("loginIpRanges");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "loginIpRanges"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileLoginIpRange"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("objectPermissions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "objectPermissions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileObjectPermissions"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("pageAccesses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "pageAccesses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileApexPageAccess"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordTypeVisibilities");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordTypeVisibilities"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileRecordTypeVisibility"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tabVisibilities");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tabVisibilities"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileTabVisibility"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userLicense");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "userLicense"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userPermissions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "userPermissions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ProfileUserPermission"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.userPermissions;
     }
 
 }

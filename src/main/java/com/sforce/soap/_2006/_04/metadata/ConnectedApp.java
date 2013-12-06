@@ -1,636 +1,440 @@
-/**
- * ConnectedApp.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ConnectedApp  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ConnectedAppAttribute[] attributes;
-
-    private com.sforce.soap._2006._04.metadata.ConnectedAppCanvasConfig canvasConfig;
-
-    private java.lang.String contactEmail;
-
-    private java.lang.String contactPhone;
-
-    private java.lang.String description;
-
-    private java.lang.String iconUrl;
-
-    private java.lang.String infoUrl;
-
-    private com.sforce.soap._2006._04.metadata.ConnectedAppIpRange[] ipRanges;
-
-    private java.lang.String label;
-
-    private java.lang.String logoUrl;
-
-    private java.lang.String mobileStartUrl;
-
-    private com.sforce.soap._2006._04.metadata.ConnectedAppOauthConfig oauthConfig;
-
-    private com.sforce.soap._2006._04.metadata.ConnectedAppSamlConfig samlConfig;
-
-    private java.lang.String startUrl;
-
-    public ConnectedApp() {
-    }
-
-    public ConnectedApp(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.ConnectedAppAttribute[] attributes,
-           com.sforce.soap._2006._04.metadata.ConnectedAppCanvasConfig canvasConfig,
-           java.lang.String contactEmail,
-           java.lang.String contactPhone,
-           java.lang.String description,
-           java.lang.String iconUrl,
-           java.lang.String infoUrl,
-           com.sforce.soap._2006._04.metadata.ConnectedAppIpRange[] ipRanges,
-           java.lang.String label,
-           java.lang.String logoUrl,
-           java.lang.String mobileStartUrl,
-           com.sforce.soap._2006._04.metadata.ConnectedAppOauthConfig oauthConfig,
-           com.sforce.soap._2006._04.metadata.ConnectedAppSamlConfig samlConfig,
-           java.lang.String startUrl) {
-        super(
-            fullName);
-        this.attributes = attributes;
-        this.canvasConfig = canvasConfig;
-        this.contactEmail = contactEmail;
-        this.contactPhone = contactPhone;
-        this.description = description;
-        this.iconUrl = iconUrl;
-        this.infoUrl = infoUrl;
-        this.ipRanges = ipRanges;
-        this.label = label;
-        this.logoUrl = logoUrl;
-        this.mobileStartUrl = mobileStartUrl;
-        this.oauthConfig = oauthConfig;
-        this.samlConfig = samlConfig;
-        this.startUrl = startUrl;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the attributes value for this ConnectedApp.
-     * 
-     * @return attributes
-     */
-    public com.sforce.soap._2006._04.metadata.ConnectedAppAttribute[] getAttributes() {
-        return attributes;
-    }
+/**
+ * <p>Java class for ConnectedApp complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ConnectedApp">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="attributes" type="{http://soap.sforce.com/2006/04/metadata}ConnectedAppAttribute" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="canvasConfig" type="{http://soap.sforce.com/2006/04/metadata}ConnectedAppCanvasConfig" minOccurs="0"/>
+ *         &lt;element name="contactEmail" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="contactPhone" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="iconUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="infoUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="ipRanges" type="{http://soap.sforce.com/2006/04/metadata}ConnectedAppIpRange" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="logoUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="mobileStartUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="oauthConfig" type="{http://soap.sforce.com/2006/04/metadata}ConnectedAppOauthConfig" minOccurs="0"/>
+ *         &lt;element name="samlConfig" type="{http://soap.sforce.com/2006/04/metadata}ConnectedAppSamlConfig" minOccurs="0"/>
+ *         &lt;element name="startUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ConnectedApp", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "attributes",
+    "canvasConfig",
+    "contactEmail",
+    "contactPhone",
+    "description",
+    "iconUrl",
+    "infoUrl",
+    "ipRanges",
+    "label",
+    "logoUrl",
+    "mobileStartUrl",
+    "oauthConfig",
+    "samlConfig",
+    "startUrl"
+})
+public class ConnectedApp
+    extends Metadata
+{
 
-
-    /**
-     * Sets the attributes value for this ConnectedApp.
-     * 
-     * @param attributes
-     */
-    public void setAttributes(com.sforce.soap._2006._04.metadata.ConnectedAppAttribute[] attributes) {
-        this.attributes = attributes;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ConnectedAppAttribute getAttributes(int i) {
-        return this.attributes[i];
-    }
-
-    public void setAttributes(int i, com.sforce.soap._2006._04.metadata.ConnectedAppAttribute _value) {
-        this.attributes[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ConnectedAppAttribute> attributes;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ConnectedAppCanvasConfig canvasConfig;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String contactEmail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String contactPhone;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String iconUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String infoUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ConnectedAppIpRange> ipRanges;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String logoUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String mobileStartUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ConnectedAppOauthConfig oauthConfig;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ConnectedAppSamlConfig samlConfig;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String startUrl;
 
     /**
-     * Gets the canvasConfig value for this ConnectedApp.
+     * Gets the value of the attributes property.
      * 
-     * @return canvasConfig
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the attributes property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAttributes().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ConnectedAppAttribute }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ConnectedAppCanvasConfig getCanvasConfig() {
+    public List<ConnectedAppAttribute> getAttributes() {
+        if (attributes == null) {
+            attributes = new ArrayList<ConnectedAppAttribute>();
+        }
+        return this.attributes;
+    }
+
+    /**
+     * Gets the value of the canvasConfig property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ConnectedAppCanvasConfig }
+     *     
+     */
+    public ConnectedAppCanvasConfig getCanvasConfig() {
         return canvasConfig;
     }
 
-
     /**
-     * Sets the canvasConfig value for this ConnectedApp.
+     * Sets the value of the canvasConfig property.
      * 
-     * @param canvasConfig
+     * @param value
+     *     allowed object is
+     *     {@link ConnectedAppCanvasConfig }
+     *     
      */
-    public void setCanvasConfig(com.sforce.soap._2006._04.metadata.ConnectedAppCanvasConfig canvasConfig) {
-        this.canvasConfig = canvasConfig;
+    public void setCanvasConfig(ConnectedAppCanvasConfig value) {
+        this.canvasConfig = value;
     }
 
-
     /**
-     * Gets the contactEmail value for this ConnectedApp.
+     * Gets the value of the contactEmail property.
      * 
-     * @return contactEmail
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getContactEmail() {
+    public String getContactEmail() {
         return contactEmail;
     }
 
-
     /**
-     * Sets the contactEmail value for this ConnectedApp.
+     * Sets the value of the contactEmail property.
      * 
-     * @param contactEmail
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setContactEmail(java.lang.String contactEmail) {
-        this.contactEmail = contactEmail;
+    public void setContactEmail(String value) {
+        this.contactEmail = value;
     }
 
-
     /**
-     * Gets the contactPhone value for this ConnectedApp.
+     * Gets the value of the contactPhone property.
      * 
-     * @return contactPhone
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getContactPhone() {
+    public String getContactPhone() {
         return contactPhone;
     }
 
-
     /**
-     * Sets the contactPhone value for this ConnectedApp.
+     * Sets the value of the contactPhone property.
      * 
-     * @param contactPhone
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setContactPhone(java.lang.String contactPhone) {
-        this.contactPhone = contactPhone;
+    public void setContactPhone(String value) {
+        this.contactPhone = value;
     }
 
-
     /**
-     * Gets the description value for this ConnectedApp.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this ConnectedApp.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the iconUrl value for this ConnectedApp.
+     * Gets the value of the iconUrl property.
      * 
-     * @return iconUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIconUrl() {
+    public String getIconUrl() {
         return iconUrl;
     }
 
-
     /**
-     * Sets the iconUrl value for this ConnectedApp.
+     * Sets the value of the iconUrl property.
      * 
-     * @param iconUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIconUrl(java.lang.String iconUrl) {
-        this.iconUrl = iconUrl;
+    public void setIconUrl(String value) {
+        this.iconUrl = value;
     }
 
-
     /**
-     * Gets the infoUrl value for this ConnectedApp.
+     * Gets the value of the infoUrl property.
      * 
-     * @return infoUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getInfoUrl() {
+    public String getInfoUrl() {
         return infoUrl;
     }
 
+    /**
+     * Sets the value of the infoUrl property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setInfoUrl(String value) {
+        this.infoUrl = value;
+    }
 
     /**
-     * Sets the infoUrl value for this ConnectedApp.
+     * Gets the value of the ipRanges property.
      * 
-     * @param infoUrl
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the ipRanges property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getIpRanges().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ConnectedAppIpRange }
+     * 
+     * 
      */
-    public void setInfoUrl(java.lang.String infoUrl) {
-        this.infoUrl = infoUrl;
+    public List<ConnectedAppIpRange> getIpRanges() {
+        if (ipRanges == null) {
+            ipRanges = new ArrayList<ConnectedAppIpRange>();
+        }
+        return this.ipRanges;
     }
-
 
     /**
-     * Gets the ipRanges value for this ConnectedApp.
+     * Gets the value of the label property.
      * 
-     * @return ipRanges
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ConnectedAppIpRange[] getIpRanges() {
-        return ipRanges;
-    }
-
-
-    /**
-     * Sets the ipRanges value for this ConnectedApp.
-     * 
-     * @param ipRanges
-     */
-    public void setIpRanges(com.sforce.soap._2006._04.metadata.ConnectedAppIpRange[] ipRanges) {
-        this.ipRanges = ipRanges;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ConnectedAppIpRange getIpRanges(int i) {
-        return this.ipRanges[i];
-    }
-
-    public void setIpRanges(int i, com.sforce.soap._2006._04.metadata.ConnectedAppIpRange _value) {
-        this.ipRanges[i] = _value;
-    }
-
-
-    /**
-     * Gets the label value for this ConnectedApp.
-     * 
-     * @return label
-     */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this ConnectedApp.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the logoUrl value for this ConnectedApp.
+     * Gets the value of the logoUrl property.
      * 
-     * @return logoUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLogoUrl() {
+    public String getLogoUrl() {
         return logoUrl;
     }
 
-
     /**
-     * Sets the logoUrl value for this ConnectedApp.
+     * Sets the value of the logoUrl property.
      * 
-     * @param logoUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLogoUrl(java.lang.String logoUrl) {
-        this.logoUrl = logoUrl;
+    public void setLogoUrl(String value) {
+        this.logoUrl = value;
     }
 
-
     /**
-     * Gets the mobileStartUrl value for this ConnectedApp.
+     * Gets the value of the mobileStartUrl property.
      * 
-     * @return mobileStartUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMobileStartUrl() {
+    public String getMobileStartUrl() {
         return mobileStartUrl;
     }
 
-
     /**
-     * Sets the mobileStartUrl value for this ConnectedApp.
+     * Sets the value of the mobileStartUrl property.
      * 
-     * @param mobileStartUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMobileStartUrl(java.lang.String mobileStartUrl) {
-        this.mobileStartUrl = mobileStartUrl;
+    public void setMobileStartUrl(String value) {
+        this.mobileStartUrl = value;
     }
 
-
     /**
-     * Gets the oauthConfig value for this ConnectedApp.
+     * Gets the value of the oauthConfig property.
      * 
-     * @return oauthConfig
+     * @return
+     *     possible object is
+     *     {@link ConnectedAppOauthConfig }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ConnectedAppOauthConfig getOauthConfig() {
+    public ConnectedAppOauthConfig getOauthConfig() {
         return oauthConfig;
     }
 
-
     /**
-     * Sets the oauthConfig value for this ConnectedApp.
+     * Sets the value of the oauthConfig property.
      * 
-     * @param oauthConfig
+     * @param value
+     *     allowed object is
+     *     {@link ConnectedAppOauthConfig }
+     *     
      */
-    public void setOauthConfig(com.sforce.soap._2006._04.metadata.ConnectedAppOauthConfig oauthConfig) {
-        this.oauthConfig = oauthConfig;
+    public void setOauthConfig(ConnectedAppOauthConfig value) {
+        this.oauthConfig = value;
     }
 
-
     /**
-     * Gets the samlConfig value for this ConnectedApp.
+     * Gets the value of the samlConfig property.
      * 
-     * @return samlConfig
+     * @return
+     *     possible object is
+     *     {@link ConnectedAppSamlConfig }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ConnectedAppSamlConfig getSamlConfig() {
+    public ConnectedAppSamlConfig getSamlConfig() {
         return samlConfig;
     }
 
-
     /**
-     * Sets the samlConfig value for this ConnectedApp.
+     * Sets the value of the samlConfig property.
      * 
-     * @param samlConfig
+     * @param value
+     *     allowed object is
+     *     {@link ConnectedAppSamlConfig }
+     *     
      */
-    public void setSamlConfig(com.sforce.soap._2006._04.metadata.ConnectedAppSamlConfig samlConfig) {
-        this.samlConfig = samlConfig;
+    public void setSamlConfig(ConnectedAppSamlConfig value) {
+        this.samlConfig = value;
     }
 
-
     /**
-     * Gets the startUrl value for this ConnectedApp.
+     * Gets the value of the startUrl property.
      * 
-     * @return startUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStartUrl() {
+    public String getStartUrl() {
         return startUrl;
     }
 
-
     /**
-     * Sets the startUrl value for this ConnectedApp.
+     * Sets the value of the startUrl property.
      * 
-     * @param startUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStartUrl(java.lang.String startUrl) {
-        this.startUrl = startUrl;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ConnectedApp)) return false;
-        ConnectedApp other = (ConnectedApp) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.attributes==null && other.getAttributes()==null) || 
-             (this.attributes!=null &&
-              java.util.Arrays.equals(this.attributes, other.getAttributes()))) &&
-            ((this.canvasConfig==null && other.getCanvasConfig()==null) || 
-             (this.canvasConfig!=null &&
-              this.canvasConfig.equals(other.getCanvasConfig()))) &&
-            ((this.contactEmail==null && other.getContactEmail()==null) || 
-             (this.contactEmail!=null &&
-              this.contactEmail.equals(other.getContactEmail()))) &&
-            ((this.contactPhone==null && other.getContactPhone()==null) || 
-             (this.contactPhone!=null &&
-              this.contactPhone.equals(other.getContactPhone()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.iconUrl==null && other.getIconUrl()==null) || 
-             (this.iconUrl!=null &&
-              this.iconUrl.equals(other.getIconUrl()))) &&
-            ((this.infoUrl==null && other.getInfoUrl()==null) || 
-             (this.infoUrl!=null &&
-              this.infoUrl.equals(other.getInfoUrl()))) &&
-            ((this.ipRanges==null && other.getIpRanges()==null) || 
-             (this.ipRanges!=null &&
-              java.util.Arrays.equals(this.ipRanges, other.getIpRanges()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.logoUrl==null && other.getLogoUrl()==null) || 
-             (this.logoUrl!=null &&
-              this.logoUrl.equals(other.getLogoUrl()))) &&
-            ((this.mobileStartUrl==null && other.getMobileStartUrl()==null) || 
-             (this.mobileStartUrl!=null &&
-              this.mobileStartUrl.equals(other.getMobileStartUrl()))) &&
-            ((this.oauthConfig==null && other.getOauthConfig()==null) || 
-             (this.oauthConfig!=null &&
-              this.oauthConfig.equals(other.getOauthConfig()))) &&
-            ((this.samlConfig==null && other.getSamlConfig()==null) || 
-             (this.samlConfig!=null &&
-              this.samlConfig.equals(other.getSamlConfig()))) &&
-            ((this.startUrl==null && other.getStartUrl()==null) || 
-             (this.startUrl!=null &&
-              this.startUrl.equals(other.getStartUrl())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAttributes() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getAttributes());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getAttributes(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getCanvasConfig() != null) {
-            _hashCode += getCanvasConfig().hashCode();
-        }
-        if (getContactEmail() != null) {
-            _hashCode += getContactEmail().hashCode();
-        }
-        if (getContactPhone() != null) {
-            _hashCode += getContactPhone().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getIconUrl() != null) {
-            _hashCode += getIconUrl().hashCode();
-        }
-        if (getInfoUrl() != null) {
-            _hashCode += getInfoUrl().hashCode();
-        }
-        if (getIpRanges() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getIpRanges());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getIpRanges(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getLogoUrl() != null) {
-            _hashCode += getLogoUrl().hashCode();
-        }
-        if (getMobileStartUrl() != null) {
-            _hashCode += getMobileStartUrl().hashCode();
-        }
-        if (getOauthConfig() != null) {
-            _hashCode += getOauthConfig().hashCode();
-        }
-        if (getSamlConfig() != null) {
-            _hashCode += getSamlConfig().hashCode();
-        }
-        if (getStartUrl() != null) {
-            _hashCode += getStartUrl().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ConnectedApp.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedApp"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("attributes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "attributes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppAttribute"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("canvasConfig");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "canvasConfig"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppCanvasConfig"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("contactEmail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "contactEmail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("contactPhone");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "contactPhone"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("iconUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "iconUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("infoUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "infoUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ipRanges");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ipRanges"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppIpRange"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("logoUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "logoUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("mobileStartUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "mobileStartUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("oauthConfig");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "oauthConfig"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppOauthConfig"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("samlConfig");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "samlConfig"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppSamlConfig"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("startUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "startUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStartUrl(String value) {
+        this.startUrl = value;
     }
 
 }

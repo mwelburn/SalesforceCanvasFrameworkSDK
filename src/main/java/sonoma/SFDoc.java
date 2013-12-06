@@ -21,24 +21,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.rpc.ServiceException;
 
+import com.sforce.soap._2006._04.metadata.*;
+import com.sforce.soap._2006._04.metadata.Package;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
-import sforce.soap._2006._04.metadata.SessionHeader;
-
-import com.sforce.soap._2006._04.metadata.AsyncRequestState;
-import com.sforce.soap._2006._04.metadata.AsyncResult;
-import com.sforce.soap._2006._04.metadata.FileProperties;
-import com.sforce.soap._2006._04.metadata.ListMetadataQuery;
-import com.sforce.soap._2006._04.metadata.MetadataBindingStub;
-import com.sforce.soap._2006._04.metadata.MetadataServiceLocator;
-import com.sforce.soap._2006._04.metadata.PackageTypeMembers;
-import com.sforce.soap._2006._04.metadata.RetrieveMessage;
-import com.sforce.soap._2006._04.metadata.RetrieveRequest;
-import com.sforce.soap._2006._04.metadata.RetrieveResult;
-import com.sforce.soap._2006._04.metadata._package;
 
 /*
  * Code referenced from:
@@ -77,21 +65,23 @@ public class SFDoc
 		ListMetadataQuery query = new ListMetadataQuery();
 		query.setType("Profile");
 		//query.setFolder(null);
-		ListMetadataQuery query2 = new ListMetadataQuery();
-		query2.setType("CustomTab");
+//		ListMetadataQuery query2 = new ListMetadataQuery();
+//		query2.setType("CustomTab");
 		//query2.setFolder(null);
 		
 		List<String> mylist = new ArrayList<String>();
 		double asOfVersion = 29.0;
 		// Assuming that the SOAP binding has already been established.
-		FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[] {query, query2}, asOfVersion);
-		if (lmr != null) {
-			for (FileProperties n : lmr) {
-				System.out.println("Component fullName: " + n.getFullName());
-				System.out.println("Component type: " + n.getType());
-				mylist.add(n.getFullName() + " : " + n.getType());
-			}
-		}
+        FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[]{}, asOfVersion);
+//		FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[] {query}, asOfVersion);
+//		FileProperties[] lmr = metadatabinding.listMetadata(new ListMetadataQuery[] {query, query2}, asOfVersion);
+//		if (lmr != null) {
+//			for (FileProperties n : lmr) {
+//				System.out.println("Component fullName: " + n.getFullName());
+//				System.out.println("Component type: " + n.getType());
+//				mylist.add(n.getFullName() + " : " + n.getType());
+//			}
+//		}
 		return mylist;
 	}
 	
@@ -118,7 +108,7 @@ public class SFDoc
             System.out.println("Status is: " + asyncResult.getState());
         }
 
-        if (asyncResult.getState() != AsyncRequestState.Completed) {
+        if (asyncResult.getState() != AsyncRequestState.COMPLETED) {
             throw new Exception(asyncResult.getStatusCode() + " msg: " +
                     asyncResult.getMessage());
         }
@@ -182,14 +172,14 @@ public class SFDoc
                     "for unpackaged content. " +
                     "Looking for " + unpackedManifest.getAbsolutePath());
 
-        // Note that we populate the _package object by parsing a manifest file here.
-        // You could populate the _package based on any source for your
+        // Note that we populate the Package object by parsing a manifest file here.
+        // You could populate the Package based on any source for your
         // particular application.
-        _package p = parsePackage(unpackedManifest);
+        Package p = parsePackage(unpackedManifest);
         request.setUnpackaged(p);
     }
 	
-    private _package parsePackage(File file) throws Exception {
+    private Package parsePackage(File file) throws Exception {
         try {
             InputStream is = new FileInputStream(file);
             List<PackageTypeMembers> pd = new ArrayList<PackageTypeMembers>();
@@ -214,12 +204,13 @@ public class SFDoc
                     }
                     PackageTypeMembers pdi = new PackageTypeMembers();
                     pdi.setName(name);
-                    pdi.setMembers(members.toArray(new String[members.size()]));
+                    pdi.getMembers().addAll(members);
                     pd.add(pdi);
                 }
             }
-            _package r = new _package();
-            r.setTypes(pd.toArray(new PackageTypeMembers[pd.size()]));
+            Package r = new Package();
+//            r.setTypes(pd.toArray(new PackageTypeMembers[pd.size()]));
+            r.getTypes().addAll(pd);
             r.setVersion(API_VERSION + "");
             return r;
         } catch (ParserConfigurationException pce) {
@@ -255,7 +246,7 @@ public class SFDoc
             System.out.println("Status is: " + asyncResult.getState());
         }
 
-        if (asyncResult.getState() != AsyncRequestState.Completed) {
+        if (asyncResult.getState() != AsyncRequestState.COMPLETED) {
             throw new Exception(asyncResult.getStatusCode() + " msg: " +
                     asyncResult.getMessage());
         }

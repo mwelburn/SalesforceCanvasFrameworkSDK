@@ -2605,7 +2605,7 @@ public class MetadataBindingStub extends org.apache.axis.client.Stub implements 
 
             qName = new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Package");
             cachedSerQNames.add(qName);
-            cls = com.sforce.soap._2006._04.metadata._package.class;
+            cls = com.sforce.soap._2006._04.metadata.Package.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);

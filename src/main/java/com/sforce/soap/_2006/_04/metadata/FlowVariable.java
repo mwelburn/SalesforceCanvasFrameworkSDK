@@ -1,309 +1,204 @@
-/**
- * FlowVariable.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowVariable  extends com.sforce.soap._2006._04.metadata.FlowElement  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.FlowDataType dataType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean isInput;
 
-    private java.lang.Boolean isOutput;
+/**
+ * <p>Java class for FlowVariable complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowVariable">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowElement">
+ *       &lt;sequence>
+ *         &lt;element name="dataType" type="{http://soap.sforce.com/2006/04/metadata}FlowDataType"/>
+ *         &lt;element name="isInput" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="isOutput" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="objectType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="scale" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="value" type="{http://soap.sforce.com/2006/04/metadata}FlowElementReferenceOrValue" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowVariable", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "dataType",
+    "isInput",
+    "isOutput",
+    "objectType",
+    "scale",
+    "value"
+})
+public class FlowVariable
+    extends FlowElement
+{
 
-    private java.lang.String objectType;
-
-    private java.lang.Integer scale;
-
-    private com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue value;
-
-    public FlowVariable() {
-    }
-
-    public FlowVariable(
-           java.lang.String description,
-           java.lang.String name,
-           com.sforce.soap._2006._04.metadata.FlowDataType dataType,
-           java.lang.Boolean isInput,
-           java.lang.Boolean isOutput,
-           java.lang.String objectType,
-           java.lang.Integer scale,
-           com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue value) {
-        super(
-            description,
-            name);
-        this.dataType = dataType;
-        this.isInput = isInput;
-        this.isOutput = isOutput;
-        this.objectType = objectType;
-        this.scale = scale;
-        this.value = value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected FlowDataType dataType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isInput;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isOutput;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String objectType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer scale;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowElementReferenceOrValue value;
 
     /**
-     * Gets the dataType value for this FlowVariable.
+     * Gets the value of the dataType property.
      * 
-     * @return dataType
+     * @return
+     *     possible object is
+     *     {@link FlowDataType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowDataType getDataType() {
+    public FlowDataType getDataType() {
         return dataType;
     }
 
-
     /**
-     * Sets the dataType value for this FlowVariable.
+     * Sets the value of the dataType property.
      * 
-     * @param dataType
+     * @param value
+     *     allowed object is
+     *     {@link FlowDataType }
+     *     
      */
-    public void setDataType(com.sforce.soap._2006._04.metadata.FlowDataType dataType) {
-        this.dataType = dataType;
+    public void setDataType(FlowDataType value) {
+        this.dataType = value;
     }
 
-
     /**
-     * Gets the isInput value for this FlowVariable.
+     * Gets the value of the isInput property.
      * 
-     * @return isInput
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsInput() {
+    public Boolean isIsInput() {
         return isInput;
     }
 
-
     /**
-     * Sets the isInput value for this FlowVariable.
+     * Sets the value of the isInput property.
      * 
-     * @param isInput
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsInput(java.lang.Boolean isInput) {
-        this.isInput = isInput;
+    public void setIsInput(Boolean value) {
+        this.isInput = value;
     }
 
-
     /**
-     * Gets the isOutput value for this FlowVariable.
+     * Gets the value of the isOutput property.
      * 
-     * @return isOutput
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsOutput() {
+    public Boolean isIsOutput() {
         return isOutput;
     }
 
-
     /**
-     * Sets the isOutput value for this FlowVariable.
+     * Sets the value of the isOutput property.
      * 
-     * @param isOutput
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsOutput(java.lang.Boolean isOutput) {
-        this.isOutput = isOutput;
+    public void setIsOutput(Boolean value) {
+        this.isOutput = value;
     }
 
-
     /**
-     * Gets the objectType value for this FlowVariable.
+     * Gets the value of the objectType property.
      * 
-     * @return objectType
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getObjectType() {
+    public String getObjectType() {
         return objectType;
     }
 
-
     /**
-     * Sets the objectType value for this FlowVariable.
+     * Sets the value of the objectType property.
      * 
-     * @param objectType
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setObjectType(java.lang.String objectType) {
-        this.objectType = objectType;
+    public void setObjectType(String value) {
+        this.objectType = value;
     }
 
-
     /**
-     * Gets the scale value for this FlowVariable.
+     * Gets the value of the scale property.
      * 
-     * @return scale
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getScale() {
+    public Integer getScale() {
         return scale;
     }
 
-
     /**
-     * Sets the scale value for this FlowVariable.
+     * Sets the value of the scale property.
      * 
-     * @param scale
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setScale(java.lang.Integer scale) {
-        this.scale = scale;
+    public void setScale(Integer value) {
+        this.scale = value;
     }
 
-
     /**
-     * Gets the value value for this FlowVariable.
+     * Gets the value of the value property.
      * 
-     * @return value
+     * @return
+     *     possible object is
+     *     {@link FlowElementReferenceOrValue }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue getValue() {
+    public FlowElementReferenceOrValue getValue() {
         return value;
     }
 
-
     /**
-     * Sets the value value for this FlowVariable.
+     * Sets the value of the value property.
      * 
      * @param value
+     *     allowed object is
+     *     {@link FlowElementReferenceOrValue }
+     *     
      */
-    public void setValue(com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue value) {
+    public void setValue(FlowElementReferenceOrValue value) {
         this.value = value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowVariable)) return false;
-        FlowVariable other = (FlowVariable) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.dataType==null && other.getDataType()==null) || 
-             (this.dataType!=null &&
-              this.dataType.equals(other.getDataType()))) &&
-            ((this.isInput==null && other.getIsInput()==null) || 
-             (this.isInput!=null &&
-              this.isInput.equals(other.getIsInput()))) &&
-            ((this.isOutput==null && other.getIsOutput()==null) || 
-             (this.isOutput!=null &&
-              this.isOutput.equals(other.getIsOutput()))) &&
-            ((this.objectType==null && other.getObjectType()==null) || 
-             (this.objectType!=null &&
-              this.objectType.equals(other.getObjectType()))) &&
-            ((this.scale==null && other.getScale()==null) || 
-             (this.scale!=null &&
-              this.scale.equals(other.getScale()))) &&
-            ((this.value==null && other.getValue()==null) || 
-             (this.value!=null &&
-              this.value.equals(other.getValue())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getDataType() != null) {
-            _hashCode += getDataType().hashCode();
-        }
-        if (getIsInput() != null) {
-            _hashCode += getIsInput().hashCode();
-        }
-        if (getIsOutput() != null) {
-            _hashCode += getIsOutput().hashCode();
-        }
-        if (getObjectType() != null) {
-            _hashCode += getObjectType().hashCode();
-        }
-        if (getScale() != null) {
-            _hashCode += getScale().hashCode();
-        }
-        if (getValue() != null) {
-            _hashCode += getValue().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowVariable.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowVariable"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dataType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDataType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isInput");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isInput"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isOutput");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isOutput"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("objectType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "objectType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scale");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scale"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("value");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "value"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowElementReferenceOrValue"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
     }
 
 }

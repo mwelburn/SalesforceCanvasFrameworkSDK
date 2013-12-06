@@ -1,188 +1,117 @@
-/**
- * FlowNode.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowNode  extends com.sforce.soap._2006._04.metadata.FlowElement  implements java.io.Serializable {
-    private java.lang.String label;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
-    private int locationX;
 
-    private int locationY;
+/**
+ * <p>Java class for FlowNode complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowNode">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowElement">
+ *       &lt;sequence>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="locationX" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="locationY" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowNode", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "label",
+    "locationX",
+    "locationY"
+})
+@XmlSeeAlso({
+    FlowApexPluginCall.class,
+    FlowRecordUpdate.class,
+    FlowRecordLookup.class,
+    FlowRecordDelete.class,
+    FlowDecision.class,
+    FlowStep.class,
+    FlowRecordCreate.class,
+    FlowScreen.class,
+    FlowSubflow.class,
+    FlowAssignment.class
+})
+public class FlowNode
+    extends FlowElement
+{
 
-    public FlowNode() {
-    }
-
-    public FlowNode(
-           java.lang.String description,
-           java.lang.String name,
-           java.lang.String label,
-           int locationX,
-           int locationY) {
-        super(
-            description,
-            name);
-        this.label = label;
-        this.locationX = locationX;
-        this.locationY = locationY;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int locationX;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int locationY;
 
     /**
-     * Gets the label value for this FlowNode.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this FlowNode.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the locationX value for this FlowNode.
+     * Gets the value of the locationX property.
      * 
-     * @return locationX
      */
     public int getLocationX() {
         return locationX;
     }
 
-
     /**
-     * Sets the locationX value for this FlowNode.
+     * Sets the value of the locationX property.
      * 
-     * @param locationX
      */
-    public void setLocationX(int locationX) {
-        this.locationX = locationX;
+    public void setLocationX(int value) {
+        this.locationX = value;
     }
 
-
     /**
-     * Gets the locationY value for this FlowNode.
+     * Gets the value of the locationY property.
      * 
-     * @return locationY
      */
     public int getLocationY() {
         return locationY;
     }
 
-
     /**
-     * Sets the locationY value for this FlowNode.
+     * Sets the value of the locationY property.
      * 
-     * @param locationY
      */
-    public void setLocationY(int locationY) {
-        this.locationY = locationY;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowNode)) return false;
-        FlowNode other = (FlowNode) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            this.locationX == other.getLocationX() &&
-            this.locationY == other.getLocationY();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        _hashCode += getLocationX();
-        _hashCode += getLocationY();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowNode.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowNode"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("locationX");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "locationX"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("locationY");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "locationY"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setLocationY(int value) {
+        this.locationY = value;
     }
 
 }

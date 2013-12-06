@@ -1,747 +1,548 @@
-/**
- * BusinessHoursEntry.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class BusinessHoursEntry  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean active;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
-    private boolean _default;
 
-    private org.apache.axis.types.Time fridayEndTime;
+/**
+ * <p>Java class for BusinessHoursEntry complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="BusinessHoursEntry">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="default" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="fridayEndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="fridayStartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="mondayEndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="mondayStartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="saturdayEndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="saturdayStartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="sundayEndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="sundayStartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="thursdayEndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="thursdayStartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="timeZoneId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="tuesdayEndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="tuesdayStartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="wednesdayEndTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *         &lt;element name="wednesdayStartTime" type="{http://www.w3.org/2001/XMLSchema}time" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "BusinessHoursEntry", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "active",
+    "_default",
+    "fridayEndTime",
+    "fridayStartTime",
+    "mondayEndTime",
+    "mondayStartTime",
+    "name",
+    "saturdayEndTime",
+    "saturdayStartTime",
+    "sundayEndTime",
+    "sundayStartTime",
+    "thursdayEndTime",
+    "thursdayStartTime",
+    "timeZoneId",
+    "tuesdayEndTime",
+    "tuesdayStartTime",
+    "wednesdayEndTime",
+    "wednesdayStartTime"
+})
+public class BusinessHoursEntry
+    extends Metadata
+{
 
-    private org.apache.axis.types.Time fridayStartTime;
-
-    private org.apache.axis.types.Time mondayEndTime;
-
-    private org.apache.axis.types.Time mondayStartTime;
-
-    private java.lang.String name;
-
-    private org.apache.axis.types.Time saturdayEndTime;
-
-    private org.apache.axis.types.Time saturdayStartTime;
-
-    private org.apache.axis.types.Time sundayEndTime;
-
-    private org.apache.axis.types.Time sundayStartTime;
-
-    private org.apache.axis.types.Time thursdayEndTime;
-
-    private org.apache.axis.types.Time thursdayStartTime;
-
-    private java.lang.String timeZoneId;
-
-    private org.apache.axis.types.Time tuesdayEndTime;
-
-    private org.apache.axis.types.Time tuesdayStartTime;
-
-    private org.apache.axis.types.Time wednesdayEndTime;
-
-    private org.apache.axis.types.Time wednesdayStartTime;
-
-    public BusinessHoursEntry() {
-    }
-
-    public BusinessHoursEntry(
-           java.lang.String fullName,
-           java.lang.Boolean active,
-           boolean _default,
-           org.apache.axis.types.Time fridayEndTime,
-           org.apache.axis.types.Time fridayStartTime,
-           org.apache.axis.types.Time mondayEndTime,
-           org.apache.axis.types.Time mondayStartTime,
-           java.lang.String name,
-           org.apache.axis.types.Time saturdayEndTime,
-           org.apache.axis.types.Time saturdayStartTime,
-           org.apache.axis.types.Time sundayEndTime,
-           org.apache.axis.types.Time sundayStartTime,
-           org.apache.axis.types.Time thursdayEndTime,
-           org.apache.axis.types.Time thursdayStartTime,
-           java.lang.String timeZoneId,
-           org.apache.axis.types.Time tuesdayEndTime,
-           org.apache.axis.types.Time tuesdayStartTime,
-           org.apache.axis.types.Time wednesdayEndTime,
-           org.apache.axis.types.Time wednesdayStartTime) {
-        super(
-            fullName);
-        this.active = active;
-        this._default = _default;
-        this.fridayEndTime = fridayEndTime;
-        this.fridayStartTime = fridayStartTime;
-        this.mondayEndTime = mondayEndTime;
-        this.mondayStartTime = mondayStartTime;
-        this.name = name;
-        this.saturdayEndTime = saturdayEndTime;
-        this.saturdayStartTime = saturdayStartTime;
-        this.sundayEndTime = sundayEndTime;
-        this.sundayStartTime = sundayStartTime;
-        this.thursdayEndTime = thursdayEndTime;
-        this.thursdayStartTime = thursdayStartTime;
-        this.timeZoneId = timeZoneId;
-        this.tuesdayEndTime = tuesdayEndTime;
-        this.tuesdayStartTime = tuesdayStartTime;
-        this.wednesdayEndTime = wednesdayEndTime;
-        this.wednesdayStartTime = wednesdayStartTime;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean active;
+    @XmlElement(name = "default", namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean _default;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar fridayEndTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar fridayStartTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar mondayEndTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar mondayStartTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar saturdayEndTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar saturdayStartTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar sundayEndTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar sundayStartTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar thursdayEndTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar thursdayStartTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String timeZoneId;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar tuesdayEndTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar tuesdayStartTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar wednesdayEndTime;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "time")
+    protected XMLGregorianCalendar wednesdayStartTime;
 
     /**
-     * Gets the active value for this BusinessHoursEntry.
+     * Gets the value of the active property.
      * 
-     * @return active
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getActive() {
+    public Boolean isActive() {
         return active;
     }
 
-
     /**
-     * Sets the active value for this BusinessHoursEntry.
+     * Sets the value of the active property.
      * 
-     * @param active
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setActive(java.lang.Boolean active) {
-        this.active = active;
+    public void setActive(Boolean value) {
+        this.active = value;
     }
 
-
     /**
-     * Gets the _default value for this BusinessHoursEntry.
+     * Gets the value of the default property.
      * 
-     * @return _default
      */
-    public boolean is_default() {
+    public boolean isDefault() {
         return _default;
     }
 
-
     /**
-     * Sets the _default value for this BusinessHoursEntry.
+     * Sets the value of the default property.
      * 
-     * @param _default
      */
-    public void set_default(boolean _default) {
-        this._default = _default;
+    public void setDefault(boolean value) {
+        this._default = value;
     }
 
-
     /**
-     * Gets the fridayEndTime value for this BusinessHoursEntry.
+     * Gets the value of the fridayEndTime property.
      * 
-     * @return fridayEndTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getFridayEndTime() {
+    public XMLGregorianCalendar getFridayEndTime() {
         return fridayEndTime;
     }
 
-
     /**
-     * Sets the fridayEndTime value for this BusinessHoursEntry.
+     * Sets the value of the fridayEndTime property.
      * 
-     * @param fridayEndTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setFridayEndTime(org.apache.axis.types.Time fridayEndTime) {
-        this.fridayEndTime = fridayEndTime;
+    public void setFridayEndTime(XMLGregorianCalendar value) {
+        this.fridayEndTime = value;
     }
 
-
     /**
-     * Gets the fridayStartTime value for this BusinessHoursEntry.
+     * Gets the value of the fridayStartTime property.
      * 
-     * @return fridayStartTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getFridayStartTime() {
+    public XMLGregorianCalendar getFridayStartTime() {
         return fridayStartTime;
     }
 
-
     /**
-     * Sets the fridayStartTime value for this BusinessHoursEntry.
+     * Sets the value of the fridayStartTime property.
      * 
-     * @param fridayStartTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setFridayStartTime(org.apache.axis.types.Time fridayStartTime) {
-        this.fridayStartTime = fridayStartTime;
+    public void setFridayStartTime(XMLGregorianCalendar value) {
+        this.fridayStartTime = value;
     }
 
-
     /**
-     * Gets the mondayEndTime value for this BusinessHoursEntry.
+     * Gets the value of the mondayEndTime property.
      * 
-     * @return mondayEndTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getMondayEndTime() {
+    public XMLGregorianCalendar getMondayEndTime() {
         return mondayEndTime;
     }
 
-
     /**
-     * Sets the mondayEndTime value for this BusinessHoursEntry.
+     * Sets the value of the mondayEndTime property.
      * 
-     * @param mondayEndTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setMondayEndTime(org.apache.axis.types.Time mondayEndTime) {
-        this.mondayEndTime = mondayEndTime;
+    public void setMondayEndTime(XMLGregorianCalendar value) {
+        this.mondayEndTime = value;
     }
 
-
     /**
-     * Gets the mondayStartTime value for this BusinessHoursEntry.
+     * Gets the value of the mondayStartTime property.
      * 
-     * @return mondayStartTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getMondayStartTime() {
+    public XMLGregorianCalendar getMondayStartTime() {
         return mondayStartTime;
     }
 
-
     /**
-     * Sets the mondayStartTime value for this BusinessHoursEntry.
+     * Sets the value of the mondayStartTime property.
      * 
-     * @param mondayStartTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setMondayStartTime(org.apache.axis.types.Time mondayStartTime) {
-        this.mondayStartTime = mondayStartTime;
+    public void setMondayStartTime(XMLGregorianCalendar value) {
+        this.mondayStartTime = value;
     }
 
-
     /**
-     * Gets the name value for this BusinessHoursEntry.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this BusinessHoursEntry.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the saturdayEndTime value for this BusinessHoursEntry.
+     * Gets the value of the saturdayEndTime property.
      * 
-     * @return saturdayEndTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getSaturdayEndTime() {
+    public XMLGregorianCalendar getSaturdayEndTime() {
         return saturdayEndTime;
     }
 
-
     /**
-     * Sets the saturdayEndTime value for this BusinessHoursEntry.
+     * Sets the value of the saturdayEndTime property.
      * 
-     * @param saturdayEndTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setSaturdayEndTime(org.apache.axis.types.Time saturdayEndTime) {
-        this.saturdayEndTime = saturdayEndTime;
+    public void setSaturdayEndTime(XMLGregorianCalendar value) {
+        this.saturdayEndTime = value;
     }
 
-
     /**
-     * Gets the saturdayStartTime value for this BusinessHoursEntry.
+     * Gets the value of the saturdayStartTime property.
      * 
-     * @return saturdayStartTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getSaturdayStartTime() {
+    public XMLGregorianCalendar getSaturdayStartTime() {
         return saturdayStartTime;
     }
 
-
     /**
-     * Sets the saturdayStartTime value for this BusinessHoursEntry.
+     * Sets the value of the saturdayStartTime property.
      * 
-     * @param saturdayStartTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setSaturdayStartTime(org.apache.axis.types.Time saturdayStartTime) {
-        this.saturdayStartTime = saturdayStartTime;
+    public void setSaturdayStartTime(XMLGregorianCalendar value) {
+        this.saturdayStartTime = value;
     }
 
-
     /**
-     * Gets the sundayEndTime value for this BusinessHoursEntry.
+     * Gets the value of the sundayEndTime property.
      * 
-     * @return sundayEndTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getSundayEndTime() {
+    public XMLGregorianCalendar getSundayEndTime() {
         return sundayEndTime;
     }
 
-
     /**
-     * Sets the sundayEndTime value for this BusinessHoursEntry.
+     * Sets the value of the sundayEndTime property.
      * 
-     * @param sundayEndTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setSundayEndTime(org.apache.axis.types.Time sundayEndTime) {
-        this.sundayEndTime = sundayEndTime;
+    public void setSundayEndTime(XMLGregorianCalendar value) {
+        this.sundayEndTime = value;
     }
 
-
     /**
-     * Gets the sundayStartTime value for this BusinessHoursEntry.
+     * Gets the value of the sundayStartTime property.
      * 
-     * @return sundayStartTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getSundayStartTime() {
+    public XMLGregorianCalendar getSundayStartTime() {
         return sundayStartTime;
     }
 
-
     /**
-     * Sets the sundayStartTime value for this BusinessHoursEntry.
+     * Sets the value of the sundayStartTime property.
      * 
-     * @param sundayStartTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setSundayStartTime(org.apache.axis.types.Time sundayStartTime) {
-        this.sundayStartTime = sundayStartTime;
+    public void setSundayStartTime(XMLGregorianCalendar value) {
+        this.sundayStartTime = value;
     }
 
-
     /**
-     * Gets the thursdayEndTime value for this BusinessHoursEntry.
+     * Gets the value of the thursdayEndTime property.
      * 
-     * @return thursdayEndTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getThursdayEndTime() {
+    public XMLGregorianCalendar getThursdayEndTime() {
         return thursdayEndTime;
     }
 
-
     /**
-     * Sets the thursdayEndTime value for this BusinessHoursEntry.
+     * Sets the value of the thursdayEndTime property.
      * 
-     * @param thursdayEndTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setThursdayEndTime(org.apache.axis.types.Time thursdayEndTime) {
-        this.thursdayEndTime = thursdayEndTime;
+    public void setThursdayEndTime(XMLGregorianCalendar value) {
+        this.thursdayEndTime = value;
     }
 
-
     /**
-     * Gets the thursdayStartTime value for this BusinessHoursEntry.
+     * Gets the value of the thursdayStartTime property.
      * 
-     * @return thursdayStartTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getThursdayStartTime() {
+    public XMLGregorianCalendar getThursdayStartTime() {
         return thursdayStartTime;
     }
 
-
     /**
-     * Sets the thursdayStartTime value for this BusinessHoursEntry.
+     * Sets the value of the thursdayStartTime property.
      * 
-     * @param thursdayStartTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setThursdayStartTime(org.apache.axis.types.Time thursdayStartTime) {
-        this.thursdayStartTime = thursdayStartTime;
+    public void setThursdayStartTime(XMLGregorianCalendar value) {
+        this.thursdayStartTime = value;
     }
 
-
     /**
-     * Gets the timeZoneId value for this BusinessHoursEntry.
+     * Gets the value of the timeZoneId property.
      * 
-     * @return timeZoneId
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTimeZoneId() {
+    public String getTimeZoneId() {
         return timeZoneId;
     }
 
-
     /**
-     * Sets the timeZoneId value for this BusinessHoursEntry.
+     * Sets the value of the timeZoneId property.
      * 
-     * @param timeZoneId
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTimeZoneId(java.lang.String timeZoneId) {
-        this.timeZoneId = timeZoneId;
+    public void setTimeZoneId(String value) {
+        this.timeZoneId = value;
     }
 
-
     /**
-     * Gets the tuesdayEndTime value for this BusinessHoursEntry.
+     * Gets the value of the tuesdayEndTime property.
      * 
-     * @return tuesdayEndTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getTuesdayEndTime() {
+    public XMLGregorianCalendar getTuesdayEndTime() {
         return tuesdayEndTime;
     }
 
-
     /**
-     * Sets the tuesdayEndTime value for this BusinessHoursEntry.
+     * Sets the value of the tuesdayEndTime property.
      * 
-     * @param tuesdayEndTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setTuesdayEndTime(org.apache.axis.types.Time tuesdayEndTime) {
-        this.tuesdayEndTime = tuesdayEndTime;
+    public void setTuesdayEndTime(XMLGregorianCalendar value) {
+        this.tuesdayEndTime = value;
     }
 
-
     /**
-     * Gets the tuesdayStartTime value for this BusinessHoursEntry.
+     * Gets the value of the tuesdayStartTime property.
      * 
-     * @return tuesdayStartTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getTuesdayStartTime() {
+    public XMLGregorianCalendar getTuesdayStartTime() {
         return tuesdayStartTime;
     }
 
-
     /**
-     * Sets the tuesdayStartTime value for this BusinessHoursEntry.
+     * Sets the value of the tuesdayStartTime property.
      * 
-     * @param tuesdayStartTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setTuesdayStartTime(org.apache.axis.types.Time tuesdayStartTime) {
-        this.tuesdayStartTime = tuesdayStartTime;
+    public void setTuesdayStartTime(XMLGregorianCalendar value) {
+        this.tuesdayStartTime = value;
     }
 
-
     /**
-     * Gets the wednesdayEndTime value for this BusinessHoursEntry.
+     * Gets the value of the wednesdayEndTime property.
      * 
-     * @return wednesdayEndTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getWednesdayEndTime() {
+    public XMLGregorianCalendar getWednesdayEndTime() {
         return wednesdayEndTime;
     }
 
-
     /**
-     * Sets the wednesdayEndTime value for this BusinessHoursEntry.
+     * Sets the value of the wednesdayEndTime property.
      * 
-     * @param wednesdayEndTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setWednesdayEndTime(org.apache.axis.types.Time wednesdayEndTime) {
-        this.wednesdayEndTime = wednesdayEndTime;
+    public void setWednesdayEndTime(XMLGregorianCalendar value) {
+        this.wednesdayEndTime = value;
     }
 
-
     /**
-     * Gets the wednesdayStartTime value for this BusinessHoursEntry.
+     * Gets the value of the wednesdayStartTime property.
      * 
-     * @return wednesdayStartTime
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public org.apache.axis.types.Time getWednesdayStartTime() {
+    public XMLGregorianCalendar getWednesdayStartTime() {
         return wednesdayStartTime;
     }
 
-
     /**
-     * Sets the wednesdayStartTime value for this BusinessHoursEntry.
+     * Sets the value of the wednesdayStartTime property.
      * 
-     * @param wednesdayStartTime
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setWednesdayStartTime(org.apache.axis.types.Time wednesdayStartTime) {
-        this.wednesdayStartTime = wednesdayStartTime;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof BusinessHoursEntry)) return false;
-        BusinessHoursEntry other = (BusinessHoursEntry) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.active==null && other.getActive()==null) || 
-             (this.active!=null &&
-              this.active.equals(other.getActive()))) &&
-            this._default == other.is_default() &&
-            ((this.fridayEndTime==null && other.getFridayEndTime()==null) || 
-             (this.fridayEndTime!=null &&
-              this.fridayEndTime.equals(other.getFridayEndTime()))) &&
-            ((this.fridayStartTime==null && other.getFridayStartTime()==null) || 
-             (this.fridayStartTime!=null &&
-              this.fridayStartTime.equals(other.getFridayStartTime()))) &&
-            ((this.mondayEndTime==null && other.getMondayEndTime()==null) || 
-             (this.mondayEndTime!=null &&
-              this.mondayEndTime.equals(other.getMondayEndTime()))) &&
-            ((this.mondayStartTime==null && other.getMondayStartTime()==null) || 
-             (this.mondayStartTime!=null &&
-              this.mondayStartTime.equals(other.getMondayStartTime()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.saturdayEndTime==null && other.getSaturdayEndTime()==null) || 
-             (this.saturdayEndTime!=null &&
-              this.saturdayEndTime.equals(other.getSaturdayEndTime()))) &&
-            ((this.saturdayStartTime==null && other.getSaturdayStartTime()==null) || 
-             (this.saturdayStartTime!=null &&
-              this.saturdayStartTime.equals(other.getSaturdayStartTime()))) &&
-            ((this.sundayEndTime==null && other.getSundayEndTime()==null) || 
-             (this.sundayEndTime!=null &&
-              this.sundayEndTime.equals(other.getSundayEndTime()))) &&
-            ((this.sundayStartTime==null && other.getSundayStartTime()==null) || 
-             (this.sundayStartTime!=null &&
-              this.sundayStartTime.equals(other.getSundayStartTime()))) &&
-            ((this.thursdayEndTime==null && other.getThursdayEndTime()==null) || 
-             (this.thursdayEndTime!=null &&
-              this.thursdayEndTime.equals(other.getThursdayEndTime()))) &&
-            ((this.thursdayStartTime==null && other.getThursdayStartTime()==null) || 
-             (this.thursdayStartTime!=null &&
-              this.thursdayStartTime.equals(other.getThursdayStartTime()))) &&
-            ((this.timeZoneId==null && other.getTimeZoneId()==null) || 
-             (this.timeZoneId!=null &&
-              this.timeZoneId.equals(other.getTimeZoneId()))) &&
-            ((this.tuesdayEndTime==null && other.getTuesdayEndTime()==null) || 
-             (this.tuesdayEndTime!=null &&
-              this.tuesdayEndTime.equals(other.getTuesdayEndTime()))) &&
-            ((this.tuesdayStartTime==null && other.getTuesdayStartTime()==null) || 
-             (this.tuesdayStartTime!=null &&
-              this.tuesdayStartTime.equals(other.getTuesdayStartTime()))) &&
-            ((this.wednesdayEndTime==null && other.getWednesdayEndTime()==null) || 
-             (this.wednesdayEndTime!=null &&
-              this.wednesdayEndTime.equals(other.getWednesdayEndTime()))) &&
-            ((this.wednesdayStartTime==null && other.getWednesdayStartTime()==null) || 
-             (this.wednesdayStartTime!=null &&
-              this.wednesdayStartTime.equals(other.getWednesdayStartTime())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getActive() != null) {
-            _hashCode += getActive().hashCode();
-        }
-        _hashCode += (is_default() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getFridayEndTime() != null) {
-            _hashCode += getFridayEndTime().hashCode();
-        }
-        if (getFridayStartTime() != null) {
-            _hashCode += getFridayStartTime().hashCode();
-        }
-        if (getMondayEndTime() != null) {
-            _hashCode += getMondayEndTime().hashCode();
-        }
-        if (getMondayStartTime() != null) {
-            _hashCode += getMondayStartTime().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getSaturdayEndTime() != null) {
-            _hashCode += getSaturdayEndTime().hashCode();
-        }
-        if (getSaturdayStartTime() != null) {
-            _hashCode += getSaturdayStartTime().hashCode();
-        }
-        if (getSundayEndTime() != null) {
-            _hashCode += getSundayEndTime().hashCode();
-        }
-        if (getSundayStartTime() != null) {
-            _hashCode += getSundayStartTime().hashCode();
-        }
-        if (getThursdayEndTime() != null) {
-            _hashCode += getThursdayEndTime().hashCode();
-        }
-        if (getThursdayStartTime() != null) {
-            _hashCode += getThursdayStartTime().hashCode();
-        }
-        if (getTimeZoneId() != null) {
-            _hashCode += getTimeZoneId().hashCode();
-        }
-        if (getTuesdayEndTime() != null) {
-            _hashCode += getTuesdayEndTime().hashCode();
-        }
-        if (getTuesdayStartTime() != null) {
-            _hashCode += getTuesdayStartTime().hashCode();
-        }
-        if (getWednesdayEndTime() != null) {
-            _hashCode += getWednesdayEndTime().hashCode();
-        }
-        if (getWednesdayStartTime() != null) {
-            _hashCode += getWednesdayStartTime().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(BusinessHoursEntry.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "BusinessHoursEntry"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("active");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "active"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("_default");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "default"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fridayEndTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fridayEndTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fridayStartTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fridayStartTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("mondayEndTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "mondayEndTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("mondayStartTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "mondayStartTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("saturdayEndTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "saturdayEndTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("saturdayStartTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "saturdayStartTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sundayEndTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sundayEndTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sundayStartTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sundayStartTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("thursdayEndTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "thursdayEndTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("thursdayStartTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "thursdayStartTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("timeZoneId");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "timeZoneId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tuesdayEndTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tuesdayEndTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tuesdayStartTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tuesdayStartTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("wednesdayEndTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "wednesdayEndTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("wednesdayStartTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "wednesdayStartTime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "time"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWednesdayStartTime(XMLGregorianCalendar value) {
+        this.wednesdayStartTime = value;
     }
 
 }

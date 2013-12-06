@@ -1,156 +1,90 @@
-/**
- * WorkspaceMapping.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class WorkspaceMapping  implements java.io.Serializable {
-    private java.lang.String fieldName;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String tab;
 
-    public WorkspaceMapping() {
-    }
+/**
+ * <p>Java class for WorkspaceMapping complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="WorkspaceMapping">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="fieldName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="tab" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "WorkspaceMapping", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "fieldName",
+    "tab"
+})
+public class WorkspaceMapping {
 
-    public WorkspaceMapping(
-           java.lang.String fieldName,
-           java.lang.String tab) {
-           this.fieldName = fieldName;
-           this.tab = tab;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String fieldName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String tab;
 
     /**
-     * Gets the fieldName value for this WorkspaceMapping.
+     * Gets the value of the fieldName property.
      * 
-     * @return fieldName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFieldName() {
+    public String getFieldName() {
         return fieldName;
     }
 
-
     /**
-     * Sets the fieldName value for this WorkspaceMapping.
+     * Sets the value of the fieldName property.
      * 
-     * @param fieldName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFieldName(java.lang.String fieldName) {
-        this.fieldName = fieldName;
+    public void setFieldName(String value) {
+        this.fieldName = value;
     }
 
-
     /**
-     * Gets the tab value for this WorkspaceMapping.
+     * Gets the value of the tab property.
      * 
-     * @return tab
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTab() {
+    public String getTab() {
         return tab;
     }
 
-
     /**
-     * Sets the tab value for this WorkspaceMapping.
+     * Sets the value of the tab property.
      * 
-     * @param tab
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTab(java.lang.String tab) {
-        this.tab = tab;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof WorkspaceMapping)) return false;
-        WorkspaceMapping other = (WorkspaceMapping) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.fieldName==null && other.getFieldName()==null) || 
-             (this.fieldName!=null &&
-              this.fieldName.equals(other.getFieldName()))) &&
-            ((this.tab==null && other.getTab()==null) || 
-             (this.tab!=null &&
-              this.tab.equals(other.getTab())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getFieldName() != null) {
-            _hashCode += getFieldName().hashCode();
-        }
-        if (getTab() != null) {
-            _hashCode += getTab().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(WorkspaceMapping.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkspaceMapping"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fieldName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fieldName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tab");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tab"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTab(String value) {
+        this.tab = value;
     }
 
 }

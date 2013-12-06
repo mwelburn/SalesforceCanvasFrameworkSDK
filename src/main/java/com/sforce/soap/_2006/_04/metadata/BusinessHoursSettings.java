@@ -1,194 +1,104 @@
-/**
- * BusinessHoursSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class BusinessHoursSettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.BusinessHoursEntry[] businessHours;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.Holiday[] holidays;
 
-    public BusinessHoursSettings() {
-    }
+/**
+ * <p>Java class for BusinessHoursSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="BusinessHoursSettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="businessHours" type="{http://soap.sforce.com/2006/04/metadata}BusinessHoursEntry" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="holidays" type="{http://soap.sforce.com/2006/04/metadata}Holiday" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "BusinessHoursSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "businessHours",
+    "holidays"
+})
+public class BusinessHoursSettings
+    extends Metadata
+{
 
-    public BusinessHoursSettings(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.BusinessHoursEntry[] businessHours,
-           com.sforce.soap._2006._04.metadata.Holiday[] holidays) {
-        super(
-            fullName);
-        this.businessHours = businessHours;
-        this.holidays = holidays;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<BusinessHoursEntry> businessHours;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<Holiday> holidays;
 
     /**
-     * Gets the businessHours value for this BusinessHoursSettings.
+     * Gets the value of the businessHours property.
      * 
-     * @return businessHours
-     */
-    public com.sforce.soap._2006._04.metadata.BusinessHoursEntry[] getBusinessHours() {
-        return businessHours;
-    }
-
-
-    /**
-     * Sets the businessHours value for this BusinessHoursSettings.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the businessHours property.
      * 
-     * @param businessHours
-     */
-    public void setBusinessHours(com.sforce.soap._2006._04.metadata.BusinessHoursEntry[] businessHours) {
-        this.businessHours = businessHours;
-    }
-
-    public com.sforce.soap._2006._04.metadata.BusinessHoursEntry getBusinessHours(int i) {
-        return this.businessHours[i];
-    }
-
-    public void setBusinessHours(int i, com.sforce.soap._2006._04.metadata.BusinessHoursEntry _value) {
-        this.businessHours[i] = _value;
-    }
-
-
-    /**
-     * Gets the holidays value for this BusinessHoursSettings.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getBusinessHours().add(newItem);
+     * </pre>
      * 
-     * @return holidays
-     */
-    public com.sforce.soap._2006._04.metadata.Holiday[] getHolidays() {
-        return holidays;
-    }
-
-
-    /**
-     * Sets the holidays value for this BusinessHoursSettings.
      * 
-     * @param holidays
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link BusinessHoursEntry }
+     * 
+     * 
      */
-    public void setHolidays(com.sforce.soap._2006._04.metadata.Holiday[] holidays) {
-        this.holidays = holidays;
-    }
-
-    public com.sforce.soap._2006._04.metadata.Holiday getHolidays(int i) {
-        return this.holidays[i];
-    }
-
-    public void setHolidays(int i, com.sforce.soap._2006._04.metadata.Holiday _value) {
-        this.holidays[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof BusinessHoursSettings)) return false;
-        BusinessHoursSettings other = (BusinessHoursSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<BusinessHoursEntry> getBusinessHours() {
+        if (businessHours == null) {
+            businessHours = new ArrayList<BusinessHoursEntry>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.businessHours==null && other.getBusinessHours()==null) || 
-             (this.businessHours!=null &&
-              java.util.Arrays.equals(this.businessHours, other.getBusinessHours()))) &&
-            ((this.holidays==null && other.getHolidays()==null) || 
-             (this.holidays!=null &&
-              java.util.Arrays.equals(this.holidays, other.getHolidays())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getBusinessHours() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getBusinessHours());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getBusinessHours(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getHolidays() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getHolidays());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getHolidays(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(BusinessHoursSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "BusinessHoursSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("businessHours");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "businessHours"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "BusinessHoursEntry"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("holidays");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "holidays"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Holiday"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
+        return this.businessHours;
     }
 
     /**
-     * Return type metadata object
+     * Gets the value of the holidays property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the holidays property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getHolidays().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Holiday }
+     * 
+     * 
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public List<Holiday> getHolidays() {
+        if (holidays == null) {
+            holidays = new ArrayList<Holiday>();
+        }
+        return this.holidays;
     }
 
 }

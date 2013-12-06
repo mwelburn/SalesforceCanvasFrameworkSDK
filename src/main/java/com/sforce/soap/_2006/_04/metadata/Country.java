@@ -1,373 +1,233 @@
-/**
- * Country.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Country  implements java.io.Serializable {
-    private boolean active;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String integrationValue;
 
-    private java.lang.String isoCode;
+/**
+ * <p>Java class for Country complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Country">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="integrationValue" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="isoCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="orgDefault" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="standard" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="states" type="{http://soap.sforce.com/2006/04/metadata}State" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="visible" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Country", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "active",
+    "integrationValue",
+    "isoCode",
+    "label",
+    "orgDefault",
+    "standard",
+    "states",
+    "visible"
+})
+public class Country {
 
-    private java.lang.String label;
-
-    private boolean orgDefault;
-
-    private boolean standard;
-
-    private com.sforce.soap._2006._04.metadata.State[] states;
-
-    private boolean visible;
-
-    public Country() {
-    }
-
-    public Country(
-           boolean active,
-           java.lang.String integrationValue,
-           java.lang.String isoCode,
-           java.lang.String label,
-           boolean orgDefault,
-           boolean standard,
-           com.sforce.soap._2006._04.metadata.State[] states,
-           boolean visible) {
-           this.active = active;
-           this.integrationValue = integrationValue;
-           this.isoCode = isoCode;
-           this.label = label;
-           this.orgDefault = orgDefault;
-           this.standard = standard;
-           this.states = states;
-           this.visible = visible;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean active;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String integrationValue;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String isoCode;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean orgDefault;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean standard;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<State> states;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean visible;
 
     /**
-     * Gets the active value for this Country.
+     * Gets the value of the active property.
      * 
-     * @return active
      */
     public boolean isActive() {
         return active;
     }
 
-
     /**
-     * Sets the active value for this Country.
+     * Sets the value of the active property.
      * 
-     * @param active
      */
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setActive(boolean value) {
+        this.active = value;
     }
 
-
     /**
-     * Gets the integrationValue value for this Country.
+     * Gets the value of the integrationValue property.
      * 
-     * @return integrationValue
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIntegrationValue() {
+    public String getIntegrationValue() {
         return integrationValue;
     }
 
-
     /**
-     * Sets the integrationValue value for this Country.
+     * Sets the value of the integrationValue property.
      * 
-     * @param integrationValue
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIntegrationValue(java.lang.String integrationValue) {
-        this.integrationValue = integrationValue;
+    public void setIntegrationValue(String value) {
+        this.integrationValue = value;
     }
 
-
     /**
-     * Gets the isoCode value for this Country.
+     * Gets the value of the isoCode property.
      * 
-     * @return isoCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIsoCode() {
+    public String getIsoCode() {
         return isoCode;
     }
 
-
     /**
-     * Sets the isoCode value for this Country.
+     * Sets the value of the isoCode property.
      * 
-     * @param isoCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIsoCode(java.lang.String isoCode) {
-        this.isoCode = isoCode;
+    public void setIsoCode(String value) {
+        this.isoCode = value;
     }
 
-
     /**
-     * Gets the label value for this Country.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this Country.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the orgDefault value for this Country.
+     * Gets the value of the orgDefault property.
      * 
-     * @return orgDefault
      */
     public boolean isOrgDefault() {
         return orgDefault;
     }
 
-
     /**
-     * Sets the orgDefault value for this Country.
+     * Sets the value of the orgDefault property.
      * 
-     * @param orgDefault
      */
-    public void setOrgDefault(boolean orgDefault) {
-        this.orgDefault = orgDefault;
+    public void setOrgDefault(boolean value) {
+        this.orgDefault = value;
     }
 
-
     /**
-     * Gets the standard value for this Country.
+     * Gets the value of the standard property.
      * 
-     * @return standard
      */
     public boolean isStandard() {
         return standard;
     }
 
-
     /**
-     * Sets the standard value for this Country.
+     * Sets the value of the standard property.
      * 
-     * @param standard
      */
-    public void setStandard(boolean standard) {
-        this.standard = standard;
+    public void setStandard(boolean value) {
+        this.standard = value;
     }
 
-
     /**
-     * Gets the states value for this Country.
+     * Gets the value of the states property.
      * 
-     * @return states
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the states property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getStates().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link State }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.State[] getStates() {
-        return states;
+    public List<State> getStates() {
+        if (states == null) {
+            states = new ArrayList<State>();
+        }
+        return this.states;
     }
-
 
     /**
-     * Sets the states value for this Country.
+     * Gets the value of the visible property.
      * 
-     * @param states
-     */
-    public void setStates(com.sforce.soap._2006._04.metadata.State[] states) {
-        this.states = states;
-    }
-
-    public com.sforce.soap._2006._04.metadata.State getStates(int i) {
-        return this.states[i];
-    }
-
-    public void setStates(int i, com.sforce.soap._2006._04.metadata.State _value) {
-        this.states[i] = _value;
-    }
-
-
-    /**
-     * Gets the visible value for this Country.
-     * 
-     * @return visible
      */
     public boolean isVisible() {
         return visible;
     }
 
-
     /**
-     * Sets the visible value for this Country.
+     * Sets the value of the visible property.
      * 
-     * @param visible
      */
-    public void setVisible(boolean visible) {
-        this.visible = visible;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Country)) return false;
-        Country other = (Country) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            this.active == other.isActive() &&
-            ((this.integrationValue==null && other.getIntegrationValue()==null) || 
-             (this.integrationValue!=null &&
-              this.integrationValue.equals(other.getIntegrationValue()))) &&
-            ((this.isoCode==null && other.getIsoCode()==null) || 
-             (this.isoCode!=null &&
-              this.isoCode.equals(other.getIsoCode()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            this.orgDefault == other.isOrgDefault() &&
-            this.standard == other.isStandard() &&
-            ((this.states==null && other.getStates()==null) || 
-             (this.states!=null &&
-              java.util.Arrays.equals(this.states, other.getStates()))) &&
-            this.visible == other.isVisible();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        _hashCode += (isActive() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getIntegrationValue() != null) {
-            _hashCode += getIntegrationValue().hashCode();
-        }
-        if (getIsoCode() != null) {
-            _hashCode += getIsoCode().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        _hashCode += (isOrgDefault() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isStandard() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getStates() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getStates());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getStates(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        _hashCode += (isVisible() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Country.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Country"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("active");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "active"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("integrationValue");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "integrationValue"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isoCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isoCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("orgDefault");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "orgDefault"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("standard");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "standard"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("states");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "states"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "State"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("visible");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "visible"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setVisible(boolean value) {
+        this.visible = value;
     }
 
 }

@@ -1,74 +1,57 @@
-/**
- * LiveChatButtonPresentation.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class LiveChatButtonPresentation implements java.io.Serializable {
-    private java.lang.String _value_;
-    private static java.util.HashMap _table_ = new java.util.HashMap();
+import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
+import javax.xml.bind.annotation.XmlType;
 
-    // Constructor
-    protected LiveChatButtonPresentation(java.lang.String value) {
-        _value_ = value;
-        _table_.put(_value_,this);
+
+/**
+ * <p>Java class for LiveChatButtonPresentation.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="LiveChatButtonPresentation">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="Slide"/>
+ *     &lt;enumeration value="Fade"/>
+ *     &lt;enumeration value="Appear"/>
+ *     &lt;enumeration value="Custom"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
+ * </pre>
+ * 
+ */
+@XmlType(name = "LiveChatButtonPresentation", namespace = "http://soap.sforce.com/2006/04/metadata")
+@XmlEnum
+public enum LiveChatButtonPresentation {
+
+    @XmlEnumValue("Slide")
+    SLIDE("Slide"),
+    @XmlEnumValue("Fade")
+    FADE("Fade"),
+    @XmlEnumValue("Appear")
+    APPEAR("Appear"),
+    @XmlEnumValue("Custom")
+    CUSTOM("Custom");
+    private final String value;
+
+    LiveChatButtonPresentation(String v) {
+        value = v;
     }
 
-    public static final java.lang.String _Slide = "Slide";
-    public static final java.lang.String _Fade = "Fade";
-    public static final java.lang.String _Appear = "Appear";
-    public static final java.lang.String _Custom = "Custom";
-    public static final LiveChatButtonPresentation Slide = new LiveChatButtonPresentation(_Slide);
-    public static final LiveChatButtonPresentation Fade = new LiveChatButtonPresentation(_Fade);
-    public static final LiveChatButtonPresentation Appear = new LiveChatButtonPresentation(_Appear);
-    public static final LiveChatButtonPresentation Custom = new LiveChatButtonPresentation(_Custom);
-    public java.lang.String getValue() { return _value_;}
-    public static LiveChatButtonPresentation fromValue(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        LiveChatButtonPresentation enumeration = (LiveChatButtonPresentation)
-            _table_.get(value);
-        if (enumeration==null) throw new java.lang.IllegalArgumentException();
-        return enumeration;
+    public String value() {
+        return value;
     }
-    public static LiveChatButtonPresentation fromString(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        return fromValue(value);
-    }
-    public boolean equals(java.lang.Object obj) {return (obj == this);}
-    public int hashCode() { return toString().hashCode();}
-    public java.lang.String toString() { return _value_;}
-    public java.lang.Object readResolve() throws java.io.ObjectStreamException { return fromValue(_value_);}
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumSerializer(
-            _javaType, _xmlType);
-    }
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumDeserializer(
-            _javaType, _xmlType);
-    }
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(LiveChatButtonPresentation.class);
 
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatButtonPresentation"));
-    }
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public static LiveChatButtonPresentation fromValue(String v) {
+        for (LiveChatButtonPresentation c: LiveChatButtonPresentation.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

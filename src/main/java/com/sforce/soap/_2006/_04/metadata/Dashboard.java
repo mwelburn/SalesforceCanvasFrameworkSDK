@@ -1,608 +1,427 @@
-/**
- * Dashboard.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Dashboard  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String backgroundEndColor;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.ChartBackgroundDirection backgroundFadeDirection;
 
-    private java.lang.String backgroundStartColor;
+/**
+ * <p>Java class for Dashboard complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Dashboard">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="backgroundEndColor" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="backgroundFadeDirection" type="{http://soap.sforce.com/2006/04/metadata}ChartBackgroundDirection"/>
+ *         &lt;element name="backgroundStartColor" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="dashboardFilters" type="{http://soap.sforce.com/2006/04/metadata}DashboardFilter" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="dashboardType" type="{http://soap.sforce.com/2006/04/metadata}DashboardType" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="leftSection" type="{http://soap.sforce.com/2006/04/metadata}DashboardComponentSection"/>
+ *         &lt;element name="middleSection" type="{http://soap.sforce.com/2006/04/metadata}DashboardComponentSection" minOccurs="0"/>
+ *         &lt;element name="rightSection" type="{http://soap.sforce.com/2006/04/metadata}DashboardComponentSection"/>
+ *         &lt;element name="runningUser" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="textColor" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="titleColor" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="titleSize" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Dashboard", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "backgroundEndColor",
+    "backgroundFadeDirection",
+    "backgroundStartColor",
+    "dashboardFilters",
+    "dashboardType",
+    "description",
+    "leftSection",
+    "middleSection",
+    "rightSection",
+    "runningUser",
+    "textColor",
+    "title",
+    "titleColor",
+    "titleSize"
+})
+public class Dashboard
+    extends Metadata
+{
 
-    private com.sforce.soap._2006._04.metadata.DashboardFilter[] dashboardFilters;
-
-    private com.sforce.soap._2006._04.metadata.DashboardType dashboardType;
-
-    private java.lang.String description;
-
-    private com.sforce.soap._2006._04.metadata.DashboardComponentSection leftSection;
-
-    private com.sforce.soap._2006._04.metadata.DashboardComponentSection middleSection;
-
-    private com.sforce.soap._2006._04.metadata.DashboardComponentSection rightSection;
-
-    private java.lang.String runningUser;
-
-    private java.lang.String textColor;
-
-    private java.lang.String title;
-
-    private java.lang.String titleColor;
-
-    private int titleSize;
-
-    public Dashboard() {
-    }
-
-    public Dashboard(
-           java.lang.String fullName,
-           java.lang.String backgroundEndColor,
-           com.sforce.soap._2006._04.metadata.ChartBackgroundDirection backgroundFadeDirection,
-           java.lang.String backgroundStartColor,
-           com.sforce.soap._2006._04.metadata.DashboardFilter[] dashboardFilters,
-           com.sforce.soap._2006._04.metadata.DashboardType dashboardType,
-           java.lang.String description,
-           com.sforce.soap._2006._04.metadata.DashboardComponentSection leftSection,
-           com.sforce.soap._2006._04.metadata.DashboardComponentSection middleSection,
-           com.sforce.soap._2006._04.metadata.DashboardComponentSection rightSection,
-           java.lang.String runningUser,
-           java.lang.String textColor,
-           java.lang.String title,
-           java.lang.String titleColor,
-           int titleSize) {
-        super(
-            fullName);
-        this.backgroundEndColor = backgroundEndColor;
-        this.backgroundFadeDirection = backgroundFadeDirection;
-        this.backgroundStartColor = backgroundStartColor;
-        this.dashboardFilters = dashboardFilters;
-        this.dashboardType = dashboardType;
-        this.description = description;
-        this.leftSection = leftSection;
-        this.middleSection = middleSection;
-        this.rightSection = rightSection;
-        this.runningUser = runningUser;
-        this.textColor = textColor;
-        this.title = title;
-        this.titleColor = titleColor;
-        this.titleSize = titleSize;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String backgroundEndColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected ChartBackgroundDirection backgroundFadeDirection;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String backgroundStartColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<DashboardFilter> dashboardFilters;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DashboardType dashboardType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected DashboardComponentSection leftSection;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DashboardComponentSection middleSection;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected DashboardComponentSection rightSection;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String runningUser;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String textColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String title;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String titleColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int titleSize;
 
     /**
-     * Gets the backgroundEndColor value for this Dashboard.
+     * Gets the value of the backgroundEndColor property.
      * 
-     * @return backgroundEndColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBackgroundEndColor() {
+    public String getBackgroundEndColor() {
         return backgroundEndColor;
     }
 
-
     /**
-     * Sets the backgroundEndColor value for this Dashboard.
+     * Sets the value of the backgroundEndColor property.
      * 
-     * @param backgroundEndColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBackgroundEndColor(java.lang.String backgroundEndColor) {
-        this.backgroundEndColor = backgroundEndColor;
+    public void setBackgroundEndColor(String value) {
+        this.backgroundEndColor = value;
     }
 
-
     /**
-     * Gets the backgroundFadeDirection value for this Dashboard.
+     * Gets the value of the backgroundFadeDirection property.
      * 
-     * @return backgroundFadeDirection
+     * @return
+     *     possible object is
+     *     {@link ChartBackgroundDirection }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartBackgroundDirection getBackgroundFadeDirection() {
+    public ChartBackgroundDirection getBackgroundFadeDirection() {
         return backgroundFadeDirection;
     }
 
-
     /**
-     * Sets the backgroundFadeDirection value for this Dashboard.
+     * Sets the value of the backgroundFadeDirection property.
      * 
-     * @param backgroundFadeDirection
+     * @param value
+     *     allowed object is
+     *     {@link ChartBackgroundDirection }
+     *     
      */
-    public void setBackgroundFadeDirection(com.sforce.soap._2006._04.metadata.ChartBackgroundDirection backgroundFadeDirection) {
-        this.backgroundFadeDirection = backgroundFadeDirection;
+    public void setBackgroundFadeDirection(ChartBackgroundDirection value) {
+        this.backgroundFadeDirection = value;
     }
 
-
     /**
-     * Gets the backgroundStartColor value for this Dashboard.
+     * Gets the value of the backgroundStartColor property.
      * 
-     * @return backgroundStartColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBackgroundStartColor() {
+    public String getBackgroundStartColor() {
         return backgroundStartColor;
     }
 
+    /**
+     * Sets the value of the backgroundStartColor property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBackgroundStartColor(String value) {
+        this.backgroundStartColor = value;
+    }
 
     /**
-     * Sets the backgroundStartColor value for this Dashboard.
+     * Gets the value of the dashboardFilters property.
      * 
-     * @param backgroundStartColor
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the dashboardFilters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDashboardFilters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DashboardFilter }
+     * 
+     * 
      */
-    public void setBackgroundStartColor(java.lang.String backgroundStartColor) {
-        this.backgroundStartColor = backgroundStartColor;
+    public List<DashboardFilter> getDashboardFilters() {
+        if (dashboardFilters == null) {
+            dashboardFilters = new ArrayList<DashboardFilter>();
+        }
+        return this.dashboardFilters;
     }
-
 
     /**
-     * Gets the dashboardFilters value for this Dashboard.
+     * Gets the value of the dashboardType property.
      * 
-     * @return dashboardFilters
+     * @return
+     *     possible object is
+     *     {@link DashboardType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DashboardFilter[] getDashboardFilters() {
-        return dashboardFilters;
-    }
-
-
-    /**
-     * Sets the dashboardFilters value for this Dashboard.
-     * 
-     * @param dashboardFilters
-     */
-    public void setDashboardFilters(com.sforce.soap._2006._04.metadata.DashboardFilter[] dashboardFilters) {
-        this.dashboardFilters = dashboardFilters;
-    }
-
-    public com.sforce.soap._2006._04.metadata.DashboardFilter getDashboardFilters(int i) {
-        return this.dashboardFilters[i];
-    }
-
-    public void setDashboardFilters(int i, com.sforce.soap._2006._04.metadata.DashboardFilter _value) {
-        this.dashboardFilters[i] = _value;
-    }
-
-
-    /**
-     * Gets the dashboardType value for this Dashboard.
-     * 
-     * @return dashboardType
-     */
-    public com.sforce.soap._2006._04.metadata.DashboardType getDashboardType() {
+    public DashboardType getDashboardType() {
         return dashboardType;
     }
 
-
     /**
-     * Sets the dashboardType value for this Dashboard.
+     * Sets the value of the dashboardType property.
      * 
-     * @param dashboardType
+     * @param value
+     *     allowed object is
+     *     {@link DashboardType }
+     *     
      */
-    public void setDashboardType(com.sforce.soap._2006._04.metadata.DashboardType dashboardType) {
-        this.dashboardType = dashboardType;
+    public void setDashboardType(DashboardType value) {
+        this.dashboardType = value;
     }
 
-
     /**
-     * Gets the description value for this Dashboard.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this Dashboard.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the leftSection value for this Dashboard.
+     * Gets the value of the leftSection property.
      * 
-     * @return leftSection
+     * @return
+     *     possible object is
+     *     {@link DashboardComponentSection }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DashboardComponentSection getLeftSection() {
+    public DashboardComponentSection getLeftSection() {
         return leftSection;
     }
 
-
     /**
-     * Sets the leftSection value for this Dashboard.
+     * Sets the value of the leftSection property.
      * 
-     * @param leftSection
+     * @param value
+     *     allowed object is
+     *     {@link DashboardComponentSection }
+     *     
      */
-    public void setLeftSection(com.sforce.soap._2006._04.metadata.DashboardComponentSection leftSection) {
-        this.leftSection = leftSection;
+    public void setLeftSection(DashboardComponentSection value) {
+        this.leftSection = value;
     }
 
-
     /**
-     * Gets the middleSection value for this Dashboard.
+     * Gets the value of the middleSection property.
      * 
-     * @return middleSection
+     * @return
+     *     possible object is
+     *     {@link DashboardComponentSection }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DashboardComponentSection getMiddleSection() {
+    public DashboardComponentSection getMiddleSection() {
         return middleSection;
     }
 
-
     /**
-     * Sets the middleSection value for this Dashboard.
+     * Sets the value of the middleSection property.
      * 
-     * @param middleSection
+     * @param value
+     *     allowed object is
+     *     {@link DashboardComponentSection }
+     *     
      */
-    public void setMiddleSection(com.sforce.soap._2006._04.metadata.DashboardComponentSection middleSection) {
-        this.middleSection = middleSection;
+    public void setMiddleSection(DashboardComponentSection value) {
+        this.middleSection = value;
     }
 
-
     /**
-     * Gets the rightSection value for this Dashboard.
+     * Gets the value of the rightSection property.
      * 
-     * @return rightSection
+     * @return
+     *     possible object is
+     *     {@link DashboardComponentSection }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DashboardComponentSection getRightSection() {
+    public DashboardComponentSection getRightSection() {
         return rightSection;
     }
 
-
     /**
-     * Sets the rightSection value for this Dashboard.
+     * Sets the value of the rightSection property.
      * 
-     * @param rightSection
+     * @param value
+     *     allowed object is
+     *     {@link DashboardComponentSection }
+     *     
      */
-    public void setRightSection(com.sforce.soap._2006._04.metadata.DashboardComponentSection rightSection) {
-        this.rightSection = rightSection;
+    public void setRightSection(DashboardComponentSection value) {
+        this.rightSection = value;
     }
 
-
     /**
-     * Gets the runningUser value for this Dashboard.
+     * Gets the value of the runningUser property.
      * 
-     * @return runningUser
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRunningUser() {
+    public String getRunningUser() {
         return runningUser;
     }
 
-
     /**
-     * Sets the runningUser value for this Dashboard.
+     * Sets the value of the runningUser property.
      * 
-     * @param runningUser
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRunningUser(java.lang.String runningUser) {
-        this.runningUser = runningUser;
+    public void setRunningUser(String value) {
+        this.runningUser = value;
     }
 
-
     /**
-     * Gets the textColor value for this Dashboard.
+     * Gets the value of the textColor property.
      * 
-     * @return textColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTextColor() {
+    public String getTextColor() {
         return textColor;
     }
 
-
     /**
-     * Sets the textColor value for this Dashboard.
+     * Sets the value of the textColor property.
      * 
-     * @param textColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTextColor(java.lang.String textColor) {
-        this.textColor = textColor;
+    public void setTextColor(String value) {
+        this.textColor = value;
     }
 
-
     /**
-     * Gets the title value for this Dashboard.
+     * Gets the value of the title property.
      * 
-     * @return title
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-
     /**
-     * Sets the title value for this Dashboard.
+     * Sets the value of the title property.
      * 
-     * @param title
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTitle(java.lang.String title) {
-        this.title = title;
+    public void setTitle(String value) {
+        this.title = value;
     }
 
-
     /**
-     * Gets the titleColor value for this Dashboard.
+     * Gets the value of the titleColor property.
      * 
-     * @return titleColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTitleColor() {
+    public String getTitleColor() {
         return titleColor;
     }
 
-
     /**
-     * Sets the titleColor value for this Dashboard.
+     * Sets the value of the titleColor property.
      * 
-     * @param titleColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTitleColor(java.lang.String titleColor) {
-        this.titleColor = titleColor;
+    public void setTitleColor(String value) {
+        this.titleColor = value;
     }
 
-
     /**
-     * Gets the titleSize value for this Dashboard.
+     * Gets the value of the titleSize property.
      * 
-     * @return titleSize
      */
     public int getTitleSize() {
         return titleSize;
     }
 
-
     /**
-     * Sets the titleSize value for this Dashboard.
+     * Sets the value of the titleSize property.
      * 
-     * @param titleSize
      */
-    public void setTitleSize(int titleSize) {
-        this.titleSize = titleSize;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Dashboard)) return false;
-        Dashboard other = (Dashboard) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.backgroundEndColor==null && other.getBackgroundEndColor()==null) || 
-             (this.backgroundEndColor!=null &&
-              this.backgroundEndColor.equals(other.getBackgroundEndColor()))) &&
-            ((this.backgroundFadeDirection==null && other.getBackgroundFadeDirection()==null) || 
-             (this.backgroundFadeDirection!=null &&
-              this.backgroundFadeDirection.equals(other.getBackgroundFadeDirection()))) &&
-            ((this.backgroundStartColor==null && other.getBackgroundStartColor()==null) || 
-             (this.backgroundStartColor!=null &&
-              this.backgroundStartColor.equals(other.getBackgroundStartColor()))) &&
-            ((this.dashboardFilters==null && other.getDashboardFilters()==null) || 
-             (this.dashboardFilters!=null &&
-              java.util.Arrays.equals(this.dashboardFilters, other.getDashboardFilters()))) &&
-            ((this.dashboardType==null && other.getDashboardType()==null) || 
-             (this.dashboardType!=null &&
-              this.dashboardType.equals(other.getDashboardType()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.leftSection==null && other.getLeftSection()==null) || 
-             (this.leftSection!=null &&
-              this.leftSection.equals(other.getLeftSection()))) &&
-            ((this.middleSection==null && other.getMiddleSection()==null) || 
-             (this.middleSection!=null &&
-              this.middleSection.equals(other.getMiddleSection()))) &&
-            ((this.rightSection==null && other.getRightSection()==null) || 
-             (this.rightSection!=null &&
-              this.rightSection.equals(other.getRightSection()))) &&
-            ((this.runningUser==null && other.getRunningUser()==null) || 
-             (this.runningUser!=null &&
-              this.runningUser.equals(other.getRunningUser()))) &&
-            ((this.textColor==null && other.getTextColor()==null) || 
-             (this.textColor!=null &&
-              this.textColor.equals(other.getTextColor()))) &&
-            ((this.title==null && other.getTitle()==null) || 
-             (this.title!=null &&
-              this.title.equals(other.getTitle()))) &&
-            ((this.titleColor==null && other.getTitleColor()==null) || 
-             (this.titleColor!=null &&
-              this.titleColor.equals(other.getTitleColor()))) &&
-            this.titleSize == other.getTitleSize();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getBackgroundEndColor() != null) {
-            _hashCode += getBackgroundEndColor().hashCode();
-        }
-        if (getBackgroundFadeDirection() != null) {
-            _hashCode += getBackgroundFadeDirection().hashCode();
-        }
-        if (getBackgroundStartColor() != null) {
-            _hashCode += getBackgroundStartColor().hashCode();
-        }
-        if (getDashboardFilters() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDashboardFilters());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDashboardFilters(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDashboardType() != null) {
-            _hashCode += getDashboardType().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getLeftSection() != null) {
-            _hashCode += getLeftSection().hashCode();
-        }
-        if (getMiddleSection() != null) {
-            _hashCode += getMiddleSection().hashCode();
-        }
-        if (getRightSection() != null) {
-            _hashCode += getRightSection().hashCode();
-        }
-        if (getRunningUser() != null) {
-            _hashCode += getRunningUser().hashCode();
-        }
-        if (getTextColor() != null) {
-            _hashCode += getTextColor().hashCode();
-        }
-        if (getTitle() != null) {
-            _hashCode += getTitle().hashCode();
-        }
-        if (getTitleColor() != null) {
-            _hashCode += getTitleColor().hashCode();
-        }
-        _hashCode += getTitleSize();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Dashboard.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Dashboard"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("backgroundEndColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "backgroundEndColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("backgroundFadeDirection");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "backgroundFadeDirection"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartBackgroundDirection"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("backgroundStartColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "backgroundStartColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dashboardFilters");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dashboardFilters"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dashboardType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dashboardType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("leftSection");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "leftSection"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardComponentSection"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("middleSection");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "middleSection"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardComponentSection"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rightSection");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rightSection"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardComponentSection"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("runningUser");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "runningUser"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("textColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "textColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("title");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "title"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("titleColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "titleColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("titleSize");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "titleSize"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTitleSize(int value) {
+        this.titleSize = value;
     }
 
 }

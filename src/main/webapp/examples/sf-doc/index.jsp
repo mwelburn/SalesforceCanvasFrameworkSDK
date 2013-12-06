@@ -13,7 +13,7 @@
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
     //String yourConsumerSecret="1818663124211010887";
     CanvasRequest cr = SignedRequest.verifyAndDecode(signedRequest[0], yourConsumerSecret);
-    
+
 	SFDoc mydoc = new SFDoc();
 	mydoc.initMetadataBinding(cr.getClient().getInstanceUrl(), cr.getClient().getOAuthToken());
 %>
@@ -41,7 +41,7 @@
 </head>
 <body>
 	<div>PROFILE: System Administrator</div>
-	<br/>
+    <br/>
 	<div>Applications</div>
 	<table>
 		<th>Name</th>

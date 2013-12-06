@@ -1,252 +1,155 @@
-/**
- * ApexComponent.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ApexComponent  extends com.sforce.soap._2006._04.metadata.MetadataWithContent  implements java.io.Serializable {
-    private java.lang.Double apiVersion;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String description;
 
-    private java.lang.String label;
+/**
+ * <p>Java class for ApexComponent complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ApexComponent">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}MetadataWithContent">
+ *       &lt;sequence>
+ *         &lt;element name="apiVersion" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="packageVersions" type="{http://soap.sforce.com/2006/04/metadata}PackageVersion" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ApexComponent", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "apiVersion",
+    "description",
+    "label",
+    "packageVersions"
+})
+public class ApexComponent
+    extends MetadataWithContent
+{
 
-    private com.sforce.soap._2006._04.metadata.PackageVersion[] packageVersions;
-
-    public ApexComponent() {
-    }
-
-    public ApexComponent(
-           java.lang.String fullName,
-           byte[] content,
-           java.lang.Double apiVersion,
-           java.lang.String description,
-           java.lang.String label,
-           com.sforce.soap._2006._04.metadata.PackageVersion[] packageVersions) {
-        super(
-            fullName,
-            content);
-        this.apiVersion = apiVersion;
-        this.description = description;
-        this.label = label;
-        this.packageVersions = packageVersions;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double apiVersion;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PackageVersion> packageVersions;
 
     /**
-     * Gets the apiVersion value for this ApexComponent.
+     * Gets the value of the apiVersion property.
      * 
-     * @return apiVersion
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getApiVersion() {
+    public Double getApiVersion() {
         return apiVersion;
     }
 
-
     /**
-     * Sets the apiVersion value for this ApexComponent.
+     * Sets the value of the apiVersion property.
      * 
-     * @param apiVersion
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
      */
-    public void setApiVersion(java.lang.Double apiVersion) {
-        this.apiVersion = apiVersion;
+    public void setApiVersion(Double value) {
+        this.apiVersion = value;
     }
 
-
     /**
-     * Gets the description value for this ApexComponent.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this ApexComponent.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the label value for this ApexComponent.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this ApexComponent.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the packageVersions value for this ApexComponent.
+     * Gets the value of the packageVersions property.
      * 
-     * @return packageVersions
-     */
-    public com.sforce.soap._2006._04.metadata.PackageVersion[] getPackageVersions() {
-        return packageVersions;
-    }
-
-
-    /**
-     * Sets the packageVersions value for this ApexComponent.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the packageVersions property.
      * 
-     * @param packageVersions
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPackageVersions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PackageVersion }
+     * 
+     * 
      */
-    public void setPackageVersions(com.sforce.soap._2006._04.metadata.PackageVersion[] packageVersions) {
-        this.packageVersions = packageVersions;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PackageVersion getPackageVersions(int i) {
-        return this.packageVersions[i];
-    }
-
-    public void setPackageVersions(int i, com.sforce.soap._2006._04.metadata.PackageVersion _value) {
-        this.packageVersions[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ApexComponent)) return false;
-        ApexComponent other = (ApexComponent) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<PackageVersion> getPackageVersions() {
+        if (packageVersions == null) {
+            packageVersions = new ArrayList<PackageVersion>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.apiVersion==null && other.getApiVersion()==null) || 
-             (this.apiVersion!=null &&
-              this.apiVersion.equals(other.getApiVersion()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.packageVersions==null && other.getPackageVersions()==null) || 
-             (this.packageVersions!=null &&
-              java.util.Arrays.equals(this.packageVersions, other.getPackageVersions())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getApiVersion() != null) {
-            _hashCode += getApiVersion().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getPackageVersions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPackageVersions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPackageVersions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ApexComponent.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApexComponent"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("apiVersion");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "apiVersion"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("packageVersions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "packageVersions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PackageVersion"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.packageVersions;
     }
 
 }

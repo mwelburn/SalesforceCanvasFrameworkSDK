@@ -1,94 +1,87 @@
-/**
- * ReportTypeCategory.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportTypeCategory implements java.io.Serializable {
-    private java.lang.String _value_;
-    private static java.util.HashMap _table_ = new java.util.HashMap();
+import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
+import javax.xml.bind.annotation.XmlType;
 
-    // Constructor
-    protected ReportTypeCategory(java.lang.String value) {
-        _value_ = value;
-        _table_.put(_value_,this);
+
+/**
+ * <p>Java class for ReportTypeCategory.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="ReportTypeCategory">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="accounts"/>
+ *     &lt;enumeration value="opportunities"/>
+ *     &lt;enumeration value="forecasts"/>
+ *     &lt;enumeration value="cases"/>
+ *     &lt;enumeration value="leads"/>
+ *     &lt;enumeration value="campaigns"/>
+ *     &lt;enumeration value="activities"/>
+ *     &lt;enumeration value="busop"/>
+ *     &lt;enumeration value="products"/>
+ *     &lt;enumeration value="admin"/>
+ *     &lt;enumeration value="territory"/>
+ *     &lt;enumeration value="other"/>
+ *     &lt;enumeration value="content"/>
+ *     &lt;enumeration value="usage_entitlement"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
+ * </pre>
+ * 
+ */
+@XmlType(name = "ReportTypeCategory", namespace = "http://soap.sforce.com/2006/04/metadata")
+@XmlEnum
+public enum ReportTypeCategory {
+
+    @XmlEnumValue("accounts")
+    ACCOUNTS("accounts"),
+    @XmlEnumValue("opportunities")
+    OPPORTUNITIES("opportunities"),
+    @XmlEnumValue("forecasts")
+    FORECASTS("forecasts"),
+    @XmlEnumValue("cases")
+    CASES("cases"),
+    @XmlEnumValue("leads")
+    LEADS("leads"),
+    @XmlEnumValue("campaigns")
+    CAMPAIGNS("campaigns"),
+    @XmlEnumValue("activities")
+    ACTIVITIES("activities"),
+    @XmlEnumValue("busop")
+    BUSOP("busop"),
+    @XmlEnumValue("products")
+    PRODUCTS("products"),
+    @XmlEnumValue("admin")
+    ADMIN("admin"),
+    @XmlEnumValue("territory")
+    TERRITORY("territory"),
+    @XmlEnumValue("other")
+    OTHER("other"),
+    @XmlEnumValue("content")
+    CONTENT("content"),
+    @XmlEnumValue("usage_entitlement")
+    USAGE_ENTITLEMENT("usage_entitlement");
+    private final String value;
+
+    ReportTypeCategory(String v) {
+        value = v;
     }
 
-    public static final java.lang.String _accounts = "accounts";
-    public static final java.lang.String _opportunities = "opportunities";
-    public static final java.lang.String _forecasts = "forecasts";
-    public static final java.lang.String _cases = "cases";
-    public static final java.lang.String _leads = "leads";
-    public static final java.lang.String _campaigns = "campaigns";
-    public static final java.lang.String _activities = "activities";
-    public static final java.lang.String _busop = "busop";
-    public static final java.lang.String _products = "products";
-    public static final java.lang.String _admin = "admin";
-    public static final java.lang.String _territory = "territory";
-    public static final java.lang.String _other = "other";
-    public static final java.lang.String _content = "content";
-    public static final java.lang.String _usage_entitlement = "usage_entitlement";
-    public static final ReportTypeCategory accounts = new ReportTypeCategory(_accounts);
-    public static final ReportTypeCategory opportunities = new ReportTypeCategory(_opportunities);
-    public static final ReportTypeCategory forecasts = new ReportTypeCategory(_forecasts);
-    public static final ReportTypeCategory cases = new ReportTypeCategory(_cases);
-    public static final ReportTypeCategory leads = new ReportTypeCategory(_leads);
-    public static final ReportTypeCategory campaigns = new ReportTypeCategory(_campaigns);
-    public static final ReportTypeCategory activities = new ReportTypeCategory(_activities);
-    public static final ReportTypeCategory busop = new ReportTypeCategory(_busop);
-    public static final ReportTypeCategory products = new ReportTypeCategory(_products);
-    public static final ReportTypeCategory admin = new ReportTypeCategory(_admin);
-    public static final ReportTypeCategory territory = new ReportTypeCategory(_territory);
-    public static final ReportTypeCategory other = new ReportTypeCategory(_other);
-    public static final ReportTypeCategory content = new ReportTypeCategory(_content);
-    public static final ReportTypeCategory usage_entitlement = new ReportTypeCategory(_usage_entitlement);
-    public java.lang.String getValue() { return _value_;}
-    public static ReportTypeCategory fromValue(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        ReportTypeCategory enumeration = (ReportTypeCategory)
-            _table_.get(value);
-        if (enumeration==null) throw new java.lang.IllegalArgumentException();
-        return enumeration;
+    public String value() {
+        return value;
     }
-    public static ReportTypeCategory fromString(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        return fromValue(value);
-    }
-    public boolean equals(java.lang.Object obj) {return (obj == this);}
-    public int hashCode() { return toString().hashCode();}
-    public java.lang.String toString() { return _value_;}
-    public java.lang.Object readResolve() throws java.io.ObjectStreamException { return fromValue(_value_);}
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumSerializer(
-            _javaType, _xmlType);
-    }
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumDeserializer(
-            _javaType, _xmlType);
-    }
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportTypeCategory.class);
 
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportTypeCategory"));
-    }
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public static ReportTypeCategory fromValue(String v) {
+        for (ReportTypeCategory c: ReportTypeCategory.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

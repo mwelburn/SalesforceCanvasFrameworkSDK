@@ -1,156 +1,90 @@
-/**
- * PicklistValueTranslation.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class PicklistValueTranslation  implements java.io.Serializable {
-    private java.lang.String masterLabel;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String translation;
 
-    public PicklistValueTranslation() {
-    }
+/**
+ * <p>Java class for PicklistValueTranslation complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="PicklistValueTranslation">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="masterLabel" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="translation" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "PicklistValueTranslation", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "masterLabel",
+    "translation"
+})
+public class PicklistValueTranslation {
 
-    public PicklistValueTranslation(
-           java.lang.String masterLabel,
-           java.lang.String translation) {
-           this.masterLabel = masterLabel;
-           this.translation = translation;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String masterLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String translation;
 
     /**
-     * Gets the masterLabel value for this PicklistValueTranslation.
+     * Gets the value of the masterLabel property.
      * 
-     * @return masterLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMasterLabel() {
+    public String getMasterLabel() {
         return masterLabel;
     }
 
-
     /**
-     * Sets the masterLabel value for this PicklistValueTranslation.
+     * Sets the value of the masterLabel property.
      * 
-     * @param masterLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMasterLabel(java.lang.String masterLabel) {
-        this.masterLabel = masterLabel;
+    public void setMasterLabel(String value) {
+        this.masterLabel = value;
     }
 
-
     /**
-     * Gets the translation value for this PicklistValueTranslation.
+     * Gets the value of the translation property.
      * 
-     * @return translation
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTranslation() {
+    public String getTranslation() {
         return translation;
     }
 
-
     /**
-     * Sets the translation value for this PicklistValueTranslation.
+     * Sets the value of the translation property.
      * 
-     * @param translation
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTranslation(java.lang.String translation) {
-        this.translation = translation;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof PicklistValueTranslation)) return false;
-        PicklistValueTranslation other = (PicklistValueTranslation) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.masterLabel==null && other.getMasterLabel()==null) || 
-             (this.masterLabel!=null &&
-              this.masterLabel.equals(other.getMasterLabel()))) &&
-            ((this.translation==null && other.getTranslation()==null) || 
-             (this.translation!=null &&
-              this.translation.equals(other.getTranslation())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getMasterLabel() != null) {
-            _hashCode += getMasterLabel().hashCode();
-        }
-        if (getTranslation() != null) {
-            _hashCode += getTranslation().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(PicklistValueTranslation.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PicklistValueTranslation"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("masterLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "masterLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("translation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "translation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTranslation(String value) {
+        this.translation = value;
     }
 
 }

@@ -1,160 +1,92 @@
-/**
- * MilestoneType.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class MilestoneType  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String description;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.MilestoneTypeRecurrenceType recurrenceType;
 
-    public MilestoneType() {
-    }
+/**
+ * <p>Java class for MilestoneType complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="MilestoneType">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="recurrenceType" type="{http://soap.sforce.com/2006/04/metadata}MilestoneTypeRecurrenceType" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "MilestoneType", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "description",
+    "recurrenceType"
+})
+public class MilestoneType
+    extends Metadata
+{
 
-    public MilestoneType(
-           java.lang.String fullName,
-           java.lang.String description,
-           com.sforce.soap._2006._04.metadata.MilestoneTypeRecurrenceType recurrenceType) {
-        super(
-            fullName);
-        this.description = description;
-        this.recurrenceType = recurrenceType;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected MilestoneTypeRecurrenceType recurrenceType;
 
     /**
-     * Gets the description value for this MilestoneType.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this MilestoneType.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the recurrenceType value for this MilestoneType.
+     * Gets the value of the recurrenceType property.
      * 
-     * @return recurrenceType
+     * @return
+     *     possible object is
+     *     {@link MilestoneTypeRecurrenceType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.MilestoneTypeRecurrenceType getRecurrenceType() {
+    public MilestoneTypeRecurrenceType getRecurrenceType() {
         return recurrenceType;
     }
 
-
     /**
-     * Sets the recurrenceType value for this MilestoneType.
+     * Sets the value of the recurrenceType property.
      * 
-     * @param recurrenceType
+     * @param value
+     *     allowed object is
+     *     {@link MilestoneTypeRecurrenceType }
+     *     
      */
-    public void setRecurrenceType(com.sforce.soap._2006._04.metadata.MilestoneTypeRecurrenceType recurrenceType) {
-        this.recurrenceType = recurrenceType;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof MilestoneType)) return false;
-        MilestoneType other = (MilestoneType) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.recurrenceType==null && other.getRecurrenceType()==null) || 
-             (this.recurrenceType!=null &&
-              this.recurrenceType.equals(other.getRecurrenceType())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getRecurrenceType() != null) {
-            _hashCode += getRecurrenceType().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(MilestoneType.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "MilestoneType"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recurrenceType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recurrenceType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "MilestoneTypeRecurrenceType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setRecurrenceType(MilestoneTypeRecurrenceType value) {
+        this.recurrenceType = value;
     }
 
 }

@@ -1,339 +1,230 @@
-/**
- * ConnectedAppSamlConfig.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ConnectedAppSamlConfig  implements java.io.Serializable {
-    private java.lang.String acsUrl;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String certificate;
 
-    private java.lang.String entityUrl;
+/**
+ * <p>Java class for ConnectedAppSamlConfig complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ConnectedAppSamlConfig">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="acsUrl" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="certificate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="entityUrl" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="issuer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="samlNameIdFormat" type="{http://soap.sforce.com/2006/04/metadata}SamlNameIdFormatType" minOccurs="0"/>
+ *         &lt;element name="samlSubjectCustomAttr" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="samlSubjectType" type="{http://soap.sforce.com/2006/04/metadata}SamlSubjectType"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ConnectedAppSamlConfig", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "acsUrl",
+    "certificate",
+    "entityUrl",
+    "issuer",
+    "samlNameIdFormat",
+    "samlSubjectCustomAttr",
+    "samlSubjectType"
+})
+public class ConnectedAppSamlConfig {
 
-    private java.lang.String issuer;
-
-    private com.sforce.soap._2006._04.metadata.SamlNameIdFormatType samlNameIdFormat;
-
-    private java.lang.String samlSubjectCustomAttr;
-
-    private com.sforce.soap._2006._04.metadata.SamlSubjectType samlSubjectType;
-
-    public ConnectedAppSamlConfig() {
-    }
-
-    public ConnectedAppSamlConfig(
-           java.lang.String acsUrl,
-           java.lang.String certificate,
-           java.lang.String entityUrl,
-           java.lang.String issuer,
-           com.sforce.soap._2006._04.metadata.SamlNameIdFormatType samlNameIdFormat,
-           java.lang.String samlSubjectCustomAttr,
-           com.sforce.soap._2006._04.metadata.SamlSubjectType samlSubjectType) {
-           this.acsUrl = acsUrl;
-           this.certificate = certificate;
-           this.entityUrl = entityUrl;
-           this.issuer = issuer;
-           this.samlNameIdFormat = samlNameIdFormat;
-           this.samlSubjectCustomAttr = samlSubjectCustomAttr;
-           this.samlSubjectType = samlSubjectType;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String acsUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String certificate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String entityUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String issuer;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SamlNameIdFormatType samlNameIdFormat;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String samlSubjectCustomAttr;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SamlSubjectType samlSubjectType;
 
     /**
-     * Gets the acsUrl value for this ConnectedAppSamlConfig.
+     * Gets the value of the acsUrl property.
      * 
-     * @return acsUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAcsUrl() {
+    public String getAcsUrl() {
         return acsUrl;
     }
 
-
     /**
-     * Sets the acsUrl value for this ConnectedAppSamlConfig.
+     * Sets the value of the acsUrl property.
      * 
-     * @param acsUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAcsUrl(java.lang.String acsUrl) {
-        this.acsUrl = acsUrl;
+    public void setAcsUrl(String value) {
+        this.acsUrl = value;
     }
 
-
     /**
-     * Gets the certificate value for this ConnectedAppSamlConfig.
+     * Gets the value of the certificate property.
      * 
-     * @return certificate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCertificate() {
+    public String getCertificate() {
         return certificate;
     }
 
-
     /**
-     * Sets the certificate value for this ConnectedAppSamlConfig.
+     * Sets the value of the certificate property.
      * 
-     * @param certificate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCertificate(java.lang.String certificate) {
-        this.certificate = certificate;
+    public void setCertificate(String value) {
+        this.certificate = value;
     }
 
-
     /**
-     * Gets the entityUrl value for this ConnectedAppSamlConfig.
+     * Gets the value of the entityUrl property.
      * 
-     * @return entityUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEntityUrl() {
+    public String getEntityUrl() {
         return entityUrl;
     }
 
-
     /**
-     * Sets the entityUrl value for this ConnectedAppSamlConfig.
+     * Sets the value of the entityUrl property.
      * 
-     * @param entityUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEntityUrl(java.lang.String entityUrl) {
-        this.entityUrl = entityUrl;
+    public void setEntityUrl(String value) {
+        this.entityUrl = value;
     }
 
-
     /**
-     * Gets the issuer value for this ConnectedAppSamlConfig.
+     * Gets the value of the issuer property.
      * 
-     * @return issuer
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIssuer() {
+    public String getIssuer() {
         return issuer;
     }
 
-
     /**
-     * Sets the issuer value for this ConnectedAppSamlConfig.
+     * Sets the value of the issuer property.
      * 
-     * @param issuer
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIssuer(java.lang.String issuer) {
-        this.issuer = issuer;
+    public void setIssuer(String value) {
+        this.issuer = value;
     }
 
-
     /**
-     * Gets the samlNameIdFormat value for this ConnectedAppSamlConfig.
+     * Gets the value of the samlNameIdFormat property.
      * 
-     * @return samlNameIdFormat
+     * @return
+     *     possible object is
+     *     {@link SamlNameIdFormatType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SamlNameIdFormatType getSamlNameIdFormat() {
+    public SamlNameIdFormatType getSamlNameIdFormat() {
         return samlNameIdFormat;
     }
 
-
     /**
-     * Sets the samlNameIdFormat value for this ConnectedAppSamlConfig.
+     * Sets the value of the samlNameIdFormat property.
      * 
-     * @param samlNameIdFormat
+     * @param value
+     *     allowed object is
+     *     {@link SamlNameIdFormatType }
+     *     
      */
-    public void setSamlNameIdFormat(com.sforce.soap._2006._04.metadata.SamlNameIdFormatType samlNameIdFormat) {
-        this.samlNameIdFormat = samlNameIdFormat;
+    public void setSamlNameIdFormat(SamlNameIdFormatType value) {
+        this.samlNameIdFormat = value;
     }
 
-
     /**
-     * Gets the samlSubjectCustomAttr value for this ConnectedAppSamlConfig.
+     * Gets the value of the samlSubjectCustomAttr property.
      * 
-     * @return samlSubjectCustomAttr
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSamlSubjectCustomAttr() {
+    public String getSamlSubjectCustomAttr() {
         return samlSubjectCustomAttr;
     }
 
-
     /**
-     * Sets the samlSubjectCustomAttr value for this ConnectedAppSamlConfig.
+     * Sets the value of the samlSubjectCustomAttr property.
      * 
-     * @param samlSubjectCustomAttr
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSamlSubjectCustomAttr(java.lang.String samlSubjectCustomAttr) {
-        this.samlSubjectCustomAttr = samlSubjectCustomAttr;
+    public void setSamlSubjectCustomAttr(String value) {
+        this.samlSubjectCustomAttr = value;
     }
 
-
     /**
-     * Gets the samlSubjectType value for this ConnectedAppSamlConfig.
+     * Gets the value of the samlSubjectType property.
      * 
-     * @return samlSubjectType
+     * @return
+     *     possible object is
+     *     {@link SamlSubjectType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SamlSubjectType getSamlSubjectType() {
+    public SamlSubjectType getSamlSubjectType() {
         return samlSubjectType;
     }
 
-
     /**
-     * Sets the samlSubjectType value for this ConnectedAppSamlConfig.
+     * Sets the value of the samlSubjectType property.
      * 
-     * @param samlSubjectType
+     * @param value
+     *     allowed object is
+     *     {@link SamlSubjectType }
+     *     
      */
-    public void setSamlSubjectType(com.sforce.soap._2006._04.metadata.SamlSubjectType samlSubjectType) {
-        this.samlSubjectType = samlSubjectType;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ConnectedAppSamlConfig)) return false;
-        ConnectedAppSamlConfig other = (ConnectedAppSamlConfig) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.acsUrl==null && other.getAcsUrl()==null) || 
-             (this.acsUrl!=null &&
-              this.acsUrl.equals(other.getAcsUrl()))) &&
-            ((this.certificate==null && other.getCertificate()==null) || 
-             (this.certificate!=null &&
-              this.certificate.equals(other.getCertificate()))) &&
-            ((this.entityUrl==null && other.getEntityUrl()==null) || 
-             (this.entityUrl!=null &&
-              this.entityUrl.equals(other.getEntityUrl()))) &&
-            ((this.issuer==null && other.getIssuer()==null) || 
-             (this.issuer!=null &&
-              this.issuer.equals(other.getIssuer()))) &&
-            ((this.samlNameIdFormat==null && other.getSamlNameIdFormat()==null) || 
-             (this.samlNameIdFormat!=null &&
-              this.samlNameIdFormat.equals(other.getSamlNameIdFormat()))) &&
-            ((this.samlSubjectCustomAttr==null && other.getSamlSubjectCustomAttr()==null) || 
-             (this.samlSubjectCustomAttr!=null &&
-              this.samlSubjectCustomAttr.equals(other.getSamlSubjectCustomAttr()))) &&
-            ((this.samlSubjectType==null && other.getSamlSubjectType()==null) || 
-             (this.samlSubjectType!=null &&
-              this.samlSubjectType.equals(other.getSamlSubjectType())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAcsUrl() != null) {
-            _hashCode += getAcsUrl().hashCode();
-        }
-        if (getCertificate() != null) {
-            _hashCode += getCertificate().hashCode();
-        }
-        if (getEntityUrl() != null) {
-            _hashCode += getEntityUrl().hashCode();
-        }
-        if (getIssuer() != null) {
-            _hashCode += getIssuer().hashCode();
-        }
-        if (getSamlNameIdFormat() != null) {
-            _hashCode += getSamlNameIdFormat().hashCode();
-        }
-        if (getSamlSubjectCustomAttr() != null) {
-            _hashCode += getSamlSubjectCustomAttr().hashCode();
-        }
-        if (getSamlSubjectType() != null) {
-            _hashCode += getSamlSubjectType().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ConnectedAppSamlConfig.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppSamlConfig"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("acsUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "acsUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("certificate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "certificate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("entityUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "entityUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("issuer");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "issuer"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("samlNameIdFormat");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "samlNameIdFormat"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SamlNameIdFormatType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("samlSubjectCustomAttr");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "samlSubjectCustomAttr"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("samlSubjectType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "samlSubjectType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SamlSubjectType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSamlSubjectType(SamlSubjectType value) {
+        this.samlSubjectType = value;
     }
 
 }

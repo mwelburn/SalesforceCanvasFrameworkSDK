@@ -1,228 +1,146 @@
-/**
- * SiteRedirectMapping.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class SiteRedirectMapping  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.SiteRedirect action;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean isActive;
 
-    private java.lang.String source;
+/**
+ * <p>Java class for SiteRedirectMapping complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="SiteRedirectMapping">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="action" type="{http://soap.sforce.com/2006/04/metadata}SiteRedirect"/>
+ *         &lt;element name="isActive" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="source" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="target" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SiteRedirectMapping", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "action",
+    "isActive",
+    "source",
+    "target"
+})
+public class SiteRedirectMapping {
 
-    private java.lang.String target;
-
-    public SiteRedirectMapping() {
-    }
-
-    public SiteRedirectMapping(
-           com.sforce.soap._2006._04.metadata.SiteRedirect action,
-           java.lang.Boolean isActive,
-           java.lang.String source,
-           java.lang.String target) {
-           this.action = action;
-           this.isActive = isActive;
-           this.source = source;
-           this.target = target;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SiteRedirect action;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isActive;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String source;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String target;
 
     /**
-     * Gets the action value for this SiteRedirectMapping.
+     * Gets the value of the action property.
      * 
-     * @return action
+     * @return
+     *     possible object is
+     *     {@link SiteRedirect }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SiteRedirect getAction() {
+    public SiteRedirect getAction() {
         return action;
     }
 
-
     /**
-     * Sets the action value for this SiteRedirectMapping.
+     * Sets the value of the action property.
      * 
-     * @param action
+     * @param value
+     *     allowed object is
+     *     {@link SiteRedirect }
+     *     
      */
-    public void setAction(com.sforce.soap._2006._04.metadata.SiteRedirect action) {
-        this.action = action;
+    public void setAction(SiteRedirect value) {
+        this.action = value;
     }
 
-
     /**
-     * Gets the isActive value for this SiteRedirectMapping.
+     * Gets the value of the isActive property.
      * 
-     * @return isActive
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsActive() {
+    public Boolean isIsActive() {
         return isActive;
     }
 
-
     /**
-     * Sets the isActive value for this SiteRedirectMapping.
+     * Sets the value of the isActive property.
      * 
-     * @param isActive
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsActive(java.lang.Boolean isActive) {
-        this.isActive = isActive;
+    public void setIsActive(Boolean value) {
+        this.isActive = value;
     }
 
-
     /**
-     * Gets the source value for this SiteRedirectMapping.
+     * Gets the value of the source property.
      * 
-     * @return source
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSource() {
+    public String getSource() {
         return source;
     }
 
-
     /**
-     * Sets the source value for this SiteRedirectMapping.
+     * Sets the value of the source property.
      * 
-     * @param source
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSource(java.lang.String source) {
-        this.source = source;
+    public void setSource(String value) {
+        this.source = value;
     }
 
-
     /**
-     * Gets the target value for this SiteRedirectMapping.
+     * Gets the value of the target property.
      * 
-     * @return target
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTarget() {
+    public String getTarget() {
         return target;
     }
 
-
     /**
-     * Sets the target value for this SiteRedirectMapping.
+     * Sets the value of the target property.
      * 
-     * @param target
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTarget(java.lang.String target) {
-        this.target = target;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SiteRedirectMapping)) return false;
-        SiteRedirectMapping other = (SiteRedirectMapping) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.action==null && other.getAction()==null) || 
-             (this.action!=null &&
-              this.action.equals(other.getAction()))) &&
-            ((this.isActive==null && other.getIsActive()==null) || 
-             (this.isActive!=null &&
-              this.isActive.equals(other.getIsActive()))) &&
-            ((this.source==null && other.getSource()==null) || 
-             (this.source!=null &&
-              this.source.equals(other.getSource()))) &&
-            ((this.target==null && other.getTarget()==null) || 
-             (this.target!=null &&
-              this.target.equals(other.getTarget())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAction() != null) {
-            _hashCode += getAction().hashCode();
-        }
-        if (getIsActive() != null) {
-            _hashCode += getIsActive().hashCode();
-        }
-        if (getSource() != null) {
-            _hashCode += getSource().hashCode();
-        }
-        if (getTarget() != null) {
-            _hashCode += getTarget().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SiteRedirectMapping.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SiteRedirectMapping"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("action");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "action"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SiteRedirect"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isActive");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isActive"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("source");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "source"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("target");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "target"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTarget(String value) {
+        this.target = value;
     }
 
 }

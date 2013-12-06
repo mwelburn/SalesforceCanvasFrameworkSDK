@@ -1,1630 +1,1176 @@
-/**
- * DashboardComponent.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class DashboardComponent  implements java.io.Serializable {
-    private java.lang.Boolean autoselectColumnsFromReport;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.ChartRangeType chartAxisRange;
 
-    private java.lang.Double chartAxisRangeMax;
+/**
+ * <p>Java class for DashboardComponent complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DashboardComponent">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="autoselectColumnsFromReport" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="chartAxisRange" type="{http://soap.sforce.com/2006/04/metadata}ChartRangeType" minOccurs="0"/>
+ *         &lt;element name="chartAxisRangeMax" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="chartAxisRangeMin" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="chartSummary" type="{http://soap.sforce.com/2006/04/metadata}ChartSummary" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="componentType" type="{http://soap.sforce.com/2006/04/metadata}DashboardComponentType"/>
+ *         &lt;element name="dashboardFilterColumns" type="{http://soap.sforce.com/2006/04/metadata}DashboardFilterColumn" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="dashboardTableColumn" type="{http://soap.sforce.com/2006/04/metadata}DashboardTableColumn" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="displayUnits" type="{http://soap.sforce.com/2006/04/metadata}ChartUnits" minOccurs="0"/>
+ *         &lt;element name="drillDownUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="drillEnabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="drillToDetailEnabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableHover" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="expandOthers" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="footer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="gaugeMax" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="gaugeMin" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="groupingColumn" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="header" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="indicatorBreakpoint1" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="indicatorBreakpoint2" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="indicatorHighColor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="indicatorLowColor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="indicatorMiddleColor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="legendPosition" type="{http://soap.sforce.com/2006/04/metadata}ChartLegendPosition" minOccurs="0"/>
+ *         &lt;element name="maxValuesDisplayed" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="metricLabel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="page" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="pageHeightInPixels" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="report" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="scontrol" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="scontrolHeightInPixels" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="showPercentage" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showPicturesOnCharts" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showPicturesOnTables" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showTotal" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showValues" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="sortBy" type="{http://soap.sforce.com/2006/04/metadata}DashboardComponentFilter" minOccurs="0"/>
+ *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="useReportChart" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DashboardComponent", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "autoselectColumnsFromReport",
+    "chartAxisRange",
+    "chartAxisRangeMax",
+    "chartAxisRangeMin",
+    "chartSummary",
+    "componentType",
+    "dashboardFilterColumns",
+    "dashboardTableColumn",
+    "displayUnits",
+    "drillDownUrl",
+    "drillEnabled",
+    "drillToDetailEnabled",
+    "enableHover",
+    "expandOthers",
+    "footer",
+    "gaugeMax",
+    "gaugeMin",
+    "groupingColumn",
+    "header",
+    "indicatorBreakpoint1",
+    "indicatorBreakpoint2",
+    "indicatorHighColor",
+    "indicatorLowColor",
+    "indicatorMiddleColor",
+    "legendPosition",
+    "maxValuesDisplayed",
+    "metricLabel",
+    "page",
+    "pageHeightInPixels",
+    "report",
+    "scontrol",
+    "scontrolHeightInPixels",
+    "showPercentage",
+    "showPicturesOnCharts",
+    "showPicturesOnTables",
+    "showTotal",
+    "showValues",
+    "sortBy",
+    "title",
+    "useReportChart"
+})
+public class DashboardComponent {
 
-    private java.lang.Double chartAxisRangeMin;
-
-    private com.sforce.soap._2006._04.metadata.ChartSummary[] chartSummary;
-
-    private com.sforce.soap._2006._04.metadata.DashboardComponentType componentType;
-
-    private com.sforce.soap._2006._04.metadata.DashboardFilterColumn[] dashboardFilterColumns;
-
-    private com.sforce.soap._2006._04.metadata.DashboardTableColumn[] dashboardTableColumn;
-
-    private com.sforce.soap._2006._04.metadata.ChartUnits displayUnits;
-
-    private java.lang.String drillDownUrl;
-
-    private java.lang.Boolean drillEnabled;
-
-    private java.lang.Boolean drillToDetailEnabled;
-
-    private java.lang.Boolean enableHover;
-
-    private java.lang.Boolean expandOthers;
-
-    private java.lang.String footer;
-
-    private java.lang.Double gaugeMax;
-
-    private java.lang.Double gaugeMin;
-
-    private java.lang.String[] groupingColumn;
-
-    private java.lang.String header;
-
-    private java.lang.Double indicatorBreakpoint1;
-
-    private java.lang.Double indicatorBreakpoint2;
-
-    private java.lang.String indicatorHighColor;
-
-    private java.lang.String indicatorLowColor;
-
-    private java.lang.String indicatorMiddleColor;
-
-    private com.sforce.soap._2006._04.metadata.ChartLegendPosition legendPosition;
-
-    private java.lang.Integer maxValuesDisplayed;
-
-    private java.lang.String metricLabel;
-
-    private java.lang.String page;
-
-    private java.lang.Integer pageHeightInPixels;
-
-    private java.lang.String report;
-
-    private java.lang.String scontrol;
-
-    private java.lang.Integer scontrolHeightInPixels;
-
-    private java.lang.Boolean showPercentage;
-
-    private java.lang.Boolean showPicturesOnCharts;
-
-    private java.lang.Boolean showPicturesOnTables;
-
-    private java.lang.Boolean showTotal;
-
-    private java.lang.Boolean showValues;
-
-    private com.sforce.soap._2006._04.metadata.DashboardComponentFilter sortBy;
-
-    private java.lang.String title;
-
-    private java.lang.Boolean useReportChart;
-
-    public DashboardComponent() {
-    }
-
-    public DashboardComponent(
-           java.lang.Boolean autoselectColumnsFromReport,
-           com.sforce.soap._2006._04.metadata.ChartRangeType chartAxisRange,
-           java.lang.Double chartAxisRangeMax,
-           java.lang.Double chartAxisRangeMin,
-           com.sforce.soap._2006._04.metadata.ChartSummary[] chartSummary,
-           com.sforce.soap._2006._04.metadata.DashboardComponentType componentType,
-           com.sforce.soap._2006._04.metadata.DashboardFilterColumn[] dashboardFilterColumns,
-           com.sforce.soap._2006._04.metadata.DashboardTableColumn[] dashboardTableColumn,
-           com.sforce.soap._2006._04.metadata.ChartUnits displayUnits,
-           java.lang.String drillDownUrl,
-           java.lang.Boolean drillEnabled,
-           java.lang.Boolean drillToDetailEnabled,
-           java.lang.Boolean enableHover,
-           java.lang.Boolean expandOthers,
-           java.lang.String footer,
-           java.lang.Double gaugeMax,
-           java.lang.Double gaugeMin,
-           java.lang.String[] groupingColumn,
-           java.lang.String header,
-           java.lang.Double indicatorBreakpoint1,
-           java.lang.Double indicatorBreakpoint2,
-           java.lang.String indicatorHighColor,
-           java.lang.String indicatorLowColor,
-           java.lang.String indicatorMiddleColor,
-           com.sforce.soap._2006._04.metadata.ChartLegendPosition legendPosition,
-           java.lang.Integer maxValuesDisplayed,
-           java.lang.String metricLabel,
-           java.lang.String page,
-           java.lang.Integer pageHeightInPixels,
-           java.lang.String report,
-           java.lang.String scontrol,
-           java.lang.Integer scontrolHeightInPixels,
-           java.lang.Boolean showPercentage,
-           java.lang.Boolean showPicturesOnCharts,
-           java.lang.Boolean showPicturesOnTables,
-           java.lang.Boolean showTotal,
-           java.lang.Boolean showValues,
-           com.sforce.soap._2006._04.metadata.DashboardComponentFilter sortBy,
-           java.lang.String title,
-           java.lang.Boolean useReportChart) {
-           this.autoselectColumnsFromReport = autoselectColumnsFromReport;
-           this.chartAxisRange = chartAxisRange;
-           this.chartAxisRangeMax = chartAxisRangeMax;
-           this.chartAxisRangeMin = chartAxisRangeMin;
-           this.chartSummary = chartSummary;
-           this.componentType = componentType;
-           this.dashboardFilterColumns = dashboardFilterColumns;
-           this.dashboardTableColumn = dashboardTableColumn;
-           this.displayUnits = displayUnits;
-           this.drillDownUrl = drillDownUrl;
-           this.drillEnabled = drillEnabled;
-           this.drillToDetailEnabled = drillToDetailEnabled;
-           this.enableHover = enableHover;
-           this.expandOthers = expandOthers;
-           this.footer = footer;
-           this.gaugeMax = gaugeMax;
-           this.gaugeMin = gaugeMin;
-           this.groupingColumn = groupingColumn;
-           this.header = header;
-           this.indicatorBreakpoint1 = indicatorBreakpoint1;
-           this.indicatorBreakpoint2 = indicatorBreakpoint2;
-           this.indicatorHighColor = indicatorHighColor;
-           this.indicatorLowColor = indicatorLowColor;
-           this.indicatorMiddleColor = indicatorMiddleColor;
-           this.legendPosition = legendPosition;
-           this.maxValuesDisplayed = maxValuesDisplayed;
-           this.metricLabel = metricLabel;
-           this.page = page;
-           this.pageHeightInPixels = pageHeightInPixels;
-           this.report = report;
-           this.scontrol = scontrol;
-           this.scontrolHeightInPixels = scontrolHeightInPixels;
-           this.showPercentage = showPercentage;
-           this.showPicturesOnCharts = showPicturesOnCharts;
-           this.showPicturesOnTables = showPicturesOnTables;
-           this.showTotal = showTotal;
-           this.showValues = showValues;
-           this.sortBy = sortBy;
-           this.title = title;
-           this.useReportChart = useReportChart;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean autoselectColumnsFromReport;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ChartRangeType chartAxisRange;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double chartAxisRangeMax;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double chartAxisRangeMin;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ChartSummary> chartSummary;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected DashboardComponentType componentType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<DashboardFilterColumn> dashboardFilterColumns;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<DashboardTableColumn> dashboardTableColumn;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ChartUnits displayUnits;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String drillDownUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean drillEnabled;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean drillToDetailEnabled;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableHover;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean expandOthers;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String footer;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double gaugeMax;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double gaugeMin;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> groupingColumn;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String header;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double indicatorBreakpoint1;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double indicatorBreakpoint2;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String indicatorHighColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String indicatorLowColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String indicatorMiddleColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ChartLegendPosition legendPosition;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer maxValuesDisplayed;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String metricLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String page;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer pageHeightInPixels;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String report;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String scontrol;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer scontrolHeightInPixels;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showPercentage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showPicturesOnCharts;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showPicturesOnTables;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showTotal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showValues;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DashboardComponentFilter sortBy;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String title;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean useReportChart;
 
     /**
-     * Gets the autoselectColumnsFromReport value for this DashboardComponent.
+     * Gets the value of the autoselectColumnsFromReport property.
      * 
-     * @return autoselectColumnsFromReport
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAutoselectColumnsFromReport() {
+    public Boolean isAutoselectColumnsFromReport() {
         return autoselectColumnsFromReport;
     }
 
-
     /**
-     * Sets the autoselectColumnsFromReport value for this DashboardComponent.
+     * Sets the value of the autoselectColumnsFromReport property.
      * 
-     * @param autoselectColumnsFromReport
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAutoselectColumnsFromReport(java.lang.Boolean autoselectColumnsFromReport) {
-        this.autoselectColumnsFromReport = autoselectColumnsFromReport;
+    public void setAutoselectColumnsFromReport(Boolean value) {
+        this.autoselectColumnsFromReport = value;
     }
 
-
     /**
-     * Gets the chartAxisRange value for this DashboardComponent.
+     * Gets the value of the chartAxisRange property.
      * 
-     * @return chartAxisRange
+     * @return
+     *     possible object is
+     *     {@link ChartRangeType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartRangeType getChartAxisRange() {
+    public ChartRangeType getChartAxisRange() {
         return chartAxisRange;
     }
 
-
     /**
-     * Sets the chartAxisRange value for this DashboardComponent.
+     * Sets the value of the chartAxisRange property.
      * 
-     * @param chartAxisRange
+     * @param value
+     *     allowed object is
+     *     {@link ChartRangeType }
+     *     
      */
-    public void setChartAxisRange(com.sforce.soap._2006._04.metadata.ChartRangeType chartAxisRange) {
-        this.chartAxisRange = chartAxisRange;
+    public void setChartAxisRange(ChartRangeType value) {
+        this.chartAxisRange = value;
     }
 
-
     /**
-     * Gets the chartAxisRangeMax value for this DashboardComponent.
+     * Gets the value of the chartAxisRangeMax property.
      * 
-     * @return chartAxisRangeMax
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getChartAxisRangeMax() {
+    public Double getChartAxisRangeMax() {
         return chartAxisRangeMax;
     }
 
-
     /**
-     * Sets the chartAxisRangeMax value for this DashboardComponent.
+     * Sets the value of the chartAxisRangeMax property.
      * 
-     * @param chartAxisRangeMax
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
      */
-    public void setChartAxisRangeMax(java.lang.Double chartAxisRangeMax) {
-        this.chartAxisRangeMax = chartAxisRangeMax;
+    public void setChartAxisRangeMax(Double value) {
+        this.chartAxisRangeMax = value;
     }
 
-
     /**
-     * Gets the chartAxisRangeMin value for this DashboardComponent.
+     * Gets the value of the chartAxisRangeMin property.
      * 
-     * @return chartAxisRangeMin
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getChartAxisRangeMin() {
+    public Double getChartAxisRangeMin() {
         return chartAxisRangeMin;
     }
 
+    /**
+     * Sets the value of the chartAxisRangeMin property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
+     */
+    public void setChartAxisRangeMin(Double value) {
+        this.chartAxisRangeMin = value;
+    }
 
     /**
-     * Sets the chartAxisRangeMin value for this DashboardComponent.
+     * Gets the value of the chartSummary property.
      * 
-     * @param chartAxisRangeMin
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the chartSummary property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getChartSummary().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ChartSummary }
+     * 
+     * 
      */
-    public void setChartAxisRangeMin(java.lang.Double chartAxisRangeMin) {
-        this.chartAxisRangeMin = chartAxisRangeMin;
+    public List<ChartSummary> getChartSummary() {
+        if (chartSummary == null) {
+            chartSummary = new ArrayList<ChartSummary>();
+        }
+        return this.chartSummary;
     }
-
 
     /**
-     * Gets the chartSummary value for this DashboardComponent.
+     * Gets the value of the componentType property.
      * 
-     * @return chartSummary
+     * @return
+     *     possible object is
+     *     {@link DashboardComponentType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartSummary[] getChartSummary() {
-        return chartSummary;
-    }
-
-
-    /**
-     * Sets the chartSummary value for this DashboardComponent.
-     * 
-     * @param chartSummary
-     */
-    public void setChartSummary(com.sforce.soap._2006._04.metadata.ChartSummary[] chartSummary) {
-        this.chartSummary = chartSummary;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ChartSummary getChartSummary(int i) {
-        return this.chartSummary[i];
-    }
-
-    public void setChartSummary(int i, com.sforce.soap._2006._04.metadata.ChartSummary _value) {
-        this.chartSummary[i] = _value;
-    }
-
-
-    /**
-     * Gets the componentType value for this DashboardComponent.
-     * 
-     * @return componentType
-     */
-    public com.sforce.soap._2006._04.metadata.DashboardComponentType getComponentType() {
+    public DashboardComponentType getComponentType() {
         return componentType;
     }
 
+    /**
+     * Sets the value of the componentType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link DashboardComponentType }
+     *     
+     */
+    public void setComponentType(DashboardComponentType value) {
+        this.componentType = value;
+    }
 
     /**
-     * Sets the componentType value for this DashboardComponent.
+     * Gets the value of the dashboardFilterColumns property.
      * 
-     * @param componentType
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the dashboardFilterColumns property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDashboardFilterColumns().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DashboardFilterColumn }
+     * 
+     * 
      */
-    public void setComponentType(com.sforce.soap._2006._04.metadata.DashboardComponentType componentType) {
-        this.componentType = componentType;
+    public List<DashboardFilterColumn> getDashboardFilterColumns() {
+        if (dashboardFilterColumns == null) {
+            dashboardFilterColumns = new ArrayList<DashboardFilterColumn>();
+        }
+        return this.dashboardFilterColumns;
     }
-
 
     /**
-     * Gets the dashboardFilterColumns value for this DashboardComponent.
+     * Gets the value of the dashboardTableColumn property.
      * 
-     * @return dashboardFilterColumns
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the dashboardTableColumn property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDashboardTableColumn().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DashboardTableColumn }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.DashboardFilterColumn[] getDashboardFilterColumns() {
-        return dashboardFilterColumns;
+    public List<DashboardTableColumn> getDashboardTableColumn() {
+        if (dashboardTableColumn == null) {
+            dashboardTableColumn = new ArrayList<DashboardTableColumn>();
+        }
+        return this.dashboardTableColumn;
     }
-
 
     /**
-     * Sets the dashboardFilterColumns value for this DashboardComponent.
+     * Gets the value of the displayUnits property.
      * 
-     * @param dashboardFilterColumns
+     * @return
+     *     possible object is
+     *     {@link ChartUnits }
+     *     
      */
-    public void setDashboardFilterColumns(com.sforce.soap._2006._04.metadata.DashboardFilterColumn[] dashboardFilterColumns) {
-        this.dashboardFilterColumns = dashboardFilterColumns;
-    }
-
-    public com.sforce.soap._2006._04.metadata.DashboardFilterColumn getDashboardFilterColumns(int i) {
-        return this.dashboardFilterColumns[i];
-    }
-
-    public void setDashboardFilterColumns(int i, com.sforce.soap._2006._04.metadata.DashboardFilterColumn _value) {
-        this.dashboardFilterColumns[i] = _value;
-    }
-
-
-    /**
-     * Gets the dashboardTableColumn value for this DashboardComponent.
-     * 
-     * @return dashboardTableColumn
-     */
-    public com.sforce.soap._2006._04.metadata.DashboardTableColumn[] getDashboardTableColumn() {
-        return dashboardTableColumn;
-    }
-
-
-    /**
-     * Sets the dashboardTableColumn value for this DashboardComponent.
-     * 
-     * @param dashboardTableColumn
-     */
-    public void setDashboardTableColumn(com.sforce.soap._2006._04.metadata.DashboardTableColumn[] dashboardTableColumn) {
-        this.dashboardTableColumn = dashboardTableColumn;
-    }
-
-    public com.sforce.soap._2006._04.metadata.DashboardTableColumn getDashboardTableColumn(int i) {
-        return this.dashboardTableColumn[i];
-    }
-
-    public void setDashboardTableColumn(int i, com.sforce.soap._2006._04.metadata.DashboardTableColumn _value) {
-        this.dashboardTableColumn[i] = _value;
-    }
-
-
-    /**
-     * Gets the displayUnits value for this DashboardComponent.
-     * 
-     * @return displayUnits
-     */
-    public com.sforce.soap._2006._04.metadata.ChartUnits getDisplayUnits() {
+    public ChartUnits getDisplayUnits() {
         return displayUnits;
     }
 
-
     /**
-     * Sets the displayUnits value for this DashboardComponent.
+     * Sets the value of the displayUnits property.
      * 
-     * @param displayUnits
+     * @param value
+     *     allowed object is
+     *     {@link ChartUnits }
+     *     
      */
-    public void setDisplayUnits(com.sforce.soap._2006._04.metadata.ChartUnits displayUnits) {
-        this.displayUnits = displayUnits;
+    public void setDisplayUnits(ChartUnits value) {
+        this.displayUnits = value;
     }
 
-
     /**
-     * Gets the drillDownUrl value for this DashboardComponent.
+     * Gets the value of the drillDownUrl property.
      * 
-     * @return drillDownUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDrillDownUrl() {
+    public String getDrillDownUrl() {
         return drillDownUrl;
     }
 
-
     /**
-     * Sets the drillDownUrl value for this DashboardComponent.
+     * Sets the value of the drillDownUrl property.
      * 
-     * @param drillDownUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDrillDownUrl(java.lang.String drillDownUrl) {
-        this.drillDownUrl = drillDownUrl;
+    public void setDrillDownUrl(String value) {
+        this.drillDownUrl = value;
     }
 
-
     /**
-     * Gets the drillEnabled value for this DashboardComponent.
+     * Gets the value of the drillEnabled property.
      * 
-     * @return drillEnabled
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getDrillEnabled() {
+    public Boolean isDrillEnabled() {
         return drillEnabled;
     }
 
-
     /**
-     * Sets the drillEnabled value for this DashboardComponent.
+     * Sets the value of the drillEnabled property.
      * 
-     * @param drillEnabled
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setDrillEnabled(java.lang.Boolean drillEnabled) {
-        this.drillEnabled = drillEnabled;
+    public void setDrillEnabled(Boolean value) {
+        this.drillEnabled = value;
     }
 
-
     /**
-     * Gets the drillToDetailEnabled value for this DashboardComponent.
+     * Gets the value of the drillToDetailEnabled property.
      * 
-     * @return drillToDetailEnabled
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getDrillToDetailEnabled() {
+    public Boolean isDrillToDetailEnabled() {
         return drillToDetailEnabled;
     }
 
-
     /**
-     * Sets the drillToDetailEnabled value for this DashboardComponent.
+     * Sets the value of the drillToDetailEnabled property.
      * 
-     * @param drillToDetailEnabled
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setDrillToDetailEnabled(java.lang.Boolean drillToDetailEnabled) {
-        this.drillToDetailEnabled = drillToDetailEnabled;
+    public void setDrillToDetailEnabled(Boolean value) {
+        this.drillToDetailEnabled = value;
     }
 
-
     /**
-     * Gets the enableHover value for this DashboardComponent.
+     * Gets the value of the enableHover property.
      * 
-     * @return enableHover
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableHover() {
+    public Boolean isEnableHover() {
         return enableHover;
     }
 
-
     /**
-     * Sets the enableHover value for this DashboardComponent.
+     * Sets the value of the enableHover property.
      * 
-     * @param enableHover
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableHover(java.lang.Boolean enableHover) {
-        this.enableHover = enableHover;
+    public void setEnableHover(Boolean value) {
+        this.enableHover = value;
     }
 
-
     /**
-     * Gets the expandOthers value for this DashboardComponent.
+     * Gets the value of the expandOthers property.
      * 
-     * @return expandOthers
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getExpandOthers() {
+    public Boolean isExpandOthers() {
         return expandOthers;
     }
 
-
     /**
-     * Sets the expandOthers value for this DashboardComponent.
+     * Sets the value of the expandOthers property.
      * 
-     * @param expandOthers
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setExpandOthers(java.lang.Boolean expandOthers) {
-        this.expandOthers = expandOthers;
+    public void setExpandOthers(Boolean value) {
+        this.expandOthers = value;
     }
 
-
     /**
-     * Gets the footer value for this DashboardComponent.
+     * Gets the value of the footer property.
      * 
-     * @return footer
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFooter() {
+    public String getFooter() {
         return footer;
     }
 
-
     /**
-     * Sets the footer value for this DashboardComponent.
+     * Sets the value of the footer property.
      * 
-     * @param footer
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFooter(java.lang.String footer) {
-        this.footer = footer;
+    public void setFooter(String value) {
+        this.footer = value;
     }
 
-
     /**
-     * Gets the gaugeMax value for this DashboardComponent.
+     * Gets the value of the gaugeMax property.
      * 
-     * @return gaugeMax
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getGaugeMax() {
+    public Double getGaugeMax() {
         return gaugeMax;
     }
 
-
     /**
-     * Sets the gaugeMax value for this DashboardComponent.
+     * Sets the value of the gaugeMax property.
      * 
-     * @param gaugeMax
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
      */
-    public void setGaugeMax(java.lang.Double gaugeMax) {
-        this.gaugeMax = gaugeMax;
+    public void setGaugeMax(Double value) {
+        this.gaugeMax = value;
     }
 
-
     /**
-     * Gets the gaugeMin value for this DashboardComponent.
+     * Gets the value of the gaugeMin property.
      * 
-     * @return gaugeMin
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getGaugeMin() {
+    public Double getGaugeMin() {
         return gaugeMin;
     }
 
+    /**
+     * Sets the value of the gaugeMin property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
+     */
+    public void setGaugeMin(Double value) {
+        this.gaugeMin = value;
+    }
 
     /**
-     * Sets the gaugeMin value for this DashboardComponent.
+     * Gets the value of the groupingColumn property.
      * 
-     * @param gaugeMin
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the groupingColumn property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getGroupingColumn().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public void setGaugeMin(java.lang.Double gaugeMin) {
-        this.gaugeMin = gaugeMin;
+    public List<String> getGroupingColumn() {
+        if (groupingColumn == null) {
+            groupingColumn = new ArrayList<String>();
+        }
+        return this.groupingColumn;
     }
-
 
     /**
-     * Gets the groupingColumn value for this DashboardComponent.
+     * Gets the value of the header property.
      * 
-     * @return groupingColumn
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String[] getGroupingColumn() {
-        return groupingColumn;
-    }
-
-
-    /**
-     * Sets the groupingColumn value for this DashboardComponent.
-     * 
-     * @param groupingColumn
-     */
-    public void setGroupingColumn(java.lang.String[] groupingColumn) {
-        this.groupingColumn = groupingColumn;
-    }
-
-    public java.lang.String getGroupingColumn(int i) {
-        return this.groupingColumn[i];
-    }
-
-    public void setGroupingColumn(int i, java.lang.String _value) {
-        this.groupingColumn[i] = _value;
-    }
-
-
-    /**
-     * Gets the header value for this DashboardComponent.
-     * 
-     * @return header
-     */
-    public java.lang.String getHeader() {
+    public String getHeader() {
         return header;
     }
 
-
     /**
-     * Sets the header value for this DashboardComponent.
+     * Sets the value of the header property.
      * 
-     * @param header
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setHeader(java.lang.String header) {
-        this.header = header;
+    public void setHeader(String value) {
+        this.header = value;
     }
 
-
     /**
-     * Gets the indicatorBreakpoint1 value for this DashboardComponent.
+     * Gets the value of the indicatorBreakpoint1 property.
      * 
-     * @return indicatorBreakpoint1
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getIndicatorBreakpoint1() {
+    public Double getIndicatorBreakpoint1() {
         return indicatorBreakpoint1;
     }
 
-
     /**
-     * Sets the indicatorBreakpoint1 value for this DashboardComponent.
+     * Sets the value of the indicatorBreakpoint1 property.
      * 
-     * @param indicatorBreakpoint1
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
      */
-    public void setIndicatorBreakpoint1(java.lang.Double indicatorBreakpoint1) {
-        this.indicatorBreakpoint1 = indicatorBreakpoint1;
+    public void setIndicatorBreakpoint1(Double value) {
+        this.indicatorBreakpoint1 = value;
     }
 
-
     /**
-     * Gets the indicatorBreakpoint2 value for this DashboardComponent.
+     * Gets the value of the indicatorBreakpoint2 property.
      * 
-     * @return indicatorBreakpoint2
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getIndicatorBreakpoint2() {
+    public Double getIndicatorBreakpoint2() {
         return indicatorBreakpoint2;
     }
 
-
     /**
-     * Sets the indicatorBreakpoint2 value for this DashboardComponent.
+     * Sets the value of the indicatorBreakpoint2 property.
      * 
-     * @param indicatorBreakpoint2
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
      */
-    public void setIndicatorBreakpoint2(java.lang.Double indicatorBreakpoint2) {
-        this.indicatorBreakpoint2 = indicatorBreakpoint2;
+    public void setIndicatorBreakpoint2(Double value) {
+        this.indicatorBreakpoint2 = value;
     }
 
-
     /**
-     * Gets the indicatorHighColor value for this DashboardComponent.
+     * Gets the value of the indicatorHighColor property.
      * 
-     * @return indicatorHighColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIndicatorHighColor() {
+    public String getIndicatorHighColor() {
         return indicatorHighColor;
     }
 
-
     /**
-     * Sets the indicatorHighColor value for this DashboardComponent.
+     * Sets the value of the indicatorHighColor property.
      * 
-     * @param indicatorHighColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIndicatorHighColor(java.lang.String indicatorHighColor) {
-        this.indicatorHighColor = indicatorHighColor;
+    public void setIndicatorHighColor(String value) {
+        this.indicatorHighColor = value;
     }
 
-
     /**
-     * Gets the indicatorLowColor value for this DashboardComponent.
+     * Gets the value of the indicatorLowColor property.
      * 
-     * @return indicatorLowColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIndicatorLowColor() {
+    public String getIndicatorLowColor() {
         return indicatorLowColor;
     }
 
-
     /**
-     * Sets the indicatorLowColor value for this DashboardComponent.
+     * Sets the value of the indicatorLowColor property.
      * 
-     * @param indicatorLowColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIndicatorLowColor(java.lang.String indicatorLowColor) {
-        this.indicatorLowColor = indicatorLowColor;
+    public void setIndicatorLowColor(String value) {
+        this.indicatorLowColor = value;
     }
 
-
     /**
-     * Gets the indicatorMiddleColor value for this DashboardComponent.
+     * Gets the value of the indicatorMiddleColor property.
      * 
-     * @return indicatorMiddleColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIndicatorMiddleColor() {
+    public String getIndicatorMiddleColor() {
         return indicatorMiddleColor;
     }
 
-
     /**
-     * Sets the indicatorMiddleColor value for this DashboardComponent.
+     * Sets the value of the indicatorMiddleColor property.
      * 
-     * @param indicatorMiddleColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIndicatorMiddleColor(java.lang.String indicatorMiddleColor) {
-        this.indicatorMiddleColor = indicatorMiddleColor;
+    public void setIndicatorMiddleColor(String value) {
+        this.indicatorMiddleColor = value;
     }
 
-
     /**
-     * Gets the legendPosition value for this DashboardComponent.
+     * Gets the value of the legendPosition property.
      * 
-     * @return legendPosition
+     * @return
+     *     possible object is
+     *     {@link ChartLegendPosition }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartLegendPosition getLegendPosition() {
+    public ChartLegendPosition getLegendPosition() {
         return legendPosition;
     }
 
-
     /**
-     * Sets the legendPosition value for this DashboardComponent.
+     * Sets the value of the legendPosition property.
      * 
-     * @param legendPosition
+     * @param value
+     *     allowed object is
+     *     {@link ChartLegendPosition }
+     *     
      */
-    public void setLegendPosition(com.sforce.soap._2006._04.metadata.ChartLegendPosition legendPosition) {
-        this.legendPosition = legendPosition;
+    public void setLegendPosition(ChartLegendPosition value) {
+        this.legendPosition = value;
     }
 
-
     /**
-     * Gets the maxValuesDisplayed value for this DashboardComponent.
+     * Gets the value of the maxValuesDisplayed property.
      * 
-     * @return maxValuesDisplayed
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getMaxValuesDisplayed() {
+    public Integer getMaxValuesDisplayed() {
         return maxValuesDisplayed;
     }
 
-
     /**
-     * Sets the maxValuesDisplayed value for this DashboardComponent.
+     * Sets the value of the maxValuesDisplayed property.
      * 
-     * @param maxValuesDisplayed
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setMaxValuesDisplayed(java.lang.Integer maxValuesDisplayed) {
-        this.maxValuesDisplayed = maxValuesDisplayed;
+    public void setMaxValuesDisplayed(Integer value) {
+        this.maxValuesDisplayed = value;
     }
 
-
     /**
-     * Gets the metricLabel value for this DashboardComponent.
+     * Gets the value of the metricLabel property.
      * 
-     * @return metricLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMetricLabel() {
+    public String getMetricLabel() {
         return metricLabel;
     }
 
-
     /**
-     * Sets the metricLabel value for this DashboardComponent.
+     * Sets the value of the metricLabel property.
      * 
-     * @param metricLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMetricLabel(java.lang.String metricLabel) {
-        this.metricLabel = metricLabel;
+    public void setMetricLabel(String value) {
+        this.metricLabel = value;
     }
 
-
     /**
-     * Gets the page value for this DashboardComponent.
+     * Gets the value of the page property.
      * 
-     * @return page
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPage() {
+    public String getPage() {
         return page;
     }
 
-
     /**
-     * Sets the page value for this DashboardComponent.
+     * Sets the value of the page property.
      * 
-     * @param page
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPage(java.lang.String page) {
-        this.page = page;
+    public void setPage(String value) {
+        this.page = value;
     }
 
-
     /**
-     * Gets the pageHeightInPixels value for this DashboardComponent.
+     * Gets the value of the pageHeightInPixels property.
      * 
-     * @return pageHeightInPixels
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getPageHeightInPixels() {
+    public Integer getPageHeightInPixels() {
         return pageHeightInPixels;
     }
 
-
     /**
-     * Sets the pageHeightInPixels value for this DashboardComponent.
+     * Sets the value of the pageHeightInPixels property.
      * 
-     * @param pageHeightInPixels
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPageHeightInPixels(java.lang.Integer pageHeightInPixels) {
-        this.pageHeightInPixels = pageHeightInPixels;
+    public void setPageHeightInPixels(Integer value) {
+        this.pageHeightInPixels = value;
     }
 
-
     /**
-     * Gets the report value for this DashboardComponent.
+     * Gets the value of the report property.
      * 
-     * @return report
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getReport() {
+    public String getReport() {
         return report;
     }
 
-
     /**
-     * Sets the report value for this DashboardComponent.
+     * Sets the value of the report property.
      * 
-     * @param report
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReport(java.lang.String report) {
-        this.report = report;
+    public void setReport(String value) {
+        this.report = value;
     }
 
-
     /**
-     * Gets the scontrol value for this DashboardComponent.
+     * Gets the value of the scontrol property.
      * 
-     * @return scontrol
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getScontrol() {
+    public String getScontrol() {
         return scontrol;
     }
 
-
     /**
-     * Sets the scontrol value for this DashboardComponent.
+     * Sets the value of the scontrol property.
      * 
-     * @param scontrol
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setScontrol(java.lang.String scontrol) {
-        this.scontrol = scontrol;
+    public void setScontrol(String value) {
+        this.scontrol = value;
     }
 
-
     /**
-     * Gets the scontrolHeightInPixels value for this DashboardComponent.
+     * Gets the value of the scontrolHeightInPixels property.
      * 
-     * @return scontrolHeightInPixels
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getScontrolHeightInPixels() {
+    public Integer getScontrolHeightInPixels() {
         return scontrolHeightInPixels;
     }
 
-
     /**
-     * Sets the scontrolHeightInPixels value for this DashboardComponent.
+     * Sets the value of the scontrolHeightInPixels property.
      * 
-     * @param scontrolHeightInPixels
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setScontrolHeightInPixels(java.lang.Integer scontrolHeightInPixels) {
-        this.scontrolHeightInPixels = scontrolHeightInPixels;
+    public void setScontrolHeightInPixels(Integer value) {
+        this.scontrolHeightInPixels = value;
     }
 
-
     /**
-     * Gets the showPercentage value for this DashboardComponent.
+     * Gets the value of the showPercentage property.
      * 
-     * @return showPercentage
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowPercentage() {
+    public Boolean isShowPercentage() {
         return showPercentage;
     }
 
-
     /**
-     * Sets the showPercentage value for this DashboardComponent.
+     * Sets the value of the showPercentage property.
      * 
-     * @param showPercentage
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowPercentage(java.lang.Boolean showPercentage) {
-        this.showPercentage = showPercentage;
+    public void setShowPercentage(Boolean value) {
+        this.showPercentage = value;
     }
 
-
     /**
-     * Gets the showPicturesOnCharts value for this DashboardComponent.
+     * Gets the value of the showPicturesOnCharts property.
      * 
-     * @return showPicturesOnCharts
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowPicturesOnCharts() {
+    public Boolean isShowPicturesOnCharts() {
         return showPicturesOnCharts;
     }
 
-
     /**
-     * Sets the showPicturesOnCharts value for this DashboardComponent.
+     * Sets the value of the showPicturesOnCharts property.
      * 
-     * @param showPicturesOnCharts
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowPicturesOnCharts(java.lang.Boolean showPicturesOnCharts) {
-        this.showPicturesOnCharts = showPicturesOnCharts;
+    public void setShowPicturesOnCharts(Boolean value) {
+        this.showPicturesOnCharts = value;
     }
 
-
     /**
-     * Gets the showPicturesOnTables value for this DashboardComponent.
+     * Gets the value of the showPicturesOnTables property.
      * 
-     * @return showPicturesOnTables
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowPicturesOnTables() {
+    public Boolean isShowPicturesOnTables() {
         return showPicturesOnTables;
     }
 
-
     /**
-     * Sets the showPicturesOnTables value for this DashboardComponent.
+     * Sets the value of the showPicturesOnTables property.
      * 
-     * @param showPicturesOnTables
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowPicturesOnTables(java.lang.Boolean showPicturesOnTables) {
-        this.showPicturesOnTables = showPicturesOnTables;
+    public void setShowPicturesOnTables(Boolean value) {
+        this.showPicturesOnTables = value;
     }
 
-
     /**
-     * Gets the showTotal value for this DashboardComponent.
+     * Gets the value of the showTotal property.
      * 
-     * @return showTotal
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowTotal() {
+    public Boolean isShowTotal() {
         return showTotal;
     }
 
-
     /**
-     * Sets the showTotal value for this DashboardComponent.
+     * Sets the value of the showTotal property.
      * 
-     * @param showTotal
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowTotal(java.lang.Boolean showTotal) {
-        this.showTotal = showTotal;
+    public void setShowTotal(Boolean value) {
+        this.showTotal = value;
     }
 
-
     /**
-     * Gets the showValues value for this DashboardComponent.
+     * Gets the value of the showValues property.
      * 
-     * @return showValues
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowValues() {
+    public Boolean isShowValues() {
         return showValues;
     }
 
-
     /**
-     * Sets the showValues value for this DashboardComponent.
+     * Sets the value of the showValues property.
      * 
-     * @param showValues
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowValues(java.lang.Boolean showValues) {
-        this.showValues = showValues;
+    public void setShowValues(Boolean value) {
+        this.showValues = value;
     }
 
-
     /**
-     * Gets the sortBy value for this DashboardComponent.
+     * Gets the value of the sortBy property.
      * 
-     * @return sortBy
+     * @return
+     *     possible object is
+     *     {@link DashboardComponentFilter }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DashboardComponentFilter getSortBy() {
+    public DashboardComponentFilter getSortBy() {
         return sortBy;
     }
 
-
     /**
-     * Sets the sortBy value for this DashboardComponent.
+     * Sets the value of the sortBy property.
      * 
-     * @param sortBy
+     * @param value
+     *     allowed object is
+     *     {@link DashboardComponentFilter }
+     *     
      */
-    public void setSortBy(com.sforce.soap._2006._04.metadata.DashboardComponentFilter sortBy) {
-        this.sortBy = sortBy;
+    public void setSortBy(DashboardComponentFilter value) {
+        this.sortBy = value;
     }
 
-
     /**
-     * Gets the title value for this DashboardComponent.
+     * Gets the value of the title property.
      * 
-     * @return title
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-
     /**
-     * Sets the title value for this DashboardComponent.
+     * Sets the value of the title property.
      * 
-     * @param title
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTitle(java.lang.String title) {
-        this.title = title;
+    public void setTitle(String value) {
+        this.title = value;
     }
 
-
     /**
-     * Gets the useReportChart value for this DashboardComponent.
+     * Gets the value of the useReportChart property.
      * 
-     * @return useReportChart
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getUseReportChart() {
+    public Boolean isUseReportChart() {
         return useReportChart;
     }
 
-
     /**
-     * Sets the useReportChart value for this DashboardComponent.
+     * Sets the value of the useReportChart property.
      * 
-     * @param useReportChart
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setUseReportChart(java.lang.Boolean useReportChart) {
-        this.useReportChart = useReportChart;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DashboardComponent)) return false;
-        DashboardComponent other = (DashboardComponent) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.autoselectColumnsFromReport==null && other.getAutoselectColumnsFromReport()==null) || 
-             (this.autoselectColumnsFromReport!=null &&
-              this.autoselectColumnsFromReport.equals(other.getAutoselectColumnsFromReport()))) &&
-            ((this.chartAxisRange==null && other.getChartAxisRange()==null) || 
-             (this.chartAxisRange!=null &&
-              this.chartAxisRange.equals(other.getChartAxisRange()))) &&
-            ((this.chartAxisRangeMax==null && other.getChartAxisRangeMax()==null) || 
-             (this.chartAxisRangeMax!=null &&
-              this.chartAxisRangeMax.equals(other.getChartAxisRangeMax()))) &&
-            ((this.chartAxisRangeMin==null && other.getChartAxisRangeMin()==null) || 
-             (this.chartAxisRangeMin!=null &&
-              this.chartAxisRangeMin.equals(other.getChartAxisRangeMin()))) &&
-            ((this.chartSummary==null && other.getChartSummary()==null) || 
-             (this.chartSummary!=null &&
-              java.util.Arrays.equals(this.chartSummary, other.getChartSummary()))) &&
-            ((this.componentType==null && other.getComponentType()==null) || 
-             (this.componentType!=null &&
-              this.componentType.equals(other.getComponentType()))) &&
-            ((this.dashboardFilterColumns==null && other.getDashboardFilterColumns()==null) || 
-             (this.dashboardFilterColumns!=null &&
-              java.util.Arrays.equals(this.dashboardFilterColumns, other.getDashboardFilterColumns()))) &&
-            ((this.dashboardTableColumn==null && other.getDashboardTableColumn()==null) || 
-             (this.dashboardTableColumn!=null &&
-              java.util.Arrays.equals(this.dashboardTableColumn, other.getDashboardTableColumn()))) &&
-            ((this.displayUnits==null && other.getDisplayUnits()==null) || 
-             (this.displayUnits!=null &&
-              this.displayUnits.equals(other.getDisplayUnits()))) &&
-            ((this.drillDownUrl==null && other.getDrillDownUrl()==null) || 
-             (this.drillDownUrl!=null &&
-              this.drillDownUrl.equals(other.getDrillDownUrl()))) &&
-            ((this.drillEnabled==null && other.getDrillEnabled()==null) || 
-             (this.drillEnabled!=null &&
-              this.drillEnabled.equals(other.getDrillEnabled()))) &&
-            ((this.drillToDetailEnabled==null && other.getDrillToDetailEnabled()==null) || 
-             (this.drillToDetailEnabled!=null &&
-              this.drillToDetailEnabled.equals(other.getDrillToDetailEnabled()))) &&
-            ((this.enableHover==null && other.getEnableHover()==null) || 
-             (this.enableHover!=null &&
-              this.enableHover.equals(other.getEnableHover()))) &&
-            ((this.expandOthers==null && other.getExpandOthers()==null) || 
-             (this.expandOthers!=null &&
-              this.expandOthers.equals(other.getExpandOthers()))) &&
-            ((this.footer==null && other.getFooter()==null) || 
-             (this.footer!=null &&
-              this.footer.equals(other.getFooter()))) &&
-            ((this.gaugeMax==null && other.getGaugeMax()==null) || 
-             (this.gaugeMax!=null &&
-              this.gaugeMax.equals(other.getGaugeMax()))) &&
-            ((this.gaugeMin==null && other.getGaugeMin()==null) || 
-             (this.gaugeMin!=null &&
-              this.gaugeMin.equals(other.getGaugeMin()))) &&
-            ((this.groupingColumn==null && other.getGroupingColumn()==null) || 
-             (this.groupingColumn!=null &&
-              java.util.Arrays.equals(this.groupingColumn, other.getGroupingColumn()))) &&
-            ((this.header==null && other.getHeader()==null) || 
-             (this.header!=null &&
-              this.header.equals(other.getHeader()))) &&
-            ((this.indicatorBreakpoint1==null && other.getIndicatorBreakpoint1()==null) || 
-             (this.indicatorBreakpoint1!=null &&
-              this.indicatorBreakpoint1.equals(other.getIndicatorBreakpoint1()))) &&
-            ((this.indicatorBreakpoint2==null && other.getIndicatorBreakpoint2()==null) || 
-             (this.indicatorBreakpoint2!=null &&
-              this.indicatorBreakpoint2.equals(other.getIndicatorBreakpoint2()))) &&
-            ((this.indicatorHighColor==null && other.getIndicatorHighColor()==null) || 
-             (this.indicatorHighColor!=null &&
-              this.indicatorHighColor.equals(other.getIndicatorHighColor()))) &&
-            ((this.indicatorLowColor==null && other.getIndicatorLowColor()==null) || 
-             (this.indicatorLowColor!=null &&
-              this.indicatorLowColor.equals(other.getIndicatorLowColor()))) &&
-            ((this.indicatorMiddleColor==null && other.getIndicatorMiddleColor()==null) || 
-             (this.indicatorMiddleColor!=null &&
-              this.indicatorMiddleColor.equals(other.getIndicatorMiddleColor()))) &&
-            ((this.legendPosition==null && other.getLegendPosition()==null) || 
-             (this.legendPosition!=null &&
-              this.legendPosition.equals(other.getLegendPosition()))) &&
-            ((this.maxValuesDisplayed==null && other.getMaxValuesDisplayed()==null) || 
-             (this.maxValuesDisplayed!=null &&
-              this.maxValuesDisplayed.equals(other.getMaxValuesDisplayed()))) &&
-            ((this.metricLabel==null && other.getMetricLabel()==null) || 
-             (this.metricLabel!=null &&
-              this.metricLabel.equals(other.getMetricLabel()))) &&
-            ((this.page==null && other.getPage()==null) || 
-             (this.page!=null &&
-              this.page.equals(other.getPage()))) &&
-            ((this.pageHeightInPixels==null && other.getPageHeightInPixels()==null) || 
-             (this.pageHeightInPixels!=null &&
-              this.pageHeightInPixels.equals(other.getPageHeightInPixels()))) &&
-            ((this.report==null && other.getReport()==null) || 
-             (this.report!=null &&
-              this.report.equals(other.getReport()))) &&
-            ((this.scontrol==null && other.getScontrol()==null) || 
-             (this.scontrol!=null &&
-              this.scontrol.equals(other.getScontrol()))) &&
-            ((this.scontrolHeightInPixels==null && other.getScontrolHeightInPixels()==null) || 
-             (this.scontrolHeightInPixels!=null &&
-              this.scontrolHeightInPixels.equals(other.getScontrolHeightInPixels()))) &&
-            ((this.showPercentage==null && other.getShowPercentage()==null) || 
-             (this.showPercentage!=null &&
-              this.showPercentage.equals(other.getShowPercentage()))) &&
-            ((this.showPicturesOnCharts==null && other.getShowPicturesOnCharts()==null) || 
-             (this.showPicturesOnCharts!=null &&
-              this.showPicturesOnCharts.equals(other.getShowPicturesOnCharts()))) &&
-            ((this.showPicturesOnTables==null && other.getShowPicturesOnTables()==null) || 
-             (this.showPicturesOnTables!=null &&
-              this.showPicturesOnTables.equals(other.getShowPicturesOnTables()))) &&
-            ((this.showTotal==null && other.getShowTotal()==null) || 
-             (this.showTotal!=null &&
-              this.showTotal.equals(other.getShowTotal()))) &&
-            ((this.showValues==null && other.getShowValues()==null) || 
-             (this.showValues!=null &&
-              this.showValues.equals(other.getShowValues()))) &&
-            ((this.sortBy==null && other.getSortBy()==null) || 
-             (this.sortBy!=null &&
-              this.sortBy.equals(other.getSortBy()))) &&
-            ((this.title==null && other.getTitle()==null) || 
-             (this.title!=null &&
-              this.title.equals(other.getTitle()))) &&
-            ((this.useReportChart==null && other.getUseReportChart()==null) || 
-             (this.useReportChart!=null &&
-              this.useReportChart.equals(other.getUseReportChart())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAutoselectColumnsFromReport() != null) {
-            _hashCode += getAutoselectColumnsFromReport().hashCode();
-        }
-        if (getChartAxisRange() != null) {
-            _hashCode += getChartAxisRange().hashCode();
-        }
-        if (getChartAxisRangeMax() != null) {
-            _hashCode += getChartAxisRangeMax().hashCode();
-        }
-        if (getChartAxisRangeMin() != null) {
-            _hashCode += getChartAxisRangeMin().hashCode();
-        }
-        if (getChartSummary() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getChartSummary());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getChartSummary(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getComponentType() != null) {
-            _hashCode += getComponentType().hashCode();
-        }
-        if (getDashboardFilterColumns() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDashboardFilterColumns());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDashboardFilterColumns(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDashboardTableColumn() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDashboardTableColumn());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDashboardTableColumn(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDisplayUnits() != null) {
-            _hashCode += getDisplayUnits().hashCode();
-        }
-        if (getDrillDownUrl() != null) {
-            _hashCode += getDrillDownUrl().hashCode();
-        }
-        if (getDrillEnabled() != null) {
-            _hashCode += getDrillEnabled().hashCode();
-        }
-        if (getDrillToDetailEnabled() != null) {
-            _hashCode += getDrillToDetailEnabled().hashCode();
-        }
-        if (getEnableHover() != null) {
-            _hashCode += getEnableHover().hashCode();
-        }
-        if (getExpandOthers() != null) {
-            _hashCode += getExpandOthers().hashCode();
-        }
-        if (getFooter() != null) {
-            _hashCode += getFooter().hashCode();
-        }
-        if (getGaugeMax() != null) {
-            _hashCode += getGaugeMax().hashCode();
-        }
-        if (getGaugeMin() != null) {
-            _hashCode += getGaugeMin().hashCode();
-        }
-        if (getGroupingColumn() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getGroupingColumn());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getGroupingColumn(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getHeader() != null) {
-            _hashCode += getHeader().hashCode();
-        }
-        if (getIndicatorBreakpoint1() != null) {
-            _hashCode += getIndicatorBreakpoint1().hashCode();
-        }
-        if (getIndicatorBreakpoint2() != null) {
-            _hashCode += getIndicatorBreakpoint2().hashCode();
-        }
-        if (getIndicatorHighColor() != null) {
-            _hashCode += getIndicatorHighColor().hashCode();
-        }
-        if (getIndicatorLowColor() != null) {
-            _hashCode += getIndicatorLowColor().hashCode();
-        }
-        if (getIndicatorMiddleColor() != null) {
-            _hashCode += getIndicatorMiddleColor().hashCode();
-        }
-        if (getLegendPosition() != null) {
-            _hashCode += getLegendPosition().hashCode();
-        }
-        if (getMaxValuesDisplayed() != null) {
-            _hashCode += getMaxValuesDisplayed().hashCode();
-        }
-        if (getMetricLabel() != null) {
-            _hashCode += getMetricLabel().hashCode();
-        }
-        if (getPage() != null) {
-            _hashCode += getPage().hashCode();
-        }
-        if (getPageHeightInPixels() != null) {
-            _hashCode += getPageHeightInPixels().hashCode();
-        }
-        if (getReport() != null) {
-            _hashCode += getReport().hashCode();
-        }
-        if (getScontrol() != null) {
-            _hashCode += getScontrol().hashCode();
-        }
-        if (getScontrolHeightInPixels() != null) {
-            _hashCode += getScontrolHeightInPixels().hashCode();
-        }
-        if (getShowPercentage() != null) {
-            _hashCode += getShowPercentage().hashCode();
-        }
-        if (getShowPicturesOnCharts() != null) {
-            _hashCode += getShowPicturesOnCharts().hashCode();
-        }
-        if (getShowPicturesOnTables() != null) {
-            _hashCode += getShowPicturesOnTables().hashCode();
-        }
-        if (getShowTotal() != null) {
-            _hashCode += getShowTotal().hashCode();
-        }
-        if (getShowValues() != null) {
-            _hashCode += getShowValues().hashCode();
-        }
-        if (getSortBy() != null) {
-            _hashCode += getSortBy().hashCode();
-        }
-        if (getTitle() != null) {
-            _hashCode += getTitle().hashCode();
-        }
-        if (getUseReportChart() != null) {
-            _hashCode += getUseReportChart().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DashboardComponent.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardComponent"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoselectColumnsFromReport");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoselectColumnsFromReport"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chartAxisRange");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chartAxisRange"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartRangeType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chartAxisRangeMax");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chartAxisRangeMax"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chartAxisRangeMin");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chartAxisRangeMin"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chartSummary");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chartSummary"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartSummary"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("componentType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "componentType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardComponentType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dashboardFilterColumns");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dashboardFilterColumns"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardFilterColumn"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dashboardTableColumn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dashboardTableColumn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardTableColumn"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("displayUnits");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "displayUnits"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartUnits"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("drillDownUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "drillDownUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("drillEnabled");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "drillEnabled"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("drillToDetailEnabled");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "drillToDetailEnabled"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableHover");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableHover"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("expandOthers");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "expandOthers"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("footer");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "footer"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("gaugeMax");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "gaugeMax"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("gaugeMin");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "gaugeMin"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("groupingColumn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "groupingColumn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("header");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "header"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("indicatorBreakpoint1");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "indicatorBreakpoint1"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("indicatorBreakpoint2");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "indicatorBreakpoint2"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("indicatorHighColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "indicatorHighColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("indicatorLowColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "indicatorLowColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("indicatorMiddleColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "indicatorMiddleColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("legendPosition");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "legendPosition"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartLegendPosition"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("maxValuesDisplayed");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "maxValuesDisplayed"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("metricLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "metricLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("page");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "page"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("pageHeightInPixels");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "pageHeightInPixels"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("report");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "report"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scontrol");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scontrol"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scontrolHeightInPixels");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scontrolHeightInPixels"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showPercentage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showPercentage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showPicturesOnCharts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showPicturesOnCharts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showPicturesOnTables");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showPicturesOnTables"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showTotal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showTotal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showValues");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showValues"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortBy");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortBy"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardComponentFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("title");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "title"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("useReportChart");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "useReportChart"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUseReportChart(Boolean value) {
+        this.useReportChart = value;
     }
 
 }

@@ -1,781 +1,568 @@
-/**
- * Network.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Network  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean allowMembersToFlag;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.Branding branding;
 
-    private java.lang.String caseCommentEmailTemplate;
+/**
+ * <p>Java class for Network complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Network">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="allowMembersToFlag" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="branding" type="{http://soap.sforce.com/2006/04/metadata}Branding" minOccurs="0"/>
+ *         &lt;element name="caseCommentEmailTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="changePasswordTemplate" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="emailSenderAddress" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="emailSenderName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="enableInvitation" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="forgotPasswordTemplate" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="networkMemberGroups" type="{http://soap.sforce.com/2006/04/metadata}NetworkMemberGroup" minOccurs="0"/>
+ *         &lt;element name="newSenderAddress" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="selfRegProfile" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="selfRegistration" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="sendWelcomeEmail" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="site" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="status" type="{http://soap.sforce.com/2006/04/metadata}NetworkStatus"/>
+ *         &lt;element name="tabs" type="{http://soap.sforce.com/2006/04/metadata}NetworkTabSet"/>
+ *         &lt;element name="urlPathPrefix" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="welcomeTemplate" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Network", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "allowMembersToFlag",
+    "branding",
+    "caseCommentEmailTemplate",
+    "changePasswordTemplate",
+    "description",
+    "emailSenderAddress",
+    "emailSenderName",
+    "enableInvitation",
+    "forgotPasswordTemplate",
+    "networkMemberGroups",
+    "newSenderAddress",
+    "selfRegProfile",
+    "selfRegistration",
+    "sendWelcomeEmail",
+    "site",
+    "status",
+    "tabs",
+    "urlPathPrefix",
+    "welcomeTemplate"
+})
+public class Network
+    extends Metadata
+{
 
-    private java.lang.String changePasswordTemplate;
-
-    private java.lang.String description;
-
-    private java.lang.String emailSenderAddress;
-
-    private java.lang.String emailSenderName;
-
-    private java.lang.Boolean enableInvitation;
-
-    private java.lang.String forgotPasswordTemplate;
-
-    private com.sforce.soap._2006._04.metadata.NetworkMemberGroup networkMemberGroups;
-
-    private java.lang.String newSenderAddress;
-
-    private java.lang.String selfRegProfile;
-
-    private java.lang.Boolean selfRegistration;
-
-    private java.lang.Boolean sendWelcomeEmail;
-
-    private java.lang.String site;
-
-    private com.sforce.soap._2006._04.metadata.NetworkStatus status;
-
-    private com.sforce.soap._2006._04.metadata.NetworkTabSet tabs;
-
-    private java.lang.String urlPathPrefix;
-
-    private java.lang.String welcomeTemplate;
-
-    public Network() {
-    }
-
-    public Network(
-           java.lang.String fullName,
-           java.lang.Boolean allowMembersToFlag,
-           com.sforce.soap._2006._04.metadata.Branding branding,
-           java.lang.String caseCommentEmailTemplate,
-           java.lang.String changePasswordTemplate,
-           java.lang.String description,
-           java.lang.String emailSenderAddress,
-           java.lang.String emailSenderName,
-           java.lang.Boolean enableInvitation,
-           java.lang.String forgotPasswordTemplate,
-           com.sforce.soap._2006._04.metadata.NetworkMemberGroup networkMemberGroups,
-           java.lang.String newSenderAddress,
-           java.lang.String selfRegProfile,
-           java.lang.Boolean selfRegistration,
-           java.lang.Boolean sendWelcomeEmail,
-           java.lang.String site,
-           com.sforce.soap._2006._04.metadata.NetworkStatus status,
-           com.sforce.soap._2006._04.metadata.NetworkTabSet tabs,
-           java.lang.String urlPathPrefix,
-           java.lang.String welcomeTemplate) {
-        super(
-            fullName);
-        this.allowMembersToFlag = allowMembersToFlag;
-        this.branding = branding;
-        this.caseCommentEmailTemplate = caseCommentEmailTemplate;
-        this.changePasswordTemplate = changePasswordTemplate;
-        this.description = description;
-        this.emailSenderAddress = emailSenderAddress;
-        this.emailSenderName = emailSenderName;
-        this.enableInvitation = enableInvitation;
-        this.forgotPasswordTemplate = forgotPasswordTemplate;
-        this.networkMemberGroups = networkMemberGroups;
-        this.newSenderAddress = newSenderAddress;
-        this.selfRegProfile = selfRegProfile;
-        this.selfRegistration = selfRegistration;
-        this.sendWelcomeEmail = sendWelcomeEmail;
-        this.site = site;
-        this.status = status;
-        this.tabs = tabs;
-        this.urlPathPrefix = urlPathPrefix;
-        this.welcomeTemplate = welcomeTemplate;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean allowMembersToFlag;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Branding branding;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String caseCommentEmailTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String changePasswordTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String emailSenderAddress;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String emailSenderName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableInvitation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String forgotPasswordTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected NetworkMemberGroup networkMemberGroups;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String newSenderAddress;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String selfRegProfile;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean selfRegistration;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean sendWelcomeEmail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String site;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected NetworkStatus status;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected NetworkTabSet tabs;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String urlPathPrefix;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String welcomeTemplate;
 
     /**
-     * Gets the allowMembersToFlag value for this Network.
+     * Gets the value of the allowMembersToFlag property.
      * 
-     * @return allowMembersToFlag
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAllowMembersToFlag() {
+    public Boolean isAllowMembersToFlag() {
         return allowMembersToFlag;
     }
 
-
     /**
-     * Sets the allowMembersToFlag value for this Network.
+     * Sets the value of the allowMembersToFlag property.
      * 
-     * @param allowMembersToFlag
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAllowMembersToFlag(java.lang.Boolean allowMembersToFlag) {
-        this.allowMembersToFlag = allowMembersToFlag;
+    public void setAllowMembersToFlag(Boolean value) {
+        this.allowMembersToFlag = value;
     }
 
-
     /**
-     * Gets the branding value for this Network.
+     * Gets the value of the branding property.
      * 
-     * @return branding
+     * @return
+     *     possible object is
+     *     {@link Branding }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.Branding getBranding() {
+    public Branding getBranding() {
         return branding;
     }
 
-
     /**
-     * Sets the branding value for this Network.
+     * Sets the value of the branding property.
      * 
-     * @param branding
+     * @param value
+     *     allowed object is
+     *     {@link Branding }
+     *     
      */
-    public void setBranding(com.sforce.soap._2006._04.metadata.Branding branding) {
-        this.branding = branding;
+    public void setBranding(Branding value) {
+        this.branding = value;
     }
 
-
     /**
-     * Gets the caseCommentEmailTemplate value for this Network.
+     * Gets the value of the caseCommentEmailTemplate property.
      * 
-     * @return caseCommentEmailTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCaseCommentEmailTemplate() {
+    public String getCaseCommentEmailTemplate() {
         return caseCommentEmailTemplate;
     }
 
-
     /**
-     * Sets the caseCommentEmailTemplate value for this Network.
+     * Sets the value of the caseCommentEmailTemplate property.
      * 
-     * @param caseCommentEmailTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCaseCommentEmailTemplate(java.lang.String caseCommentEmailTemplate) {
-        this.caseCommentEmailTemplate = caseCommentEmailTemplate;
+    public void setCaseCommentEmailTemplate(String value) {
+        this.caseCommentEmailTemplate = value;
     }
 
-
     /**
-     * Gets the changePasswordTemplate value for this Network.
+     * Gets the value of the changePasswordTemplate property.
      * 
-     * @return changePasswordTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChangePasswordTemplate() {
+    public String getChangePasswordTemplate() {
         return changePasswordTemplate;
     }
 
-
     /**
-     * Sets the changePasswordTemplate value for this Network.
+     * Sets the value of the changePasswordTemplate property.
      * 
-     * @param changePasswordTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setChangePasswordTemplate(java.lang.String changePasswordTemplate) {
-        this.changePasswordTemplate = changePasswordTemplate;
+    public void setChangePasswordTemplate(String value) {
+        this.changePasswordTemplate = value;
     }
 
-
     /**
-     * Gets the description value for this Network.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this Network.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the emailSenderAddress value for this Network.
+     * Gets the value of the emailSenderAddress property.
      * 
-     * @return emailSenderAddress
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmailSenderAddress() {
+    public String getEmailSenderAddress() {
         return emailSenderAddress;
     }
 
-
     /**
-     * Sets the emailSenderAddress value for this Network.
+     * Sets the value of the emailSenderAddress property.
      * 
-     * @param emailSenderAddress
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmailSenderAddress(java.lang.String emailSenderAddress) {
-        this.emailSenderAddress = emailSenderAddress;
+    public void setEmailSenderAddress(String value) {
+        this.emailSenderAddress = value;
     }
 
-
     /**
-     * Gets the emailSenderName value for this Network.
+     * Gets the value of the emailSenderName property.
      * 
-     * @return emailSenderName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmailSenderName() {
+    public String getEmailSenderName() {
         return emailSenderName;
     }
 
-
     /**
-     * Sets the emailSenderName value for this Network.
+     * Sets the value of the emailSenderName property.
      * 
-     * @param emailSenderName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmailSenderName(java.lang.String emailSenderName) {
-        this.emailSenderName = emailSenderName;
+    public void setEmailSenderName(String value) {
+        this.emailSenderName = value;
     }
 
-
     /**
-     * Gets the enableInvitation value for this Network.
+     * Gets the value of the enableInvitation property.
      * 
-     * @return enableInvitation
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableInvitation() {
+    public Boolean isEnableInvitation() {
         return enableInvitation;
     }
 
-
     /**
-     * Sets the enableInvitation value for this Network.
+     * Sets the value of the enableInvitation property.
      * 
-     * @param enableInvitation
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableInvitation(java.lang.Boolean enableInvitation) {
-        this.enableInvitation = enableInvitation;
+    public void setEnableInvitation(Boolean value) {
+        this.enableInvitation = value;
     }
 
-
     /**
-     * Gets the forgotPasswordTemplate value for this Network.
+     * Gets the value of the forgotPasswordTemplate property.
      * 
-     * @return forgotPasswordTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getForgotPasswordTemplate() {
+    public String getForgotPasswordTemplate() {
         return forgotPasswordTemplate;
     }
 
-
     /**
-     * Sets the forgotPasswordTemplate value for this Network.
+     * Sets the value of the forgotPasswordTemplate property.
      * 
-     * @param forgotPasswordTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setForgotPasswordTemplate(java.lang.String forgotPasswordTemplate) {
-        this.forgotPasswordTemplate = forgotPasswordTemplate;
+    public void setForgotPasswordTemplate(String value) {
+        this.forgotPasswordTemplate = value;
     }
 
-
     /**
-     * Gets the networkMemberGroups value for this Network.
+     * Gets the value of the networkMemberGroups property.
      * 
-     * @return networkMemberGroups
+     * @return
+     *     possible object is
+     *     {@link NetworkMemberGroup }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.NetworkMemberGroup getNetworkMemberGroups() {
+    public NetworkMemberGroup getNetworkMemberGroups() {
         return networkMemberGroups;
     }
 
-
     /**
-     * Sets the networkMemberGroups value for this Network.
+     * Sets the value of the networkMemberGroups property.
      * 
-     * @param networkMemberGroups
+     * @param value
+     *     allowed object is
+     *     {@link NetworkMemberGroup }
+     *     
      */
-    public void setNetworkMemberGroups(com.sforce.soap._2006._04.metadata.NetworkMemberGroup networkMemberGroups) {
-        this.networkMemberGroups = networkMemberGroups;
+    public void setNetworkMemberGroups(NetworkMemberGroup value) {
+        this.networkMemberGroups = value;
     }
 
-
     /**
-     * Gets the newSenderAddress value for this Network.
+     * Gets the value of the newSenderAddress property.
      * 
-     * @return newSenderAddress
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNewSenderAddress() {
+    public String getNewSenderAddress() {
         return newSenderAddress;
     }
 
-
     /**
-     * Sets the newSenderAddress value for this Network.
+     * Sets the value of the newSenderAddress property.
      * 
-     * @param newSenderAddress
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNewSenderAddress(java.lang.String newSenderAddress) {
-        this.newSenderAddress = newSenderAddress;
+    public void setNewSenderAddress(String value) {
+        this.newSenderAddress = value;
     }
 
-
     /**
-     * Gets the selfRegProfile value for this Network.
+     * Gets the value of the selfRegProfile property.
      * 
-     * @return selfRegProfile
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSelfRegProfile() {
+    public String getSelfRegProfile() {
         return selfRegProfile;
     }
 
-
     /**
-     * Sets the selfRegProfile value for this Network.
+     * Sets the value of the selfRegProfile property.
      * 
-     * @param selfRegProfile
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSelfRegProfile(java.lang.String selfRegProfile) {
-        this.selfRegProfile = selfRegProfile;
+    public void setSelfRegProfile(String value) {
+        this.selfRegProfile = value;
     }
 
-
     /**
-     * Gets the selfRegistration value for this Network.
+     * Gets the value of the selfRegistration property.
      * 
-     * @return selfRegistration
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getSelfRegistration() {
+    public Boolean isSelfRegistration() {
         return selfRegistration;
     }
 
-
     /**
-     * Sets the selfRegistration value for this Network.
+     * Sets the value of the selfRegistration property.
      * 
-     * @param selfRegistration
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setSelfRegistration(java.lang.Boolean selfRegistration) {
-        this.selfRegistration = selfRegistration;
+    public void setSelfRegistration(Boolean value) {
+        this.selfRegistration = value;
     }
 
-
     /**
-     * Gets the sendWelcomeEmail value for this Network.
+     * Gets the value of the sendWelcomeEmail property.
      * 
-     * @return sendWelcomeEmail
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getSendWelcomeEmail() {
+    public Boolean isSendWelcomeEmail() {
         return sendWelcomeEmail;
     }
 
-
     /**
-     * Sets the sendWelcomeEmail value for this Network.
+     * Sets the value of the sendWelcomeEmail property.
      * 
-     * @param sendWelcomeEmail
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setSendWelcomeEmail(java.lang.Boolean sendWelcomeEmail) {
-        this.sendWelcomeEmail = sendWelcomeEmail;
+    public void setSendWelcomeEmail(Boolean value) {
+        this.sendWelcomeEmail = value;
     }
 
-
     /**
-     * Gets the site value for this Network.
+     * Gets the value of the site property.
      * 
-     * @return site
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSite() {
+    public String getSite() {
         return site;
     }
 
-
     /**
-     * Sets the site value for this Network.
+     * Sets the value of the site property.
      * 
-     * @param site
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSite(java.lang.String site) {
-        this.site = site;
+    public void setSite(String value) {
+        this.site = value;
     }
 
-
     /**
-     * Gets the status value for this Network.
+     * Gets the value of the status property.
      * 
-     * @return status
+     * @return
+     *     possible object is
+     *     {@link NetworkStatus }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.NetworkStatus getStatus() {
+    public NetworkStatus getStatus() {
         return status;
     }
 
-
     /**
-     * Sets the status value for this Network.
+     * Sets the value of the status property.
      * 
-     * @param status
+     * @param value
+     *     allowed object is
+     *     {@link NetworkStatus }
+     *     
      */
-    public void setStatus(com.sforce.soap._2006._04.metadata.NetworkStatus status) {
-        this.status = status;
+    public void setStatus(NetworkStatus value) {
+        this.status = value;
     }
 
-
     /**
-     * Gets the tabs value for this Network.
+     * Gets the value of the tabs property.
      * 
-     * @return tabs
+     * @return
+     *     possible object is
+     *     {@link NetworkTabSet }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.NetworkTabSet getTabs() {
+    public NetworkTabSet getTabs() {
         return tabs;
     }
 
-
     /**
-     * Sets the tabs value for this Network.
+     * Sets the value of the tabs property.
      * 
-     * @param tabs
+     * @param value
+     *     allowed object is
+     *     {@link NetworkTabSet }
+     *     
      */
-    public void setTabs(com.sforce.soap._2006._04.metadata.NetworkTabSet tabs) {
-        this.tabs = tabs;
+    public void setTabs(NetworkTabSet value) {
+        this.tabs = value;
     }
 
-
     /**
-     * Gets the urlPathPrefix value for this Network.
+     * Gets the value of the urlPathPrefix property.
      * 
-     * @return urlPathPrefix
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUrlPathPrefix() {
+    public String getUrlPathPrefix() {
         return urlPathPrefix;
     }
 
-
     /**
-     * Sets the urlPathPrefix value for this Network.
+     * Sets the value of the urlPathPrefix property.
      * 
-     * @param urlPathPrefix
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUrlPathPrefix(java.lang.String urlPathPrefix) {
-        this.urlPathPrefix = urlPathPrefix;
+    public void setUrlPathPrefix(String value) {
+        this.urlPathPrefix = value;
     }
 
-
     /**
-     * Gets the welcomeTemplate value for this Network.
+     * Gets the value of the welcomeTemplate property.
      * 
-     * @return welcomeTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getWelcomeTemplate() {
+    public String getWelcomeTemplate() {
         return welcomeTemplate;
     }
 
-
     /**
-     * Sets the welcomeTemplate value for this Network.
+     * Sets the value of the welcomeTemplate property.
      * 
-     * @param welcomeTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setWelcomeTemplate(java.lang.String welcomeTemplate) {
-        this.welcomeTemplate = welcomeTemplate;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Network)) return false;
-        Network other = (Network) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.allowMembersToFlag==null && other.getAllowMembersToFlag()==null) || 
-             (this.allowMembersToFlag!=null &&
-              this.allowMembersToFlag.equals(other.getAllowMembersToFlag()))) &&
-            ((this.branding==null && other.getBranding()==null) || 
-             (this.branding!=null &&
-              this.branding.equals(other.getBranding()))) &&
-            ((this.caseCommentEmailTemplate==null && other.getCaseCommentEmailTemplate()==null) || 
-             (this.caseCommentEmailTemplate!=null &&
-              this.caseCommentEmailTemplate.equals(other.getCaseCommentEmailTemplate()))) &&
-            ((this.changePasswordTemplate==null && other.getChangePasswordTemplate()==null) || 
-             (this.changePasswordTemplate!=null &&
-              this.changePasswordTemplate.equals(other.getChangePasswordTemplate()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.emailSenderAddress==null && other.getEmailSenderAddress()==null) || 
-             (this.emailSenderAddress!=null &&
-              this.emailSenderAddress.equals(other.getEmailSenderAddress()))) &&
-            ((this.emailSenderName==null && other.getEmailSenderName()==null) || 
-             (this.emailSenderName!=null &&
-              this.emailSenderName.equals(other.getEmailSenderName()))) &&
-            ((this.enableInvitation==null && other.getEnableInvitation()==null) || 
-             (this.enableInvitation!=null &&
-              this.enableInvitation.equals(other.getEnableInvitation()))) &&
-            ((this.forgotPasswordTemplate==null && other.getForgotPasswordTemplate()==null) || 
-             (this.forgotPasswordTemplate!=null &&
-              this.forgotPasswordTemplate.equals(other.getForgotPasswordTemplate()))) &&
-            ((this.networkMemberGroups==null && other.getNetworkMemberGroups()==null) || 
-             (this.networkMemberGroups!=null &&
-              this.networkMemberGroups.equals(other.getNetworkMemberGroups()))) &&
-            ((this.newSenderAddress==null && other.getNewSenderAddress()==null) || 
-             (this.newSenderAddress!=null &&
-              this.newSenderAddress.equals(other.getNewSenderAddress()))) &&
-            ((this.selfRegProfile==null && other.getSelfRegProfile()==null) || 
-             (this.selfRegProfile!=null &&
-              this.selfRegProfile.equals(other.getSelfRegProfile()))) &&
-            ((this.selfRegistration==null && other.getSelfRegistration()==null) || 
-             (this.selfRegistration!=null &&
-              this.selfRegistration.equals(other.getSelfRegistration()))) &&
-            ((this.sendWelcomeEmail==null && other.getSendWelcomeEmail()==null) || 
-             (this.sendWelcomeEmail!=null &&
-              this.sendWelcomeEmail.equals(other.getSendWelcomeEmail()))) &&
-            ((this.site==null && other.getSite()==null) || 
-             (this.site!=null &&
-              this.site.equals(other.getSite()))) &&
-            ((this.status==null && other.getStatus()==null) || 
-             (this.status!=null &&
-              this.status.equals(other.getStatus()))) &&
-            ((this.tabs==null && other.getTabs()==null) || 
-             (this.tabs!=null &&
-              this.tabs.equals(other.getTabs()))) &&
-            ((this.urlPathPrefix==null && other.getUrlPathPrefix()==null) || 
-             (this.urlPathPrefix!=null &&
-              this.urlPathPrefix.equals(other.getUrlPathPrefix()))) &&
-            ((this.welcomeTemplate==null && other.getWelcomeTemplate()==null) || 
-             (this.welcomeTemplate!=null &&
-              this.welcomeTemplate.equals(other.getWelcomeTemplate())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAllowMembersToFlag() != null) {
-            _hashCode += getAllowMembersToFlag().hashCode();
-        }
-        if (getBranding() != null) {
-            _hashCode += getBranding().hashCode();
-        }
-        if (getCaseCommentEmailTemplate() != null) {
-            _hashCode += getCaseCommentEmailTemplate().hashCode();
-        }
-        if (getChangePasswordTemplate() != null) {
-            _hashCode += getChangePasswordTemplate().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getEmailSenderAddress() != null) {
-            _hashCode += getEmailSenderAddress().hashCode();
-        }
-        if (getEmailSenderName() != null) {
-            _hashCode += getEmailSenderName().hashCode();
-        }
-        if (getEnableInvitation() != null) {
-            _hashCode += getEnableInvitation().hashCode();
-        }
-        if (getForgotPasswordTemplate() != null) {
-            _hashCode += getForgotPasswordTemplate().hashCode();
-        }
-        if (getNetworkMemberGroups() != null) {
-            _hashCode += getNetworkMemberGroups().hashCode();
-        }
-        if (getNewSenderAddress() != null) {
-            _hashCode += getNewSenderAddress().hashCode();
-        }
-        if (getSelfRegProfile() != null) {
-            _hashCode += getSelfRegProfile().hashCode();
-        }
-        if (getSelfRegistration() != null) {
-            _hashCode += getSelfRegistration().hashCode();
-        }
-        if (getSendWelcomeEmail() != null) {
-            _hashCode += getSendWelcomeEmail().hashCode();
-        }
-        if (getSite() != null) {
-            _hashCode += getSite().hashCode();
-        }
-        if (getStatus() != null) {
-            _hashCode += getStatus().hashCode();
-        }
-        if (getTabs() != null) {
-            _hashCode += getTabs().hashCode();
-        }
-        if (getUrlPathPrefix() != null) {
-            _hashCode += getUrlPathPrefix().hashCode();
-        }
-        if (getWelcomeTemplate() != null) {
-            _hashCode += getWelcomeTemplate().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Network.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Network"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowMembersToFlag");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowMembersToFlag"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("branding");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "branding"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Branding"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("caseCommentEmailTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "caseCommentEmailTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("changePasswordTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "changePasswordTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailSenderAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emailSenderAddress"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailSenderName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emailSenderName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableInvitation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableInvitation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("forgotPasswordTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "forgotPasswordTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("networkMemberGroups");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "networkMemberGroups"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "NetworkMemberGroup"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("newSenderAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "newSenderAddress"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("selfRegProfile");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "selfRegProfile"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("selfRegistration");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "selfRegistration"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sendWelcomeEmail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sendWelcomeEmail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("site");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "site"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("status");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "status"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "NetworkStatus"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tabs");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tabs"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "NetworkTabSet"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("urlPathPrefix");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "urlPathPrefix"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("welcomeTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "welcomeTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWelcomeTemplate(String value) {
+        this.welcomeTemplate = value;
     }
 
 }

@@ -1,157 +1,90 @@
-/**
- * FiscalYearSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FiscalYearSettings  implements java.io.Serializable {
-    private java.lang.String fiscalYearNameBasedOn;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String startMonth;
 
-    public FiscalYearSettings() {
-    }
+/**
+ * <p>Java class for FiscalYearSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FiscalYearSettings">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="fiscalYearNameBasedOn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="startMonth" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FiscalYearSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "fiscalYearNameBasedOn",
+    "startMonth"
+})
+public class FiscalYearSettings {
 
-    public FiscalYearSettings(
-           java.lang.String fiscalYearNameBasedOn,
-           java.lang.String startMonth) {
-           this.fiscalYearNameBasedOn = fiscalYearNameBasedOn;
-           this.startMonth = startMonth;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String fiscalYearNameBasedOn;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String startMonth;
 
     /**
-     * Gets the fiscalYearNameBasedOn value for this FiscalYearSettings.
+     * Gets the value of the fiscalYearNameBasedOn property.
      * 
-     * @return fiscalYearNameBasedOn
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFiscalYearNameBasedOn() {
+    public String getFiscalYearNameBasedOn() {
         return fiscalYearNameBasedOn;
     }
 
-
     /**
-     * Sets the fiscalYearNameBasedOn value for this FiscalYearSettings.
+     * Sets the value of the fiscalYearNameBasedOn property.
      * 
-     * @param fiscalYearNameBasedOn
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFiscalYearNameBasedOn(java.lang.String fiscalYearNameBasedOn) {
-        this.fiscalYearNameBasedOn = fiscalYearNameBasedOn;
+    public void setFiscalYearNameBasedOn(String value) {
+        this.fiscalYearNameBasedOn = value;
     }
 
-
     /**
-     * Gets the startMonth value for this FiscalYearSettings.
+     * Gets the value of the startMonth property.
      * 
-     * @return startMonth
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStartMonth() {
+    public String getStartMonth() {
         return startMonth;
     }
 
-
     /**
-     * Sets the startMonth value for this FiscalYearSettings.
+     * Sets the value of the startMonth property.
      * 
-     * @param startMonth
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStartMonth(java.lang.String startMonth) {
-        this.startMonth = startMonth;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FiscalYearSettings)) return false;
-        FiscalYearSettings other = (FiscalYearSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.fiscalYearNameBasedOn==null && other.getFiscalYearNameBasedOn()==null) || 
-             (this.fiscalYearNameBasedOn!=null &&
-              this.fiscalYearNameBasedOn.equals(other.getFiscalYearNameBasedOn()))) &&
-            ((this.startMonth==null && other.getStartMonth()==null) || 
-             (this.startMonth!=null &&
-              this.startMonth.equals(other.getStartMonth())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getFiscalYearNameBasedOn() != null) {
-            _hashCode += getFiscalYearNameBasedOn().hashCode();
-        }
-        if (getStartMonth() != null) {
-            _hashCode += getStartMonth().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FiscalYearSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FiscalYearSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fiscalYearNameBasedOn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fiscalYearNameBasedOn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("startMonth");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "startMonth"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStartMonth(String value) {
+        this.startMonth = value;
     }
 
 }

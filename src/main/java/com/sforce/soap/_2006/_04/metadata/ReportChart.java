@@ -1,987 +1,713 @@
-/**
- * ReportChart.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportChart  implements java.io.Serializable {
-    private java.lang.String backgroundColor1;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String backgroundColor2;
 
-    private com.sforce.soap._2006._04.metadata.ChartBackgroundDirection backgroundFadeDir;
+/**
+ * <p>Java class for ReportChart complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportChart">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="backgroundColor1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="backgroundColor2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="backgroundFadeDir" type="{http://soap.sforce.com/2006/04/metadata}ChartBackgroundDirection" minOccurs="0"/>
+ *         &lt;element name="chartSummaries" type="{http://soap.sforce.com/2006/04/metadata}ChartSummary" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="chartType" type="{http://soap.sforce.com/2006/04/metadata}ChartType"/>
+ *         &lt;element name="enableHoverLabels" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="expandOthers" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="groupingColumn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="legendPosition" type="{http://soap.sforce.com/2006/04/metadata}ChartLegendPosition" minOccurs="0"/>
+ *         &lt;element name="location" type="{http://soap.sforce.com/2006/04/metadata}ChartPosition" minOccurs="0"/>
+ *         &lt;element name="secondaryGroupingColumn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="showAxisLabels" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showPercentage" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showTotal" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showValues" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="size" type="{http://soap.sforce.com/2006/04/metadata}ReportChartSize" minOccurs="0"/>
+ *         &lt;element name="summaryAxisManualRangeEnd" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="summaryAxisManualRangeStart" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="summaryAxisRange" type="{http://soap.sforce.com/2006/04/metadata}ChartRangeType" minOccurs="0"/>
+ *         &lt;element name="textColor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="textSize" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="titleColor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="titleSize" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportChart", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "backgroundColor1",
+    "backgroundColor2",
+    "backgroundFadeDir",
+    "chartSummaries",
+    "chartType",
+    "enableHoverLabels",
+    "expandOthers",
+    "groupingColumn",
+    "legendPosition",
+    "location",
+    "secondaryGroupingColumn",
+    "showAxisLabels",
+    "showPercentage",
+    "showTotal",
+    "showValues",
+    "size",
+    "summaryAxisManualRangeEnd",
+    "summaryAxisManualRangeStart",
+    "summaryAxisRange",
+    "textColor",
+    "textSize",
+    "title",
+    "titleColor",
+    "titleSize"
+})
+public class ReportChart {
 
-    private com.sforce.soap._2006._04.metadata.ChartSummary[] chartSummaries;
-
-    private com.sforce.soap._2006._04.metadata.ChartType chartType;
-
-    private java.lang.Boolean enableHoverLabels;
-
-    private java.lang.Boolean expandOthers;
-
-    private java.lang.String groupingColumn;
-
-    private com.sforce.soap._2006._04.metadata.ChartLegendPosition legendPosition;
-
-    private com.sforce.soap._2006._04.metadata.ChartPosition location;
-
-    private java.lang.String secondaryGroupingColumn;
-
-    private java.lang.Boolean showAxisLabels;
-
-    private java.lang.Boolean showPercentage;
-
-    private java.lang.Boolean showTotal;
-
-    private java.lang.Boolean showValues;
-
-    private com.sforce.soap._2006._04.metadata.ReportChartSize size;
-
-    private java.lang.Double summaryAxisManualRangeEnd;
-
-    private java.lang.Double summaryAxisManualRangeStart;
-
-    private com.sforce.soap._2006._04.metadata.ChartRangeType summaryAxisRange;
-
-    private java.lang.String textColor;
-
-    private java.lang.Integer textSize;
-
-    private java.lang.String title;
-
-    private java.lang.String titleColor;
-
-    private java.lang.Integer titleSize;
-
-    public ReportChart() {
-    }
-
-    public ReportChart(
-           java.lang.String backgroundColor1,
-           java.lang.String backgroundColor2,
-           com.sforce.soap._2006._04.metadata.ChartBackgroundDirection backgroundFadeDir,
-           com.sforce.soap._2006._04.metadata.ChartSummary[] chartSummaries,
-           com.sforce.soap._2006._04.metadata.ChartType chartType,
-           java.lang.Boolean enableHoverLabels,
-           java.lang.Boolean expandOthers,
-           java.lang.String groupingColumn,
-           com.sforce.soap._2006._04.metadata.ChartLegendPosition legendPosition,
-           com.sforce.soap._2006._04.metadata.ChartPosition location,
-           java.lang.String secondaryGroupingColumn,
-           java.lang.Boolean showAxisLabels,
-           java.lang.Boolean showPercentage,
-           java.lang.Boolean showTotal,
-           java.lang.Boolean showValues,
-           com.sforce.soap._2006._04.metadata.ReportChartSize size,
-           java.lang.Double summaryAxisManualRangeEnd,
-           java.lang.Double summaryAxisManualRangeStart,
-           com.sforce.soap._2006._04.metadata.ChartRangeType summaryAxisRange,
-           java.lang.String textColor,
-           java.lang.Integer textSize,
-           java.lang.String title,
-           java.lang.String titleColor,
-           java.lang.Integer titleSize) {
-           this.backgroundColor1 = backgroundColor1;
-           this.backgroundColor2 = backgroundColor2;
-           this.backgroundFadeDir = backgroundFadeDir;
-           this.chartSummaries = chartSummaries;
-           this.chartType = chartType;
-           this.enableHoverLabels = enableHoverLabels;
-           this.expandOthers = expandOthers;
-           this.groupingColumn = groupingColumn;
-           this.legendPosition = legendPosition;
-           this.location = location;
-           this.secondaryGroupingColumn = secondaryGroupingColumn;
-           this.showAxisLabels = showAxisLabels;
-           this.showPercentage = showPercentage;
-           this.showTotal = showTotal;
-           this.showValues = showValues;
-           this.size = size;
-           this.summaryAxisManualRangeEnd = summaryAxisManualRangeEnd;
-           this.summaryAxisManualRangeStart = summaryAxisManualRangeStart;
-           this.summaryAxisRange = summaryAxisRange;
-           this.textColor = textColor;
-           this.textSize = textSize;
-           this.title = title;
-           this.titleColor = titleColor;
-           this.titleSize = titleSize;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String backgroundColor1;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String backgroundColor2;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ChartBackgroundDirection backgroundFadeDir;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ChartSummary> chartSummaries;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected ChartType chartType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableHoverLabels;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean expandOthers;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String groupingColumn;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ChartLegendPosition legendPosition;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ChartPosition location;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String secondaryGroupingColumn;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showAxisLabels;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showPercentage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showTotal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showValues;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportChartSize size;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double summaryAxisManualRangeEnd;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double summaryAxisManualRangeStart;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ChartRangeType summaryAxisRange;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String textColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer textSize;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String title;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String titleColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer titleSize;
 
     /**
-     * Gets the backgroundColor1 value for this ReportChart.
+     * Gets the value of the backgroundColor1 property.
      * 
-     * @return backgroundColor1
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBackgroundColor1() {
+    public String getBackgroundColor1() {
         return backgroundColor1;
     }
 
-
     /**
-     * Sets the backgroundColor1 value for this ReportChart.
+     * Sets the value of the backgroundColor1 property.
      * 
-     * @param backgroundColor1
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBackgroundColor1(java.lang.String backgroundColor1) {
-        this.backgroundColor1 = backgroundColor1;
+    public void setBackgroundColor1(String value) {
+        this.backgroundColor1 = value;
     }
 
-
     /**
-     * Gets the backgroundColor2 value for this ReportChart.
+     * Gets the value of the backgroundColor2 property.
      * 
-     * @return backgroundColor2
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBackgroundColor2() {
+    public String getBackgroundColor2() {
         return backgroundColor2;
     }
 
-
     /**
-     * Sets the backgroundColor2 value for this ReportChart.
+     * Sets the value of the backgroundColor2 property.
      * 
-     * @param backgroundColor2
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBackgroundColor2(java.lang.String backgroundColor2) {
-        this.backgroundColor2 = backgroundColor2;
+    public void setBackgroundColor2(String value) {
+        this.backgroundColor2 = value;
     }
 
-
     /**
-     * Gets the backgroundFadeDir value for this ReportChart.
+     * Gets the value of the backgroundFadeDir property.
      * 
-     * @return backgroundFadeDir
+     * @return
+     *     possible object is
+     *     {@link ChartBackgroundDirection }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartBackgroundDirection getBackgroundFadeDir() {
+    public ChartBackgroundDirection getBackgroundFadeDir() {
         return backgroundFadeDir;
     }
 
+    /**
+     * Sets the value of the backgroundFadeDir property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ChartBackgroundDirection }
+     *     
+     */
+    public void setBackgroundFadeDir(ChartBackgroundDirection value) {
+        this.backgroundFadeDir = value;
+    }
 
     /**
-     * Sets the backgroundFadeDir value for this ReportChart.
+     * Gets the value of the chartSummaries property.
      * 
-     * @param backgroundFadeDir
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the chartSummaries property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getChartSummaries().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ChartSummary }
+     * 
+     * 
      */
-    public void setBackgroundFadeDir(com.sforce.soap._2006._04.metadata.ChartBackgroundDirection backgroundFadeDir) {
-        this.backgroundFadeDir = backgroundFadeDir;
+    public List<ChartSummary> getChartSummaries() {
+        if (chartSummaries == null) {
+            chartSummaries = new ArrayList<ChartSummary>();
+        }
+        return this.chartSummaries;
     }
-
 
     /**
-     * Gets the chartSummaries value for this ReportChart.
+     * Gets the value of the chartType property.
      * 
-     * @return chartSummaries
+     * @return
+     *     possible object is
+     *     {@link ChartType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartSummary[] getChartSummaries() {
-        return chartSummaries;
-    }
-
-
-    /**
-     * Sets the chartSummaries value for this ReportChart.
-     * 
-     * @param chartSummaries
-     */
-    public void setChartSummaries(com.sforce.soap._2006._04.metadata.ChartSummary[] chartSummaries) {
-        this.chartSummaries = chartSummaries;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ChartSummary getChartSummaries(int i) {
-        return this.chartSummaries[i];
-    }
-
-    public void setChartSummaries(int i, com.sforce.soap._2006._04.metadata.ChartSummary _value) {
-        this.chartSummaries[i] = _value;
-    }
-
-
-    /**
-     * Gets the chartType value for this ReportChart.
-     * 
-     * @return chartType
-     */
-    public com.sforce.soap._2006._04.metadata.ChartType getChartType() {
+    public ChartType getChartType() {
         return chartType;
     }
 
-
     /**
-     * Sets the chartType value for this ReportChart.
+     * Sets the value of the chartType property.
      * 
-     * @param chartType
+     * @param value
+     *     allowed object is
+     *     {@link ChartType }
+     *     
      */
-    public void setChartType(com.sforce.soap._2006._04.metadata.ChartType chartType) {
-        this.chartType = chartType;
+    public void setChartType(ChartType value) {
+        this.chartType = value;
     }
 
-
     /**
-     * Gets the enableHoverLabels value for this ReportChart.
+     * Gets the value of the enableHoverLabels property.
      * 
-     * @return enableHoverLabels
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableHoverLabels() {
+    public Boolean isEnableHoverLabels() {
         return enableHoverLabels;
     }
 
-
     /**
-     * Sets the enableHoverLabels value for this ReportChart.
+     * Sets the value of the enableHoverLabels property.
      * 
-     * @param enableHoverLabels
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableHoverLabels(java.lang.Boolean enableHoverLabels) {
-        this.enableHoverLabels = enableHoverLabels;
+    public void setEnableHoverLabels(Boolean value) {
+        this.enableHoverLabels = value;
     }
 
-
     /**
-     * Gets the expandOthers value for this ReportChart.
+     * Gets the value of the expandOthers property.
      * 
-     * @return expandOthers
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getExpandOthers() {
+    public Boolean isExpandOthers() {
         return expandOthers;
     }
 
-
     /**
-     * Sets the expandOthers value for this ReportChart.
+     * Sets the value of the expandOthers property.
      * 
-     * @param expandOthers
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setExpandOthers(java.lang.Boolean expandOthers) {
-        this.expandOthers = expandOthers;
+    public void setExpandOthers(Boolean value) {
+        this.expandOthers = value;
     }
 
-
     /**
-     * Gets the groupingColumn value for this ReportChart.
+     * Gets the value of the groupingColumn property.
      * 
-     * @return groupingColumn
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getGroupingColumn() {
+    public String getGroupingColumn() {
         return groupingColumn;
     }
 
-
     /**
-     * Sets the groupingColumn value for this ReportChart.
+     * Sets the value of the groupingColumn property.
      * 
-     * @param groupingColumn
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setGroupingColumn(java.lang.String groupingColumn) {
-        this.groupingColumn = groupingColumn;
+    public void setGroupingColumn(String value) {
+        this.groupingColumn = value;
     }
 
-
     /**
-     * Gets the legendPosition value for this ReportChart.
+     * Gets the value of the legendPosition property.
      * 
-     * @return legendPosition
+     * @return
+     *     possible object is
+     *     {@link ChartLegendPosition }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartLegendPosition getLegendPosition() {
+    public ChartLegendPosition getLegendPosition() {
         return legendPosition;
     }
 
-
     /**
-     * Sets the legendPosition value for this ReportChart.
+     * Sets the value of the legendPosition property.
      * 
-     * @param legendPosition
+     * @param value
+     *     allowed object is
+     *     {@link ChartLegendPosition }
+     *     
      */
-    public void setLegendPosition(com.sforce.soap._2006._04.metadata.ChartLegendPosition legendPosition) {
-        this.legendPosition = legendPosition;
+    public void setLegendPosition(ChartLegendPosition value) {
+        this.legendPosition = value;
     }
 
-
     /**
-     * Gets the location value for this ReportChart.
+     * Gets the value of the location property.
      * 
-     * @return location
+     * @return
+     *     possible object is
+     *     {@link ChartPosition }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartPosition getLocation() {
+    public ChartPosition getLocation() {
         return location;
     }
 
-
     /**
-     * Sets the location value for this ReportChart.
+     * Sets the value of the location property.
      * 
-     * @param location
+     * @param value
+     *     allowed object is
+     *     {@link ChartPosition }
+     *     
      */
-    public void setLocation(com.sforce.soap._2006._04.metadata.ChartPosition location) {
-        this.location = location;
+    public void setLocation(ChartPosition value) {
+        this.location = value;
     }
 
-
     /**
-     * Gets the secondaryGroupingColumn value for this ReportChart.
+     * Gets the value of the secondaryGroupingColumn property.
      * 
-     * @return secondaryGroupingColumn
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSecondaryGroupingColumn() {
+    public String getSecondaryGroupingColumn() {
         return secondaryGroupingColumn;
     }
 
-
     /**
-     * Sets the secondaryGroupingColumn value for this ReportChart.
+     * Sets the value of the secondaryGroupingColumn property.
      * 
-     * @param secondaryGroupingColumn
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSecondaryGroupingColumn(java.lang.String secondaryGroupingColumn) {
-        this.secondaryGroupingColumn = secondaryGroupingColumn;
+    public void setSecondaryGroupingColumn(String value) {
+        this.secondaryGroupingColumn = value;
     }
 
-
     /**
-     * Gets the showAxisLabels value for this ReportChart.
+     * Gets the value of the showAxisLabels property.
      * 
-     * @return showAxisLabels
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowAxisLabels() {
+    public Boolean isShowAxisLabels() {
         return showAxisLabels;
     }
 
-
     /**
-     * Sets the showAxisLabels value for this ReportChart.
+     * Sets the value of the showAxisLabels property.
      * 
-     * @param showAxisLabels
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowAxisLabels(java.lang.Boolean showAxisLabels) {
-        this.showAxisLabels = showAxisLabels;
+    public void setShowAxisLabels(Boolean value) {
+        this.showAxisLabels = value;
     }
 
-
     /**
-     * Gets the showPercentage value for this ReportChart.
+     * Gets the value of the showPercentage property.
      * 
-     * @return showPercentage
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowPercentage() {
+    public Boolean isShowPercentage() {
         return showPercentage;
     }
 
-
     /**
-     * Sets the showPercentage value for this ReportChart.
+     * Sets the value of the showPercentage property.
      * 
-     * @param showPercentage
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowPercentage(java.lang.Boolean showPercentage) {
-        this.showPercentage = showPercentage;
+    public void setShowPercentage(Boolean value) {
+        this.showPercentage = value;
     }
 
-
     /**
-     * Gets the showTotal value for this ReportChart.
+     * Gets the value of the showTotal property.
      * 
-     * @return showTotal
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowTotal() {
+    public Boolean isShowTotal() {
         return showTotal;
     }
 
-
     /**
-     * Sets the showTotal value for this ReportChart.
+     * Sets the value of the showTotal property.
      * 
-     * @param showTotal
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowTotal(java.lang.Boolean showTotal) {
-        this.showTotal = showTotal;
+    public void setShowTotal(Boolean value) {
+        this.showTotal = value;
     }
 
-
     /**
-     * Gets the showValues value for this ReportChart.
+     * Gets the value of the showValues property.
      * 
-     * @return showValues
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowValues() {
+    public Boolean isShowValues() {
         return showValues;
     }
 
-
     /**
-     * Sets the showValues value for this ReportChart.
+     * Sets the value of the showValues property.
      * 
-     * @param showValues
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowValues(java.lang.Boolean showValues) {
-        this.showValues = showValues;
+    public void setShowValues(Boolean value) {
+        this.showValues = value;
     }
 
-
     /**
-     * Gets the size value for this ReportChart.
+     * Gets the value of the size property.
      * 
-     * @return size
+     * @return
+     *     possible object is
+     *     {@link ReportChartSize }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportChartSize getSize() {
+    public ReportChartSize getSize() {
         return size;
     }
 
-
     /**
-     * Sets the size value for this ReportChart.
+     * Sets the value of the size property.
      * 
-     * @param size
+     * @param value
+     *     allowed object is
+     *     {@link ReportChartSize }
+     *     
      */
-    public void setSize(com.sforce.soap._2006._04.metadata.ReportChartSize size) {
-        this.size = size;
+    public void setSize(ReportChartSize value) {
+        this.size = value;
     }
 
-
     /**
-     * Gets the summaryAxisManualRangeEnd value for this ReportChart.
+     * Gets the value of the summaryAxisManualRangeEnd property.
      * 
-     * @return summaryAxisManualRangeEnd
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getSummaryAxisManualRangeEnd() {
+    public Double getSummaryAxisManualRangeEnd() {
         return summaryAxisManualRangeEnd;
     }
 
-
     /**
-     * Sets the summaryAxisManualRangeEnd value for this ReportChart.
+     * Sets the value of the summaryAxisManualRangeEnd property.
      * 
-     * @param summaryAxisManualRangeEnd
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
      */
-    public void setSummaryAxisManualRangeEnd(java.lang.Double summaryAxisManualRangeEnd) {
-        this.summaryAxisManualRangeEnd = summaryAxisManualRangeEnd;
+    public void setSummaryAxisManualRangeEnd(Double value) {
+        this.summaryAxisManualRangeEnd = value;
     }
 
-
     /**
-     * Gets the summaryAxisManualRangeStart value for this ReportChart.
+     * Gets the value of the summaryAxisManualRangeStart property.
      * 
-     * @return summaryAxisManualRangeStart
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getSummaryAxisManualRangeStart() {
+    public Double getSummaryAxisManualRangeStart() {
         return summaryAxisManualRangeStart;
     }
 
-
     /**
-     * Sets the summaryAxisManualRangeStart value for this ReportChart.
+     * Sets the value of the summaryAxisManualRangeStart property.
      * 
-     * @param summaryAxisManualRangeStart
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
      */
-    public void setSummaryAxisManualRangeStart(java.lang.Double summaryAxisManualRangeStart) {
-        this.summaryAxisManualRangeStart = summaryAxisManualRangeStart;
+    public void setSummaryAxisManualRangeStart(Double value) {
+        this.summaryAxisManualRangeStart = value;
     }
 
-
     /**
-     * Gets the summaryAxisRange value for this ReportChart.
+     * Gets the value of the summaryAxisRange property.
      * 
-     * @return summaryAxisRange
+     * @return
+     *     possible object is
+     *     {@link ChartRangeType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ChartRangeType getSummaryAxisRange() {
+    public ChartRangeType getSummaryAxisRange() {
         return summaryAxisRange;
     }
 
-
     /**
-     * Sets the summaryAxisRange value for this ReportChart.
+     * Sets the value of the summaryAxisRange property.
      * 
-     * @param summaryAxisRange
+     * @param value
+     *     allowed object is
+     *     {@link ChartRangeType }
+     *     
      */
-    public void setSummaryAxisRange(com.sforce.soap._2006._04.metadata.ChartRangeType summaryAxisRange) {
-        this.summaryAxisRange = summaryAxisRange;
+    public void setSummaryAxisRange(ChartRangeType value) {
+        this.summaryAxisRange = value;
     }
 
-
     /**
-     * Gets the textColor value for this ReportChart.
+     * Gets the value of the textColor property.
      * 
-     * @return textColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTextColor() {
+    public String getTextColor() {
         return textColor;
     }
 
-
     /**
-     * Sets the textColor value for this ReportChart.
+     * Sets the value of the textColor property.
      * 
-     * @param textColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTextColor(java.lang.String textColor) {
-        this.textColor = textColor;
+    public void setTextColor(String value) {
+        this.textColor = value;
     }
 
-
     /**
-     * Gets the textSize value for this ReportChart.
+     * Gets the value of the textSize property.
      * 
-     * @return textSize
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getTextSize() {
+    public Integer getTextSize() {
         return textSize;
     }
 
-
     /**
-     * Sets the textSize value for this ReportChart.
+     * Sets the value of the textSize property.
      * 
-     * @param textSize
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setTextSize(java.lang.Integer textSize) {
-        this.textSize = textSize;
+    public void setTextSize(Integer value) {
+        this.textSize = value;
     }
 
-
     /**
-     * Gets the title value for this ReportChart.
+     * Gets the value of the title property.
      * 
-     * @return title
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-
     /**
-     * Sets the title value for this ReportChart.
+     * Sets the value of the title property.
      * 
-     * @param title
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTitle(java.lang.String title) {
-        this.title = title;
+    public void setTitle(String value) {
+        this.title = value;
     }
 
-
     /**
-     * Gets the titleColor value for this ReportChart.
+     * Gets the value of the titleColor property.
      * 
-     * @return titleColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTitleColor() {
+    public String getTitleColor() {
         return titleColor;
     }
 
-
     /**
-     * Sets the titleColor value for this ReportChart.
+     * Sets the value of the titleColor property.
      * 
-     * @param titleColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTitleColor(java.lang.String titleColor) {
-        this.titleColor = titleColor;
+    public void setTitleColor(String value) {
+        this.titleColor = value;
     }
 
-
     /**
-     * Gets the titleSize value for this ReportChart.
+     * Gets the value of the titleSize property.
      * 
-     * @return titleSize
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getTitleSize() {
+    public Integer getTitleSize() {
         return titleSize;
     }
 
-
     /**
-     * Sets the titleSize value for this ReportChart.
+     * Sets the value of the titleSize property.
      * 
-     * @param titleSize
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setTitleSize(java.lang.Integer titleSize) {
-        this.titleSize = titleSize;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportChart)) return false;
-        ReportChart other = (ReportChart) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.backgroundColor1==null && other.getBackgroundColor1()==null) || 
-             (this.backgroundColor1!=null &&
-              this.backgroundColor1.equals(other.getBackgroundColor1()))) &&
-            ((this.backgroundColor2==null && other.getBackgroundColor2()==null) || 
-             (this.backgroundColor2!=null &&
-              this.backgroundColor2.equals(other.getBackgroundColor2()))) &&
-            ((this.backgroundFadeDir==null && other.getBackgroundFadeDir()==null) || 
-             (this.backgroundFadeDir!=null &&
-              this.backgroundFadeDir.equals(other.getBackgroundFadeDir()))) &&
-            ((this.chartSummaries==null && other.getChartSummaries()==null) || 
-             (this.chartSummaries!=null &&
-              java.util.Arrays.equals(this.chartSummaries, other.getChartSummaries()))) &&
-            ((this.chartType==null && other.getChartType()==null) || 
-             (this.chartType!=null &&
-              this.chartType.equals(other.getChartType()))) &&
-            ((this.enableHoverLabels==null && other.getEnableHoverLabels()==null) || 
-             (this.enableHoverLabels!=null &&
-              this.enableHoverLabels.equals(other.getEnableHoverLabels()))) &&
-            ((this.expandOthers==null && other.getExpandOthers()==null) || 
-             (this.expandOthers!=null &&
-              this.expandOthers.equals(other.getExpandOthers()))) &&
-            ((this.groupingColumn==null && other.getGroupingColumn()==null) || 
-             (this.groupingColumn!=null &&
-              this.groupingColumn.equals(other.getGroupingColumn()))) &&
-            ((this.legendPosition==null && other.getLegendPosition()==null) || 
-             (this.legendPosition!=null &&
-              this.legendPosition.equals(other.getLegendPosition()))) &&
-            ((this.location==null && other.getLocation()==null) || 
-             (this.location!=null &&
-              this.location.equals(other.getLocation()))) &&
-            ((this.secondaryGroupingColumn==null && other.getSecondaryGroupingColumn()==null) || 
-             (this.secondaryGroupingColumn!=null &&
-              this.secondaryGroupingColumn.equals(other.getSecondaryGroupingColumn()))) &&
-            ((this.showAxisLabels==null && other.getShowAxisLabels()==null) || 
-             (this.showAxisLabels!=null &&
-              this.showAxisLabels.equals(other.getShowAxisLabels()))) &&
-            ((this.showPercentage==null && other.getShowPercentage()==null) || 
-             (this.showPercentage!=null &&
-              this.showPercentage.equals(other.getShowPercentage()))) &&
-            ((this.showTotal==null && other.getShowTotal()==null) || 
-             (this.showTotal!=null &&
-              this.showTotal.equals(other.getShowTotal()))) &&
-            ((this.showValues==null && other.getShowValues()==null) || 
-             (this.showValues!=null &&
-              this.showValues.equals(other.getShowValues()))) &&
-            ((this.size==null && other.getSize()==null) || 
-             (this.size!=null &&
-              this.size.equals(other.getSize()))) &&
-            ((this.summaryAxisManualRangeEnd==null && other.getSummaryAxisManualRangeEnd()==null) || 
-             (this.summaryAxisManualRangeEnd!=null &&
-              this.summaryAxisManualRangeEnd.equals(other.getSummaryAxisManualRangeEnd()))) &&
-            ((this.summaryAxisManualRangeStart==null && other.getSummaryAxisManualRangeStart()==null) || 
-             (this.summaryAxisManualRangeStart!=null &&
-              this.summaryAxisManualRangeStart.equals(other.getSummaryAxisManualRangeStart()))) &&
-            ((this.summaryAxisRange==null && other.getSummaryAxisRange()==null) || 
-             (this.summaryAxisRange!=null &&
-              this.summaryAxisRange.equals(other.getSummaryAxisRange()))) &&
-            ((this.textColor==null && other.getTextColor()==null) || 
-             (this.textColor!=null &&
-              this.textColor.equals(other.getTextColor()))) &&
-            ((this.textSize==null && other.getTextSize()==null) || 
-             (this.textSize!=null &&
-              this.textSize.equals(other.getTextSize()))) &&
-            ((this.title==null && other.getTitle()==null) || 
-             (this.title!=null &&
-              this.title.equals(other.getTitle()))) &&
-            ((this.titleColor==null && other.getTitleColor()==null) || 
-             (this.titleColor!=null &&
-              this.titleColor.equals(other.getTitleColor()))) &&
-            ((this.titleSize==null && other.getTitleSize()==null) || 
-             (this.titleSize!=null &&
-              this.titleSize.equals(other.getTitleSize())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getBackgroundColor1() != null) {
-            _hashCode += getBackgroundColor1().hashCode();
-        }
-        if (getBackgroundColor2() != null) {
-            _hashCode += getBackgroundColor2().hashCode();
-        }
-        if (getBackgroundFadeDir() != null) {
-            _hashCode += getBackgroundFadeDir().hashCode();
-        }
-        if (getChartSummaries() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getChartSummaries());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getChartSummaries(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getChartType() != null) {
-            _hashCode += getChartType().hashCode();
-        }
-        if (getEnableHoverLabels() != null) {
-            _hashCode += getEnableHoverLabels().hashCode();
-        }
-        if (getExpandOthers() != null) {
-            _hashCode += getExpandOthers().hashCode();
-        }
-        if (getGroupingColumn() != null) {
-            _hashCode += getGroupingColumn().hashCode();
-        }
-        if (getLegendPosition() != null) {
-            _hashCode += getLegendPosition().hashCode();
-        }
-        if (getLocation() != null) {
-            _hashCode += getLocation().hashCode();
-        }
-        if (getSecondaryGroupingColumn() != null) {
-            _hashCode += getSecondaryGroupingColumn().hashCode();
-        }
-        if (getShowAxisLabels() != null) {
-            _hashCode += getShowAxisLabels().hashCode();
-        }
-        if (getShowPercentage() != null) {
-            _hashCode += getShowPercentage().hashCode();
-        }
-        if (getShowTotal() != null) {
-            _hashCode += getShowTotal().hashCode();
-        }
-        if (getShowValues() != null) {
-            _hashCode += getShowValues().hashCode();
-        }
-        if (getSize() != null) {
-            _hashCode += getSize().hashCode();
-        }
-        if (getSummaryAxisManualRangeEnd() != null) {
-            _hashCode += getSummaryAxisManualRangeEnd().hashCode();
-        }
-        if (getSummaryAxisManualRangeStart() != null) {
-            _hashCode += getSummaryAxisManualRangeStart().hashCode();
-        }
-        if (getSummaryAxisRange() != null) {
-            _hashCode += getSummaryAxisRange().hashCode();
-        }
-        if (getTextColor() != null) {
-            _hashCode += getTextColor().hashCode();
-        }
-        if (getTextSize() != null) {
-            _hashCode += getTextSize().hashCode();
-        }
-        if (getTitle() != null) {
-            _hashCode += getTitle().hashCode();
-        }
-        if (getTitleColor() != null) {
-            _hashCode += getTitleColor().hashCode();
-        }
-        if (getTitleSize() != null) {
-            _hashCode += getTitleSize().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportChart.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportChart"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("backgroundColor1");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "backgroundColor1"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("backgroundColor2");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "backgroundColor2"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("backgroundFadeDir");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "backgroundFadeDir"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartBackgroundDirection"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chartSummaries");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chartSummaries"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartSummary"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chartType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chartType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableHoverLabels");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableHoverLabels"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("expandOthers");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "expandOthers"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("groupingColumn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "groupingColumn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("legendPosition");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "legendPosition"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartLegendPosition"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("location");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "location"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartPosition"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("secondaryGroupingColumn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "secondaryGroupingColumn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showAxisLabels");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showAxisLabels"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showPercentage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showPercentage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showTotal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showTotal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showValues");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showValues"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("size");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "size"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportChartSize"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryAxisManualRangeEnd");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryAxisManualRangeEnd"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryAxisManualRangeStart");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryAxisManualRangeStart"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryAxisRange");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryAxisRange"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ChartRangeType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("textColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "textColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("textSize");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "textSize"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("title");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "title"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("titleColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "titleColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("titleSize");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "titleSize"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTitleSize(Integer value) {
+        this.titleSize = value;
     }
 
 }

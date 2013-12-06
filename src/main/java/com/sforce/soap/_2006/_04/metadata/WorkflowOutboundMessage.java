@@ -1,418 +1,271 @@
-/**
- * WorkflowOutboundMessage.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class WorkflowOutboundMessage  extends com.sforce.soap._2006._04.metadata.WorkflowAction  implements java.io.Serializable {
-    private double apiVersion;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String description;
 
-    private java.lang.String endpointUrl;
+/**
+ * <p>Java class for WorkflowOutboundMessage complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="WorkflowOutboundMessage">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}WorkflowAction">
+ *       &lt;sequence>
+ *         &lt;element name="apiVersion" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="endpointUrl" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="fields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="includeSessionId" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="integrationUser" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="protected" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="useDeadLetterQueue" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "WorkflowOutboundMessage", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "apiVersion",
+    "description",
+    "endpointUrl",
+    "fields",
+    "includeSessionId",
+    "integrationUser",
+    "name",
+    "_protected",
+    "useDeadLetterQueue"
+})
+public class WorkflowOutboundMessage
+    extends WorkflowAction
+{
 
-    private java.lang.String[] fields;
-
-    private boolean includeSessionId;
-
-    private java.lang.String integrationUser;
-
-    private java.lang.String name;
-
-    private boolean _protected;
-
-    private java.lang.Boolean useDeadLetterQueue;
-
-    public WorkflowOutboundMessage() {
-    }
-
-    public WorkflowOutboundMessage(
-           java.lang.String fullName,
-           double apiVersion,
-           java.lang.String description,
-           java.lang.String endpointUrl,
-           java.lang.String[] fields,
-           boolean includeSessionId,
-           java.lang.String integrationUser,
-           java.lang.String name,
-           boolean _protected,
-           java.lang.Boolean useDeadLetterQueue) {
-        super(
-            fullName);
-        this.apiVersion = apiVersion;
-        this.description = description;
-        this.endpointUrl = endpointUrl;
-        this.fields = fields;
-        this.includeSessionId = includeSessionId;
-        this.integrationUser = integrationUser;
-        this.name = name;
-        this._protected = _protected;
-        this.useDeadLetterQueue = useDeadLetterQueue;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected double apiVersion;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String endpointUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> fields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean includeSessionId;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String integrationUser;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(name = "protected", namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean _protected;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean useDeadLetterQueue;
 
     /**
-     * Gets the apiVersion value for this WorkflowOutboundMessage.
+     * Gets the value of the apiVersion property.
      * 
-     * @return apiVersion
      */
     public double getApiVersion() {
         return apiVersion;
     }
 
-
     /**
-     * Sets the apiVersion value for this WorkflowOutboundMessage.
+     * Sets the value of the apiVersion property.
      * 
-     * @param apiVersion
      */
-    public void setApiVersion(double apiVersion) {
-        this.apiVersion = apiVersion;
+    public void setApiVersion(double value) {
+        this.apiVersion = value;
     }
 
-
     /**
-     * Gets the description value for this WorkflowOutboundMessage.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this WorkflowOutboundMessage.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the endpointUrl value for this WorkflowOutboundMessage.
+     * Gets the value of the endpointUrl property.
      * 
-     * @return endpointUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEndpointUrl() {
+    public String getEndpointUrl() {
         return endpointUrl;
     }
 
-
     /**
-     * Sets the endpointUrl value for this WorkflowOutboundMessage.
+     * Sets the value of the endpointUrl property.
      * 
-     * @param endpointUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEndpointUrl(java.lang.String endpointUrl) {
-        this.endpointUrl = endpointUrl;
+    public void setEndpointUrl(String value) {
+        this.endpointUrl = value;
     }
 
-
     /**
-     * Gets the fields value for this WorkflowOutboundMessage.
+     * Gets the value of the fields property.
      * 
-     * @return fields
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public java.lang.String[] getFields() {
-        return fields;
+    public List<String> getFields() {
+        if (fields == null) {
+            fields = new ArrayList<String>();
+        }
+        return this.fields;
     }
-
 
     /**
-     * Sets the fields value for this WorkflowOutboundMessage.
+     * Gets the value of the includeSessionId property.
      * 
-     * @param fields
-     */
-    public void setFields(java.lang.String[] fields) {
-        this.fields = fields;
-    }
-
-    public java.lang.String getFields(int i) {
-        return this.fields[i];
-    }
-
-    public void setFields(int i, java.lang.String _value) {
-        this.fields[i] = _value;
-    }
-
-
-    /**
-     * Gets the includeSessionId value for this WorkflowOutboundMessage.
-     * 
-     * @return includeSessionId
      */
     public boolean isIncludeSessionId() {
         return includeSessionId;
     }
 
-
     /**
-     * Sets the includeSessionId value for this WorkflowOutboundMessage.
+     * Sets the value of the includeSessionId property.
      * 
-     * @param includeSessionId
      */
-    public void setIncludeSessionId(boolean includeSessionId) {
-        this.includeSessionId = includeSessionId;
+    public void setIncludeSessionId(boolean value) {
+        this.includeSessionId = value;
     }
 
-
     /**
-     * Gets the integrationUser value for this WorkflowOutboundMessage.
+     * Gets the value of the integrationUser property.
      * 
-     * @return integrationUser
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIntegrationUser() {
+    public String getIntegrationUser() {
         return integrationUser;
     }
 
-
     /**
-     * Sets the integrationUser value for this WorkflowOutboundMessage.
+     * Sets the value of the integrationUser property.
      * 
-     * @param integrationUser
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIntegrationUser(java.lang.String integrationUser) {
-        this.integrationUser = integrationUser;
+    public void setIntegrationUser(String value) {
+        this.integrationUser = value;
     }
 
-
     /**
-     * Gets the name value for this WorkflowOutboundMessage.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this WorkflowOutboundMessage.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the _protected value for this WorkflowOutboundMessage.
+     * Gets the value of the protected property.
      * 
-     * @return _protected
      */
-    public boolean is_protected() {
+    public boolean isProtected() {
         return _protected;
     }
 
-
     /**
-     * Sets the _protected value for this WorkflowOutboundMessage.
+     * Sets the value of the protected property.
      * 
-     * @param _protected
      */
-    public void set_protected(boolean _protected) {
-        this._protected = _protected;
+    public void setProtected(boolean value) {
+        this._protected = value;
     }
 
-
     /**
-     * Gets the useDeadLetterQueue value for this WorkflowOutboundMessage.
+     * Gets the value of the useDeadLetterQueue property.
      * 
-     * @return useDeadLetterQueue
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getUseDeadLetterQueue() {
+    public Boolean isUseDeadLetterQueue() {
         return useDeadLetterQueue;
     }
 
-
     /**
-     * Sets the useDeadLetterQueue value for this WorkflowOutboundMessage.
+     * Sets the value of the useDeadLetterQueue property.
      * 
-     * @param useDeadLetterQueue
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setUseDeadLetterQueue(java.lang.Boolean useDeadLetterQueue) {
-        this.useDeadLetterQueue = useDeadLetterQueue;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof WorkflowOutboundMessage)) return false;
-        WorkflowOutboundMessage other = (WorkflowOutboundMessage) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            this.apiVersion == other.getApiVersion() &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.endpointUrl==null && other.getEndpointUrl()==null) || 
-             (this.endpointUrl!=null &&
-              this.endpointUrl.equals(other.getEndpointUrl()))) &&
-            ((this.fields==null && other.getFields()==null) || 
-             (this.fields!=null &&
-              java.util.Arrays.equals(this.fields, other.getFields()))) &&
-            this.includeSessionId == other.isIncludeSessionId() &&
-            ((this.integrationUser==null && other.getIntegrationUser()==null) || 
-             (this.integrationUser!=null &&
-              this.integrationUser.equals(other.getIntegrationUser()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            this._protected == other.is_protected() &&
-            ((this.useDeadLetterQueue==null && other.getUseDeadLetterQueue()==null) || 
-             (this.useDeadLetterQueue!=null &&
-              this.useDeadLetterQueue.equals(other.getUseDeadLetterQueue())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        _hashCode += new Double(getApiVersion()).hashCode();
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getEndpointUrl() != null) {
-            _hashCode += getEndpointUrl().hashCode();
-        }
-        if (getFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        _hashCode += (isIncludeSessionId() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getIntegrationUser() != null) {
-            _hashCode += getIntegrationUser().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        _hashCode += (is_protected() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getUseDeadLetterQueue() != null) {
-            _hashCode += getUseDeadLetterQueue().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(WorkflowOutboundMessage.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowOutboundMessage"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("apiVersion");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "apiVersion"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("endpointUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "endpointUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("includeSessionId");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "includeSessionId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("integrationUser");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "integrationUser"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("_protected");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "protected"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("useDeadLetterQueue");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "useDeadLetterQueue"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUseDeadLetterQueue(Boolean value) {
+        this.useDeadLetterQueue = value;
     }
 
 }

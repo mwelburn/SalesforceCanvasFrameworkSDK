@@ -1,230 +1,146 @@
-/**
- * DashboardTableColumn.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class DashboardTableColumn  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ReportSummaryType aggregateType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String column;
 
-    private java.lang.Boolean showTotal;
+/**
+ * <p>Java class for DashboardTableColumn complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DashboardTableColumn">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="aggregateType" type="{http://soap.sforce.com/2006/04/metadata}ReportSummaryType" minOccurs="0"/>
+ *         &lt;element name="column" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="showTotal" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="sortBy" type="{http://soap.sforce.com/2006/04/metadata}DashboardComponentFilter" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DashboardTableColumn", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "aggregateType",
+    "column",
+    "showTotal",
+    "sortBy"
+})
+public class DashboardTableColumn {
 
-    private com.sforce.soap._2006._04.metadata.DashboardComponentFilter sortBy;
-
-    public DashboardTableColumn() {
-    }
-
-    public DashboardTableColumn(
-           com.sforce.soap._2006._04.metadata.ReportSummaryType aggregateType,
-           java.lang.String column,
-           java.lang.Boolean showTotal,
-           com.sforce.soap._2006._04.metadata.DashboardComponentFilter sortBy) {
-           this.aggregateType = aggregateType;
-           this.column = column;
-           this.showTotal = showTotal;
-           this.sortBy = sortBy;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportSummaryType aggregateType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String column;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showTotal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DashboardComponentFilter sortBy;
 
     /**
-     * Gets the aggregateType value for this DashboardTableColumn.
+     * Gets the value of the aggregateType property.
      * 
-     * @return aggregateType
+     * @return
+     *     possible object is
+     *     {@link ReportSummaryType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportSummaryType getAggregateType() {
+    public ReportSummaryType getAggregateType() {
         return aggregateType;
     }
 
-
     /**
-     * Sets the aggregateType value for this DashboardTableColumn.
+     * Sets the value of the aggregateType property.
      * 
-     * @param aggregateType
+     * @param value
+     *     allowed object is
+     *     {@link ReportSummaryType }
+     *     
      */
-    public void setAggregateType(com.sforce.soap._2006._04.metadata.ReportSummaryType aggregateType) {
-        this.aggregateType = aggregateType;
+    public void setAggregateType(ReportSummaryType value) {
+        this.aggregateType = value;
     }
 
-
     /**
-     * Gets the column value for this DashboardTableColumn.
+     * Gets the value of the column property.
      * 
-     * @return column
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getColumn() {
+    public String getColumn() {
         return column;
     }
 
-
     /**
-     * Sets the column value for this DashboardTableColumn.
+     * Sets the value of the column property.
      * 
-     * @param column
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setColumn(java.lang.String column) {
-        this.column = column;
+    public void setColumn(String value) {
+        this.column = value;
     }
 
-
     /**
-     * Gets the showTotal value for this DashboardTableColumn.
+     * Gets the value of the showTotal property.
      * 
-     * @return showTotal
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowTotal() {
+    public Boolean isShowTotal() {
         return showTotal;
     }
 
-
     /**
-     * Sets the showTotal value for this DashboardTableColumn.
+     * Sets the value of the showTotal property.
      * 
-     * @param showTotal
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowTotal(java.lang.Boolean showTotal) {
-        this.showTotal = showTotal;
+    public void setShowTotal(Boolean value) {
+        this.showTotal = value;
     }
 
-
     /**
-     * Gets the sortBy value for this DashboardTableColumn.
+     * Gets the value of the sortBy property.
      * 
-     * @return sortBy
+     * @return
+     *     possible object is
+     *     {@link DashboardComponentFilter }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DashboardComponentFilter getSortBy() {
+    public DashboardComponentFilter getSortBy() {
         return sortBy;
     }
 
-
     /**
-     * Sets the sortBy value for this DashboardTableColumn.
+     * Sets the value of the sortBy property.
      * 
-     * @param sortBy
+     * @param value
+     *     allowed object is
+     *     {@link DashboardComponentFilter }
+     *     
      */
-    public void setSortBy(com.sforce.soap._2006._04.metadata.DashboardComponentFilter sortBy) {
-        this.sortBy = sortBy;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DashboardTableColumn)) return false;
-        DashboardTableColumn other = (DashboardTableColumn) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.aggregateType==null && other.getAggregateType()==null) || 
-             (this.aggregateType!=null &&
-              this.aggregateType.equals(other.getAggregateType()))) &&
-            ((this.column==null && other.getColumn()==null) || 
-             (this.column!=null &&
-              this.column.equals(other.getColumn()))) &&
-            ((this.showTotal==null && other.getShowTotal()==null) || 
-             (this.showTotal!=null &&
-              this.showTotal.equals(other.getShowTotal()))) &&
-            ((this.sortBy==null && other.getSortBy()==null) || 
-             (this.sortBy!=null &&
-              this.sortBy.equals(other.getSortBy())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAggregateType() != null) {
-            _hashCode += getAggregateType().hashCode();
-        }
-        if (getColumn() != null) {
-            _hashCode += getColumn().hashCode();
-        }
-        if (getShowTotal() != null) {
-            _hashCode += getShowTotal().hashCode();
-        }
-        if (getSortBy() != null) {
-            _hashCode += getSortBy().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DashboardTableColumn.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardTableColumn"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("aggregateType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "aggregateType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportSummaryType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("column");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "column"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showTotal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showTotal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortBy");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortBy"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DashboardComponentFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSortBy(DashboardComponentFilter value) {
+        this.sortBy = value;
     }
 
 }

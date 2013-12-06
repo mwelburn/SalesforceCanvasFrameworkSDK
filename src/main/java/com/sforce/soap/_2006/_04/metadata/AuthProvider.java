@@ -1,527 +1,372 @@
-/**
- * AuthProvider.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class AuthProvider  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String authorizeUrl;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String consumerKey;
 
-    private java.lang.String consumerSecret;
+/**
+ * <p>Java class for AuthProvider complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="AuthProvider">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="authorizeUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="consumerKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="consumerSecret" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="defaultScopes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="errorUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="executionUser" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="friendlyName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="portal" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="providerType" type="{http://soap.sforce.com/2006/04/metadata}AuthProviderType"/>
+ *         &lt;element name="registrationHandler" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="tokenUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="userInfoUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "AuthProvider", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "authorizeUrl",
+    "consumerKey",
+    "consumerSecret",
+    "defaultScopes",
+    "errorUrl",
+    "executionUser",
+    "friendlyName",
+    "portal",
+    "providerType",
+    "registrationHandler",
+    "tokenUrl",
+    "userInfoUrl"
+})
+public class AuthProvider
+    extends Metadata
+{
 
-    private java.lang.String defaultScopes;
-
-    private java.lang.String errorUrl;
-
-    private java.lang.String executionUser;
-
-    private java.lang.String friendlyName;
-
-    private java.lang.String portal;
-
-    private com.sforce.soap._2006._04.metadata.AuthProviderType providerType;
-
-    private java.lang.String registrationHandler;
-
-    private java.lang.String tokenUrl;
-
-    private java.lang.String userInfoUrl;
-
-    public AuthProvider() {
-    }
-
-    public AuthProvider(
-           java.lang.String fullName,
-           java.lang.String authorizeUrl,
-           java.lang.String consumerKey,
-           java.lang.String consumerSecret,
-           java.lang.String defaultScopes,
-           java.lang.String errorUrl,
-           java.lang.String executionUser,
-           java.lang.String friendlyName,
-           java.lang.String portal,
-           com.sforce.soap._2006._04.metadata.AuthProviderType providerType,
-           java.lang.String registrationHandler,
-           java.lang.String tokenUrl,
-           java.lang.String userInfoUrl) {
-        super(
-            fullName);
-        this.authorizeUrl = authorizeUrl;
-        this.consumerKey = consumerKey;
-        this.consumerSecret = consumerSecret;
-        this.defaultScopes = defaultScopes;
-        this.errorUrl = errorUrl;
-        this.executionUser = executionUser;
-        this.friendlyName = friendlyName;
-        this.portal = portal;
-        this.providerType = providerType;
-        this.registrationHandler = registrationHandler;
-        this.tokenUrl = tokenUrl;
-        this.userInfoUrl = userInfoUrl;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String authorizeUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String consumerKey;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String consumerSecret;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultScopes;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String errorUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String executionUser;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String friendlyName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String portal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected AuthProviderType providerType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String registrationHandler;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String tokenUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String userInfoUrl;
 
     /**
-     * Gets the authorizeUrl value for this AuthProvider.
+     * Gets the value of the authorizeUrl property.
      * 
-     * @return authorizeUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAuthorizeUrl() {
+    public String getAuthorizeUrl() {
         return authorizeUrl;
     }
 
-
     /**
-     * Sets the authorizeUrl value for this AuthProvider.
+     * Sets the value of the authorizeUrl property.
      * 
-     * @param authorizeUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAuthorizeUrl(java.lang.String authorizeUrl) {
-        this.authorizeUrl = authorizeUrl;
+    public void setAuthorizeUrl(String value) {
+        this.authorizeUrl = value;
     }
 
-
     /**
-     * Gets the consumerKey value for this AuthProvider.
+     * Gets the value of the consumerKey property.
      * 
-     * @return consumerKey
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getConsumerKey() {
+    public String getConsumerKey() {
         return consumerKey;
     }
 
-
     /**
-     * Sets the consumerKey value for this AuthProvider.
+     * Sets the value of the consumerKey property.
      * 
-     * @param consumerKey
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setConsumerKey(java.lang.String consumerKey) {
-        this.consumerKey = consumerKey;
+    public void setConsumerKey(String value) {
+        this.consumerKey = value;
     }
 
-
     /**
-     * Gets the consumerSecret value for this AuthProvider.
+     * Gets the value of the consumerSecret property.
      * 
-     * @return consumerSecret
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getConsumerSecret() {
+    public String getConsumerSecret() {
         return consumerSecret;
     }
 
-
     /**
-     * Sets the consumerSecret value for this AuthProvider.
+     * Sets the value of the consumerSecret property.
      * 
-     * @param consumerSecret
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setConsumerSecret(java.lang.String consumerSecret) {
-        this.consumerSecret = consumerSecret;
+    public void setConsumerSecret(String value) {
+        this.consumerSecret = value;
     }
 
-
     /**
-     * Gets the defaultScopes value for this AuthProvider.
+     * Gets the value of the defaultScopes property.
      * 
-     * @return defaultScopes
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultScopes() {
+    public String getDefaultScopes() {
         return defaultScopes;
     }
 
-
     /**
-     * Sets the defaultScopes value for this AuthProvider.
+     * Sets the value of the defaultScopes property.
      * 
-     * @param defaultScopes
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultScopes(java.lang.String defaultScopes) {
-        this.defaultScopes = defaultScopes;
+    public void setDefaultScopes(String value) {
+        this.defaultScopes = value;
     }
 
-
     /**
-     * Gets the errorUrl value for this AuthProvider.
+     * Gets the value of the errorUrl property.
      * 
-     * @return errorUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getErrorUrl() {
+    public String getErrorUrl() {
         return errorUrl;
     }
 
-
     /**
-     * Sets the errorUrl value for this AuthProvider.
+     * Sets the value of the errorUrl property.
      * 
-     * @param errorUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setErrorUrl(java.lang.String errorUrl) {
-        this.errorUrl = errorUrl;
+    public void setErrorUrl(String value) {
+        this.errorUrl = value;
     }
 
-
     /**
-     * Gets the executionUser value for this AuthProvider.
+     * Gets the value of the executionUser property.
      * 
-     * @return executionUser
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getExecutionUser() {
+    public String getExecutionUser() {
         return executionUser;
     }
 
-
     /**
-     * Sets the executionUser value for this AuthProvider.
+     * Sets the value of the executionUser property.
      * 
-     * @param executionUser
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setExecutionUser(java.lang.String executionUser) {
-        this.executionUser = executionUser;
+    public void setExecutionUser(String value) {
+        this.executionUser = value;
     }
 
-
     /**
-     * Gets the friendlyName value for this AuthProvider.
+     * Gets the value of the friendlyName property.
      * 
-     * @return friendlyName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFriendlyName() {
+    public String getFriendlyName() {
         return friendlyName;
     }
 
-
     /**
-     * Sets the friendlyName value for this AuthProvider.
+     * Sets the value of the friendlyName property.
      * 
-     * @param friendlyName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFriendlyName(java.lang.String friendlyName) {
-        this.friendlyName = friendlyName;
+    public void setFriendlyName(String value) {
+        this.friendlyName = value;
     }
 
-
     /**
-     * Gets the portal value for this AuthProvider.
+     * Gets the value of the portal property.
      * 
-     * @return portal
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPortal() {
+    public String getPortal() {
         return portal;
     }
 
-
     /**
-     * Sets the portal value for this AuthProvider.
+     * Sets the value of the portal property.
      * 
-     * @param portal
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPortal(java.lang.String portal) {
-        this.portal = portal;
+    public void setPortal(String value) {
+        this.portal = value;
     }
 
-
     /**
-     * Gets the providerType value for this AuthProvider.
+     * Gets the value of the providerType property.
      * 
-     * @return providerType
+     * @return
+     *     possible object is
+     *     {@link AuthProviderType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.AuthProviderType getProviderType() {
+    public AuthProviderType getProviderType() {
         return providerType;
     }
 
-
     /**
-     * Sets the providerType value for this AuthProvider.
+     * Sets the value of the providerType property.
      * 
-     * @param providerType
+     * @param value
+     *     allowed object is
+     *     {@link AuthProviderType }
+     *     
      */
-    public void setProviderType(com.sforce.soap._2006._04.metadata.AuthProviderType providerType) {
-        this.providerType = providerType;
+    public void setProviderType(AuthProviderType value) {
+        this.providerType = value;
     }
 
-
     /**
-     * Gets the registrationHandler value for this AuthProvider.
+     * Gets the value of the registrationHandler property.
      * 
-     * @return registrationHandler
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRegistrationHandler() {
+    public String getRegistrationHandler() {
         return registrationHandler;
     }
 
-
     /**
-     * Sets the registrationHandler value for this AuthProvider.
+     * Sets the value of the registrationHandler property.
      * 
-     * @param registrationHandler
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRegistrationHandler(java.lang.String registrationHandler) {
-        this.registrationHandler = registrationHandler;
+    public void setRegistrationHandler(String value) {
+        this.registrationHandler = value;
     }
 
-
     /**
-     * Gets the tokenUrl value for this AuthProvider.
+     * Gets the value of the tokenUrl property.
      * 
-     * @return tokenUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTokenUrl() {
+    public String getTokenUrl() {
         return tokenUrl;
     }
 
-
     /**
-     * Sets the tokenUrl value for this AuthProvider.
+     * Sets the value of the tokenUrl property.
      * 
-     * @param tokenUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTokenUrl(java.lang.String tokenUrl) {
-        this.tokenUrl = tokenUrl;
+    public void setTokenUrl(String value) {
+        this.tokenUrl = value;
     }
 
-
     /**
-     * Gets the userInfoUrl value for this AuthProvider.
+     * Gets the value of the userInfoUrl property.
      * 
-     * @return userInfoUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUserInfoUrl() {
+    public String getUserInfoUrl() {
         return userInfoUrl;
     }
 
-
     /**
-     * Sets the userInfoUrl value for this AuthProvider.
+     * Sets the value of the userInfoUrl property.
      * 
-     * @param userInfoUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUserInfoUrl(java.lang.String userInfoUrl) {
-        this.userInfoUrl = userInfoUrl;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof AuthProvider)) return false;
-        AuthProvider other = (AuthProvider) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.authorizeUrl==null && other.getAuthorizeUrl()==null) || 
-             (this.authorizeUrl!=null &&
-              this.authorizeUrl.equals(other.getAuthorizeUrl()))) &&
-            ((this.consumerKey==null && other.getConsumerKey()==null) || 
-             (this.consumerKey!=null &&
-              this.consumerKey.equals(other.getConsumerKey()))) &&
-            ((this.consumerSecret==null && other.getConsumerSecret()==null) || 
-             (this.consumerSecret!=null &&
-              this.consumerSecret.equals(other.getConsumerSecret()))) &&
-            ((this.defaultScopes==null && other.getDefaultScopes()==null) || 
-             (this.defaultScopes!=null &&
-              this.defaultScopes.equals(other.getDefaultScopes()))) &&
-            ((this.errorUrl==null && other.getErrorUrl()==null) || 
-             (this.errorUrl!=null &&
-              this.errorUrl.equals(other.getErrorUrl()))) &&
-            ((this.executionUser==null && other.getExecutionUser()==null) || 
-             (this.executionUser!=null &&
-              this.executionUser.equals(other.getExecutionUser()))) &&
-            ((this.friendlyName==null && other.getFriendlyName()==null) || 
-             (this.friendlyName!=null &&
-              this.friendlyName.equals(other.getFriendlyName()))) &&
-            ((this.portal==null && other.getPortal()==null) || 
-             (this.portal!=null &&
-              this.portal.equals(other.getPortal()))) &&
-            ((this.providerType==null && other.getProviderType()==null) || 
-             (this.providerType!=null &&
-              this.providerType.equals(other.getProviderType()))) &&
-            ((this.registrationHandler==null && other.getRegistrationHandler()==null) || 
-             (this.registrationHandler!=null &&
-              this.registrationHandler.equals(other.getRegistrationHandler()))) &&
-            ((this.tokenUrl==null && other.getTokenUrl()==null) || 
-             (this.tokenUrl!=null &&
-              this.tokenUrl.equals(other.getTokenUrl()))) &&
-            ((this.userInfoUrl==null && other.getUserInfoUrl()==null) || 
-             (this.userInfoUrl!=null &&
-              this.userInfoUrl.equals(other.getUserInfoUrl())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAuthorizeUrl() != null) {
-            _hashCode += getAuthorizeUrl().hashCode();
-        }
-        if (getConsumerKey() != null) {
-            _hashCode += getConsumerKey().hashCode();
-        }
-        if (getConsumerSecret() != null) {
-            _hashCode += getConsumerSecret().hashCode();
-        }
-        if (getDefaultScopes() != null) {
-            _hashCode += getDefaultScopes().hashCode();
-        }
-        if (getErrorUrl() != null) {
-            _hashCode += getErrorUrl().hashCode();
-        }
-        if (getExecutionUser() != null) {
-            _hashCode += getExecutionUser().hashCode();
-        }
-        if (getFriendlyName() != null) {
-            _hashCode += getFriendlyName().hashCode();
-        }
-        if (getPortal() != null) {
-            _hashCode += getPortal().hashCode();
-        }
-        if (getProviderType() != null) {
-            _hashCode += getProviderType().hashCode();
-        }
-        if (getRegistrationHandler() != null) {
-            _hashCode += getRegistrationHandler().hashCode();
-        }
-        if (getTokenUrl() != null) {
-            _hashCode += getTokenUrl().hashCode();
-        }
-        if (getUserInfoUrl() != null) {
-            _hashCode += getUserInfoUrl().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(AuthProvider.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AuthProvider"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("authorizeUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "authorizeUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("consumerKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "consumerKey"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("consumerSecret");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "consumerSecret"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultScopes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultScopes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "errorUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("executionUser");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "executionUser"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("friendlyName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "friendlyName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("portal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "portal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("providerType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "providerType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AuthProviderType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("registrationHandler");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "registrationHandler"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tokenUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tokenUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userInfoUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "userInfoUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUserInfoUrl(String value) {
+        this.userInfoUrl = value;
     }
 
 }
