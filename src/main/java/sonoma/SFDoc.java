@@ -170,8 +170,8 @@ public class SFDoc
                     "for unpackaged content. " +
                     "Looking for " + unpackedManifest.getAbsolutePath());
 
-        // Note that we populate the _package object by parsing a manifest file here.
-        // You could populate the _package based on any source for your
+        // Note that we populate the Package object by parsing a manifest file here.
+        // You could populate the Package based on any source for your
         // particular application.
         Package p = parsePackage(unpackedManifest);
         request.setUnpackaged(p);
