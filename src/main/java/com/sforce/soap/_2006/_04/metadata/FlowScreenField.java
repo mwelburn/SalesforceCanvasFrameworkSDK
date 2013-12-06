@@ -1,474 +1,323 @@
-/**
- * FlowScreenField.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowScreenField  extends com.sforce.soap._2006._04.metadata.FlowElement  implements java.io.Serializable {
-    private java.lang.String[] choiceReferences;
-
-    private com.sforce.soap._2006._04.metadata.FlowDataType dataType;
-
-    private java.lang.String defaultSelectedChoiceReference;
-
-    private com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue defaultValue;
-
-    private java.lang.String fieldText;
-
-    private com.sforce.soap._2006._04.metadata.FlowScreenFieldType fieldType;
-
-    private java.lang.String helpText;
-
-    private java.lang.Boolean isRequired;
-
-    private java.lang.Integer scale;
-
-    private com.sforce.soap._2006._04.metadata.FlowInputValidationRule validationRule;
-
-    public FlowScreenField() {
-    }
-
-    public FlowScreenField(
-           java.lang.String description,
-           java.lang.String name,
-           java.lang.String[] choiceReferences,
-           com.sforce.soap._2006._04.metadata.FlowDataType dataType,
-           java.lang.String defaultSelectedChoiceReference,
-           com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue defaultValue,
-           java.lang.String fieldText,
-           com.sforce.soap._2006._04.metadata.FlowScreenFieldType fieldType,
-           java.lang.String helpText,
-           java.lang.Boolean isRequired,
-           java.lang.Integer scale,
-           com.sforce.soap._2006._04.metadata.FlowInputValidationRule validationRule) {
-        super(
-            description,
-            name);
-        this.choiceReferences = choiceReferences;
-        this.dataType = dataType;
-        this.defaultSelectedChoiceReference = defaultSelectedChoiceReference;
-        this.defaultValue = defaultValue;
-        this.fieldText = fieldText;
-        this.fieldType = fieldType;
-        this.helpText = helpText;
-        this.isRequired = isRequired;
-        this.scale = scale;
-        this.validationRule = validationRule;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the choiceReferences value for this FlowScreenField.
-     * 
-     * @return choiceReferences
-     */
-    public java.lang.String[] getChoiceReferences() {
-        return choiceReferences;
-    }
+/**
+ * <p>Java class for FlowScreenField complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowScreenField">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowElement">
+ *       &lt;sequence>
+ *         &lt;element name="choiceReferences" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="dataType" type="{http://soap.sforce.com/2006/04/metadata}FlowDataType" minOccurs="0"/>
+ *         &lt;element name="defaultSelectedChoiceReference" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="defaultValue" type="{http://soap.sforce.com/2006/04/metadata}FlowElementReferenceOrValue" minOccurs="0"/>
+ *         &lt;element name="fieldText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="fieldType" type="{http://soap.sforce.com/2006/04/metadata}FlowScreenFieldType"/>
+ *         &lt;element name="helpText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="isRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="scale" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="validationRule" type="{http://soap.sforce.com/2006/04/metadata}FlowInputValidationRule" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowScreenField", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "choiceReferences",
+    "dataType",
+    "defaultSelectedChoiceReference",
+    "defaultValue",
+    "fieldText",
+    "fieldType",
+    "helpText",
+    "isRequired",
+    "scale",
+    "validationRule"
+})
+public class FlowScreenField
+    extends FlowElement
+{
 
-
-    /**
-     * Sets the choiceReferences value for this FlowScreenField.
-     * 
-     * @param choiceReferences
-     */
-    public void setChoiceReferences(java.lang.String[] choiceReferences) {
-        this.choiceReferences = choiceReferences;
-    }
-
-    public java.lang.String getChoiceReferences(int i) {
-        return this.choiceReferences[i];
-    }
-
-    public void setChoiceReferences(int i, java.lang.String _value) {
-        this.choiceReferences[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> choiceReferences;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowDataType dataType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultSelectedChoiceReference;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowElementReferenceOrValue defaultValue;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String fieldText;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected FlowScreenFieldType fieldType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String helpText;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isRequired;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer scale;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowInputValidationRule validationRule;
 
     /**
-     * Gets the dataType value for this FlowScreenField.
+     * Gets the value of the choiceReferences property.
      * 
-     * @return dataType
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the choiceReferences property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getChoiceReferences().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FlowDataType getDataType() {
+    public List<String> getChoiceReferences() {
+        if (choiceReferences == null) {
+            choiceReferences = new ArrayList<String>();
+        }
+        return this.choiceReferences;
+    }
+
+    /**
+     * Gets the value of the dataType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link FlowDataType }
+     *     
+     */
+    public FlowDataType getDataType() {
         return dataType;
     }
 
-
     /**
-     * Sets the dataType value for this FlowScreenField.
+     * Sets the value of the dataType property.
      * 
-     * @param dataType
+     * @param value
+     *     allowed object is
+     *     {@link FlowDataType }
+     *     
      */
-    public void setDataType(com.sforce.soap._2006._04.metadata.FlowDataType dataType) {
-        this.dataType = dataType;
+    public void setDataType(FlowDataType value) {
+        this.dataType = value;
     }
 
-
     /**
-     * Gets the defaultSelectedChoiceReference value for this FlowScreenField.
+     * Gets the value of the defaultSelectedChoiceReference property.
      * 
-     * @return defaultSelectedChoiceReference
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultSelectedChoiceReference() {
+    public String getDefaultSelectedChoiceReference() {
         return defaultSelectedChoiceReference;
     }
 
-
     /**
-     * Sets the defaultSelectedChoiceReference value for this FlowScreenField.
+     * Sets the value of the defaultSelectedChoiceReference property.
      * 
-     * @param defaultSelectedChoiceReference
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultSelectedChoiceReference(java.lang.String defaultSelectedChoiceReference) {
-        this.defaultSelectedChoiceReference = defaultSelectedChoiceReference;
+    public void setDefaultSelectedChoiceReference(String value) {
+        this.defaultSelectedChoiceReference = value;
     }
 
-
     /**
-     * Gets the defaultValue value for this FlowScreenField.
+     * Gets the value of the defaultValue property.
      * 
-     * @return defaultValue
+     * @return
+     *     possible object is
+     *     {@link FlowElementReferenceOrValue }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue getDefaultValue() {
+    public FlowElementReferenceOrValue getDefaultValue() {
         return defaultValue;
     }
 
-
     /**
-     * Sets the defaultValue value for this FlowScreenField.
+     * Sets the value of the defaultValue property.
      * 
-     * @param defaultValue
+     * @param value
+     *     allowed object is
+     *     {@link FlowElementReferenceOrValue }
+     *     
      */
-    public void setDefaultValue(com.sforce.soap._2006._04.metadata.FlowElementReferenceOrValue defaultValue) {
-        this.defaultValue = defaultValue;
+    public void setDefaultValue(FlowElementReferenceOrValue value) {
+        this.defaultValue = value;
     }
 
-
     /**
-     * Gets the fieldText value for this FlowScreenField.
+     * Gets the value of the fieldText property.
      * 
-     * @return fieldText
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFieldText() {
+    public String getFieldText() {
         return fieldText;
     }
 
-
     /**
-     * Sets the fieldText value for this FlowScreenField.
+     * Sets the value of the fieldText property.
      * 
-     * @param fieldText
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFieldText(java.lang.String fieldText) {
-        this.fieldText = fieldText;
+    public void setFieldText(String value) {
+        this.fieldText = value;
     }
 
-
     /**
-     * Gets the fieldType value for this FlowScreenField.
+     * Gets the value of the fieldType property.
      * 
-     * @return fieldType
+     * @return
+     *     possible object is
+     *     {@link FlowScreenFieldType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowScreenFieldType getFieldType() {
+    public FlowScreenFieldType getFieldType() {
         return fieldType;
     }
 
-
     /**
-     * Sets the fieldType value for this FlowScreenField.
+     * Sets the value of the fieldType property.
      * 
-     * @param fieldType
+     * @param value
+     *     allowed object is
+     *     {@link FlowScreenFieldType }
+     *     
      */
-    public void setFieldType(com.sforce.soap._2006._04.metadata.FlowScreenFieldType fieldType) {
-        this.fieldType = fieldType;
+    public void setFieldType(FlowScreenFieldType value) {
+        this.fieldType = value;
     }
 
-
     /**
-     * Gets the helpText value for this FlowScreenField.
+     * Gets the value of the helpText property.
      * 
-     * @return helpText
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getHelpText() {
+    public String getHelpText() {
         return helpText;
     }
 
-
     /**
-     * Sets the helpText value for this FlowScreenField.
+     * Sets the value of the helpText property.
      * 
-     * @param helpText
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setHelpText(java.lang.String helpText) {
-        this.helpText = helpText;
+    public void setHelpText(String value) {
+        this.helpText = value;
     }
 
-
     /**
-     * Gets the isRequired value for this FlowScreenField.
+     * Gets the value of the isRequired property.
      * 
-     * @return isRequired
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsRequired() {
+    public Boolean isIsRequired() {
         return isRequired;
     }
 
-
     /**
-     * Sets the isRequired value for this FlowScreenField.
+     * Sets the value of the isRequired property.
      * 
-     * @param isRequired
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsRequired(java.lang.Boolean isRequired) {
-        this.isRequired = isRequired;
+    public void setIsRequired(Boolean value) {
+        this.isRequired = value;
     }
 
-
     /**
-     * Gets the scale value for this FlowScreenField.
+     * Gets the value of the scale property.
      * 
-     * @return scale
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getScale() {
+    public Integer getScale() {
         return scale;
     }
 
-
     /**
-     * Sets the scale value for this FlowScreenField.
+     * Sets the value of the scale property.
      * 
-     * @param scale
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setScale(java.lang.Integer scale) {
-        this.scale = scale;
+    public void setScale(Integer value) {
+        this.scale = value;
     }
 
-
     /**
-     * Gets the validationRule value for this FlowScreenField.
+     * Gets the value of the validationRule property.
      * 
-     * @return validationRule
+     * @return
+     *     possible object is
+     *     {@link FlowInputValidationRule }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowInputValidationRule getValidationRule() {
+    public FlowInputValidationRule getValidationRule() {
         return validationRule;
     }
 
-
     /**
-     * Sets the validationRule value for this FlowScreenField.
+     * Sets the value of the validationRule property.
      * 
-     * @param validationRule
+     * @param value
+     *     allowed object is
+     *     {@link FlowInputValidationRule }
+     *     
      */
-    public void setValidationRule(com.sforce.soap._2006._04.metadata.FlowInputValidationRule validationRule) {
-        this.validationRule = validationRule;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowScreenField)) return false;
-        FlowScreenField other = (FlowScreenField) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.choiceReferences==null && other.getChoiceReferences()==null) || 
-             (this.choiceReferences!=null &&
-              java.util.Arrays.equals(this.choiceReferences, other.getChoiceReferences()))) &&
-            ((this.dataType==null && other.getDataType()==null) || 
-             (this.dataType!=null &&
-              this.dataType.equals(other.getDataType()))) &&
-            ((this.defaultSelectedChoiceReference==null && other.getDefaultSelectedChoiceReference()==null) || 
-             (this.defaultSelectedChoiceReference!=null &&
-              this.defaultSelectedChoiceReference.equals(other.getDefaultSelectedChoiceReference()))) &&
-            ((this.defaultValue==null && other.getDefaultValue()==null) || 
-             (this.defaultValue!=null &&
-              this.defaultValue.equals(other.getDefaultValue()))) &&
-            ((this.fieldText==null && other.getFieldText()==null) || 
-             (this.fieldText!=null &&
-              this.fieldText.equals(other.getFieldText()))) &&
-            ((this.fieldType==null && other.getFieldType()==null) || 
-             (this.fieldType!=null &&
-              this.fieldType.equals(other.getFieldType()))) &&
-            ((this.helpText==null && other.getHelpText()==null) || 
-             (this.helpText!=null &&
-              this.helpText.equals(other.getHelpText()))) &&
-            ((this.isRequired==null && other.getIsRequired()==null) || 
-             (this.isRequired!=null &&
-              this.isRequired.equals(other.getIsRequired()))) &&
-            ((this.scale==null && other.getScale()==null) || 
-             (this.scale!=null &&
-              this.scale.equals(other.getScale()))) &&
-            ((this.validationRule==null && other.getValidationRule()==null) || 
-             (this.validationRule!=null &&
-              this.validationRule.equals(other.getValidationRule())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getChoiceReferences() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getChoiceReferences());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getChoiceReferences(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDataType() != null) {
-            _hashCode += getDataType().hashCode();
-        }
-        if (getDefaultSelectedChoiceReference() != null) {
-            _hashCode += getDefaultSelectedChoiceReference().hashCode();
-        }
-        if (getDefaultValue() != null) {
-            _hashCode += getDefaultValue().hashCode();
-        }
-        if (getFieldText() != null) {
-            _hashCode += getFieldText().hashCode();
-        }
-        if (getFieldType() != null) {
-            _hashCode += getFieldType().hashCode();
-        }
-        if (getHelpText() != null) {
-            _hashCode += getHelpText().hashCode();
-        }
-        if (getIsRequired() != null) {
-            _hashCode += getIsRequired().hashCode();
-        }
-        if (getScale() != null) {
-            _hashCode += getScale().hashCode();
-        }
-        if (getValidationRule() != null) {
-            _hashCode += getValidationRule().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowScreenField.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowScreenField"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("choiceReferences");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "choiceReferences"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dataType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dataType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDataType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultSelectedChoiceReference");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultSelectedChoiceReference"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultValue");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultValue"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowElementReferenceOrValue"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fieldText");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fieldText"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fieldType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fieldType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowScreenFieldType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("helpText");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "helpText"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isRequired");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isRequired"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scale");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scale"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("validationRule");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "validationRule"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowInputValidationRule"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setValidationRule(FlowInputValidationRule value) {
+        this.validationRule = value;
     }
 
 }

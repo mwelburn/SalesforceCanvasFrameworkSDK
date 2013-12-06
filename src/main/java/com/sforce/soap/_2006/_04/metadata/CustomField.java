@@ -1,1730 +1,1275 @@
-/**
- * CustomField.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomField  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean caseSensitive;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String customDataType;
 
-    private java.lang.String defaultValue;
+/**
+ * <p>Java class for CustomField complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomField">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="caseSensitive" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="customDataType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="defaultValue" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="deleteConstraint" type="{http://soap.sforce.com/2006/04/metadata}DeleteConstraint" minOccurs="0"/>
+ *         &lt;element name="deprecated" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="displayFormat" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="escapeMarkup" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="externalDeveloperName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="externalId" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="formula" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="formulaTreatBlanksAs" type="{http://soap.sforce.com/2006/04/metadata}TreatBlanksAs" minOccurs="0"/>
+ *         &lt;element name="inlineHelpText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="isFilteringDisabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="isNameField" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="isSortingDisabled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="length" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="maskChar" type="{http://soap.sforce.com/2006/04/metadata}EncryptedFieldMaskChar" minOccurs="0"/>
+ *         &lt;element name="maskType" type="{http://soap.sforce.com/2006/04/metadata}EncryptedFieldMaskType" minOccurs="0"/>
+ *         &lt;element name="picklist" type="{http://soap.sforce.com/2006/04/metadata}Picklist" minOccurs="0"/>
+ *         &lt;element name="populateExistingRows" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="precision" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="referenceTo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="relationshipLabel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="relationshipName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="relationshipOrder" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="reparentableMasterDetail" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="required" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="restrictedAdminField" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="scale" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="startingNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="stripMarkup" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="summarizedField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="summaryFilterItems" type="{http://soap.sforce.com/2006/04/metadata}FilterItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="summaryForeignKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="summaryOperation" type="{http://soap.sforce.com/2006/04/metadata}SummaryOperations" minOccurs="0"/>
+ *         &lt;element name="trackFeedHistory" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="trackHistory" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="trackTrending" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="type" type="{http://soap.sforce.com/2006/04/metadata}FieldType"/>
+ *         &lt;element name="unique" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="visibleLines" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="writeRequiresMasterRead" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomField", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "caseSensitive",
+    "customDataType",
+    "defaultValue",
+    "deleteConstraint",
+    "deprecated",
+    "description",
+    "displayFormat",
+    "escapeMarkup",
+    "externalDeveloperName",
+    "externalId",
+    "formula",
+    "formulaTreatBlanksAs",
+    "inlineHelpText",
+    "isFilteringDisabled",
+    "isNameField",
+    "isSortingDisabled",
+    "label",
+    "length",
+    "maskChar",
+    "maskType",
+    "picklist",
+    "populateExistingRows",
+    "precision",
+    "referenceTo",
+    "relationshipLabel",
+    "relationshipName",
+    "relationshipOrder",
+    "reparentableMasterDetail",
+    "required",
+    "restrictedAdminField",
+    "scale",
+    "startingNumber",
+    "stripMarkup",
+    "summarizedField",
+    "summaryFilterItems",
+    "summaryForeignKey",
+    "summaryOperation",
+    "trackFeedHistory",
+    "trackHistory",
+    "trackTrending",
+    "type",
+    "unique",
+    "visibleLines",
+    "writeRequiresMasterRead"
+})
+public class CustomField
+    extends Metadata
+{
 
-    private com.sforce.soap._2006._04.metadata.DeleteConstraint deleteConstraint;
-
-    private java.lang.Boolean deprecated;
-
-    private java.lang.String description;
-
-    private java.lang.String displayFormat;
-
-    private java.lang.Boolean escapeMarkup;
-
-    private java.lang.String externalDeveloperName;
-
-    private java.lang.Boolean externalId;
-
-    private java.lang.String formula;
-
-    private com.sforce.soap._2006._04.metadata.TreatBlanksAs formulaTreatBlanksAs;
-
-    private java.lang.String inlineHelpText;
-
-    private java.lang.Boolean isFilteringDisabled;
-
-    private java.lang.Boolean isNameField;
-
-    private java.lang.Boolean isSortingDisabled;
-
-    private java.lang.String label;
-
-    private java.lang.Integer length;
-
-    private com.sforce.soap._2006._04.metadata.EncryptedFieldMaskChar maskChar;
-
-    private com.sforce.soap._2006._04.metadata.EncryptedFieldMaskType maskType;
-
-    private com.sforce.soap._2006._04.metadata.Picklist picklist;
-
-    private java.lang.Boolean populateExistingRows;
-
-    private java.lang.Integer precision;
-
-    private java.lang.String referenceTo;
-
-    private java.lang.String relationshipLabel;
-
-    private java.lang.String relationshipName;
-
-    private java.lang.Integer relationshipOrder;
-
-    private java.lang.Boolean reparentableMasterDetail;
-
-    private java.lang.Boolean required;
-
-    private java.lang.Boolean restrictedAdminField;
-
-    private java.lang.Integer scale;
-
-    private java.lang.Integer startingNumber;
-
-    private java.lang.Boolean stripMarkup;
-
-    private java.lang.String summarizedField;
-
-    private com.sforce.soap._2006._04.metadata.FilterItem[] summaryFilterItems;
-
-    private java.lang.String summaryForeignKey;
-
-    private com.sforce.soap._2006._04.metadata.SummaryOperations summaryOperation;
-
-    private java.lang.Boolean trackFeedHistory;
-
-    private java.lang.Boolean trackHistory;
-
-    private java.lang.Boolean trackTrending;
-
-    private com.sforce.soap._2006._04.metadata.FieldType type;
-
-    private java.lang.Boolean unique;
-
-    private java.lang.Integer visibleLines;
-
-    private java.lang.Boolean writeRequiresMasterRead;
-
-    public CustomField() {
-    }
-
-    public CustomField(
-           java.lang.String fullName,
-           java.lang.Boolean caseSensitive,
-           java.lang.String customDataType,
-           java.lang.String defaultValue,
-           com.sforce.soap._2006._04.metadata.DeleteConstraint deleteConstraint,
-           java.lang.Boolean deprecated,
-           java.lang.String description,
-           java.lang.String displayFormat,
-           java.lang.Boolean escapeMarkup,
-           java.lang.String externalDeveloperName,
-           java.lang.Boolean externalId,
-           java.lang.String formula,
-           com.sforce.soap._2006._04.metadata.TreatBlanksAs formulaTreatBlanksAs,
-           java.lang.String inlineHelpText,
-           java.lang.Boolean isFilteringDisabled,
-           java.lang.Boolean isNameField,
-           java.lang.Boolean isSortingDisabled,
-           java.lang.String label,
-           java.lang.Integer length,
-           com.sforce.soap._2006._04.metadata.EncryptedFieldMaskChar maskChar,
-           com.sforce.soap._2006._04.metadata.EncryptedFieldMaskType maskType,
-           com.sforce.soap._2006._04.metadata.Picklist picklist,
-           java.lang.Boolean populateExistingRows,
-           java.lang.Integer precision,
-           java.lang.String referenceTo,
-           java.lang.String relationshipLabel,
-           java.lang.String relationshipName,
-           java.lang.Integer relationshipOrder,
-           java.lang.Boolean reparentableMasterDetail,
-           java.lang.Boolean required,
-           java.lang.Boolean restrictedAdminField,
-           java.lang.Integer scale,
-           java.lang.Integer startingNumber,
-           java.lang.Boolean stripMarkup,
-           java.lang.String summarizedField,
-           com.sforce.soap._2006._04.metadata.FilterItem[] summaryFilterItems,
-           java.lang.String summaryForeignKey,
-           com.sforce.soap._2006._04.metadata.SummaryOperations summaryOperation,
-           java.lang.Boolean trackFeedHistory,
-           java.lang.Boolean trackHistory,
-           java.lang.Boolean trackTrending,
-           com.sforce.soap._2006._04.metadata.FieldType type,
-           java.lang.Boolean unique,
-           java.lang.Integer visibleLines,
-           java.lang.Boolean writeRequiresMasterRead) {
-        super(
-            fullName);
-        this.caseSensitive = caseSensitive;
-        this.customDataType = customDataType;
-        this.defaultValue = defaultValue;
-        this.deleteConstraint = deleteConstraint;
-        this.deprecated = deprecated;
-        this.description = description;
-        this.displayFormat = displayFormat;
-        this.escapeMarkup = escapeMarkup;
-        this.externalDeveloperName = externalDeveloperName;
-        this.externalId = externalId;
-        this.formula = formula;
-        this.formulaTreatBlanksAs = formulaTreatBlanksAs;
-        this.inlineHelpText = inlineHelpText;
-        this.isFilteringDisabled = isFilteringDisabled;
-        this.isNameField = isNameField;
-        this.isSortingDisabled = isSortingDisabled;
-        this.label = label;
-        this.length = length;
-        this.maskChar = maskChar;
-        this.maskType = maskType;
-        this.picklist = picklist;
-        this.populateExistingRows = populateExistingRows;
-        this.precision = precision;
-        this.referenceTo = referenceTo;
-        this.relationshipLabel = relationshipLabel;
-        this.relationshipName = relationshipName;
-        this.relationshipOrder = relationshipOrder;
-        this.reparentableMasterDetail = reparentableMasterDetail;
-        this.required = required;
-        this.restrictedAdminField = restrictedAdminField;
-        this.scale = scale;
-        this.startingNumber = startingNumber;
-        this.stripMarkup = stripMarkup;
-        this.summarizedField = summarizedField;
-        this.summaryFilterItems = summaryFilterItems;
-        this.summaryForeignKey = summaryForeignKey;
-        this.summaryOperation = summaryOperation;
-        this.trackFeedHistory = trackFeedHistory;
-        this.trackHistory = trackHistory;
-        this.trackTrending = trackTrending;
-        this.type = type;
-        this.unique = unique;
-        this.visibleLines = visibleLines;
-        this.writeRequiresMasterRead = writeRequiresMasterRead;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean caseSensitive;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customDataType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultValue;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DeleteConstraint deleteConstraint;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean deprecated;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String displayFormat;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean escapeMarkup;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String externalDeveloperName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean externalId;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String formula;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected TreatBlanksAs formulaTreatBlanksAs;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String inlineHelpText;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isFilteringDisabled;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isNameField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isSortingDisabled;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer length;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected EncryptedFieldMaskChar maskChar;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected EncryptedFieldMaskType maskType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Picklist picklist;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean populateExistingRows;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer precision;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String referenceTo;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String relationshipLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String relationshipName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer relationshipOrder;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean reparentableMasterDetail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean required;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean restrictedAdminField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer scale;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer startingNumber;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean stripMarkup;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String summarizedField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FilterItem> summaryFilterItems;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String summaryForeignKey;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SummaryOperations summaryOperation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean trackFeedHistory;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean trackHistory;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean trackTrending;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected FieldType type;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean unique;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer visibleLines;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean writeRequiresMasterRead;
 
     /**
-     * Gets the caseSensitive value for this CustomField.
+     * Gets the value of the caseSensitive property.
      * 
-     * @return caseSensitive
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getCaseSensitive() {
+    public Boolean isCaseSensitive() {
         return caseSensitive;
     }
 
-
     /**
-     * Sets the caseSensitive value for this CustomField.
+     * Sets the value of the caseSensitive property.
      * 
-     * @param caseSensitive
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setCaseSensitive(java.lang.Boolean caseSensitive) {
-        this.caseSensitive = caseSensitive;
+    public void setCaseSensitive(Boolean value) {
+        this.caseSensitive = value;
     }
 
-
     /**
-     * Gets the customDataType value for this CustomField.
+     * Gets the value of the customDataType property.
      * 
-     * @return customDataType
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomDataType() {
+    public String getCustomDataType() {
         return customDataType;
     }
 
-
     /**
-     * Sets the customDataType value for this CustomField.
+     * Sets the value of the customDataType property.
      * 
-     * @param customDataType
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomDataType(java.lang.String customDataType) {
-        this.customDataType = customDataType;
+    public void setCustomDataType(String value) {
+        this.customDataType = value;
     }
 
-
     /**
-     * Gets the defaultValue value for this CustomField.
+     * Gets the value of the defaultValue property.
      * 
-     * @return defaultValue
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultValue() {
+    public String getDefaultValue() {
         return defaultValue;
     }
 
-
     /**
-     * Sets the defaultValue value for this CustomField.
+     * Sets the value of the defaultValue property.
      * 
-     * @param defaultValue
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultValue(java.lang.String defaultValue) {
-        this.defaultValue = defaultValue;
+    public void setDefaultValue(String value) {
+        this.defaultValue = value;
     }
 
-
     /**
-     * Gets the deleteConstraint value for this CustomField.
+     * Gets the value of the deleteConstraint property.
      * 
-     * @return deleteConstraint
+     * @return
+     *     possible object is
+     *     {@link DeleteConstraint }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DeleteConstraint getDeleteConstraint() {
+    public DeleteConstraint getDeleteConstraint() {
         return deleteConstraint;
     }
 
-
     /**
-     * Sets the deleteConstraint value for this CustomField.
+     * Sets the value of the deleteConstraint property.
      * 
-     * @param deleteConstraint
+     * @param value
+     *     allowed object is
+     *     {@link DeleteConstraint }
+     *     
      */
-    public void setDeleteConstraint(com.sforce.soap._2006._04.metadata.DeleteConstraint deleteConstraint) {
-        this.deleteConstraint = deleteConstraint;
+    public void setDeleteConstraint(DeleteConstraint value) {
+        this.deleteConstraint = value;
     }
 
-
     /**
-     * Gets the deprecated value for this CustomField.
+     * Gets the value of the deprecated property.
      * 
-     * @return deprecated
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getDeprecated() {
+    public Boolean isDeprecated() {
         return deprecated;
     }
 
-
     /**
-     * Sets the deprecated value for this CustomField.
+     * Sets the value of the deprecated property.
      * 
-     * @param deprecated
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setDeprecated(java.lang.Boolean deprecated) {
-        this.deprecated = deprecated;
+    public void setDeprecated(Boolean value) {
+        this.deprecated = value;
     }
 
-
     /**
-     * Gets the description value for this CustomField.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this CustomField.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the displayFormat value for this CustomField.
+     * Gets the value of the displayFormat property.
      * 
-     * @return displayFormat
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDisplayFormat() {
+    public String getDisplayFormat() {
         return displayFormat;
     }
 
-
     /**
-     * Sets the displayFormat value for this CustomField.
+     * Sets the value of the displayFormat property.
      * 
-     * @param displayFormat
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDisplayFormat(java.lang.String displayFormat) {
-        this.displayFormat = displayFormat;
+    public void setDisplayFormat(String value) {
+        this.displayFormat = value;
     }
 
-
     /**
-     * Gets the escapeMarkup value for this CustomField.
+     * Gets the value of the escapeMarkup property.
      * 
-     * @return escapeMarkup
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEscapeMarkup() {
+    public Boolean isEscapeMarkup() {
         return escapeMarkup;
     }
 
-
     /**
-     * Sets the escapeMarkup value for this CustomField.
+     * Sets the value of the escapeMarkup property.
      * 
-     * @param escapeMarkup
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEscapeMarkup(java.lang.Boolean escapeMarkup) {
-        this.escapeMarkup = escapeMarkup;
+    public void setEscapeMarkup(Boolean value) {
+        this.escapeMarkup = value;
     }
 
-
     /**
-     * Gets the externalDeveloperName value for this CustomField.
+     * Gets the value of the externalDeveloperName property.
      * 
-     * @return externalDeveloperName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getExternalDeveloperName() {
+    public String getExternalDeveloperName() {
         return externalDeveloperName;
     }
 
-
     /**
-     * Sets the externalDeveloperName value for this CustomField.
+     * Sets the value of the externalDeveloperName property.
      * 
-     * @param externalDeveloperName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setExternalDeveloperName(java.lang.String externalDeveloperName) {
-        this.externalDeveloperName = externalDeveloperName;
+    public void setExternalDeveloperName(String value) {
+        this.externalDeveloperName = value;
     }
 
-
     /**
-     * Gets the externalId value for this CustomField.
+     * Gets the value of the externalId property.
      * 
-     * @return externalId
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getExternalId() {
+    public Boolean isExternalId() {
         return externalId;
     }
 
-
     /**
-     * Sets the externalId value for this CustomField.
+     * Sets the value of the externalId property.
      * 
-     * @param externalId
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setExternalId(java.lang.Boolean externalId) {
-        this.externalId = externalId;
+    public void setExternalId(Boolean value) {
+        this.externalId = value;
     }
 
-
     /**
-     * Gets the formula value for this CustomField.
+     * Gets the value of the formula property.
      * 
-     * @return formula
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFormula() {
+    public String getFormula() {
         return formula;
     }
 
-
     /**
-     * Sets the formula value for this CustomField.
+     * Sets the value of the formula property.
      * 
-     * @param formula
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFormula(java.lang.String formula) {
-        this.formula = formula;
+    public void setFormula(String value) {
+        this.formula = value;
     }
 
-
     /**
-     * Gets the formulaTreatBlanksAs value for this CustomField.
+     * Gets the value of the formulaTreatBlanksAs property.
      * 
-     * @return formulaTreatBlanksAs
+     * @return
+     *     possible object is
+     *     {@link TreatBlanksAs }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.TreatBlanksAs getFormulaTreatBlanksAs() {
+    public TreatBlanksAs getFormulaTreatBlanksAs() {
         return formulaTreatBlanksAs;
     }
 
-
     /**
-     * Sets the formulaTreatBlanksAs value for this CustomField.
+     * Sets the value of the formulaTreatBlanksAs property.
      * 
-     * @param formulaTreatBlanksAs
+     * @param value
+     *     allowed object is
+     *     {@link TreatBlanksAs }
+     *     
      */
-    public void setFormulaTreatBlanksAs(com.sforce.soap._2006._04.metadata.TreatBlanksAs formulaTreatBlanksAs) {
-        this.formulaTreatBlanksAs = formulaTreatBlanksAs;
+    public void setFormulaTreatBlanksAs(TreatBlanksAs value) {
+        this.formulaTreatBlanksAs = value;
     }
 
-
     /**
-     * Gets the inlineHelpText value for this CustomField.
+     * Gets the value of the inlineHelpText property.
      * 
-     * @return inlineHelpText
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getInlineHelpText() {
+    public String getInlineHelpText() {
         return inlineHelpText;
     }
 
-
     /**
-     * Sets the inlineHelpText value for this CustomField.
+     * Sets the value of the inlineHelpText property.
      * 
-     * @param inlineHelpText
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setInlineHelpText(java.lang.String inlineHelpText) {
-        this.inlineHelpText = inlineHelpText;
+    public void setInlineHelpText(String value) {
+        this.inlineHelpText = value;
     }
 
-
     /**
-     * Gets the isFilteringDisabled value for this CustomField.
+     * Gets the value of the isFilteringDisabled property.
      * 
-     * @return isFilteringDisabled
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsFilteringDisabled() {
+    public Boolean isIsFilteringDisabled() {
         return isFilteringDisabled;
     }
 
-
     /**
-     * Sets the isFilteringDisabled value for this CustomField.
+     * Sets the value of the isFilteringDisabled property.
      * 
-     * @param isFilteringDisabled
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsFilteringDisabled(java.lang.Boolean isFilteringDisabled) {
-        this.isFilteringDisabled = isFilteringDisabled;
+    public void setIsFilteringDisabled(Boolean value) {
+        this.isFilteringDisabled = value;
     }
 
-
     /**
-     * Gets the isNameField value for this CustomField.
+     * Gets the value of the isNameField property.
      * 
-     * @return isNameField
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsNameField() {
+    public Boolean isIsNameField() {
         return isNameField;
     }
 
-
     /**
-     * Sets the isNameField value for this CustomField.
+     * Sets the value of the isNameField property.
      * 
-     * @param isNameField
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsNameField(java.lang.Boolean isNameField) {
-        this.isNameField = isNameField;
+    public void setIsNameField(Boolean value) {
+        this.isNameField = value;
     }
 
-
     /**
-     * Gets the isSortingDisabled value for this CustomField.
+     * Gets the value of the isSortingDisabled property.
      * 
-     * @return isSortingDisabled
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsSortingDisabled() {
+    public Boolean isIsSortingDisabled() {
         return isSortingDisabled;
     }
 
-
     /**
-     * Sets the isSortingDisabled value for this CustomField.
+     * Sets the value of the isSortingDisabled property.
      * 
-     * @param isSortingDisabled
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsSortingDisabled(java.lang.Boolean isSortingDisabled) {
-        this.isSortingDisabled = isSortingDisabled;
+    public void setIsSortingDisabled(Boolean value) {
+        this.isSortingDisabled = value;
     }
 
-
     /**
-     * Gets the label value for this CustomField.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this CustomField.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the length value for this CustomField.
+     * Gets the value of the length property.
      * 
-     * @return length
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getLength() {
+    public Integer getLength() {
         return length;
     }
 
-
     /**
-     * Sets the length value for this CustomField.
+     * Sets the value of the length property.
      * 
-     * @param length
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setLength(java.lang.Integer length) {
-        this.length = length;
+    public void setLength(Integer value) {
+        this.length = value;
     }
 
-
     /**
-     * Gets the maskChar value for this CustomField.
+     * Gets the value of the maskChar property.
      * 
-     * @return maskChar
+     * @return
+     *     possible object is
+     *     {@link EncryptedFieldMaskChar }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.EncryptedFieldMaskChar getMaskChar() {
+    public EncryptedFieldMaskChar getMaskChar() {
         return maskChar;
     }
 
-
     /**
-     * Sets the maskChar value for this CustomField.
+     * Sets the value of the maskChar property.
      * 
-     * @param maskChar
+     * @param value
+     *     allowed object is
+     *     {@link EncryptedFieldMaskChar }
+     *     
      */
-    public void setMaskChar(com.sforce.soap._2006._04.metadata.EncryptedFieldMaskChar maskChar) {
-        this.maskChar = maskChar;
+    public void setMaskChar(EncryptedFieldMaskChar value) {
+        this.maskChar = value;
     }
 
-
     /**
-     * Gets the maskType value for this CustomField.
+     * Gets the value of the maskType property.
      * 
-     * @return maskType
+     * @return
+     *     possible object is
+     *     {@link EncryptedFieldMaskType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.EncryptedFieldMaskType getMaskType() {
+    public EncryptedFieldMaskType getMaskType() {
         return maskType;
     }
 
-
     /**
-     * Sets the maskType value for this CustomField.
+     * Sets the value of the maskType property.
      * 
-     * @param maskType
+     * @param value
+     *     allowed object is
+     *     {@link EncryptedFieldMaskType }
+     *     
      */
-    public void setMaskType(com.sforce.soap._2006._04.metadata.EncryptedFieldMaskType maskType) {
-        this.maskType = maskType;
+    public void setMaskType(EncryptedFieldMaskType value) {
+        this.maskType = value;
     }
 
-
     /**
-     * Gets the picklist value for this CustomField.
+     * Gets the value of the picklist property.
      * 
-     * @return picklist
+     * @return
+     *     possible object is
+     *     {@link Picklist }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.Picklist getPicklist() {
+    public Picklist getPicklist() {
         return picklist;
     }
 
-
     /**
-     * Sets the picklist value for this CustomField.
+     * Sets the value of the picklist property.
      * 
-     * @param picklist
+     * @param value
+     *     allowed object is
+     *     {@link Picklist }
+     *     
      */
-    public void setPicklist(com.sforce.soap._2006._04.metadata.Picklist picklist) {
-        this.picklist = picklist;
+    public void setPicklist(Picklist value) {
+        this.picklist = value;
     }
 
-
     /**
-     * Gets the populateExistingRows value for this CustomField.
+     * Gets the value of the populateExistingRows property.
      * 
-     * @return populateExistingRows
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getPopulateExistingRows() {
+    public Boolean isPopulateExistingRows() {
         return populateExistingRows;
     }
 
-
     /**
-     * Sets the populateExistingRows value for this CustomField.
+     * Sets the value of the populateExistingRows property.
      * 
-     * @param populateExistingRows
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setPopulateExistingRows(java.lang.Boolean populateExistingRows) {
-        this.populateExistingRows = populateExistingRows;
+    public void setPopulateExistingRows(Boolean value) {
+        this.populateExistingRows = value;
     }
 
-
     /**
-     * Gets the precision value for this CustomField.
+     * Gets the value of the precision property.
      * 
-     * @return precision
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getPrecision() {
+    public Integer getPrecision() {
         return precision;
     }
 
-
     /**
-     * Sets the precision value for this CustomField.
+     * Sets the value of the precision property.
      * 
-     * @param precision
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPrecision(java.lang.Integer precision) {
-        this.precision = precision;
+    public void setPrecision(Integer value) {
+        this.precision = value;
     }
 
-
     /**
-     * Gets the referenceTo value for this CustomField.
+     * Gets the value of the referenceTo property.
      * 
-     * @return referenceTo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getReferenceTo() {
+    public String getReferenceTo() {
         return referenceTo;
     }
 
-
     /**
-     * Sets the referenceTo value for this CustomField.
+     * Sets the value of the referenceTo property.
      * 
-     * @param referenceTo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReferenceTo(java.lang.String referenceTo) {
-        this.referenceTo = referenceTo;
+    public void setReferenceTo(String value) {
+        this.referenceTo = value;
     }
 
-
     /**
-     * Gets the relationshipLabel value for this CustomField.
+     * Gets the value of the relationshipLabel property.
      * 
-     * @return relationshipLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRelationshipLabel() {
+    public String getRelationshipLabel() {
         return relationshipLabel;
     }
 
-
     /**
-     * Sets the relationshipLabel value for this CustomField.
+     * Sets the value of the relationshipLabel property.
      * 
-     * @param relationshipLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRelationshipLabel(java.lang.String relationshipLabel) {
-        this.relationshipLabel = relationshipLabel;
+    public void setRelationshipLabel(String value) {
+        this.relationshipLabel = value;
     }
 
-
     /**
-     * Gets the relationshipName value for this CustomField.
+     * Gets the value of the relationshipName property.
      * 
-     * @return relationshipName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRelationshipName() {
+    public String getRelationshipName() {
         return relationshipName;
     }
 
-
     /**
-     * Sets the relationshipName value for this CustomField.
+     * Sets the value of the relationshipName property.
      * 
-     * @param relationshipName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRelationshipName(java.lang.String relationshipName) {
-        this.relationshipName = relationshipName;
+    public void setRelationshipName(String value) {
+        this.relationshipName = value;
     }
 
-
     /**
-     * Gets the relationshipOrder value for this CustomField.
+     * Gets the value of the relationshipOrder property.
      * 
-     * @return relationshipOrder
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getRelationshipOrder() {
+    public Integer getRelationshipOrder() {
         return relationshipOrder;
     }
 
-
     /**
-     * Sets the relationshipOrder value for this CustomField.
+     * Sets the value of the relationshipOrder property.
      * 
-     * @param relationshipOrder
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setRelationshipOrder(java.lang.Integer relationshipOrder) {
-        this.relationshipOrder = relationshipOrder;
+    public void setRelationshipOrder(Integer value) {
+        this.relationshipOrder = value;
     }
 
-
     /**
-     * Gets the reparentableMasterDetail value for this CustomField.
+     * Gets the value of the reparentableMasterDetail property.
      * 
-     * @return reparentableMasterDetail
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getReparentableMasterDetail() {
+    public Boolean isReparentableMasterDetail() {
         return reparentableMasterDetail;
     }
 
-
     /**
-     * Sets the reparentableMasterDetail value for this CustomField.
+     * Sets the value of the reparentableMasterDetail property.
      * 
-     * @param reparentableMasterDetail
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setReparentableMasterDetail(java.lang.Boolean reparentableMasterDetail) {
-        this.reparentableMasterDetail = reparentableMasterDetail;
+    public void setReparentableMasterDetail(Boolean value) {
+        this.reparentableMasterDetail = value;
     }
 
-
     /**
-     * Gets the required value for this CustomField.
+     * Gets the value of the required property.
      * 
-     * @return required
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getRequired() {
+    public Boolean isRequired() {
         return required;
     }
 
-
     /**
-     * Sets the required value for this CustomField.
+     * Sets the value of the required property.
      * 
-     * @param required
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setRequired(java.lang.Boolean required) {
-        this.required = required;
+    public void setRequired(Boolean value) {
+        this.required = value;
     }
 
-
     /**
-     * Gets the restrictedAdminField value for this CustomField.
+     * Gets the value of the restrictedAdminField property.
      * 
-     * @return restrictedAdminField
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getRestrictedAdminField() {
+    public Boolean isRestrictedAdminField() {
         return restrictedAdminField;
     }
 
-
     /**
-     * Sets the restrictedAdminField value for this CustomField.
+     * Sets the value of the restrictedAdminField property.
      * 
-     * @param restrictedAdminField
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setRestrictedAdminField(java.lang.Boolean restrictedAdminField) {
-        this.restrictedAdminField = restrictedAdminField;
+    public void setRestrictedAdminField(Boolean value) {
+        this.restrictedAdminField = value;
     }
 
-
     /**
-     * Gets the scale value for this CustomField.
+     * Gets the value of the scale property.
      * 
-     * @return scale
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getScale() {
+    public Integer getScale() {
         return scale;
     }
 
-
     /**
-     * Sets the scale value for this CustomField.
+     * Sets the value of the scale property.
      * 
-     * @param scale
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setScale(java.lang.Integer scale) {
-        this.scale = scale;
+    public void setScale(Integer value) {
+        this.scale = value;
     }
 
-
     /**
-     * Gets the startingNumber value for this CustomField.
+     * Gets the value of the startingNumber property.
      * 
-     * @return startingNumber
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getStartingNumber() {
+    public Integer getStartingNumber() {
         return startingNumber;
     }
 
-
     /**
-     * Sets the startingNumber value for this CustomField.
+     * Sets the value of the startingNumber property.
      * 
-     * @param startingNumber
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setStartingNumber(java.lang.Integer startingNumber) {
-        this.startingNumber = startingNumber;
+    public void setStartingNumber(Integer value) {
+        this.startingNumber = value;
     }
 
-
     /**
-     * Gets the stripMarkup value for this CustomField.
+     * Gets the value of the stripMarkup property.
      * 
-     * @return stripMarkup
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getStripMarkup() {
+    public Boolean isStripMarkup() {
         return stripMarkup;
     }
 
-
     /**
-     * Sets the stripMarkup value for this CustomField.
+     * Sets the value of the stripMarkup property.
      * 
-     * @param stripMarkup
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setStripMarkup(java.lang.Boolean stripMarkup) {
-        this.stripMarkup = stripMarkup;
+    public void setStripMarkup(Boolean value) {
+        this.stripMarkup = value;
     }
 
-
     /**
-     * Gets the summarizedField value for this CustomField.
+     * Gets the value of the summarizedField property.
      * 
-     * @return summarizedField
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSummarizedField() {
+    public String getSummarizedField() {
         return summarizedField;
     }
 
+    /**
+     * Sets the value of the summarizedField property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSummarizedField(String value) {
+        this.summarizedField = value;
+    }
 
     /**
-     * Sets the summarizedField value for this CustomField.
+     * Gets the value of the summaryFilterItems property.
      * 
-     * @param summarizedField
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the summaryFilterItems property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSummaryFilterItems().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FilterItem }
+     * 
+     * 
      */
-    public void setSummarizedField(java.lang.String summarizedField) {
-        this.summarizedField = summarizedField;
+    public List<FilterItem> getSummaryFilterItems() {
+        if (summaryFilterItems == null) {
+            summaryFilterItems = new ArrayList<FilterItem>();
+        }
+        return this.summaryFilterItems;
     }
-
 
     /**
-     * Gets the summaryFilterItems value for this CustomField.
+     * Gets the value of the summaryForeignKey property.
      * 
-     * @return summaryFilterItems
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FilterItem[] getSummaryFilterItems() {
-        return summaryFilterItems;
-    }
-
-
-    /**
-     * Sets the summaryFilterItems value for this CustomField.
-     * 
-     * @param summaryFilterItems
-     */
-    public void setSummaryFilterItems(com.sforce.soap._2006._04.metadata.FilterItem[] summaryFilterItems) {
-        this.summaryFilterItems = summaryFilterItems;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FilterItem getSummaryFilterItems(int i) {
-        return this.summaryFilterItems[i];
-    }
-
-    public void setSummaryFilterItems(int i, com.sforce.soap._2006._04.metadata.FilterItem _value) {
-        this.summaryFilterItems[i] = _value;
-    }
-
-
-    /**
-     * Gets the summaryForeignKey value for this CustomField.
-     * 
-     * @return summaryForeignKey
-     */
-    public java.lang.String getSummaryForeignKey() {
+    public String getSummaryForeignKey() {
         return summaryForeignKey;
     }
 
-
     /**
-     * Sets the summaryForeignKey value for this CustomField.
+     * Sets the value of the summaryForeignKey property.
      * 
-     * @param summaryForeignKey
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSummaryForeignKey(java.lang.String summaryForeignKey) {
-        this.summaryForeignKey = summaryForeignKey;
+    public void setSummaryForeignKey(String value) {
+        this.summaryForeignKey = value;
     }
 
-
     /**
-     * Gets the summaryOperation value for this CustomField.
+     * Gets the value of the summaryOperation property.
      * 
-     * @return summaryOperation
+     * @return
+     *     possible object is
+     *     {@link SummaryOperations }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SummaryOperations getSummaryOperation() {
+    public SummaryOperations getSummaryOperation() {
         return summaryOperation;
     }
 
-
     /**
-     * Sets the summaryOperation value for this CustomField.
+     * Sets the value of the summaryOperation property.
      * 
-     * @param summaryOperation
+     * @param value
+     *     allowed object is
+     *     {@link SummaryOperations }
+     *     
      */
-    public void setSummaryOperation(com.sforce.soap._2006._04.metadata.SummaryOperations summaryOperation) {
-        this.summaryOperation = summaryOperation;
+    public void setSummaryOperation(SummaryOperations value) {
+        this.summaryOperation = value;
     }
 
-
     /**
-     * Gets the trackFeedHistory value for this CustomField.
+     * Gets the value of the trackFeedHistory property.
      * 
-     * @return trackFeedHistory
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getTrackFeedHistory() {
+    public Boolean isTrackFeedHistory() {
         return trackFeedHistory;
     }
 
-
     /**
-     * Sets the trackFeedHistory value for this CustomField.
+     * Sets the value of the trackFeedHistory property.
      * 
-     * @param trackFeedHistory
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setTrackFeedHistory(java.lang.Boolean trackFeedHistory) {
-        this.trackFeedHistory = trackFeedHistory;
+    public void setTrackFeedHistory(Boolean value) {
+        this.trackFeedHistory = value;
     }
 
-
     /**
-     * Gets the trackHistory value for this CustomField.
+     * Gets the value of the trackHistory property.
      * 
-     * @return trackHistory
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getTrackHistory() {
+    public Boolean isTrackHistory() {
         return trackHistory;
     }
 
-
     /**
-     * Sets the trackHistory value for this CustomField.
+     * Sets the value of the trackHistory property.
      * 
-     * @param trackHistory
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setTrackHistory(java.lang.Boolean trackHistory) {
-        this.trackHistory = trackHistory;
+    public void setTrackHistory(Boolean value) {
+        this.trackHistory = value;
     }
 
-
     /**
-     * Gets the trackTrending value for this CustomField.
+     * Gets the value of the trackTrending property.
      * 
-     * @return trackTrending
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getTrackTrending() {
+    public Boolean isTrackTrending() {
         return trackTrending;
     }
 
-
     /**
-     * Sets the trackTrending value for this CustomField.
+     * Sets the value of the trackTrending property.
      * 
-     * @param trackTrending
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setTrackTrending(java.lang.Boolean trackTrending) {
-        this.trackTrending = trackTrending;
+    public void setTrackTrending(Boolean value) {
+        this.trackTrending = value;
     }
 
-
     /**
-     * Gets the type value for this CustomField.
+     * Gets the value of the type property.
      * 
-     * @return type
+     * @return
+     *     possible object is
+     *     {@link FieldType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FieldType getType() {
+    public FieldType getType() {
         return type;
     }
 
-
     /**
-     * Sets the type value for this CustomField.
+     * Sets the value of the type property.
      * 
-     * @param type
+     * @param value
+     *     allowed object is
+     *     {@link FieldType }
+     *     
      */
-    public void setType(com.sforce.soap._2006._04.metadata.FieldType type) {
-        this.type = type;
+    public void setType(FieldType value) {
+        this.type = value;
     }
 
-
     /**
-     * Gets the unique value for this CustomField.
+     * Gets the value of the unique property.
      * 
-     * @return unique
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getUnique() {
+    public Boolean isUnique() {
         return unique;
     }
 
-
     /**
-     * Sets the unique value for this CustomField.
+     * Sets the value of the unique property.
      * 
-     * @param unique
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setUnique(java.lang.Boolean unique) {
-        this.unique = unique;
+    public void setUnique(Boolean value) {
+        this.unique = value;
     }
 
-
     /**
-     * Gets the visibleLines value for this CustomField.
+     * Gets the value of the visibleLines property.
      * 
-     * @return visibleLines
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getVisibleLines() {
+    public Integer getVisibleLines() {
         return visibleLines;
     }
 
-
     /**
-     * Sets the visibleLines value for this CustomField.
+     * Sets the value of the visibleLines property.
      * 
-     * @param visibleLines
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setVisibleLines(java.lang.Integer visibleLines) {
-        this.visibleLines = visibleLines;
+    public void setVisibleLines(Integer value) {
+        this.visibleLines = value;
     }
 
-
     /**
-     * Gets the writeRequiresMasterRead value for this CustomField.
+     * Gets the value of the writeRequiresMasterRead property.
      * 
-     * @return writeRequiresMasterRead
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getWriteRequiresMasterRead() {
+    public Boolean isWriteRequiresMasterRead() {
         return writeRequiresMasterRead;
     }
 
-
     /**
-     * Sets the writeRequiresMasterRead value for this CustomField.
+     * Sets the value of the writeRequiresMasterRead property.
      * 
-     * @param writeRequiresMasterRead
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setWriteRequiresMasterRead(java.lang.Boolean writeRequiresMasterRead) {
-        this.writeRequiresMasterRead = writeRequiresMasterRead;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomField)) return false;
-        CustomField other = (CustomField) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.caseSensitive==null && other.getCaseSensitive()==null) || 
-             (this.caseSensitive!=null &&
-              this.caseSensitive.equals(other.getCaseSensitive()))) &&
-            ((this.customDataType==null && other.getCustomDataType()==null) || 
-             (this.customDataType!=null &&
-              this.customDataType.equals(other.getCustomDataType()))) &&
-            ((this.defaultValue==null && other.getDefaultValue()==null) || 
-             (this.defaultValue!=null &&
-              this.defaultValue.equals(other.getDefaultValue()))) &&
-            ((this.deleteConstraint==null && other.getDeleteConstraint()==null) || 
-             (this.deleteConstraint!=null &&
-              this.deleteConstraint.equals(other.getDeleteConstraint()))) &&
-            ((this.deprecated==null && other.getDeprecated()==null) || 
-             (this.deprecated!=null &&
-              this.deprecated.equals(other.getDeprecated()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.displayFormat==null && other.getDisplayFormat()==null) || 
-             (this.displayFormat!=null &&
-              this.displayFormat.equals(other.getDisplayFormat()))) &&
-            ((this.escapeMarkup==null && other.getEscapeMarkup()==null) || 
-             (this.escapeMarkup!=null &&
-              this.escapeMarkup.equals(other.getEscapeMarkup()))) &&
-            ((this.externalDeveloperName==null && other.getExternalDeveloperName()==null) || 
-             (this.externalDeveloperName!=null &&
-              this.externalDeveloperName.equals(other.getExternalDeveloperName()))) &&
-            ((this.externalId==null && other.getExternalId()==null) || 
-             (this.externalId!=null &&
-              this.externalId.equals(other.getExternalId()))) &&
-            ((this.formula==null && other.getFormula()==null) || 
-             (this.formula!=null &&
-              this.formula.equals(other.getFormula()))) &&
-            ((this.formulaTreatBlanksAs==null && other.getFormulaTreatBlanksAs()==null) || 
-             (this.formulaTreatBlanksAs!=null &&
-              this.formulaTreatBlanksAs.equals(other.getFormulaTreatBlanksAs()))) &&
-            ((this.inlineHelpText==null && other.getInlineHelpText()==null) || 
-             (this.inlineHelpText!=null &&
-              this.inlineHelpText.equals(other.getInlineHelpText()))) &&
-            ((this.isFilteringDisabled==null && other.getIsFilteringDisabled()==null) || 
-             (this.isFilteringDisabled!=null &&
-              this.isFilteringDisabled.equals(other.getIsFilteringDisabled()))) &&
-            ((this.isNameField==null && other.getIsNameField()==null) || 
-             (this.isNameField!=null &&
-              this.isNameField.equals(other.getIsNameField()))) &&
-            ((this.isSortingDisabled==null && other.getIsSortingDisabled()==null) || 
-             (this.isSortingDisabled!=null &&
-              this.isSortingDisabled.equals(other.getIsSortingDisabled()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.length==null && other.getLength()==null) || 
-             (this.length!=null &&
-              this.length.equals(other.getLength()))) &&
-            ((this.maskChar==null && other.getMaskChar()==null) || 
-             (this.maskChar!=null &&
-              this.maskChar.equals(other.getMaskChar()))) &&
-            ((this.maskType==null && other.getMaskType()==null) || 
-             (this.maskType!=null &&
-              this.maskType.equals(other.getMaskType()))) &&
-            ((this.picklist==null && other.getPicklist()==null) || 
-             (this.picklist!=null &&
-              this.picklist.equals(other.getPicklist()))) &&
-            ((this.populateExistingRows==null && other.getPopulateExistingRows()==null) || 
-             (this.populateExistingRows!=null &&
-              this.populateExistingRows.equals(other.getPopulateExistingRows()))) &&
-            ((this.precision==null && other.getPrecision()==null) || 
-             (this.precision!=null &&
-              this.precision.equals(other.getPrecision()))) &&
-            ((this.referenceTo==null && other.getReferenceTo()==null) || 
-             (this.referenceTo!=null &&
-              this.referenceTo.equals(other.getReferenceTo()))) &&
-            ((this.relationshipLabel==null && other.getRelationshipLabel()==null) || 
-             (this.relationshipLabel!=null &&
-              this.relationshipLabel.equals(other.getRelationshipLabel()))) &&
-            ((this.relationshipName==null && other.getRelationshipName()==null) || 
-             (this.relationshipName!=null &&
-              this.relationshipName.equals(other.getRelationshipName()))) &&
-            ((this.relationshipOrder==null && other.getRelationshipOrder()==null) || 
-             (this.relationshipOrder!=null &&
-              this.relationshipOrder.equals(other.getRelationshipOrder()))) &&
-            ((this.reparentableMasterDetail==null && other.getReparentableMasterDetail()==null) || 
-             (this.reparentableMasterDetail!=null &&
-              this.reparentableMasterDetail.equals(other.getReparentableMasterDetail()))) &&
-            ((this.required==null && other.getRequired()==null) || 
-             (this.required!=null &&
-              this.required.equals(other.getRequired()))) &&
-            ((this.restrictedAdminField==null && other.getRestrictedAdminField()==null) || 
-             (this.restrictedAdminField!=null &&
-              this.restrictedAdminField.equals(other.getRestrictedAdminField()))) &&
-            ((this.scale==null && other.getScale()==null) || 
-             (this.scale!=null &&
-              this.scale.equals(other.getScale()))) &&
-            ((this.startingNumber==null && other.getStartingNumber()==null) || 
-             (this.startingNumber!=null &&
-              this.startingNumber.equals(other.getStartingNumber()))) &&
-            ((this.stripMarkup==null && other.getStripMarkup()==null) || 
-             (this.stripMarkup!=null &&
-              this.stripMarkup.equals(other.getStripMarkup()))) &&
-            ((this.summarizedField==null && other.getSummarizedField()==null) || 
-             (this.summarizedField!=null &&
-              this.summarizedField.equals(other.getSummarizedField()))) &&
-            ((this.summaryFilterItems==null && other.getSummaryFilterItems()==null) || 
-             (this.summaryFilterItems!=null &&
-              java.util.Arrays.equals(this.summaryFilterItems, other.getSummaryFilterItems()))) &&
-            ((this.summaryForeignKey==null && other.getSummaryForeignKey()==null) || 
-             (this.summaryForeignKey!=null &&
-              this.summaryForeignKey.equals(other.getSummaryForeignKey()))) &&
-            ((this.summaryOperation==null && other.getSummaryOperation()==null) || 
-             (this.summaryOperation!=null &&
-              this.summaryOperation.equals(other.getSummaryOperation()))) &&
-            ((this.trackFeedHistory==null && other.getTrackFeedHistory()==null) || 
-             (this.trackFeedHistory!=null &&
-              this.trackFeedHistory.equals(other.getTrackFeedHistory()))) &&
-            ((this.trackHistory==null && other.getTrackHistory()==null) || 
-             (this.trackHistory!=null &&
-              this.trackHistory.equals(other.getTrackHistory()))) &&
-            ((this.trackTrending==null && other.getTrackTrending()==null) || 
-             (this.trackTrending!=null &&
-              this.trackTrending.equals(other.getTrackTrending()))) &&
-            ((this.type==null && other.getType()==null) || 
-             (this.type!=null &&
-              this.type.equals(other.getType()))) &&
-            ((this.unique==null && other.getUnique()==null) || 
-             (this.unique!=null &&
-              this.unique.equals(other.getUnique()))) &&
-            ((this.visibleLines==null && other.getVisibleLines()==null) || 
-             (this.visibleLines!=null &&
-              this.visibleLines.equals(other.getVisibleLines()))) &&
-            ((this.writeRequiresMasterRead==null && other.getWriteRequiresMasterRead()==null) || 
-             (this.writeRequiresMasterRead!=null &&
-              this.writeRequiresMasterRead.equals(other.getWriteRequiresMasterRead())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCaseSensitive() != null) {
-            _hashCode += getCaseSensitive().hashCode();
-        }
-        if (getCustomDataType() != null) {
-            _hashCode += getCustomDataType().hashCode();
-        }
-        if (getDefaultValue() != null) {
-            _hashCode += getDefaultValue().hashCode();
-        }
-        if (getDeleteConstraint() != null) {
-            _hashCode += getDeleteConstraint().hashCode();
-        }
-        if (getDeprecated() != null) {
-            _hashCode += getDeprecated().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getDisplayFormat() != null) {
-            _hashCode += getDisplayFormat().hashCode();
-        }
-        if (getEscapeMarkup() != null) {
-            _hashCode += getEscapeMarkup().hashCode();
-        }
-        if (getExternalDeveloperName() != null) {
-            _hashCode += getExternalDeveloperName().hashCode();
-        }
-        if (getExternalId() != null) {
-            _hashCode += getExternalId().hashCode();
-        }
-        if (getFormula() != null) {
-            _hashCode += getFormula().hashCode();
-        }
-        if (getFormulaTreatBlanksAs() != null) {
-            _hashCode += getFormulaTreatBlanksAs().hashCode();
-        }
-        if (getInlineHelpText() != null) {
-            _hashCode += getInlineHelpText().hashCode();
-        }
-        if (getIsFilteringDisabled() != null) {
-            _hashCode += getIsFilteringDisabled().hashCode();
-        }
-        if (getIsNameField() != null) {
-            _hashCode += getIsNameField().hashCode();
-        }
-        if (getIsSortingDisabled() != null) {
-            _hashCode += getIsSortingDisabled().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getLength() != null) {
-            _hashCode += getLength().hashCode();
-        }
-        if (getMaskChar() != null) {
-            _hashCode += getMaskChar().hashCode();
-        }
-        if (getMaskType() != null) {
-            _hashCode += getMaskType().hashCode();
-        }
-        if (getPicklist() != null) {
-            _hashCode += getPicklist().hashCode();
-        }
-        if (getPopulateExistingRows() != null) {
-            _hashCode += getPopulateExistingRows().hashCode();
-        }
-        if (getPrecision() != null) {
-            _hashCode += getPrecision().hashCode();
-        }
-        if (getReferenceTo() != null) {
-            _hashCode += getReferenceTo().hashCode();
-        }
-        if (getRelationshipLabel() != null) {
-            _hashCode += getRelationshipLabel().hashCode();
-        }
-        if (getRelationshipName() != null) {
-            _hashCode += getRelationshipName().hashCode();
-        }
-        if (getRelationshipOrder() != null) {
-            _hashCode += getRelationshipOrder().hashCode();
-        }
-        if (getReparentableMasterDetail() != null) {
-            _hashCode += getReparentableMasterDetail().hashCode();
-        }
-        if (getRequired() != null) {
-            _hashCode += getRequired().hashCode();
-        }
-        if (getRestrictedAdminField() != null) {
-            _hashCode += getRestrictedAdminField().hashCode();
-        }
-        if (getScale() != null) {
-            _hashCode += getScale().hashCode();
-        }
-        if (getStartingNumber() != null) {
-            _hashCode += getStartingNumber().hashCode();
-        }
-        if (getStripMarkup() != null) {
-            _hashCode += getStripMarkup().hashCode();
-        }
-        if (getSummarizedField() != null) {
-            _hashCode += getSummarizedField().hashCode();
-        }
-        if (getSummaryFilterItems() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSummaryFilterItems());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSummaryFilterItems(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSummaryForeignKey() != null) {
-            _hashCode += getSummaryForeignKey().hashCode();
-        }
-        if (getSummaryOperation() != null) {
-            _hashCode += getSummaryOperation().hashCode();
-        }
-        if (getTrackFeedHistory() != null) {
-            _hashCode += getTrackFeedHistory().hashCode();
-        }
-        if (getTrackHistory() != null) {
-            _hashCode += getTrackHistory().hashCode();
-        }
-        if (getTrackTrending() != null) {
-            _hashCode += getTrackTrending().hashCode();
-        }
-        if (getType() != null) {
-            _hashCode += getType().hashCode();
-        }
-        if (getUnique() != null) {
-            _hashCode += getUnique().hashCode();
-        }
-        if (getVisibleLines() != null) {
-            _hashCode += getVisibleLines().hashCode();
-        }
-        if (getWriteRequiresMasterRead() != null) {
-            _hashCode += getWriteRequiresMasterRead().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomField.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomField"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("caseSensitive");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "caseSensitive"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customDataType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customDataType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultValue");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultValue"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deleteConstraint");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "deleteConstraint"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeleteConstraint"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deprecated");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "deprecated"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("displayFormat");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "displayFormat"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("escapeMarkup");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "escapeMarkup"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("externalDeveloperName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "externalDeveloperName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("externalId");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "externalId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("formula");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "formula"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("formulaTreatBlanksAs");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "formulaTreatBlanksAs"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "TreatBlanksAs"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("inlineHelpText");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "inlineHelpText"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isFilteringDisabled");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isFilteringDisabled"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isNameField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isNameField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isSortingDisabled");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isSortingDisabled"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("length");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "length"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("maskChar");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "maskChar"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EncryptedFieldMaskChar"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("maskType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "maskType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EncryptedFieldMaskType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("picklist");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "picklist"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Picklist"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("populateExistingRows");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "populateExistingRows"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("precision");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "precision"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("referenceTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "referenceTo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relationshipLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relationshipLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relationshipName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relationshipName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relationshipOrder");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relationshipOrder"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("reparentableMasterDetail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "reparentableMasterDetail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("required");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "required"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("restrictedAdminField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "restrictedAdminField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scale");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scale"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("startingNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "startingNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("stripMarkup");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "stripMarkup"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summarizedField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summarizedField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryFilterItems");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryFilterItems"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FilterItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryForeignKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryForeignKey"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryOperation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryOperation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SummaryOperations"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("trackFeedHistory");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "trackFeedHistory"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("trackHistory");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "trackHistory"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("trackTrending");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "trackTrending"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("type");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "type"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FieldType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("unique");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "unique"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("visibleLines");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "visibleLines"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("writeRequiresMasterRead");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "writeRequiresMasterRead"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWriteRequiresMasterRead(Boolean value) {
+        this.writeRequiresMasterRead = value;
     }
 
 }

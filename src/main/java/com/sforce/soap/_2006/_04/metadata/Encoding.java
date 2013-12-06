@@ -1,86 +1,75 @@
-/**
- * Encoding.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Encoding implements java.io.Serializable {
-    private java.lang.String _value_;
-    private static java.util.HashMap _table_ = new java.util.HashMap();
+import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
+import javax.xml.bind.annotation.XmlType;
 
-    // Constructor
-    protected Encoding(java.lang.String value) {
-        _value_ = value;
-        _table_.put(_value_,this);
+
+/**
+ * <p>Java class for Encoding.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="Encoding">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="UTF-8"/>
+ *     &lt;enumeration value="ISO-8859-1"/>
+ *     &lt;enumeration value="Shift_JIS"/>
+ *     &lt;enumeration value="ISO-2022-JP"/>
+ *     &lt;enumeration value="EUC-JP"/>
+ *     &lt;enumeration value="ks_c_5601-1987"/>
+ *     &lt;enumeration value="Big5"/>
+ *     &lt;enumeration value="GB2312"/>
+ *     &lt;enumeration value="Big5-HKSCS"/>
+ *     &lt;enumeration value="x-SJIS_0213"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
+ * </pre>
+ * 
+ */
+@XmlType(name = "Encoding", namespace = "http://soap.sforce.com/2006/04/metadata")
+@XmlEnum
+public enum Encoding {
+
+    @XmlEnumValue("UTF-8")
+    UTF_8("UTF-8"),
+    @XmlEnumValue("ISO-8859-1")
+    ISO_8859_1("ISO-8859-1"),
+    @XmlEnumValue("Shift_JIS")
+    SHIFT_JIS("Shift_JIS"),
+    @XmlEnumValue("ISO-2022-JP")
+    ISO_2022_JP("ISO-2022-JP"),
+    @XmlEnumValue("EUC-JP")
+    EUC_JP("EUC-JP"),
+    @XmlEnumValue("ks_c_5601-1987")
+    KS_C_5601_1987("ks_c_5601-1987"),
+    @XmlEnumValue("Big5")
+    BIG_5("Big5"),
+    @XmlEnumValue("GB2312")
+    GB_2312("GB2312"),
+    @XmlEnumValue("Big5-HKSCS")
+    BIG_5_HKSCS("Big5-HKSCS"),
+    @XmlEnumValue("x-SJIS_0213")
+    X_SJIS_0213("x-SJIS_0213");
+    private final String value;
+
+    Encoding(String v) {
+        value = v;
     }
 
-    public static final java.lang.String _value1 = "UTF-8";
-    public static final java.lang.String _value2 = "ISO-8859-1";
-    public static final java.lang.String _value3 = "Shift_JIS";
-    public static final java.lang.String _value4 = "ISO-2022-JP";
-    public static final java.lang.String _value5 = "EUC-JP";
-    public static final java.lang.String _value6 = "ks_c_5601-1987";
-    public static final java.lang.String _value7 = "Big5";
-    public static final java.lang.String _value8 = "GB2312";
-    public static final java.lang.String _value9 = "Big5-HKSCS";
-    public static final java.lang.String _value10 = "x-SJIS_0213";
-    public static final Encoding value1 = new Encoding(_value1);
-    public static final Encoding value2 = new Encoding(_value2);
-    public static final Encoding value3 = new Encoding(_value3);
-    public static final Encoding value4 = new Encoding(_value4);
-    public static final Encoding value5 = new Encoding(_value5);
-    public static final Encoding value6 = new Encoding(_value6);
-    public static final Encoding value7 = new Encoding(_value7);
-    public static final Encoding value8 = new Encoding(_value8);
-    public static final Encoding value9 = new Encoding(_value9);
-    public static final Encoding value10 = new Encoding(_value10);
-    public java.lang.String getValue() { return _value_;}
-    public static Encoding fromValue(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        Encoding enumeration = (Encoding)
-            _table_.get(value);
-        if (enumeration==null) throw new java.lang.IllegalArgumentException();
-        return enumeration;
+    public String value() {
+        return value;
     }
-    public static Encoding fromString(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        return fromValue(value);
-    }
-    public boolean equals(java.lang.Object obj) {return (obj == this);}
-    public int hashCode() { return toString().hashCode();}
-    public java.lang.String toString() { return _value_;}
-    public java.lang.Object readResolve() throws java.io.ObjectStreamException { return fromValue(_value_);}
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumSerializer(
-            _javaType, _xmlType);
-    }
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumDeserializer(
-            _javaType, _xmlType);
-    }
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Encoding.class);
 
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Encoding"));
-    }
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public static Encoding fromValue(String v) {
+        for (Encoding c: Encoding.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

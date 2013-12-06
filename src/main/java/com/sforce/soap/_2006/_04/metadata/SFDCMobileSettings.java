@@ -1,157 +1,90 @@
-/**
- * SFDCMobileSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class SFDCMobileSettings  implements java.io.Serializable {
-    private java.lang.Boolean enableMobileLite;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean enableUserToDeviceLinking;
 
-    public SFDCMobileSettings() {
-    }
+/**
+ * <p>Java class for SFDCMobileSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="SFDCMobileSettings">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="enableMobileLite" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableUserToDeviceLinking" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SFDCMobileSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "enableMobileLite",
+    "enableUserToDeviceLinking"
+})
+public class SFDCMobileSettings {
 
-    public SFDCMobileSettings(
-           java.lang.Boolean enableMobileLite,
-           java.lang.Boolean enableUserToDeviceLinking) {
-           this.enableMobileLite = enableMobileLite;
-           this.enableUserToDeviceLinking = enableUserToDeviceLinking;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableMobileLite;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableUserToDeviceLinking;
 
     /**
-     * Gets the enableMobileLite value for this SFDCMobileSettings.
+     * Gets the value of the enableMobileLite property.
      * 
-     * @return enableMobileLite
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableMobileLite() {
+    public Boolean isEnableMobileLite() {
         return enableMobileLite;
     }
 
-
     /**
-     * Sets the enableMobileLite value for this SFDCMobileSettings.
+     * Sets the value of the enableMobileLite property.
      * 
-     * @param enableMobileLite
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableMobileLite(java.lang.Boolean enableMobileLite) {
-        this.enableMobileLite = enableMobileLite;
+    public void setEnableMobileLite(Boolean value) {
+        this.enableMobileLite = value;
     }
 
-
     /**
-     * Gets the enableUserToDeviceLinking value for this SFDCMobileSettings.
+     * Gets the value of the enableUserToDeviceLinking property.
      * 
-     * @return enableUserToDeviceLinking
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableUserToDeviceLinking() {
+    public Boolean isEnableUserToDeviceLinking() {
         return enableUserToDeviceLinking;
     }
 
-
     /**
-     * Sets the enableUserToDeviceLinking value for this SFDCMobileSettings.
+     * Sets the value of the enableUserToDeviceLinking property.
      * 
-     * @param enableUserToDeviceLinking
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableUserToDeviceLinking(java.lang.Boolean enableUserToDeviceLinking) {
-        this.enableUserToDeviceLinking = enableUserToDeviceLinking;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SFDCMobileSettings)) return false;
-        SFDCMobileSettings other = (SFDCMobileSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.enableMobileLite==null && other.getEnableMobileLite()==null) || 
-             (this.enableMobileLite!=null &&
-              this.enableMobileLite.equals(other.getEnableMobileLite()))) &&
-            ((this.enableUserToDeviceLinking==null && other.getEnableUserToDeviceLinking()==null) || 
-             (this.enableUserToDeviceLinking!=null &&
-              this.enableUserToDeviceLinking.equals(other.getEnableUserToDeviceLinking())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getEnableMobileLite() != null) {
-            _hashCode += getEnableMobileLite().hashCode();
-        }
-        if (getEnableUserToDeviceLinking() != null) {
-            _hashCode += getEnableUserToDeviceLinking().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SFDCMobileSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SFDCMobileSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableMobileLite");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableMobileLite"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableUserToDeviceLinking");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableUserToDeviceLinking"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setEnableUserToDeviceLinking(Boolean value) {
+        this.enableUserToDeviceLinking = value;
     }
 
 }

@@ -1,155 +1,90 @@
-/**
- * ConnectedAppAttribute.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ConnectedAppAttribute  implements java.io.Serializable {
-    private java.lang.String formula;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String key;
 
-    public ConnectedAppAttribute() {
-    }
+/**
+ * <p>Java class for ConnectedAppAttribute complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ConnectedAppAttribute">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="formula" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="key" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ConnectedAppAttribute", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "formula",
+    "key"
+})
+public class ConnectedAppAttribute {
 
-    public ConnectedAppAttribute(
-           java.lang.String formula,
-           java.lang.String key) {
-           this.formula = formula;
-           this.key = key;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String formula;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String key;
 
     /**
-     * Gets the formula value for this ConnectedAppAttribute.
+     * Gets the value of the formula property.
      * 
-     * @return formula
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFormula() {
+    public String getFormula() {
         return formula;
     }
 
-
     /**
-     * Sets the formula value for this ConnectedAppAttribute.
+     * Sets the value of the formula property.
      * 
-     * @param formula
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFormula(java.lang.String formula) {
-        this.formula = formula;
+    public void setFormula(String value) {
+        this.formula = value;
     }
 
-
     /**
-     * Gets the key value for this ConnectedAppAttribute.
+     * Gets the value of the key property.
      * 
-     * @return key
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getKey() {
+    public String getKey() {
         return key;
     }
 
-
     /**
-     * Sets the key value for this ConnectedAppAttribute.
+     * Sets the value of the key property.
      * 
-     * @param key
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setKey(java.lang.String key) {
-        this.key = key;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ConnectedAppAttribute)) return false;
-        ConnectedAppAttribute other = (ConnectedAppAttribute) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.formula==null && other.getFormula()==null) || 
-             (this.formula!=null &&
-              this.formula.equals(other.getFormula()))) &&
-            ((this.key==null && other.getKey()==null) || 
-             (this.key!=null &&
-              this.key.equals(other.getKey())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getFormula() != null) {
-            _hashCode += getFormula().hashCode();
-        }
-        if (getKey() != null) {
-            _hashCode += getKey().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ConnectedAppAttribute.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppAttribute"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("formula");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "formula"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("key");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "key"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setKey(String value) {
+        this.key = value;
     }
 
 }

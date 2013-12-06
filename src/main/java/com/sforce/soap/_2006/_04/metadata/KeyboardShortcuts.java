@@ -1,191 +1,102 @@
-/**
- * KeyboardShortcuts.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class KeyboardShortcuts  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.CustomShortcut[] customShortcut;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.DefaultShortcut[] defaultShortcut;
 
-    public KeyboardShortcuts() {
-    }
+/**
+ * <p>Java class for KeyboardShortcuts complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="KeyboardShortcuts">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customShortcut" type="{http://soap.sforce.com/2006/04/metadata}CustomShortcut" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="defaultShortcut" type="{http://soap.sforce.com/2006/04/metadata}DefaultShortcut" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "KeyboardShortcuts", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "customShortcut",
+    "defaultShortcut"
+})
+public class KeyboardShortcuts {
 
-    public KeyboardShortcuts(
-           com.sforce.soap._2006._04.metadata.CustomShortcut[] customShortcut,
-           com.sforce.soap._2006._04.metadata.DefaultShortcut[] defaultShortcut) {
-           this.customShortcut = customShortcut;
-           this.defaultShortcut = defaultShortcut;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<CustomShortcut> customShortcut;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<DefaultShortcut> defaultShortcut;
 
     /**
-     * Gets the customShortcut value for this KeyboardShortcuts.
+     * Gets the value of the customShortcut property.
      * 
-     * @return customShortcut
-     */
-    public com.sforce.soap._2006._04.metadata.CustomShortcut[] getCustomShortcut() {
-        return customShortcut;
-    }
-
-
-    /**
-     * Sets the customShortcut value for this KeyboardShortcuts.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the customShortcut property.
      * 
-     * @param customShortcut
-     */
-    public void setCustomShortcut(com.sforce.soap._2006._04.metadata.CustomShortcut[] customShortcut) {
-        this.customShortcut = customShortcut;
-    }
-
-    public com.sforce.soap._2006._04.metadata.CustomShortcut getCustomShortcut(int i) {
-        return this.customShortcut[i];
-    }
-
-    public void setCustomShortcut(int i, com.sforce.soap._2006._04.metadata.CustomShortcut _value) {
-        this.customShortcut[i] = _value;
-    }
-
-
-    /**
-     * Gets the defaultShortcut value for this KeyboardShortcuts.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCustomShortcut().add(newItem);
+     * </pre>
      * 
-     * @return defaultShortcut
-     */
-    public com.sforce.soap._2006._04.metadata.DefaultShortcut[] getDefaultShortcut() {
-        return defaultShortcut;
-    }
-
-
-    /**
-     * Sets the defaultShortcut value for this KeyboardShortcuts.
      * 
-     * @param defaultShortcut
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CustomShortcut }
+     * 
+     * 
      */
-    public void setDefaultShortcut(com.sforce.soap._2006._04.metadata.DefaultShortcut[] defaultShortcut) {
-        this.defaultShortcut = defaultShortcut;
-    }
-
-    public com.sforce.soap._2006._04.metadata.DefaultShortcut getDefaultShortcut(int i) {
-        return this.defaultShortcut[i];
-    }
-
-    public void setDefaultShortcut(int i, com.sforce.soap._2006._04.metadata.DefaultShortcut _value) {
-        this.defaultShortcut[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof KeyboardShortcuts)) return false;
-        KeyboardShortcuts other = (KeyboardShortcuts) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<CustomShortcut> getCustomShortcut() {
+        if (customShortcut == null) {
+            customShortcut = new ArrayList<CustomShortcut>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customShortcut==null && other.getCustomShortcut()==null) || 
-             (this.customShortcut!=null &&
-              java.util.Arrays.equals(this.customShortcut, other.getCustomShortcut()))) &&
-            ((this.defaultShortcut==null && other.getDefaultShortcut()==null) || 
-             (this.defaultShortcut!=null &&
-              java.util.Arrays.equals(this.defaultShortcut, other.getDefaultShortcut())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomShortcut() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCustomShortcut());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCustomShortcut(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDefaultShortcut() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDefaultShortcut());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDefaultShortcut(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(KeyboardShortcuts.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KeyboardShortcuts"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customShortcut");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customShortcut"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomShortcut"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultShortcut");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultShortcut"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DefaultShortcut"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
+        return this.customShortcut;
     }
 
     /**
-     * Return type metadata object
+     * Gets the value of the defaultShortcut property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the defaultShortcut property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDefaultShortcut().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DefaultShortcut }
+     * 
+     * 
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public List<DefaultShortcut> getDefaultShortcut() {
+        if (defaultShortcut == null) {
+            defaultShortcut = new ArrayList<DefaultShortcut>();
+        }
+        return this.defaultShortcut;
     }
 
 }

@@ -1,481 +1,334 @@
-/**
- * ReportAggregate.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportAggregate  implements java.io.Serializable {
-    private java.lang.String acrossGroupingContext;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String calculatedFormula;
 
-    private com.sforce.soap._2006._04.metadata.ReportAggregateDatatype datatype;
+/**
+ * <p>Java class for ReportAggregate complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportAggregate">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="acrossGroupingContext" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="calculatedFormula" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="datatype" type="{http://soap.sforce.com/2006/04/metadata}ReportAggregateDatatype"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="developerName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="downGroupingContext" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="isActive" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="isCrossBlock" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="masterLabel" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="reportType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="scale" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportAggregate", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "acrossGroupingContext",
+    "calculatedFormula",
+    "datatype",
+    "description",
+    "developerName",
+    "downGroupingContext",
+    "isActive",
+    "isCrossBlock",
+    "masterLabel",
+    "reportType",
+    "scale"
+})
+public class ReportAggregate {
 
-    private java.lang.String description;
-
-    private java.lang.String developerName;
-
-    private java.lang.String downGroupingContext;
-
-    private boolean isActive;
-
-    private java.lang.Boolean isCrossBlock;
-
-    private java.lang.String masterLabel;
-
-    private java.lang.String reportType;
-
-    private java.lang.Integer scale;
-
-    public ReportAggregate() {
-    }
-
-    public ReportAggregate(
-           java.lang.String acrossGroupingContext,
-           java.lang.String calculatedFormula,
-           com.sforce.soap._2006._04.metadata.ReportAggregateDatatype datatype,
-           java.lang.String description,
-           java.lang.String developerName,
-           java.lang.String downGroupingContext,
-           boolean isActive,
-           java.lang.Boolean isCrossBlock,
-           java.lang.String masterLabel,
-           java.lang.String reportType,
-           java.lang.Integer scale) {
-           this.acrossGroupingContext = acrossGroupingContext;
-           this.calculatedFormula = calculatedFormula;
-           this.datatype = datatype;
-           this.description = description;
-           this.developerName = developerName;
-           this.downGroupingContext = downGroupingContext;
-           this.isActive = isActive;
-           this.isCrossBlock = isCrossBlock;
-           this.masterLabel = masterLabel;
-           this.reportType = reportType;
-           this.scale = scale;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String acrossGroupingContext;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String calculatedFormula;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected ReportAggregateDatatype datatype;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String developerName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String downGroupingContext;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean isActive;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isCrossBlock;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String masterLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String reportType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer scale;
 
     /**
-     * Gets the acrossGroupingContext value for this ReportAggregate.
+     * Gets the value of the acrossGroupingContext property.
      * 
-     * @return acrossGroupingContext
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAcrossGroupingContext() {
+    public String getAcrossGroupingContext() {
         return acrossGroupingContext;
     }
 
-
     /**
-     * Sets the acrossGroupingContext value for this ReportAggregate.
+     * Sets the value of the acrossGroupingContext property.
      * 
-     * @param acrossGroupingContext
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAcrossGroupingContext(java.lang.String acrossGroupingContext) {
-        this.acrossGroupingContext = acrossGroupingContext;
+    public void setAcrossGroupingContext(String value) {
+        this.acrossGroupingContext = value;
     }
 
-
     /**
-     * Gets the calculatedFormula value for this ReportAggregate.
+     * Gets the value of the calculatedFormula property.
      * 
-     * @return calculatedFormula
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCalculatedFormula() {
+    public String getCalculatedFormula() {
         return calculatedFormula;
     }
 
-
     /**
-     * Sets the calculatedFormula value for this ReportAggregate.
+     * Sets the value of the calculatedFormula property.
      * 
-     * @param calculatedFormula
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCalculatedFormula(java.lang.String calculatedFormula) {
-        this.calculatedFormula = calculatedFormula;
+    public void setCalculatedFormula(String value) {
+        this.calculatedFormula = value;
     }
 
-
     /**
-     * Gets the datatype value for this ReportAggregate.
+     * Gets the value of the datatype property.
      * 
-     * @return datatype
+     * @return
+     *     possible object is
+     *     {@link ReportAggregateDatatype }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportAggregateDatatype getDatatype() {
+    public ReportAggregateDatatype getDatatype() {
         return datatype;
     }
 
-
     /**
-     * Sets the datatype value for this ReportAggregate.
+     * Sets the value of the datatype property.
      * 
-     * @param datatype
+     * @param value
+     *     allowed object is
+     *     {@link ReportAggregateDatatype }
+     *     
      */
-    public void setDatatype(com.sforce.soap._2006._04.metadata.ReportAggregateDatatype datatype) {
-        this.datatype = datatype;
+    public void setDatatype(ReportAggregateDatatype value) {
+        this.datatype = value;
     }
 
-
     /**
-     * Gets the description value for this ReportAggregate.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this ReportAggregate.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the developerName value for this ReportAggregate.
+     * Gets the value of the developerName property.
      * 
-     * @return developerName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDeveloperName() {
+    public String getDeveloperName() {
         return developerName;
     }
 
-
     /**
-     * Sets the developerName value for this ReportAggregate.
+     * Sets the value of the developerName property.
      * 
-     * @param developerName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDeveloperName(java.lang.String developerName) {
-        this.developerName = developerName;
+    public void setDeveloperName(String value) {
+        this.developerName = value;
     }
 
-
     /**
-     * Gets the downGroupingContext value for this ReportAggregate.
+     * Gets the value of the downGroupingContext property.
      * 
-     * @return downGroupingContext
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDownGroupingContext() {
+    public String getDownGroupingContext() {
         return downGroupingContext;
     }
 
-
     /**
-     * Sets the downGroupingContext value for this ReportAggregate.
+     * Sets the value of the downGroupingContext property.
      * 
-     * @param downGroupingContext
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDownGroupingContext(java.lang.String downGroupingContext) {
-        this.downGroupingContext = downGroupingContext;
+    public void setDownGroupingContext(String value) {
+        this.downGroupingContext = value;
     }
 
-
     /**
-     * Gets the isActive value for this ReportAggregate.
+     * Gets the value of the isActive property.
      * 
-     * @return isActive
      */
     public boolean isIsActive() {
         return isActive;
     }
 
-
     /**
-     * Sets the isActive value for this ReportAggregate.
+     * Sets the value of the isActive property.
      * 
-     * @param isActive
      */
-    public void setIsActive(boolean isActive) {
-        this.isActive = isActive;
+    public void setIsActive(boolean value) {
+        this.isActive = value;
     }
 
-
     /**
-     * Gets the isCrossBlock value for this ReportAggregate.
+     * Gets the value of the isCrossBlock property.
      * 
-     * @return isCrossBlock
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsCrossBlock() {
+    public Boolean isIsCrossBlock() {
         return isCrossBlock;
     }
 
-
     /**
-     * Sets the isCrossBlock value for this ReportAggregate.
+     * Sets the value of the isCrossBlock property.
      * 
-     * @param isCrossBlock
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsCrossBlock(java.lang.Boolean isCrossBlock) {
-        this.isCrossBlock = isCrossBlock;
+    public void setIsCrossBlock(Boolean value) {
+        this.isCrossBlock = value;
     }
 
-
     /**
-     * Gets the masterLabel value for this ReportAggregate.
+     * Gets the value of the masterLabel property.
      * 
-     * @return masterLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMasterLabel() {
+    public String getMasterLabel() {
         return masterLabel;
     }
 
-
     /**
-     * Sets the masterLabel value for this ReportAggregate.
+     * Sets the value of the masterLabel property.
      * 
-     * @param masterLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMasterLabel(java.lang.String masterLabel) {
-        this.masterLabel = masterLabel;
+    public void setMasterLabel(String value) {
+        this.masterLabel = value;
     }
 
-
     /**
-     * Gets the reportType value for this ReportAggregate.
+     * Gets the value of the reportType property.
      * 
-     * @return reportType
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getReportType() {
+    public String getReportType() {
         return reportType;
     }
 
-
     /**
-     * Sets the reportType value for this ReportAggregate.
+     * Sets the value of the reportType property.
      * 
-     * @param reportType
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReportType(java.lang.String reportType) {
-        this.reportType = reportType;
+    public void setReportType(String value) {
+        this.reportType = value;
     }
 
-
     /**
-     * Gets the scale value for this ReportAggregate.
+     * Gets the value of the scale property.
      * 
-     * @return scale
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getScale() {
+    public Integer getScale() {
         return scale;
     }
 
-
     /**
-     * Sets the scale value for this ReportAggregate.
+     * Sets the value of the scale property.
      * 
-     * @param scale
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setScale(java.lang.Integer scale) {
-        this.scale = scale;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportAggregate)) return false;
-        ReportAggregate other = (ReportAggregate) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.acrossGroupingContext==null && other.getAcrossGroupingContext()==null) || 
-             (this.acrossGroupingContext!=null &&
-              this.acrossGroupingContext.equals(other.getAcrossGroupingContext()))) &&
-            ((this.calculatedFormula==null && other.getCalculatedFormula()==null) || 
-             (this.calculatedFormula!=null &&
-              this.calculatedFormula.equals(other.getCalculatedFormula()))) &&
-            ((this.datatype==null && other.getDatatype()==null) || 
-             (this.datatype!=null &&
-              this.datatype.equals(other.getDatatype()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.developerName==null && other.getDeveloperName()==null) || 
-             (this.developerName!=null &&
-              this.developerName.equals(other.getDeveloperName()))) &&
-            ((this.downGroupingContext==null && other.getDownGroupingContext()==null) || 
-             (this.downGroupingContext!=null &&
-              this.downGroupingContext.equals(other.getDownGroupingContext()))) &&
-            this.isActive == other.isIsActive() &&
-            ((this.isCrossBlock==null && other.getIsCrossBlock()==null) || 
-             (this.isCrossBlock!=null &&
-              this.isCrossBlock.equals(other.getIsCrossBlock()))) &&
-            ((this.masterLabel==null && other.getMasterLabel()==null) || 
-             (this.masterLabel!=null &&
-              this.masterLabel.equals(other.getMasterLabel()))) &&
-            ((this.reportType==null && other.getReportType()==null) || 
-             (this.reportType!=null &&
-              this.reportType.equals(other.getReportType()))) &&
-            ((this.scale==null && other.getScale()==null) || 
-             (this.scale!=null &&
-              this.scale.equals(other.getScale())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAcrossGroupingContext() != null) {
-            _hashCode += getAcrossGroupingContext().hashCode();
-        }
-        if (getCalculatedFormula() != null) {
-            _hashCode += getCalculatedFormula().hashCode();
-        }
-        if (getDatatype() != null) {
-            _hashCode += getDatatype().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getDeveloperName() != null) {
-            _hashCode += getDeveloperName().hashCode();
-        }
-        if (getDownGroupingContext() != null) {
-            _hashCode += getDownGroupingContext().hashCode();
-        }
-        _hashCode += (isIsActive() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getIsCrossBlock() != null) {
-            _hashCode += getIsCrossBlock().hashCode();
-        }
-        if (getMasterLabel() != null) {
-            _hashCode += getMasterLabel().hashCode();
-        }
-        if (getReportType() != null) {
-            _hashCode += getReportType().hashCode();
-        }
-        if (getScale() != null) {
-            _hashCode += getScale().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportAggregate.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportAggregate"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("acrossGroupingContext");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "acrossGroupingContext"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("calculatedFormula");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "calculatedFormula"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("datatype");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "datatype"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportAggregateDatatype"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("developerName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "developerName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("downGroupingContext");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "downGroupingContext"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isActive");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isActive"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isCrossBlock");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isCrossBlock"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("masterLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "masterLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("reportType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "reportType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scale");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scale"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setScale(Integer value) {
+        this.scale = value;
     }
 
 }

@@ -1,898 +1,600 @@
-/**
- * ApprovalProcess.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ApprovalProcess  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private boolean active;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean allowRecall;
 
-    private com.sforce.soap._2006._04.metadata.ApprovalSubmitter[] allowedSubmitters;
+/**
+ * <p>Java class for ApprovalProcess complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ApprovalProcess">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="allowRecall" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="allowedSubmitters" type="{http://soap.sforce.com/2006/04/metadata}ApprovalSubmitter" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="approvalPageFields" type="{http://soap.sforce.com/2006/04/metadata}ApprovalPageField" minOccurs="0"/>
+ *         &lt;element name="approvalStep" type="{http://soap.sforce.com/2006/04/metadata}ApprovalStep" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="emailTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="enableMobileDeviceAccess" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="entryCriteria" type="{http://soap.sforce.com/2006/04/metadata}ApprovalEntryCriteria" minOccurs="0"/>
+ *         &lt;element name="finalApprovalActions" type="{http://soap.sforce.com/2006/04/metadata}ApprovalAction" minOccurs="0"/>
+ *         &lt;element name="finalApprovalRecordLock" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="finalRejectionActions" type="{http://soap.sforce.com/2006/04/metadata}ApprovalAction" minOccurs="0"/>
+ *         &lt;element name="finalRejectionRecordLock" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="initialSubmissionActions" type="{http://soap.sforce.com/2006/04/metadata}ApprovalAction" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="nextAutomatedApprover" type="{http://soap.sforce.com/2006/04/metadata}NextAutomatedApprover" minOccurs="0"/>
+ *         &lt;element name="postTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="recallActions" type="{http://soap.sforce.com/2006/04/metadata}ApprovalAction" minOccurs="0"/>
+ *         &lt;element name="recordEditability" type="{http://soap.sforce.com/2006/04/metadata}RecordEditabilityType"/>
+ *         &lt;element name="showApprovalHistory" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ApprovalProcess", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "active",
+    "allowRecall",
+    "allowedSubmitters",
+    "approvalPageFields",
+    "approvalStep",
+    "description",
+    "emailTemplate",
+    "enableMobileDeviceAccess",
+    "entryCriteria",
+    "finalApprovalActions",
+    "finalApprovalRecordLock",
+    "finalRejectionActions",
+    "finalRejectionRecordLock",
+    "initialSubmissionActions",
+    "label",
+    "nextAutomatedApprover",
+    "postTemplate",
+    "recallActions",
+    "recordEditability",
+    "showApprovalHistory"
+})
+public class ApprovalProcess
+    extends Metadata
+{
 
-    private java.lang.String[] approvalPageFields;
-
-    private com.sforce.soap._2006._04.metadata.ApprovalStep[] approvalStep;
-
-    private java.lang.String description;
-
-    private java.lang.String emailTemplate;
-
-    private java.lang.Boolean enableMobileDeviceAccess;
-
-    private com.sforce.soap._2006._04.metadata.ApprovalEntryCriteria entryCriteria;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowActionReference[] finalApprovalActions;
-
-    private java.lang.Boolean finalApprovalRecordLock;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowActionReference[] finalRejectionActions;
-
-    private java.lang.Boolean finalRejectionRecordLock;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowActionReference[] initialSubmissionActions;
-
-    private java.lang.String label;
-
-    private com.sforce.soap._2006._04.metadata.NextAutomatedApprover nextAutomatedApprover;
-
-    private java.lang.String postTemplate;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowActionReference[] recallActions;
-
-    private com.sforce.soap._2006._04.metadata.RecordEditabilityType recordEditability;
-
-    private java.lang.Boolean showApprovalHistory;
-
-    public ApprovalProcess() {
-    }
-
-    public ApprovalProcess(
-           java.lang.String fullName,
-           boolean active,
-           java.lang.Boolean allowRecall,
-           com.sforce.soap._2006._04.metadata.ApprovalSubmitter[] allowedSubmitters,
-           java.lang.String[] approvalPageFields,
-           com.sforce.soap._2006._04.metadata.ApprovalStep[] approvalStep,
-           java.lang.String description,
-           java.lang.String emailTemplate,
-           java.lang.Boolean enableMobileDeviceAccess,
-           com.sforce.soap._2006._04.metadata.ApprovalEntryCriteria entryCriteria,
-           com.sforce.soap._2006._04.metadata.WorkflowActionReference[] finalApprovalActions,
-           java.lang.Boolean finalApprovalRecordLock,
-           com.sforce.soap._2006._04.metadata.WorkflowActionReference[] finalRejectionActions,
-           java.lang.Boolean finalRejectionRecordLock,
-           com.sforce.soap._2006._04.metadata.WorkflowActionReference[] initialSubmissionActions,
-           java.lang.String label,
-           com.sforce.soap._2006._04.metadata.NextAutomatedApprover nextAutomatedApprover,
-           java.lang.String postTemplate,
-           com.sforce.soap._2006._04.metadata.WorkflowActionReference[] recallActions,
-           com.sforce.soap._2006._04.metadata.RecordEditabilityType recordEditability,
-           java.lang.Boolean showApprovalHistory) {
-        super(
-            fullName);
-        this.active = active;
-        this.allowRecall = allowRecall;
-        this.allowedSubmitters = allowedSubmitters;
-        this.approvalPageFields = approvalPageFields;
-        this.approvalStep = approvalStep;
-        this.description = description;
-        this.emailTemplate = emailTemplate;
-        this.enableMobileDeviceAccess = enableMobileDeviceAccess;
-        this.entryCriteria = entryCriteria;
-        this.finalApprovalActions = finalApprovalActions;
-        this.finalApprovalRecordLock = finalApprovalRecordLock;
-        this.finalRejectionActions = finalRejectionActions;
-        this.finalRejectionRecordLock = finalRejectionRecordLock;
-        this.initialSubmissionActions = initialSubmissionActions;
-        this.label = label;
-        this.nextAutomatedApprover = nextAutomatedApprover;
-        this.postTemplate = postTemplate;
-        this.recallActions = recallActions;
-        this.recordEditability = recordEditability;
-        this.showApprovalHistory = showApprovalHistory;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean active;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean allowRecall;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ApprovalSubmitter> allowedSubmitters;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalPageField approvalPageFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ApprovalStep> approvalStep;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String emailTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableMobileDeviceAccess;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalEntryCriteria entryCriteria;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalAction finalApprovalActions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean finalApprovalRecordLock;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalAction finalRejectionActions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean finalRejectionRecordLock;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalAction initialSubmissionActions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected NextAutomatedApprover nextAutomatedApprover;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String postTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalAction recallActions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected RecordEditabilityType recordEditability;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showApprovalHistory;
 
     /**
-     * Gets the active value for this ApprovalProcess.
+     * Gets the value of the active property.
      * 
-     * @return active
      */
     public boolean isActive() {
         return active;
     }
 
-
     /**
-     * Sets the active value for this ApprovalProcess.
+     * Sets the value of the active property.
      * 
-     * @param active
      */
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setActive(boolean value) {
+        this.active = value;
     }
 
-
     /**
-     * Gets the allowRecall value for this ApprovalProcess.
+     * Gets the value of the allowRecall property.
      * 
-     * @return allowRecall
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAllowRecall() {
+    public Boolean isAllowRecall() {
         return allowRecall;
     }
 
+    /**
+     * Sets the value of the allowRecall property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setAllowRecall(Boolean value) {
+        this.allowRecall = value;
+    }
 
     /**
-     * Sets the allowRecall value for this ApprovalProcess.
+     * Gets the value of the allowedSubmitters property.
      * 
-     * @param allowRecall
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the allowedSubmitters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAllowedSubmitters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ApprovalSubmitter }
+     * 
+     * 
      */
-    public void setAllowRecall(java.lang.Boolean allowRecall) {
-        this.allowRecall = allowRecall;
+    public List<ApprovalSubmitter> getAllowedSubmitters() {
+        if (allowedSubmitters == null) {
+            allowedSubmitters = new ArrayList<ApprovalSubmitter>();
+        }
+        return this.allowedSubmitters;
     }
-
 
     /**
-     * Gets the allowedSubmitters value for this ApprovalProcess.
+     * Gets the value of the approvalPageFields property.
      * 
-     * @return allowedSubmitters
+     * @return
+     *     possible object is
+     *     {@link ApprovalPageField }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ApprovalSubmitter[] getAllowedSubmitters() {
-        return allowedSubmitters;
-    }
-
-
-    /**
-     * Sets the allowedSubmitters value for this ApprovalProcess.
-     * 
-     * @param allowedSubmitters
-     */
-    public void setAllowedSubmitters(com.sforce.soap._2006._04.metadata.ApprovalSubmitter[] allowedSubmitters) {
-        this.allowedSubmitters = allowedSubmitters;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ApprovalSubmitter getAllowedSubmitters(int i) {
-        return this.allowedSubmitters[i];
-    }
-
-    public void setAllowedSubmitters(int i, com.sforce.soap._2006._04.metadata.ApprovalSubmitter _value) {
-        this.allowedSubmitters[i] = _value;
-    }
-
-
-    /**
-     * Gets the approvalPageFields value for this ApprovalProcess.
-     * 
-     * @return approvalPageFields
-     */
-    public java.lang.String[] getApprovalPageFields() {
+    public ApprovalPageField getApprovalPageFields() {
         return approvalPageFields;
     }
 
+    /**
+     * Sets the value of the approvalPageFields property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalPageField }
+     *     
+     */
+    public void setApprovalPageFields(ApprovalPageField value) {
+        this.approvalPageFields = value;
+    }
 
     /**
-     * Sets the approvalPageFields value for this ApprovalProcess.
+     * Gets the value of the approvalStep property.
      * 
-     * @param approvalPageFields
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the approvalStep property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getApprovalStep().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ApprovalStep }
+     * 
+     * 
      */
-    public void setApprovalPageFields(java.lang.String[] approvalPageFields) {
-        this.approvalPageFields = approvalPageFields;
+    public List<ApprovalStep> getApprovalStep() {
+        if (approvalStep == null) {
+            approvalStep = new ArrayList<ApprovalStep>();
+        }
+        return this.approvalStep;
     }
-
 
     /**
-     * Gets the approvalStep value for this ApprovalProcess.
+     * Gets the value of the description property.
      * 
-     * @return approvalStep
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ApprovalStep[] getApprovalStep() {
-        return approvalStep;
-    }
-
-
-    /**
-     * Sets the approvalStep value for this ApprovalProcess.
-     * 
-     * @param approvalStep
-     */
-    public void setApprovalStep(com.sforce.soap._2006._04.metadata.ApprovalStep[] approvalStep) {
-        this.approvalStep = approvalStep;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ApprovalStep getApprovalStep(int i) {
-        return this.approvalStep[i];
-    }
-
-    public void setApprovalStep(int i, com.sforce.soap._2006._04.metadata.ApprovalStep _value) {
-        this.approvalStep[i] = _value;
-    }
-
-
-    /**
-     * Gets the description value for this ApprovalProcess.
-     * 
-     * @return description
-     */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this ApprovalProcess.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the emailTemplate value for this ApprovalProcess.
+     * Gets the value of the emailTemplate property.
      * 
-     * @return emailTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmailTemplate() {
+    public String getEmailTemplate() {
         return emailTemplate;
     }
 
-
     /**
-     * Sets the emailTemplate value for this ApprovalProcess.
+     * Sets the value of the emailTemplate property.
      * 
-     * @param emailTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmailTemplate(java.lang.String emailTemplate) {
-        this.emailTemplate = emailTemplate;
+    public void setEmailTemplate(String value) {
+        this.emailTemplate = value;
     }
 
-
     /**
-     * Gets the enableMobileDeviceAccess value for this ApprovalProcess.
+     * Gets the value of the enableMobileDeviceAccess property.
      * 
-     * @return enableMobileDeviceAccess
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableMobileDeviceAccess() {
+    public Boolean isEnableMobileDeviceAccess() {
         return enableMobileDeviceAccess;
     }
 
-
     /**
-     * Sets the enableMobileDeviceAccess value for this ApprovalProcess.
+     * Sets the value of the enableMobileDeviceAccess property.
      * 
-     * @param enableMobileDeviceAccess
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableMobileDeviceAccess(java.lang.Boolean enableMobileDeviceAccess) {
-        this.enableMobileDeviceAccess = enableMobileDeviceAccess;
+    public void setEnableMobileDeviceAccess(Boolean value) {
+        this.enableMobileDeviceAccess = value;
     }
 
-
     /**
-     * Gets the entryCriteria value for this ApprovalProcess.
+     * Gets the value of the entryCriteria property.
      * 
-     * @return entryCriteria
+     * @return
+     *     possible object is
+     *     {@link ApprovalEntryCriteria }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ApprovalEntryCriteria getEntryCriteria() {
+    public ApprovalEntryCriteria getEntryCriteria() {
         return entryCriteria;
     }
 
-
     /**
-     * Sets the entryCriteria value for this ApprovalProcess.
+     * Sets the value of the entryCriteria property.
      * 
-     * @param entryCriteria
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalEntryCriteria }
+     *     
      */
-    public void setEntryCriteria(com.sforce.soap._2006._04.metadata.ApprovalEntryCriteria entryCriteria) {
-        this.entryCriteria = entryCriteria;
+    public void setEntryCriteria(ApprovalEntryCriteria value) {
+        this.entryCriteria = value;
     }
 
-
     /**
-     * Gets the finalApprovalActions value for this ApprovalProcess.
+     * Gets the value of the finalApprovalActions property.
      * 
-     * @return finalApprovalActions
+     * @return
+     *     possible object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.WorkflowActionReference[] getFinalApprovalActions() {
+    public ApprovalAction getFinalApprovalActions() {
         return finalApprovalActions;
     }
 
-
     /**
-     * Sets the finalApprovalActions value for this ApprovalProcess.
+     * Sets the value of the finalApprovalActions property.
      * 
-     * @param finalApprovalActions
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public void setFinalApprovalActions(com.sforce.soap._2006._04.metadata.WorkflowActionReference[] finalApprovalActions) {
-        this.finalApprovalActions = finalApprovalActions;
+    public void setFinalApprovalActions(ApprovalAction value) {
+        this.finalApprovalActions = value;
     }
 
-
     /**
-     * Gets the finalApprovalRecordLock value for this ApprovalProcess.
+     * Gets the value of the finalApprovalRecordLock property.
      * 
-     * @return finalApprovalRecordLock
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getFinalApprovalRecordLock() {
+    public Boolean isFinalApprovalRecordLock() {
         return finalApprovalRecordLock;
     }
 
-
     /**
-     * Sets the finalApprovalRecordLock value for this ApprovalProcess.
+     * Sets the value of the finalApprovalRecordLock property.
      * 
-     * @param finalApprovalRecordLock
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setFinalApprovalRecordLock(java.lang.Boolean finalApprovalRecordLock) {
-        this.finalApprovalRecordLock = finalApprovalRecordLock;
+    public void setFinalApprovalRecordLock(Boolean value) {
+        this.finalApprovalRecordLock = value;
     }
 
-
     /**
-     * Gets the finalRejectionActions value for this ApprovalProcess.
+     * Gets the value of the finalRejectionActions property.
      * 
-     * @return finalRejectionActions
+     * @return
+     *     possible object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.WorkflowActionReference[] getFinalRejectionActions() {
+    public ApprovalAction getFinalRejectionActions() {
         return finalRejectionActions;
     }
 
-
     /**
-     * Sets the finalRejectionActions value for this ApprovalProcess.
+     * Sets the value of the finalRejectionActions property.
      * 
-     * @param finalRejectionActions
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public void setFinalRejectionActions(com.sforce.soap._2006._04.metadata.WorkflowActionReference[] finalRejectionActions) {
-        this.finalRejectionActions = finalRejectionActions;
+    public void setFinalRejectionActions(ApprovalAction value) {
+        this.finalRejectionActions = value;
     }
 
-
     /**
-     * Gets the finalRejectionRecordLock value for this ApprovalProcess.
+     * Gets the value of the finalRejectionRecordLock property.
      * 
-     * @return finalRejectionRecordLock
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getFinalRejectionRecordLock() {
+    public Boolean isFinalRejectionRecordLock() {
         return finalRejectionRecordLock;
     }
 
-
     /**
-     * Sets the finalRejectionRecordLock value for this ApprovalProcess.
+     * Sets the value of the finalRejectionRecordLock property.
      * 
-     * @param finalRejectionRecordLock
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setFinalRejectionRecordLock(java.lang.Boolean finalRejectionRecordLock) {
-        this.finalRejectionRecordLock = finalRejectionRecordLock;
+    public void setFinalRejectionRecordLock(Boolean value) {
+        this.finalRejectionRecordLock = value;
     }
 
-
     /**
-     * Gets the initialSubmissionActions value for this ApprovalProcess.
+     * Gets the value of the initialSubmissionActions property.
      * 
-     * @return initialSubmissionActions
+     * @return
+     *     possible object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.WorkflowActionReference[] getInitialSubmissionActions() {
+    public ApprovalAction getInitialSubmissionActions() {
         return initialSubmissionActions;
     }
 
-
     /**
-     * Sets the initialSubmissionActions value for this ApprovalProcess.
+     * Sets the value of the initialSubmissionActions property.
      * 
-     * @param initialSubmissionActions
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public void setInitialSubmissionActions(com.sforce.soap._2006._04.metadata.WorkflowActionReference[] initialSubmissionActions) {
-        this.initialSubmissionActions = initialSubmissionActions;
+    public void setInitialSubmissionActions(ApprovalAction value) {
+        this.initialSubmissionActions = value;
     }
 
-
     /**
-     * Gets the label value for this ApprovalProcess.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this ApprovalProcess.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the nextAutomatedApprover value for this ApprovalProcess.
+     * Gets the value of the nextAutomatedApprover property.
      * 
-     * @return nextAutomatedApprover
+     * @return
+     *     possible object is
+     *     {@link NextAutomatedApprover }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.NextAutomatedApprover getNextAutomatedApprover() {
+    public NextAutomatedApprover getNextAutomatedApprover() {
         return nextAutomatedApprover;
     }
 
-
     /**
-     * Sets the nextAutomatedApprover value for this ApprovalProcess.
+     * Sets the value of the nextAutomatedApprover property.
      * 
-     * @param nextAutomatedApprover
+     * @param value
+     *     allowed object is
+     *     {@link NextAutomatedApprover }
+     *     
      */
-    public void setNextAutomatedApprover(com.sforce.soap._2006._04.metadata.NextAutomatedApprover nextAutomatedApprover) {
-        this.nextAutomatedApprover = nextAutomatedApprover;
+    public void setNextAutomatedApprover(NextAutomatedApprover value) {
+        this.nextAutomatedApprover = value;
     }
 
-
     /**
-     * Gets the postTemplate value for this ApprovalProcess.
+     * Gets the value of the postTemplate property.
      * 
-     * @return postTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPostTemplate() {
+    public String getPostTemplate() {
         return postTemplate;
     }
 
-
     /**
-     * Sets the postTemplate value for this ApprovalProcess.
+     * Sets the value of the postTemplate property.
      * 
-     * @param postTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPostTemplate(java.lang.String postTemplate) {
-        this.postTemplate = postTemplate;
+    public void setPostTemplate(String value) {
+        this.postTemplate = value;
     }
 
-
     /**
-     * Gets the recallActions value for this ApprovalProcess.
+     * Gets the value of the recallActions property.
      * 
-     * @return recallActions
+     * @return
+     *     possible object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.WorkflowActionReference[] getRecallActions() {
+    public ApprovalAction getRecallActions() {
         return recallActions;
     }
 
-
     /**
-     * Sets the recallActions value for this ApprovalProcess.
+     * Sets the value of the recallActions property.
      * 
-     * @param recallActions
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public void setRecallActions(com.sforce.soap._2006._04.metadata.WorkflowActionReference[] recallActions) {
-        this.recallActions = recallActions;
+    public void setRecallActions(ApprovalAction value) {
+        this.recallActions = value;
     }
 
-
     /**
-     * Gets the recordEditability value for this ApprovalProcess.
+     * Gets the value of the recordEditability property.
      * 
-     * @return recordEditability
+     * @return
+     *     possible object is
+     *     {@link RecordEditabilityType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.RecordEditabilityType getRecordEditability() {
+    public RecordEditabilityType getRecordEditability() {
         return recordEditability;
     }
 
-
     /**
-     * Sets the recordEditability value for this ApprovalProcess.
+     * Sets the value of the recordEditability property.
      * 
-     * @param recordEditability
+     * @param value
+     *     allowed object is
+     *     {@link RecordEditabilityType }
+     *     
      */
-    public void setRecordEditability(com.sforce.soap._2006._04.metadata.RecordEditabilityType recordEditability) {
-        this.recordEditability = recordEditability;
+    public void setRecordEditability(RecordEditabilityType value) {
+        this.recordEditability = value;
     }
 
-
     /**
-     * Gets the showApprovalHistory value for this ApprovalProcess.
+     * Gets the value of the showApprovalHistory property.
      * 
-     * @return showApprovalHistory
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowApprovalHistory() {
+    public Boolean isShowApprovalHistory() {
         return showApprovalHistory;
     }
 
-
     /**
-     * Sets the showApprovalHistory value for this ApprovalProcess.
+     * Sets the value of the showApprovalHistory property.
      * 
-     * @param showApprovalHistory
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowApprovalHistory(java.lang.Boolean showApprovalHistory) {
-        this.showApprovalHistory = showApprovalHistory;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ApprovalProcess)) return false;
-        ApprovalProcess other = (ApprovalProcess) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            this.active == other.isActive() &&
-            ((this.allowRecall==null && other.getAllowRecall()==null) || 
-             (this.allowRecall!=null &&
-              this.allowRecall.equals(other.getAllowRecall()))) &&
-            ((this.allowedSubmitters==null && other.getAllowedSubmitters()==null) || 
-             (this.allowedSubmitters!=null &&
-              java.util.Arrays.equals(this.allowedSubmitters, other.getAllowedSubmitters()))) &&
-            ((this.approvalPageFields==null && other.getApprovalPageFields()==null) || 
-             (this.approvalPageFields!=null &&
-              java.util.Arrays.equals(this.approvalPageFields, other.getApprovalPageFields()))) &&
-            ((this.approvalStep==null && other.getApprovalStep()==null) || 
-             (this.approvalStep!=null &&
-              java.util.Arrays.equals(this.approvalStep, other.getApprovalStep()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.emailTemplate==null && other.getEmailTemplate()==null) || 
-             (this.emailTemplate!=null &&
-              this.emailTemplate.equals(other.getEmailTemplate()))) &&
-            ((this.enableMobileDeviceAccess==null && other.getEnableMobileDeviceAccess()==null) || 
-             (this.enableMobileDeviceAccess!=null &&
-              this.enableMobileDeviceAccess.equals(other.getEnableMobileDeviceAccess()))) &&
-            ((this.entryCriteria==null && other.getEntryCriteria()==null) || 
-             (this.entryCriteria!=null &&
-              this.entryCriteria.equals(other.getEntryCriteria()))) &&
-            ((this.finalApprovalActions==null && other.getFinalApprovalActions()==null) || 
-             (this.finalApprovalActions!=null &&
-              java.util.Arrays.equals(this.finalApprovalActions, other.getFinalApprovalActions()))) &&
-            ((this.finalApprovalRecordLock==null && other.getFinalApprovalRecordLock()==null) || 
-             (this.finalApprovalRecordLock!=null &&
-              this.finalApprovalRecordLock.equals(other.getFinalApprovalRecordLock()))) &&
-            ((this.finalRejectionActions==null && other.getFinalRejectionActions()==null) || 
-             (this.finalRejectionActions!=null &&
-              java.util.Arrays.equals(this.finalRejectionActions, other.getFinalRejectionActions()))) &&
-            ((this.finalRejectionRecordLock==null && other.getFinalRejectionRecordLock()==null) || 
-             (this.finalRejectionRecordLock!=null &&
-              this.finalRejectionRecordLock.equals(other.getFinalRejectionRecordLock()))) &&
-            ((this.initialSubmissionActions==null && other.getInitialSubmissionActions()==null) || 
-             (this.initialSubmissionActions!=null &&
-              java.util.Arrays.equals(this.initialSubmissionActions, other.getInitialSubmissionActions()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.nextAutomatedApprover==null && other.getNextAutomatedApprover()==null) || 
-             (this.nextAutomatedApprover!=null &&
-              this.nextAutomatedApprover.equals(other.getNextAutomatedApprover()))) &&
-            ((this.postTemplate==null && other.getPostTemplate()==null) || 
-             (this.postTemplate!=null &&
-              this.postTemplate.equals(other.getPostTemplate()))) &&
-            ((this.recallActions==null && other.getRecallActions()==null) || 
-             (this.recallActions!=null &&
-              java.util.Arrays.equals(this.recallActions, other.getRecallActions()))) &&
-            ((this.recordEditability==null && other.getRecordEditability()==null) || 
-             (this.recordEditability!=null &&
-              this.recordEditability.equals(other.getRecordEditability()))) &&
-            ((this.showApprovalHistory==null && other.getShowApprovalHistory()==null) || 
-             (this.showApprovalHistory!=null &&
-              this.showApprovalHistory.equals(other.getShowApprovalHistory())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        _hashCode += (isActive() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getAllowRecall() != null) {
-            _hashCode += getAllowRecall().hashCode();
-        }
-        if (getAllowedSubmitters() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getAllowedSubmitters());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getAllowedSubmitters(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getApprovalPageFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getApprovalPageFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getApprovalPageFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getApprovalStep() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getApprovalStep());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getApprovalStep(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getEmailTemplate() != null) {
-            _hashCode += getEmailTemplate().hashCode();
-        }
-        if (getEnableMobileDeviceAccess() != null) {
-            _hashCode += getEnableMobileDeviceAccess().hashCode();
-        }
-        if (getEntryCriteria() != null) {
-            _hashCode += getEntryCriteria().hashCode();
-        }
-        if (getFinalApprovalActions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFinalApprovalActions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFinalApprovalActions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFinalApprovalRecordLock() != null) {
-            _hashCode += getFinalApprovalRecordLock().hashCode();
-        }
-        if (getFinalRejectionActions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFinalRejectionActions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFinalRejectionActions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFinalRejectionRecordLock() != null) {
-            _hashCode += getFinalRejectionRecordLock().hashCode();
-        }
-        if (getInitialSubmissionActions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getInitialSubmissionActions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getInitialSubmissionActions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getNextAutomatedApprover() != null) {
-            _hashCode += getNextAutomatedApprover().hashCode();
-        }
-        if (getPostTemplate() != null) {
-            _hashCode += getPostTemplate().hashCode();
-        }
-        if (getRecallActions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRecallActions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRecallActions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRecordEditability() != null) {
-            _hashCode += getRecordEditability().hashCode();
-        }
-        if (getShowApprovalHistory() != null) {
-            _hashCode += getShowApprovalHistory().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ApprovalProcess.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApprovalProcess"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("active");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "active"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowRecall");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowRecall"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowedSubmitters");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowedSubmitters"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApprovalSubmitter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("approvalPageFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "approvalPageFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("approvalStep");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "approvalStep"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApprovalStep"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emailTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableMobileDeviceAccess");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableMobileDeviceAccess"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("entryCriteria");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "entryCriteria"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApprovalEntryCriteria"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("finalApprovalActions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "finalApprovalActions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowActionReference"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "action"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("finalApprovalRecordLock");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "finalApprovalRecordLock"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("finalRejectionActions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "finalRejectionActions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowActionReference"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "action"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("finalRejectionRecordLock");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "finalRejectionRecordLock"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("initialSubmissionActions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "initialSubmissionActions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowActionReference"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "action"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("nextAutomatedApprover");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "nextAutomatedApprover"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "NextAutomatedApprover"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "postTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recallActions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recallActions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowActionReference"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "action"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordEditability");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordEditability"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RecordEditabilityType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showApprovalHistory");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showApprovalHistory"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setShowApprovalHistory(Boolean value) {
+        this.showApprovalHistory = value;
     }
 
 }

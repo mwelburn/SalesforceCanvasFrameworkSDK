@@ -1,468 +1,314 @@
-/**
- * ApprovalStep.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ApprovalStep  implements java.io.Serializable {
-    private java.lang.Boolean allowDelegate;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.WorkflowActionReference[] approvalActions;
 
-    private com.sforce.soap._2006._04.metadata.ApprovalStepApprover assignedApprover;
+/**
+ * <p>Java class for ApprovalStep complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ApprovalStep">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="allowDelegate" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="approvalActions" type="{http://soap.sforce.com/2006/04/metadata}ApprovalAction" minOccurs="0"/>
+ *         &lt;element name="assignedApprover" type="{http://soap.sforce.com/2006/04/metadata}ApprovalStepApprover"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="entryCriteria" type="{http://soap.sforce.com/2006/04/metadata}ApprovalEntryCriteria" minOccurs="0"/>
+ *         &lt;element name="ifCriteriaNotMet" type="{http://soap.sforce.com/2006/04/metadata}StepCriteriaNotMetType" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="rejectBehavior" type="{http://soap.sforce.com/2006/04/metadata}ApprovalStepRejectBehavior" minOccurs="0"/>
+ *         &lt;element name="rejectionActions" type="{http://soap.sforce.com/2006/04/metadata}ApprovalAction" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ApprovalStep", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "allowDelegate",
+    "approvalActions",
+    "assignedApprover",
+    "description",
+    "entryCriteria",
+    "ifCriteriaNotMet",
+    "label",
+    "name",
+    "rejectBehavior",
+    "rejectionActions"
+})
+public class ApprovalStep {
 
-    private java.lang.String description;
-
-    private com.sforce.soap._2006._04.metadata.ApprovalEntryCriteria entryCriteria;
-
-    private com.sforce.soap._2006._04.metadata.StepCriteriaNotMetType ifCriteriaNotMet;
-
-    private java.lang.String label;
-
-    private java.lang.String name;
-
-    private com.sforce.soap._2006._04.metadata.ApprovalStepRejectBehavior rejectBehavior;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowActionReference[] rejectionActions;
-
-    public ApprovalStep() {
-    }
-
-    public ApprovalStep(
-           java.lang.Boolean allowDelegate,
-           com.sforce.soap._2006._04.metadata.WorkflowActionReference[] approvalActions,
-           com.sforce.soap._2006._04.metadata.ApprovalStepApprover assignedApprover,
-           java.lang.String description,
-           com.sforce.soap._2006._04.metadata.ApprovalEntryCriteria entryCriteria,
-           com.sforce.soap._2006._04.metadata.StepCriteriaNotMetType ifCriteriaNotMet,
-           java.lang.String label,
-           java.lang.String name,
-           com.sforce.soap._2006._04.metadata.ApprovalStepRejectBehavior rejectBehavior,
-           com.sforce.soap._2006._04.metadata.WorkflowActionReference[] rejectionActions) {
-           this.allowDelegate = allowDelegate;
-           this.approvalActions = approvalActions;
-           this.assignedApprover = assignedApprover;
-           this.description = description;
-           this.entryCriteria = entryCriteria;
-           this.ifCriteriaNotMet = ifCriteriaNotMet;
-           this.label = label;
-           this.name = name;
-           this.rejectBehavior = rejectBehavior;
-           this.rejectionActions = rejectionActions;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean allowDelegate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalAction approvalActions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected ApprovalStepApprover assignedApprover;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalEntryCriteria entryCriteria;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected StepCriteriaNotMetType ifCriteriaNotMet;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalStepRejectBehavior rejectBehavior;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ApprovalAction rejectionActions;
 
     /**
-     * Gets the allowDelegate value for this ApprovalStep.
+     * Gets the value of the allowDelegate property.
      * 
-     * @return allowDelegate
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAllowDelegate() {
+    public Boolean isAllowDelegate() {
         return allowDelegate;
     }
 
-
     /**
-     * Sets the allowDelegate value for this ApprovalStep.
+     * Sets the value of the allowDelegate property.
      * 
-     * @param allowDelegate
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAllowDelegate(java.lang.Boolean allowDelegate) {
-        this.allowDelegate = allowDelegate;
+    public void setAllowDelegate(Boolean value) {
+        this.allowDelegate = value;
     }
 
-
     /**
-     * Gets the approvalActions value for this ApprovalStep.
+     * Gets the value of the approvalActions property.
      * 
-     * @return approvalActions
+     * @return
+     *     possible object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.WorkflowActionReference[] getApprovalActions() {
+    public ApprovalAction getApprovalActions() {
         return approvalActions;
     }
 
-
     /**
-     * Sets the approvalActions value for this ApprovalStep.
+     * Sets the value of the approvalActions property.
      * 
-     * @param approvalActions
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public void setApprovalActions(com.sforce.soap._2006._04.metadata.WorkflowActionReference[] approvalActions) {
-        this.approvalActions = approvalActions;
+    public void setApprovalActions(ApprovalAction value) {
+        this.approvalActions = value;
     }
 
-
     /**
-     * Gets the assignedApprover value for this ApprovalStep.
+     * Gets the value of the assignedApprover property.
      * 
-     * @return assignedApprover
+     * @return
+     *     possible object is
+     *     {@link ApprovalStepApprover }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ApprovalStepApprover getAssignedApprover() {
+    public ApprovalStepApprover getAssignedApprover() {
         return assignedApprover;
     }
 
-
     /**
-     * Sets the assignedApprover value for this ApprovalStep.
+     * Sets the value of the assignedApprover property.
      * 
-     * @param assignedApprover
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalStepApprover }
+     *     
      */
-    public void setAssignedApprover(com.sforce.soap._2006._04.metadata.ApprovalStepApprover assignedApprover) {
-        this.assignedApprover = assignedApprover;
+    public void setAssignedApprover(ApprovalStepApprover value) {
+        this.assignedApprover = value;
     }
 
-
     /**
-     * Gets the description value for this ApprovalStep.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this ApprovalStep.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the entryCriteria value for this ApprovalStep.
+     * Gets the value of the entryCriteria property.
      * 
-     * @return entryCriteria
+     * @return
+     *     possible object is
+     *     {@link ApprovalEntryCriteria }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ApprovalEntryCriteria getEntryCriteria() {
+    public ApprovalEntryCriteria getEntryCriteria() {
         return entryCriteria;
     }
 
-
     /**
-     * Sets the entryCriteria value for this ApprovalStep.
+     * Sets the value of the entryCriteria property.
      * 
-     * @param entryCriteria
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalEntryCriteria }
+     *     
      */
-    public void setEntryCriteria(com.sforce.soap._2006._04.metadata.ApprovalEntryCriteria entryCriteria) {
-        this.entryCriteria = entryCriteria;
+    public void setEntryCriteria(ApprovalEntryCriteria value) {
+        this.entryCriteria = value;
     }
 
-
     /**
-     * Gets the ifCriteriaNotMet value for this ApprovalStep.
+     * Gets the value of the ifCriteriaNotMet property.
      * 
-     * @return ifCriteriaNotMet
+     * @return
+     *     possible object is
+     *     {@link StepCriteriaNotMetType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.StepCriteriaNotMetType getIfCriteriaNotMet() {
+    public StepCriteriaNotMetType getIfCriteriaNotMet() {
         return ifCriteriaNotMet;
     }
 
-
     /**
-     * Sets the ifCriteriaNotMet value for this ApprovalStep.
+     * Sets the value of the ifCriteriaNotMet property.
      * 
-     * @param ifCriteriaNotMet
+     * @param value
+     *     allowed object is
+     *     {@link StepCriteriaNotMetType }
+     *     
      */
-    public void setIfCriteriaNotMet(com.sforce.soap._2006._04.metadata.StepCriteriaNotMetType ifCriteriaNotMet) {
-        this.ifCriteriaNotMet = ifCriteriaNotMet;
+    public void setIfCriteriaNotMet(StepCriteriaNotMetType value) {
+        this.ifCriteriaNotMet = value;
     }
 
-
     /**
-     * Gets the label value for this ApprovalStep.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this ApprovalStep.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the name value for this ApprovalStep.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this ApprovalStep.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the rejectBehavior value for this ApprovalStep.
+     * Gets the value of the rejectBehavior property.
      * 
-     * @return rejectBehavior
+     * @return
+     *     possible object is
+     *     {@link ApprovalStepRejectBehavior }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ApprovalStepRejectBehavior getRejectBehavior() {
+    public ApprovalStepRejectBehavior getRejectBehavior() {
         return rejectBehavior;
     }
 
-
     /**
-     * Sets the rejectBehavior value for this ApprovalStep.
+     * Sets the value of the rejectBehavior property.
      * 
-     * @param rejectBehavior
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalStepRejectBehavior }
+     *     
      */
-    public void setRejectBehavior(com.sforce.soap._2006._04.metadata.ApprovalStepRejectBehavior rejectBehavior) {
-        this.rejectBehavior = rejectBehavior;
+    public void setRejectBehavior(ApprovalStepRejectBehavior value) {
+        this.rejectBehavior = value;
     }
 
-
     /**
-     * Gets the rejectionActions value for this ApprovalStep.
+     * Gets the value of the rejectionActions property.
      * 
-     * @return rejectionActions
+     * @return
+     *     possible object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.WorkflowActionReference[] getRejectionActions() {
+    public ApprovalAction getRejectionActions() {
         return rejectionActions;
     }
 
-
     /**
-     * Sets the rejectionActions value for this ApprovalStep.
+     * Sets the value of the rejectionActions property.
      * 
-     * @param rejectionActions
+     * @param value
+     *     allowed object is
+     *     {@link ApprovalAction }
+     *     
      */
-    public void setRejectionActions(com.sforce.soap._2006._04.metadata.WorkflowActionReference[] rejectionActions) {
-        this.rejectionActions = rejectionActions;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ApprovalStep)) return false;
-        ApprovalStep other = (ApprovalStep) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.allowDelegate==null && other.getAllowDelegate()==null) || 
-             (this.allowDelegate!=null &&
-              this.allowDelegate.equals(other.getAllowDelegate()))) &&
-            ((this.approvalActions==null && other.getApprovalActions()==null) || 
-             (this.approvalActions!=null &&
-              java.util.Arrays.equals(this.approvalActions, other.getApprovalActions()))) &&
-            ((this.assignedApprover==null && other.getAssignedApprover()==null) || 
-             (this.assignedApprover!=null &&
-              this.assignedApprover.equals(other.getAssignedApprover()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.entryCriteria==null && other.getEntryCriteria()==null) || 
-             (this.entryCriteria!=null &&
-              this.entryCriteria.equals(other.getEntryCriteria()))) &&
-            ((this.ifCriteriaNotMet==null && other.getIfCriteriaNotMet()==null) || 
-             (this.ifCriteriaNotMet!=null &&
-              this.ifCriteriaNotMet.equals(other.getIfCriteriaNotMet()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.rejectBehavior==null && other.getRejectBehavior()==null) || 
-             (this.rejectBehavior!=null &&
-              this.rejectBehavior.equals(other.getRejectBehavior()))) &&
-            ((this.rejectionActions==null && other.getRejectionActions()==null) || 
-             (this.rejectionActions!=null &&
-              java.util.Arrays.equals(this.rejectionActions, other.getRejectionActions())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAllowDelegate() != null) {
-            _hashCode += getAllowDelegate().hashCode();
-        }
-        if (getApprovalActions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getApprovalActions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getApprovalActions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getAssignedApprover() != null) {
-            _hashCode += getAssignedApprover().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getEntryCriteria() != null) {
-            _hashCode += getEntryCriteria().hashCode();
-        }
-        if (getIfCriteriaNotMet() != null) {
-            _hashCode += getIfCriteriaNotMet().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getRejectBehavior() != null) {
-            _hashCode += getRejectBehavior().hashCode();
-        }
-        if (getRejectionActions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRejectionActions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRejectionActions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ApprovalStep.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApprovalStep"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowDelegate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowDelegate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("approvalActions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "approvalActions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowActionReference"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "action"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignedApprover");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignedApprover"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApprovalStepApprover"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("entryCriteria");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "entryCriteria"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApprovalEntryCriteria"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ifCriteriaNotMet");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ifCriteriaNotMet"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "StepCriteriaNotMetType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rejectBehavior");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rejectBehavior"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ApprovalStepRejectBehavior"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rejectionActions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rejectionActions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowActionReference"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "action"));
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setRejectionActions(ApprovalAction value) {
+        this.rejectionActions = value;
     }
 
 }

@@ -1,308 +1,204 @@
-/**
- * OpportunitySettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class OpportunitySettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean autoActivateNewReminders;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean enableFindSimilarOpportunities;
 
-    private java.lang.Boolean enableOpportunityTeam;
+/**
+ * <p>Java class for OpportunitySettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="OpportunitySettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="autoActivateNewReminders" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableFindSimilarOpportunities" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableOpportunityTeam" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableUpdateReminders" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="findSimilarOppFilter" type="{http://soap.sforce.com/2006/04/metadata}FindSimilarOppFilter" minOccurs="0"/>
+ *         &lt;element name="promptToAddProducts" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "OpportunitySettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "autoActivateNewReminders",
+    "enableFindSimilarOpportunities",
+    "enableOpportunityTeam",
+    "enableUpdateReminders",
+    "findSimilarOppFilter",
+    "promptToAddProducts"
+})
+public class OpportunitySettings
+    extends Metadata
+{
 
-    private java.lang.Boolean enableUpdateReminders;
-
-    private com.sforce.soap._2006._04.metadata.FindSimilarOppFilter findSimilarOppFilter;
-
-    private java.lang.Boolean promptToAddProducts;
-
-    public OpportunitySettings() {
-    }
-
-    public OpportunitySettings(
-           java.lang.String fullName,
-           java.lang.Boolean autoActivateNewReminders,
-           java.lang.Boolean enableFindSimilarOpportunities,
-           java.lang.Boolean enableOpportunityTeam,
-           java.lang.Boolean enableUpdateReminders,
-           com.sforce.soap._2006._04.metadata.FindSimilarOppFilter findSimilarOppFilter,
-           java.lang.Boolean promptToAddProducts) {
-        super(
-            fullName);
-        this.autoActivateNewReminders = autoActivateNewReminders;
-        this.enableFindSimilarOpportunities = enableFindSimilarOpportunities;
-        this.enableOpportunityTeam = enableOpportunityTeam;
-        this.enableUpdateReminders = enableUpdateReminders;
-        this.findSimilarOppFilter = findSimilarOppFilter;
-        this.promptToAddProducts = promptToAddProducts;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean autoActivateNewReminders;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableFindSimilarOpportunities;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableOpportunityTeam;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableUpdateReminders;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FindSimilarOppFilter findSimilarOppFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean promptToAddProducts;
 
     /**
-     * Gets the autoActivateNewReminders value for this OpportunitySettings.
+     * Gets the value of the autoActivateNewReminders property.
      * 
-     * @return autoActivateNewReminders
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAutoActivateNewReminders() {
+    public Boolean isAutoActivateNewReminders() {
         return autoActivateNewReminders;
     }
 
-
     /**
-     * Sets the autoActivateNewReminders value for this OpportunitySettings.
+     * Sets the value of the autoActivateNewReminders property.
      * 
-     * @param autoActivateNewReminders
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAutoActivateNewReminders(java.lang.Boolean autoActivateNewReminders) {
-        this.autoActivateNewReminders = autoActivateNewReminders;
+    public void setAutoActivateNewReminders(Boolean value) {
+        this.autoActivateNewReminders = value;
     }
 
-
     /**
-     * Gets the enableFindSimilarOpportunities value for this OpportunitySettings.
+     * Gets the value of the enableFindSimilarOpportunities property.
      * 
-     * @return enableFindSimilarOpportunities
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableFindSimilarOpportunities() {
+    public Boolean isEnableFindSimilarOpportunities() {
         return enableFindSimilarOpportunities;
     }
 
-
     /**
-     * Sets the enableFindSimilarOpportunities value for this OpportunitySettings.
+     * Sets the value of the enableFindSimilarOpportunities property.
      * 
-     * @param enableFindSimilarOpportunities
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableFindSimilarOpportunities(java.lang.Boolean enableFindSimilarOpportunities) {
-        this.enableFindSimilarOpportunities = enableFindSimilarOpportunities;
+    public void setEnableFindSimilarOpportunities(Boolean value) {
+        this.enableFindSimilarOpportunities = value;
     }
 
-
     /**
-     * Gets the enableOpportunityTeam value for this OpportunitySettings.
+     * Gets the value of the enableOpportunityTeam property.
      * 
-     * @return enableOpportunityTeam
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableOpportunityTeam() {
+    public Boolean isEnableOpportunityTeam() {
         return enableOpportunityTeam;
     }
 
-
     /**
-     * Sets the enableOpportunityTeam value for this OpportunitySettings.
+     * Sets the value of the enableOpportunityTeam property.
      * 
-     * @param enableOpportunityTeam
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableOpportunityTeam(java.lang.Boolean enableOpportunityTeam) {
-        this.enableOpportunityTeam = enableOpportunityTeam;
+    public void setEnableOpportunityTeam(Boolean value) {
+        this.enableOpportunityTeam = value;
     }
 
-
     /**
-     * Gets the enableUpdateReminders value for this OpportunitySettings.
+     * Gets the value of the enableUpdateReminders property.
      * 
-     * @return enableUpdateReminders
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableUpdateReminders() {
+    public Boolean isEnableUpdateReminders() {
         return enableUpdateReminders;
     }
 
-
     /**
-     * Sets the enableUpdateReminders value for this OpportunitySettings.
+     * Sets the value of the enableUpdateReminders property.
      * 
-     * @param enableUpdateReminders
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableUpdateReminders(java.lang.Boolean enableUpdateReminders) {
-        this.enableUpdateReminders = enableUpdateReminders;
+    public void setEnableUpdateReminders(Boolean value) {
+        this.enableUpdateReminders = value;
     }
 
-
     /**
-     * Gets the findSimilarOppFilter value for this OpportunitySettings.
+     * Gets the value of the findSimilarOppFilter property.
      * 
-     * @return findSimilarOppFilter
+     * @return
+     *     possible object is
+     *     {@link FindSimilarOppFilter }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FindSimilarOppFilter getFindSimilarOppFilter() {
+    public FindSimilarOppFilter getFindSimilarOppFilter() {
         return findSimilarOppFilter;
     }
 
-
     /**
-     * Sets the findSimilarOppFilter value for this OpportunitySettings.
+     * Sets the value of the findSimilarOppFilter property.
      * 
-     * @param findSimilarOppFilter
+     * @param value
+     *     allowed object is
+     *     {@link FindSimilarOppFilter }
+     *     
      */
-    public void setFindSimilarOppFilter(com.sforce.soap._2006._04.metadata.FindSimilarOppFilter findSimilarOppFilter) {
-        this.findSimilarOppFilter = findSimilarOppFilter;
+    public void setFindSimilarOppFilter(FindSimilarOppFilter value) {
+        this.findSimilarOppFilter = value;
     }
 
-
     /**
-     * Gets the promptToAddProducts value for this OpportunitySettings.
+     * Gets the value of the promptToAddProducts property.
      * 
-     * @return promptToAddProducts
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getPromptToAddProducts() {
+    public Boolean isPromptToAddProducts() {
         return promptToAddProducts;
     }
 
-
     /**
-     * Sets the promptToAddProducts value for this OpportunitySettings.
+     * Sets the value of the promptToAddProducts property.
      * 
-     * @param promptToAddProducts
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setPromptToAddProducts(java.lang.Boolean promptToAddProducts) {
-        this.promptToAddProducts = promptToAddProducts;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof OpportunitySettings)) return false;
-        OpportunitySettings other = (OpportunitySettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.autoActivateNewReminders==null && other.getAutoActivateNewReminders()==null) || 
-             (this.autoActivateNewReminders!=null &&
-              this.autoActivateNewReminders.equals(other.getAutoActivateNewReminders()))) &&
-            ((this.enableFindSimilarOpportunities==null && other.getEnableFindSimilarOpportunities()==null) || 
-             (this.enableFindSimilarOpportunities!=null &&
-              this.enableFindSimilarOpportunities.equals(other.getEnableFindSimilarOpportunities()))) &&
-            ((this.enableOpportunityTeam==null && other.getEnableOpportunityTeam()==null) || 
-             (this.enableOpportunityTeam!=null &&
-              this.enableOpportunityTeam.equals(other.getEnableOpportunityTeam()))) &&
-            ((this.enableUpdateReminders==null && other.getEnableUpdateReminders()==null) || 
-             (this.enableUpdateReminders!=null &&
-              this.enableUpdateReminders.equals(other.getEnableUpdateReminders()))) &&
-            ((this.findSimilarOppFilter==null && other.getFindSimilarOppFilter()==null) || 
-             (this.findSimilarOppFilter!=null &&
-              this.findSimilarOppFilter.equals(other.getFindSimilarOppFilter()))) &&
-            ((this.promptToAddProducts==null && other.getPromptToAddProducts()==null) || 
-             (this.promptToAddProducts!=null &&
-              this.promptToAddProducts.equals(other.getPromptToAddProducts())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAutoActivateNewReminders() != null) {
-            _hashCode += getAutoActivateNewReminders().hashCode();
-        }
-        if (getEnableFindSimilarOpportunities() != null) {
-            _hashCode += getEnableFindSimilarOpportunities().hashCode();
-        }
-        if (getEnableOpportunityTeam() != null) {
-            _hashCode += getEnableOpportunityTeam().hashCode();
-        }
-        if (getEnableUpdateReminders() != null) {
-            _hashCode += getEnableUpdateReminders().hashCode();
-        }
-        if (getFindSimilarOppFilter() != null) {
-            _hashCode += getFindSimilarOppFilter().hashCode();
-        }
-        if (getPromptToAddProducts() != null) {
-            _hashCode += getPromptToAddProducts().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(OpportunitySettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "OpportunitySettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoActivateNewReminders");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoActivateNewReminders"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableFindSimilarOpportunities");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableFindSimilarOpportunities"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableOpportunityTeam");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableOpportunityTeam"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableUpdateReminders");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableUpdateReminders"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("findSimilarOppFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "findSimilarOppFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FindSimilarOppFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("promptToAddProducts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "promptToAddProducts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setPromptToAddProducts(Boolean value) {
+        this.promptToAddProducts = value;
     }
 
 }

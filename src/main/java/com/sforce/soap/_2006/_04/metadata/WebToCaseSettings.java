@@ -1,194 +1,118 @@
-/**
- * WebToCaseSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class WebToCaseSettings  implements java.io.Serializable {
-    private java.lang.String caseOrigin;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String defaultResponseTemplate;
 
-    private java.lang.Boolean enableWebToCase;
+/**
+ * <p>Java class for WebToCaseSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="WebToCaseSettings">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="caseOrigin" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="defaultResponseTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="enableWebToCase" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "WebToCaseSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "caseOrigin",
+    "defaultResponseTemplate",
+    "enableWebToCase"
+})
+public class WebToCaseSettings {
 
-    public WebToCaseSettings() {
-    }
-
-    public WebToCaseSettings(
-           java.lang.String caseOrigin,
-           java.lang.String defaultResponseTemplate,
-           java.lang.Boolean enableWebToCase) {
-           this.caseOrigin = caseOrigin;
-           this.defaultResponseTemplate = defaultResponseTemplate;
-           this.enableWebToCase = enableWebToCase;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String caseOrigin;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultResponseTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableWebToCase;
 
     /**
-     * Gets the caseOrigin value for this WebToCaseSettings.
+     * Gets the value of the caseOrigin property.
      * 
-     * @return caseOrigin
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCaseOrigin() {
+    public String getCaseOrigin() {
         return caseOrigin;
     }
 
-
     /**
-     * Sets the caseOrigin value for this WebToCaseSettings.
+     * Sets the value of the caseOrigin property.
      * 
-     * @param caseOrigin
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCaseOrigin(java.lang.String caseOrigin) {
-        this.caseOrigin = caseOrigin;
+    public void setCaseOrigin(String value) {
+        this.caseOrigin = value;
     }
 
-
     /**
-     * Gets the defaultResponseTemplate value for this WebToCaseSettings.
+     * Gets the value of the defaultResponseTemplate property.
      * 
-     * @return defaultResponseTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultResponseTemplate() {
+    public String getDefaultResponseTemplate() {
         return defaultResponseTemplate;
     }
 
-
     /**
-     * Sets the defaultResponseTemplate value for this WebToCaseSettings.
+     * Sets the value of the defaultResponseTemplate property.
      * 
-     * @param defaultResponseTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultResponseTemplate(java.lang.String defaultResponseTemplate) {
-        this.defaultResponseTemplate = defaultResponseTemplate;
+    public void setDefaultResponseTemplate(String value) {
+        this.defaultResponseTemplate = value;
     }
 
-
     /**
-     * Gets the enableWebToCase value for this WebToCaseSettings.
+     * Gets the value of the enableWebToCase property.
      * 
-     * @return enableWebToCase
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableWebToCase() {
+    public Boolean isEnableWebToCase() {
         return enableWebToCase;
     }
 
-
     /**
-     * Sets the enableWebToCase value for this WebToCaseSettings.
+     * Sets the value of the enableWebToCase property.
      * 
-     * @param enableWebToCase
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableWebToCase(java.lang.Boolean enableWebToCase) {
-        this.enableWebToCase = enableWebToCase;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof WebToCaseSettings)) return false;
-        WebToCaseSettings other = (WebToCaseSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.caseOrigin==null && other.getCaseOrigin()==null) || 
-             (this.caseOrigin!=null &&
-              this.caseOrigin.equals(other.getCaseOrigin()))) &&
-            ((this.defaultResponseTemplate==null && other.getDefaultResponseTemplate()==null) || 
-             (this.defaultResponseTemplate!=null &&
-              this.defaultResponseTemplate.equals(other.getDefaultResponseTemplate()))) &&
-            ((this.enableWebToCase==null && other.getEnableWebToCase()==null) || 
-             (this.enableWebToCase!=null &&
-              this.enableWebToCase.equals(other.getEnableWebToCase())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCaseOrigin() != null) {
-            _hashCode += getCaseOrigin().hashCode();
-        }
-        if (getDefaultResponseTemplate() != null) {
-            _hashCode += getDefaultResponseTemplate().hashCode();
-        }
-        if (getEnableWebToCase() != null) {
-            _hashCode += getEnableWebToCase().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(WebToCaseSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WebToCaseSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("caseOrigin");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "caseOrigin"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultResponseTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultResponseTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableWebToCase");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableWebToCase"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setEnableWebToCase(Boolean value) {
+        this.enableWebToCase = value;
     }
 
 }

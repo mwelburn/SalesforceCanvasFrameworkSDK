@@ -1,464 +1,269 @@
-/**
- * Workflow.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Workflow  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.WorkflowAlert[] alerts;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowFieldUpdate[] fieldUpdates;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowKnowledgePublish[] knowledgePublishes;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowOutboundMessage[] outboundMessages;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowRule[] rules;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowSend[] send;
-
-    private com.sforce.soap._2006._04.metadata.WorkflowTask[] tasks;
-
-    public Workflow() {
-    }
-
-    public Workflow(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.WorkflowAlert[] alerts,
-           com.sforce.soap._2006._04.metadata.WorkflowFieldUpdate[] fieldUpdates,
-           com.sforce.soap._2006._04.metadata.WorkflowKnowledgePublish[] knowledgePublishes,
-           com.sforce.soap._2006._04.metadata.WorkflowOutboundMessage[] outboundMessages,
-           com.sforce.soap._2006._04.metadata.WorkflowRule[] rules,
-           com.sforce.soap._2006._04.metadata.WorkflowSend[] send,
-           com.sforce.soap._2006._04.metadata.WorkflowTask[] tasks) {
-        super(
-            fullName);
-        this.alerts = alerts;
-        this.fieldUpdates = fieldUpdates;
-        this.knowledgePublishes = knowledgePublishes;
-        this.outboundMessages = outboundMessages;
-        this.rules = rules;
-        this.send = send;
-        this.tasks = tasks;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the alerts value for this Workflow.
-     * 
-     * @return alerts
-     */
-    public com.sforce.soap._2006._04.metadata.WorkflowAlert[] getAlerts() {
-        return alerts;
-    }
+/**
+ * <p>Java class for Workflow complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Workflow">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="alerts" type="{http://soap.sforce.com/2006/04/metadata}WorkflowAlert" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="fieldUpdates" type="{http://soap.sforce.com/2006/04/metadata}WorkflowFieldUpdate" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="knowledgePublishes" type="{http://soap.sforce.com/2006/04/metadata}WorkflowKnowledgePublish" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="outboundMessages" type="{http://soap.sforce.com/2006/04/metadata}WorkflowOutboundMessage" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="rules" type="{http://soap.sforce.com/2006/04/metadata}WorkflowRule" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="send" type="{http://soap.sforce.com/2006/04/metadata}WorkflowSend" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="tasks" type="{http://soap.sforce.com/2006/04/metadata}WorkflowTask" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Workflow", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "alerts",
+    "fieldUpdates",
+    "knowledgePublishes",
+    "outboundMessages",
+    "rules",
+    "send",
+    "tasks"
+})
+public class Workflow
+    extends Metadata
+{
 
-
-    /**
-     * Sets the alerts value for this Workflow.
-     * 
-     * @param alerts
-     */
-    public void setAlerts(com.sforce.soap._2006._04.metadata.WorkflowAlert[] alerts) {
-        this.alerts = alerts;
-    }
-
-    public com.sforce.soap._2006._04.metadata.WorkflowAlert getAlerts(int i) {
-        return this.alerts[i];
-    }
-
-    public void setAlerts(int i, com.sforce.soap._2006._04.metadata.WorkflowAlert _value) {
-        this.alerts[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<WorkflowAlert> alerts;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<WorkflowFieldUpdate> fieldUpdates;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<WorkflowKnowledgePublish> knowledgePublishes;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<WorkflowOutboundMessage> outboundMessages;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<WorkflowRule> rules;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<WorkflowSend> send;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<WorkflowTask> tasks;
 
     /**
-     * Gets the fieldUpdates value for this Workflow.
+     * Gets the value of the alerts property.
      * 
-     * @return fieldUpdates
-     */
-    public com.sforce.soap._2006._04.metadata.WorkflowFieldUpdate[] getFieldUpdates() {
-        return fieldUpdates;
-    }
-
-
-    /**
-     * Sets the fieldUpdates value for this Workflow.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the alerts property.
      * 
-     * @param fieldUpdates
-     */
-    public void setFieldUpdates(com.sforce.soap._2006._04.metadata.WorkflowFieldUpdate[] fieldUpdates) {
-        this.fieldUpdates = fieldUpdates;
-    }
-
-    public com.sforce.soap._2006._04.metadata.WorkflowFieldUpdate getFieldUpdates(int i) {
-        return this.fieldUpdates[i];
-    }
-
-    public void setFieldUpdates(int i, com.sforce.soap._2006._04.metadata.WorkflowFieldUpdate _value) {
-        this.fieldUpdates[i] = _value;
-    }
-
-
-    /**
-     * Gets the knowledgePublishes value for this Workflow.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAlerts().add(newItem);
+     * </pre>
      * 
-     * @return knowledgePublishes
-     */
-    public com.sforce.soap._2006._04.metadata.WorkflowKnowledgePublish[] getKnowledgePublishes() {
-        return knowledgePublishes;
-    }
-
-
-    /**
-     * Sets the knowledgePublishes value for this Workflow.
      * 
-     * @param knowledgePublishes
-     */
-    public void setKnowledgePublishes(com.sforce.soap._2006._04.metadata.WorkflowKnowledgePublish[] knowledgePublishes) {
-        this.knowledgePublishes = knowledgePublishes;
-    }
-
-    public com.sforce.soap._2006._04.metadata.WorkflowKnowledgePublish getKnowledgePublishes(int i) {
-        return this.knowledgePublishes[i];
-    }
-
-    public void setKnowledgePublishes(int i, com.sforce.soap._2006._04.metadata.WorkflowKnowledgePublish _value) {
-        this.knowledgePublishes[i] = _value;
-    }
-
-
-    /**
-     * Gets the outboundMessages value for this Workflow.
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WorkflowAlert }
      * 
-     * @return outboundMessages
-     */
-    public com.sforce.soap._2006._04.metadata.WorkflowOutboundMessage[] getOutboundMessages() {
-        return outboundMessages;
-    }
-
-
-    /**
-     * Sets the outboundMessages value for this Workflow.
      * 
-     * @param outboundMessages
      */
-    public void setOutboundMessages(com.sforce.soap._2006._04.metadata.WorkflowOutboundMessage[] outboundMessages) {
-        this.outboundMessages = outboundMessages;
-    }
-
-    public com.sforce.soap._2006._04.metadata.WorkflowOutboundMessage getOutboundMessages(int i) {
-        return this.outboundMessages[i];
-    }
-
-    public void setOutboundMessages(int i, com.sforce.soap._2006._04.metadata.WorkflowOutboundMessage _value) {
-        this.outboundMessages[i] = _value;
-    }
-
-
-    /**
-     * Gets the rules value for this Workflow.
-     * 
-     * @return rules
-     */
-    public com.sforce.soap._2006._04.metadata.WorkflowRule[] getRules() {
-        return rules;
-    }
-
-
-    /**
-     * Sets the rules value for this Workflow.
-     * 
-     * @param rules
-     */
-    public void setRules(com.sforce.soap._2006._04.metadata.WorkflowRule[] rules) {
-        this.rules = rules;
-    }
-
-    public com.sforce.soap._2006._04.metadata.WorkflowRule getRules(int i) {
-        return this.rules[i];
-    }
-
-    public void setRules(int i, com.sforce.soap._2006._04.metadata.WorkflowRule _value) {
-        this.rules[i] = _value;
-    }
-
-
-    /**
-     * Gets the send value for this Workflow.
-     * 
-     * @return send
-     */
-    public com.sforce.soap._2006._04.metadata.WorkflowSend[] getSend() {
-        return send;
-    }
-
-
-    /**
-     * Sets the send value for this Workflow.
-     * 
-     * @param send
-     */
-    public void setSend(com.sforce.soap._2006._04.metadata.WorkflowSend[] send) {
-        this.send = send;
-    }
-
-    public com.sforce.soap._2006._04.metadata.WorkflowSend getSend(int i) {
-        return this.send[i];
-    }
-
-    public void setSend(int i, com.sforce.soap._2006._04.metadata.WorkflowSend _value) {
-        this.send[i] = _value;
-    }
-
-
-    /**
-     * Gets the tasks value for this Workflow.
-     * 
-     * @return tasks
-     */
-    public com.sforce.soap._2006._04.metadata.WorkflowTask[] getTasks() {
-        return tasks;
-    }
-
-
-    /**
-     * Sets the tasks value for this Workflow.
-     * 
-     * @param tasks
-     */
-    public void setTasks(com.sforce.soap._2006._04.metadata.WorkflowTask[] tasks) {
-        this.tasks = tasks;
-    }
-
-    public com.sforce.soap._2006._04.metadata.WorkflowTask getTasks(int i) {
-        return this.tasks[i];
-    }
-
-    public void setTasks(int i, com.sforce.soap._2006._04.metadata.WorkflowTask _value) {
-        this.tasks[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Workflow)) return false;
-        Workflow other = (Workflow) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<WorkflowAlert> getAlerts() {
+        if (alerts == null) {
+            alerts = new ArrayList<WorkflowAlert>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.alerts==null && other.getAlerts()==null) || 
-             (this.alerts!=null &&
-              java.util.Arrays.equals(this.alerts, other.getAlerts()))) &&
-            ((this.fieldUpdates==null && other.getFieldUpdates()==null) || 
-             (this.fieldUpdates!=null &&
-              java.util.Arrays.equals(this.fieldUpdates, other.getFieldUpdates()))) &&
-            ((this.knowledgePublishes==null && other.getKnowledgePublishes()==null) || 
-             (this.knowledgePublishes!=null &&
-              java.util.Arrays.equals(this.knowledgePublishes, other.getKnowledgePublishes()))) &&
-            ((this.outboundMessages==null && other.getOutboundMessages()==null) || 
-             (this.outboundMessages!=null &&
-              java.util.Arrays.equals(this.outboundMessages, other.getOutboundMessages()))) &&
-            ((this.rules==null && other.getRules()==null) || 
-             (this.rules!=null &&
-              java.util.Arrays.equals(this.rules, other.getRules()))) &&
-            ((this.send==null && other.getSend()==null) || 
-             (this.send!=null &&
-              java.util.Arrays.equals(this.send, other.getSend()))) &&
-            ((this.tasks==null && other.getTasks()==null) || 
-             (this.tasks!=null &&
-              java.util.Arrays.equals(this.tasks, other.getTasks())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAlerts() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getAlerts());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getAlerts(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFieldUpdates() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFieldUpdates());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFieldUpdates(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getKnowledgePublishes() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getKnowledgePublishes());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getKnowledgePublishes(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getOutboundMessages() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getOutboundMessages());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getOutboundMessages(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRules() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRules());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRules(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSend() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSend());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSend(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getTasks() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTasks());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTasks(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Workflow.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Workflow"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("alerts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "alerts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowAlert"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fieldUpdates");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fieldUpdates"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowFieldUpdate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("knowledgePublishes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "knowledgePublishes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowKnowledgePublish"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("outboundMessages");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "outboundMessages"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowOutboundMessage"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rules");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rules"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowRule"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("send");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "send"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowSend"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tasks");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tasks"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkflowTask"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
+        return this.alerts;
     }
 
     /**
-     * Return type metadata object
+     * Gets the value of the fieldUpdates property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fieldUpdates property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFieldUpdates().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WorkflowFieldUpdate }
+     * 
+     * 
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public List<WorkflowFieldUpdate> getFieldUpdates() {
+        if (fieldUpdates == null) {
+            fieldUpdates = new ArrayList<WorkflowFieldUpdate>();
+        }
+        return this.fieldUpdates;
     }
 
     /**
-     * Get Custom Serializer
+     * Gets the value of the knowledgePublishes property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the knowledgePublishes property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getKnowledgePublishes().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WorkflowKnowledgePublish }
+     * 
+     * 
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+    public List<WorkflowKnowledgePublish> getKnowledgePublishes() {
+        if (knowledgePublishes == null) {
+            knowledgePublishes = new ArrayList<WorkflowKnowledgePublish>();
+        }
+        return this.knowledgePublishes;
     }
 
     /**
-     * Get Custom Deserializer
+     * Gets the value of the outboundMessages property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the outboundMessages property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getOutboundMessages().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WorkflowOutboundMessage }
+     * 
+     * 
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public List<WorkflowOutboundMessage> getOutboundMessages() {
+        if (outboundMessages == null) {
+            outboundMessages = new ArrayList<WorkflowOutboundMessage>();
+        }
+        return this.outboundMessages;
+    }
+
+    /**
+     * Gets the value of the rules property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the rules property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRules().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WorkflowRule }
+     * 
+     * 
+     */
+    public List<WorkflowRule> getRules() {
+        if (rules == null) {
+            rules = new ArrayList<WorkflowRule>();
+        }
+        return this.rules;
+    }
+
+    /**
+     * Gets the value of the send property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the send property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSend().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WorkflowSend }
+     * 
+     * 
+     */
+    public List<WorkflowSend> getSend() {
+        if (send == null) {
+            send = new ArrayList<WorkflowSend>();
+        }
+        return this.send;
+    }
+
+    /**
+     * Gets the value of the tasks property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the tasks property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getTasks().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WorkflowTask }
+     * 
+     * 
+     */
+    public List<WorkflowTask> getTasks() {
+        if (tasks == null) {
+            tasks = new ArrayList<WorkflowTask>();
+        }
+        return this.tasks;
     }
 
 }

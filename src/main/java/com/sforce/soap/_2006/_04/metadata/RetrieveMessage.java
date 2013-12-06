@@ -1,155 +1,90 @@
-/**
- * RetrieveMessage.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class RetrieveMessage  implements java.io.Serializable {
-    private java.lang.String fileName;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String problem;
 
-    public RetrieveMessage() {
-    }
+/**
+ * <p>Java class for RetrieveMessage complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="RetrieveMessage">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="fileName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="problem" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "RetrieveMessage", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "fileName",
+    "problem"
+})
+public class RetrieveMessage {
 
-    public RetrieveMessage(
-           java.lang.String fileName,
-           java.lang.String problem) {
-           this.fileName = fileName;
-           this.problem = problem;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String fileName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String problem;
 
     /**
-     * Gets the fileName value for this RetrieveMessage.
+     * Gets the value of the fileName property.
      * 
-     * @return fileName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFileName() {
+    public String getFileName() {
         return fileName;
     }
 
-
     /**
-     * Sets the fileName value for this RetrieveMessage.
+     * Sets the value of the fileName property.
      * 
-     * @param fileName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFileName(java.lang.String fileName) {
-        this.fileName = fileName;
+    public void setFileName(String value) {
+        this.fileName = value;
     }
 
-
     /**
-     * Gets the problem value for this RetrieveMessage.
+     * Gets the value of the problem property.
      * 
-     * @return problem
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getProblem() {
+    public String getProblem() {
         return problem;
     }
 
-
     /**
-     * Sets the problem value for this RetrieveMessage.
+     * Sets the value of the problem property.
      * 
-     * @param problem
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setProblem(java.lang.String problem) {
-        this.problem = problem;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof RetrieveMessage)) return false;
-        RetrieveMessage other = (RetrieveMessage) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.fileName==null && other.getFileName()==null) || 
-             (this.fileName!=null &&
-              this.fileName.equals(other.getFileName()))) &&
-            ((this.problem==null && other.getProblem()==null) || 
-             (this.problem!=null &&
-              this.problem.equals(other.getProblem())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getFileName() != null) {
-            _hashCode += getFileName().hashCode();
-        }
-        if (getProblem() != null) {
-            _hashCode += getProblem().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RetrieveMessage.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RetrieveMessage"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fileName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fileName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("problem");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "problem"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setProblem(String value) {
+        this.problem = value;
     }
 
 }

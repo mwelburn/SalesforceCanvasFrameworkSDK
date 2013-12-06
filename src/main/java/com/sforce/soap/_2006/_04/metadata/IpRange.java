@@ -1,157 +1,90 @@
-/**
- * IpRange.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class IpRange  implements java.io.Serializable {
-    private java.lang.String end;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String start;
 
-    public IpRange() {
-    }
+/**
+ * <p>Java class for IpRange complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="IpRange">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="end" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="start" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "IpRange", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "end",
+    "start"
+})
+public class IpRange {
 
-    public IpRange(
-           java.lang.String end,
-           java.lang.String start) {
-           this.end = end;
-           this.start = start;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String end;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String start;
 
     /**
-     * Gets the end value for this IpRange.
+     * Gets the value of the end property.
      * 
-     * @return end
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEnd() {
+    public String getEnd() {
         return end;
     }
 
-
     /**
-     * Sets the end value for this IpRange.
+     * Sets the value of the end property.
      * 
-     * @param end
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEnd(java.lang.String end) {
-        this.end = end;
+    public void setEnd(String value) {
+        this.end = value;
     }
 
-
     /**
-     * Gets the start value for this IpRange.
+     * Gets the value of the start property.
      * 
-     * @return start
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStart() {
+    public String getStart() {
         return start;
     }
 
-
     /**
-     * Sets the start value for this IpRange.
+     * Sets the value of the start property.
      * 
-     * @param start
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStart(java.lang.String start) {
-        this.start = start;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof IpRange)) return false;
-        IpRange other = (IpRange) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.end==null && other.getEnd()==null) || 
-             (this.end!=null &&
-              this.end.equals(other.getEnd()))) &&
-            ((this.start==null && other.getStart()==null) || 
-             (this.start!=null &&
-              this.start.equals(other.getStart())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getEnd() != null) {
-            _hashCode += getEnd().hashCode();
-        }
-        if (getStart() != null) {
-            _hashCode += getStart().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(IpRange.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "IpRange"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("end");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "end"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("start");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "start"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStart(String value) {
+        this.start = value;
     }
 
 }

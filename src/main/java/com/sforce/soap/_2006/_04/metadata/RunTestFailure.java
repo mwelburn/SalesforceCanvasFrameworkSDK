@@ -1,403 +1,278 @@
-/**
- * RunTestFailure.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class RunTestFailure  implements java.io.Serializable {
-    private java.lang.String id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String message;
 
-    private java.lang.String methodName;
+/**
+ * <p>Java class for RunTestFailure complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="RunTestFailure">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="id" type="{http://soap.sforce.com/2006/04/metadata}ID"/>
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="methodName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="namespace" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="packageName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="stackTrace" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="time" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="type" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "RunTestFailure", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "id",
+    "message",
+    "methodName",
+    "name",
+    "namespace",
+    "packageName",
+    "stackTrace",
+    "time",
+    "type"
+})
+public class RunTestFailure {
 
-    private java.lang.String name;
-
-    private java.lang.String namespace;
-
-    private java.lang.String packageName;
-
-    private java.lang.String stackTrace;
-
-    private double time;
-
-    private java.lang.String type;
-
-    public RunTestFailure() {
-    }
-
-    public RunTestFailure(
-           java.lang.String id,
-           java.lang.String message,
-           java.lang.String methodName,
-           java.lang.String name,
-           java.lang.String namespace,
-           java.lang.String packageName,
-           java.lang.String stackTrace,
-           double time,
-           java.lang.String type) {
-           this.id = id;
-           this.message = message;
-           this.methodName = methodName;
-           this.name = name;
-           this.namespace = namespace;
-           this.packageName = packageName;
-           this.stackTrace = stackTrace;
-           this.time = time;
-           this.type = type;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String id;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String message;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true, nillable = true)
+    protected String methodName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true, nillable = true)
+    protected String namespace;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String packageName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true, nillable = true)
+    protected String stackTrace;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected double time;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String type;
 
     /**
-     * Gets the id value for this RunTestFailure.
+     * Gets the value of the id property.
      * 
-     * @return id
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getId() {
+    public String getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this RunTestFailure.
+     * Sets the value of the id property.
      * 
-     * @param id
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(java.lang.String id) {
-        this.id = id;
+    public void setId(String value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the message value for this RunTestFailure.
+     * Gets the value of the message property.
      * 
-     * @return message
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMessage() {
+    public String getMessage() {
         return message;
     }
 
-
     /**
-     * Sets the message value for this RunTestFailure.
+     * Sets the value of the message property.
      * 
-     * @param message
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMessage(java.lang.String message) {
-        this.message = message;
+    public void setMessage(String value) {
+        this.message = value;
     }
 
-
     /**
-     * Gets the methodName value for this RunTestFailure.
+     * Gets the value of the methodName property.
      * 
-     * @return methodName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMethodName() {
+    public String getMethodName() {
         return methodName;
     }
 
-
     /**
-     * Sets the methodName value for this RunTestFailure.
+     * Sets the value of the methodName property.
      * 
-     * @param methodName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMethodName(java.lang.String methodName) {
-        this.methodName = methodName;
+    public void setMethodName(String value) {
+        this.methodName = value;
     }
 
-
     /**
-     * Gets the name value for this RunTestFailure.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this RunTestFailure.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the namespace value for this RunTestFailure.
+     * Gets the value of the namespace property.
      * 
-     * @return namespace
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNamespace() {
+    public String getNamespace() {
         return namespace;
     }
 
-
     /**
-     * Sets the namespace value for this RunTestFailure.
+     * Sets the value of the namespace property.
      * 
-     * @param namespace
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNamespace(java.lang.String namespace) {
-        this.namespace = namespace;
+    public void setNamespace(String value) {
+        this.namespace = value;
     }
 
-
     /**
-     * Gets the packageName value for this RunTestFailure.
+     * Gets the value of the packageName property.
      * 
-     * @return packageName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPackageName() {
+    public String getPackageName() {
         return packageName;
     }
 
-
     /**
-     * Sets the packageName value for this RunTestFailure.
+     * Sets the value of the packageName property.
      * 
-     * @param packageName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPackageName(java.lang.String packageName) {
-        this.packageName = packageName;
+    public void setPackageName(String value) {
+        this.packageName = value;
     }
 
-
     /**
-     * Gets the stackTrace value for this RunTestFailure.
+     * Gets the value of the stackTrace property.
      * 
-     * @return stackTrace
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStackTrace() {
+    public String getStackTrace() {
         return stackTrace;
     }
 
-
     /**
-     * Sets the stackTrace value for this RunTestFailure.
+     * Sets the value of the stackTrace property.
      * 
-     * @param stackTrace
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStackTrace(java.lang.String stackTrace) {
-        this.stackTrace = stackTrace;
+    public void setStackTrace(String value) {
+        this.stackTrace = value;
     }
 
-
     /**
-     * Gets the time value for this RunTestFailure.
+     * Gets the value of the time property.
      * 
-     * @return time
      */
     public double getTime() {
         return time;
     }
 
-
     /**
-     * Sets the time value for this RunTestFailure.
+     * Sets the value of the time property.
      * 
-     * @param time
      */
-    public void setTime(double time) {
-        this.time = time;
+    public void setTime(double value) {
+        this.time = value;
     }
 
-
     /**
-     * Gets the type value for this RunTestFailure.
+     * Gets the value of the type property.
      * 
-     * @return type
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getType() {
+    public String getType() {
         return type;
     }
 
-
     /**
-     * Sets the type value for this RunTestFailure.
+     * Sets the value of the type property.
      * 
-     * @param type
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setType(java.lang.String type) {
-        this.type = type;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof RunTestFailure)) return false;
-        RunTestFailure other = (RunTestFailure) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            ((this.message==null && other.getMessage()==null) || 
-             (this.message!=null &&
-              this.message.equals(other.getMessage()))) &&
-            ((this.methodName==null && other.getMethodName()==null) || 
-             (this.methodName!=null &&
-              this.methodName.equals(other.getMethodName()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.namespace==null && other.getNamespace()==null) || 
-             (this.namespace!=null &&
-              this.namespace.equals(other.getNamespace()))) &&
-            ((this.packageName==null && other.getPackageName()==null) || 
-             (this.packageName!=null &&
-              this.packageName.equals(other.getPackageName()))) &&
-            ((this.stackTrace==null && other.getStackTrace()==null) || 
-             (this.stackTrace!=null &&
-              this.stackTrace.equals(other.getStackTrace()))) &&
-            this.time == other.getTime() &&
-            ((this.type==null && other.getType()==null) || 
-             (this.type!=null &&
-              this.type.equals(other.getType())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getId() != null) {
-            _hashCode += getId().hashCode();
-        }
-        if (getMessage() != null) {
-            _hashCode += getMessage().hashCode();
-        }
-        if (getMethodName() != null) {
-            _hashCode += getMethodName().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getNamespace() != null) {
-            _hashCode += getNamespace().hashCode();
-        }
-        if (getPackageName() != null) {
-            _hashCode += getPackageName().hashCode();
-        }
-        if (getStackTrace() != null) {
-            _hashCode += getStackTrace().hashCode();
-        }
-        _hashCode += new Double(getTime()).hashCode();
-        if (getType() != null) {
-            _hashCode += getType().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RunTestFailure.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RunTestFailure"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("message");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "message"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("methodName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "methodName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("namespace");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "namespace"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("packageName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "packageName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("stackTrace");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "stackTrace"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("time");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "time"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("type");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "type"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setType(String value) {
+        this.type = value;
     }
 
 }

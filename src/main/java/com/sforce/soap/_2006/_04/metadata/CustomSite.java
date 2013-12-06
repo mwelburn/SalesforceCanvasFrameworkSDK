@@ -1,1456 +1,1036 @@
-/**
- * CustomSite.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomSite  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private boolean active;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private boolean allowHomePage;
 
-    private java.lang.Boolean allowStandardAnswersPages;
+/**
+ * <p>Java class for CustomSite complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomSite">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="allowHomePage" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="allowStandardAnswersPages" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="allowStandardIdeasPages" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="allowStandardLookups" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="allowStandardSearch" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="analyticsTrackingCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="authorizationRequiredPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="bandwidthExceededPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="changePasswordPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="chatterAnswersForgotPasswordConfirmPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="chatterAnswersForgotPasswordPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="chatterAnswersHelpPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="chatterAnswersLoginPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="chatterAnswersRegistrationPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="customWebAddresses" type="{http://soap.sforce.com/2006/04/metadata}SiteWebAddress" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="favoriteIcon" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="fileNotFoundPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="genericErrorPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="guestProfile" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="inMaintenancePage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="inactiveIndexPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="indexPage" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="masterLabel" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="myProfilePage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="portal" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="requireInsecurePortalAccess" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="robotsTxtPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="rootComponent" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="serverIsDown" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="siteAdmin" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="siteRedirectMappings" type="{http://soap.sforce.com/2006/04/metadata}SiteRedirectMapping" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="siteTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="siteType" type="{http://soap.sforce.com/2006/04/metadata}SiteType"/>
+ *         &lt;element name="subdomain" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="urlPathPrefix" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomSite", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "active",
+    "allowHomePage",
+    "allowStandardAnswersPages",
+    "allowStandardIdeasPages",
+    "allowStandardLookups",
+    "allowStandardSearch",
+    "analyticsTrackingCode",
+    "authorizationRequiredPage",
+    "bandwidthExceededPage",
+    "changePasswordPage",
+    "chatterAnswersForgotPasswordConfirmPage",
+    "chatterAnswersForgotPasswordPage",
+    "chatterAnswersHelpPage",
+    "chatterAnswersLoginPage",
+    "chatterAnswersRegistrationPage",
+    "customWebAddresses",
+    "description",
+    "favoriteIcon",
+    "fileNotFoundPage",
+    "genericErrorPage",
+    "guestProfile",
+    "inMaintenancePage",
+    "inactiveIndexPage",
+    "indexPage",
+    "masterLabel",
+    "myProfilePage",
+    "portal",
+    "requireInsecurePortalAccess",
+    "robotsTxtPage",
+    "rootComponent",
+    "serverIsDown",
+    "siteAdmin",
+    "siteRedirectMappings",
+    "siteTemplate",
+    "siteType",
+    "subdomain",
+    "urlPathPrefix"
+})
+public class CustomSite
+    extends Metadata
+{
 
-    private boolean allowStandardIdeasPages;
-
-    private boolean allowStandardLookups;
-
-    private boolean allowStandardSearch;
-
-    private java.lang.String analyticsTrackingCode;
-
-    private java.lang.String authorizationRequiredPage;
-
-    private java.lang.String bandwidthExceededPage;
-
-    private java.lang.String changePasswordPage;
-
-    private java.lang.String chatterAnswersForgotPasswordConfirmPage;
-
-    private java.lang.String chatterAnswersForgotPasswordPage;
-
-    private java.lang.String chatterAnswersHelpPage;
-
-    private java.lang.String chatterAnswersLoginPage;
-
-    private java.lang.String chatterAnswersRegistrationPage;
-
-    private com.sforce.soap._2006._04.metadata.SiteWebAddress[] customWebAddresses;
-
-    private java.lang.String description;
-
-    private java.lang.String favoriteIcon;
-
-    private java.lang.String fileNotFoundPage;
-
-    private java.lang.String genericErrorPage;
-
-    private java.lang.String guestProfile;
-
-    private java.lang.String inMaintenancePage;
-
-    private java.lang.String inactiveIndexPage;
-
-    private java.lang.String indexPage;
-
-    private java.lang.String masterLabel;
-
-    private java.lang.String myProfilePage;
-
-    private java.lang.String portal;
-
-    private boolean requireInsecurePortalAccess;
-
-    private java.lang.String robotsTxtPage;
-
-    private java.lang.String rootComponent;
-
-    private java.lang.String serverIsDown;
-
-    private java.lang.String siteAdmin;
-
-    private com.sforce.soap._2006._04.metadata.SiteRedirectMapping[] siteRedirectMappings;
-
-    private java.lang.String siteTemplate;
-
-    private com.sforce.soap._2006._04.metadata.SiteType siteType;
-
-    private java.lang.String subdomain;
-
-    private java.lang.String urlPathPrefix;
-
-    public CustomSite() {
-    }
-
-    public CustomSite(
-           java.lang.String fullName,
-           boolean active,
-           boolean allowHomePage,
-           java.lang.Boolean allowStandardAnswersPages,
-           boolean allowStandardIdeasPages,
-           boolean allowStandardLookups,
-           boolean allowStandardSearch,
-           java.lang.String analyticsTrackingCode,
-           java.lang.String authorizationRequiredPage,
-           java.lang.String bandwidthExceededPage,
-           java.lang.String changePasswordPage,
-           java.lang.String chatterAnswersForgotPasswordConfirmPage,
-           java.lang.String chatterAnswersForgotPasswordPage,
-           java.lang.String chatterAnswersHelpPage,
-           java.lang.String chatterAnswersLoginPage,
-           java.lang.String chatterAnswersRegistrationPage,
-           com.sforce.soap._2006._04.metadata.SiteWebAddress[] customWebAddresses,
-           java.lang.String description,
-           java.lang.String favoriteIcon,
-           java.lang.String fileNotFoundPage,
-           java.lang.String genericErrorPage,
-           java.lang.String guestProfile,
-           java.lang.String inMaintenancePage,
-           java.lang.String inactiveIndexPage,
-           java.lang.String indexPage,
-           java.lang.String masterLabel,
-           java.lang.String myProfilePage,
-           java.lang.String portal,
-           boolean requireInsecurePortalAccess,
-           java.lang.String robotsTxtPage,
-           java.lang.String rootComponent,
-           java.lang.String serverIsDown,
-           java.lang.String siteAdmin,
-           com.sforce.soap._2006._04.metadata.SiteRedirectMapping[] siteRedirectMappings,
-           java.lang.String siteTemplate,
-           com.sforce.soap._2006._04.metadata.SiteType siteType,
-           java.lang.String subdomain,
-           java.lang.String urlPathPrefix) {
-        super(
-            fullName);
-        this.active = active;
-        this.allowHomePage = allowHomePage;
-        this.allowStandardAnswersPages = allowStandardAnswersPages;
-        this.allowStandardIdeasPages = allowStandardIdeasPages;
-        this.allowStandardLookups = allowStandardLookups;
-        this.allowStandardSearch = allowStandardSearch;
-        this.analyticsTrackingCode = analyticsTrackingCode;
-        this.authorizationRequiredPage = authorizationRequiredPage;
-        this.bandwidthExceededPage = bandwidthExceededPage;
-        this.changePasswordPage = changePasswordPage;
-        this.chatterAnswersForgotPasswordConfirmPage = chatterAnswersForgotPasswordConfirmPage;
-        this.chatterAnswersForgotPasswordPage = chatterAnswersForgotPasswordPage;
-        this.chatterAnswersHelpPage = chatterAnswersHelpPage;
-        this.chatterAnswersLoginPage = chatterAnswersLoginPage;
-        this.chatterAnswersRegistrationPage = chatterAnswersRegistrationPage;
-        this.customWebAddresses = customWebAddresses;
-        this.description = description;
-        this.favoriteIcon = favoriteIcon;
-        this.fileNotFoundPage = fileNotFoundPage;
-        this.genericErrorPage = genericErrorPage;
-        this.guestProfile = guestProfile;
-        this.inMaintenancePage = inMaintenancePage;
-        this.inactiveIndexPage = inactiveIndexPage;
-        this.indexPage = indexPage;
-        this.masterLabel = masterLabel;
-        this.myProfilePage = myProfilePage;
-        this.portal = portal;
-        this.requireInsecurePortalAccess = requireInsecurePortalAccess;
-        this.robotsTxtPage = robotsTxtPage;
-        this.rootComponent = rootComponent;
-        this.serverIsDown = serverIsDown;
-        this.siteAdmin = siteAdmin;
-        this.siteRedirectMappings = siteRedirectMappings;
-        this.siteTemplate = siteTemplate;
-        this.siteType = siteType;
-        this.subdomain = subdomain;
-        this.urlPathPrefix = urlPathPrefix;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean active;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean allowHomePage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean allowStandardAnswersPages;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean allowStandardIdeasPages;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean allowStandardLookups;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean allowStandardSearch;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String analyticsTrackingCode;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String authorizationRequiredPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String bandwidthExceededPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String changePasswordPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String chatterAnswersForgotPasswordConfirmPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String chatterAnswersForgotPasswordPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String chatterAnswersHelpPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String chatterAnswersLoginPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String chatterAnswersRegistrationPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<SiteWebAddress> customWebAddresses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String favoriteIcon;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String fileNotFoundPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String genericErrorPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String guestProfile;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String inMaintenancePage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String inactiveIndexPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String indexPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String masterLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String myProfilePage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String portal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean requireInsecurePortalAccess;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String robotsTxtPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String rootComponent;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String serverIsDown;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String siteAdmin;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<SiteRedirectMapping> siteRedirectMappings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String siteTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SiteType siteType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String subdomain;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String urlPathPrefix;
 
     /**
-     * Gets the active value for this CustomSite.
+     * Gets the value of the active property.
      * 
-     * @return active
      */
     public boolean isActive() {
         return active;
     }
 
-
     /**
-     * Sets the active value for this CustomSite.
+     * Sets the value of the active property.
      * 
-     * @param active
      */
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setActive(boolean value) {
+        this.active = value;
     }
 
-
     /**
-     * Gets the allowHomePage value for this CustomSite.
+     * Gets the value of the allowHomePage property.
      * 
-     * @return allowHomePage
      */
     public boolean isAllowHomePage() {
         return allowHomePage;
     }
 
-
     /**
-     * Sets the allowHomePage value for this CustomSite.
+     * Sets the value of the allowHomePage property.
      * 
-     * @param allowHomePage
      */
-    public void setAllowHomePage(boolean allowHomePage) {
-        this.allowHomePage = allowHomePage;
+    public void setAllowHomePage(boolean value) {
+        this.allowHomePage = value;
     }
 
-
     /**
-     * Gets the allowStandardAnswersPages value for this CustomSite.
+     * Gets the value of the allowStandardAnswersPages property.
      * 
-     * @return allowStandardAnswersPages
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAllowStandardAnswersPages() {
+    public Boolean isAllowStandardAnswersPages() {
         return allowStandardAnswersPages;
     }
 
-
     /**
-     * Sets the allowStandardAnswersPages value for this CustomSite.
+     * Sets the value of the allowStandardAnswersPages property.
      * 
-     * @param allowStandardAnswersPages
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAllowStandardAnswersPages(java.lang.Boolean allowStandardAnswersPages) {
-        this.allowStandardAnswersPages = allowStandardAnswersPages;
+    public void setAllowStandardAnswersPages(Boolean value) {
+        this.allowStandardAnswersPages = value;
     }
 
-
     /**
-     * Gets the allowStandardIdeasPages value for this CustomSite.
+     * Gets the value of the allowStandardIdeasPages property.
      * 
-     * @return allowStandardIdeasPages
      */
     public boolean isAllowStandardIdeasPages() {
         return allowStandardIdeasPages;
     }
 
-
     /**
-     * Sets the allowStandardIdeasPages value for this CustomSite.
+     * Sets the value of the allowStandardIdeasPages property.
      * 
-     * @param allowStandardIdeasPages
      */
-    public void setAllowStandardIdeasPages(boolean allowStandardIdeasPages) {
-        this.allowStandardIdeasPages = allowStandardIdeasPages;
+    public void setAllowStandardIdeasPages(boolean value) {
+        this.allowStandardIdeasPages = value;
     }
 
-
     /**
-     * Gets the allowStandardLookups value for this CustomSite.
+     * Gets the value of the allowStandardLookups property.
      * 
-     * @return allowStandardLookups
      */
     public boolean isAllowStandardLookups() {
         return allowStandardLookups;
     }
 
-
     /**
-     * Sets the allowStandardLookups value for this CustomSite.
+     * Sets the value of the allowStandardLookups property.
      * 
-     * @param allowStandardLookups
      */
-    public void setAllowStandardLookups(boolean allowStandardLookups) {
-        this.allowStandardLookups = allowStandardLookups;
+    public void setAllowStandardLookups(boolean value) {
+        this.allowStandardLookups = value;
     }
 
-
     /**
-     * Gets the allowStandardSearch value for this CustomSite.
+     * Gets the value of the allowStandardSearch property.
      * 
-     * @return allowStandardSearch
      */
     public boolean isAllowStandardSearch() {
         return allowStandardSearch;
     }
 
-
     /**
-     * Sets the allowStandardSearch value for this CustomSite.
+     * Sets the value of the allowStandardSearch property.
      * 
-     * @param allowStandardSearch
      */
-    public void setAllowStandardSearch(boolean allowStandardSearch) {
-        this.allowStandardSearch = allowStandardSearch;
+    public void setAllowStandardSearch(boolean value) {
+        this.allowStandardSearch = value;
     }
 
-
     /**
-     * Gets the analyticsTrackingCode value for this CustomSite.
+     * Gets the value of the analyticsTrackingCode property.
      * 
-     * @return analyticsTrackingCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAnalyticsTrackingCode() {
+    public String getAnalyticsTrackingCode() {
         return analyticsTrackingCode;
     }
 
-
     /**
-     * Sets the analyticsTrackingCode value for this CustomSite.
+     * Sets the value of the analyticsTrackingCode property.
      * 
-     * @param analyticsTrackingCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAnalyticsTrackingCode(java.lang.String analyticsTrackingCode) {
-        this.analyticsTrackingCode = analyticsTrackingCode;
+    public void setAnalyticsTrackingCode(String value) {
+        this.analyticsTrackingCode = value;
     }
 
-
     /**
-     * Gets the authorizationRequiredPage value for this CustomSite.
+     * Gets the value of the authorizationRequiredPage property.
      * 
-     * @return authorizationRequiredPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAuthorizationRequiredPage() {
+    public String getAuthorizationRequiredPage() {
         return authorizationRequiredPage;
     }
 
-
     /**
-     * Sets the authorizationRequiredPage value for this CustomSite.
+     * Sets the value of the authorizationRequiredPage property.
      * 
-     * @param authorizationRequiredPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAuthorizationRequiredPage(java.lang.String authorizationRequiredPage) {
-        this.authorizationRequiredPage = authorizationRequiredPage;
+    public void setAuthorizationRequiredPage(String value) {
+        this.authorizationRequiredPage = value;
     }
 
-
     /**
-     * Gets the bandwidthExceededPage value for this CustomSite.
+     * Gets the value of the bandwidthExceededPage property.
      * 
-     * @return bandwidthExceededPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBandwidthExceededPage() {
+    public String getBandwidthExceededPage() {
         return bandwidthExceededPage;
     }
 
-
     /**
-     * Sets the bandwidthExceededPage value for this CustomSite.
+     * Sets the value of the bandwidthExceededPage property.
      * 
-     * @param bandwidthExceededPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBandwidthExceededPage(java.lang.String bandwidthExceededPage) {
-        this.bandwidthExceededPage = bandwidthExceededPage;
+    public void setBandwidthExceededPage(String value) {
+        this.bandwidthExceededPage = value;
     }
 
-
     /**
-     * Gets the changePasswordPage value for this CustomSite.
+     * Gets the value of the changePasswordPage property.
      * 
-     * @return changePasswordPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChangePasswordPage() {
+    public String getChangePasswordPage() {
         return changePasswordPage;
     }
 
-
     /**
-     * Sets the changePasswordPage value for this CustomSite.
+     * Sets the value of the changePasswordPage property.
      * 
-     * @param changePasswordPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setChangePasswordPage(java.lang.String changePasswordPage) {
-        this.changePasswordPage = changePasswordPage;
+    public void setChangePasswordPage(String value) {
+        this.changePasswordPage = value;
     }
 
-
     /**
-     * Gets the chatterAnswersForgotPasswordConfirmPage value for this CustomSite.
+     * Gets the value of the chatterAnswersForgotPasswordConfirmPage property.
      * 
-     * @return chatterAnswersForgotPasswordConfirmPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChatterAnswersForgotPasswordConfirmPage() {
+    public String getChatterAnswersForgotPasswordConfirmPage() {
         return chatterAnswersForgotPasswordConfirmPage;
     }
 
-
     /**
-     * Sets the chatterAnswersForgotPasswordConfirmPage value for this CustomSite.
+     * Sets the value of the chatterAnswersForgotPasswordConfirmPage property.
      * 
-     * @param chatterAnswersForgotPasswordConfirmPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setChatterAnswersForgotPasswordConfirmPage(java.lang.String chatterAnswersForgotPasswordConfirmPage) {
-        this.chatterAnswersForgotPasswordConfirmPage = chatterAnswersForgotPasswordConfirmPage;
+    public void setChatterAnswersForgotPasswordConfirmPage(String value) {
+        this.chatterAnswersForgotPasswordConfirmPage = value;
     }
 
-
     /**
-     * Gets the chatterAnswersForgotPasswordPage value for this CustomSite.
+     * Gets the value of the chatterAnswersForgotPasswordPage property.
      * 
-     * @return chatterAnswersForgotPasswordPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChatterAnswersForgotPasswordPage() {
+    public String getChatterAnswersForgotPasswordPage() {
         return chatterAnswersForgotPasswordPage;
     }
 
-
     /**
-     * Sets the chatterAnswersForgotPasswordPage value for this CustomSite.
+     * Sets the value of the chatterAnswersForgotPasswordPage property.
      * 
-     * @param chatterAnswersForgotPasswordPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setChatterAnswersForgotPasswordPage(java.lang.String chatterAnswersForgotPasswordPage) {
-        this.chatterAnswersForgotPasswordPage = chatterAnswersForgotPasswordPage;
+    public void setChatterAnswersForgotPasswordPage(String value) {
+        this.chatterAnswersForgotPasswordPage = value;
     }
 
-
     /**
-     * Gets the chatterAnswersHelpPage value for this CustomSite.
+     * Gets the value of the chatterAnswersHelpPage property.
      * 
-     * @return chatterAnswersHelpPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChatterAnswersHelpPage() {
+    public String getChatterAnswersHelpPage() {
         return chatterAnswersHelpPage;
     }
 
-
     /**
-     * Sets the chatterAnswersHelpPage value for this CustomSite.
+     * Sets the value of the chatterAnswersHelpPage property.
      * 
-     * @param chatterAnswersHelpPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setChatterAnswersHelpPage(java.lang.String chatterAnswersHelpPage) {
-        this.chatterAnswersHelpPage = chatterAnswersHelpPage;
+    public void setChatterAnswersHelpPage(String value) {
+        this.chatterAnswersHelpPage = value;
     }
 
-
     /**
-     * Gets the chatterAnswersLoginPage value for this CustomSite.
+     * Gets the value of the chatterAnswersLoginPage property.
      * 
-     * @return chatterAnswersLoginPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChatterAnswersLoginPage() {
+    public String getChatterAnswersLoginPage() {
         return chatterAnswersLoginPage;
     }
 
-
     /**
-     * Sets the chatterAnswersLoginPage value for this CustomSite.
+     * Sets the value of the chatterAnswersLoginPage property.
      * 
-     * @param chatterAnswersLoginPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setChatterAnswersLoginPage(java.lang.String chatterAnswersLoginPage) {
-        this.chatterAnswersLoginPage = chatterAnswersLoginPage;
+    public void setChatterAnswersLoginPage(String value) {
+        this.chatterAnswersLoginPage = value;
     }
 
-
     /**
-     * Gets the chatterAnswersRegistrationPage value for this CustomSite.
+     * Gets the value of the chatterAnswersRegistrationPage property.
      * 
-     * @return chatterAnswersRegistrationPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChatterAnswersRegistrationPage() {
+    public String getChatterAnswersRegistrationPage() {
         return chatterAnswersRegistrationPage;
     }
 
+    /**
+     * Sets the value of the chatterAnswersRegistrationPage property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setChatterAnswersRegistrationPage(String value) {
+        this.chatterAnswersRegistrationPage = value;
+    }
 
     /**
-     * Sets the chatterAnswersRegistrationPage value for this CustomSite.
+     * Gets the value of the customWebAddresses property.
      * 
-     * @param chatterAnswersRegistrationPage
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the customWebAddresses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCustomWebAddresses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link SiteWebAddress }
+     * 
+     * 
      */
-    public void setChatterAnswersRegistrationPage(java.lang.String chatterAnswersRegistrationPage) {
-        this.chatterAnswersRegistrationPage = chatterAnswersRegistrationPage;
+    public List<SiteWebAddress> getCustomWebAddresses() {
+        if (customWebAddresses == null) {
+            customWebAddresses = new ArrayList<SiteWebAddress>();
+        }
+        return this.customWebAddresses;
     }
-
 
     /**
-     * Gets the customWebAddresses value for this CustomSite.
+     * Gets the value of the description property.
      * 
-     * @return customWebAddresses
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SiteWebAddress[] getCustomWebAddresses() {
-        return customWebAddresses;
-    }
-
-
-    /**
-     * Sets the customWebAddresses value for this CustomSite.
-     * 
-     * @param customWebAddresses
-     */
-    public void setCustomWebAddresses(com.sforce.soap._2006._04.metadata.SiteWebAddress[] customWebAddresses) {
-        this.customWebAddresses = customWebAddresses;
-    }
-
-    public com.sforce.soap._2006._04.metadata.SiteWebAddress getCustomWebAddresses(int i) {
-        return this.customWebAddresses[i];
-    }
-
-    public void setCustomWebAddresses(int i, com.sforce.soap._2006._04.metadata.SiteWebAddress _value) {
-        this.customWebAddresses[i] = _value;
-    }
-
-
-    /**
-     * Gets the description value for this CustomSite.
-     * 
-     * @return description
-     */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this CustomSite.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the favoriteIcon value for this CustomSite.
+     * Gets the value of the favoriteIcon property.
      * 
-     * @return favoriteIcon
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFavoriteIcon() {
+    public String getFavoriteIcon() {
         return favoriteIcon;
     }
 
-
     /**
-     * Sets the favoriteIcon value for this CustomSite.
+     * Sets the value of the favoriteIcon property.
      * 
-     * @param favoriteIcon
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFavoriteIcon(java.lang.String favoriteIcon) {
-        this.favoriteIcon = favoriteIcon;
+    public void setFavoriteIcon(String value) {
+        this.favoriteIcon = value;
     }
 
-
     /**
-     * Gets the fileNotFoundPage value for this CustomSite.
+     * Gets the value of the fileNotFoundPage property.
      * 
-     * @return fileNotFoundPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFileNotFoundPage() {
+    public String getFileNotFoundPage() {
         return fileNotFoundPage;
     }
 
-
     /**
-     * Sets the fileNotFoundPage value for this CustomSite.
+     * Sets the value of the fileNotFoundPage property.
      * 
-     * @param fileNotFoundPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFileNotFoundPage(java.lang.String fileNotFoundPage) {
-        this.fileNotFoundPage = fileNotFoundPage;
+    public void setFileNotFoundPage(String value) {
+        this.fileNotFoundPage = value;
     }
 
-
     /**
-     * Gets the genericErrorPage value for this CustomSite.
+     * Gets the value of the genericErrorPage property.
      * 
-     * @return genericErrorPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getGenericErrorPage() {
+    public String getGenericErrorPage() {
         return genericErrorPage;
     }
 
-
     /**
-     * Sets the genericErrorPage value for this CustomSite.
+     * Sets the value of the genericErrorPage property.
      * 
-     * @param genericErrorPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setGenericErrorPage(java.lang.String genericErrorPage) {
-        this.genericErrorPage = genericErrorPage;
+    public void setGenericErrorPage(String value) {
+        this.genericErrorPage = value;
     }
 
-
     /**
-     * Gets the guestProfile value for this CustomSite.
+     * Gets the value of the guestProfile property.
      * 
-     * @return guestProfile
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getGuestProfile() {
+    public String getGuestProfile() {
         return guestProfile;
     }
 
-
     /**
-     * Sets the guestProfile value for this CustomSite.
+     * Sets the value of the guestProfile property.
      * 
-     * @param guestProfile
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setGuestProfile(java.lang.String guestProfile) {
-        this.guestProfile = guestProfile;
+    public void setGuestProfile(String value) {
+        this.guestProfile = value;
     }
 
-
     /**
-     * Gets the inMaintenancePage value for this CustomSite.
+     * Gets the value of the inMaintenancePage property.
      * 
-     * @return inMaintenancePage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getInMaintenancePage() {
+    public String getInMaintenancePage() {
         return inMaintenancePage;
     }
 
-
     /**
-     * Sets the inMaintenancePage value for this CustomSite.
+     * Sets the value of the inMaintenancePage property.
      * 
-     * @param inMaintenancePage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setInMaintenancePage(java.lang.String inMaintenancePage) {
-        this.inMaintenancePage = inMaintenancePage;
+    public void setInMaintenancePage(String value) {
+        this.inMaintenancePage = value;
     }
 
-
     /**
-     * Gets the inactiveIndexPage value for this CustomSite.
+     * Gets the value of the inactiveIndexPage property.
      * 
-     * @return inactiveIndexPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getInactiveIndexPage() {
+    public String getInactiveIndexPage() {
         return inactiveIndexPage;
     }
 
-
     /**
-     * Sets the inactiveIndexPage value for this CustomSite.
+     * Sets the value of the inactiveIndexPage property.
      * 
-     * @param inactiveIndexPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setInactiveIndexPage(java.lang.String inactiveIndexPage) {
-        this.inactiveIndexPage = inactiveIndexPage;
+    public void setInactiveIndexPage(String value) {
+        this.inactiveIndexPage = value;
     }
 
-
     /**
-     * Gets the indexPage value for this CustomSite.
+     * Gets the value of the indexPage property.
      * 
-     * @return indexPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIndexPage() {
+    public String getIndexPage() {
         return indexPage;
     }
 
-
     /**
-     * Sets the indexPage value for this CustomSite.
+     * Sets the value of the indexPage property.
      * 
-     * @param indexPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIndexPage(java.lang.String indexPage) {
-        this.indexPage = indexPage;
+    public void setIndexPage(String value) {
+        this.indexPage = value;
     }
 
-
     /**
-     * Gets the masterLabel value for this CustomSite.
+     * Gets the value of the masterLabel property.
      * 
-     * @return masterLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMasterLabel() {
+    public String getMasterLabel() {
         return masterLabel;
     }
 
-
     /**
-     * Sets the masterLabel value for this CustomSite.
+     * Sets the value of the masterLabel property.
      * 
-     * @param masterLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMasterLabel(java.lang.String masterLabel) {
-        this.masterLabel = masterLabel;
+    public void setMasterLabel(String value) {
+        this.masterLabel = value;
     }
 
-
     /**
-     * Gets the myProfilePage value for this CustomSite.
+     * Gets the value of the myProfilePage property.
      * 
-     * @return myProfilePage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMyProfilePage() {
+    public String getMyProfilePage() {
         return myProfilePage;
     }
 
-
     /**
-     * Sets the myProfilePage value for this CustomSite.
+     * Sets the value of the myProfilePage property.
      * 
-     * @param myProfilePage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMyProfilePage(java.lang.String myProfilePage) {
-        this.myProfilePage = myProfilePage;
+    public void setMyProfilePage(String value) {
+        this.myProfilePage = value;
     }
 
-
     /**
-     * Gets the portal value for this CustomSite.
+     * Gets the value of the portal property.
      * 
-     * @return portal
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPortal() {
+    public String getPortal() {
         return portal;
     }
 
-
     /**
-     * Sets the portal value for this CustomSite.
+     * Sets the value of the portal property.
      * 
-     * @param portal
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPortal(java.lang.String portal) {
-        this.portal = portal;
+    public void setPortal(String value) {
+        this.portal = value;
     }
 
-
     /**
-     * Gets the requireInsecurePortalAccess value for this CustomSite.
+     * Gets the value of the requireInsecurePortalAccess property.
      * 
-     * @return requireInsecurePortalAccess
      */
     public boolean isRequireInsecurePortalAccess() {
         return requireInsecurePortalAccess;
     }
 
-
     /**
-     * Sets the requireInsecurePortalAccess value for this CustomSite.
+     * Sets the value of the requireInsecurePortalAccess property.
      * 
-     * @param requireInsecurePortalAccess
      */
-    public void setRequireInsecurePortalAccess(boolean requireInsecurePortalAccess) {
-        this.requireInsecurePortalAccess = requireInsecurePortalAccess;
+    public void setRequireInsecurePortalAccess(boolean value) {
+        this.requireInsecurePortalAccess = value;
     }
 
-
     /**
-     * Gets the robotsTxtPage value for this CustomSite.
+     * Gets the value of the robotsTxtPage property.
      * 
-     * @return robotsTxtPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRobotsTxtPage() {
+    public String getRobotsTxtPage() {
         return robotsTxtPage;
     }
 
-
     /**
-     * Sets the robotsTxtPage value for this CustomSite.
+     * Sets the value of the robotsTxtPage property.
      * 
-     * @param robotsTxtPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRobotsTxtPage(java.lang.String robotsTxtPage) {
-        this.robotsTxtPage = robotsTxtPage;
+    public void setRobotsTxtPage(String value) {
+        this.robotsTxtPage = value;
     }
 
-
     /**
-     * Gets the rootComponent value for this CustomSite.
+     * Gets the value of the rootComponent property.
      * 
-     * @return rootComponent
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRootComponent() {
+    public String getRootComponent() {
         return rootComponent;
     }
 
-
     /**
-     * Sets the rootComponent value for this CustomSite.
+     * Sets the value of the rootComponent property.
      * 
-     * @param rootComponent
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRootComponent(java.lang.String rootComponent) {
-        this.rootComponent = rootComponent;
+    public void setRootComponent(String value) {
+        this.rootComponent = value;
     }
 
-
     /**
-     * Gets the serverIsDown value for this CustomSite.
+     * Gets the value of the serverIsDown property.
      * 
-     * @return serverIsDown
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getServerIsDown() {
+    public String getServerIsDown() {
         return serverIsDown;
     }
 
-
     /**
-     * Sets the serverIsDown value for this CustomSite.
+     * Sets the value of the serverIsDown property.
      * 
-     * @param serverIsDown
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setServerIsDown(java.lang.String serverIsDown) {
-        this.serverIsDown = serverIsDown;
+    public void setServerIsDown(String value) {
+        this.serverIsDown = value;
     }
 
-
     /**
-     * Gets the siteAdmin value for this CustomSite.
+     * Gets the value of the siteAdmin property.
      * 
-     * @return siteAdmin
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSiteAdmin() {
+    public String getSiteAdmin() {
         return siteAdmin;
     }
 
+    /**
+     * Sets the value of the siteAdmin property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSiteAdmin(String value) {
+        this.siteAdmin = value;
+    }
 
     /**
-     * Sets the siteAdmin value for this CustomSite.
+     * Gets the value of the siteRedirectMappings property.
      * 
-     * @param siteAdmin
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the siteRedirectMappings property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSiteRedirectMappings().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link SiteRedirectMapping }
+     * 
+     * 
      */
-    public void setSiteAdmin(java.lang.String siteAdmin) {
-        this.siteAdmin = siteAdmin;
+    public List<SiteRedirectMapping> getSiteRedirectMappings() {
+        if (siteRedirectMappings == null) {
+            siteRedirectMappings = new ArrayList<SiteRedirectMapping>();
+        }
+        return this.siteRedirectMappings;
     }
-
 
     /**
-     * Gets the siteRedirectMappings value for this CustomSite.
+     * Gets the value of the siteTemplate property.
      * 
-     * @return siteRedirectMappings
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SiteRedirectMapping[] getSiteRedirectMappings() {
-        return siteRedirectMappings;
-    }
-
-
-    /**
-     * Sets the siteRedirectMappings value for this CustomSite.
-     * 
-     * @param siteRedirectMappings
-     */
-    public void setSiteRedirectMappings(com.sforce.soap._2006._04.metadata.SiteRedirectMapping[] siteRedirectMappings) {
-        this.siteRedirectMappings = siteRedirectMappings;
-    }
-
-    public com.sforce.soap._2006._04.metadata.SiteRedirectMapping getSiteRedirectMappings(int i) {
-        return this.siteRedirectMappings[i];
-    }
-
-    public void setSiteRedirectMappings(int i, com.sforce.soap._2006._04.metadata.SiteRedirectMapping _value) {
-        this.siteRedirectMappings[i] = _value;
-    }
-
-
-    /**
-     * Gets the siteTemplate value for this CustomSite.
-     * 
-     * @return siteTemplate
-     */
-    public java.lang.String getSiteTemplate() {
+    public String getSiteTemplate() {
         return siteTemplate;
     }
 
-
     /**
-     * Sets the siteTemplate value for this CustomSite.
+     * Sets the value of the siteTemplate property.
      * 
-     * @param siteTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSiteTemplate(java.lang.String siteTemplate) {
-        this.siteTemplate = siteTemplate;
+    public void setSiteTemplate(String value) {
+        this.siteTemplate = value;
     }
 
-
     /**
-     * Gets the siteType value for this CustomSite.
+     * Gets the value of the siteType property.
      * 
-     * @return siteType
+     * @return
+     *     possible object is
+     *     {@link SiteType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SiteType getSiteType() {
+    public SiteType getSiteType() {
         return siteType;
     }
 
-
     /**
-     * Sets the siteType value for this CustomSite.
+     * Sets the value of the siteType property.
      * 
-     * @param siteType
+     * @param value
+     *     allowed object is
+     *     {@link SiteType }
+     *     
      */
-    public void setSiteType(com.sforce.soap._2006._04.metadata.SiteType siteType) {
-        this.siteType = siteType;
+    public void setSiteType(SiteType value) {
+        this.siteType = value;
     }
 
-
     /**
-     * Gets the subdomain value for this CustomSite.
+     * Gets the value of the subdomain property.
      * 
-     * @return subdomain
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSubdomain() {
+    public String getSubdomain() {
         return subdomain;
     }
 
-
     /**
-     * Sets the subdomain value for this CustomSite.
+     * Sets the value of the subdomain property.
      * 
-     * @param subdomain
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSubdomain(java.lang.String subdomain) {
-        this.subdomain = subdomain;
+    public void setSubdomain(String value) {
+        this.subdomain = value;
     }
 
-
     /**
-     * Gets the urlPathPrefix value for this CustomSite.
+     * Gets the value of the urlPathPrefix property.
      * 
-     * @return urlPathPrefix
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUrlPathPrefix() {
+    public String getUrlPathPrefix() {
         return urlPathPrefix;
     }
 
-
     /**
-     * Sets the urlPathPrefix value for this CustomSite.
+     * Sets the value of the urlPathPrefix property.
      * 
-     * @param urlPathPrefix
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUrlPathPrefix(java.lang.String urlPathPrefix) {
-        this.urlPathPrefix = urlPathPrefix;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomSite)) return false;
-        CustomSite other = (CustomSite) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            this.active == other.isActive() &&
-            this.allowHomePage == other.isAllowHomePage() &&
-            ((this.allowStandardAnswersPages==null && other.getAllowStandardAnswersPages()==null) || 
-             (this.allowStandardAnswersPages!=null &&
-              this.allowStandardAnswersPages.equals(other.getAllowStandardAnswersPages()))) &&
-            this.allowStandardIdeasPages == other.isAllowStandardIdeasPages() &&
-            this.allowStandardLookups == other.isAllowStandardLookups() &&
-            this.allowStandardSearch == other.isAllowStandardSearch() &&
-            ((this.analyticsTrackingCode==null && other.getAnalyticsTrackingCode()==null) || 
-             (this.analyticsTrackingCode!=null &&
-              this.analyticsTrackingCode.equals(other.getAnalyticsTrackingCode()))) &&
-            ((this.authorizationRequiredPage==null && other.getAuthorizationRequiredPage()==null) || 
-             (this.authorizationRequiredPage!=null &&
-              this.authorizationRequiredPage.equals(other.getAuthorizationRequiredPage()))) &&
-            ((this.bandwidthExceededPage==null && other.getBandwidthExceededPage()==null) || 
-             (this.bandwidthExceededPage!=null &&
-              this.bandwidthExceededPage.equals(other.getBandwidthExceededPage()))) &&
-            ((this.changePasswordPage==null && other.getChangePasswordPage()==null) || 
-             (this.changePasswordPage!=null &&
-              this.changePasswordPage.equals(other.getChangePasswordPage()))) &&
-            ((this.chatterAnswersForgotPasswordConfirmPage==null && other.getChatterAnswersForgotPasswordConfirmPage()==null) || 
-             (this.chatterAnswersForgotPasswordConfirmPage!=null &&
-              this.chatterAnswersForgotPasswordConfirmPage.equals(other.getChatterAnswersForgotPasswordConfirmPage()))) &&
-            ((this.chatterAnswersForgotPasswordPage==null && other.getChatterAnswersForgotPasswordPage()==null) || 
-             (this.chatterAnswersForgotPasswordPage!=null &&
-              this.chatterAnswersForgotPasswordPage.equals(other.getChatterAnswersForgotPasswordPage()))) &&
-            ((this.chatterAnswersHelpPage==null && other.getChatterAnswersHelpPage()==null) || 
-             (this.chatterAnswersHelpPage!=null &&
-              this.chatterAnswersHelpPage.equals(other.getChatterAnswersHelpPage()))) &&
-            ((this.chatterAnswersLoginPage==null && other.getChatterAnswersLoginPage()==null) || 
-             (this.chatterAnswersLoginPage!=null &&
-              this.chatterAnswersLoginPage.equals(other.getChatterAnswersLoginPage()))) &&
-            ((this.chatterAnswersRegistrationPage==null && other.getChatterAnswersRegistrationPage()==null) || 
-             (this.chatterAnswersRegistrationPage!=null &&
-              this.chatterAnswersRegistrationPage.equals(other.getChatterAnswersRegistrationPage()))) &&
-            ((this.customWebAddresses==null && other.getCustomWebAddresses()==null) || 
-             (this.customWebAddresses!=null &&
-              java.util.Arrays.equals(this.customWebAddresses, other.getCustomWebAddresses()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.favoriteIcon==null && other.getFavoriteIcon()==null) || 
-             (this.favoriteIcon!=null &&
-              this.favoriteIcon.equals(other.getFavoriteIcon()))) &&
-            ((this.fileNotFoundPage==null && other.getFileNotFoundPage()==null) || 
-             (this.fileNotFoundPage!=null &&
-              this.fileNotFoundPage.equals(other.getFileNotFoundPage()))) &&
-            ((this.genericErrorPage==null && other.getGenericErrorPage()==null) || 
-             (this.genericErrorPage!=null &&
-              this.genericErrorPage.equals(other.getGenericErrorPage()))) &&
-            ((this.guestProfile==null && other.getGuestProfile()==null) || 
-             (this.guestProfile!=null &&
-              this.guestProfile.equals(other.getGuestProfile()))) &&
-            ((this.inMaintenancePage==null && other.getInMaintenancePage()==null) || 
-             (this.inMaintenancePage!=null &&
-              this.inMaintenancePage.equals(other.getInMaintenancePage()))) &&
-            ((this.inactiveIndexPage==null && other.getInactiveIndexPage()==null) || 
-             (this.inactiveIndexPage!=null &&
-              this.inactiveIndexPage.equals(other.getInactiveIndexPage()))) &&
-            ((this.indexPage==null && other.getIndexPage()==null) || 
-             (this.indexPage!=null &&
-              this.indexPage.equals(other.getIndexPage()))) &&
-            ((this.masterLabel==null && other.getMasterLabel()==null) || 
-             (this.masterLabel!=null &&
-              this.masterLabel.equals(other.getMasterLabel()))) &&
-            ((this.myProfilePage==null && other.getMyProfilePage()==null) || 
-             (this.myProfilePage!=null &&
-              this.myProfilePage.equals(other.getMyProfilePage()))) &&
-            ((this.portal==null && other.getPortal()==null) || 
-             (this.portal!=null &&
-              this.portal.equals(other.getPortal()))) &&
-            this.requireInsecurePortalAccess == other.isRequireInsecurePortalAccess() &&
-            ((this.robotsTxtPage==null && other.getRobotsTxtPage()==null) || 
-             (this.robotsTxtPage!=null &&
-              this.robotsTxtPage.equals(other.getRobotsTxtPage()))) &&
-            ((this.rootComponent==null && other.getRootComponent()==null) || 
-             (this.rootComponent!=null &&
-              this.rootComponent.equals(other.getRootComponent()))) &&
-            ((this.serverIsDown==null && other.getServerIsDown()==null) || 
-             (this.serverIsDown!=null &&
-              this.serverIsDown.equals(other.getServerIsDown()))) &&
-            ((this.siteAdmin==null && other.getSiteAdmin()==null) || 
-             (this.siteAdmin!=null &&
-              this.siteAdmin.equals(other.getSiteAdmin()))) &&
-            ((this.siteRedirectMappings==null && other.getSiteRedirectMappings()==null) || 
-             (this.siteRedirectMappings!=null &&
-              java.util.Arrays.equals(this.siteRedirectMappings, other.getSiteRedirectMappings()))) &&
-            ((this.siteTemplate==null && other.getSiteTemplate()==null) || 
-             (this.siteTemplate!=null &&
-              this.siteTemplate.equals(other.getSiteTemplate()))) &&
-            ((this.siteType==null && other.getSiteType()==null) || 
-             (this.siteType!=null &&
-              this.siteType.equals(other.getSiteType()))) &&
-            ((this.subdomain==null && other.getSubdomain()==null) || 
-             (this.subdomain!=null &&
-              this.subdomain.equals(other.getSubdomain()))) &&
-            ((this.urlPathPrefix==null && other.getUrlPathPrefix()==null) || 
-             (this.urlPathPrefix!=null &&
-              this.urlPathPrefix.equals(other.getUrlPathPrefix())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        _hashCode += (isActive() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isAllowHomePage() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getAllowStandardAnswersPages() != null) {
-            _hashCode += getAllowStandardAnswersPages().hashCode();
-        }
-        _hashCode += (isAllowStandardIdeasPages() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isAllowStandardLookups() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isAllowStandardSearch() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getAnalyticsTrackingCode() != null) {
-            _hashCode += getAnalyticsTrackingCode().hashCode();
-        }
-        if (getAuthorizationRequiredPage() != null) {
-            _hashCode += getAuthorizationRequiredPage().hashCode();
-        }
-        if (getBandwidthExceededPage() != null) {
-            _hashCode += getBandwidthExceededPage().hashCode();
-        }
-        if (getChangePasswordPage() != null) {
-            _hashCode += getChangePasswordPage().hashCode();
-        }
-        if (getChatterAnswersForgotPasswordConfirmPage() != null) {
-            _hashCode += getChatterAnswersForgotPasswordConfirmPage().hashCode();
-        }
-        if (getChatterAnswersForgotPasswordPage() != null) {
-            _hashCode += getChatterAnswersForgotPasswordPage().hashCode();
-        }
-        if (getChatterAnswersHelpPage() != null) {
-            _hashCode += getChatterAnswersHelpPage().hashCode();
-        }
-        if (getChatterAnswersLoginPage() != null) {
-            _hashCode += getChatterAnswersLoginPage().hashCode();
-        }
-        if (getChatterAnswersRegistrationPage() != null) {
-            _hashCode += getChatterAnswersRegistrationPage().hashCode();
-        }
-        if (getCustomWebAddresses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCustomWebAddresses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCustomWebAddresses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getFavoriteIcon() != null) {
-            _hashCode += getFavoriteIcon().hashCode();
-        }
-        if (getFileNotFoundPage() != null) {
-            _hashCode += getFileNotFoundPage().hashCode();
-        }
-        if (getGenericErrorPage() != null) {
-            _hashCode += getGenericErrorPage().hashCode();
-        }
-        if (getGuestProfile() != null) {
-            _hashCode += getGuestProfile().hashCode();
-        }
-        if (getInMaintenancePage() != null) {
-            _hashCode += getInMaintenancePage().hashCode();
-        }
-        if (getInactiveIndexPage() != null) {
-            _hashCode += getInactiveIndexPage().hashCode();
-        }
-        if (getIndexPage() != null) {
-            _hashCode += getIndexPage().hashCode();
-        }
-        if (getMasterLabel() != null) {
-            _hashCode += getMasterLabel().hashCode();
-        }
-        if (getMyProfilePage() != null) {
-            _hashCode += getMyProfilePage().hashCode();
-        }
-        if (getPortal() != null) {
-            _hashCode += getPortal().hashCode();
-        }
-        _hashCode += (isRequireInsecurePortalAccess() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getRobotsTxtPage() != null) {
-            _hashCode += getRobotsTxtPage().hashCode();
-        }
-        if (getRootComponent() != null) {
-            _hashCode += getRootComponent().hashCode();
-        }
-        if (getServerIsDown() != null) {
-            _hashCode += getServerIsDown().hashCode();
-        }
-        if (getSiteAdmin() != null) {
-            _hashCode += getSiteAdmin().hashCode();
-        }
-        if (getSiteRedirectMappings() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSiteRedirectMappings());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSiteRedirectMappings(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSiteTemplate() != null) {
-            _hashCode += getSiteTemplate().hashCode();
-        }
-        if (getSiteType() != null) {
-            _hashCode += getSiteType().hashCode();
-        }
-        if (getSubdomain() != null) {
-            _hashCode += getSubdomain().hashCode();
-        }
-        if (getUrlPathPrefix() != null) {
-            _hashCode += getUrlPathPrefix().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomSite.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomSite"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("active");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "active"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowHomePage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowHomePage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowStandardAnswersPages");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowStandardAnswersPages"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowStandardIdeasPages");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowStandardIdeasPages"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowStandardLookups");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowStandardLookups"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowStandardSearch");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowStandardSearch"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("analyticsTrackingCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "analyticsTrackingCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("authorizationRequiredPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "authorizationRequiredPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("bandwidthExceededPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "bandwidthExceededPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("changePasswordPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "changePasswordPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chatterAnswersForgotPasswordConfirmPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chatterAnswersForgotPasswordConfirmPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chatterAnswersForgotPasswordPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chatterAnswersForgotPasswordPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chatterAnswersHelpPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chatterAnswersHelpPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chatterAnswersLoginPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chatterAnswersLoginPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chatterAnswersRegistrationPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chatterAnswersRegistrationPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customWebAddresses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customWebAddresses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SiteWebAddress"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("favoriteIcon");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "favoriteIcon"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fileNotFoundPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fileNotFoundPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("genericErrorPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "genericErrorPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("guestProfile");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "guestProfile"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("inMaintenancePage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "inMaintenancePage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("inactiveIndexPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "inactiveIndexPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("indexPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "indexPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("masterLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "masterLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("myProfilePage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "myProfilePage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("portal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "portal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("requireInsecurePortalAccess");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "requireInsecurePortalAccess"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("robotsTxtPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "robotsTxtPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rootComponent");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rootComponent"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("serverIsDown");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "serverIsDown"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("siteAdmin");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "siteAdmin"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("siteRedirectMappings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "siteRedirectMappings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SiteRedirectMapping"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("siteTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "siteTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("siteType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "siteType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SiteType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("subdomain");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "subdomain"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("urlPathPrefix");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "urlPathPrefix"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUrlPathPrefix(String value) {
+        this.urlPathPrefix = value;
     }
 
 }

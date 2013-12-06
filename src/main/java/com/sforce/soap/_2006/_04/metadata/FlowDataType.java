@@ -1,78 +1,63 @@
-/**
- * FlowDataType.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowDataType implements java.io.Serializable {
-    private java.lang.String _value_;
-    private static java.util.HashMap _table_ = new java.util.HashMap();
+import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
+import javax.xml.bind.annotation.XmlType;
 
-    // Constructor
-    protected FlowDataType(java.lang.String value) {
-        _value_ = value;
-        _table_.put(_value_,this);
+
+/**
+ * <p>Java class for FlowDataType.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="FlowDataType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="Currency"/>
+ *     &lt;enumeration value="Date"/>
+ *     &lt;enumeration value="Number"/>
+ *     &lt;enumeration value="String"/>
+ *     &lt;enumeration value="Boolean"/>
+ *     &lt;enumeration value="SObject"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
+ * </pre>
+ * 
+ */
+@XmlType(name = "FlowDataType", namespace = "http://soap.sforce.com/2006/04/metadata")
+@XmlEnum
+public enum FlowDataType {
+
+    @XmlEnumValue("Currency")
+    CURRENCY("Currency"),
+    @XmlEnumValue("Date")
+    DATE("Date"),
+    @XmlEnumValue("Number")
+    NUMBER("Number"),
+    @XmlEnumValue("String")
+    STRING("String"),
+    @XmlEnumValue("Boolean")
+    BOOLEAN("Boolean"),
+    @XmlEnumValue("SObject")
+    S_OBJECT("SObject");
+    private final String value;
+
+    FlowDataType(String v) {
+        value = v;
     }
 
-    public static final java.lang.String _Currency = "Currency";
-    public static final java.lang.String _Date = "Date";
-    public static final java.lang.String _Number = "Number";
-    public static final java.lang.String _String = "String";
-    public static final java.lang.String _Boolean = "Boolean";
-    public static final java.lang.String _SObject = "SObject";
-    public static final FlowDataType Currency = new FlowDataType(_Currency);
-    public static final FlowDataType Date = new FlowDataType(_Date);
-    public static final FlowDataType Number = new FlowDataType(_Number);
-    public static final FlowDataType String = new FlowDataType(_String);
-    public static final FlowDataType Boolean = new FlowDataType(_Boolean);
-    public static final FlowDataType SObject = new FlowDataType(_SObject);
-    public java.lang.String getValue() { return _value_;}
-    public static FlowDataType fromValue(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        FlowDataType enumeration = (FlowDataType)
-            _table_.get(value);
-        if (enumeration==null) throw new java.lang.IllegalArgumentException();
-        return enumeration;
+    public String value() {
+        return value;
     }
-    public static FlowDataType fromString(java.lang.String value)
-          throws java.lang.IllegalArgumentException {
-        return fromValue(value);
-    }
-    public boolean equals(java.lang.Object obj) {return (obj == this);}
-    public int hashCode() { return toString().hashCode();}
-    public java.lang.String toString() { return _value_;}
-    public java.lang.Object readResolve() throws java.io.ObjectStreamException { return fromValue(_value_);}
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumSerializer(
-            _javaType, _xmlType);
-    }
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new org.apache.axis.encoding.ser.EnumDeserializer(
-            _javaType, _xmlType);
-    }
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowDataType.class);
 
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDataType"));
-    }
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public static FlowDataType fromValue(String v) {
+        for (FlowDataType c: FlowDataType.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
 }

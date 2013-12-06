@@ -1,237 +1,137 @@
-/**
- * DescribeMetadataResult.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class DescribeMetadataResult  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.DescribeMetadataObject[] metadataObjects;
-
-    private java.lang.String organizationNamespace;
-
-    private boolean partialSaveAllowed;
-
-    private boolean testRequired;
-
-    public DescribeMetadataResult() {
-    }
-
-    public DescribeMetadataResult(
-           com.sforce.soap._2006._04.metadata.DescribeMetadataObject[] metadataObjects,
-           java.lang.String organizationNamespace,
-           boolean partialSaveAllowed,
-           boolean testRequired) {
-           this.metadataObjects = metadataObjects;
-           this.organizationNamespace = organizationNamespace;
-           this.partialSaveAllowed = partialSaveAllowed;
-           this.testRequired = testRequired;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the metadataObjects value for this DescribeMetadataResult.
-     * 
-     * @return metadataObjects
-     */
-    public com.sforce.soap._2006._04.metadata.DescribeMetadataObject[] getMetadataObjects() {
-        return metadataObjects;
-    }
+/**
+ * <p>Java class for DescribeMetadataResult complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DescribeMetadataResult">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="metadataObjects" type="{http://soap.sforce.com/2006/04/metadata}DescribeMetadataObject" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="organizationNamespace" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="partialSaveAllowed" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="testRequired" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DescribeMetadataResult", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "metadataObjects",
+    "organizationNamespace",
+    "partialSaveAllowed",
+    "testRequired"
+})
+public class DescribeMetadataResult {
 
-
-    /**
-     * Sets the metadataObjects value for this DescribeMetadataResult.
-     * 
-     * @param metadataObjects
-     */
-    public void setMetadataObjects(com.sforce.soap._2006._04.metadata.DescribeMetadataObject[] metadataObjects) {
-        this.metadataObjects = metadataObjects;
-    }
-
-    public com.sforce.soap._2006._04.metadata.DescribeMetadataObject getMetadataObjects(int i) {
-        return this.metadataObjects[i];
-    }
-
-    public void setMetadataObjects(int i, com.sforce.soap._2006._04.metadata.DescribeMetadataObject _value) {
-        this.metadataObjects[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<DescribeMetadataObject> metadataObjects;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String organizationNamespace;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean partialSaveAllowed;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean testRequired;
 
     /**
-     * Gets the organizationNamespace value for this DescribeMetadataResult.
+     * Gets the value of the metadataObjects property.
      * 
-     * @return organizationNamespace
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the metadataObjects property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getMetadataObjects().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DescribeMetadataObject }
+     * 
+     * 
      */
-    public java.lang.String getOrganizationNamespace() {
+    public List<DescribeMetadataObject> getMetadataObjects() {
+        if (metadataObjects == null) {
+            metadataObjects = new ArrayList<DescribeMetadataObject>();
+        }
+        return this.metadataObjects;
+    }
+
+    /**
+     * Gets the value of the organizationNamespace property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getOrganizationNamespace() {
         return organizationNamespace;
     }
 
-
     /**
-     * Sets the organizationNamespace value for this DescribeMetadataResult.
+     * Sets the value of the organizationNamespace property.
      * 
-     * @param organizationNamespace
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOrganizationNamespace(java.lang.String organizationNamespace) {
-        this.organizationNamespace = organizationNamespace;
+    public void setOrganizationNamespace(String value) {
+        this.organizationNamespace = value;
     }
 
-
     /**
-     * Gets the partialSaveAllowed value for this DescribeMetadataResult.
+     * Gets the value of the partialSaveAllowed property.
      * 
-     * @return partialSaveAllowed
      */
     public boolean isPartialSaveAllowed() {
         return partialSaveAllowed;
     }
 
-
     /**
-     * Sets the partialSaveAllowed value for this DescribeMetadataResult.
+     * Sets the value of the partialSaveAllowed property.
      * 
-     * @param partialSaveAllowed
      */
-    public void setPartialSaveAllowed(boolean partialSaveAllowed) {
-        this.partialSaveAllowed = partialSaveAllowed;
+    public void setPartialSaveAllowed(boolean value) {
+        this.partialSaveAllowed = value;
     }
 
-
     /**
-     * Gets the testRequired value for this DescribeMetadataResult.
+     * Gets the value of the testRequired property.
      * 
-     * @return testRequired
      */
     public boolean isTestRequired() {
         return testRequired;
     }
 
-
     /**
-     * Sets the testRequired value for this DescribeMetadataResult.
+     * Sets the value of the testRequired property.
      * 
-     * @param testRequired
      */
-    public void setTestRequired(boolean testRequired) {
-        this.testRequired = testRequired;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DescribeMetadataResult)) return false;
-        DescribeMetadataResult other = (DescribeMetadataResult) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.metadataObjects==null && other.getMetadataObjects()==null) || 
-             (this.metadataObjects!=null &&
-              java.util.Arrays.equals(this.metadataObjects, other.getMetadataObjects()))) &&
-            ((this.organizationNamespace==null && other.getOrganizationNamespace()==null) || 
-             (this.organizationNamespace!=null &&
-              this.organizationNamespace.equals(other.getOrganizationNamespace()))) &&
-            this.partialSaveAllowed == other.isPartialSaveAllowed() &&
-            this.testRequired == other.isTestRequired();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getMetadataObjects() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getMetadataObjects());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getMetadataObjects(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getOrganizationNamespace() != null) {
-            _hashCode += getOrganizationNamespace().hashCode();
-        }
-        _hashCode += (isPartialSaveAllowed() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isTestRequired() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DescribeMetadataResult.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DescribeMetadataResult"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("metadataObjects");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "metadataObjects"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DescribeMetadataObject"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("organizationNamespace");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "organizationNamespace"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("partialSaveAllowed");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "partialSaveAllowed"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("testRequired");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "testRequired"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTestRequired(boolean value) {
+        this.testRequired = value;
     }
 
 }

@@ -1,151 +1,82 @@
-/**
- * PermissionSetApplicationVisibility.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class PermissionSetApplicationVisibility  implements java.io.Serializable {
-    private java.lang.String application;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private boolean visible;
 
-    public PermissionSetApplicationVisibility() {
-    }
+/**
+ * <p>Java class for PermissionSetApplicationVisibility complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="PermissionSetApplicationVisibility">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="application" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="visible" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "PermissionSetApplicationVisibility", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "application",
+    "visible"
+})
+public class PermissionSetApplicationVisibility {
 
-    public PermissionSetApplicationVisibility(
-           java.lang.String application,
-           boolean visible) {
-           this.application = application;
-           this.visible = visible;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String application;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean visible;
 
     /**
-     * Gets the application value for this PermissionSetApplicationVisibility.
+     * Gets the value of the application property.
      * 
-     * @return application
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getApplication() {
+    public String getApplication() {
         return application;
     }
 
-
     /**
-     * Sets the application value for this PermissionSetApplicationVisibility.
+     * Sets the value of the application property.
      * 
-     * @param application
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setApplication(java.lang.String application) {
-        this.application = application;
+    public void setApplication(String value) {
+        this.application = value;
     }
 
-
     /**
-     * Gets the visible value for this PermissionSetApplicationVisibility.
+     * Gets the value of the visible property.
      * 
-     * @return visible
      */
     public boolean isVisible() {
         return visible;
     }
 
-
     /**
-     * Sets the visible value for this PermissionSetApplicationVisibility.
+     * Sets the value of the visible property.
      * 
-     * @param visible
      */
-    public void setVisible(boolean visible) {
-        this.visible = visible;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof PermissionSetApplicationVisibility)) return false;
-        PermissionSetApplicationVisibility other = (PermissionSetApplicationVisibility) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.application==null && other.getApplication()==null) || 
-             (this.application!=null &&
-              this.application.equals(other.getApplication()))) &&
-            this.visible == other.isVisible();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getApplication() != null) {
-            _hashCode += getApplication().hashCode();
-        }
-        _hashCode += (isVisible() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(PermissionSetApplicationVisibility.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetApplicationVisibility"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("application");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "application"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("visible");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "visible"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setVisible(boolean value) {
+        this.visible = value;
     }
 
 }

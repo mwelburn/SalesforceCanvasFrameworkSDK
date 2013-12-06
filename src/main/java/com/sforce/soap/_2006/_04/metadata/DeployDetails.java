@@ -1,265 +1,158 @@
-/**
- * DeployDetails.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class DeployDetails  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.DeployMessage[] componentFailures;
-
-    private com.sforce.soap._2006._04.metadata.DeployMessage[] componentSuccesses;
-
-    private com.sforce.soap._2006._04.metadata.RetrieveResult retrieveResult;
-
-    private com.sforce.soap._2006._04.metadata.RunTestsResult runTestResult;
-
-    public DeployDetails() {
-    }
-
-    public DeployDetails(
-           com.sforce.soap._2006._04.metadata.DeployMessage[] componentFailures,
-           com.sforce.soap._2006._04.metadata.DeployMessage[] componentSuccesses,
-           com.sforce.soap._2006._04.metadata.RetrieveResult retrieveResult,
-           com.sforce.soap._2006._04.metadata.RunTestsResult runTestResult) {
-           this.componentFailures = componentFailures;
-           this.componentSuccesses = componentSuccesses;
-           this.retrieveResult = retrieveResult;
-           this.runTestResult = runTestResult;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the componentFailures value for this DeployDetails.
-     * 
-     * @return componentFailures
-     */
-    public com.sforce.soap._2006._04.metadata.DeployMessage[] getComponentFailures() {
-        return componentFailures;
-    }
+/**
+ * <p>Java class for DeployDetails complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DeployDetails">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="componentFailures" type="{http://soap.sforce.com/2006/04/metadata}DeployMessage" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="componentSuccesses" type="{http://soap.sforce.com/2006/04/metadata}DeployMessage" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="retrieveResult" type="{http://soap.sforce.com/2006/04/metadata}RetrieveResult" minOccurs="0"/>
+ *         &lt;element name="runTestResult" type="{http://soap.sforce.com/2006/04/metadata}RunTestsResult" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DeployDetails", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "componentFailures",
+    "componentSuccesses",
+    "retrieveResult",
+    "runTestResult"
+})
+public class DeployDetails {
 
-
-    /**
-     * Sets the componentFailures value for this DeployDetails.
-     * 
-     * @param componentFailures
-     */
-    public void setComponentFailures(com.sforce.soap._2006._04.metadata.DeployMessage[] componentFailures) {
-        this.componentFailures = componentFailures;
-    }
-
-    public com.sforce.soap._2006._04.metadata.DeployMessage getComponentFailures(int i) {
-        return this.componentFailures[i];
-    }
-
-    public void setComponentFailures(int i, com.sforce.soap._2006._04.metadata.DeployMessage _value) {
-        this.componentFailures[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<DeployMessage> componentFailures;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<DeployMessage> componentSuccesses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected RetrieveResult retrieveResult;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected RunTestsResult runTestResult;
 
     /**
-     * Gets the componentSuccesses value for this DeployDetails.
+     * Gets the value of the componentFailures property.
      * 
-     * @return componentSuccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the componentFailures property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getComponentFailures().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DeployMessage }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.DeployMessage[] getComponentSuccesses() {
-        return componentSuccesses;
+    public List<DeployMessage> getComponentFailures() {
+        if (componentFailures == null) {
+            componentFailures = new ArrayList<DeployMessage>();
+        }
+        return this.componentFailures;
     }
-
 
     /**
-     * Sets the componentSuccesses value for this DeployDetails.
+     * Gets the value of the componentSuccesses property.
      * 
-     * @param componentSuccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the componentSuccesses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getComponentSuccesses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DeployMessage }
+     * 
+     * 
      */
-    public void setComponentSuccesses(com.sforce.soap._2006._04.metadata.DeployMessage[] componentSuccesses) {
-        this.componentSuccesses = componentSuccesses;
+    public List<DeployMessage> getComponentSuccesses() {
+        if (componentSuccesses == null) {
+            componentSuccesses = new ArrayList<DeployMessage>();
+        }
+        return this.componentSuccesses;
     }
-
-    public com.sforce.soap._2006._04.metadata.DeployMessage getComponentSuccesses(int i) {
-        return this.componentSuccesses[i];
-    }
-
-    public void setComponentSuccesses(int i, com.sforce.soap._2006._04.metadata.DeployMessage _value) {
-        this.componentSuccesses[i] = _value;
-    }
-
 
     /**
-     * Gets the retrieveResult value for this DeployDetails.
+     * Gets the value of the retrieveResult property.
      * 
-     * @return retrieveResult
+     * @return
+     *     possible object is
+     *     {@link RetrieveResult }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.RetrieveResult getRetrieveResult() {
+    public RetrieveResult getRetrieveResult() {
         return retrieveResult;
     }
 
-
     /**
-     * Sets the retrieveResult value for this DeployDetails.
+     * Sets the value of the retrieveResult property.
      * 
-     * @param retrieveResult
+     * @param value
+     *     allowed object is
+     *     {@link RetrieveResult }
+     *     
      */
-    public void setRetrieveResult(com.sforce.soap._2006._04.metadata.RetrieveResult retrieveResult) {
-        this.retrieveResult = retrieveResult;
+    public void setRetrieveResult(RetrieveResult value) {
+        this.retrieveResult = value;
     }
 
-
     /**
-     * Gets the runTestResult value for this DeployDetails.
+     * Gets the value of the runTestResult property.
      * 
-     * @return runTestResult
+     * @return
+     *     possible object is
+     *     {@link RunTestsResult }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.RunTestsResult getRunTestResult() {
+    public RunTestsResult getRunTestResult() {
         return runTestResult;
     }
 
-
     /**
-     * Sets the runTestResult value for this DeployDetails.
+     * Sets the value of the runTestResult property.
      * 
-     * @param runTestResult
+     * @param value
+     *     allowed object is
+     *     {@link RunTestsResult }
+     *     
      */
-    public void setRunTestResult(com.sforce.soap._2006._04.metadata.RunTestsResult runTestResult) {
-        this.runTestResult = runTestResult;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DeployDetails)) return false;
-        DeployDetails other = (DeployDetails) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.componentFailures==null && other.getComponentFailures()==null) || 
-             (this.componentFailures!=null &&
-              java.util.Arrays.equals(this.componentFailures, other.getComponentFailures()))) &&
-            ((this.componentSuccesses==null && other.getComponentSuccesses()==null) || 
-             (this.componentSuccesses!=null &&
-              java.util.Arrays.equals(this.componentSuccesses, other.getComponentSuccesses()))) &&
-            ((this.retrieveResult==null && other.getRetrieveResult()==null) || 
-             (this.retrieveResult!=null &&
-              this.retrieveResult.equals(other.getRetrieveResult()))) &&
-            ((this.runTestResult==null && other.getRunTestResult()==null) || 
-             (this.runTestResult!=null &&
-              this.runTestResult.equals(other.getRunTestResult())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getComponentFailures() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getComponentFailures());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getComponentFailures(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getComponentSuccesses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getComponentSuccesses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getComponentSuccesses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRetrieveResult() != null) {
-            _hashCode += getRetrieveResult().hashCode();
-        }
-        if (getRunTestResult() != null) {
-            _hashCode += getRunTestResult().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DeployDetails.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployDetails"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("componentFailures");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "componentFailures"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployMessage"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("componentSuccesses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "componentSuccesses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployMessage"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("retrieveResult");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "retrieveResult"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RetrieveResult"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("runTestResult");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "runTestResult"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RunTestsResult"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setRunTestResult(RunTestsResult value) {
+        this.runTestResult = value;
     }
 
 }

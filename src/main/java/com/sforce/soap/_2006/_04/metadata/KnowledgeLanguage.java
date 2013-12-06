@@ -1,304 +1,202 @@
-/**
- * KnowledgeLanguage.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class KnowledgeLanguage  implements java.io.Serializable {
-    private java.lang.Boolean active;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String defaultAssignee;
 
-    private com.sforce.soap._2006._04.metadata.KnowledgeLanguageLookupValueType defaultAssigneeType;
+/**
+ * <p>Java class for KnowledgeLanguage complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="KnowledgeLanguage">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="defaultAssignee" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="defaultAssigneeType" type="{http://soap.sforce.com/2006/04/metadata}KnowledgeLanguageLookupValueType" minOccurs="0"/>
+ *         &lt;element name="defaultReviewer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="defaultReviewerType" type="{http://soap.sforce.com/2006/04/metadata}KnowledgeLanguageLookupValueType" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "KnowledgeLanguage", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "active",
+    "defaultAssignee",
+    "defaultAssigneeType",
+    "defaultReviewer",
+    "defaultReviewerType",
+    "name"
+})
+public class KnowledgeLanguage {
 
-    private java.lang.String defaultReviewer;
-
-    private com.sforce.soap._2006._04.metadata.KnowledgeLanguageLookupValueType defaultReviewerType;
-
-    private java.lang.String name;
-
-    public KnowledgeLanguage() {
-    }
-
-    public KnowledgeLanguage(
-           java.lang.Boolean active,
-           java.lang.String defaultAssignee,
-           com.sforce.soap._2006._04.metadata.KnowledgeLanguageLookupValueType defaultAssigneeType,
-           java.lang.String defaultReviewer,
-           com.sforce.soap._2006._04.metadata.KnowledgeLanguageLookupValueType defaultReviewerType,
-           java.lang.String name) {
-           this.active = active;
-           this.defaultAssignee = defaultAssignee;
-           this.defaultAssigneeType = defaultAssigneeType;
-           this.defaultReviewer = defaultReviewer;
-           this.defaultReviewerType = defaultReviewerType;
-           this.name = name;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean active;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultAssignee;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected KnowledgeLanguageLookupValueType defaultAssigneeType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultReviewer;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected KnowledgeLanguageLookupValueType defaultReviewerType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
 
     /**
-     * Gets the active value for this KnowledgeLanguage.
+     * Gets the value of the active property.
      * 
-     * @return active
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getActive() {
+    public Boolean isActive() {
         return active;
     }
 
-
     /**
-     * Sets the active value for this KnowledgeLanguage.
+     * Sets the value of the active property.
      * 
-     * @param active
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setActive(java.lang.Boolean active) {
-        this.active = active;
+    public void setActive(Boolean value) {
+        this.active = value;
     }
 
-
     /**
-     * Gets the defaultAssignee value for this KnowledgeLanguage.
+     * Gets the value of the defaultAssignee property.
      * 
-     * @return defaultAssignee
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultAssignee() {
+    public String getDefaultAssignee() {
         return defaultAssignee;
     }
 
-
     /**
-     * Sets the defaultAssignee value for this KnowledgeLanguage.
+     * Sets the value of the defaultAssignee property.
      * 
-     * @param defaultAssignee
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultAssignee(java.lang.String defaultAssignee) {
-        this.defaultAssignee = defaultAssignee;
+    public void setDefaultAssignee(String value) {
+        this.defaultAssignee = value;
     }
 
-
     /**
-     * Gets the defaultAssigneeType value for this KnowledgeLanguage.
+     * Gets the value of the defaultAssigneeType property.
      * 
-     * @return defaultAssigneeType
+     * @return
+     *     possible object is
+     *     {@link KnowledgeLanguageLookupValueType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.KnowledgeLanguageLookupValueType getDefaultAssigneeType() {
+    public KnowledgeLanguageLookupValueType getDefaultAssigneeType() {
         return defaultAssigneeType;
     }
 
-
     /**
-     * Sets the defaultAssigneeType value for this KnowledgeLanguage.
+     * Sets the value of the defaultAssigneeType property.
      * 
-     * @param defaultAssigneeType
+     * @param value
+     *     allowed object is
+     *     {@link KnowledgeLanguageLookupValueType }
+     *     
      */
-    public void setDefaultAssigneeType(com.sforce.soap._2006._04.metadata.KnowledgeLanguageLookupValueType defaultAssigneeType) {
-        this.defaultAssigneeType = defaultAssigneeType;
+    public void setDefaultAssigneeType(KnowledgeLanguageLookupValueType value) {
+        this.defaultAssigneeType = value;
     }
 
-
     /**
-     * Gets the defaultReviewer value for this KnowledgeLanguage.
+     * Gets the value of the defaultReviewer property.
      * 
-     * @return defaultReviewer
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultReviewer() {
+    public String getDefaultReviewer() {
         return defaultReviewer;
     }
 
-
     /**
-     * Sets the defaultReviewer value for this KnowledgeLanguage.
+     * Sets the value of the defaultReviewer property.
      * 
-     * @param defaultReviewer
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultReviewer(java.lang.String defaultReviewer) {
-        this.defaultReviewer = defaultReviewer;
+    public void setDefaultReviewer(String value) {
+        this.defaultReviewer = value;
     }
 
-
     /**
-     * Gets the defaultReviewerType value for this KnowledgeLanguage.
+     * Gets the value of the defaultReviewerType property.
      * 
-     * @return defaultReviewerType
+     * @return
+     *     possible object is
+     *     {@link KnowledgeLanguageLookupValueType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.KnowledgeLanguageLookupValueType getDefaultReviewerType() {
+    public KnowledgeLanguageLookupValueType getDefaultReviewerType() {
         return defaultReviewerType;
     }
 
-
     /**
-     * Sets the defaultReviewerType value for this KnowledgeLanguage.
+     * Sets the value of the defaultReviewerType property.
      * 
-     * @param defaultReviewerType
+     * @param value
+     *     allowed object is
+     *     {@link KnowledgeLanguageLookupValueType }
+     *     
      */
-    public void setDefaultReviewerType(com.sforce.soap._2006._04.metadata.KnowledgeLanguageLookupValueType defaultReviewerType) {
-        this.defaultReviewerType = defaultReviewerType;
+    public void setDefaultReviewerType(KnowledgeLanguageLookupValueType value) {
+        this.defaultReviewerType = value;
     }
 
-
     /**
-     * Gets the name value for this KnowledgeLanguage.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this KnowledgeLanguage.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof KnowledgeLanguage)) return false;
-        KnowledgeLanguage other = (KnowledgeLanguage) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.active==null && other.getActive()==null) || 
-             (this.active!=null &&
-              this.active.equals(other.getActive()))) &&
-            ((this.defaultAssignee==null && other.getDefaultAssignee()==null) || 
-             (this.defaultAssignee!=null &&
-              this.defaultAssignee.equals(other.getDefaultAssignee()))) &&
-            ((this.defaultAssigneeType==null && other.getDefaultAssigneeType()==null) || 
-             (this.defaultAssigneeType!=null &&
-              this.defaultAssigneeType.equals(other.getDefaultAssigneeType()))) &&
-            ((this.defaultReviewer==null && other.getDefaultReviewer()==null) || 
-             (this.defaultReviewer!=null &&
-              this.defaultReviewer.equals(other.getDefaultReviewer()))) &&
-            ((this.defaultReviewerType==null && other.getDefaultReviewerType()==null) || 
-             (this.defaultReviewerType!=null &&
-              this.defaultReviewerType.equals(other.getDefaultReviewerType()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getActive() != null) {
-            _hashCode += getActive().hashCode();
-        }
-        if (getDefaultAssignee() != null) {
-            _hashCode += getDefaultAssignee().hashCode();
-        }
-        if (getDefaultAssigneeType() != null) {
-            _hashCode += getDefaultAssigneeType().hashCode();
-        }
-        if (getDefaultReviewer() != null) {
-            _hashCode += getDefaultReviewer().hashCode();
-        }
-        if (getDefaultReviewerType() != null) {
-            _hashCode += getDefaultReviewerType().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(KnowledgeLanguage.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KnowledgeLanguage"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("active");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "active"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultAssignee");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultAssignee"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultAssigneeType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultAssigneeType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KnowledgeLanguageLookupValueType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultReviewer");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultReviewer"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultReviewerType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultReviewerType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KnowledgeLanguageLookupValueType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setName(String value) {
+        this.name = value;
     }
 
 }

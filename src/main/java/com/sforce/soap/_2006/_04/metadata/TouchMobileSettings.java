@@ -1,268 +1,174 @@
-/**
- * TouchMobileSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class TouchMobileSettings  implements java.io.Serializable {
-    private java.lang.Boolean enableTouchAppIPad;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean enableTouchAppIPhone;
 
-    private java.lang.Boolean enableTouchBrowserIPad;
+/**
+ * <p>Java class for TouchMobileSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="TouchMobileSettings">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="enableTouchAppIPad" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableTouchAppIPhone" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableTouchBrowserIPad" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableTouchIosPhone" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableVisualforceInTouch" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "TouchMobileSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "enableTouchAppIPad",
+    "enableTouchAppIPhone",
+    "enableTouchBrowserIPad",
+    "enableTouchIosPhone",
+    "enableVisualforceInTouch"
+})
+public class TouchMobileSettings {
 
-    private java.lang.Boolean enableTouchIosPhone;
-
-    private java.lang.Boolean enableVisualforceInTouch;
-
-    public TouchMobileSettings() {
-    }
-
-    public TouchMobileSettings(
-           java.lang.Boolean enableTouchAppIPad,
-           java.lang.Boolean enableTouchAppIPhone,
-           java.lang.Boolean enableTouchBrowserIPad,
-           java.lang.Boolean enableTouchIosPhone,
-           java.lang.Boolean enableVisualforceInTouch) {
-           this.enableTouchAppIPad = enableTouchAppIPad;
-           this.enableTouchAppIPhone = enableTouchAppIPhone;
-           this.enableTouchBrowserIPad = enableTouchBrowserIPad;
-           this.enableTouchIosPhone = enableTouchIosPhone;
-           this.enableVisualforceInTouch = enableVisualforceInTouch;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableTouchAppIPad;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableTouchAppIPhone;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableTouchBrowserIPad;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableTouchIosPhone;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableVisualforceInTouch;
 
     /**
-     * Gets the enableTouchAppIPad value for this TouchMobileSettings.
+     * Gets the value of the enableTouchAppIPad property.
      * 
-     * @return enableTouchAppIPad
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableTouchAppIPad() {
+    public Boolean isEnableTouchAppIPad() {
         return enableTouchAppIPad;
     }
 
-
     /**
-     * Sets the enableTouchAppIPad value for this TouchMobileSettings.
+     * Sets the value of the enableTouchAppIPad property.
      * 
-     * @param enableTouchAppIPad
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableTouchAppIPad(java.lang.Boolean enableTouchAppIPad) {
-        this.enableTouchAppIPad = enableTouchAppIPad;
+    public void setEnableTouchAppIPad(Boolean value) {
+        this.enableTouchAppIPad = value;
     }
 
-
     /**
-     * Gets the enableTouchAppIPhone value for this TouchMobileSettings.
+     * Gets the value of the enableTouchAppIPhone property.
      * 
-     * @return enableTouchAppIPhone
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableTouchAppIPhone() {
+    public Boolean isEnableTouchAppIPhone() {
         return enableTouchAppIPhone;
     }
 
-
     /**
-     * Sets the enableTouchAppIPhone value for this TouchMobileSettings.
+     * Sets the value of the enableTouchAppIPhone property.
      * 
-     * @param enableTouchAppIPhone
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableTouchAppIPhone(java.lang.Boolean enableTouchAppIPhone) {
-        this.enableTouchAppIPhone = enableTouchAppIPhone;
+    public void setEnableTouchAppIPhone(Boolean value) {
+        this.enableTouchAppIPhone = value;
     }
 
-
     /**
-     * Gets the enableTouchBrowserIPad value for this TouchMobileSettings.
+     * Gets the value of the enableTouchBrowserIPad property.
      * 
-     * @return enableTouchBrowserIPad
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableTouchBrowserIPad() {
+    public Boolean isEnableTouchBrowserIPad() {
         return enableTouchBrowserIPad;
     }
 
-
     /**
-     * Sets the enableTouchBrowserIPad value for this TouchMobileSettings.
+     * Sets the value of the enableTouchBrowserIPad property.
      * 
-     * @param enableTouchBrowserIPad
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableTouchBrowserIPad(java.lang.Boolean enableTouchBrowserIPad) {
-        this.enableTouchBrowserIPad = enableTouchBrowserIPad;
+    public void setEnableTouchBrowserIPad(Boolean value) {
+        this.enableTouchBrowserIPad = value;
     }
 
-
     /**
-     * Gets the enableTouchIosPhone value for this TouchMobileSettings.
+     * Gets the value of the enableTouchIosPhone property.
      * 
-     * @return enableTouchIosPhone
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableTouchIosPhone() {
+    public Boolean isEnableTouchIosPhone() {
         return enableTouchIosPhone;
     }
 
-
     /**
-     * Sets the enableTouchIosPhone value for this TouchMobileSettings.
+     * Sets the value of the enableTouchIosPhone property.
      * 
-     * @param enableTouchIosPhone
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableTouchIosPhone(java.lang.Boolean enableTouchIosPhone) {
-        this.enableTouchIosPhone = enableTouchIosPhone;
+    public void setEnableTouchIosPhone(Boolean value) {
+        this.enableTouchIosPhone = value;
     }
 
-
     /**
-     * Gets the enableVisualforceInTouch value for this TouchMobileSettings.
+     * Gets the value of the enableVisualforceInTouch property.
      * 
-     * @return enableVisualforceInTouch
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableVisualforceInTouch() {
+    public Boolean isEnableVisualforceInTouch() {
         return enableVisualforceInTouch;
     }
 
-
     /**
-     * Sets the enableVisualforceInTouch value for this TouchMobileSettings.
+     * Sets the value of the enableVisualforceInTouch property.
      * 
-     * @param enableVisualforceInTouch
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableVisualforceInTouch(java.lang.Boolean enableVisualforceInTouch) {
-        this.enableVisualforceInTouch = enableVisualforceInTouch;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof TouchMobileSettings)) return false;
-        TouchMobileSettings other = (TouchMobileSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.enableTouchAppIPad==null && other.getEnableTouchAppIPad()==null) || 
-             (this.enableTouchAppIPad!=null &&
-              this.enableTouchAppIPad.equals(other.getEnableTouchAppIPad()))) &&
-            ((this.enableTouchAppIPhone==null && other.getEnableTouchAppIPhone()==null) || 
-             (this.enableTouchAppIPhone!=null &&
-              this.enableTouchAppIPhone.equals(other.getEnableTouchAppIPhone()))) &&
-            ((this.enableTouchBrowserIPad==null && other.getEnableTouchBrowserIPad()==null) || 
-             (this.enableTouchBrowserIPad!=null &&
-              this.enableTouchBrowserIPad.equals(other.getEnableTouchBrowserIPad()))) &&
-            ((this.enableTouchIosPhone==null && other.getEnableTouchIosPhone()==null) || 
-             (this.enableTouchIosPhone!=null &&
-              this.enableTouchIosPhone.equals(other.getEnableTouchIosPhone()))) &&
-            ((this.enableVisualforceInTouch==null && other.getEnableVisualforceInTouch()==null) || 
-             (this.enableVisualforceInTouch!=null &&
-              this.enableVisualforceInTouch.equals(other.getEnableVisualforceInTouch())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getEnableTouchAppIPad() != null) {
-            _hashCode += getEnableTouchAppIPad().hashCode();
-        }
-        if (getEnableTouchAppIPhone() != null) {
-            _hashCode += getEnableTouchAppIPhone().hashCode();
-        }
-        if (getEnableTouchBrowserIPad() != null) {
-            _hashCode += getEnableTouchBrowserIPad().hashCode();
-        }
-        if (getEnableTouchIosPhone() != null) {
-            _hashCode += getEnableTouchIosPhone().hashCode();
-        }
-        if (getEnableVisualforceInTouch() != null) {
-            _hashCode += getEnableVisualforceInTouch().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(TouchMobileSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "TouchMobileSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableTouchAppIPad");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableTouchAppIPad"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableTouchAppIPhone");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableTouchAppIPhone"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableTouchBrowserIPad");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableTouchBrowserIPad"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableTouchIosPhone");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableTouchIosPhone"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableVisualforceInTouch");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableVisualforceInTouch"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setEnableVisualforceInTouch(Boolean value) {
+        this.enableVisualforceInTouch = value;
     }
 
 }

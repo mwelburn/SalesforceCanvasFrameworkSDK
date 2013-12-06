@@ -1,247 +1,153 @@
-/**
- * ReportColumn.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportColumn  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ReportSummaryType[] aggregateTypes;
-
-    private java.lang.String field;
-
-    private java.lang.Boolean reverseColors;
-
-    private java.lang.Boolean showChanges;
-
-    public ReportColumn() {
-    }
-
-    public ReportColumn(
-           com.sforce.soap._2006._04.metadata.ReportSummaryType[] aggregateTypes,
-           java.lang.String field,
-           java.lang.Boolean reverseColors,
-           java.lang.Boolean showChanges) {
-           this.aggregateTypes = aggregateTypes;
-           this.field = field;
-           this.reverseColors = reverseColors;
-           this.showChanges = showChanges;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the aggregateTypes value for this ReportColumn.
-     * 
-     * @return aggregateTypes
-     */
-    public com.sforce.soap._2006._04.metadata.ReportSummaryType[] getAggregateTypes() {
-        return aggregateTypes;
-    }
+/**
+ * <p>Java class for ReportColumn complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportColumn">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="aggregateTypes" type="{http://soap.sforce.com/2006/04/metadata}ReportSummaryType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="field" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="reverseColors" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showChanges" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportColumn", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "aggregateTypes",
+    "field",
+    "reverseColors",
+    "showChanges"
+})
+public class ReportColumn {
 
-
-    /**
-     * Sets the aggregateTypes value for this ReportColumn.
-     * 
-     * @param aggregateTypes
-     */
-    public void setAggregateTypes(com.sforce.soap._2006._04.metadata.ReportSummaryType[] aggregateTypes) {
-        this.aggregateTypes = aggregateTypes;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportSummaryType getAggregateTypes(int i) {
-        return this.aggregateTypes[i];
-    }
-
-    public void setAggregateTypes(int i, com.sforce.soap._2006._04.metadata.ReportSummaryType _value) {
-        this.aggregateTypes[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportSummaryType> aggregateTypes;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String field;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean reverseColors;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showChanges;
 
     /**
-     * Gets the field value for this ReportColumn.
+     * Gets the value of the aggregateTypes property.
      * 
-     * @return field
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the aggregateTypes property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAggregateTypes().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportSummaryType }
+     * 
+     * 
      */
-    public java.lang.String getField() {
+    public List<ReportSummaryType> getAggregateTypes() {
+        if (aggregateTypes == null) {
+            aggregateTypes = new ArrayList<ReportSummaryType>();
+        }
+        return this.aggregateTypes;
+    }
+
+    /**
+     * Gets the value of the field property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getField() {
         return field;
     }
 
-
     /**
-     * Sets the field value for this ReportColumn.
+     * Sets the value of the field property.
      * 
-     * @param field
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setField(java.lang.String field) {
-        this.field = field;
+    public void setField(String value) {
+        this.field = value;
     }
 
-
     /**
-     * Gets the reverseColors value for this ReportColumn.
+     * Gets the value of the reverseColors property.
      * 
-     * @return reverseColors
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getReverseColors() {
+    public Boolean isReverseColors() {
         return reverseColors;
     }
 
-
     /**
-     * Sets the reverseColors value for this ReportColumn.
+     * Sets the value of the reverseColors property.
      * 
-     * @param reverseColors
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setReverseColors(java.lang.Boolean reverseColors) {
-        this.reverseColors = reverseColors;
+    public void setReverseColors(Boolean value) {
+        this.reverseColors = value;
     }
 
-
     /**
-     * Gets the showChanges value for this ReportColumn.
+     * Gets the value of the showChanges property.
      * 
-     * @return showChanges
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowChanges() {
+    public Boolean isShowChanges() {
         return showChanges;
     }
 
-
     /**
-     * Sets the showChanges value for this ReportColumn.
+     * Sets the value of the showChanges property.
      * 
-     * @param showChanges
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowChanges(java.lang.Boolean showChanges) {
-        this.showChanges = showChanges;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportColumn)) return false;
-        ReportColumn other = (ReportColumn) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.aggregateTypes==null && other.getAggregateTypes()==null) || 
-             (this.aggregateTypes!=null &&
-              java.util.Arrays.equals(this.aggregateTypes, other.getAggregateTypes()))) &&
-            ((this.field==null && other.getField()==null) || 
-             (this.field!=null &&
-              this.field.equals(other.getField()))) &&
-            ((this.reverseColors==null && other.getReverseColors()==null) || 
-             (this.reverseColors!=null &&
-              this.reverseColors.equals(other.getReverseColors()))) &&
-            ((this.showChanges==null && other.getShowChanges()==null) || 
-             (this.showChanges!=null &&
-              this.showChanges.equals(other.getShowChanges())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAggregateTypes() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getAggregateTypes());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getAggregateTypes(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getField() != null) {
-            _hashCode += getField().hashCode();
-        }
-        if (getReverseColors() != null) {
-            _hashCode += getReverseColors().hashCode();
-        }
-        if (getShowChanges() != null) {
-            _hashCode += getShowChanges().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportColumn.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportColumn"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("aggregateTypes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "aggregateTypes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportSummaryType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("field");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("reverseColors");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "reverseColors"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showChanges");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showChanges"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setShowChanges(Boolean value) {
+        this.showChanges = value;
     }
 
 }

@@ -1,389 +1,260 @@
-/**
- * LiveChatDeployment.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class LiveChatDeployment  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String brandingImage;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String[] domainWhiteList;
 
-    private java.lang.Boolean enablePrechatApi;
+/**
+ * <p>Java class for LiveChatDeployment complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="LiveChatDeployment">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="brandingImage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="domainWhiteList" type="{http://soap.sforce.com/2006/04/metadata}LiveChatDeploymentDomainWhitelist" minOccurs="0"/>
+ *         &lt;element name="enablePrechatApi" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableTranscriptSave" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="mobileBrandingImage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="site" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="windowTitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "LiveChatDeployment", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "brandingImage",
+    "domainWhiteList",
+    "enablePrechatApi",
+    "enableTranscriptSave",
+    "label",
+    "mobileBrandingImage",
+    "site",
+    "windowTitle"
+})
+public class LiveChatDeployment
+    extends Metadata
+{
 
-    private java.lang.Boolean enableTranscriptSave;
-
-    private java.lang.String label;
-
-    private java.lang.String mobileBrandingImage;
-
-    private java.lang.String site;
-
-    private java.lang.String windowTitle;
-
-    public LiveChatDeployment() {
-    }
-
-    public LiveChatDeployment(
-           java.lang.String fullName,
-           java.lang.String brandingImage,
-           java.lang.String[] domainWhiteList,
-           java.lang.Boolean enablePrechatApi,
-           java.lang.Boolean enableTranscriptSave,
-           java.lang.String label,
-           java.lang.String mobileBrandingImage,
-           java.lang.String site,
-           java.lang.String windowTitle) {
-        super(
-            fullName);
-        this.brandingImage = brandingImage;
-        this.domainWhiteList = domainWhiteList;
-        this.enablePrechatApi = enablePrechatApi;
-        this.enableTranscriptSave = enableTranscriptSave;
-        this.label = label;
-        this.mobileBrandingImage = mobileBrandingImage;
-        this.site = site;
-        this.windowTitle = windowTitle;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String brandingImage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LiveChatDeploymentDomainWhitelist domainWhiteList;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enablePrechatApi;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableTranscriptSave;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String mobileBrandingImage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String site;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String windowTitle;
 
     /**
-     * Gets the brandingImage value for this LiveChatDeployment.
+     * Gets the value of the brandingImage property.
      * 
-     * @return brandingImage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBrandingImage() {
+    public String getBrandingImage() {
         return brandingImage;
     }
 
-
     /**
-     * Sets the brandingImage value for this LiveChatDeployment.
+     * Sets the value of the brandingImage property.
      * 
-     * @param brandingImage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBrandingImage(java.lang.String brandingImage) {
-        this.brandingImage = brandingImage;
+    public void setBrandingImage(String value) {
+        this.brandingImage = value;
     }
 
-
     /**
-     * Gets the domainWhiteList value for this LiveChatDeployment.
+     * Gets the value of the domainWhiteList property.
      * 
-     * @return domainWhiteList
+     * @return
+     *     possible object is
+     *     {@link LiveChatDeploymentDomainWhitelist }
+     *     
      */
-    public java.lang.String[] getDomainWhiteList() {
+    public LiveChatDeploymentDomainWhitelist getDomainWhiteList() {
         return domainWhiteList;
     }
 
-
     /**
-     * Sets the domainWhiteList value for this LiveChatDeployment.
+     * Sets the value of the domainWhiteList property.
      * 
-     * @param domainWhiteList
+     * @param value
+     *     allowed object is
+     *     {@link LiveChatDeploymentDomainWhitelist }
+     *     
      */
-    public void setDomainWhiteList(java.lang.String[] domainWhiteList) {
-        this.domainWhiteList = domainWhiteList;
+    public void setDomainWhiteList(LiveChatDeploymentDomainWhitelist value) {
+        this.domainWhiteList = value;
     }
 
-
     /**
-     * Gets the enablePrechatApi value for this LiveChatDeployment.
+     * Gets the value of the enablePrechatApi property.
      * 
-     * @return enablePrechatApi
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnablePrechatApi() {
+    public Boolean isEnablePrechatApi() {
         return enablePrechatApi;
     }
 
-
     /**
-     * Sets the enablePrechatApi value for this LiveChatDeployment.
+     * Sets the value of the enablePrechatApi property.
      * 
-     * @param enablePrechatApi
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnablePrechatApi(java.lang.Boolean enablePrechatApi) {
-        this.enablePrechatApi = enablePrechatApi;
+    public void setEnablePrechatApi(Boolean value) {
+        this.enablePrechatApi = value;
     }
 
-
     /**
-     * Gets the enableTranscriptSave value for this LiveChatDeployment.
+     * Gets the value of the enableTranscriptSave property.
      * 
-     * @return enableTranscriptSave
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableTranscriptSave() {
+    public Boolean isEnableTranscriptSave() {
         return enableTranscriptSave;
     }
 
-
     /**
-     * Sets the enableTranscriptSave value for this LiveChatDeployment.
+     * Sets the value of the enableTranscriptSave property.
      * 
-     * @param enableTranscriptSave
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableTranscriptSave(java.lang.Boolean enableTranscriptSave) {
-        this.enableTranscriptSave = enableTranscriptSave;
+    public void setEnableTranscriptSave(Boolean value) {
+        this.enableTranscriptSave = value;
     }
 
-
     /**
-     * Gets the label value for this LiveChatDeployment.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this LiveChatDeployment.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the mobileBrandingImage value for this LiveChatDeployment.
+     * Gets the value of the mobileBrandingImage property.
      * 
-     * @return mobileBrandingImage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMobileBrandingImage() {
+    public String getMobileBrandingImage() {
         return mobileBrandingImage;
     }
 
-
     /**
-     * Sets the mobileBrandingImage value for this LiveChatDeployment.
+     * Sets the value of the mobileBrandingImage property.
      * 
-     * @param mobileBrandingImage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMobileBrandingImage(java.lang.String mobileBrandingImage) {
-        this.mobileBrandingImage = mobileBrandingImage;
+    public void setMobileBrandingImage(String value) {
+        this.mobileBrandingImage = value;
     }
 
-
     /**
-     * Gets the site value for this LiveChatDeployment.
+     * Gets the value of the site property.
      * 
-     * @return site
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSite() {
+    public String getSite() {
         return site;
     }
 
-
     /**
-     * Sets the site value for this LiveChatDeployment.
+     * Sets the value of the site property.
      * 
-     * @param site
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSite(java.lang.String site) {
-        this.site = site;
+    public void setSite(String value) {
+        this.site = value;
     }
 
-
     /**
-     * Gets the windowTitle value for this LiveChatDeployment.
+     * Gets the value of the windowTitle property.
      * 
-     * @return windowTitle
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getWindowTitle() {
+    public String getWindowTitle() {
         return windowTitle;
     }
 
-
     /**
-     * Sets the windowTitle value for this LiveChatDeployment.
+     * Sets the value of the windowTitle property.
      * 
-     * @param windowTitle
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setWindowTitle(java.lang.String windowTitle) {
-        this.windowTitle = windowTitle;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof LiveChatDeployment)) return false;
-        LiveChatDeployment other = (LiveChatDeployment) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.brandingImage==null && other.getBrandingImage()==null) || 
-             (this.brandingImage!=null &&
-              this.brandingImage.equals(other.getBrandingImage()))) &&
-            ((this.domainWhiteList==null && other.getDomainWhiteList()==null) || 
-             (this.domainWhiteList!=null &&
-              java.util.Arrays.equals(this.domainWhiteList, other.getDomainWhiteList()))) &&
-            ((this.enablePrechatApi==null && other.getEnablePrechatApi()==null) || 
-             (this.enablePrechatApi!=null &&
-              this.enablePrechatApi.equals(other.getEnablePrechatApi()))) &&
-            ((this.enableTranscriptSave==null && other.getEnableTranscriptSave()==null) || 
-             (this.enableTranscriptSave!=null &&
-              this.enableTranscriptSave.equals(other.getEnableTranscriptSave()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.mobileBrandingImage==null && other.getMobileBrandingImage()==null) || 
-             (this.mobileBrandingImage!=null &&
-              this.mobileBrandingImage.equals(other.getMobileBrandingImage()))) &&
-            ((this.site==null && other.getSite()==null) || 
-             (this.site!=null &&
-              this.site.equals(other.getSite()))) &&
-            ((this.windowTitle==null && other.getWindowTitle()==null) || 
-             (this.windowTitle!=null &&
-              this.windowTitle.equals(other.getWindowTitle())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getBrandingImage() != null) {
-            _hashCode += getBrandingImage().hashCode();
-        }
-        if (getDomainWhiteList() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDomainWhiteList());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDomainWhiteList(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getEnablePrechatApi() != null) {
-            _hashCode += getEnablePrechatApi().hashCode();
-        }
-        if (getEnableTranscriptSave() != null) {
-            _hashCode += getEnableTranscriptSave().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getMobileBrandingImage() != null) {
-            _hashCode += getMobileBrandingImage().hashCode();
-        }
-        if (getSite() != null) {
-            _hashCode += getSite().hashCode();
-        }
-        if (getWindowTitle() != null) {
-            _hashCode += getWindowTitle().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(LiveChatDeployment.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatDeployment"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("brandingImage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "brandingImage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("domainWhiteList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "domainWhiteList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "domain"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enablePrechatApi");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enablePrechatApi"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableTranscriptSave");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableTranscriptSave"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("mobileBrandingImage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "mobileBrandingImage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("site");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "site"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("windowTitle");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "windowTitle"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWindowTitle(String value) {
+        this.windowTitle = value;
     }
 
 }

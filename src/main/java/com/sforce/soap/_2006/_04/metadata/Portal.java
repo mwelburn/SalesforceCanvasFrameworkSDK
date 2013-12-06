@@ -1,1003 +1,728 @@
-/**
- * Portal.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Portal  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private boolean active;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String admin;
 
-    private java.lang.String defaultLanguage;
+/**
+ * <p>Java class for Portal complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Portal">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="active" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="admin" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="defaultLanguage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="emailSenderAddress" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="emailSenderName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="enableSelfCloseCase" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="footerDocument" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="forgotPassTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="headerDocument" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="isSelfRegistrationActivated" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="loginHeaderDocument" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="logoDocument" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="logoutUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="newCommentTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="newPassTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="newUserTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="ownerNotifyTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="selfRegNewUserUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="selfRegUserDefaultProfile" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="selfRegUserDefaultRole" type="{http://soap.sforce.com/2006/04/metadata}PortalRoles" minOccurs="0"/>
+ *         &lt;element name="selfRegUserTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="showActionConfirmation" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="stylesheetDocument" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="type" type="{http://soap.sforce.com/2006/04/metadata}PortalType"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Portal", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "active",
+    "admin",
+    "defaultLanguage",
+    "description",
+    "emailSenderAddress",
+    "emailSenderName",
+    "enableSelfCloseCase",
+    "footerDocument",
+    "forgotPassTemplate",
+    "headerDocument",
+    "isSelfRegistrationActivated",
+    "loginHeaderDocument",
+    "logoDocument",
+    "logoutUrl",
+    "newCommentTemplate",
+    "newPassTemplate",
+    "newUserTemplate",
+    "ownerNotifyTemplate",
+    "selfRegNewUserUrl",
+    "selfRegUserDefaultProfile",
+    "selfRegUserDefaultRole",
+    "selfRegUserTemplate",
+    "showActionConfirmation",
+    "stylesheetDocument",
+    "type"
+})
+public class Portal
+    extends Metadata
+{
 
-    private java.lang.String description;
-
-    private java.lang.String emailSenderAddress;
-
-    private java.lang.String emailSenderName;
-
-    private java.lang.Boolean enableSelfCloseCase;
-
-    private java.lang.String footerDocument;
-
-    private java.lang.String forgotPassTemplate;
-
-    private java.lang.String headerDocument;
-
-    private java.lang.Boolean isSelfRegistrationActivated;
-
-    private java.lang.String loginHeaderDocument;
-
-    private java.lang.String logoDocument;
-
-    private java.lang.String logoutUrl;
-
-    private java.lang.String newCommentTemplate;
-
-    private java.lang.String newPassTemplate;
-
-    private java.lang.String newUserTemplate;
-
-    private java.lang.String ownerNotifyTemplate;
-
-    private java.lang.String selfRegNewUserUrl;
-
-    private java.lang.String selfRegUserDefaultProfile;
-
-    private com.sforce.soap._2006._04.metadata.PortalRoles selfRegUserDefaultRole;
-
-    private java.lang.String selfRegUserTemplate;
-
-    private java.lang.Boolean showActionConfirmation;
-
-    private java.lang.String stylesheetDocument;
-
-    private com.sforce.soap._2006._04.metadata.PortalType type;
-
-    public Portal() {
-    }
-
-    public Portal(
-           java.lang.String fullName,
-           boolean active,
-           java.lang.String admin,
-           java.lang.String defaultLanguage,
-           java.lang.String description,
-           java.lang.String emailSenderAddress,
-           java.lang.String emailSenderName,
-           java.lang.Boolean enableSelfCloseCase,
-           java.lang.String footerDocument,
-           java.lang.String forgotPassTemplate,
-           java.lang.String headerDocument,
-           java.lang.Boolean isSelfRegistrationActivated,
-           java.lang.String loginHeaderDocument,
-           java.lang.String logoDocument,
-           java.lang.String logoutUrl,
-           java.lang.String newCommentTemplate,
-           java.lang.String newPassTemplate,
-           java.lang.String newUserTemplate,
-           java.lang.String ownerNotifyTemplate,
-           java.lang.String selfRegNewUserUrl,
-           java.lang.String selfRegUserDefaultProfile,
-           com.sforce.soap._2006._04.metadata.PortalRoles selfRegUserDefaultRole,
-           java.lang.String selfRegUserTemplate,
-           java.lang.Boolean showActionConfirmation,
-           java.lang.String stylesheetDocument,
-           com.sforce.soap._2006._04.metadata.PortalType type) {
-        super(
-            fullName);
-        this.active = active;
-        this.admin = admin;
-        this.defaultLanguage = defaultLanguage;
-        this.description = description;
-        this.emailSenderAddress = emailSenderAddress;
-        this.emailSenderName = emailSenderName;
-        this.enableSelfCloseCase = enableSelfCloseCase;
-        this.footerDocument = footerDocument;
-        this.forgotPassTemplate = forgotPassTemplate;
-        this.headerDocument = headerDocument;
-        this.isSelfRegistrationActivated = isSelfRegistrationActivated;
-        this.loginHeaderDocument = loginHeaderDocument;
-        this.logoDocument = logoDocument;
-        this.logoutUrl = logoutUrl;
-        this.newCommentTemplate = newCommentTemplate;
-        this.newPassTemplate = newPassTemplate;
-        this.newUserTemplate = newUserTemplate;
-        this.ownerNotifyTemplate = ownerNotifyTemplate;
-        this.selfRegNewUserUrl = selfRegNewUserUrl;
-        this.selfRegUserDefaultProfile = selfRegUserDefaultProfile;
-        this.selfRegUserDefaultRole = selfRegUserDefaultRole;
-        this.selfRegUserTemplate = selfRegUserTemplate;
-        this.showActionConfirmation = showActionConfirmation;
-        this.stylesheetDocument = stylesheetDocument;
-        this.type = type;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean active;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String admin;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultLanguage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String emailSenderAddress;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String emailSenderName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableSelfCloseCase;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String footerDocument;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String forgotPassTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String headerDocument;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isSelfRegistrationActivated;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String loginHeaderDocument;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String logoDocument;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String logoutUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String newCommentTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String newPassTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String newUserTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String ownerNotifyTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String selfRegNewUserUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String selfRegUserDefaultProfile;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected PortalRoles selfRegUserDefaultRole;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String selfRegUserTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showActionConfirmation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String stylesheetDocument;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected PortalType type;
 
     /**
-     * Gets the active value for this Portal.
+     * Gets the value of the active property.
      * 
-     * @return active
      */
     public boolean isActive() {
         return active;
     }
 
-
     /**
-     * Sets the active value for this Portal.
+     * Sets the value of the active property.
      * 
-     * @param active
      */
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setActive(boolean value) {
+        this.active = value;
     }
 
-
     /**
-     * Gets the admin value for this Portal.
+     * Gets the value of the admin property.
      * 
-     * @return admin
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAdmin() {
+    public String getAdmin() {
         return admin;
     }
 
-
     /**
-     * Sets the admin value for this Portal.
+     * Sets the value of the admin property.
      * 
-     * @param admin
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAdmin(java.lang.String admin) {
-        this.admin = admin;
+    public void setAdmin(String value) {
+        this.admin = value;
     }
 
-
     /**
-     * Gets the defaultLanguage value for this Portal.
+     * Gets the value of the defaultLanguage property.
      * 
-     * @return defaultLanguage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultLanguage() {
+    public String getDefaultLanguage() {
         return defaultLanguage;
     }
 
-
     /**
-     * Sets the defaultLanguage value for this Portal.
+     * Sets the value of the defaultLanguage property.
      * 
-     * @param defaultLanguage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultLanguage(java.lang.String defaultLanguage) {
-        this.defaultLanguage = defaultLanguage;
+    public void setDefaultLanguage(String value) {
+        this.defaultLanguage = value;
     }
 
-
     /**
-     * Gets the description value for this Portal.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this Portal.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the emailSenderAddress value for this Portal.
+     * Gets the value of the emailSenderAddress property.
      * 
-     * @return emailSenderAddress
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmailSenderAddress() {
+    public String getEmailSenderAddress() {
         return emailSenderAddress;
     }
 
-
     /**
-     * Sets the emailSenderAddress value for this Portal.
+     * Sets the value of the emailSenderAddress property.
      * 
-     * @param emailSenderAddress
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmailSenderAddress(java.lang.String emailSenderAddress) {
-        this.emailSenderAddress = emailSenderAddress;
+    public void setEmailSenderAddress(String value) {
+        this.emailSenderAddress = value;
     }
 
-
     /**
-     * Gets the emailSenderName value for this Portal.
+     * Gets the value of the emailSenderName property.
      * 
-     * @return emailSenderName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmailSenderName() {
+    public String getEmailSenderName() {
         return emailSenderName;
     }
 
-
     /**
-     * Sets the emailSenderName value for this Portal.
+     * Sets the value of the emailSenderName property.
      * 
-     * @param emailSenderName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmailSenderName(java.lang.String emailSenderName) {
-        this.emailSenderName = emailSenderName;
+    public void setEmailSenderName(String value) {
+        this.emailSenderName = value;
     }
 
-
     /**
-     * Gets the enableSelfCloseCase value for this Portal.
+     * Gets the value of the enableSelfCloseCase property.
      * 
-     * @return enableSelfCloseCase
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableSelfCloseCase() {
+    public Boolean isEnableSelfCloseCase() {
         return enableSelfCloseCase;
     }
 
-
     /**
-     * Sets the enableSelfCloseCase value for this Portal.
+     * Sets the value of the enableSelfCloseCase property.
      * 
-     * @param enableSelfCloseCase
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableSelfCloseCase(java.lang.Boolean enableSelfCloseCase) {
-        this.enableSelfCloseCase = enableSelfCloseCase;
+    public void setEnableSelfCloseCase(Boolean value) {
+        this.enableSelfCloseCase = value;
     }
 
-
     /**
-     * Gets the footerDocument value for this Portal.
+     * Gets the value of the footerDocument property.
      * 
-     * @return footerDocument
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFooterDocument() {
+    public String getFooterDocument() {
         return footerDocument;
     }
 
-
     /**
-     * Sets the footerDocument value for this Portal.
+     * Sets the value of the footerDocument property.
      * 
-     * @param footerDocument
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFooterDocument(java.lang.String footerDocument) {
-        this.footerDocument = footerDocument;
+    public void setFooterDocument(String value) {
+        this.footerDocument = value;
     }
 
-
     /**
-     * Gets the forgotPassTemplate value for this Portal.
+     * Gets the value of the forgotPassTemplate property.
      * 
-     * @return forgotPassTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getForgotPassTemplate() {
+    public String getForgotPassTemplate() {
         return forgotPassTemplate;
     }
 
-
     /**
-     * Sets the forgotPassTemplate value for this Portal.
+     * Sets the value of the forgotPassTemplate property.
      * 
-     * @param forgotPassTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setForgotPassTemplate(java.lang.String forgotPassTemplate) {
-        this.forgotPassTemplate = forgotPassTemplate;
+    public void setForgotPassTemplate(String value) {
+        this.forgotPassTemplate = value;
     }
 
-
     /**
-     * Gets the headerDocument value for this Portal.
+     * Gets the value of the headerDocument property.
      * 
-     * @return headerDocument
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getHeaderDocument() {
+    public String getHeaderDocument() {
         return headerDocument;
     }
 
-
     /**
-     * Sets the headerDocument value for this Portal.
+     * Sets the value of the headerDocument property.
      * 
-     * @param headerDocument
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setHeaderDocument(java.lang.String headerDocument) {
-        this.headerDocument = headerDocument;
+    public void setHeaderDocument(String value) {
+        this.headerDocument = value;
     }
 
-
     /**
-     * Gets the isSelfRegistrationActivated value for this Portal.
+     * Gets the value of the isSelfRegistrationActivated property.
      * 
-     * @return isSelfRegistrationActivated
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsSelfRegistrationActivated() {
+    public Boolean isIsSelfRegistrationActivated() {
         return isSelfRegistrationActivated;
     }
 
-
     /**
-     * Sets the isSelfRegistrationActivated value for this Portal.
+     * Sets the value of the isSelfRegistrationActivated property.
      * 
-     * @param isSelfRegistrationActivated
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsSelfRegistrationActivated(java.lang.Boolean isSelfRegistrationActivated) {
-        this.isSelfRegistrationActivated = isSelfRegistrationActivated;
+    public void setIsSelfRegistrationActivated(Boolean value) {
+        this.isSelfRegistrationActivated = value;
     }
 
-
     /**
-     * Gets the loginHeaderDocument value for this Portal.
+     * Gets the value of the loginHeaderDocument property.
      * 
-     * @return loginHeaderDocument
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLoginHeaderDocument() {
+    public String getLoginHeaderDocument() {
         return loginHeaderDocument;
     }
 
-
     /**
-     * Sets the loginHeaderDocument value for this Portal.
+     * Sets the value of the loginHeaderDocument property.
      * 
-     * @param loginHeaderDocument
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLoginHeaderDocument(java.lang.String loginHeaderDocument) {
-        this.loginHeaderDocument = loginHeaderDocument;
+    public void setLoginHeaderDocument(String value) {
+        this.loginHeaderDocument = value;
     }
 
-
     /**
-     * Gets the logoDocument value for this Portal.
+     * Gets the value of the logoDocument property.
      * 
-     * @return logoDocument
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLogoDocument() {
+    public String getLogoDocument() {
         return logoDocument;
     }
 
-
     /**
-     * Sets the logoDocument value for this Portal.
+     * Sets the value of the logoDocument property.
      * 
-     * @param logoDocument
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLogoDocument(java.lang.String logoDocument) {
-        this.logoDocument = logoDocument;
+    public void setLogoDocument(String value) {
+        this.logoDocument = value;
     }
 
-
     /**
-     * Gets the logoutUrl value for this Portal.
+     * Gets the value of the logoutUrl property.
      * 
-     * @return logoutUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLogoutUrl() {
+    public String getLogoutUrl() {
         return logoutUrl;
     }
 
-
     /**
-     * Sets the logoutUrl value for this Portal.
+     * Sets the value of the logoutUrl property.
      * 
-     * @param logoutUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLogoutUrl(java.lang.String logoutUrl) {
-        this.logoutUrl = logoutUrl;
+    public void setLogoutUrl(String value) {
+        this.logoutUrl = value;
     }
 
-
     /**
-     * Gets the newCommentTemplate value for this Portal.
+     * Gets the value of the newCommentTemplate property.
      * 
-     * @return newCommentTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNewCommentTemplate() {
+    public String getNewCommentTemplate() {
         return newCommentTemplate;
     }
 
-
     /**
-     * Sets the newCommentTemplate value for this Portal.
+     * Sets the value of the newCommentTemplate property.
      * 
-     * @param newCommentTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNewCommentTemplate(java.lang.String newCommentTemplate) {
-        this.newCommentTemplate = newCommentTemplate;
+    public void setNewCommentTemplate(String value) {
+        this.newCommentTemplate = value;
     }
 
-
     /**
-     * Gets the newPassTemplate value for this Portal.
+     * Gets the value of the newPassTemplate property.
      * 
-     * @return newPassTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNewPassTemplate() {
+    public String getNewPassTemplate() {
         return newPassTemplate;
     }
 
-
     /**
-     * Sets the newPassTemplate value for this Portal.
+     * Sets the value of the newPassTemplate property.
      * 
-     * @param newPassTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNewPassTemplate(java.lang.String newPassTemplate) {
-        this.newPassTemplate = newPassTemplate;
+    public void setNewPassTemplate(String value) {
+        this.newPassTemplate = value;
     }
 
-
     /**
-     * Gets the newUserTemplate value for this Portal.
+     * Gets the value of the newUserTemplate property.
      * 
-     * @return newUserTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNewUserTemplate() {
+    public String getNewUserTemplate() {
         return newUserTemplate;
     }
 
-
     /**
-     * Sets the newUserTemplate value for this Portal.
+     * Sets the value of the newUserTemplate property.
      * 
-     * @param newUserTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNewUserTemplate(java.lang.String newUserTemplate) {
-        this.newUserTemplate = newUserTemplate;
+    public void setNewUserTemplate(String value) {
+        this.newUserTemplate = value;
     }
 
-
     /**
-     * Gets the ownerNotifyTemplate value for this Portal.
+     * Gets the value of the ownerNotifyTemplate property.
      * 
-     * @return ownerNotifyTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOwnerNotifyTemplate() {
+    public String getOwnerNotifyTemplate() {
         return ownerNotifyTemplate;
     }
 
-
     /**
-     * Sets the ownerNotifyTemplate value for this Portal.
+     * Sets the value of the ownerNotifyTemplate property.
      * 
-     * @param ownerNotifyTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOwnerNotifyTemplate(java.lang.String ownerNotifyTemplate) {
-        this.ownerNotifyTemplate = ownerNotifyTemplate;
+    public void setOwnerNotifyTemplate(String value) {
+        this.ownerNotifyTemplate = value;
     }
 
-
     /**
-     * Gets the selfRegNewUserUrl value for this Portal.
+     * Gets the value of the selfRegNewUserUrl property.
      * 
-     * @return selfRegNewUserUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSelfRegNewUserUrl() {
+    public String getSelfRegNewUserUrl() {
         return selfRegNewUserUrl;
     }
 
-
     /**
-     * Sets the selfRegNewUserUrl value for this Portal.
+     * Sets the value of the selfRegNewUserUrl property.
      * 
-     * @param selfRegNewUserUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSelfRegNewUserUrl(java.lang.String selfRegNewUserUrl) {
-        this.selfRegNewUserUrl = selfRegNewUserUrl;
+    public void setSelfRegNewUserUrl(String value) {
+        this.selfRegNewUserUrl = value;
     }
 
-
     /**
-     * Gets the selfRegUserDefaultProfile value for this Portal.
+     * Gets the value of the selfRegUserDefaultProfile property.
      * 
-     * @return selfRegUserDefaultProfile
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSelfRegUserDefaultProfile() {
+    public String getSelfRegUserDefaultProfile() {
         return selfRegUserDefaultProfile;
     }
 
-
     /**
-     * Sets the selfRegUserDefaultProfile value for this Portal.
+     * Sets the value of the selfRegUserDefaultProfile property.
      * 
-     * @param selfRegUserDefaultProfile
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSelfRegUserDefaultProfile(java.lang.String selfRegUserDefaultProfile) {
-        this.selfRegUserDefaultProfile = selfRegUserDefaultProfile;
+    public void setSelfRegUserDefaultProfile(String value) {
+        this.selfRegUserDefaultProfile = value;
     }
 
-
     /**
-     * Gets the selfRegUserDefaultRole value for this Portal.
+     * Gets the value of the selfRegUserDefaultRole property.
      * 
-     * @return selfRegUserDefaultRole
+     * @return
+     *     possible object is
+     *     {@link PortalRoles }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.PortalRoles getSelfRegUserDefaultRole() {
+    public PortalRoles getSelfRegUserDefaultRole() {
         return selfRegUserDefaultRole;
     }
 
-
     /**
-     * Sets the selfRegUserDefaultRole value for this Portal.
+     * Sets the value of the selfRegUserDefaultRole property.
      * 
-     * @param selfRegUserDefaultRole
+     * @param value
+     *     allowed object is
+     *     {@link PortalRoles }
+     *     
      */
-    public void setSelfRegUserDefaultRole(com.sforce.soap._2006._04.metadata.PortalRoles selfRegUserDefaultRole) {
-        this.selfRegUserDefaultRole = selfRegUserDefaultRole;
+    public void setSelfRegUserDefaultRole(PortalRoles value) {
+        this.selfRegUserDefaultRole = value;
     }
 
-
     /**
-     * Gets the selfRegUserTemplate value for this Portal.
+     * Gets the value of the selfRegUserTemplate property.
      * 
-     * @return selfRegUserTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSelfRegUserTemplate() {
+    public String getSelfRegUserTemplate() {
         return selfRegUserTemplate;
     }
 
-
     /**
-     * Sets the selfRegUserTemplate value for this Portal.
+     * Sets the value of the selfRegUserTemplate property.
      * 
-     * @param selfRegUserTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSelfRegUserTemplate(java.lang.String selfRegUserTemplate) {
-        this.selfRegUserTemplate = selfRegUserTemplate;
+    public void setSelfRegUserTemplate(String value) {
+        this.selfRegUserTemplate = value;
     }
 
-
     /**
-     * Gets the showActionConfirmation value for this Portal.
+     * Gets the value of the showActionConfirmation property.
      * 
-     * @return showActionConfirmation
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowActionConfirmation() {
+    public Boolean isShowActionConfirmation() {
         return showActionConfirmation;
     }
 
-
     /**
-     * Sets the showActionConfirmation value for this Portal.
+     * Sets the value of the showActionConfirmation property.
      * 
-     * @param showActionConfirmation
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowActionConfirmation(java.lang.Boolean showActionConfirmation) {
-        this.showActionConfirmation = showActionConfirmation;
+    public void setShowActionConfirmation(Boolean value) {
+        this.showActionConfirmation = value;
     }
 
-
     /**
-     * Gets the stylesheetDocument value for this Portal.
+     * Gets the value of the stylesheetDocument property.
      * 
-     * @return stylesheetDocument
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStylesheetDocument() {
+    public String getStylesheetDocument() {
         return stylesheetDocument;
     }
 
-
     /**
-     * Sets the stylesheetDocument value for this Portal.
+     * Sets the value of the stylesheetDocument property.
      * 
-     * @param stylesheetDocument
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStylesheetDocument(java.lang.String stylesheetDocument) {
-        this.stylesheetDocument = stylesheetDocument;
+    public void setStylesheetDocument(String value) {
+        this.stylesheetDocument = value;
     }
 
-
     /**
-     * Gets the type value for this Portal.
+     * Gets the value of the type property.
      * 
-     * @return type
+     * @return
+     *     possible object is
+     *     {@link PortalType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.PortalType getType() {
+    public PortalType getType() {
         return type;
     }
 
-
     /**
-     * Sets the type value for this Portal.
+     * Sets the value of the type property.
      * 
-     * @param type
+     * @param value
+     *     allowed object is
+     *     {@link PortalType }
+     *     
      */
-    public void setType(com.sforce.soap._2006._04.metadata.PortalType type) {
-        this.type = type;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Portal)) return false;
-        Portal other = (Portal) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            this.active == other.isActive() &&
-            ((this.admin==null && other.getAdmin()==null) || 
-             (this.admin!=null &&
-              this.admin.equals(other.getAdmin()))) &&
-            ((this.defaultLanguage==null && other.getDefaultLanguage()==null) || 
-             (this.defaultLanguage!=null &&
-              this.defaultLanguage.equals(other.getDefaultLanguage()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.emailSenderAddress==null && other.getEmailSenderAddress()==null) || 
-             (this.emailSenderAddress!=null &&
-              this.emailSenderAddress.equals(other.getEmailSenderAddress()))) &&
-            ((this.emailSenderName==null && other.getEmailSenderName()==null) || 
-             (this.emailSenderName!=null &&
-              this.emailSenderName.equals(other.getEmailSenderName()))) &&
-            ((this.enableSelfCloseCase==null && other.getEnableSelfCloseCase()==null) || 
-             (this.enableSelfCloseCase!=null &&
-              this.enableSelfCloseCase.equals(other.getEnableSelfCloseCase()))) &&
-            ((this.footerDocument==null && other.getFooterDocument()==null) || 
-             (this.footerDocument!=null &&
-              this.footerDocument.equals(other.getFooterDocument()))) &&
-            ((this.forgotPassTemplate==null && other.getForgotPassTemplate()==null) || 
-             (this.forgotPassTemplate!=null &&
-              this.forgotPassTemplate.equals(other.getForgotPassTemplate()))) &&
-            ((this.headerDocument==null && other.getHeaderDocument()==null) || 
-             (this.headerDocument!=null &&
-              this.headerDocument.equals(other.getHeaderDocument()))) &&
-            ((this.isSelfRegistrationActivated==null && other.getIsSelfRegistrationActivated()==null) || 
-             (this.isSelfRegistrationActivated!=null &&
-              this.isSelfRegistrationActivated.equals(other.getIsSelfRegistrationActivated()))) &&
-            ((this.loginHeaderDocument==null && other.getLoginHeaderDocument()==null) || 
-             (this.loginHeaderDocument!=null &&
-              this.loginHeaderDocument.equals(other.getLoginHeaderDocument()))) &&
-            ((this.logoDocument==null && other.getLogoDocument()==null) || 
-             (this.logoDocument!=null &&
-              this.logoDocument.equals(other.getLogoDocument()))) &&
-            ((this.logoutUrl==null && other.getLogoutUrl()==null) || 
-             (this.logoutUrl!=null &&
-              this.logoutUrl.equals(other.getLogoutUrl()))) &&
-            ((this.newCommentTemplate==null && other.getNewCommentTemplate()==null) || 
-             (this.newCommentTemplate!=null &&
-              this.newCommentTemplate.equals(other.getNewCommentTemplate()))) &&
-            ((this.newPassTemplate==null && other.getNewPassTemplate()==null) || 
-             (this.newPassTemplate!=null &&
-              this.newPassTemplate.equals(other.getNewPassTemplate()))) &&
-            ((this.newUserTemplate==null && other.getNewUserTemplate()==null) || 
-             (this.newUserTemplate!=null &&
-              this.newUserTemplate.equals(other.getNewUserTemplate()))) &&
-            ((this.ownerNotifyTemplate==null && other.getOwnerNotifyTemplate()==null) || 
-             (this.ownerNotifyTemplate!=null &&
-              this.ownerNotifyTemplate.equals(other.getOwnerNotifyTemplate()))) &&
-            ((this.selfRegNewUserUrl==null && other.getSelfRegNewUserUrl()==null) || 
-             (this.selfRegNewUserUrl!=null &&
-              this.selfRegNewUserUrl.equals(other.getSelfRegNewUserUrl()))) &&
-            ((this.selfRegUserDefaultProfile==null && other.getSelfRegUserDefaultProfile()==null) || 
-             (this.selfRegUserDefaultProfile!=null &&
-              this.selfRegUserDefaultProfile.equals(other.getSelfRegUserDefaultProfile()))) &&
-            ((this.selfRegUserDefaultRole==null && other.getSelfRegUserDefaultRole()==null) || 
-             (this.selfRegUserDefaultRole!=null &&
-              this.selfRegUserDefaultRole.equals(other.getSelfRegUserDefaultRole()))) &&
-            ((this.selfRegUserTemplate==null && other.getSelfRegUserTemplate()==null) || 
-             (this.selfRegUserTemplate!=null &&
-              this.selfRegUserTemplate.equals(other.getSelfRegUserTemplate()))) &&
-            ((this.showActionConfirmation==null && other.getShowActionConfirmation()==null) || 
-             (this.showActionConfirmation!=null &&
-              this.showActionConfirmation.equals(other.getShowActionConfirmation()))) &&
-            ((this.stylesheetDocument==null && other.getStylesheetDocument()==null) || 
-             (this.stylesheetDocument!=null &&
-              this.stylesheetDocument.equals(other.getStylesheetDocument()))) &&
-            ((this.type==null && other.getType()==null) || 
-             (this.type!=null &&
-              this.type.equals(other.getType())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        _hashCode += (isActive() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getAdmin() != null) {
-            _hashCode += getAdmin().hashCode();
-        }
-        if (getDefaultLanguage() != null) {
-            _hashCode += getDefaultLanguage().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getEmailSenderAddress() != null) {
-            _hashCode += getEmailSenderAddress().hashCode();
-        }
-        if (getEmailSenderName() != null) {
-            _hashCode += getEmailSenderName().hashCode();
-        }
-        if (getEnableSelfCloseCase() != null) {
-            _hashCode += getEnableSelfCloseCase().hashCode();
-        }
-        if (getFooterDocument() != null) {
-            _hashCode += getFooterDocument().hashCode();
-        }
-        if (getForgotPassTemplate() != null) {
-            _hashCode += getForgotPassTemplate().hashCode();
-        }
-        if (getHeaderDocument() != null) {
-            _hashCode += getHeaderDocument().hashCode();
-        }
-        if (getIsSelfRegistrationActivated() != null) {
-            _hashCode += getIsSelfRegistrationActivated().hashCode();
-        }
-        if (getLoginHeaderDocument() != null) {
-            _hashCode += getLoginHeaderDocument().hashCode();
-        }
-        if (getLogoDocument() != null) {
-            _hashCode += getLogoDocument().hashCode();
-        }
-        if (getLogoutUrl() != null) {
-            _hashCode += getLogoutUrl().hashCode();
-        }
-        if (getNewCommentTemplate() != null) {
-            _hashCode += getNewCommentTemplate().hashCode();
-        }
-        if (getNewPassTemplate() != null) {
-            _hashCode += getNewPassTemplate().hashCode();
-        }
-        if (getNewUserTemplate() != null) {
-            _hashCode += getNewUserTemplate().hashCode();
-        }
-        if (getOwnerNotifyTemplate() != null) {
-            _hashCode += getOwnerNotifyTemplate().hashCode();
-        }
-        if (getSelfRegNewUserUrl() != null) {
-            _hashCode += getSelfRegNewUserUrl().hashCode();
-        }
-        if (getSelfRegUserDefaultProfile() != null) {
-            _hashCode += getSelfRegUserDefaultProfile().hashCode();
-        }
-        if (getSelfRegUserDefaultRole() != null) {
-            _hashCode += getSelfRegUserDefaultRole().hashCode();
-        }
-        if (getSelfRegUserTemplate() != null) {
-            _hashCode += getSelfRegUserTemplate().hashCode();
-        }
-        if (getShowActionConfirmation() != null) {
-            _hashCode += getShowActionConfirmation().hashCode();
-        }
-        if (getStylesheetDocument() != null) {
-            _hashCode += getStylesheetDocument().hashCode();
-        }
-        if (getType() != null) {
-            _hashCode += getType().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Portal.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Portal"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("active");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "active"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("admin");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "admin"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultLanguage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultLanguage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailSenderAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emailSenderAddress"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailSenderName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emailSenderName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableSelfCloseCase");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableSelfCloseCase"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("footerDocument");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "footerDocument"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("forgotPassTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "forgotPassTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("headerDocument");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "headerDocument"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isSelfRegistrationActivated");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isSelfRegistrationActivated"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("loginHeaderDocument");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "loginHeaderDocument"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("logoDocument");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "logoDocument"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("logoutUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "logoutUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("newCommentTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "newCommentTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("newPassTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "newPassTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("newUserTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "newUserTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ownerNotifyTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ownerNotifyTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("selfRegNewUserUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "selfRegNewUserUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("selfRegUserDefaultProfile");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "selfRegUserDefaultProfile"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("selfRegUserDefaultRole");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "selfRegUserDefaultRole"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PortalRoles"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("selfRegUserTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "selfRegUserTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showActionConfirmation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showActionConfirmation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("stylesheetDocument");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "stylesheetDocument"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("type");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "type"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PortalType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setType(PortalType value) {
+        this.type = value;
     }
 
 }

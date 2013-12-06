@@ -1,801 +1,540 @@
-/**
- * DeployResult.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class DeployResult  implements java.io.Serializable {
-    private boolean checkOnly;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
-    private java.util.Calendar completedDate;
 
-    private java.util.Calendar createdDate;
+/**
+ * <p>Java class for DeployResult complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DeployResult">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="checkOnly" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="completedDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="createdDate" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="details" type="{http://soap.sforce.com/2006/04/metadata}DeployDetails"/>
+ *         &lt;element name="done" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="errorMessage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="errorStatusCode" type="{http://soap.sforce.com/2006/04/metadata}StatusCode" minOccurs="0"/>
+ *         &lt;element name="id" type="{http://soap.sforce.com/2006/04/metadata}ID"/>
+ *         &lt;element name="ignoreWarnings" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="lastModifiedDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="numberComponentErrors" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="numberComponentsDeployed" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="numberComponentsTotal" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="numberTestErrors" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="numberTestsCompleted" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="numberTestsTotal" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="rollbackOnError" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="startDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="stateDetail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="status" type="{http://soap.sforce.com/2006/04/metadata}DeployStatus"/>
+ *         &lt;element name="success" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DeployResult", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "checkOnly",
+    "completedDate",
+    "createdDate",
+    "details",
+    "done",
+    "errorMessage",
+    "errorStatusCode",
+    "id",
+    "ignoreWarnings",
+    "lastModifiedDate",
+    "numberComponentErrors",
+    "numberComponentsDeployed",
+    "numberComponentsTotal",
+    "numberTestErrors",
+    "numberTestsCompleted",
+    "numberTestsTotal",
+    "rollbackOnError",
+    "startDate",
+    "stateDetail",
+    "status",
+    "success"
+})
+public class DeployResult {
 
-    private com.sforce.soap._2006._04.metadata.DeployDetails details;
-
-    private boolean done;
-
-    private java.lang.String errorMessage;
-
-    private com.sforce.soap._2006._04.metadata.StatusCode errorStatusCode;
-
-    private java.lang.String id;
-
-    private boolean ignoreWarnings;
-
-    private java.util.Calendar lastModifiedDate;
-
-    private int numberComponentErrors;
-
-    private int numberComponentsDeployed;
-
-    private int numberComponentsTotal;
-
-    private int numberTestErrors;
-
-    private int numberTestsCompleted;
-
-    private int numberTestsTotal;
-
-    private boolean rollbackOnError;
-
-    private java.util.Calendar startDate;
-
-    private java.lang.String stateDetail;
-
-    private com.sforce.soap._2006._04.metadata.DeployStatus status;
-
-    private boolean success;
-
-    public DeployResult() {
-    }
-
-    public DeployResult(
-           boolean checkOnly,
-           java.util.Calendar completedDate,
-           java.util.Calendar createdDate,
-           com.sforce.soap._2006._04.metadata.DeployDetails details,
-           boolean done,
-           java.lang.String errorMessage,
-           com.sforce.soap._2006._04.metadata.StatusCode errorStatusCode,
-           java.lang.String id,
-           boolean ignoreWarnings,
-           java.util.Calendar lastModifiedDate,
-           int numberComponentErrors,
-           int numberComponentsDeployed,
-           int numberComponentsTotal,
-           int numberTestErrors,
-           int numberTestsCompleted,
-           int numberTestsTotal,
-           boolean rollbackOnError,
-           java.util.Calendar startDate,
-           java.lang.String stateDetail,
-           com.sforce.soap._2006._04.metadata.DeployStatus status,
-           boolean success) {
-           this.checkOnly = checkOnly;
-           this.completedDate = completedDate;
-           this.createdDate = createdDate;
-           this.details = details;
-           this.done = done;
-           this.errorMessage = errorMessage;
-           this.errorStatusCode = errorStatusCode;
-           this.id = id;
-           this.ignoreWarnings = ignoreWarnings;
-           this.lastModifiedDate = lastModifiedDate;
-           this.numberComponentErrors = numberComponentErrors;
-           this.numberComponentsDeployed = numberComponentsDeployed;
-           this.numberComponentsTotal = numberComponentsTotal;
-           this.numberTestErrors = numberTestErrors;
-           this.numberTestsCompleted = numberTestsCompleted;
-           this.numberTestsTotal = numberTestsTotal;
-           this.rollbackOnError = rollbackOnError;
-           this.startDate = startDate;
-           this.stateDetail = stateDetail;
-           this.status = status;
-           this.success = success;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean checkOnly;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar completedDate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar createdDate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected DeployDetails details;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean done;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String errorMessage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected StatusCode errorStatusCode;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String id;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean ignoreWarnings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar lastModifiedDate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int numberComponentErrors;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int numberComponentsDeployed;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int numberComponentsTotal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int numberTestErrors;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int numberTestsCompleted;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int numberTestsTotal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean rollbackOnError;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar startDate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String stateDetail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected DeployStatus status;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean success;
 
     /**
-     * Gets the checkOnly value for this DeployResult.
+     * Gets the value of the checkOnly property.
      * 
-     * @return checkOnly
      */
     public boolean isCheckOnly() {
         return checkOnly;
     }
 
-
     /**
-     * Sets the checkOnly value for this DeployResult.
+     * Sets the value of the checkOnly property.
      * 
-     * @param checkOnly
      */
-    public void setCheckOnly(boolean checkOnly) {
-        this.checkOnly = checkOnly;
+    public void setCheckOnly(boolean value) {
+        this.checkOnly = value;
     }
 
-
     /**
-     * Gets the completedDate value for this DeployResult.
+     * Gets the value of the completedDate property.
      * 
-     * @return completedDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getCompletedDate() {
+    public XMLGregorianCalendar getCompletedDate() {
         return completedDate;
     }
 
-
     /**
-     * Sets the completedDate value for this DeployResult.
+     * Sets the value of the completedDate property.
      * 
-     * @param completedDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setCompletedDate(java.util.Calendar completedDate) {
-        this.completedDate = completedDate;
+    public void setCompletedDate(XMLGregorianCalendar value) {
+        this.completedDate = value;
     }
 
-
     /**
-     * Gets the createdDate value for this DeployResult.
+     * Gets the value of the createdDate property.
      * 
-     * @return createdDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getCreatedDate() {
+    public XMLGregorianCalendar getCreatedDate() {
         return createdDate;
     }
 
-
     /**
-     * Sets the createdDate value for this DeployResult.
+     * Sets the value of the createdDate property.
      * 
-     * @param createdDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setCreatedDate(java.util.Calendar createdDate) {
-        this.createdDate = createdDate;
+    public void setCreatedDate(XMLGregorianCalendar value) {
+        this.createdDate = value;
     }
 
-
     /**
-     * Gets the details value for this DeployResult.
+     * Gets the value of the details property.
      * 
-     * @return details
+     * @return
+     *     possible object is
+     *     {@link DeployDetails }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DeployDetails getDetails() {
+    public DeployDetails getDetails() {
         return details;
     }
 
-
     /**
-     * Sets the details value for this DeployResult.
+     * Sets the value of the details property.
      * 
-     * @param details
+     * @param value
+     *     allowed object is
+     *     {@link DeployDetails }
+     *     
      */
-    public void setDetails(com.sforce.soap._2006._04.metadata.DeployDetails details) {
-        this.details = details;
+    public void setDetails(DeployDetails value) {
+        this.details = value;
     }
 
-
     /**
-     * Gets the done value for this DeployResult.
+     * Gets the value of the done property.
      * 
-     * @return done
      */
     public boolean isDone() {
         return done;
     }
 
-
     /**
-     * Sets the done value for this DeployResult.
+     * Sets the value of the done property.
      * 
-     * @param done
      */
-    public void setDone(boolean done) {
-        this.done = done;
+    public void setDone(boolean value) {
+        this.done = value;
     }
 
-
     /**
-     * Gets the errorMessage value for this DeployResult.
+     * Gets the value of the errorMessage property.
      * 
-     * @return errorMessage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getErrorMessage() {
+    public String getErrorMessage() {
         return errorMessage;
     }
 
-
     /**
-     * Sets the errorMessage value for this DeployResult.
+     * Sets the value of the errorMessage property.
      * 
-     * @param errorMessage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setErrorMessage(java.lang.String errorMessage) {
-        this.errorMessage = errorMessage;
+    public void setErrorMessage(String value) {
+        this.errorMessage = value;
     }
 
-
     /**
-     * Gets the errorStatusCode value for this DeployResult.
+     * Gets the value of the errorStatusCode property.
      * 
-     * @return errorStatusCode
+     * @return
+     *     possible object is
+     *     {@link StatusCode }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.StatusCode getErrorStatusCode() {
+    public StatusCode getErrorStatusCode() {
         return errorStatusCode;
     }
 
-
     /**
-     * Sets the errorStatusCode value for this DeployResult.
+     * Sets the value of the errorStatusCode property.
      * 
-     * @param errorStatusCode
+     * @param value
+     *     allowed object is
+     *     {@link StatusCode }
+     *     
      */
-    public void setErrorStatusCode(com.sforce.soap._2006._04.metadata.StatusCode errorStatusCode) {
-        this.errorStatusCode = errorStatusCode;
+    public void setErrorStatusCode(StatusCode value) {
+        this.errorStatusCode = value;
     }
 
-
     /**
-     * Gets the id value for this DeployResult.
+     * Gets the value of the id property.
      * 
-     * @return id
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getId() {
+    public String getId() {
         return id;
     }
 
-
     /**
-     * Sets the id value for this DeployResult.
+     * Sets the value of the id property.
      * 
-     * @param id
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setId(java.lang.String id) {
-        this.id = id;
+    public void setId(String value) {
+        this.id = value;
     }
 
-
     /**
-     * Gets the ignoreWarnings value for this DeployResult.
+     * Gets the value of the ignoreWarnings property.
      * 
-     * @return ignoreWarnings
      */
     public boolean isIgnoreWarnings() {
         return ignoreWarnings;
     }
 
-
     /**
-     * Sets the ignoreWarnings value for this DeployResult.
+     * Sets the value of the ignoreWarnings property.
      * 
-     * @param ignoreWarnings
      */
-    public void setIgnoreWarnings(boolean ignoreWarnings) {
-        this.ignoreWarnings = ignoreWarnings;
+    public void setIgnoreWarnings(boolean value) {
+        this.ignoreWarnings = value;
     }
 
-
     /**
-     * Gets the lastModifiedDate value for this DeployResult.
+     * Gets the value of the lastModifiedDate property.
      * 
-     * @return lastModifiedDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getLastModifiedDate() {
+    public XMLGregorianCalendar getLastModifiedDate() {
         return lastModifiedDate;
     }
 
-
     /**
-     * Sets the lastModifiedDate value for this DeployResult.
+     * Sets the value of the lastModifiedDate property.
      * 
-     * @param lastModifiedDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setLastModifiedDate(java.util.Calendar lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
+    public void setLastModifiedDate(XMLGregorianCalendar value) {
+        this.lastModifiedDate = value;
     }
 
-
     /**
-     * Gets the numberComponentErrors value for this DeployResult.
+     * Gets the value of the numberComponentErrors property.
      * 
-     * @return numberComponentErrors
      */
     public int getNumberComponentErrors() {
         return numberComponentErrors;
     }
 
-
     /**
-     * Sets the numberComponentErrors value for this DeployResult.
+     * Sets the value of the numberComponentErrors property.
      * 
-     * @param numberComponentErrors
      */
-    public void setNumberComponentErrors(int numberComponentErrors) {
-        this.numberComponentErrors = numberComponentErrors;
+    public void setNumberComponentErrors(int value) {
+        this.numberComponentErrors = value;
     }
 
-
     /**
-     * Gets the numberComponentsDeployed value for this DeployResult.
+     * Gets the value of the numberComponentsDeployed property.
      * 
-     * @return numberComponentsDeployed
      */
     public int getNumberComponentsDeployed() {
         return numberComponentsDeployed;
     }
 
-
     /**
-     * Sets the numberComponentsDeployed value for this DeployResult.
+     * Sets the value of the numberComponentsDeployed property.
      * 
-     * @param numberComponentsDeployed
      */
-    public void setNumberComponentsDeployed(int numberComponentsDeployed) {
-        this.numberComponentsDeployed = numberComponentsDeployed;
+    public void setNumberComponentsDeployed(int value) {
+        this.numberComponentsDeployed = value;
     }
 
-
     /**
-     * Gets the numberComponentsTotal value for this DeployResult.
+     * Gets the value of the numberComponentsTotal property.
      * 
-     * @return numberComponentsTotal
      */
     public int getNumberComponentsTotal() {
         return numberComponentsTotal;
     }
 
-
     /**
-     * Sets the numberComponentsTotal value for this DeployResult.
+     * Sets the value of the numberComponentsTotal property.
      * 
-     * @param numberComponentsTotal
      */
-    public void setNumberComponentsTotal(int numberComponentsTotal) {
-        this.numberComponentsTotal = numberComponentsTotal;
+    public void setNumberComponentsTotal(int value) {
+        this.numberComponentsTotal = value;
     }
 
-
     /**
-     * Gets the numberTestErrors value for this DeployResult.
+     * Gets the value of the numberTestErrors property.
      * 
-     * @return numberTestErrors
      */
     public int getNumberTestErrors() {
         return numberTestErrors;
     }
 
-
     /**
-     * Sets the numberTestErrors value for this DeployResult.
+     * Sets the value of the numberTestErrors property.
      * 
-     * @param numberTestErrors
      */
-    public void setNumberTestErrors(int numberTestErrors) {
-        this.numberTestErrors = numberTestErrors;
+    public void setNumberTestErrors(int value) {
+        this.numberTestErrors = value;
     }
 
-
     /**
-     * Gets the numberTestsCompleted value for this DeployResult.
+     * Gets the value of the numberTestsCompleted property.
      * 
-     * @return numberTestsCompleted
      */
     public int getNumberTestsCompleted() {
         return numberTestsCompleted;
     }
 
-
     /**
-     * Sets the numberTestsCompleted value for this DeployResult.
+     * Sets the value of the numberTestsCompleted property.
      * 
-     * @param numberTestsCompleted
      */
-    public void setNumberTestsCompleted(int numberTestsCompleted) {
-        this.numberTestsCompleted = numberTestsCompleted;
+    public void setNumberTestsCompleted(int value) {
+        this.numberTestsCompleted = value;
     }
 
-
     /**
-     * Gets the numberTestsTotal value for this DeployResult.
+     * Gets the value of the numberTestsTotal property.
      * 
-     * @return numberTestsTotal
      */
     public int getNumberTestsTotal() {
         return numberTestsTotal;
     }
 
-
     /**
-     * Sets the numberTestsTotal value for this DeployResult.
+     * Sets the value of the numberTestsTotal property.
      * 
-     * @param numberTestsTotal
      */
-    public void setNumberTestsTotal(int numberTestsTotal) {
-        this.numberTestsTotal = numberTestsTotal;
+    public void setNumberTestsTotal(int value) {
+        this.numberTestsTotal = value;
     }
 
-
     /**
-     * Gets the rollbackOnError value for this DeployResult.
+     * Gets the value of the rollbackOnError property.
      * 
-     * @return rollbackOnError
      */
     public boolean isRollbackOnError() {
         return rollbackOnError;
     }
 
-
     /**
-     * Sets the rollbackOnError value for this DeployResult.
+     * Sets the value of the rollbackOnError property.
      * 
-     * @param rollbackOnError
      */
-    public void setRollbackOnError(boolean rollbackOnError) {
-        this.rollbackOnError = rollbackOnError;
+    public void setRollbackOnError(boolean value) {
+        this.rollbackOnError = value;
     }
 
-
     /**
-     * Gets the startDate value for this DeployResult.
+     * Gets the value of the startDate property.
      * 
-     * @return startDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getStartDate() {
+    public XMLGregorianCalendar getStartDate() {
         return startDate;
     }
 
-
     /**
-     * Sets the startDate value for this DeployResult.
+     * Sets the value of the startDate property.
      * 
-     * @param startDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setStartDate(java.util.Calendar startDate) {
-        this.startDate = startDate;
+    public void setStartDate(XMLGregorianCalendar value) {
+        this.startDate = value;
     }
 
-
     /**
-     * Gets the stateDetail value for this DeployResult.
+     * Gets the value of the stateDetail property.
      * 
-     * @return stateDetail
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStateDetail() {
+    public String getStateDetail() {
         return stateDetail;
     }
 
-
     /**
-     * Sets the stateDetail value for this DeployResult.
+     * Sets the value of the stateDetail property.
      * 
-     * @param stateDetail
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStateDetail(java.lang.String stateDetail) {
-        this.stateDetail = stateDetail;
+    public void setStateDetail(String value) {
+        this.stateDetail = value;
     }
 
-
     /**
-     * Gets the status value for this DeployResult.
+     * Gets the value of the status property.
      * 
-     * @return status
+     * @return
+     *     possible object is
+     *     {@link DeployStatus }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.DeployStatus getStatus() {
+    public DeployStatus getStatus() {
         return status;
     }
 
-
     /**
-     * Sets the status value for this DeployResult.
+     * Sets the value of the status property.
      * 
-     * @param status
+     * @param value
+     *     allowed object is
+     *     {@link DeployStatus }
+     *     
      */
-    public void setStatus(com.sforce.soap._2006._04.metadata.DeployStatus status) {
-        this.status = status;
+    public void setStatus(DeployStatus value) {
+        this.status = value;
     }
 
-
     /**
-     * Gets the success value for this DeployResult.
+     * Gets the value of the success property.
      * 
-     * @return success
      */
     public boolean isSuccess() {
         return success;
     }
 
-
     /**
-     * Sets the success value for this DeployResult.
+     * Sets the value of the success property.
      * 
-     * @param success
      */
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DeployResult)) return false;
-        DeployResult other = (DeployResult) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            this.checkOnly == other.isCheckOnly() &&
-            ((this.completedDate==null && other.getCompletedDate()==null) || 
-             (this.completedDate!=null &&
-              this.completedDate.equals(other.getCompletedDate()))) &&
-            ((this.createdDate==null && other.getCreatedDate()==null) || 
-             (this.createdDate!=null &&
-              this.createdDate.equals(other.getCreatedDate()))) &&
-            ((this.details==null && other.getDetails()==null) || 
-             (this.details!=null &&
-              this.details.equals(other.getDetails()))) &&
-            this.done == other.isDone() &&
-            ((this.errorMessage==null && other.getErrorMessage()==null) || 
-             (this.errorMessage!=null &&
-              this.errorMessage.equals(other.getErrorMessage()))) &&
-            ((this.errorStatusCode==null && other.getErrorStatusCode()==null) || 
-             (this.errorStatusCode!=null &&
-              this.errorStatusCode.equals(other.getErrorStatusCode()))) &&
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            this.ignoreWarnings == other.isIgnoreWarnings() &&
-            ((this.lastModifiedDate==null && other.getLastModifiedDate()==null) || 
-             (this.lastModifiedDate!=null &&
-              this.lastModifiedDate.equals(other.getLastModifiedDate()))) &&
-            this.numberComponentErrors == other.getNumberComponentErrors() &&
-            this.numberComponentsDeployed == other.getNumberComponentsDeployed() &&
-            this.numberComponentsTotal == other.getNumberComponentsTotal() &&
-            this.numberTestErrors == other.getNumberTestErrors() &&
-            this.numberTestsCompleted == other.getNumberTestsCompleted() &&
-            this.numberTestsTotal == other.getNumberTestsTotal() &&
-            this.rollbackOnError == other.isRollbackOnError() &&
-            ((this.startDate==null && other.getStartDate()==null) || 
-             (this.startDate!=null &&
-              this.startDate.equals(other.getStartDate()))) &&
-            ((this.stateDetail==null && other.getStateDetail()==null) || 
-             (this.stateDetail!=null &&
-              this.stateDetail.equals(other.getStateDetail()))) &&
-            ((this.status==null && other.getStatus()==null) || 
-             (this.status!=null &&
-              this.status.equals(other.getStatus()))) &&
-            this.success == other.isSuccess();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        _hashCode += (isCheckOnly() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getCompletedDate() != null) {
-            _hashCode += getCompletedDate().hashCode();
-        }
-        if (getCreatedDate() != null) {
-            _hashCode += getCreatedDate().hashCode();
-        }
-        if (getDetails() != null) {
-            _hashCode += getDetails().hashCode();
-        }
-        _hashCode += (isDone() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getErrorMessage() != null) {
-            _hashCode += getErrorMessage().hashCode();
-        }
-        if (getErrorStatusCode() != null) {
-            _hashCode += getErrorStatusCode().hashCode();
-        }
-        if (getId() != null) {
-            _hashCode += getId().hashCode();
-        }
-        _hashCode += (isIgnoreWarnings() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getLastModifiedDate() != null) {
-            _hashCode += getLastModifiedDate().hashCode();
-        }
-        _hashCode += getNumberComponentErrors();
-        _hashCode += getNumberComponentsDeployed();
-        _hashCode += getNumberComponentsTotal();
-        _hashCode += getNumberTestErrors();
-        _hashCode += getNumberTestsCompleted();
-        _hashCode += getNumberTestsTotal();
-        _hashCode += (isRollbackOnError() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getStartDate() != null) {
-            _hashCode += getStartDate().hashCode();
-        }
-        if (getStateDetail() != null) {
-            _hashCode += getStateDetail().hashCode();
-        }
-        if (getStatus() != null) {
-            _hashCode += getStatus().hashCode();
-        }
-        _hashCode += (isSuccess() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DeployResult.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployResult"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("checkOnly");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "checkOnly"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("completedDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "completedDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("createdDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "createdDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("details");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "details"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployDetails"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("done");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "done"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorMessage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "errorMessage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorStatusCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "errorStatusCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "StatusCode"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("id");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ignoreWarnings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ignoreWarnings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("lastModifiedDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "lastModifiedDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numberComponentErrors");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "numberComponentErrors"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numberComponentsDeployed");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "numberComponentsDeployed"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numberComponentsTotal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "numberComponentsTotal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numberTestErrors");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "numberTestErrors"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numberTestsCompleted");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "numberTestsCompleted"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("numberTestsTotal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "numberTestsTotal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rollbackOnError");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rollbackOnError"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("startDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "startDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("stateDetail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "stateDetail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("status");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "status"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployStatus"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("success");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "success"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSuccess(boolean value) {
+        this.success = value;
     }
 
 }

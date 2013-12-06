@@ -1,229 +1,146 @@
-/**
- * FilterItem.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FilterItem  implements java.io.Serializable {
-    private java.lang.String field;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.FilterOperation operation;
 
-    private java.lang.String value;
+/**
+ * <p>Java class for FilterItem complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FilterItem">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="field" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="operation" type="{http://soap.sforce.com/2006/04/metadata}FilterOperation"/>
+ *         &lt;element name="value" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="valueField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FilterItem", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "field",
+    "operation",
+    "value",
+    "valueField"
+})
+public class FilterItem {
 
-    private java.lang.String valueField;
-
-    public FilterItem() {
-    }
-
-    public FilterItem(
-           java.lang.String field,
-           com.sforce.soap._2006._04.metadata.FilterOperation operation,
-           java.lang.String value,
-           java.lang.String valueField) {
-           this.field = field;
-           this.operation = operation;
-           this.value = value;
-           this.valueField = valueField;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String field;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected FilterOperation operation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String value;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String valueField;
 
     /**
-     * Gets the field value for this FilterItem.
+     * Gets the value of the field property.
      * 
-     * @return field
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getField() {
+    public String getField() {
         return field;
     }
 
-
     /**
-     * Sets the field value for this FilterItem.
+     * Sets the value of the field property.
      * 
-     * @param field
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setField(java.lang.String field) {
-        this.field = field;
+    public void setField(String value) {
+        this.field = value;
     }
 
-
     /**
-     * Gets the operation value for this FilterItem.
+     * Gets the value of the operation property.
      * 
-     * @return operation
+     * @return
+     *     possible object is
+     *     {@link FilterOperation }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FilterOperation getOperation() {
+    public FilterOperation getOperation() {
         return operation;
     }
 
-
     /**
-     * Sets the operation value for this FilterItem.
+     * Sets the value of the operation property.
      * 
-     * @param operation
+     * @param value
+     *     allowed object is
+     *     {@link FilterOperation }
+     *     
      */
-    public void setOperation(com.sforce.soap._2006._04.metadata.FilterOperation operation) {
-        this.operation = operation;
+    public void setOperation(FilterOperation value) {
+        this.operation = value;
     }
 
-
     /**
-     * Gets the value value for this FilterItem.
+     * Gets the value of the value property.
      * 
-     * @return value
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getValue() {
+    public String getValue() {
         return value;
     }
 
-
     /**
-     * Sets the value value for this FilterItem.
+     * Sets the value of the value property.
      * 
      * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setValue(java.lang.String value) {
+    public void setValue(String value) {
         this.value = value;
     }
 
-
     /**
-     * Gets the valueField value for this FilterItem.
+     * Gets the value of the valueField property.
      * 
-     * @return valueField
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getValueField() {
+    public String getValueField() {
         return valueField;
     }
 
-
     /**
-     * Sets the valueField value for this FilterItem.
+     * Sets the value of the valueField property.
      * 
-     * @param valueField
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setValueField(java.lang.String valueField) {
-        this.valueField = valueField;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FilterItem)) return false;
-        FilterItem other = (FilterItem) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.field==null && other.getField()==null) || 
-             (this.field!=null &&
-              this.field.equals(other.getField()))) &&
-            ((this.operation==null && other.getOperation()==null) || 
-             (this.operation!=null &&
-              this.operation.equals(other.getOperation()))) &&
-            ((this.value==null && other.getValue()==null) || 
-             (this.value!=null &&
-              this.value.equals(other.getValue()))) &&
-            ((this.valueField==null && other.getValueField()==null) || 
-             (this.valueField!=null &&
-              this.valueField.equals(other.getValueField())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getField() != null) {
-            _hashCode += getField().hashCode();
-        }
-        if (getOperation() != null) {
-            _hashCode += getOperation().hashCode();
-        }
-        if (getValue() != null) {
-            _hashCode += getValue().hashCode();
-        }
-        if (getValueField() != null) {
-            _hashCode += getValueField().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FilterItem.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FilterItem"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("field");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("operation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "operation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FilterOperation"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("value");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "value"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("valueField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "valueField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setValueField(String value) {
+        this.valueField = value;
     }
 
 }

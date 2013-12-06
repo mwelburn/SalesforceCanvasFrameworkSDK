@@ -1,156 +1,90 @@
-/**
- * CustomDataTypeComponentTranslation.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomDataTypeComponentTranslation  implements java.io.Serializable {
-    private java.lang.String developerSuffix;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String label;
 
-    public CustomDataTypeComponentTranslation() {
-    }
+/**
+ * <p>Java class for CustomDataTypeComponentTranslation complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomDataTypeComponentTranslation">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="developerSuffix" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomDataTypeComponentTranslation", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "developerSuffix",
+    "label"
+})
+public class CustomDataTypeComponentTranslation {
 
-    public CustomDataTypeComponentTranslation(
-           java.lang.String developerSuffix,
-           java.lang.String label) {
-           this.developerSuffix = developerSuffix;
-           this.label = label;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String developerSuffix;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String label;
 
     /**
-     * Gets the developerSuffix value for this CustomDataTypeComponentTranslation.
+     * Gets the value of the developerSuffix property.
      * 
-     * @return developerSuffix
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDeveloperSuffix() {
+    public String getDeveloperSuffix() {
         return developerSuffix;
     }
 
-
     /**
-     * Sets the developerSuffix value for this CustomDataTypeComponentTranslation.
+     * Sets the value of the developerSuffix property.
      * 
-     * @param developerSuffix
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDeveloperSuffix(java.lang.String developerSuffix) {
-        this.developerSuffix = developerSuffix;
+    public void setDeveloperSuffix(String value) {
+        this.developerSuffix = value;
     }
 
-
     /**
-     * Gets the label value for this CustomDataTypeComponentTranslation.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this CustomDataTypeComponentTranslation.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomDataTypeComponentTranslation)) return false;
-        CustomDataTypeComponentTranslation other = (CustomDataTypeComponentTranslation) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.developerSuffix==null && other.getDeveloperSuffix()==null) || 
-             (this.developerSuffix!=null &&
-              this.developerSuffix.equals(other.getDeveloperSuffix()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDeveloperSuffix() != null) {
-            _hashCode += getDeveloperSuffix().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomDataTypeComponentTranslation.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomDataTypeComponentTranslation"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("developerSuffix");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "developerSuffix"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setLabel(String value) {
+        this.label = value;
     }
 
 }

@@ -1,477 +1,305 @@
-/**
- * FlowRecordLookup.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowRecordLookup  extends com.sforce.soap._2006._04.metadata.FlowNode  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.FlowConnector connector;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.FlowConnector faultConnector;
 
-    private com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters;
+/**
+ * <p>Java class for FlowRecordLookup complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowRecordLookup">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowNode">
+ *       &lt;sequence>
+ *         &lt;element name="connector" type="{http://soap.sforce.com/2006/04/metadata}FlowConnector" minOccurs="0"/>
+ *         &lt;element name="faultConnector" type="{http://soap.sforce.com/2006/04/metadata}FlowConnector" minOccurs="0"/>
+ *         &lt;element name="filters" type="{http://soap.sforce.com/2006/04/metadata}FlowRecordFilter" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="object" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="outputAssignments" type="{http://soap.sforce.com/2006/04/metadata}FlowOutputFieldAssignment" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="queriedFields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="sObjectOutputReference" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="sortField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="sortOrder" type="{http://soap.sforce.com/2006/04/metadata}SortOrder" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowRecordLookup", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "connector",
+    "faultConnector",
+    "filters",
+    "object",
+    "outputAssignments",
+    "queriedFields",
+    "sObjectOutputReference",
+    "sortField",
+    "sortOrder"
+})
+public class FlowRecordLookup
+    extends FlowNode
+{
 
-    private java.lang.String object;
-
-    private com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment[] outputAssignments;
-
-    private java.lang.String[] queriedFields;
-
-    private java.lang.String sObjectOutputReference;
-
-    private java.lang.String sortField;
-
-    private com.sforce.soap._2006._04.metadata.SortOrder sortOrder;
-
-    public FlowRecordLookup() {
-    }
-
-    public FlowRecordLookup(
-           java.lang.String description,
-           java.lang.String name,
-           java.lang.String label,
-           int locationX,
-           int locationY,
-           com.sforce.soap._2006._04.metadata.FlowConnector connector,
-           com.sforce.soap._2006._04.metadata.FlowConnector faultConnector,
-           com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters,
-           java.lang.String object,
-           com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment[] outputAssignments,
-           java.lang.String[] queriedFields,
-           java.lang.String sObjectOutputReference,
-           java.lang.String sortField,
-           com.sforce.soap._2006._04.metadata.SortOrder sortOrder) {
-        super(
-            description,
-            name,
-            label,
-            locationX,
-            locationY);
-        this.connector = connector;
-        this.faultConnector = faultConnector;
-        this.filters = filters;
-        this.object = object;
-        this.outputAssignments = outputAssignments;
-        this.queriedFields = queriedFields;
-        this.sObjectOutputReference = sObjectOutputReference;
-        this.sortField = sortField;
-        this.sortOrder = sortOrder;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowConnector connector;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowConnector faultConnector;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowRecordFilter> filters;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String object;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowOutputFieldAssignment> outputAssignments;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> queriedFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String sObjectOutputReference;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String sortField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SortOrder sortOrder;
 
     /**
-     * Gets the connector value for this FlowRecordLookup.
+     * Gets the value of the connector property.
      * 
-     * @return connector
+     * @return
+     *     possible object is
+     *     {@link FlowConnector }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowConnector getConnector() {
+    public FlowConnector getConnector() {
         return connector;
     }
 
-
     /**
-     * Sets the connector value for this FlowRecordLookup.
+     * Sets the value of the connector property.
      * 
-     * @param connector
+     * @param value
+     *     allowed object is
+     *     {@link FlowConnector }
+     *     
      */
-    public void setConnector(com.sforce.soap._2006._04.metadata.FlowConnector connector) {
-        this.connector = connector;
+    public void setConnector(FlowConnector value) {
+        this.connector = value;
     }
 
-
     /**
-     * Gets the faultConnector value for this FlowRecordLookup.
+     * Gets the value of the faultConnector property.
      * 
-     * @return faultConnector
+     * @return
+     *     possible object is
+     *     {@link FlowConnector }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowConnector getFaultConnector() {
+    public FlowConnector getFaultConnector() {
         return faultConnector;
     }
 
+    /**
+     * Sets the value of the faultConnector property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FlowConnector }
+     *     
+     */
+    public void setFaultConnector(FlowConnector value) {
+        this.faultConnector = value;
+    }
 
     /**
-     * Sets the faultConnector value for this FlowRecordLookup.
+     * Gets the value of the filters property.
      * 
-     * @param faultConnector
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the filters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFilters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowRecordFilter }
+     * 
+     * 
      */
-    public void setFaultConnector(com.sforce.soap._2006._04.metadata.FlowConnector faultConnector) {
-        this.faultConnector = faultConnector;
+    public List<FlowRecordFilter> getFilters() {
+        if (filters == null) {
+            filters = new ArrayList<FlowRecordFilter>();
+        }
+        return this.filters;
     }
-
 
     /**
-     * Gets the filters value for this FlowRecordLookup.
+     * Gets the value of the object property.
      * 
-     * @return filters
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowRecordFilter[] getFilters() {
-        return filters;
-    }
-
-
-    /**
-     * Sets the filters value for this FlowRecordLookup.
-     * 
-     * @param filters
-     */
-    public void setFilters(com.sforce.soap._2006._04.metadata.FlowRecordFilter[] filters) {
-        this.filters = filters;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowRecordFilter getFilters(int i) {
-        return this.filters[i];
-    }
-
-    public void setFilters(int i, com.sforce.soap._2006._04.metadata.FlowRecordFilter _value) {
-        this.filters[i] = _value;
-    }
-
-
-    /**
-     * Gets the object value for this FlowRecordLookup.
-     * 
-     * @return object
-     */
-    public java.lang.String getObject() {
+    public String getObject() {
         return object;
     }
 
+    /**
+     * Sets the value of the object property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setObject(String value) {
+        this.object = value;
+    }
 
     /**
-     * Sets the object value for this FlowRecordLookup.
+     * Gets the value of the outputAssignments property.
      * 
-     * @param object
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the outputAssignments property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getOutputAssignments().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowOutputFieldAssignment }
+     * 
+     * 
      */
-    public void setObject(java.lang.String object) {
-        this.object = object;
+    public List<FlowOutputFieldAssignment> getOutputAssignments() {
+        if (outputAssignments == null) {
+            outputAssignments = new ArrayList<FlowOutputFieldAssignment>();
+        }
+        return this.outputAssignments;
     }
-
 
     /**
-     * Gets the outputAssignments value for this FlowRecordLookup.
+     * Gets the value of the queriedFields property.
      * 
-     * @return outputAssignments
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the queriedFields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getQueriedFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment[] getOutputAssignments() {
-        return outputAssignments;
+    public List<String> getQueriedFields() {
+        if (queriedFields == null) {
+            queriedFields = new ArrayList<String>();
+        }
+        return this.queriedFields;
     }
-
 
     /**
-     * Sets the outputAssignments value for this FlowRecordLookup.
+     * Gets the value of the sObjectOutputReference property.
      * 
-     * @param outputAssignments
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public void setOutputAssignments(com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment[] outputAssignments) {
-        this.outputAssignments = outputAssignments;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment getOutputAssignments(int i) {
-        return this.outputAssignments[i];
-    }
-
-    public void setOutputAssignments(int i, com.sforce.soap._2006._04.metadata.FlowOutputFieldAssignment _value) {
-        this.outputAssignments[i] = _value;
-    }
-
-
-    /**
-     * Gets the queriedFields value for this FlowRecordLookup.
-     * 
-     * @return queriedFields
-     */
-    public java.lang.String[] getQueriedFields() {
-        return queriedFields;
-    }
-
-
-    /**
-     * Sets the queriedFields value for this FlowRecordLookup.
-     * 
-     * @param queriedFields
-     */
-    public void setQueriedFields(java.lang.String[] queriedFields) {
-        this.queriedFields = queriedFields;
-    }
-
-    public java.lang.String getQueriedFields(int i) {
-        return this.queriedFields[i];
-    }
-
-    public void setQueriedFields(int i, java.lang.String _value) {
-        this.queriedFields[i] = _value;
-    }
-
-
-    /**
-     * Gets the sObjectOutputReference value for this FlowRecordLookup.
-     * 
-     * @return sObjectOutputReference
-     */
-    public java.lang.String getSObjectOutputReference() {
+    public String getSObjectOutputReference() {
         return sObjectOutputReference;
     }
 
-
     /**
-     * Sets the sObjectOutputReference value for this FlowRecordLookup.
+     * Sets the value of the sObjectOutputReference property.
      * 
-     * @param sObjectOutputReference
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSObjectOutputReference(java.lang.String sObjectOutputReference) {
-        this.sObjectOutputReference = sObjectOutputReference;
+    public void setSObjectOutputReference(String value) {
+        this.sObjectOutputReference = value;
     }
 
-
     /**
-     * Gets the sortField value for this FlowRecordLookup.
+     * Gets the value of the sortField property.
      * 
-     * @return sortField
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSortField() {
+    public String getSortField() {
         return sortField;
     }
 
-
     /**
-     * Sets the sortField value for this FlowRecordLookup.
+     * Sets the value of the sortField property.
      * 
-     * @param sortField
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSortField(java.lang.String sortField) {
-        this.sortField = sortField;
+    public void setSortField(String value) {
+        this.sortField = value;
     }
 
-
     /**
-     * Gets the sortOrder value for this FlowRecordLookup.
+     * Gets the value of the sortOrder property.
      * 
-     * @return sortOrder
+     * @return
+     *     possible object is
+     *     {@link SortOrder }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SortOrder getSortOrder() {
+    public SortOrder getSortOrder() {
         return sortOrder;
     }
 
-
     /**
-     * Sets the sortOrder value for this FlowRecordLookup.
+     * Sets the value of the sortOrder property.
      * 
-     * @param sortOrder
+     * @param value
+     *     allowed object is
+     *     {@link SortOrder }
+     *     
      */
-    public void setSortOrder(com.sforce.soap._2006._04.metadata.SortOrder sortOrder) {
-        this.sortOrder = sortOrder;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowRecordLookup)) return false;
-        FlowRecordLookup other = (FlowRecordLookup) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.connector==null && other.getConnector()==null) || 
-             (this.connector!=null &&
-              this.connector.equals(other.getConnector()))) &&
-            ((this.faultConnector==null && other.getFaultConnector()==null) || 
-             (this.faultConnector!=null &&
-              this.faultConnector.equals(other.getFaultConnector()))) &&
-            ((this.filters==null && other.getFilters()==null) || 
-             (this.filters!=null &&
-              java.util.Arrays.equals(this.filters, other.getFilters()))) &&
-            ((this.object==null && other.getObject()==null) || 
-             (this.object!=null &&
-              this.object.equals(other.getObject()))) &&
-            ((this.outputAssignments==null && other.getOutputAssignments()==null) || 
-             (this.outputAssignments!=null &&
-              java.util.Arrays.equals(this.outputAssignments, other.getOutputAssignments()))) &&
-            ((this.queriedFields==null && other.getQueriedFields()==null) || 
-             (this.queriedFields!=null &&
-              java.util.Arrays.equals(this.queriedFields, other.getQueriedFields()))) &&
-            ((this.sObjectOutputReference==null && other.getSObjectOutputReference()==null) || 
-             (this.sObjectOutputReference!=null &&
-              this.sObjectOutputReference.equals(other.getSObjectOutputReference()))) &&
-            ((this.sortField==null && other.getSortField()==null) || 
-             (this.sortField!=null &&
-              this.sortField.equals(other.getSortField()))) &&
-            ((this.sortOrder==null && other.getSortOrder()==null) || 
-             (this.sortOrder!=null &&
-              this.sortOrder.equals(other.getSortOrder())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getConnector() != null) {
-            _hashCode += getConnector().hashCode();
-        }
-        if (getFaultConnector() != null) {
-            _hashCode += getFaultConnector().hashCode();
-        }
-        if (getFilters() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFilters());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFilters(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getObject() != null) {
-            _hashCode += getObject().hashCode();
-        }
-        if (getOutputAssignments() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getOutputAssignments());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getOutputAssignments(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getQueriedFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getQueriedFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getQueriedFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSObjectOutputReference() != null) {
-            _hashCode += getSObjectOutputReference().hashCode();
-        }
-        if (getSortField() != null) {
-            _hashCode += getSortField().hashCode();
-        }
-        if (getSortOrder() != null) {
-            _hashCode += getSortOrder().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowRecordLookup.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordLookup"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("connector");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "connector"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowConnector"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("faultConnector");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "faultConnector"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowConnector"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("filters");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "filters"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("object");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "object"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("outputAssignments");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "outputAssignments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowOutputFieldAssignment"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("queriedFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "queriedFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("SObjectOutputReference");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sObjectOutputReference"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortOrder");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortOrder"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SortOrder"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSortOrder(SortOrder value) {
+        this.sortOrder = value;
     }
 
 }

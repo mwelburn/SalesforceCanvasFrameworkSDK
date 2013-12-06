@@ -1,247 +1,153 @@
-/**
- * ConnectedAppOauthConfig.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ConnectedAppOauthConfig  implements java.io.Serializable {
-    private java.lang.String callbackUrl;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String certificate;
 
-    private java.lang.String consumerKey;
+/**
+ * <p>Java class for ConnectedAppOauthConfig complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ConnectedAppOauthConfig">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="callbackUrl" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="certificate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="consumerKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="scopes" type="{http://soap.sforce.com/2006/04/metadata}ConnectedAppOauthAccessScope" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ConnectedAppOauthConfig", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "callbackUrl",
+    "certificate",
+    "consumerKey",
+    "scopes"
+})
+public class ConnectedAppOauthConfig {
 
-    private com.sforce.soap._2006._04.metadata.ConnectedAppOauthAccessScope[] scopes;
-
-    public ConnectedAppOauthConfig() {
-    }
-
-    public ConnectedAppOauthConfig(
-           java.lang.String callbackUrl,
-           java.lang.String certificate,
-           java.lang.String consumerKey,
-           com.sforce.soap._2006._04.metadata.ConnectedAppOauthAccessScope[] scopes) {
-           this.callbackUrl = callbackUrl;
-           this.certificate = certificate;
-           this.consumerKey = consumerKey;
-           this.scopes = scopes;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String callbackUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String certificate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String consumerKey;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ConnectedAppOauthAccessScope> scopes;
 
     /**
-     * Gets the callbackUrl value for this ConnectedAppOauthConfig.
+     * Gets the value of the callbackUrl property.
      * 
-     * @return callbackUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCallbackUrl() {
+    public String getCallbackUrl() {
         return callbackUrl;
     }
 
-
     /**
-     * Sets the callbackUrl value for this ConnectedAppOauthConfig.
+     * Sets the value of the callbackUrl property.
      * 
-     * @param callbackUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCallbackUrl(java.lang.String callbackUrl) {
-        this.callbackUrl = callbackUrl;
+    public void setCallbackUrl(String value) {
+        this.callbackUrl = value;
     }
 
-
     /**
-     * Gets the certificate value for this ConnectedAppOauthConfig.
+     * Gets the value of the certificate property.
      * 
-     * @return certificate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCertificate() {
+    public String getCertificate() {
         return certificate;
     }
 
-
     /**
-     * Sets the certificate value for this ConnectedAppOauthConfig.
+     * Sets the value of the certificate property.
      * 
-     * @param certificate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCertificate(java.lang.String certificate) {
-        this.certificate = certificate;
+    public void setCertificate(String value) {
+        this.certificate = value;
     }
 
-
     /**
-     * Gets the consumerKey value for this ConnectedAppOauthConfig.
+     * Gets the value of the consumerKey property.
      * 
-     * @return consumerKey
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getConsumerKey() {
+    public String getConsumerKey() {
         return consumerKey;
     }
 
-
     /**
-     * Sets the consumerKey value for this ConnectedAppOauthConfig.
+     * Sets the value of the consumerKey property.
      * 
-     * @param consumerKey
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setConsumerKey(java.lang.String consumerKey) {
-        this.consumerKey = consumerKey;
+    public void setConsumerKey(String value) {
+        this.consumerKey = value;
     }
 
-
     /**
-     * Gets the scopes value for this ConnectedAppOauthConfig.
+     * Gets the value of the scopes property.
      * 
-     * @return scopes
-     */
-    public com.sforce.soap._2006._04.metadata.ConnectedAppOauthAccessScope[] getScopes() {
-        return scopes;
-    }
-
-
-    /**
-     * Sets the scopes value for this ConnectedAppOauthConfig.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the scopes property.
      * 
-     * @param scopes
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getScopes().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ConnectedAppOauthAccessScope }
+     * 
+     * 
      */
-    public void setScopes(com.sforce.soap._2006._04.metadata.ConnectedAppOauthAccessScope[] scopes) {
-        this.scopes = scopes;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ConnectedAppOauthAccessScope getScopes(int i) {
-        return this.scopes[i];
-    }
-
-    public void setScopes(int i, com.sforce.soap._2006._04.metadata.ConnectedAppOauthAccessScope _value) {
-        this.scopes[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ConnectedAppOauthConfig)) return false;
-        ConnectedAppOauthConfig other = (ConnectedAppOauthConfig) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<ConnectedAppOauthAccessScope> getScopes() {
+        if (scopes == null) {
+            scopes = new ArrayList<ConnectedAppOauthAccessScope>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.callbackUrl==null && other.getCallbackUrl()==null) || 
-             (this.callbackUrl!=null &&
-              this.callbackUrl.equals(other.getCallbackUrl()))) &&
-            ((this.certificate==null && other.getCertificate()==null) || 
-             (this.certificate!=null &&
-              this.certificate.equals(other.getCertificate()))) &&
-            ((this.consumerKey==null && other.getConsumerKey()==null) || 
-             (this.consumerKey!=null &&
-              this.consumerKey.equals(other.getConsumerKey()))) &&
-            ((this.scopes==null && other.getScopes()==null) || 
-             (this.scopes!=null &&
-              java.util.Arrays.equals(this.scopes, other.getScopes())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCallbackUrl() != null) {
-            _hashCode += getCallbackUrl().hashCode();
-        }
-        if (getCertificate() != null) {
-            _hashCode += getCertificate().hashCode();
-        }
-        if (getConsumerKey() != null) {
-            _hashCode += getConsumerKey().hashCode();
-        }
-        if (getScopes() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getScopes());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getScopes(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ConnectedAppOauthConfig.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppOauthConfig"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("callbackUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "callbackUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("certificate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "certificate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("consumerKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "consumerKey"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scopes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scopes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppOauthAccessScope"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.scopes;
     }
 
 }

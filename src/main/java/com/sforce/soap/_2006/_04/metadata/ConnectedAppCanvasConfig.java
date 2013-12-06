@@ -1,209 +1,125 @@
-/**
- * ConnectedAppCanvasConfig.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ConnectedAppCanvasConfig  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.AccessMethod accessMethod;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String canvasUrl;
 
-    private com.sforce.soap._2006._04.metadata.CanvasLocationOptions[] locations;
+/**
+ * <p>Java class for ConnectedAppCanvasConfig complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ConnectedAppCanvasConfig">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="accessMethod" type="{http://soap.sforce.com/2006/04/metadata}AccessMethod"/>
+ *         &lt;element name="canvasUrl" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="locations" type="{http://soap.sforce.com/2006/04/metadata}CanvasLocationOptions" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ConnectedAppCanvasConfig", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "accessMethod",
+    "canvasUrl",
+    "locations"
+})
+public class ConnectedAppCanvasConfig {
 
-    public ConnectedAppCanvasConfig() {
-    }
-
-    public ConnectedAppCanvasConfig(
-           com.sforce.soap._2006._04.metadata.AccessMethod accessMethod,
-           java.lang.String canvasUrl,
-           com.sforce.soap._2006._04.metadata.CanvasLocationOptions[] locations) {
-           this.accessMethod = accessMethod;
-           this.canvasUrl = canvasUrl;
-           this.locations = locations;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected AccessMethod accessMethod;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String canvasUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<CanvasLocationOptions> locations;
 
     /**
-     * Gets the accessMethod value for this ConnectedAppCanvasConfig.
+     * Gets the value of the accessMethod property.
      * 
-     * @return accessMethod
+     * @return
+     *     possible object is
+     *     {@link AccessMethod }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.AccessMethod getAccessMethod() {
+    public AccessMethod getAccessMethod() {
         return accessMethod;
     }
 
-
     /**
-     * Sets the accessMethod value for this ConnectedAppCanvasConfig.
+     * Sets the value of the accessMethod property.
      * 
-     * @param accessMethod
+     * @param value
+     *     allowed object is
+     *     {@link AccessMethod }
+     *     
      */
-    public void setAccessMethod(com.sforce.soap._2006._04.metadata.AccessMethod accessMethod) {
-        this.accessMethod = accessMethod;
+    public void setAccessMethod(AccessMethod value) {
+        this.accessMethod = value;
     }
 
-
     /**
-     * Gets the canvasUrl value for this ConnectedAppCanvasConfig.
+     * Gets the value of the canvasUrl property.
      * 
-     * @return canvasUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCanvasUrl() {
+    public String getCanvasUrl() {
         return canvasUrl;
     }
 
-
     /**
-     * Sets the canvasUrl value for this ConnectedAppCanvasConfig.
+     * Sets the value of the canvasUrl property.
      * 
-     * @param canvasUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCanvasUrl(java.lang.String canvasUrl) {
-        this.canvasUrl = canvasUrl;
+    public void setCanvasUrl(String value) {
+        this.canvasUrl = value;
     }
 
-
     /**
-     * Gets the locations value for this ConnectedAppCanvasConfig.
+     * Gets the value of the locations property.
      * 
-     * @return locations
-     */
-    public com.sforce.soap._2006._04.metadata.CanvasLocationOptions[] getLocations() {
-        return locations;
-    }
-
-
-    /**
-     * Sets the locations value for this ConnectedAppCanvasConfig.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the locations property.
      * 
-     * @param locations
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLocations().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CanvasLocationOptions }
+     * 
+     * 
      */
-    public void setLocations(com.sforce.soap._2006._04.metadata.CanvasLocationOptions[] locations) {
-        this.locations = locations;
-    }
-
-    public com.sforce.soap._2006._04.metadata.CanvasLocationOptions getLocations(int i) {
-        return this.locations[i];
-    }
-
-    public void setLocations(int i, com.sforce.soap._2006._04.metadata.CanvasLocationOptions _value) {
-        this.locations[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ConnectedAppCanvasConfig)) return false;
-        ConnectedAppCanvasConfig other = (ConnectedAppCanvasConfig) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<CanvasLocationOptions> getLocations() {
+        if (locations == null) {
+            locations = new ArrayList<CanvasLocationOptions>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.accessMethod==null && other.getAccessMethod()==null) || 
-             (this.accessMethod!=null &&
-              this.accessMethod.equals(other.getAccessMethod()))) &&
-            ((this.canvasUrl==null && other.getCanvasUrl()==null) || 
-             (this.canvasUrl!=null &&
-              this.canvasUrl.equals(other.getCanvasUrl()))) &&
-            ((this.locations==null && other.getLocations()==null) || 
-             (this.locations!=null &&
-              java.util.Arrays.equals(this.locations, other.getLocations())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAccessMethod() != null) {
-            _hashCode += getAccessMethod().hashCode();
-        }
-        if (getCanvasUrl() != null) {
-            _hashCode += getCanvasUrl().hashCode();
-        }
-        if (getLocations() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLocations());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLocations(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ConnectedAppCanvasConfig.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ConnectedAppCanvasConfig"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("accessMethod");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "accessMethod"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AccessMethod"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("canvasUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "canvasUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("locations");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "locations"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CanvasLocationOptions"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.locations;
     }
 
 }

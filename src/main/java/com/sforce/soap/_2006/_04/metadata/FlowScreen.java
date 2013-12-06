@@ -1,296 +1,183 @@
-/**
- * FlowScreen.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowScreen  extends com.sforce.soap._2006._04.metadata.FlowNode  implements java.io.Serializable {
-    private java.lang.Boolean allowBack;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean allowFinish;
 
-    private com.sforce.soap._2006._04.metadata.FlowConnector connector;
+/**
+ * <p>Java class for FlowScreen complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowScreen">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowNode">
+ *       &lt;sequence>
+ *         &lt;element name="allowBack" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="allowFinish" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="connector" type="{http://soap.sforce.com/2006/04/metadata}FlowConnector" minOccurs="0"/>
+ *         &lt;element name="fields" type="{http://soap.sforce.com/2006/04/metadata}FlowScreenField" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="helpText" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowScreen", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "allowBack",
+    "allowFinish",
+    "connector",
+    "fields",
+    "helpText"
+})
+public class FlowScreen
+    extends FlowNode
+{
 
-    private com.sforce.soap._2006._04.metadata.FlowScreenField[] fields;
-
-    private java.lang.String helpText;
-
-    public FlowScreen() {
-    }
-
-    public FlowScreen(
-           java.lang.String description,
-           java.lang.String name,
-           java.lang.String label,
-           int locationX,
-           int locationY,
-           java.lang.Boolean allowBack,
-           java.lang.Boolean allowFinish,
-           com.sforce.soap._2006._04.metadata.FlowConnector connector,
-           com.sforce.soap._2006._04.metadata.FlowScreenField[] fields,
-           java.lang.String helpText) {
-        super(
-            description,
-            name,
-            label,
-            locationX,
-            locationY);
-        this.allowBack = allowBack;
-        this.allowFinish = allowFinish;
-        this.connector = connector;
-        this.fields = fields;
-        this.helpText = helpText;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean allowBack;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean allowFinish;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowConnector connector;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowScreenField> fields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String helpText;
 
     /**
-     * Gets the allowBack value for this FlowScreen.
+     * Gets the value of the allowBack property.
      * 
-     * @return allowBack
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAllowBack() {
+    public Boolean isAllowBack() {
         return allowBack;
     }
 
-
     /**
-     * Sets the allowBack value for this FlowScreen.
+     * Sets the value of the allowBack property.
      * 
-     * @param allowBack
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAllowBack(java.lang.Boolean allowBack) {
-        this.allowBack = allowBack;
+    public void setAllowBack(Boolean value) {
+        this.allowBack = value;
     }
 
-
     /**
-     * Gets the allowFinish value for this FlowScreen.
+     * Gets the value of the allowFinish property.
      * 
-     * @return allowFinish
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getAllowFinish() {
+    public Boolean isAllowFinish() {
         return allowFinish;
     }
 
-
     /**
-     * Sets the allowFinish value for this FlowScreen.
+     * Sets the value of the allowFinish property.
      * 
-     * @param allowFinish
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setAllowFinish(java.lang.Boolean allowFinish) {
-        this.allowFinish = allowFinish;
+    public void setAllowFinish(Boolean value) {
+        this.allowFinish = value;
     }
 
-
     /**
-     * Gets the connector value for this FlowScreen.
+     * Gets the value of the connector property.
      * 
-     * @return connector
+     * @return
+     *     possible object is
+     *     {@link FlowConnector }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowConnector getConnector() {
+    public FlowConnector getConnector() {
         return connector;
     }
 
+    /**
+     * Sets the value of the connector property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link FlowConnector }
+     *     
+     */
+    public void setConnector(FlowConnector value) {
+        this.connector = value;
+    }
 
     /**
-     * Sets the connector value for this FlowScreen.
+     * Gets the value of the fields property.
      * 
-     * @param connector
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowScreenField }
+     * 
+     * 
      */
-    public void setConnector(com.sforce.soap._2006._04.metadata.FlowConnector connector) {
-        this.connector = connector;
+    public List<FlowScreenField> getFields() {
+        if (fields == null) {
+            fields = new ArrayList<FlowScreenField>();
+        }
+        return this.fields;
     }
-
 
     /**
-     * Gets the fields value for this FlowScreen.
+     * Gets the value of the helpText property.
      * 
-     * @return fields
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowScreenField[] getFields() {
-        return fields;
-    }
-
-
-    /**
-     * Sets the fields value for this FlowScreen.
-     * 
-     * @param fields
-     */
-    public void setFields(com.sforce.soap._2006._04.metadata.FlowScreenField[] fields) {
-        this.fields = fields;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowScreenField getFields(int i) {
-        return this.fields[i];
-    }
-
-    public void setFields(int i, com.sforce.soap._2006._04.metadata.FlowScreenField _value) {
-        this.fields[i] = _value;
-    }
-
-
-    /**
-     * Gets the helpText value for this FlowScreen.
-     * 
-     * @return helpText
-     */
-    public java.lang.String getHelpText() {
+    public String getHelpText() {
         return helpText;
     }
 
-
     /**
-     * Sets the helpText value for this FlowScreen.
+     * Sets the value of the helpText property.
      * 
-     * @param helpText
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setHelpText(java.lang.String helpText) {
-        this.helpText = helpText;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowScreen)) return false;
-        FlowScreen other = (FlowScreen) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.allowBack==null && other.getAllowBack()==null) || 
-             (this.allowBack!=null &&
-              this.allowBack.equals(other.getAllowBack()))) &&
-            ((this.allowFinish==null && other.getAllowFinish()==null) || 
-             (this.allowFinish!=null &&
-              this.allowFinish.equals(other.getAllowFinish()))) &&
-            ((this.connector==null && other.getConnector()==null) || 
-             (this.connector!=null &&
-              this.connector.equals(other.getConnector()))) &&
-            ((this.fields==null && other.getFields()==null) || 
-             (this.fields!=null &&
-              java.util.Arrays.equals(this.fields, other.getFields()))) &&
-            ((this.helpText==null && other.getHelpText()==null) || 
-             (this.helpText!=null &&
-              this.helpText.equals(other.getHelpText())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAllowBack() != null) {
-            _hashCode += getAllowBack().hashCode();
-        }
-        if (getAllowFinish() != null) {
-            _hashCode += getAllowFinish().hashCode();
-        }
-        if (getConnector() != null) {
-            _hashCode += getConnector().hashCode();
-        }
-        if (getFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getHelpText() != null) {
-            _hashCode += getHelpText().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowScreen.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowScreen"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowBack");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowBack"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowFinish");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowFinish"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("connector");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "connector"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowConnector"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowScreenField"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("helpText");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "helpText"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setHelpText(String value) {
+        this.helpText = value;
     }
 
 }

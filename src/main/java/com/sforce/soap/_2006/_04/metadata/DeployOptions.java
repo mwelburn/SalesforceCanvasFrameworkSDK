@@ -1,425 +1,249 @@
-/**
- * DeployOptions.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class DeployOptions  implements java.io.Serializable {
-    private boolean allowMissingFiles;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private boolean autoUpdatePackage;
 
-    private boolean checkOnly;
+/**
+ * <p>Java class for DeployOptions complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DeployOptions">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="allowMissingFiles" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="autoUpdatePackage" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="checkOnly" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="ignoreWarnings" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="performRetrieve" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="purgeOnDelete" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="rollbackOnError" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="runAllTests" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="runTests" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="singlePackage" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DeployOptions", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "allowMissingFiles",
+    "autoUpdatePackage",
+    "checkOnly",
+    "ignoreWarnings",
+    "performRetrieve",
+    "purgeOnDelete",
+    "rollbackOnError",
+    "runAllTests",
+    "runTests",
+    "singlePackage"
+})
+public class DeployOptions {
 
-    private boolean ignoreWarnings;
-
-    private boolean performRetrieve;
-
-    private boolean purgeOnDelete;
-
-    private boolean rollbackOnError;
-
-    private boolean runAllTests;
-
-    private java.lang.String[] runTests;
-
-    private boolean singlePackage;
-
-    public DeployOptions() {
-    }
-
-    public DeployOptions(
-           boolean allowMissingFiles,
-           boolean autoUpdatePackage,
-           boolean checkOnly,
-           boolean ignoreWarnings,
-           boolean performRetrieve,
-           boolean purgeOnDelete,
-           boolean rollbackOnError,
-           boolean runAllTests,
-           java.lang.String[] runTests,
-           boolean singlePackage) {
-           this.allowMissingFiles = allowMissingFiles;
-           this.autoUpdatePackage = autoUpdatePackage;
-           this.checkOnly = checkOnly;
-           this.ignoreWarnings = ignoreWarnings;
-           this.performRetrieve = performRetrieve;
-           this.purgeOnDelete = purgeOnDelete;
-           this.rollbackOnError = rollbackOnError;
-           this.runAllTests = runAllTests;
-           this.runTests = runTests;
-           this.singlePackage = singlePackage;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean allowMissingFiles;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean autoUpdatePackage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean checkOnly;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean ignoreWarnings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean performRetrieve;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean purgeOnDelete;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean rollbackOnError;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean runAllTests;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> runTests;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean singlePackage;
 
     /**
-     * Gets the allowMissingFiles value for this DeployOptions.
+     * Gets the value of the allowMissingFiles property.
      * 
-     * @return allowMissingFiles
      */
     public boolean isAllowMissingFiles() {
         return allowMissingFiles;
     }
 
-
     /**
-     * Sets the allowMissingFiles value for this DeployOptions.
+     * Sets the value of the allowMissingFiles property.
      * 
-     * @param allowMissingFiles
      */
-    public void setAllowMissingFiles(boolean allowMissingFiles) {
-        this.allowMissingFiles = allowMissingFiles;
+    public void setAllowMissingFiles(boolean value) {
+        this.allowMissingFiles = value;
     }
 
-
     /**
-     * Gets the autoUpdatePackage value for this DeployOptions.
+     * Gets the value of the autoUpdatePackage property.
      * 
-     * @return autoUpdatePackage
      */
     public boolean isAutoUpdatePackage() {
         return autoUpdatePackage;
     }
 
-
     /**
-     * Sets the autoUpdatePackage value for this DeployOptions.
+     * Sets the value of the autoUpdatePackage property.
      * 
-     * @param autoUpdatePackage
      */
-    public void setAutoUpdatePackage(boolean autoUpdatePackage) {
-        this.autoUpdatePackage = autoUpdatePackage;
+    public void setAutoUpdatePackage(boolean value) {
+        this.autoUpdatePackage = value;
     }
 
-
     /**
-     * Gets the checkOnly value for this DeployOptions.
+     * Gets the value of the checkOnly property.
      * 
-     * @return checkOnly
      */
     public boolean isCheckOnly() {
         return checkOnly;
     }
 
-
     /**
-     * Sets the checkOnly value for this DeployOptions.
+     * Sets the value of the checkOnly property.
      * 
-     * @param checkOnly
      */
-    public void setCheckOnly(boolean checkOnly) {
-        this.checkOnly = checkOnly;
+    public void setCheckOnly(boolean value) {
+        this.checkOnly = value;
     }
 
-
     /**
-     * Gets the ignoreWarnings value for this DeployOptions.
+     * Gets the value of the ignoreWarnings property.
      * 
-     * @return ignoreWarnings
      */
     public boolean isIgnoreWarnings() {
         return ignoreWarnings;
     }
 
-
     /**
-     * Sets the ignoreWarnings value for this DeployOptions.
+     * Sets the value of the ignoreWarnings property.
      * 
-     * @param ignoreWarnings
      */
-    public void setIgnoreWarnings(boolean ignoreWarnings) {
-        this.ignoreWarnings = ignoreWarnings;
+    public void setIgnoreWarnings(boolean value) {
+        this.ignoreWarnings = value;
     }
 
-
     /**
-     * Gets the performRetrieve value for this DeployOptions.
+     * Gets the value of the performRetrieve property.
      * 
-     * @return performRetrieve
      */
     public boolean isPerformRetrieve() {
         return performRetrieve;
     }
 
-
     /**
-     * Sets the performRetrieve value for this DeployOptions.
+     * Sets the value of the performRetrieve property.
      * 
-     * @param performRetrieve
      */
-    public void setPerformRetrieve(boolean performRetrieve) {
-        this.performRetrieve = performRetrieve;
+    public void setPerformRetrieve(boolean value) {
+        this.performRetrieve = value;
     }
 
-
     /**
-     * Gets the purgeOnDelete value for this DeployOptions.
+     * Gets the value of the purgeOnDelete property.
      * 
-     * @return purgeOnDelete
      */
     public boolean isPurgeOnDelete() {
         return purgeOnDelete;
     }
 
-
     /**
-     * Sets the purgeOnDelete value for this DeployOptions.
+     * Sets the value of the purgeOnDelete property.
      * 
-     * @param purgeOnDelete
      */
-    public void setPurgeOnDelete(boolean purgeOnDelete) {
-        this.purgeOnDelete = purgeOnDelete;
+    public void setPurgeOnDelete(boolean value) {
+        this.purgeOnDelete = value;
     }
 
-
     /**
-     * Gets the rollbackOnError value for this DeployOptions.
+     * Gets the value of the rollbackOnError property.
      * 
-     * @return rollbackOnError
      */
     public boolean isRollbackOnError() {
         return rollbackOnError;
     }
 
-
     /**
-     * Sets the rollbackOnError value for this DeployOptions.
+     * Sets the value of the rollbackOnError property.
      * 
-     * @param rollbackOnError
      */
-    public void setRollbackOnError(boolean rollbackOnError) {
-        this.rollbackOnError = rollbackOnError;
+    public void setRollbackOnError(boolean value) {
+        this.rollbackOnError = value;
     }
 
-
     /**
-     * Gets the runAllTests value for this DeployOptions.
+     * Gets the value of the runAllTests property.
      * 
-     * @return runAllTests
      */
     public boolean isRunAllTests() {
         return runAllTests;
     }
 
-
     /**
-     * Sets the runAllTests value for this DeployOptions.
+     * Sets the value of the runAllTests property.
      * 
-     * @param runAllTests
      */
-    public void setRunAllTests(boolean runAllTests) {
-        this.runAllTests = runAllTests;
+    public void setRunAllTests(boolean value) {
+        this.runAllTests = value;
     }
 
-
     /**
-     * Gets the runTests value for this DeployOptions.
+     * Gets the value of the runTests property.
      * 
-     * @return runTests
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the runTests property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRunTests().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public java.lang.String[] getRunTests() {
-        return runTests;
+    public List<String> getRunTests() {
+        if (runTests == null) {
+            runTests = new ArrayList<String>();
+        }
+        return this.runTests;
     }
-
 
     /**
-     * Sets the runTests value for this DeployOptions.
+     * Gets the value of the singlePackage property.
      * 
-     * @param runTests
-     */
-    public void setRunTests(java.lang.String[] runTests) {
-        this.runTests = runTests;
-    }
-
-    public java.lang.String getRunTests(int i) {
-        return this.runTests[i];
-    }
-
-    public void setRunTests(int i, java.lang.String _value) {
-        this.runTests[i] = _value;
-    }
-
-
-    /**
-     * Gets the singlePackage value for this DeployOptions.
-     * 
-     * @return singlePackage
      */
     public boolean isSinglePackage() {
         return singlePackage;
     }
 
-
     /**
-     * Sets the singlePackage value for this DeployOptions.
+     * Sets the value of the singlePackage property.
      * 
-     * @param singlePackage
      */
-    public void setSinglePackage(boolean singlePackage) {
-        this.singlePackage = singlePackage;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof DeployOptions)) return false;
-        DeployOptions other = (DeployOptions) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            this.allowMissingFiles == other.isAllowMissingFiles() &&
-            this.autoUpdatePackage == other.isAutoUpdatePackage() &&
-            this.checkOnly == other.isCheckOnly() &&
-            this.ignoreWarnings == other.isIgnoreWarnings() &&
-            this.performRetrieve == other.isPerformRetrieve() &&
-            this.purgeOnDelete == other.isPurgeOnDelete() &&
-            this.rollbackOnError == other.isRollbackOnError() &&
-            this.runAllTests == other.isRunAllTests() &&
-            ((this.runTests==null && other.getRunTests()==null) || 
-             (this.runTests!=null &&
-              java.util.Arrays.equals(this.runTests, other.getRunTests()))) &&
-            this.singlePackage == other.isSinglePackage();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        _hashCode += (isAllowMissingFiles() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isAutoUpdatePackage() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isCheckOnly() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isIgnoreWarnings() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isPerformRetrieve() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isPurgeOnDelete() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isRollbackOnError() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        _hashCode += (isRunAllTests() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getRunTests() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRunTests());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRunTests(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        _hashCode += (isSinglePackage() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DeployOptions.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "DeployOptions"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("allowMissingFiles");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "allowMissingFiles"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoUpdatePackage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoUpdatePackage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("checkOnly");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "checkOnly"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ignoreWarnings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ignoreWarnings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("performRetrieve");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "performRetrieve"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("purgeOnDelete");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "purgeOnDelete"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rollbackOnError");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rollbackOnError"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("runAllTests");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "runAllTests"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("runTests");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "runTests"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("singlePackage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "singlePackage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSinglePackage(boolean value) {
+        this.singlePackage = value;
     }
 
 }

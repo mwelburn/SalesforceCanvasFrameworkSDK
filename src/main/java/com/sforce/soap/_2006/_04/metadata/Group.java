@@ -1,159 +1,92 @@
-/**
- * Group.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Group  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean doesIncludeBosses;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String name;
 
-    public Group() {
-    }
+/**
+ * <p>Java class for Group complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Group">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="doesIncludeBosses" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Group", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "doesIncludeBosses",
+    "name"
+})
+public class Group
+    extends Metadata
+{
 
-    public Group(
-           java.lang.String fullName,
-           java.lang.Boolean doesIncludeBosses,
-           java.lang.String name) {
-        super(
-            fullName);
-        this.doesIncludeBosses = doesIncludeBosses;
-        this.name = name;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean doesIncludeBosses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
 
     /**
-     * Gets the doesIncludeBosses value for this Group.
+     * Gets the value of the doesIncludeBosses property.
      * 
-     * @return doesIncludeBosses
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getDoesIncludeBosses() {
+    public Boolean isDoesIncludeBosses() {
         return doesIncludeBosses;
     }
 
-
     /**
-     * Sets the doesIncludeBosses value for this Group.
+     * Sets the value of the doesIncludeBosses property.
      * 
-     * @param doesIncludeBosses
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setDoesIncludeBosses(java.lang.Boolean doesIncludeBosses) {
-        this.doesIncludeBosses = doesIncludeBosses;
+    public void setDoesIncludeBosses(Boolean value) {
+        this.doesIncludeBosses = value;
     }
 
-
     /**
-     * Gets the name value for this Group.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this Group.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Group)) return false;
-        Group other = (Group) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.doesIncludeBosses==null && other.getDoesIncludeBosses()==null) || 
-             (this.doesIncludeBosses!=null &&
-              this.doesIncludeBosses.equals(other.getDoesIncludeBosses()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getDoesIncludeBosses() != null) {
-            _hashCode += getDoesIncludeBosses().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Group.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Group"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("doesIncludeBosses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "doesIncludeBosses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setName(String value) {
+        this.name = value;
     }
 
 }

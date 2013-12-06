@@ -1,263 +1,166 @@
-/**
- * SummaryLayoutItem.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class SummaryLayoutItem  implements java.io.Serializable {
-    private java.lang.String customLink;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String field;
 
-    private int posX;
+/**
+ * <p>Java class for SummaryLayoutItem complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="SummaryLayoutItem">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customLink" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="field" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="posX" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="posY" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="posZ" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SummaryLayoutItem", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "customLink",
+    "field",
+    "posX",
+    "posY",
+    "posZ"
+})
+public class SummaryLayoutItem {
 
-    private java.lang.Integer posY;
-
-    private java.lang.Integer posZ;
-
-    public SummaryLayoutItem() {
-    }
-
-    public SummaryLayoutItem(
-           java.lang.String customLink,
-           java.lang.String field,
-           int posX,
-           java.lang.Integer posY,
-           java.lang.Integer posZ) {
-           this.customLink = customLink;
-           this.field = field;
-           this.posX = posX;
-           this.posY = posY;
-           this.posZ = posZ;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customLink;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String field;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int posX;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer posY;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer posZ;
 
     /**
-     * Gets the customLink value for this SummaryLayoutItem.
+     * Gets the value of the customLink property.
      * 
-     * @return customLink
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomLink() {
+    public String getCustomLink() {
         return customLink;
     }
 
-
     /**
-     * Sets the customLink value for this SummaryLayoutItem.
+     * Sets the value of the customLink property.
      * 
-     * @param customLink
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomLink(java.lang.String customLink) {
-        this.customLink = customLink;
+    public void setCustomLink(String value) {
+        this.customLink = value;
     }
 
-
     /**
-     * Gets the field value for this SummaryLayoutItem.
+     * Gets the value of the field property.
      * 
-     * @return field
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getField() {
+    public String getField() {
         return field;
     }
 
-
     /**
-     * Sets the field value for this SummaryLayoutItem.
+     * Sets the value of the field property.
      * 
-     * @param field
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setField(java.lang.String field) {
-        this.field = field;
+    public void setField(String value) {
+        this.field = value;
     }
 
-
     /**
-     * Gets the posX value for this SummaryLayoutItem.
+     * Gets the value of the posX property.
      * 
-     * @return posX
      */
     public int getPosX() {
         return posX;
     }
 
-
     /**
-     * Sets the posX value for this SummaryLayoutItem.
+     * Sets the value of the posX property.
      * 
-     * @param posX
      */
-    public void setPosX(int posX) {
-        this.posX = posX;
+    public void setPosX(int value) {
+        this.posX = value;
     }
 
-
     /**
-     * Gets the posY value for this SummaryLayoutItem.
+     * Gets the value of the posY property.
      * 
-     * @return posY
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getPosY() {
+    public Integer getPosY() {
         return posY;
     }
 
-
     /**
-     * Sets the posY value for this SummaryLayoutItem.
+     * Sets the value of the posY property.
      * 
-     * @param posY
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPosY(java.lang.Integer posY) {
-        this.posY = posY;
+    public void setPosY(Integer value) {
+        this.posY = value;
     }
 
-
     /**
-     * Gets the posZ value for this SummaryLayoutItem.
+     * Gets the value of the posZ property.
      * 
-     * @return posZ
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getPosZ() {
+    public Integer getPosZ() {
         return posZ;
     }
 
-
     /**
-     * Sets the posZ value for this SummaryLayoutItem.
+     * Sets the value of the posZ property.
      * 
-     * @param posZ
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPosZ(java.lang.Integer posZ) {
-        this.posZ = posZ;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SummaryLayoutItem)) return false;
-        SummaryLayoutItem other = (SummaryLayoutItem) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customLink==null && other.getCustomLink()==null) || 
-             (this.customLink!=null &&
-              this.customLink.equals(other.getCustomLink()))) &&
-            ((this.field==null && other.getField()==null) || 
-             (this.field!=null &&
-              this.field.equals(other.getField()))) &&
-            this.posX == other.getPosX() &&
-            ((this.posY==null && other.getPosY()==null) || 
-             (this.posY!=null &&
-              this.posY.equals(other.getPosY()))) &&
-            ((this.posZ==null && other.getPosZ()==null) || 
-             (this.posZ!=null &&
-              this.posZ.equals(other.getPosZ())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomLink() != null) {
-            _hashCode += getCustomLink().hashCode();
-        }
-        if (getField() != null) {
-            _hashCode += getField().hashCode();
-        }
-        _hashCode += getPosX();
-        if (getPosY() != null) {
-            _hashCode += getPosY().hashCode();
-        }
-        if (getPosZ() != null) {
-            _hashCode += getPosZ().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SummaryLayoutItem.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SummaryLayoutItem"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customLink");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customLink"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("field");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("posX");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "posX"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("posY");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "posY"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("posZ");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "posZ"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setPosZ(Integer value) {
+        this.posZ = value;
     }
 
 }

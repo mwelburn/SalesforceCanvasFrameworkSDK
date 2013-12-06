@@ -1,683 +1,419 @@
-/**
- * PermissionSet.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class PermissionSet  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.PermissionSetApplicationVisibility[] applicationVisibilities;
-
-    private com.sforce.soap._2006._04.metadata.PermissionSetApexClassAccess[] classAccesses;
-
-    private java.lang.String description;
-
-    private com.sforce.soap._2006._04.metadata.PermissionSetExternalDataSourceAccess[] externalDataSourceAccesses;
-
-    private com.sforce.soap._2006._04.metadata.PermissionSetFieldPermissions[] fieldPermissions;
-
-    private java.lang.String label;
-
-    private com.sforce.soap._2006._04.metadata.PermissionSetObjectPermissions[] objectPermissions;
-
-    private com.sforce.soap._2006._04.metadata.PermissionSetApexPageAccess[] pageAccesses;
-
-    private com.sforce.soap._2006._04.metadata.PermissionSetRecordTypeVisibility[] recordTypeVisibilities;
-
-    private com.sforce.soap._2006._04.metadata.PermissionSetTabSetting[] tabSettings;
-
-    private java.lang.String userLicense;
-
-    private com.sforce.soap._2006._04.metadata.PermissionSetUserPermission[] userPermissions;
-
-    public PermissionSet() {
-    }
-
-    public PermissionSet(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.PermissionSetApplicationVisibility[] applicationVisibilities,
-           com.sforce.soap._2006._04.metadata.PermissionSetApexClassAccess[] classAccesses,
-           java.lang.String description,
-           com.sforce.soap._2006._04.metadata.PermissionSetExternalDataSourceAccess[] externalDataSourceAccesses,
-           com.sforce.soap._2006._04.metadata.PermissionSetFieldPermissions[] fieldPermissions,
-           java.lang.String label,
-           com.sforce.soap._2006._04.metadata.PermissionSetObjectPermissions[] objectPermissions,
-           com.sforce.soap._2006._04.metadata.PermissionSetApexPageAccess[] pageAccesses,
-           com.sforce.soap._2006._04.metadata.PermissionSetRecordTypeVisibility[] recordTypeVisibilities,
-           com.sforce.soap._2006._04.metadata.PermissionSetTabSetting[] tabSettings,
-           java.lang.String userLicense,
-           com.sforce.soap._2006._04.metadata.PermissionSetUserPermission[] userPermissions) {
-        super(
-            fullName);
-        this.applicationVisibilities = applicationVisibilities;
-        this.classAccesses = classAccesses;
-        this.description = description;
-        this.externalDataSourceAccesses = externalDataSourceAccesses;
-        this.fieldPermissions = fieldPermissions;
-        this.label = label;
-        this.objectPermissions = objectPermissions;
-        this.pageAccesses = pageAccesses;
-        this.recordTypeVisibilities = recordTypeVisibilities;
-        this.tabSettings = tabSettings;
-        this.userLicense = userLicense;
-        this.userPermissions = userPermissions;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the applicationVisibilities value for this PermissionSet.
-     * 
-     * @return applicationVisibilities
-     */
-    public com.sforce.soap._2006._04.metadata.PermissionSetApplicationVisibility[] getApplicationVisibilities() {
-        return applicationVisibilities;
-    }
+/**
+ * <p>Java class for PermissionSet complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="PermissionSet">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="applicationVisibilities" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetApplicationVisibility" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="classAccesses" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetApexClassAccess" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="externalDataSourceAccesses" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetExternalDataSourceAccess" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="fieldPermissions" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetFieldPermissions" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="objectPermissions" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetObjectPermissions" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="pageAccesses" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetApexPageAccess" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="recordTypeVisibilities" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetRecordTypeVisibility" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="tabSettings" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetTabSetting" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="userLicense" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="userPermissions" type="{http://soap.sforce.com/2006/04/metadata}PermissionSetUserPermission" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "PermissionSet", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "applicationVisibilities",
+    "classAccesses",
+    "description",
+    "externalDataSourceAccesses",
+    "fieldPermissions",
+    "label",
+    "objectPermissions",
+    "pageAccesses",
+    "recordTypeVisibilities",
+    "tabSettings",
+    "userLicense",
+    "userPermissions"
+})
+public class PermissionSet
+    extends Metadata
+{
 
-
-    /**
-     * Sets the applicationVisibilities value for this PermissionSet.
-     * 
-     * @param applicationVisibilities
-     */
-    public void setApplicationVisibilities(com.sforce.soap._2006._04.metadata.PermissionSetApplicationVisibility[] applicationVisibilities) {
-        this.applicationVisibilities = applicationVisibilities;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetApplicationVisibility getApplicationVisibilities(int i) {
-        return this.applicationVisibilities[i];
-    }
-
-    public void setApplicationVisibilities(int i, com.sforce.soap._2006._04.metadata.PermissionSetApplicationVisibility _value) {
-        this.applicationVisibilities[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetApplicationVisibility> applicationVisibilities;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetApexClassAccess> classAccesses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetExternalDataSourceAccess> externalDataSourceAccesses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetFieldPermissions> fieldPermissions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetObjectPermissions> objectPermissions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetApexPageAccess> pageAccesses;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetRecordTypeVisibility> recordTypeVisibilities;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetTabSetting> tabSettings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String userLicense;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PermissionSetUserPermission> userPermissions;
 
     /**
-     * Gets the classAccesses value for this PermissionSet.
+     * Gets the value of the applicationVisibilities property.
      * 
-     * @return classAccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the applicationVisibilities property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getApplicationVisibilities().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetApplicationVisibility }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.PermissionSetApexClassAccess[] getClassAccesses() {
-        return classAccesses;
+    public List<PermissionSetApplicationVisibility> getApplicationVisibilities() {
+        if (applicationVisibilities == null) {
+            applicationVisibilities = new ArrayList<PermissionSetApplicationVisibility>();
+        }
+        return this.applicationVisibilities;
     }
-
 
     /**
-     * Sets the classAccesses value for this PermissionSet.
+     * Gets the value of the classAccesses property.
      * 
-     * @param classAccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the classAccesses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getClassAccesses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetApexClassAccess }
+     * 
+     * 
      */
-    public void setClassAccesses(com.sforce.soap._2006._04.metadata.PermissionSetApexClassAccess[] classAccesses) {
-        this.classAccesses = classAccesses;
+    public List<PermissionSetApexClassAccess> getClassAccesses() {
+        if (classAccesses == null) {
+            classAccesses = new ArrayList<PermissionSetApexClassAccess>();
+        }
+        return this.classAccesses;
     }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetApexClassAccess getClassAccesses(int i) {
-        return this.classAccesses[i];
-    }
-
-    public void setClassAccesses(int i, com.sforce.soap._2006._04.metadata.PermissionSetApexClassAccess _value) {
-        this.classAccesses[i] = _value;
-    }
-
 
     /**
-     * Gets the description value for this PermissionSet.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
+    /**
+     * Sets the value of the description property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescription(String value) {
+        this.description = value;
+    }
 
     /**
-     * Sets the description value for this PermissionSet.
+     * Gets the value of the externalDataSourceAccesses property.
      * 
-     * @param description
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the externalDataSourceAccesses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getExternalDataSourceAccesses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetExternalDataSourceAccess }
+     * 
+     * 
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public List<PermissionSetExternalDataSourceAccess> getExternalDataSourceAccesses() {
+        if (externalDataSourceAccesses == null) {
+            externalDataSourceAccesses = new ArrayList<PermissionSetExternalDataSourceAccess>();
+        }
+        return this.externalDataSourceAccesses;
     }
-
 
     /**
-     * Gets the externalDataSourceAccesses value for this PermissionSet.
+     * Gets the value of the fieldPermissions property.
      * 
-     * @return externalDataSourceAccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fieldPermissions property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFieldPermissions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetFieldPermissions }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.PermissionSetExternalDataSourceAccess[] getExternalDataSourceAccesses() {
-        return externalDataSourceAccesses;
+    public List<PermissionSetFieldPermissions> getFieldPermissions() {
+        if (fieldPermissions == null) {
+            fieldPermissions = new ArrayList<PermissionSetFieldPermissions>();
+        }
+        return this.fieldPermissions;
     }
-
 
     /**
-     * Sets the externalDataSourceAccesses value for this PermissionSet.
+     * Gets the value of the label property.
      * 
-     * @param externalDataSourceAccesses
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public void setExternalDataSourceAccesses(com.sforce.soap._2006._04.metadata.PermissionSetExternalDataSourceAccess[] externalDataSourceAccesses) {
-        this.externalDataSourceAccesses = externalDataSourceAccesses;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetExternalDataSourceAccess getExternalDataSourceAccesses(int i) {
-        return this.externalDataSourceAccesses[i];
-    }
-
-    public void setExternalDataSourceAccesses(int i, com.sforce.soap._2006._04.metadata.PermissionSetExternalDataSourceAccess _value) {
-        this.externalDataSourceAccesses[i] = _value;
-    }
-
-
-    /**
-     * Gets the fieldPermissions value for this PermissionSet.
-     * 
-     * @return fieldPermissions
-     */
-    public com.sforce.soap._2006._04.metadata.PermissionSetFieldPermissions[] getFieldPermissions() {
-        return fieldPermissions;
-    }
-
-
-    /**
-     * Sets the fieldPermissions value for this PermissionSet.
-     * 
-     * @param fieldPermissions
-     */
-    public void setFieldPermissions(com.sforce.soap._2006._04.metadata.PermissionSetFieldPermissions[] fieldPermissions) {
-        this.fieldPermissions = fieldPermissions;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetFieldPermissions getFieldPermissions(int i) {
-        return this.fieldPermissions[i];
-    }
-
-    public void setFieldPermissions(int i, com.sforce.soap._2006._04.metadata.PermissionSetFieldPermissions _value) {
-        this.fieldPermissions[i] = _value;
-    }
-
-
-    /**
-     * Gets the label value for this PermissionSet.
-     * 
-     * @return label
-     */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
+    /**
+     * Sets the value of the label property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLabel(String value) {
+        this.label = value;
+    }
 
     /**
-     * Sets the label value for this PermissionSet.
+     * Gets the value of the objectPermissions property.
      * 
-     * @param label
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the objectPermissions property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getObjectPermissions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetObjectPermissions }
+     * 
+     * 
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public List<PermissionSetObjectPermissions> getObjectPermissions() {
+        if (objectPermissions == null) {
+            objectPermissions = new ArrayList<PermissionSetObjectPermissions>();
+        }
+        return this.objectPermissions;
     }
-
 
     /**
-     * Gets the objectPermissions value for this PermissionSet.
+     * Gets the value of the pageAccesses property.
      * 
-     * @return objectPermissions
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the pageAccesses property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPageAccesses().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetApexPageAccess }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.PermissionSetObjectPermissions[] getObjectPermissions() {
-        return objectPermissions;
+    public List<PermissionSetApexPageAccess> getPageAccesses() {
+        if (pageAccesses == null) {
+            pageAccesses = new ArrayList<PermissionSetApexPageAccess>();
+        }
+        return this.pageAccesses;
     }
-
 
     /**
-     * Sets the objectPermissions value for this PermissionSet.
+     * Gets the value of the recordTypeVisibilities property.
      * 
-     * @param objectPermissions
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the recordTypeVisibilities property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRecordTypeVisibilities().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetRecordTypeVisibility }
+     * 
+     * 
      */
-    public void setObjectPermissions(com.sforce.soap._2006._04.metadata.PermissionSetObjectPermissions[] objectPermissions) {
-        this.objectPermissions = objectPermissions;
+    public List<PermissionSetRecordTypeVisibility> getRecordTypeVisibilities() {
+        if (recordTypeVisibilities == null) {
+            recordTypeVisibilities = new ArrayList<PermissionSetRecordTypeVisibility>();
+        }
+        return this.recordTypeVisibilities;
     }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetObjectPermissions getObjectPermissions(int i) {
-        return this.objectPermissions[i];
-    }
-
-    public void setObjectPermissions(int i, com.sforce.soap._2006._04.metadata.PermissionSetObjectPermissions _value) {
-        this.objectPermissions[i] = _value;
-    }
-
 
     /**
-     * Gets the pageAccesses value for this PermissionSet.
+     * Gets the value of the tabSettings property.
      * 
-     * @return pageAccesses
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the tabSettings property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getTabSettings().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetTabSetting }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.PermissionSetApexPageAccess[] getPageAccesses() {
-        return pageAccesses;
+    public List<PermissionSetTabSetting> getTabSettings() {
+        if (tabSettings == null) {
+            tabSettings = new ArrayList<PermissionSetTabSetting>();
+        }
+        return this.tabSettings;
     }
-
 
     /**
-     * Sets the pageAccesses value for this PermissionSet.
+     * Gets the value of the userLicense property.
      * 
-     * @param pageAccesses
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public void setPageAccesses(com.sforce.soap._2006._04.metadata.PermissionSetApexPageAccess[] pageAccesses) {
-        this.pageAccesses = pageAccesses;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetApexPageAccess getPageAccesses(int i) {
-        return this.pageAccesses[i];
-    }
-
-    public void setPageAccesses(int i, com.sforce.soap._2006._04.metadata.PermissionSetApexPageAccess _value) {
-        this.pageAccesses[i] = _value;
-    }
-
-
-    /**
-     * Gets the recordTypeVisibilities value for this PermissionSet.
-     * 
-     * @return recordTypeVisibilities
-     */
-    public com.sforce.soap._2006._04.metadata.PermissionSetRecordTypeVisibility[] getRecordTypeVisibilities() {
-        return recordTypeVisibilities;
-    }
-
-
-    /**
-     * Sets the recordTypeVisibilities value for this PermissionSet.
-     * 
-     * @param recordTypeVisibilities
-     */
-    public void setRecordTypeVisibilities(com.sforce.soap._2006._04.metadata.PermissionSetRecordTypeVisibility[] recordTypeVisibilities) {
-        this.recordTypeVisibilities = recordTypeVisibilities;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetRecordTypeVisibility getRecordTypeVisibilities(int i) {
-        return this.recordTypeVisibilities[i];
-    }
-
-    public void setRecordTypeVisibilities(int i, com.sforce.soap._2006._04.metadata.PermissionSetRecordTypeVisibility _value) {
-        this.recordTypeVisibilities[i] = _value;
-    }
-
-
-    /**
-     * Gets the tabSettings value for this PermissionSet.
-     * 
-     * @return tabSettings
-     */
-    public com.sforce.soap._2006._04.metadata.PermissionSetTabSetting[] getTabSettings() {
-        return tabSettings;
-    }
-
-
-    /**
-     * Sets the tabSettings value for this PermissionSet.
-     * 
-     * @param tabSettings
-     */
-    public void setTabSettings(com.sforce.soap._2006._04.metadata.PermissionSetTabSetting[] tabSettings) {
-        this.tabSettings = tabSettings;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetTabSetting getTabSettings(int i) {
-        return this.tabSettings[i];
-    }
-
-    public void setTabSettings(int i, com.sforce.soap._2006._04.metadata.PermissionSetTabSetting _value) {
-        this.tabSettings[i] = _value;
-    }
-
-
-    /**
-     * Gets the userLicense value for this PermissionSet.
-     * 
-     * @return userLicense
-     */
-    public java.lang.String getUserLicense() {
+    public String getUserLicense() {
         return userLicense;
     }
 
-
     /**
-     * Sets the userLicense value for this PermissionSet.
+     * Sets the value of the userLicense property.
      * 
-     * @param userLicense
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUserLicense(java.lang.String userLicense) {
-        this.userLicense = userLicense;
+    public void setUserLicense(String value) {
+        this.userLicense = value;
     }
 
-
     /**
-     * Gets the userPermissions value for this PermissionSet.
+     * Gets the value of the userPermissions property.
      * 
-     * @return userPermissions
-     */
-    public com.sforce.soap._2006._04.metadata.PermissionSetUserPermission[] getUserPermissions() {
-        return userPermissions;
-    }
-
-
-    /**
-     * Sets the userPermissions value for this PermissionSet.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the userPermissions property.
      * 
-     * @param userPermissions
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getUserPermissions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PermissionSetUserPermission }
+     * 
+     * 
      */
-    public void setUserPermissions(com.sforce.soap._2006._04.metadata.PermissionSetUserPermission[] userPermissions) {
-        this.userPermissions = userPermissions;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PermissionSetUserPermission getUserPermissions(int i) {
-        return this.userPermissions[i];
-    }
-
-    public void setUserPermissions(int i, com.sforce.soap._2006._04.metadata.PermissionSetUserPermission _value) {
-        this.userPermissions[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof PermissionSet)) return false;
-        PermissionSet other = (PermissionSet) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<PermissionSetUserPermission> getUserPermissions() {
+        if (userPermissions == null) {
+            userPermissions = new ArrayList<PermissionSetUserPermission>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.applicationVisibilities==null && other.getApplicationVisibilities()==null) || 
-             (this.applicationVisibilities!=null &&
-              java.util.Arrays.equals(this.applicationVisibilities, other.getApplicationVisibilities()))) &&
-            ((this.classAccesses==null && other.getClassAccesses()==null) || 
-             (this.classAccesses!=null &&
-              java.util.Arrays.equals(this.classAccesses, other.getClassAccesses()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.externalDataSourceAccesses==null && other.getExternalDataSourceAccesses()==null) || 
-             (this.externalDataSourceAccesses!=null &&
-              java.util.Arrays.equals(this.externalDataSourceAccesses, other.getExternalDataSourceAccesses()))) &&
-            ((this.fieldPermissions==null && other.getFieldPermissions()==null) || 
-             (this.fieldPermissions!=null &&
-              java.util.Arrays.equals(this.fieldPermissions, other.getFieldPermissions()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.objectPermissions==null && other.getObjectPermissions()==null) || 
-             (this.objectPermissions!=null &&
-              java.util.Arrays.equals(this.objectPermissions, other.getObjectPermissions()))) &&
-            ((this.pageAccesses==null && other.getPageAccesses()==null) || 
-             (this.pageAccesses!=null &&
-              java.util.Arrays.equals(this.pageAccesses, other.getPageAccesses()))) &&
-            ((this.recordTypeVisibilities==null && other.getRecordTypeVisibilities()==null) || 
-             (this.recordTypeVisibilities!=null &&
-              java.util.Arrays.equals(this.recordTypeVisibilities, other.getRecordTypeVisibilities()))) &&
-            ((this.tabSettings==null && other.getTabSettings()==null) || 
-             (this.tabSettings!=null &&
-              java.util.Arrays.equals(this.tabSettings, other.getTabSettings()))) &&
-            ((this.userLicense==null && other.getUserLicense()==null) || 
-             (this.userLicense!=null &&
-              this.userLicense.equals(other.getUserLicense()))) &&
-            ((this.userPermissions==null && other.getUserPermissions()==null) || 
-             (this.userPermissions!=null &&
-              java.util.Arrays.equals(this.userPermissions, other.getUserPermissions())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getApplicationVisibilities() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getApplicationVisibilities());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getApplicationVisibilities(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getClassAccesses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getClassAccesses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getClassAccesses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getExternalDataSourceAccesses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getExternalDataSourceAccesses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getExternalDataSourceAccesses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFieldPermissions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFieldPermissions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFieldPermissions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getObjectPermissions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getObjectPermissions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getObjectPermissions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getPageAccesses() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPageAccesses());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPageAccesses(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRecordTypeVisibilities() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRecordTypeVisibilities());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRecordTypeVisibilities(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getTabSettings() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTabSettings());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTabSettings(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getUserLicense() != null) {
-            _hashCode += getUserLicense().hashCode();
-        }
-        if (getUserPermissions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getUserPermissions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getUserPermissions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(PermissionSet.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSet"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("applicationVisibilities");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "applicationVisibilities"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetApplicationVisibility"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("classAccesses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "classAccesses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetApexClassAccess"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("externalDataSourceAccesses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "externalDataSourceAccesses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetExternalDataSourceAccess"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fieldPermissions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fieldPermissions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetFieldPermissions"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("objectPermissions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "objectPermissions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetObjectPermissions"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("pageAccesses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "pageAccesses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetApexPageAccess"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordTypeVisibilities");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordTypeVisibilities"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetRecordTypeVisibility"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tabSettings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tabSettings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetTabSetting"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userLicense");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "userLicense"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userPermissions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "userPermissions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PermissionSetUserPermission"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.userPermissions;
     }
 
 }

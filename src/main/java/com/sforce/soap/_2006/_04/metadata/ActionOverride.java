@@ -1,268 +1,174 @@
-/**
- * ActionOverride.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ActionOverride  implements java.io.Serializable {
-    private java.lang.String actionName;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String comment;
 
-    private java.lang.String content;
+/**
+ * <p>Java class for ActionOverride complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ActionOverride">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="actionName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="content" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="skipRecordTypeSelect" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="type" type="{http://soap.sforce.com/2006/04/metadata}ActionOverrideType" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ActionOverride", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "actionName",
+    "comment",
+    "content",
+    "skipRecordTypeSelect",
+    "type"
+})
+public class ActionOverride {
 
-    private java.lang.Boolean skipRecordTypeSelect;
-
-    private com.sforce.soap._2006._04.metadata.ActionOverrideType type;
-
-    public ActionOverride() {
-    }
-
-    public ActionOverride(
-           java.lang.String actionName,
-           java.lang.String comment,
-           java.lang.String content,
-           java.lang.Boolean skipRecordTypeSelect,
-           com.sforce.soap._2006._04.metadata.ActionOverrideType type) {
-           this.actionName = actionName;
-           this.comment = comment;
-           this.content = content;
-           this.skipRecordTypeSelect = skipRecordTypeSelect;
-           this.type = type;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String actionName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String comment;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String content;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean skipRecordTypeSelect;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ActionOverrideType type;
 
     /**
-     * Gets the actionName value for this ActionOverride.
+     * Gets the value of the actionName property.
      * 
-     * @return actionName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getActionName() {
+    public String getActionName() {
         return actionName;
     }
 
-
     /**
-     * Sets the actionName value for this ActionOverride.
+     * Sets the value of the actionName property.
      * 
-     * @param actionName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setActionName(java.lang.String actionName) {
-        this.actionName = actionName;
+    public void setActionName(String value) {
+        this.actionName = value;
     }
 
-
     /**
-     * Gets the comment value for this ActionOverride.
+     * Gets the value of the comment property.
      * 
-     * @return comment
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getComment() {
+    public String getComment() {
         return comment;
     }
 
-
     /**
-     * Sets the comment value for this ActionOverride.
+     * Sets the value of the comment property.
      * 
-     * @param comment
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setComment(java.lang.String comment) {
-        this.comment = comment;
+    public void setComment(String value) {
+        this.comment = value;
     }
 
-
     /**
-     * Gets the content value for this ActionOverride.
+     * Gets the value of the content property.
      * 
-     * @return content
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getContent() {
+    public String getContent() {
         return content;
     }
 
-
     /**
-     * Sets the content value for this ActionOverride.
+     * Sets the value of the content property.
      * 
-     * @param content
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setContent(java.lang.String content) {
-        this.content = content;
+    public void setContent(String value) {
+        this.content = value;
     }
 
-
     /**
-     * Gets the skipRecordTypeSelect value for this ActionOverride.
+     * Gets the value of the skipRecordTypeSelect property.
      * 
-     * @return skipRecordTypeSelect
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getSkipRecordTypeSelect() {
+    public Boolean isSkipRecordTypeSelect() {
         return skipRecordTypeSelect;
     }
 
-
     /**
-     * Sets the skipRecordTypeSelect value for this ActionOverride.
+     * Sets the value of the skipRecordTypeSelect property.
      * 
-     * @param skipRecordTypeSelect
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setSkipRecordTypeSelect(java.lang.Boolean skipRecordTypeSelect) {
-        this.skipRecordTypeSelect = skipRecordTypeSelect;
+    public void setSkipRecordTypeSelect(Boolean value) {
+        this.skipRecordTypeSelect = value;
     }
 
-
     /**
-     * Gets the type value for this ActionOverride.
+     * Gets the value of the type property.
      * 
-     * @return type
+     * @return
+     *     possible object is
+     *     {@link ActionOverrideType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ActionOverrideType getType() {
+    public ActionOverrideType getType() {
         return type;
     }
 
-
     /**
-     * Sets the type value for this ActionOverride.
+     * Sets the value of the type property.
      * 
-     * @param type
+     * @param value
+     *     allowed object is
+     *     {@link ActionOverrideType }
+     *     
      */
-    public void setType(com.sforce.soap._2006._04.metadata.ActionOverrideType type) {
-        this.type = type;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ActionOverride)) return false;
-        ActionOverride other = (ActionOverride) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.actionName==null && other.getActionName()==null) || 
-             (this.actionName!=null &&
-              this.actionName.equals(other.getActionName()))) &&
-            ((this.comment==null && other.getComment()==null) || 
-             (this.comment!=null &&
-              this.comment.equals(other.getComment()))) &&
-            ((this.content==null && other.getContent()==null) || 
-             (this.content!=null &&
-              this.content.equals(other.getContent()))) &&
-            ((this.skipRecordTypeSelect==null && other.getSkipRecordTypeSelect()==null) || 
-             (this.skipRecordTypeSelect!=null &&
-              this.skipRecordTypeSelect.equals(other.getSkipRecordTypeSelect()))) &&
-            ((this.type==null && other.getType()==null) || 
-             (this.type!=null &&
-              this.type.equals(other.getType())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getActionName() != null) {
-            _hashCode += getActionName().hashCode();
-        }
-        if (getComment() != null) {
-            _hashCode += getComment().hashCode();
-        }
-        if (getContent() != null) {
-            _hashCode += getContent().hashCode();
-        }
-        if (getSkipRecordTypeSelect() != null) {
-            _hashCode += getSkipRecordTypeSelect().hashCode();
-        }
-        if (getType() != null) {
-            _hashCode += getType().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ActionOverride.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ActionOverride"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("actionName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "actionName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("comment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "comment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("content");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "content"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("skipRecordTypeSelect");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "skipRecordTypeSelect"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("type");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "type"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ActionOverrideType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setType(ActionOverrideType value) {
+        this.type = value;
     }
 
 }

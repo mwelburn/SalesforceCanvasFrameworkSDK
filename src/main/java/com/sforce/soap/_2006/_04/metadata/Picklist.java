@@ -1,206 +1,117 @@
-/**
- * Picklist.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Picklist  implements java.io.Serializable {
-    private java.lang.String controllingField;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.PicklistValue[] picklistValues;
 
-    private boolean sorted;
+/**
+ * <p>Java class for Picklist complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Picklist">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="controllingField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="picklistValues" type="{http://soap.sforce.com/2006/04/metadata}PicklistValue" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="sorted" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Picklist", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "controllingField",
+    "picklistValues",
+    "sorted"
+})
+public class Picklist {
 
-    public Picklist() {
-    }
-
-    public Picklist(
-           java.lang.String controllingField,
-           com.sforce.soap._2006._04.metadata.PicklistValue[] picklistValues,
-           boolean sorted) {
-           this.controllingField = controllingField;
-           this.picklistValues = picklistValues;
-           this.sorted = sorted;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String controllingField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PicklistValue> picklistValues;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean sorted;
 
     /**
-     * Gets the controllingField value for this Picklist.
+     * Gets the value of the controllingField property.
      * 
-     * @return controllingField
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getControllingField() {
+    public String getControllingField() {
         return controllingField;
     }
 
-
     /**
-     * Sets the controllingField value for this Picklist.
+     * Sets the value of the controllingField property.
      * 
-     * @param controllingField
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setControllingField(java.lang.String controllingField) {
-        this.controllingField = controllingField;
+    public void setControllingField(String value) {
+        this.controllingField = value;
     }
 
-
     /**
-     * Gets the picklistValues value for this Picklist.
+     * Gets the value of the picklistValues property.
      * 
-     * @return picklistValues
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the picklistValues property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPicklistValues().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PicklistValue }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.PicklistValue[] getPicklistValues() {
-        return picklistValues;
+    public List<PicklistValue> getPicklistValues() {
+        if (picklistValues == null) {
+            picklistValues = new ArrayList<PicklistValue>();
+        }
+        return this.picklistValues;
     }
-
 
     /**
-     * Sets the picklistValues value for this Picklist.
+     * Gets the value of the sorted property.
      * 
-     * @param picklistValues
-     */
-    public void setPicklistValues(com.sforce.soap._2006._04.metadata.PicklistValue[] picklistValues) {
-        this.picklistValues = picklistValues;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PicklistValue getPicklistValues(int i) {
-        return this.picklistValues[i];
-    }
-
-    public void setPicklistValues(int i, com.sforce.soap._2006._04.metadata.PicklistValue _value) {
-        this.picklistValues[i] = _value;
-    }
-
-
-    /**
-     * Gets the sorted value for this Picklist.
-     * 
-     * @return sorted
      */
     public boolean isSorted() {
         return sorted;
     }
 
-
     /**
-     * Sets the sorted value for this Picklist.
+     * Sets the value of the sorted property.
      * 
-     * @param sorted
      */
-    public void setSorted(boolean sorted) {
-        this.sorted = sorted;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Picklist)) return false;
-        Picklist other = (Picklist) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.controllingField==null && other.getControllingField()==null) || 
-             (this.controllingField!=null &&
-              this.controllingField.equals(other.getControllingField()))) &&
-            ((this.picklistValues==null && other.getPicklistValues()==null) || 
-             (this.picklistValues!=null &&
-              java.util.Arrays.equals(this.picklistValues, other.getPicklistValues()))) &&
-            this.sorted == other.isSorted();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getControllingField() != null) {
-            _hashCode += getControllingField().hashCode();
-        }
-        if (getPicklistValues() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPicklistValues());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPicklistValues(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        _hashCode += (isSorted() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Picklist.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Picklist"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("controllingField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "controllingField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("picklistValues");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "picklistValues"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PicklistValue"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sorted");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sorted"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSorted(boolean value) {
+        this.sorted = value;
     }
 
 }

@@ -1,490 +1,342 @@
-/**
- * SessionSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class SessionSettings  implements java.io.Serializable {
-    private java.lang.Boolean disableTimeoutWarning;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean enableCSRFOnGet;
 
-    private java.lang.Boolean enableCSRFOnPost;
+/**
+ * <p>Java class for SessionSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="SessionSettings">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="disableTimeoutWarning" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableCSRFOnGet" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableCSRFOnPost" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableCacheAndAutocomplete" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableClickjackNonsetupSFDC" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableClickjackNonsetupUser" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableClickjackSetup" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableSMSIdentity" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="forceRelogin" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="lockSessionsToIp" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="sessionTimeout" type="{http://soap.sforce.com/2006/04/metadata}SessionTimeout" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SessionSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "disableTimeoutWarning",
+    "enableCSRFOnGet",
+    "enableCSRFOnPost",
+    "enableCacheAndAutocomplete",
+    "enableClickjackNonsetupSFDC",
+    "enableClickjackNonsetupUser",
+    "enableClickjackSetup",
+    "enableSMSIdentity",
+    "forceRelogin",
+    "lockSessionsToIp",
+    "sessionTimeout"
+})
+public class SessionSettings {
 
-    private java.lang.Boolean enableCacheAndAutocomplete;
-
-    private java.lang.Boolean enableClickjackNonsetupSFDC;
-
-    private java.lang.Boolean enableClickjackNonsetupUser;
-
-    private java.lang.Boolean enableClickjackSetup;
-
-    private java.lang.Boolean enableSMSIdentity;
-
-    private java.lang.Boolean forceRelogin;
-
-    private java.lang.Boolean lockSessionsToIp;
-
-    private com.sforce.soap._2006._04.metadata.SessionTimeout sessionTimeout;
-
-    public SessionSettings() {
-    }
-
-    public SessionSettings(
-           java.lang.Boolean disableTimeoutWarning,
-           java.lang.Boolean enableCSRFOnGet,
-           java.lang.Boolean enableCSRFOnPost,
-           java.lang.Boolean enableCacheAndAutocomplete,
-           java.lang.Boolean enableClickjackNonsetupSFDC,
-           java.lang.Boolean enableClickjackNonsetupUser,
-           java.lang.Boolean enableClickjackSetup,
-           java.lang.Boolean enableSMSIdentity,
-           java.lang.Boolean forceRelogin,
-           java.lang.Boolean lockSessionsToIp,
-           com.sforce.soap._2006._04.metadata.SessionTimeout sessionTimeout) {
-           this.disableTimeoutWarning = disableTimeoutWarning;
-           this.enableCSRFOnGet = enableCSRFOnGet;
-           this.enableCSRFOnPost = enableCSRFOnPost;
-           this.enableCacheAndAutocomplete = enableCacheAndAutocomplete;
-           this.enableClickjackNonsetupSFDC = enableClickjackNonsetupSFDC;
-           this.enableClickjackNonsetupUser = enableClickjackNonsetupUser;
-           this.enableClickjackSetup = enableClickjackSetup;
-           this.enableSMSIdentity = enableSMSIdentity;
-           this.forceRelogin = forceRelogin;
-           this.lockSessionsToIp = lockSessionsToIp;
-           this.sessionTimeout = sessionTimeout;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean disableTimeoutWarning;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableCSRFOnGet;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableCSRFOnPost;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableCacheAndAutocomplete;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableClickjackNonsetupSFDC;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableClickjackNonsetupUser;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableClickjackSetup;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableSMSIdentity;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean forceRelogin;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean lockSessionsToIp;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SessionTimeout sessionTimeout;
 
     /**
-     * Gets the disableTimeoutWarning value for this SessionSettings.
+     * Gets the value of the disableTimeoutWarning property.
      * 
-     * @return disableTimeoutWarning
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getDisableTimeoutWarning() {
+    public Boolean isDisableTimeoutWarning() {
         return disableTimeoutWarning;
     }
 
-
     /**
-     * Sets the disableTimeoutWarning value for this SessionSettings.
+     * Sets the value of the disableTimeoutWarning property.
      * 
-     * @param disableTimeoutWarning
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setDisableTimeoutWarning(java.lang.Boolean disableTimeoutWarning) {
-        this.disableTimeoutWarning = disableTimeoutWarning;
+    public void setDisableTimeoutWarning(Boolean value) {
+        this.disableTimeoutWarning = value;
     }
 
-
     /**
-     * Gets the enableCSRFOnGet value for this SessionSettings.
+     * Gets the value of the enableCSRFOnGet property.
      * 
-     * @return enableCSRFOnGet
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableCSRFOnGet() {
+    public Boolean isEnableCSRFOnGet() {
         return enableCSRFOnGet;
     }
 
-
     /**
-     * Sets the enableCSRFOnGet value for this SessionSettings.
+     * Sets the value of the enableCSRFOnGet property.
      * 
-     * @param enableCSRFOnGet
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableCSRFOnGet(java.lang.Boolean enableCSRFOnGet) {
-        this.enableCSRFOnGet = enableCSRFOnGet;
+    public void setEnableCSRFOnGet(Boolean value) {
+        this.enableCSRFOnGet = value;
     }
 
-
     /**
-     * Gets the enableCSRFOnPost value for this SessionSettings.
+     * Gets the value of the enableCSRFOnPost property.
      * 
-     * @return enableCSRFOnPost
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableCSRFOnPost() {
+    public Boolean isEnableCSRFOnPost() {
         return enableCSRFOnPost;
     }
 
-
     /**
-     * Sets the enableCSRFOnPost value for this SessionSettings.
+     * Sets the value of the enableCSRFOnPost property.
      * 
-     * @param enableCSRFOnPost
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableCSRFOnPost(java.lang.Boolean enableCSRFOnPost) {
-        this.enableCSRFOnPost = enableCSRFOnPost;
+    public void setEnableCSRFOnPost(Boolean value) {
+        this.enableCSRFOnPost = value;
     }
 
-
     /**
-     * Gets the enableCacheAndAutocomplete value for this SessionSettings.
+     * Gets the value of the enableCacheAndAutocomplete property.
      * 
-     * @return enableCacheAndAutocomplete
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableCacheAndAutocomplete() {
+    public Boolean isEnableCacheAndAutocomplete() {
         return enableCacheAndAutocomplete;
     }
 
-
     /**
-     * Sets the enableCacheAndAutocomplete value for this SessionSettings.
+     * Sets the value of the enableCacheAndAutocomplete property.
      * 
-     * @param enableCacheAndAutocomplete
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableCacheAndAutocomplete(java.lang.Boolean enableCacheAndAutocomplete) {
-        this.enableCacheAndAutocomplete = enableCacheAndAutocomplete;
+    public void setEnableCacheAndAutocomplete(Boolean value) {
+        this.enableCacheAndAutocomplete = value;
     }
 
-
     /**
-     * Gets the enableClickjackNonsetupSFDC value for this SessionSettings.
+     * Gets the value of the enableClickjackNonsetupSFDC property.
      * 
-     * @return enableClickjackNonsetupSFDC
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableClickjackNonsetupSFDC() {
+    public Boolean isEnableClickjackNonsetupSFDC() {
         return enableClickjackNonsetupSFDC;
     }
 
-
     /**
-     * Sets the enableClickjackNonsetupSFDC value for this SessionSettings.
+     * Sets the value of the enableClickjackNonsetupSFDC property.
      * 
-     * @param enableClickjackNonsetupSFDC
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableClickjackNonsetupSFDC(java.lang.Boolean enableClickjackNonsetupSFDC) {
-        this.enableClickjackNonsetupSFDC = enableClickjackNonsetupSFDC;
+    public void setEnableClickjackNonsetupSFDC(Boolean value) {
+        this.enableClickjackNonsetupSFDC = value;
     }
 
-
     /**
-     * Gets the enableClickjackNonsetupUser value for this SessionSettings.
+     * Gets the value of the enableClickjackNonsetupUser property.
      * 
-     * @return enableClickjackNonsetupUser
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableClickjackNonsetupUser() {
+    public Boolean isEnableClickjackNonsetupUser() {
         return enableClickjackNonsetupUser;
     }
 
-
     /**
-     * Sets the enableClickjackNonsetupUser value for this SessionSettings.
+     * Sets the value of the enableClickjackNonsetupUser property.
      * 
-     * @param enableClickjackNonsetupUser
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableClickjackNonsetupUser(java.lang.Boolean enableClickjackNonsetupUser) {
-        this.enableClickjackNonsetupUser = enableClickjackNonsetupUser;
+    public void setEnableClickjackNonsetupUser(Boolean value) {
+        this.enableClickjackNonsetupUser = value;
     }
 
-
     /**
-     * Gets the enableClickjackSetup value for this SessionSettings.
+     * Gets the value of the enableClickjackSetup property.
      * 
-     * @return enableClickjackSetup
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableClickjackSetup() {
+    public Boolean isEnableClickjackSetup() {
         return enableClickjackSetup;
     }
 
-
     /**
-     * Sets the enableClickjackSetup value for this SessionSettings.
+     * Sets the value of the enableClickjackSetup property.
      * 
-     * @param enableClickjackSetup
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableClickjackSetup(java.lang.Boolean enableClickjackSetup) {
-        this.enableClickjackSetup = enableClickjackSetup;
+    public void setEnableClickjackSetup(Boolean value) {
+        this.enableClickjackSetup = value;
     }
 
-
     /**
-     * Gets the enableSMSIdentity value for this SessionSettings.
+     * Gets the value of the enableSMSIdentity property.
      * 
-     * @return enableSMSIdentity
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableSMSIdentity() {
+    public Boolean isEnableSMSIdentity() {
         return enableSMSIdentity;
     }
 
-
     /**
-     * Sets the enableSMSIdentity value for this SessionSettings.
+     * Sets the value of the enableSMSIdentity property.
      * 
-     * @param enableSMSIdentity
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableSMSIdentity(java.lang.Boolean enableSMSIdentity) {
-        this.enableSMSIdentity = enableSMSIdentity;
+    public void setEnableSMSIdentity(Boolean value) {
+        this.enableSMSIdentity = value;
     }
 
-
     /**
-     * Gets the forceRelogin value for this SessionSettings.
+     * Gets the value of the forceRelogin property.
      * 
-     * @return forceRelogin
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getForceRelogin() {
+    public Boolean isForceRelogin() {
         return forceRelogin;
     }
 
-
     /**
-     * Sets the forceRelogin value for this SessionSettings.
+     * Sets the value of the forceRelogin property.
      * 
-     * @param forceRelogin
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setForceRelogin(java.lang.Boolean forceRelogin) {
-        this.forceRelogin = forceRelogin;
+    public void setForceRelogin(Boolean value) {
+        this.forceRelogin = value;
     }
 
-
     /**
-     * Gets the lockSessionsToIp value for this SessionSettings.
+     * Gets the value of the lockSessionsToIp property.
      * 
-     * @return lockSessionsToIp
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getLockSessionsToIp() {
+    public Boolean isLockSessionsToIp() {
         return lockSessionsToIp;
     }
 
-
     /**
-     * Sets the lockSessionsToIp value for this SessionSettings.
+     * Sets the value of the lockSessionsToIp property.
      * 
-     * @param lockSessionsToIp
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setLockSessionsToIp(java.lang.Boolean lockSessionsToIp) {
-        this.lockSessionsToIp = lockSessionsToIp;
+    public void setLockSessionsToIp(Boolean value) {
+        this.lockSessionsToIp = value;
     }
 
-
     /**
-     * Gets the sessionTimeout value for this SessionSettings.
+     * Gets the value of the sessionTimeout property.
      * 
-     * @return sessionTimeout
+     * @return
+     *     possible object is
+     *     {@link SessionTimeout }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SessionTimeout getSessionTimeout() {
+    public SessionTimeout getSessionTimeout() {
         return sessionTimeout;
     }
 
-
     /**
-     * Sets the sessionTimeout value for this SessionSettings.
+     * Sets the value of the sessionTimeout property.
      * 
-     * @param sessionTimeout
+     * @param value
+     *     allowed object is
+     *     {@link SessionTimeout }
+     *     
      */
-    public void setSessionTimeout(com.sforce.soap._2006._04.metadata.SessionTimeout sessionTimeout) {
-        this.sessionTimeout = sessionTimeout;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SessionSettings)) return false;
-        SessionSettings other = (SessionSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.disableTimeoutWarning==null && other.getDisableTimeoutWarning()==null) || 
-             (this.disableTimeoutWarning!=null &&
-              this.disableTimeoutWarning.equals(other.getDisableTimeoutWarning()))) &&
-            ((this.enableCSRFOnGet==null && other.getEnableCSRFOnGet()==null) || 
-             (this.enableCSRFOnGet!=null &&
-              this.enableCSRFOnGet.equals(other.getEnableCSRFOnGet()))) &&
-            ((this.enableCSRFOnPost==null && other.getEnableCSRFOnPost()==null) || 
-             (this.enableCSRFOnPost!=null &&
-              this.enableCSRFOnPost.equals(other.getEnableCSRFOnPost()))) &&
-            ((this.enableCacheAndAutocomplete==null && other.getEnableCacheAndAutocomplete()==null) || 
-             (this.enableCacheAndAutocomplete!=null &&
-              this.enableCacheAndAutocomplete.equals(other.getEnableCacheAndAutocomplete()))) &&
-            ((this.enableClickjackNonsetupSFDC==null && other.getEnableClickjackNonsetupSFDC()==null) || 
-             (this.enableClickjackNonsetupSFDC!=null &&
-              this.enableClickjackNonsetupSFDC.equals(other.getEnableClickjackNonsetupSFDC()))) &&
-            ((this.enableClickjackNonsetupUser==null && other.getEnableClickjackNonsetupUser()==null) || 
-             (this.enableClickjackNonsetupUser!=null &&
-              this.enableClickjackNonsetupUser.equals(other.getEnableClickjackNonsetupUser()))) &&
-            ((this.enableClickjackSetup==null && other.getEnableClickjackSetup()==null) || 
-             (this.enableClickjackSetup!=null &&
-              this.enableClickjackSetup.equals(other.getEnableClickjackSetup()))) &&
-            ((this.enableSMSIdentity==null && other.getEnableSMSIdentity()==null) || 
-             (this.enableSMSIdentity!=null &&
-              this.enableSMSIdentity.equals(other.getEnableSMSIdentity()))) &&
-            ((this.forceRelogin==null && other.getForceRelogin()==null) || 
-             (this.forceRelogin!=null &&
-              this.forceRelogin.equals(other.getForceRelogin()))) &&
-            ((this.lockSessionsToIp==null && other.getLockSessionsToIp()==null) || 
-             (this.lockSessionsToIp!=null &&
-              this.lockSessionsToIp.equals(other.getLockSessionsToIp()))) &&
-            ((this.sessionTimeout==null && other.getSessionTimeout()==null) || 
-             (this.sessionTimeout!=null &&
-              this.sessionTimeout.equals(other.getSessionTimeout())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getDisableTimeoutWarning() != null) {
-            _hashCode += getDisableTimeoutWarning().hashCode();
-        }
-        if (getEnableCSRFOnGet() != null) {
-            _hashCode += getEnableCSRFOnGet().hashCode();
-        }
-        if (getEnableCSRFOnPost() != null) {
-            _hashCode += getEnableCSRFOnPost().hashCode();
-        }
-        if (getEnableCacheAndAutocomplete() != null) {
-            _hashCode += getEnableCacheAndAutocomplete().hashCode();
-        }
-        if (getEnableClickjackNonsetupSFDC() != null) {
-            _hashCode += getEnableClickjackNonsetupSFDC().hashCode();
-        }
-        if (getEnableClickjackNonsetupUser() != null) {
-            _hashCode += getEnableClickjackNonsetupUser().hashCode();
-        }
-        if (getEnableClickjackSetup() != null) {
-            _hashCode += getEnableClickjackSetup().hashCode();
-        }
-        if (getEnableSMSIdentity() != null) {
-            _hashCode += getEnableSMSIdentity().hashCode();
-        }
-        if (getForceRelogin() != null) {
-            _hashCode += getForceRelogin().hashCode();
-        }
-        if (getLockSessionsToIp() != null) {
-            _hashCode += getLockSessionsToIp().hashCode();
-        }
-        if (getSessionTimeout() != null) {
-            _hashCode += getSessionTimeout().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SessionSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SessionSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("disableTimeoutWarning");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "disableTimeoutWarning"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableCSRFOnGet");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableCSRFOnGet"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableCSRFOnPost");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableCSRFOnPost"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableCacheAndAutocomplete");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableCacheAndAutocomplete"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableClickjackNonsetupSFDC");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableClickjackNonsetupSFDC"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableClickjackNonsetupUser");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableClickjackNonsetupUser"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableClickjackSetup");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableClickjackSetup"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableSMSIdentity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableSMSIdentity"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("forceRelogin");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "forceRelogin"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("lockSessionsToIp");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "lockSessionsToIp"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sessionTimeout");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sessionTimeout"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SessionTimeout"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSessionTimeout(SessionTimeout value) {
+        this.sessionTimeout = value;
     }
 
 }

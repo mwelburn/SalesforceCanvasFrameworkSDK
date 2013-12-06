@@ -1,315 +1,201 @@
-/**
- * SummaryLayout.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class SummaryLayout  implements java.io.Serializable {
-    private java.lang.String masterLabel;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private int sizeX;
 
-    private java.lang.Integer sizeY;
+/**
+ * <p>Java class for SummaryLayout complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="SummaryLayout">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="masterLabel" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="sizeX" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="sizeY" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="sizeZ" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="summaryLayoutItems" type="{http://soap.sforce.com/2006/04/metadata}SummaryLayoutItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="summaryLayoutStyle" type="{http://soap.sforce.com/2006/04/metadata}SummaryLayoutStyle"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SummaryLayout", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "masterLabel",
+    "sizeX",
+    "sizeY",
+    "sizeZ",
+    "summaryLayoutItems",
+    "summaryLayoutStyle"
+})
+public class SummaryLayout {
 
-    private java.lang.Integer sizeZ;
-
-    private com.sforce.soap._2006._04.metadata.SummaryLayoutItem[] summaryLayoutItems;
-
-    private com.sforce.soap._2006._04.metadata.SummaryLayoutStyle summaryLayoutStyle;
-
-    public SummaryLayout() {
-    }
-
-    public SummaryLayout(
-           java.lang.String masterLabel,
-           int sizeX,
-           java.lang.Integer sizeY,
-           java.lang.Integer sizeZ,
-           com.sforce.soap._2006._04.metadata.SummaryLayoutItem[] summaryLayoutItems,
-           com.sforce.soap._2006._04.metadata.SummaryLayoutStyle summaryLayoutStyle) {
-           this.masterLabel = masterLabel;
-           this.sizeX = sizeX;
-           this.sizeY = sizeY;
-           this.sizeZ = sizeZ;
-           this.summaryLayoutItems = summaryLayoutItems;
-           this.summaryLayoutStyle = summaryLayoutStyle;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String masterLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int sizeX;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer sizeY;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer sizeZ;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<SummaryLayoutItem> summaryLayoutItems;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SummaryLayoutStyle summaryLayoutStyle;
 
     /**
-     * Gets the masterLabel value for this SummaryLayout.
+     * Gets the value of the masterLabel property.
      * 
-     * @return masterLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMasterLabel() {
+    public String getMasterLabel() {
         return masterLabel;
     }
 
-
     /**
-     * Sets the masterLabel value for this SummaryLayout.
+     * Sets the value of the masterLabel property.
      * 
-     * @param masterLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMasterLabel(java.lang.String masterLabel) {
-        this.masterLabel = masterLabel;
+    public void setMasterLabel(String value) {
+        this.masterLabel = value;
     }
 
-
     /**
-     * Gets the sizeX value for this SummaryLayout.
+     * Gets the value of the sizeX property.
      * 
-     * @return sizeX
      */
     public int getSizeX() {
         return sizeX;
     }
 
-
     /**
-     * Sets the sizeX value for this SummaryLayout.
+     * Sets the value of the sizeX property.
      * 
-     * @param sizeX
      */
-    public void setSizeX(int sizeX) {
-        this.sizeX = sizeX;
+    public void setSizeX(int value) {
+        this.sizeX = value;
     }
 
-
     /**
-     * Gets the sizeY value for this SummaryLayout.
+     * Gets the value of the sizeY property.
      * 
-     * @return sizeY
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getSizeY() {
+    public Integer getSizeY() {
         return sizeY;
     }
 
-
     /**
-     * Sets the sizeY value for this SummaryLayout.
+     * Sets the value of the sizeY property.
      * 
-     * @param sizeY
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setSizeY(java.lang.Integer sizeY) {
-        this.sizeY = sizeY;
+    public void setSizeY(Integer value) {
+        this.sizeY = value;
     }
 
-
     /**
-     * Gets the sizeZ value for this SummaryLayout.
+     * Gets the value of the sizeZ property.
      * 
-     * @return sizeZ
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getSizeZ() {
+    public Integer getSizeZ() {
         return sizeZ;
     }
 
+    /**
+     * Sets the value of the sizeZ property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setSizeZ(Integer value) {
+        this.sizeZ = value;
+    }
 
     /**
-     * Sets the sizeZ value for this SummaryLayout.
+     * Gets the value of the summaryLayoutItems property.
      * 
-     * @param sizeZ
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the summaryLayoutItems property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSummaryLayoutItems().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link SummaryLayoutItem }
+     * 
+     * 
      */
-    public void setSizeZ(java.lang.Integer sizeZ) {
-        this.sizeZ = sizeZ;
+    public List<SummaryLayoutItem> getSummaryLayoutItems() {
+        if (summaryLayoutItems == null) {
+            summaryLayoutItems = new ArrayList<SummaryLayoutItem>();
+        }
+        return this.summaryLayoutItems;
     }
-
 
     /**
-     * Gets the summaryLayoutItems value for this SummaryLayout.
+     * Gets the value of the summaryLayoutStyle property.
      * 
-     * @return summaryLayoutItems
+     * @return
+     *     possible object is
+     *     {@link SummaryLayoutStyle }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SummaryLayoutItem[] getSummaryLayoutItems() {
-        return summaryLayoutItems;
-    }
-
-
-    /**
-     * Sets the summaryLayoutItems value for this SummaryLayout.
-     * 
-     * @param summaryLayoutItems
-     */
-    public void setSummaryLayoutItems(com.sforce.soap._2006._04.metadata.SummaryLayoutItem[] summaryLayoutItems) {
-        this.summaryLayoutItems = summaryLayoutItems;
-    }
-
-    public com.sforce.soap._2006._04.metadata.SummaryLayoutItem getSummaryLayoutItems(int i) {
-        return this.summaryLayoutItems[i];
-    }
-
-    public void setSummaryLayoutItems(int i, com.sforce.soap._2006._04.metadata.SummaryLayoutItem _value) {
-        this.summaryLayoutItems[i] = _value;
-    }
-
-
-    /**
-     * Gets the summaryLayoutStyle value for this SummaryLayout.
-     * 
-     * @return summaryLayoutStyle
-     */
-    public com.sforce.soap._2006._04.metadata.SummaryLayoutStyle getSummaryLayoutStyle() {
+    public SummaryLayoutStyle getSummaryLayoutStyle() {
         return summaryLayoutStyle;
     }
 
-
     /**
-     * Sets the summaryLayoutStyle value for this SummaryLayout.
+     * Sets the value of the summaryLayoutStyle property.
      * 
-     * @param summaryLayoutStyle
+     * @param value
+     *     allowed object is
+     *     {@link SummaryLayoutStyle }
+     *     
      */
-    public void setSummaryLayoutStyle(com.sforce.soap._2006._04.metadata.SummaryLayoutStyle summaryLayoutStyle) {
-        this.summaryLayoutStyle = summaryLayoutStyle;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SummaryLayout)) return false;
-        SummaryLayout other = (SummaryLayout) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.masterLabel==null && other.getMasterLabel()==null) || 
-             (this.masterLabel!=null &&
-              this.masterLabel.equals(other.getMasterLabel()))) &&
-            this.sizeX == other.getSizeX() &&
-            ((this.sizeY==null && other.getSizeY()==null) || 
-             (this.sizeY!=null &&
-              this.sizeY.equals(other.getSizeY()))) &&
-            ((this.sizeZ==null && other.getSizeZ()==null) || 
-             (this.sizeZ!=null &&
-              this.sizeZ.equals(other.getSizeZ()))) &&
-            ((this.summaryLayoutItems==null && other.getSummaryLayoutItems()==null) || 
-             (this.summaryLayoutItems!=null &&
-              java.util.Arrays.equals(this.summaryLayoutItems, other.getSummaryLayoutItems()))) &&
-            ((this.summaryLayoutStyle==null && other.getSummaryLayoutStyle()==null) || 
-             (this.summaryLayoutStyle!=null &&
-              this.summaryLayoutStyle.equals(other.getSummaryLayoutStyle())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getMasterLabel() != null) {
-            _hashCode += getMasterLabel().hashCode();
-        }
-        _hashCode += getSizeX();
-        if (getSizeY() != null) {
-            _hashCode += getSizeY().hashCode();
-        }
-        if (getSizeZ() != null) {
-            _hashCode += getSizeZ().hashCode();
-        }
-        if (getSummaryLayoutItems() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSummaryLayoutItems());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSummaryLayoutItems(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSummaryLayoutStyle() != null) {
-            _hashCode += getSummaryLayoutStyle().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SummaryLayout.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SummaryLayout"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("masterLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "masterLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sizeX");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sizeX"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sizeY");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sizeY"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sizeZ");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sizeZ"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryLayoutItems");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryLayoutItems"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SummaryLayoutItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryLayoutStyle");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryLayoutStyle"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SummaryLayoutStyle"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSummaryLayoutStyle(SummaryLayoutStyle value) {
+        this.summaryLayoutStyle = value;
     }
 
 }

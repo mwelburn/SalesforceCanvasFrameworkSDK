@@ -1,1000 +1,661 @@
-/**
- * Layout.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Layout  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String[] customButtons;
-
-    private com.sforce.soap._2006._04.metadata.CustomConsoleComponents customConsoleComponents;
-
-    private java.lang.Boolean emailDefault;
-
-    private java.lang.String[] excludeButtons;
-
-    private com.sforce.soap._2006._04.metadata.LayoutHeader[] headers;
-
-    private com.sforce.soap._2006._04.metadata.LayoutSection[] layoutSections;
-
-    private com.sforce.soap._2006._04.metadata.MiniLayout miniLayout;
-
-    private java.lang.String[] multilineLayoutFields;
-
-    private com.sforce.soap._2006._04.metadata.QuickActionListItem[] quickActionList;
-
-    private com.sforce.soap._2006._04.metadata.RelatedContentItem[] relatedContent;
-
-    private com.sforce.soap._2006._04.metadata.RelatedListItem[] relatedLists;
-
-    private java.lang.String[] relatedObjects;
-
-    private java.lang.Boolean runAssignmentRulesDefault;
-
-    private java.lang.Boolean showEmailCheckbox;
-
-    private java.lang.Boolean showHighlightsPanel;
-
-    private java.lang.Boolean showInteractionLogPanel;
-
-    private java.lang.Boolean showKnowledgeComponent;
-
-    private java.lang.Boolean showRunAssignmentRulesCheckbox;
-
-    private java.lang.Boolean showSolutionSection;
-
-    private java.lang.Boolean showSubmitAndAttachButton;
-
-    private com.sforce.soap._2006._04.metadata.SummaryLayout summaryLayout;
-
-    public Layout() {
-    }
-
-    public Layout(
-           java.lang.String fullName,
-           java.lang.String[] customButtons,
-           com.sforce.soap._2006._04.metadata.CustomConsoleComponents customConsoleComponents,
-           java.lang.Boolean emailDefault,
-           java.lang.String[] excludeButtons,
-           com.sforce.soap._2006._04.metadata.LayoutHeader[] headers,
-           com.sforce.soap._2006._04.metadata.LayoutSection[] layoutSections,
-           com.sforce.soap._2006._04.metadata.MiniLayout miniLayout,
-           java.lang.String[] multilineLayoutFields,
-           com.sforce.soap._2006._04.metadata.QuickActionListItem[] quickActionList,
-           com.sforce.soap._2006._04.metadata.RelatedContentItem[] relatedContent,
-           com.sforce.soap._2006._04.metadata.RelatedListItem[] relatedLists,
-           java.lang.String[] relatedObjects,
-           java.lang.Boolean runAssignmentRulesDefault,
-           java.lang.Boolean showEmailCheckbox,
-           java.lang.Boolean showHighlightsPanel,
-           java.lang.Boolean showInteractionLogPanel,
-           java.lang.Boolean showKnowledgeComponent,
-           java.lang.Boolean showRunAssignmentRulesCheckbox,
-           java.lang.Boolean showSolutionSection,
-           java.lang.Boolean showSubmitAndAttachButton,
-           com.sforce.soap._2006._04.metadata.SummaryLayout summaryLayout) {
-        super(
-            fullName);
-        this.customButtons = customButtons;
-        this.customConsoleComponents = customConsoleComponents;
-        this.emailDefault = emailDefault;
-        this.excludeButtons = excludeButtons;
-        this.headers = headers;
-        this.layoutSections = layoutSections;
-        this.miniLayout = miniLayout;
-        this.multilineLayoutFields = multilineLayoutFields;
-        this.quickActionList = quickActionList;
-        this.relatedContent = relatedContent;
-        this.relatedLists = relatedLists;
-        this.relatedObjects = relatedObjects;
-        this.runAssignmentRulesDefault = runAssignmentRulesDefault;
-        this.showEmailCheckbox = showEmailCheckbox;
-        this.showHighlightsPanel = showHighlightsPanel;
-        this.showInteractionLogPanel = showInteractionLogPanel;
-        this.showKnowledgeComponent = showKnowledgeComponent;
-        this.showRunAssignmentRulesCheckbox = showRunAssignmentRulesCheckbox;
-        this.showSolutionSection = showSolutionSection;
-        this.showSubmitAndAttachButton = showSubmitAndAttachButton;
-        this.summaryLayout = summaryLayout;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the customButtons value for this Layout.
-     * 
-     * @return customButtons
-     */
-    public java.lang.String[] getCustomButtons() {
-        return customButtons;
-    }
+/**
+ * <p>Java class for Layout complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Layout">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="customButtons" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="customConsoleComponents" type="{http://soap.sforce.com/2006/04/metadata}CustomConsoleComponents" minOccurs="0"/>
+ *         &lt;element name="emailDefault" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="excludeButtons" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="headers" type="{http://soap.sforce.com/2006/04/metadata}LayoutHeader" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="layoutSections" type="{http://soap.sforce.com/2006/04/metadata}LayoutSection" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="miniLayout" type="{http://soap.sforce.com/2006/04/metadata}MiniLayout" minOccurs="0"/>
+ *         &lt;element name="multilineLayoutFields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="quickActionList" type="{http://soap.sforce.com/2006/04/metadata}QuickActionList" minOccurs="0"/>
+ *         &lt;element name="relatedContent" type="{http://soap.sforce.com/2006/04/metadata}RelatedContent" minOccurs="0"/>
+ *         &lt;element name="relatedLists" type="{http://soap.sforce.com/2006/04/metadata}RelatedListItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="relatedObjects" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="runAssignmentRulesDefault" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showEmailCheckbox" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showHighlightsPanel" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showInteractionLogPanel" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showKnowledgeComponent" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showRunAssignmentRulesCheckbox" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showSolutionSection" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showSubmitAndAttachButton" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="summaryLayout" type="{http://soap.sforce.com/2006/04/metadata}SummaryLayout" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Layout", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "customButtons",
+    "customConsoleComponents",
+    "emailDefault",
+    "excludeButtons",
+    "headers",
+    "layoutSections",
+    "miniLayout",
+    "multilineLayoutFields",
+    "quickActionList",
+    "relatedContent",
+    "relatedLists",
+    "relatedObjects",
+    "runAssignmentRulesDefault",
+    "showEmailCheckbox",
+    "showHighlightsPanel",
+    "showInteractionLogPanel",
+    "showKnowledgeComponent",
+    "showRunAssignmentRulesCheckbox",
+    "showSolutionSection",
+    "showSubmitAndAttachButton",
+    "summaryLayout"
+})
+public class Layout
+    extends Metadata
+{
 
-
-    /**
-     * Sets the customButtons value for this Layout.
-     * 
-     * @param customButtons
-     */
-    public void setCustomButtons(java.lang.String[] customButtons) {
-        this.customButtons = customButtons;
-    }
-
-    public java.lang.String getCustomButtons(int i) {
-        return this.customButtons[i];
-    }
-
-    public void setCustomButtons(int i, java.lang.String _value) {
-        this.customButtons[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> customButtons;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected CustomConsoleComponents customConsoleComponents;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean emailDefault;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> excludeButtons;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<LayoutHeader> headers;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<LayoutSection> layoutSections;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected MiniLayout miniLayout;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> multilineLayoutFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected QuickActionList quickActionList;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected RelatedContent relatedContent;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<RelatedListItem> relatedLists;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> relatedObjects;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean runAssignmentRulesDefault;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showEmailCheckbox;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showHighlightsPanel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showInteractionLogPanel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showKnowledgeComponent;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showRunAssignmentRulesCheckbox;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showSolutionSection;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showSubmitAndAttachButton;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SummaryLayout summaryLayout;
 
     /**
-     * Gets the customConsoleComponents value for this Layout.
+     * Gets the value of the customButtons property.
      * 
-     * @return customConsoleComponents
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the customButtons property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCustomButtons().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.CustomConsoleComponents getCustomConsoleComponents() {
+    public List<String> getCustomButtons() {
+        if (customButtons == null) {
+            customButtons = new ArrayList<String>();
+        }
+        return this.customButtons;
+    }
+
+    /**
+     * Gets the value of the customConsoleComponents property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link CustomConsoleComponents }
+     *     
+     */
+    public CustomConsoleComponents getCustomConsoleComponents() {
         return customConsoleComponents;
     }
 
-
     /**
-     * Sets the customConsoleComponents value for this Layout.
+     * Sets the value of the customConsoleComponents property.
      * 
-     * @param customConsoleComponents
+     * @param value
+     *     allowed object is
+     *     {@link CustomConsoleComponents }
+     *     
      */
-    public void setCustomConsoleComponents(com.sforce.soap._2006._04.metadata.CustomConsoleComponents customConsoleComponents) {
-        this.customConsoleComponents = customConsoleComponents;
+    public void setCustomConsoleComponents(CustomConsoleComponents value) {
+        this.customConsoleComponents = value;
     }
 
-
     /**
-     * Gets the emailDefault value for this Layout.
+     * Gets the value of the emailDefault property.
      * 
-     * @return emailDefault
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEmailDefault() {
+    public Boolean isEmailDefault() {
         return emailDefault;
     }
 
+    /**
+     * Sets the value of the emailDefault property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setEmailDefault(Boolean value) {
+        this.emailDefault = value;
+    }
 
     /**
-     * Sets the emailDefault value for this Layout.
+     * Gets the value of the excludeButtons property.
      * 
-     * @param emailDefault
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the excludeButtons property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getExcludeButtons().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public void setEmailDefault(java.lang.Boolean emailDefault) {
-        this.emailDefault = emailDefault;
+    public List<String> getExcludeButtons() {
+        if (excludeButtons == null) {
+            excludeButtons = new ArrayList<String>();
+        }
+        return this.excludeButtons;
     }
-
 
     /**
-     * Gets the excludeButtons value for this Layout.
+     * Gets the value of the headers property.
      * 
-     * @return excludeButtons
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the headers property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getHeaders().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link LayoutHeader }
+     * 
+     * 
      */
-    public java.lang.String[] getExcludeButtons() {
-        return excludeButtons;
+    public List<LayoutHeader> getHeaders() {
+        if (headers == null) {
+            headers = new ArrayList<LayoutHeader>();
+        }
+        return this.headers;
     }
-
 
     /**
-     * Sets the excludeButtons value for this Layout.
+     * Gets the value of the layoutSections property.
      * 
-     * @param excludeButtons
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the layoutSections property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLayoutSections().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link LayoutSection }
+     * 
+     * 
      */
-    public void setExcludeButtons(java.lang.String[] excludeButtons) {
-        this.excludeButtons = excludeButtons;
+    public List<LayoutSection> getLayoutSections() {
+        if (layoutSections == null) {
+            layoutSections = new ArrayList<LayoutSection>();
+        }
+        return this.layoutSections;
     }
-
-    public java.lang.String getExcludeButtons(int i) {
-        return this.excludeButtons[i];
-    }
-
-    public void setExcludeButtons(int i, java.lang.String _value) {
-        this.excludeButtons[i] = _value;
-    }
-
 
     /**
-     * Gets the headers value for this Layout.
+     * Gets the value of the miniLayout property.
      * 
-     * @return headers
+     * @return
+     *     possible object is
+     *     {@link MiniLayout }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LayoutHeader[] getHeaders() {
-        return headers;
-    }
-
-
-    /**
-     * Sets the headers value for this Layout.
-     * 
-     * @param headers
-     */
-    public void setHeaders(com.sforce.soap._2006._04.metadata.LayoutHeader[] headers) {
-        this.headers = headers;
-    }
-
-    public com.sforce.soap._2006._04.metadata.LayoutHeader getHeaders(int i) {
-        return this.headers[i];
-    }
-
-    public void setHeaders(int i, com.sforce.soap._2006._04.metadata.LayoutHeader _value) {
-        this.headers[i] = _value;
-    }
-
-
-    /**
-     * Gets the layoutSections value for this Layout.
-     * 
-     * @return layoutSections
-     */
-    public com.sforce.soap._2006._04.metadata.LayoutSection[] getLayoutSections() {
-        return layoutSections;
-    }
-
-
-    /**
-     * Sets the layoutSections value for this Layout.
-     * 
-     * @param layoutSections
-     */
-    public void setLayoutSections(com.sforce.soap._2006._04.metadata.LayoutSection[] layoutSections) {
-        this.layoutSections = layoutSections;
-    }
-
-    public com.sforce.soap._2006._04.metadata.LayoutSection getLayoutSections(int i) {
-        return this.layoutSections[i];
-    }
-
-    public void setLayoutSections(int i, com.sforce.soap._2006._04.metadata.LayoutSection _value) {
-        this.layoutSections[i] = _value;
-    }
-
-
-    /**
-     * Gets the miniLayout value for this Layout.
-     * 
-     * @return miniLayout
-     */
-    public com.sforce.soap._2006._04.metadata.MiniLayout getMiniLayout() {
+    public MiniLayout getMiniLayout() {
         return miniLayout;
     }
 
+    /**
+     * Sets the value of the miniLayout property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link MiniLayout }
+     *     
+     */
+    public void setMiniLayout(MiniLayout value) {
+        this.miniLayout = value;
+    }
 
     /**
-     * Sets the miniLayout value for this Layout.
+     * Gets the value of the multilineLayoutFields property.
      * 
-     * @param miniLayout
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the multilineLayoutFields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getMultilineLayoutFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public void setMiniLayout(com.sforce.soap._2006._04.metadata.MiniLayout miniLayout) {
-        this.miniLayout = miniLayout;
+    public List<String> getMultilineLayoutFields() {
+        if (multilineLayoutFields == null) {
+            multilineLayoutFields = new ArrayList<String>();
+        }
+        return this.multilineLayoutFields;
     }
-
 
     /**
-     * Gets the multilineLayoutFields value for this Layout.
+     * Gets the value of the quickActionList property.
      * 
-     * @return multilineLayoutFields
+     * @return
+     *     possible object is
+     *     {@link QuickActionList }
+     *     
      */
-    public java.lang.String[] getMultilineLayoutFields() {
-        return multilineLayoutFields;
-    }
-
-
-    /**
-     * Sets the multilineLayoutFields value for this Layout.
-     * 
-     * @param multilineLayoutFields
-     */
-    public void setMultilineLayoutFields(java.lang.String[] multilineLayoutFields) {
-        this.multilineLayoutFields = multilineLayoutFields;
-    }
-
-    public java.lang.String getMultilineLayoutFields(int i) {
-        return this.multilineLayoutFields[i];
-    }
-
-    public void setMultilineLayoutFields(int i, java.lang.String _value) {
-        this.multilineLayoutFields[i] = _value;
-    }
-
-
-    /**
-     * Gets the quickActionList value for this Layout.
-     * 
-     * @return quickActionList
-     */
-    public com.sforce.soap._2006._04.metadata.QuickActionListItem[] getQuickActionList() {
+    public QuickActionList getQuickActionList() {
         return quickActionList;
     }
 
-
     /**
-     * Sets the quickActionList value for this Layout.
+     * Sets the value of the quickActionList property.
      * 
-     * @param quickActionList
+     * @param value
+     *     allowed object is
+     *     {@link QuickActionList }
+     *     
      */
-    public void setQuickActionList(com.sforce.soap._2006._04.metadata.QuickActionListItem[] quickActionList) {
-        this.quickActionList = quickActionList;
+    public void setQuickActionList(QuickActionList value) {
+        this.quickActionList = value;
     }
 
-
     /**
-     * Gets the relatedContent value for this Layout.
+     * Gets the value of the relatedContent property.
      * 
-     * @return relatedContent
+     * @return
+     *     possible object is
+     *     {@link RelatedContent }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.RelatedContentItem[] getRelatedContent() {
+    public RelatedContent getRelatedContent() {
         return relatedContent;
     }
 
+    /**
+     * Sets the value of the relatedContent property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link RelatedContent }
+     *     
+     */
+    public void setRelatedContent(RelatedContent value) {
+        this.relatedContent = value;
+    }
 
     /**
-     * Sets the relatedContent value for this Layout.
+     * Gets the value of the relatedLists property.
      * 
-     * @param relatedContent
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the relatedLists property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRelatedLists().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link RelatedListItem }
+     * 
+     * 
      */
-    public void setRelatedContent(com.sforce.soap._2006._04.metadata.RelatedContentItem[] relatedContent) {
-        this.relatedContent = relatedContent;
+    public List<RelatedListItem> getRelatedLists() {
+        if (relatedLists == null) {
+            relatedLists = new ArrayList<RelatedListItem>();
+        }
+        return this.relatedLists;
     }
-
 
     /**
-     * Gets the relatedLists value for this Layout.
+     * Gets the value of the relatedObjects property.
      * 
-     * @return relatedLists
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the relatedObjects property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRelatedObjects().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.RelatedListItem[] getRelatedLists() {
-        return relatedLists;
+    public List<String> getRelatedObjects() {
+        if (relatedObjects == null) {
+            relatedObjects = new ArrayList<String>();
+        }
+        return this.relatedObjects;
     }
-
 
     /**
-     * Sets the relatedLists value for this Layout.
+     * Gets the value of the runAssignmentRulesDefault property.
      * 
-     * @param relatedLists
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public void setRelatedLists(com.sforce.soap._2006._04.metadata.RelatedListItem[] relatedLists) {
-        this.relatedLists = relatedLists;
-    }
-
-    public com.sforce.soap._2006._04.metadata.RelatedListItem getRelatedLists(int i) {
-        return this.relatedLists[i];
-    }
-
-    public void setRelatedLists(int i, com.sforce.soap._2006._04.metadata.RelatedListItem _value) {
-        this.relatedLists[i] = _value;
-    }
-
-
-    /**
-     * Gets the relatedObjects value for this Layout.
-     * 
-     * @return relatedObjects
-     */
-    public java.lang.String[] getRelatedObjects() {
-        return relatedObjects;
-    }
-
-
-    /**
-     * Sets the relatedObjects value for this Layout.
-     * 
-     * @param relatedObjects
-     */
-    public void setRelatedObjects(java.lang.String[] relatedObjects) {
-        this.relatedObjects = relatedObjects;
-    }
-
-    public java.lang.String getRelatedObjects(int i) {
-        return this.relatedObjects[i];
-    }
-
-    public void setRelatedObjects(int i, java.lang.String _value) {
-        this.relatedObjects[i] = _value;
-    }
-
-
-    /**
-     * Gets the runAssignmentRulesDefault value for this Layout.
-     * 
-     * @return runAssignmentRulesDefault
-     */
-    public java.lang.Boolean getRunAssignmentRulesDefault() {
+    public Boolean isRunAssignmentRulesDefault() {
         return runAssignmentRulesDefault;
     }
 
-
     /**
-     * Sets the runAssignmentRulesDefault value for this Layout.
+     * Sets the value of the runAssignmentRulesDefault property.
      * 
-     * @param runAssignmentRulesDefault
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setRunAssignmentRulesDefault(java.lang.Boolean runAssignmentRulesDefault) {
-        this.runAssignmentRulesDefault = runAssignmentRulesDefault;
+    public void setRunAssignmentRulesDefault(Boolean value) {
+        this.runAssignmentRulesDefault = value;
     }
 
-
     /**
-     * Gets the showEmailCheckbox value for this Layout.
+     * Gets the value of the showEmailCheckbox property.
      * 
-     * @return showEmailCheckbox
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowEmailCheckbox() {
+    public Boolean isShowEmailCheckbox() {
         return showEmailCheckbox;
     }
 
-
     /**
-     * Sets the showEmailCheckbox value for this Layout.
+     * Sets the value of the showEmailCheckbox property.
      * 
-     * @param showEmailCheckbox
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowEmailCheckbox(java.lang.Boolean showEmailCheckbox) {
-        this.showEmailCheckbox = showEmailCheckbox;
+    public void setShowEmailCheckbox(Boolean value) {
+        this.showEmailCheckbox = value;
     }
 
-
     /**
-     * Gets the showHighlightsPanel value for this Layout.
+     * Gets the value of the showHighlightsPanel property.
      * 
-     * @return showHighlightsPanel
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowHighlightsPanel() {
+    public Boolean isShowHighlightsPanel() {
         return showHighlightsPanel;
     }
 
-
     /**
-     * Sets the showHighlightsPanel value for this Layout.
+     * Sets the value of the showHighlightsPanel property.
      * 
-     * @param showHighlightsPanel
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowHighlightsPanel(java.lang.Boolean showHighlightsPanel) {
-        this.showHighlightsPanel = showHighlightsPanel;
+    public void setShowHighlightsPanel(Boolean value) {
+        this.showHighlightsPanel = value;
     }
 
-
     /**
-     * Gets the showInteractionLogPanel value for this Layout.
+     * Gets the value of the showInteractionLogPanel property.
      * 
-     * @return showInteractionLogPanel
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowInteractionLogPanel() {
+    public Boolean isShowInteractionLogPanel() {
         return showInteractionLogPanel;
     }
 
-
     /**
-     * Sets the showInteractionLogPanel value for this Layout.
+     * Sets the value of the showInteractionLogPanel property.
      * 
-     * @param showInteractionLogPanel
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowInteractionLogPanel(java.lang.Boolean showInteractionLogPanel) {
-        this.showInteractionLogPanel = showInteractionLogPanel;
+    public void setShowInteractionLogPanel(Boolean value) {
+        this.showInteractionLogPanel = value;
     }
 
-
     /**
-     * Gets the showKnowledgeComponent value for this Layout.
+     * Gets the value of the showKnowledgeComponent property.
      * 
-     * @return showKnowledgeComponent
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowKnowledgeComponent() {
+    public Boolean isShowKnowledgeComponent() {
         return showKnowledgeComponent;
     }
 
-
     /**
-     * Sets the showKnowledgeComponent value for this Layout.
+     * Sets the value of the showKnowledgeComponent property.
      * 
-     * @param showKnowledgeComponent
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowKnowledgeComponent(java.lang.Boolean showKnowledgeComponent) {
-        this.showKnowledgeComponent = showKnowledgeComponent;
+    public void setShowKnowledgeComponent(Boolean value) {
+        this.showKnowledgeComponent = value;
     }
 
-
     /**
-     * Gets the showRunAssignmentRulesCheckbox value for this Layout.
+     * Gets the value of the showRunAssignmentRulesCheckbox property.
      * 
-     * @return showRunAssignmentRulesCheckbox
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowRunAssignmentRulesCheckbox() {
+    public Boolean isShowRunAssignmentRulesCheckbox() {
         return showRunAssignmentRulesCheckbox;
     }
 
-
     /**
-     * Sets the showRunAssignmentRulesCheckbox value for this Layout.
+     * Sets the value of the showRunAssignmentRulesCheckbox property.
      * 
-     * @param showRunAssignmentRulesCheckbox
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowRunAssignmentRulesCheckbox(java.lang.Boolean showRunAssignmentRulesCheckbox) {
-        this.showRunAssignmentRulesCheckbox = showRunAssignmentRulesCheckbox;
+    public void setShowRunAssignmentRulesCheckbox(Boolean value) {
+        this.showRunAssignmentRulesCheckbox = value;
     }
 
-
     /**
-     * Gets the showSolutionSection value for this Layout.
+     * Gets the value of the showSolutionSection property.
      * 
-     * @return showSolutionSection
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowSolutionSection() {
+    public Boolean isShowSolutionSection() {
         return showSolutionSection;
     }
 
-
     /**
-     * Sets the showSolutionSection value for this Layout.
+     * Sets the value of the showSolutionSection property.
      * 
-     * @param showSolutionSection
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowSolutionSection(java.lang.Boolean showSolutionSection) {
-        this.showSolutionSection = showSolutionSection;
+    public void setShowSolutionSection(Boolean value) {
+        this.showSolutionSection = value;
     }
 
-
     /**
-     * Gets the showSubmitAndAttachButton value for this Layout.
+     * Gets the value of the showSubmitAndAttachButton property.
      * 
-     * @return showSubmitAndAttachButton
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowSubmitAndAttachButton() {
+    public Boolean isShowSubmitAndAttachButton() {
         return showSubmitAndAttachButton;
     }
 
-
     /**
-     * Sets the showSubmitAndAttachButton value for this Layout.
+     * Sets the value of the showSubmitAndAttachButton property.
      * 
-     * @param showSubmitAndAttachButton
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowSubmitAndAttachButton(java.lang.Boolean showSubmitAndAttachButton) {
-        this.showSubmitAndAttachButton = showSubmitAndAttachButton;
+    public void setShowSubmitAndAttachButton(Boolean value) {
+        this.showSubmitAndAttachButton = value;
     }
 
-
     /**
-     * Gets the summaryLayout value for this Layout.
+     * Gets the value of the summaryLayout property.
      * 
-     * @return summaryLayout
+     * @return
+     *     possible object is
+     *     {@link SummaryLayout }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SummaryLayout getSummaryLayout() {
+    public SummaryLayout getSummaryLayout() {
         return summaryLayout;
     }
 
-
     /**
-     * Sets the summaryLayout value for this Layout.
+     * Sets the value of the summaryLayout property.
      * 
-     * @param summaryLayout
+     * @param value
+     *     allowed object is
+     *     {@link SummaryLayout }
+     *     
      */
-    public void setSummaryLayout(com.sforce.soap._2006._04.metadata.SummaryLayout summaryLayout) {
-        this.summaryLayout = summaryLayout;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Layout)) return false;
-        Layout other = (Layout) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.customButtons==null && other.getCustomButtons()==null) || 
-             (this.customButtons!=null &&
-              java.util.Arrays.equals(this.customButtons, other.getCustomButtons()))) &&
-            ((this.customConsoleComponents==null && other.getCustomConsoleComponents()==null) || 
-             (this.customConsoleComponents!=null &&
-              this.customConsoleComponents.equals(other.getCustomConsoleComponents()))) &&
-            ((this.emailDefault==null && other.getEmailDefault()==null) || 
-             (this.emailDefault!=null &&
-              this.emailDefault.equals(other.getEmailDefault()))) &&
-            ((this.excludeButtons==null && other.getExcludeButtons()==null) || 
-             (this.excludeButtons!=null &&
-              java.util.Arrays.equals(this.excludeButtons, other.getExcludeButtons()))) &&
-            ((this.headers==null && other.getHeaders()==null) || 
-             (this.headers!=null &&
-              java.util.Arrays.equals(this.headers, other.getHeaders()))) &&
-            ((this.layoutSections==null && other.getLayoutSections()==null) || 
-             (this.layoutSections!=null &&
-              java.util.Arrays.equals(this.layoutSections, other.getLayoutSections()))) &&
-            ((this.miniLayout==null && other.getMiniLayout()==null) || 
-             (this.miniLayout!=null &&
-              this.miniLayout.equals(other.getMiniLayout()))) &&
-            ((this.multilineLayoutFields==null && other.getMultilineLayoutFields()==null) || 
-             (this.multilineLayoutFields!=null &&
-              java.util.Arrays.equals(this.multilineLayoutFields, other.getMultilineLayoutFields()))) &&
-            ((this.quickActionList==null && other.getQuickActionList()==null) || 
-             (this.quickActionList!=null &&
-              java.util.Arrays.equals(this.quickActionList, other.getQuickActionList()))) &&
-            ((this.relatedContent==null && other.getRelatedContent()==null) || 
-             (this.relatedContent!=null &&
-              java.util.Arrays.equals(this.relatedContent, other.getRelatedContent()))) &&
-            ((this.relatedLists==null && other.getRelatedLists()==null) || 
-             (this.relatedLists!=null &&
-              java.util.Arrays.equals(this.relatedLists, other.getRelatedLists()))) &&
-            ((this.relatedObjects==null && other.getRelatedObjects()==null) || 
-             (this.relatedObjects!=null &&
-              java.util.Arrays.equals(this.relatedObjects, other.getRelatedObjects()))) &&
-            ((this.runAssignmentRulesDefault==null && other.getRunAssignmentRulesDefault()==null) || 
-             (this.runAssignmentRulesDefault!=null &&
-              this.runAssignmentRulesDefault.equals(other.getRunAssignmentRulesDefault()))) &&
-            ((this.showEmailCheckbox==null && other.getShowEmailCheckbox()==null) || 
-             (this.showEmailCheckbox!=null &&
-              this.showEmailCheckbox.equals(other.getShowEmailCheckbox()))) &&
-            ((this.showHighlightsPanel==null && other.getShowHighlightsPanel()==null) || 
-             (this.showHighlightsPanel!=null &&
-              this.showHighlightsPanel.equals(other.getShowHighlightsPanel()))) &&
-            ((this.showInteractionLogPanel==null && other.getShowInteractionLogPanel()==null) || 
-             (this.showInteractionLogPanel!=null &&
-              this.showInteractionLogPanel.equals(other.getShowInteractionLogPanel()))) &&
-            ((this.showKnowledgeComponent==null && other.getShowKnowledgeComponent()==null) || 
-             (this.showKnowledgeComponent!=null &&
-              this.showKnowledgeComponent.equals(other.getShowKnowledgeComponent()))) &&
-            ((this.showRunAssignmentRulesCheckbox==null && other.getShowRunAssignmentRulesCheckbox()==null) || 
-             (this.showRunAssignmentRulesCheckbox!=null &&
-              this.showRunAssignmentRulesCheckbox.equals(other.getShowRunAssignmentRulesCheckbox()))) &&
-            ((this.showSolutionSection==null && other.getShowSolutionSection()==null) || 
-             (this.showSolutionSection!=null &&
-              this.showSolutionSection.equals(other.getShowSolutionSection()))) &&
-            ((this.showSubmitAndAttachButton==null && other.getShowSubmitAndAttachButton()==null) || 
-             (this.showSubmitAndAttachButton!=null &&
-              this.showSubmitAndAttachButton.equals(other.getShowSubmitAndAttachButton()))) &&
-            ((this.summaryLayout==null && other.getSummaryLayout()==null) || 
-             (this.summaryLayout!=null &&
-              this.summaryLayout.equals(other.getSummaryLayout())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCustomButtons() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCustomButtons());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCustomButtons(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getCustomConsoleComponents() != null) {
-            _hashCode += getCustomConsoleComponents().hashCode();
-        }
-        if (getEmailDefault() != null) {
-            _hashCode += getEmailDefault().hashCode();
-        }
-        if (getExcludeButtons() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getExcludeButtons());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getExcludeButtons(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getHeaders() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getHeaders());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getHeaders(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLayoutSections() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLayoutSections());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLayoutSections(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getMiniLayout() != null) {
-            _hashCode += getMiniLayout().hashCode();
-        }
-        if (getMultilineLayoutFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getMultilineLayoutFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getMultilineLayoutFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getQuickActionList() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getQuickActionList());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getQuickActionList(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRelatedContent() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRelatedContent());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRelatedContent(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRelatedLists() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRelatedLists());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRelatedLists(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRelatedObjects() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRelatedObjects());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRelatedObjects(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRunAssignmentRulesDefault() != null) {
-            _hashCode += getRunAssignmentRulesDefault().hashCode();
-        }
-        if (getShowEmailCheckbox() != null) {
-            _hashCode += getShowEmailCheckbox().hashCode();
-        }
-        if (getShowHighlightsPanel() != null) {
-            _hashCode += getShowHighlightsPanel().hashCode();
-        }
-        if (getShowInteractionLogPanel() != null) {
-            _hashCode += getShowInteractionLogPanel().hashCode();
-        }
-        if (getShowKnowledgeComponent() != null) {
-            _hashCode += getShowKnowledgeComponent().hashCode();
-        }
-        if (getShowRunAssignmentRulesCheckbox() != null) {
-            _hashCode += getShowRunAssignmentRulesCheckbox().hashCode();
-        }
-        if (getShowSolutionSection() != null) {
-            _hashCode += getShowSolutionSection().hashCode();
-        }
-        if (getShowSubmitAndAttachButton() != null) {
-            _hashCode += getShowSubmitAndAttachButton().hashCode();
-        }
-        if (getSummaryLayout() != null) {
-            _hashCode += getSummaryLayout().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Layout.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Layout"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customButtons");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customButtons"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customConsoleComponents");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customConsoleComponents"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomConsoleComponents"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailDefault");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emailDefault"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("excludeButtons");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "excludeButtons"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("headers");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "headers"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LayoutHeader"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("layoutSections");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "layoutSections"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LayoutSection"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("miniLayout");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "miniLayout"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "MiniLayout"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("multilineLayoutFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "multilineLayoutFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("quickActionList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "quickActionList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuickActionListItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "quickActionListItems"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relatedContent");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relatedContent"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RelatedContentItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relatedContentItems"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relatedLists");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relatedLists"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RelatedListItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relatedObjects");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relatedObjects"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("runAssignmentRulesDefault");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "runAssignmentRulesDefault"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showEmailCheckbox");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showEmailCheckbox"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showHighlightsPanel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showHighlightsPanel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showInteractionLogPanel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showInteractionLogPanel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showKnowledgeComponent");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showKnowledgeComponent"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showRunAssignmentRulesCheckbox");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showRunAssignmentRulesCheckbox"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showSolutionSection");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showSolutionSection"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showSubmitAndAttachButton");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showSubmitAndAttachButton"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("summaryLayout");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "summaryLayout"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SummaryLayout"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setSummaryLayout(SummaryLayout value) {
+        this.summaryLayout = value;
     }
 
 }

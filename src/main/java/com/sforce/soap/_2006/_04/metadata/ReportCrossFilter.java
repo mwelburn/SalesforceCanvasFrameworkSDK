@@ -1,281 +1,181 @@
-/**
- * ReportCrossFilter.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportCrossFilter  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ReportFilterItem[] criteriaItems;
-
-    private com.sforce.soap._2006._04.metadata.ObjectFilterOperator operation;
-
-    private java.lang.String primaryTableColumn;
-
-    private java.lang.String relatedTable;
-
-    private java.lang.String relatedTableJoinColumn;
-
-    public ReportCrossFilter() {
-    }
-
-    public ReportCrossFilter(
-           com.sforce.soap._2006._04.metadata.ReportFilterItem[] criteriaItems,
-           com.sforce.soap._2006._04.metadata.ObjectFilterOperator operation,
-           java.lang.String primaryTableColumn,
-           java.lang.String relatedTable,
-           java.lang.String relatedTableJoinColumn) {
-           this.criteriaItems = criteriaItems;
-           this.operation = operation;
-           this.primaryTableColumn = primaryTableColumn;
-           this.relatedTable = relatedTable;
-           this.relatedTableJoinColumn = relatedTableJoinColumn;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the criteriaItems value for this ReportCrossFilter.
-     * 
-     * @return criteriaItems
-     */
-    public com.sforce.soap._2006._04.metadata.ReportFilterItem[] getCriteriaItems() {
-        return criteriaItems;
-    }
+/**
+ * <p>Java class for ReportCrossFilter complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportCrossFilter">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="criteriaItems" type="{http://soap.sforce.com/2006/04/metadata}ReportFilterItem" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="operation" type="{http://soap.sforce.com/2006/04/metadata}ObjectFilterOperator"/>
+ *         &lt;element name="primaryTableColumn" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="relatedTable" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="relatedTableJoinColumn" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportCrossFilter", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "criteriaItems",
+    "operation",
+    "primaryTableColumn",
+    "relatedTable",
+    "relatedTableJoinColumn"
+})
+public class ReportCrossFilter {
 
-
-    /**
-     * Sets the criteriaItems value for this ReportCrossFilter.
-     * 
-     * @param criteriaItems
-     */
-    public void setCriteriaItems(com.sforce.soap._2006._04.metadata.ReportFilterItem[] criteriaItems) {
-        this.criteriaItems = criteriaItems;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportFilterItem getCriteriaItems(int i) {
-        return this.criteriaItems[i];
-    }
-
-    public void setCriteriaItems(int i, com.sforce.soap._2006._04.metadata.ReportFilterItem _value) {
-        this.criteriaItems[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportFilterItem> criteriaItems;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected ObjectFilterOperator operation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String primaryTableColumn;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String relatedTable;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String relatedTableJoinColumn;
 
     /**
-     * Gets the operation value for this ReportCrossFilter.
+     * Gets the value of the criteriaItems property.
      * 
-     * @return operation
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the criteriaItems property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCriteriaItems().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportFilterItem }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ObjectFilterOperator getOperation() {
+    public List<ReportFilterItem> getCriteriaItems() {
+        if (criteriaItems == null) {
+            criteriaItems = new ArrayList<ReportFilterItem>();
+        }
+        return this.criteriaItems;
+    }
+
+    /**
+     * Gets the value of the operation property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ObjectFilterOperator }
+     *     
+     */
+    public ObjectFilterOperator getOperation() {
         return operation;
     }
 
-
     /**
-     * Sets the operation value for this ReportCrossFilter.
+     * Sets the value of the operation property.
      * 
-     * @param operation
+     * @param value
+     *     allowed object is
+     *     {@link ObjectFilterOperator }
+     *     
      */
-    public void setOperation(com.sforce.soap._2006._04.metadata.ObjectFilterOperator operation) {
-        this.operation = operation;
+    public void setOperation(ObjectFilterOperator value) {
+        this.operation = value;
     }
 
-
     /**
-     * Gets the primaryTableColumn value for this ReportCrossFilter.
+     * Gets the value of the primaryTableColumn property.
      * 
-     * @return primaryTableColumn
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPrimaryTableColumn() {
+    public String getPrimaryTableColumn() {
         return primaryTableColumn;
     }
 
-
     /**
-     * Sets the primaryTableColumn value for this ReportCrossFilter.
+     * Sets the value of the primaryTableColumn property.
      * 
-     * @param primaryTableColumn
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPrimaryTableColumn(java.lang.String primaryTableColumn) {
-        this.primaryTableColumn = primaryTableColumn;
+    public void setPrimaryTableColumn(String value) {
+        this.primaryTableColumn = value;
     }
 
-
     /**
-     * Gets the relatedTable value for this ReportCrossFilter.
+     * Gets the value of the relatedTable property.
      * 
-     * @return relatedTable
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRelatedTable() {
+    public String getRelatedTable() {
         return relatedTable;
     }
 
-
     /**
-     * Sets the relatedTable value for this ReportCrossFilter.
+     * Sets the value of the relatedTable property.
      * 
-     * @param relatedTable
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRelatedTable(java.lang.String relatedTable) {
-        this.relatedTable = relatedTable;
+    public void setRelatedTable(String value) {
+        this.relatedTable = value;
     }
 
-
     /**
-     * Gets the relatedTableJoinColumn value for this ReportCrossFilter.
+     * Gets the value of the relatedTableJoinColumn property.
      * 
-     * @return relatedTableJoinColumn
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRelatedTableJoinColumn() {
+    public String getRelatedTableJoinColumn() {
         return relatedTableJoinColumn;
     }
 
-
     /**
-     * Sets the relatedTableJoinColumn value for this ReportCrossFilter.
+     * Sets the value of the relatedTableJoinColumn property.
      * 
-     * @param relatedTableJoinColumn
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRelatedTableJoinColumn(java.lang.String relatedTableJoinColumn) {
-        this.relatedTableJoinColumn = relatedTableJoinColumn;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportCrossFilter)) return false;
-        ReportCrossFilter other = (ReportCrossFilter) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.criteriaItems==null && other.getCriteriaItems()==null) || 
-             (this.criteriaItems!=null &&
-              java.util.Arrays.equals(this.criteriaItems, other.getCriteriaItems()))) &&
-            ((this.operation==null && other.getOperation()==null) || 
-             (this.operation!=null &&
-              this.operation.equals(other.getOperation()))) &&
-            ((this.primaryTableColumn==null && other.getPrimaryTableColumn()==null) || 
-             (this.primaryTableColumn!=null &&
-              this.primaryTableColumn.equals(other.getPrimaryTableColumn()))) &&
-            ((this.relatedTable==null && other.getRelatedTable()==null) || 
-             (this.relatedTable!=null &&
-              this.relatedTable.equals(other.getRelatedTable()))) &&
-            ((this.relatedTableJoinColumn==null && other.getRelatedTableJoinColumn()==null) || 
-             (this.relatedTableJoinColumn!=null &&
-              this.relatedTableJoinColumn.equals(other.getRelatedTableJoinColumn())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCriteriaItems() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCriteriaItems());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCriteriaItems(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getOperation() != null) {
-            _hashCode += getOperation().hashCode();
-        }
-        if (getPrimaryTableColumn() != null) {
-            _hashCode += getPrimaryTableColumn().hashCode();
-        }
-        if (getRelatedTable() != null) {
-            _hashCode += getRelatedTable().hashCode();
-        }
-        if (getRelatedTableJoinColumn() != null) {
-            _hashCode += getRelatedTableJoinColumn().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportCrossFilter.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportCrossFilter"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("criteriaItems");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "criteriaItems"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportFilterItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("operation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "operation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ObjectFilterOperator"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("primaryTableColumn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "primaryTableColumn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relatedTable");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relatedTable"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relatedTableJoinColumn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relatedTableJoinColumn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setRelatedTableJoinColumn(String value) {
+        this.relatedTableJoinColumn = value;
     }
 
 }

@@ -1,173 +1,97 @@
-/**
- * QuickActionLayout.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class QuickActionLayout  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.LayoutSectionStyle layoutSectionStyle;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.QuickActionLayoutItem[][] quickActionLayoutColumns;
 
-    public QuickActionLayout() {
-    }
+/**
+ * <p>Java class for QuickActionLayout complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="QuickActionLayout">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="layoutSectionStyle" type="{http://soap.sforce.com/2006/04/metadata}LayoutSectionStyle"/>
+ *         &lt;element name="quickActionLayoutColumns" type="{http://soap.sforce.com/2006/04/metadata}QuickActionLayoutColumn" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "QuickActionLayout", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "layoutSectionStyle",
+    "quickActionLayoutColumns"
+})
+public class QuickActionLayout {
 
-    public QuickActionLayout(
-           com.sforce.soap._2006._04.metadata.LayoutSectionStyle layoutSectionStyle,
-           com.sforce.soap._2006._04.metadata.QuickActionLayoutItem[][] quickActionLayoutColumns) {
-           this.layoutSectionStyle = layoutSectionStyle;
-           this.quickActionLayoutColumns = quickActionLayoutColumns;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected LayoutSectionStyle layoutSectionStyle;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<QuickActionLayoutColumn> quickActionLayoutColumns;
 
     /**
-     * Gets the layoutSectionStyle value for this QuickActionLayout.
+     * Gets the value of the layoutSectionStyle property.
      * 
-     * @return layoutSectionStyle
+     * @return
+     *     possible object is
+     *     {@link LayoutSectionStyle }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LayoutSectionStyle getLayoutSectionStyle() {
+    public LayoutSectionStyle getLayoutSectionStyle() {
         return layoutSectionStyle;
     }
 
-
     /**
-     * Sets the layoutSectionStyle value for this QuickActionLayout.
+     * Sets the value of the layoutSectionStyle property.
      * 
-     * @param layoutSectionStyle
+     * @param value
+     *     allowed object is
+     *     {@link LayoutSectionStyle }
+     *     
      */
-    public void setLayoutSectionStyle(com.sforce.soap._2006._04.metadata.LayoutSectionStyle layoutSectionStyle) {
-        this.layoutSectionStyle = layoutSectionStyle;
+    public void setLayoutSectionStyle(LayoutSectionStyle value) {
+        this.layoutSectionStyle = value;
     }
 
-
     /**
-     * Gets the quickActionLayoutColumns value for this QuickActionLayout.
+     * Gets the value of the quickActionLayoutColumns property.
      * 
-     * @return quickActionLayoutColumns
-     */
-    public com.sforce.soap._2006._04.metadata.QuickActionLayoutItem[][] getQuickActionLayoutColumns() {
-        return quickActionLayoutColumns;
-    }
-
-
-    /**
-     * Sets the quickActionLayoutColumns value for this QuickActionLayout.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the quickActionLayoutColumns property.
      * 
-     * @param quickActionLayoutColumns
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getQuickActionLayoutColumns().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link QuickActionLayoutColumn }
+     * 
+     * 
      */
-    public void setQuickActionLayoutColumns(com.sforce.soap._2006._04.metadata.QuickActionLayoutItem[][] quickActionLayoutColumns) {
-        this.quickActionLayoutColumns = quickActionLayoutColumns;
-    }
-
-    public com.sforce.soap._2006._04.metadata.QuickActionLayoutItem[] getQuickActionLayoutColumns(int i) {
-        return this.quickActionLayoutColumns[i];
-    }
-
-    public void setQuickActionLayoutColumns(int i, com.sforce.soap._2006._04.metadata.QuickActionLayoutItem[] _value) {
-        this.quickActionLayoutColumns[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof QuickActionLayout)) return false;
-        QuickActionLayout other = (QuickActionLayout) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<QuickActionLayoutColumn> getQuickActionLayoutColumns() {
+        if (quickActionLayoutColumns == null) {
+            quickActionLayoutColumns = new ArrayList<QuickActionLayoutColumn>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.layoutSectionStyle==null && other.getLayoutSectionStyle()==null) || 
-             (this.layoutSectionStyle!=null &&
-              this.layoutSectionStyle.equals(other.getLayoutSectionStyle()))) &&
-            ((this.quickActionLayoutColumns==null && other.getQuickActionLayoutColumns()==null) || 
-             (this.quickActionLayoutColumns!=null &&
-              java.util.Arrays.equals(this.quickActionLayoutColumns, other.getQuickActionLayoutColumns())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getLayoutSectionStyle() != null) {
-            _hashCode += getLayoutSectionStyle().hashCode();
-        }
-        if (getQuickActionLayoutColumns() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getQuickActionLayoutColumns());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getQuickActionLayoutColumns(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(QuickActionLayout.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuickActionLayout"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("layoutSectionStyle");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "layoutSectionStyle"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LayoutSectionStyle"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("quickActionLayoutColumns");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "quickActionLayoutColumns"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuickActionLayoutColumn"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.quickActionLayoutColumns;
     }
 
 }

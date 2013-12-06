@@ -1,173 +1,97 @@
-/**
- * RecordTypePicklistValue.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class RecordTypePicklistValue  implements java.io.Serializable {
-    private java.lang.String picklist;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.PicklistValue[] values;
 
-    public RecordTypePicklistValue() {
-    }
+/**
+ * <p>Java class for RecordTypePicklistValue complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="RecordTypePicklistValue">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="picklist" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="values" type="{http://soap.sforce.com/2006/04/metadata}PicklistValue" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "RecordTypePicklistValue", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "picklist",
+    "values"
+})
+public class RecordTypePicklistValue {
 
-    public RecordTypePicklistValue(
-           java.lang.String picklist,
-           com.sforce.soap._2006._04.metadata.PicklistValue[] values) {
-           this.picklist = picklist;
-           this.values = values;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String picklist;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<PicklistValue> values;
 
     /**
-     * Gets the picklist value for this RecordTypePicklistValue.
+     * Gets the value of the picklist property.
      * 
-     * @return picklist
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPicklist() {
+    public String getPicklist() {
         return picklist;
     }
 
-
     /**
-     * Sets the picklist value for this RecordTypePicklistValue.
+     * Sets the value of the picklist property.
      * 
-     * @param picklist
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPicklist(java.lang.String picklist) {
-        this.picklist = picklist;
+    public void setPicklist(String value) {
+        this.picklist = value;
     }
 
-
     /**
-     * Gets the values value for this RecordTypePicklistValue.
+     * Gets the value of the values property.
      * 
-     * @return values
-     */
-    public com.sforce.soap._2006._04.metadata.PicklistValue[] getValues() {
-        return values;
-    }
-
-
-    /**
-     * Sets the values value for this RecordTypePicklistValue.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the values property.
      * 
-     * @param values
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getValues().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PicklistValue }
+     * 
+     * 
      */
-    public void setValues(com.sforce.soap._2006._04.metadata.PicklistValue[] values) {
-        this.values = values;
-    }
-
-    public com.sforce.soap._2006._04.metadata.PicklistValue getValues(int i) {
-        return this.values[i];
-    }
-
-    public void setValues(int i, com.sforce.soap._2006._04.metadata.PicklistValue _value) {
-        this.values[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof RecordTypePicklistValue)) return false;
-        RecordTypePicklistValue other = (RecordTypePicklistValue) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<PicklistValue> getValues() {
+        if (values == null) {
+            values = new ArrayList<PicklistValue>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.picklist==null && other.getPicklist()==null) || 
-             (this.picklist!=null &&
-              this.picklist.equals(other.getPicklist()))) &&
-            ((this.values==null && other.getValues()==null) || 
-             (this.values!=null &&
-              java.util.Arrays.equals(this.values, other.getValues())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getPicklist() != null) {
-            _hashCode += getPicklist().hashCode();
-        }
-        if (getValues() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getValues());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getValues(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RecordTypePicklistValue.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "RecordTypePicklistValue"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("picklist");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "picklist"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("values");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "values"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PicklistValue"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.values;
     }
 
 }

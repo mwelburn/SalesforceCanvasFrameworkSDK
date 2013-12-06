@@ -1,396 +1,265 @@
-/**
- * EscalationAction.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class EscalationAction  implements java.io.Serializable {
-    private java.lang.String assignedTo;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String assignedToTemplate;
 
-    private com.sforce.soap._2006._04.metadata.AssignToLookupValueType assignedToType;
+/**
+ * <p>Java class for EscalationAction complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="EscalationAction">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="assignedTo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="assignedToTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="assignedToType" type="{http://soap.sforce.com/2006/04/metadata}AssignToLookupValueType" minOccurs="0"/>
+ *         &lt;element name="minutesToEscalation" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="notifyCaseOwner" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="notifyEmail" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="notifyTo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="notifyToTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "EscalationAction", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "assignedTo",
+    "assignedToTemplate",
+    "assignedToType",
+    "minutesToEscalation",
+    "notifyCaseOwner",
+    "notifyEmail",
+    "notifyTo",
+    "notifyToTemplate"
+})
+public class EscalationAction {
 
-    private java.lang.Integer minutesToEscalation;
-
-    private java.lang.Boolean notifyCaseOwner;
-
-    private java.lang.String[] notifyEmail;
-
-    private java.lang.String notifyTo;
-
-    private java.lang.String notifyToTemplate;
-
-    public EscalationAction() {
-    }
-
-    public EscalationAction(
-           java.lang.String assignedTo,
-           java.lang.String assignedToTemplate,
-           com.sforce.soap._2006._04.metadata.AssignToLookupValueType assignedToType,
-           java.lang.Integer minutesToEscalation,
-           java.lang.Boolean notifyCaseOwner,
-           java.lang.String[] notifyEmail,
-           java.lang.String notifyTo,
-           java.lang.String notifyToTemplate) {
-           this.assignedTo = assignedTo;
-           this.assignedToTemplate = assignedToTemplate;
-           this.assignedToType = assignedToType;
-           this.minutesToEscalation = minutesToEscalation;
-           this.notifyCaseOwner = notifyCaseOwner;
-           this.notifyEmail = notifyEmail;
-           this.notifyTo = notifyTo;
-           this.notifyToTemplate = notifyToTemplate;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String assignedTo;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String assignedToTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected AssignToLookupValueType assignedToType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer minutesToEscalation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean notifyCaseOwner;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> notifyEmail;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String notifyTo;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String notifyToTemplate;
 
     /**
-     * Gets the assignedTo value for this EscalationAction.
+     * Gets the value of the assignedTo property.
      * 
-     * @return assignedTo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAssignedTo() {
+    public String getAssignedTo() {
         return assignedTo;
     }
 
-
     /**
-     * Sets the assignedTo value for this EscalationAction.
+     * Sets the value of the assignedTo property.
      * 
-     * @param assignedTo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAssignedTo(java.lang.String assignedTo) {
-        this.assignedTo = assignedTo;
+    public void setAssignedTo(String value) {
+        this.assignedTo = value;
     }
 
-
     /**
-     * Gets the assignedToTemplate value for this EscalationAction.
+     * Gets the value of the assignedToTemplate property.
      * 
-     * @return assignedToTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAssignedToTemplate() {
+    public String getAssignedToTemplate() {
         return assignedToTemplate;
     }
 
-
     /**
-     * Sets the assignedToTemplate value for this EscalationAction.
+     * Sets the value of the assignedToTemplate property.
      * 
-     * @param assignedToTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAssignedToTemplate(java.lang.String assignedToTemplate) {
-        this.assignedToTemplate = assignedToTemplate;
+    public void setAssignedToTemplate(String value) {
+        this.assignedToTemplate = value;
     }
 
-
     /**
-     * Gets the assignedToType value for this EscalationAction.
+     * Gets the value of the assignedToType property.
      * 
-     * @return assignedToType
+     * @return
+     *     possible object is
+     *     {@link AssignToLookupValueType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.AssignToLookupValueType getAssignedToType() {
+    public AssignToLookupValueType getAssignedToType() {
         return assignedToType;
     }
 
-
     /**
-     * Sets the assignedToType value for this EscalationAction.
+     * Sets the value of the assignedToType property.
      * 
-     * @param assignedToType
+     * @param value
+     *     allowed object is
+     *     {@link AssignToLookupValueType }
+     *     
      */
-    public void setAssignedToType(com.sforce.soap._2006._04.metadata.AssignToLookupValueType assignedToType) {
-        this.assignedToType = assignedToType;
+    public void setAssignedToType(AssignToLookupValueType value) {
+        this.assignedToType = value;
     }
 
-
     /**
-     * Gets the minutesToEscalation value for this EscalationAction.
+     * Gets the value of the minutesToEscalation property.
      * 
-     * @return minutesToEscalation
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getMinutesToEscalation() {
+    public Integer getMinutesToEscalation() {
         return minutesToEscalation;
     }
 
-
     /**
-     * Sets the minutesToEscalation value for this EscalationAction.
+     * Sets the value of the minutesToEscalation property.
      * 
-     * @param minutesToEscalation
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setMinutesToEscalation(java.lang.Integer minutesToEscalation) {
-        this.minutesToEscalation = minutesToEscalation;
+    public void setMinutesToEscalation(Integer value) {
+        this.minutesToEscalation = value;
     }
 
-
     /**
-     * Gets the notifyCaseOwner value for this EscalationAction.
+     * Gets the value of the notifyCaseOwner property.
      * 
-     * @return notifyCaseOwner
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getNotifyCaseOwner() {
+    public Boolean isNotifyCaseOwner() {
         return notifyCaseOwner;
     }
 
+    /**
+     * Sets the value of the notifyCaseOwner property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setNotifyCaseOwner(Boolean value) {
+        this.notifyCaseOwner = value;
+    }
 
     /**
-     * Sets the notifyCaseOwner value for this EscalationAction.
+     * Gets the value of the notifyEmail property.
      * 
-     * @param notifyCaseOwner
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the notifyEmail property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getNotifyEmail().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public void setNotifyCaseOwner(java.lang.Boolean notifyCaseOwner) {
-        this.notifyCaseOwner = notifyCaseOwner;
+    public List<String> getNotifyEmail() {
+        if (notifyEmail == null) {
+            notifyEmail = new ArrayList<String>();
+        }
+        return this.notifyEmail;
     }
-
 
     /**
-     * Gets the notifyEmail value for this EscalationAction.
+     * Gets the value of the notifyTo property.
      * 
-     * @return notifyEmail
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String[] getNotifyEmail() {
-        return notifyEmail;
-    }
-
-
-    /**
-     * Sets the notifyEmail value for this EscalationAction.
-     * 
-     * @param notifyEmail
-     */
-    public void setNotifyEmail(java.lang.String[] notifyEmail) {
-        this.notifyEmail = notifyEmail;
-    }
-
-    public java.lang.String getNotifyEmail(int i) {
-        return this.notifyEmail[i];
-    }
-
-    public void setNotifyEmail(int i, java.lang.String _value) {
-        this.notifyEmail[i] = _value;
-    }
-
-
-    /**
-     * Gets the notifyTo value for this EscalationAction.
-     * 
-     * @return notifyTo
-     */
-    public java.lang.String getNotifyTo() {
+    public String getNotifyTo() {
         return notifyTo;
     }
 
-
     /**
-     * Sets the notifyTo value for this EscalationAction.
+     * Sets the value of the notifyTo property.
      * 
-     * @param notifyTo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNotifyTo(java.lang.String notifyTo) {
-        this.notifyTo = notifyTo;
+    public void setNotifyTo(String value) {
+        this.notifyTo = value;
     }
 
-
     /**
-     * Gets the notifyToTemplate value for this EscalationAction.
+     * Gets the value of the notifyToTemplate property.
      * 
-     * @return notifyToTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNotifyToTemplate() {
+    public String getNotifyToTemplate() {
         return notifyToTemplate;
     }
 
-
     /**
-     * Sets the notifyToTemplate value for this EscalationAction.
+     * Sets the value of the notifyToTemplate property.
      * 
-     * @param notifyToTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNotifyToTemplate(java.lang.String notifyToTemplate) {
-        this.notifyToTemplate = notifyToTemplate;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof EscalationAction)) return false;
-        EscalationAction other = (EscalationAction) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.assignedTo==null && other.getAssignedTo()==null) || 
-             (this.assignedTo!=null &&
-              this.assignedTo.equals(other.getAssignedTo()))) &&
-            ((this.assignedToTemplate==null && other.getAssignedToTemplate()==null) || 
-             (this.assignedToTemplate!=null &&
-              this.assignedToTemplate.equals(other.getAssignedToTemplate()))) &&
-            ((this.assignedToType==null && other.getAssignedToType()==null) || 
-             (this.assignedToType!=null &&
-              this.assignedToType.equals(other.getAssignedToType()))) &&
-            ((this.minutesToEscalation==null && other.getMinutesToEscalation()==null) || 
-             (this.minutesToEscalation!=null &&
-              this.minutesToEscalation.equals(other.getMinutesToEscalation()))) &&
-            ((this.notifyCaseOwner==null && other.getNotifyCaseOwner()==null) || 
-             (this.notifyCaseOwner!=null &&
-              this.notifyCaseOwner.equals(other.getNotifyCaseOwner()))) &&
-            ((this.notifyEmail==null && other.getNotifyEmail()==null) || 
-             (this.notifyEmail!=null &&
-              java.util.Arrays.equals(this.notifyEmail, other.getNotifyEmail()))) &&
-            ((this.notifyTo==null && other.getNotifyTo()==null) || 
-             (this.notifyTo!=null &&
-              this.notifyTo.equals(other.getNotifyTo()))) &&
-            ((this.notifyToTemplate==null && other.getNotifyToTemplate()==null) || 
-             (this.notifyToTemplate!=null &&
-              this.notifyToTemplate.equals(other.getNotifyToTemplate())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAssignedTo() != null) {
-            _hashCode += getAssignedTo().hashCode();
-        }
-        if (getAssignedToTemplate() != null) {
-            _hashCode += getAssignedToTemplate().hashCode();
-        }
-        if (getAssignedToType() != null) {
-            _hashCode += getAssignedToType().hashCode();
-        }
-        if (getMinutesToEscalation() != null) {
-            _hashCode += getMinutesToEscalation().hashCode();
-        }
-        if (getNotifyCaseOwner() != null) {
-            _hashCode += getNotifyCaseOwner().hashCode();
-        }
-        if (getNotifyEmail() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getNotifyEmail());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getNotifyEmail(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getNotifyTo() != null) {
-            _hashCode += getNotifyTo().hashCode();
-        }
-        if (getNotifyToTemplate() != null) {
-            _hashCode += getNotifyToTemplate().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(EscalationAction.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EscalationAction"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignedTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignedTo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignedToTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignedToTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignedToType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignedToType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "AssignToLookupValueType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("minutesToEscalation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "minutesToEscalation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyCaseOwner");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyCaseOwner"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyEmail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyEmail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyTo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyToTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyToTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setNotifyToTemplate(String value) {
+        this.notifyToTemplate = value;
     }
 
 }

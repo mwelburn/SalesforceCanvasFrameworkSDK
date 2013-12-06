@@ -1,155 +1,90 @@
-/**
- * FlowInputValidationRule.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowInputValidationRule  implements java.io.Serializable {
-    private java.lang.String errorMessage;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String formulaExpression;
 
-    public FlowInputValidationRule() {
-    }
+/**
+ * <p>Java class for FlowInputValidationRule complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowInputValidationRule">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="errorMessage" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="formulaExpression" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowInputValidationRule", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "errorMessage",
+    "formulaExpression"
+})
+public class FlowInputValidationRule {
 
-    public FlowInputValidationRule(
-           java.lang.String errorMessage,
-           java.lang.String formulaExpression) {
-           this.errorMessage = errorMessage;
-           this.formulaExpression = formulaExpression;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String errorMessage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String formulaExpression;
 
     /**
-     * Gets the errorMessage value for this FlowInputValidationRule.
+     * Gets the value of the errorMessage property.
      * 
-     * @return errorMessage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getErrorMessage() {
+    public String getErrorMessage() {
         return errorMessage;
     }
 
-
     /**
-     * Sets the errorMessage value for this FlowInputValidationRule.
+     * Sets the value of the errorMessage property.
      * 
-     * @param errorMessage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setErrorMessage(java.lang.String errorMessage) {
-        this.errorMessage = errorMessage;
+    public void setErrorMessage(String value) {
+        this.errorMessage = value;
     }
 
-
     /**
-     * Gets the formulaExpression value for this FlowInputValidationRule.
+     * Gets the value of the formulaExpression property.
      * 
-     * @return formulaExpression
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFormulaExpression() {
+    public String getFormulaExpression() {
         return formulaExpression;
     }
 
-
     /**
-     * Sets the formulaExpression value for this FlowInputValidationRule.
+     * Sets the value of the formulaExpression property.
      * 
-     * @param formulaExpression
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFormulaExpression(java.lang.String formulaExpression) {
-        this.formulaExpression = formulaExpression;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowInputValidationRule)) return false;
-        FlowInputValidationRule other = (FlowInputValidationRule) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.errorMessage==null && other.getErrorMessage()==null) || 
-             (this.errorMessage!=null &&
-              this.errorMessage.equals(other.getErrorMessage()))) &&
-            ((this.formulaExpression==null && other.getFormulaExpression()==null) || 
-             (this.formulaExpression!=null &&
-              this.formulaExpression.equals(other.getFormulaExpression())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getErrorMessage() != null) {
-            _hashCode += getErrorMessage().hashCode();
-        }
-        if (getFormulaExpression() != null) {
-            _hashCode += getFormulaExpression().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowInputValidationRule.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowInputValidationRule"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorMessage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "errorMessage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("formulaExpression");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "formulaExpression"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setFormulaExpression(String value) {
+        this.formulaExpression = value;
     }
 
 }

@@ -1,194 +1,118 @@
-/**
- * QuickActionLayoutItem.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class QuickActionLayoutItem  implements java.io.Serializable {
-    private java.lang.Boolean emptySpace;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String field;
 
-    private com.sforce.soap._2006._04.metadata.UiBehavior uiBehavior;
+/**
+ * <p>Java class for QuickActionLayoutItem complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="QuickActionLayoutItem">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="emptySpace" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="field" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="uiBehavior" type="{http://soap.sforce.com/2006/04/metadata}UiBehavior" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "QuickActionLayoutItem", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "emptySpace",
+    "field",
+    "uiBehavior"
+})
+public class QuickActionLayoutItem {
 
-    public QuickActionLayoutItem() {
-    }
-
-    public QuickActionLayoutItem(
-           java.lang.Boolean emptySpace,
-           java.lang.String field,
-           com.sforce.soap._2006._04.metadata.UiBehavior uiBehavior) {
-           this.emptySpace = emptySpace;
-           this.field = field;
-           this.uiBehavior = uiBehavior;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean emptySpace;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String field;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected UiBehavior uiBehavior;
 
     /**
-     * Gets the emptySpace value for this QuickActionLayoutItem.
+     * Gets the value of the emptySpace property.
      * 
-     * @return emptySpace
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEmptySpace() {
+    public Boolean isEmptySpace() {
         return emptySpace;
     }
 
-
     /**
-     * Sets the emptySpace value for this QuickActionLayoutItem.
+     * Sets the value of the emptySpace property.
      * 
-     * @param emptySpace
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEmptySpace(java.lang.Boolean emptySpace) {
-        this.emptySpace = emptySpace;
+    public void setEmptySpace(Boolean value) {
+        this.emptySpace = value;
     }
 
-
     /**
-     * Gets the field value for this QuickActionLayoutItem.
+     * Gets the value of the field property.
      * 
-     * @return field
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getField() {
+    public String getField() {
         return field;
     }
 
-
     /**
-     * Sets the field value for this QuickActionLayoutItem.
+     * Sets the value of the field property.
      * 
-     * @param field
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setField(java.lang.String field) {
-        this.field = field;
+    public void setField(String value) {
+        this.field = value;
     }
 
-
     /**
-     * Gets the uiBehavior value for this QuickActionLayoutItem.
+     * Gets the value of the uiBehavior property.
      * 
-     * @return uiBehavior
+     * @return
+     *     possible object is
+     *     {@link UiBehavior }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.UiBehavior getUiBehavior() {
+    public UiBehavior getUiBehavior() {
         return uiBehavior;
     }
 
-
     /**
-     * Sets the uiBehavior value for this QuickActionLayoutItem.
+     * Sets the value of the uiBehavior property.
      * 
-     * @param uiBehavior
+     * @param value
+     *     allowed object is
+     *     {@link UiBehavior }
+     *     
      */
-    public void setUiBehavior(com.sforce.soap._2006._04.metadata.UiBehavior uiBehavior) {
-        this.uiBehavior = uiBehavior;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof QuickActionLayoutItem)) return false;
-        QuickActionLayoutItem other = (QuickActionLayoutItem) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.emptySpace==null && other.getEmptySpace()==null) || 
-             (this.emptySpace!=null &&
-              this.emptySpace.equals(other.getEmptySpace()))) &&
-            ((this.field==null && other.getField()==null) || 
-             (this.field!=null &&
-              this.field.equals(other.getField()))) &&
-            ((this.uiBehavior==null && other.getUiBehavior()==null) || 
-             (this.uiBehavior!=null &&
-              this.uiBehavior.equals(other.getUiBehavior())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getEmptySpace() != null) {
-            _hashCode += getEmptySpace().hashCode();
-        }
-        if (getField() != null) {
-            _hashCode += getField().hashCode();
-        }
-        if (getUiBehavior() != null) {
-            _hashCode += getUiBehavior().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(QuickActionLayoutItem.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuickActionLayoutItem"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emptySpace");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emptySpace"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("field");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("uiBehavior");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "uiBehavior"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "UiBehavior"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUiBehavior(UiBehavior value) {
+        this.uiBehavior = value;
     }
 
 }

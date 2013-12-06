@@ -1,758 +1,519 @@
-/**
- * CustomApplication.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CustomApplication  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.CustomApplicationComponents customApplicationComponents;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String defaultLandingTab;
 
-    private java.lang.String description;
+/**
+ * <p>Java class for CustomApplication complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CustomApplication">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="customApplicationComponents" type="{http://soap.sforce.com/2006/04/metadata}CustomApplicationComponents" minOccurs="0"/>
+ *         &lt;element name="defaultLandingTab" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="detailPageRefreshMethod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="domainWhitelist" type="{http://soap.sforce.com/2006/04/metadata}DomainWhitelist" minOccurs="0"/>
+ *         &lt;element name="enableKeyboardShortcuts" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="isServiceCloudConsole" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="keyboardShortcuts" type="{http://soap.sforce.com/2006/04/metadata}KeyboardShortcuts" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="listPlacement" type="{http://soap.sforce.com/2006/04/metadata}ListPlacement" minOccurs="0"/>
+ *         &lt;element name="listRefreshMethod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="liveAgentConfig" type="{http://soap.sforce.com/2006/04/metadata}LiveAgentConfig" minOccurs="0"/>
+ *         &lt;element name="logo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="pushNotifications" type="{http://soap.sforce.com/2006/04/metadata}PushNotifications" minOccurs="0"/>
+ *         &lt;element name="saveUserSessions" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="tab" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="workspaceMappings" type="{http://soap.sforce.com/2006/04/metadata}WorkspaceMappings" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CustomApplication", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "customApplicationComponents",
+    "defaultLandingTab",
+    "description",
+    "detailPageRefreshMethod",
+    "domainWhitelist",
+    "enableKeyboardShortcuts",
+    "isServiceCloudConsole",
+    "keyboardShortcuts",
+    "label",
+    "listPlacement",
+    "listRefreshMethod",
+    "liveAgentConfig",
+    "logo",
+    "pushNotifications",
+    "saveUserSessions",
+    "tab",
+    "workspaceMappings"
+})
+public class CustomApplication
+    extends Metadata
+{
 
-    private java.lang.String detailPageRefreshMethod;
-
-    private java.lang.String[] domainWhitelist;
-
-    private java.lang.Boolean enableKeyboardShortcuts;
-
-    private java.lang.Boolean isServiceCloudConsole;
-
-    private com.sforce.soap._2006._04.metadata.KeyboardShortcuts keyboardShortcuts;
-
-    private java.lang.String label;
-
-    private com.sforce.soap._2006._04.metadata.ListPlacement listPlacement;
-
-    private java.lang.String listRefreshMethod;
-
-    private com.sforce.soap._2006._04.metadata.LiveAgentConfig liveAgentConfig;
-
-    private java.lang.String logo;
-
-    private com.sforce.soap._2006._04.metadata.PushNotification[] pushNotifications;
-
-    private java.lang.Boolean saveUserSessions;
-
-    private java.lang.String[] tab;
-
-    private com.sforce.soap._2006._04.metadata.WorkspaceMapping[] workspaceMappings;
-
-    public CustomApplication() {
-    }
-
-    public CustomApplication(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.CustomApplicationComponents customApplicationComponents,
-           java.lang.String defaultLandingTab,
-           java.lang.String description,
-           java.lang.String detailPageRefreshMethod,
-           java.lang.String[] domainWhitelist,
-           java.lang.Boolean enableKeyboardShortcuts,
-           java.lang.Boolean isServiceCloudConsole,
-           com.sforce.soap._2006._04.metadata.KeyboardShortcuts keyboardShortcuts,
-           java.lang.String label,
-           com.sforce.soap._2006._04.metadata.ListPlacement listPlacement,
-           java.lang.String listRefreshMethod,
-           com.sforce.soap._2006._04.metadata.LiveAgentConfig liveAgentConfig,
-           java.lang.String logo,
-           com.sforce.soap._2006._04.metadata.PushNotification[] pushNotifications,
-           java.lang.Boolean saveUserSessions,
-           java.lang.String[] tab,
-           com.sforce.soap._2006._04.metadata.WorkspaceMapping[] workspaceMappings) {
-        super(
-            fullName);
-        this.customApplicationComponents = customApplicationComponents;
-        this.defaultLandingTab = defaultLandingTab;
-        this.description = description;
-        this.detailPageRefreshMethod = detailPageRefreshMethod;
-        this.domainWhitelist = domainWhitelist;
-        this.enableKeyboardShortcuts = enableKeyboardShortcuts;
-        this.isServiceCloudConsole = isServiceCloudConsole;
-        this.keyboardShortcuts = keyboardShortcuts;
-        this.label = label;
-        this.listPlacement = listPlacement;
-        this.listRefreshMethod = listRefreshMethod;
-        this.liveAgentConfig = liveAgentConfig;
-        this.logo = logo;
-        this.pushNotifications = pushNotifications;
-        this.saveUserSessions = saveUserSessions;
-        this.tab = tab;
-        this.workspaceMappings = workspaceMappings;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected CustomApplicationComponents customApplicationComponents;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultLandingTab;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String detailPageRefreshMethod;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected DomainWhitelist domainWhitelist;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableKeyboardShortcuts;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isServiceCloudConsole;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected KeyboardShortcuts keyboardShortcuts;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ListPlacement listPlacement;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String listRefreshMethod;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LiveAgentConfig liveAgentConfig;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String logo;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected PushNotifications pushNotifications;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean saveUserSessions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> tab;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected WorkspaceMappings workspaceMappings;
 
     /**
-     * Gets the customApplicationComponents value for this CustomApplication.
+     * Gets the value of the customApplicationComponents property.
      * 
-     * @return customApplicationComponents
+     * @return
+     *     possible object is
+     *     {@link CustomApplicationComponents }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.CustomApplicationComponents getCustomApplicationComponents() {
+    public CustomApplicationComponents getCustomApplicationComponents() {
         return customApplicationComponents;
     }
 
-
     /**
-     * Sets the customApplicationComponents value for this CustomApplication.
+     * Sets the value of the customApplicationComponents property.
      * 
-     * @param customApplicationComponents
+     * @param value
+     *     allowed object is
+     *     {@link CustomApplicationComponents }
+     *     
      */
-    public void setCustomApplicationComponents(com.sforce.soap._2006._04.metadata.CustomApplicationComponents customApplicationComponents) {
-        this.customApplicationComponents = customApplicationComponents;
+    public void setCustomApplicationComponents(CustomApplicationComponents value) {
+        this.customApplicationComponents = value;
     }
 
-
     /**
-     * Gets the defaultLandingTab value for this CustomApplication.
+     * Gets the value of the defaultLandingTab property.
      * 
-     * @return defaultLandingTab
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultLandingTab() {
+    public String getDefaultLandingTab() {
         return defaultLandingTab;
     }
 
-
     /**
-     * Sets the defaultLandingTab value for this CustomApplication.
+     * Sets the value of the defaultLandingTab property.
      * 
-     * @param defaultLandingTab
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultLandingTab(java.lang.String defaultLandingTab) {
-        this.defaultLandingTab = defaultLandingTab;
+    public void setDefaultLandingTab(String value) {
+        this.defaultLandingTab = value;
     }
 
-
     /**
-     * Gets the description value for this CustomApplication.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this CustomApplication.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the detailPageRefreshMethod value for this CustomApplication.
+     * Gets the value of the detailPageRefreshMethod property.
      * 
-     * @return detailPageRefreshMethod
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDetailPageRefreshMethod() {
+    public String getDetailPageRefreshMethod() {
         return detailPageRefreshMethod;
     }
 
-
     /**
-     * Sets the detailPageRefreshMethod value for this CustomApplication.
+     * Sets the value of the detailPageRefreshMethod property.
      * 
-     * @param detailPageRefreshMethod
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDetailPageRefreshMethod(java.lang.String detailPageRefreshMethod) {
-        this.detailPageRefreshMethod = detailPageRefreshMethod;
+    public void setDetailPageRefreshMethod(String value) {
+        this.detailPageRefreshMethod = value;
     }
 
-
     /**
-     * Gets the domainWhitelist value for this CustomApplication.
+     * Gets the value of the domainWhitelist property.
      * 
-     * @return domainWhitelist
+     * @return
+     *     possible object is
+     *     {@link DomainWhitelist }
+     *     
      */
-    public java.lang.String[] getDomainWhitelist() {
+    public DomainWhitelist getDomainWhitelist() {
         return domainWhitelist;
     }
 
-
     /**
-     * Sets the domainWhitelist value for this CustomApplication.
+     * Sets the value of the domainWhitelist property.
      * 
-     * @param domainWhitelist
+     * @param value
+     *     allowed object is
+     *     {@link DomainWhitelist }
+     *     
      */
-    public void setDomainWhitelist(java.lang.String[] domainWhitelist) {
-        this.domainWhitelist = domainWhitelist;
+    public void setDomainWhitelist(DomainWhitelist value) {
+        this.domainWhitelist = value;
     }
 
-
     /**
-     * Gets the enableKeyboardShortcuts value for this CustomApplication.
+     * Gets the value of the enableKeyboardShortcuts property.
      * 
-     * @return enableKeyboardShortcuts
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableKeyboardShortcuts() {
+    public Boolean isEnableKeyboardShortcuts() {
         return enableKeyboardShortcuts;
     }
 
-
     /**
-     * Sets the enableKeyboardShortcuts value for this CustomApplication.
+     * Sets the value of the enableKeyboardShortcuts property.
      * 
-     * @param enableKeyboardShortcuts
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableKeyboardShortcuts(java.lang.Boolean enableKeyboardShortcuts) {
-        this.enableKeyboardShortcuts = enableKeyboardShortcuts;
+    public void setEnableKeyboardShortcuts(Boolean value) {
+        this.enableKeyboardShortcuts = value;
     }
 
-
     /**
-     * Gets the isServiceCloudConsole value for this CustomApplication.
+     * Gets the value of the isServiceCloudConsole property.
      * 
-     * @return isServiceCloudConsole
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsServiceCloudConsole() {
+    public Boolean isIsServiceCloudConsole() {
         return isServiceCloudConsole;
     }
 
-
     /**
-     * Sets the isServiceCloudConsole value for this CustomApplication.
+     * Sets the value of the isServiceCloudConsole property.
      * 
-     * @param isServiceCloudConsole
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsServiceCloudConsole(java.lang.Boolean isServiceCloudConsole) {
-        this.isServiceCloudConsole = isServiceCloudConsole;
+    public void setIsServiceCloudConsole(Boolean value) {
+        this.isServiceCloudConsole = value;
     }
 
-
     /**
-     * Gets the keyboardShortcuts value for this CustomApplication.
+     * Gets the value of the keyboardShortcuts property.
      * 
-     * @return keyboardShortcuts
+     * @return
+     *     possible object is
+     *     {@link KeyboardShortcuts }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.KeyboardShortcuts getKeyboardShortcuts() {
+    public KeyboardShortcuts getKeyboardShortcuts() {
         return keyboardShortcuts;
     }
 
-
     /**
-     * Sets the keyboardShortcuts value for this CustomApplication.
+     * Sets the value of the keyboardShortcuts property.
      * 
-     * @param keyboardShortcuts
+     * @param value
+     *     allowed object is
+     *     {@link KeyboardShortcuts }
+     *     
      */
-    public void setKeyboardShortcuts(com.sforce.soap._2006._04.metadata.KeyboardShortcuts keyboardShortcuts) {
-        this.keyboardShortcuts = keyboardShortcuts;
+    public void setKeyboardShortcuts(KeyboardShortcuts value) {
+        this.keyboardShortcuts = value;
     }
 
-
     /**
-     * Gets the label value for this CustomApplication.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this CustomApplication.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the listPlacement value for this CustomApplication.
+     * Gets the value of the listPlacement property.
      * 
-     * @return listPlacement
+     * @return
+     *     possible object is
+     *     {@link ListPlacement }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ListPlacement getListPlacement() {
+    public ListPlacement getListPlacement() {
         return listPlacement;
     }
 
-
     /**
-     * Sets the listPlacement value for this CustomApplication.
+     * Sets the value of the listPlacement property.
      * 
-     * @param listPlacement
+     * @param value
+     *     allowed object is
+     *     {@link ListPlacement }
+     *     
      */
-    public void setListPlacement(com.sforce.soap._2006._04.metadata.ListPlacement listPlacement) {
-        this.listPlacement = listPlacement;
+    public void setListPlacement(ListPlacement value) {
+        this.listPlacement = value;
     }
 
-
     /**
-     * Gets the listRefreshMethod value for this CustomApplication.
+     * Gets the value of the listRefreshMethod property.
      * 
-     * @return listRefreshMethod
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getListRefreshMethod() {
+    public String getListRefreshMethod() {
         return listRefreshMethod;
     }
 
-
     /**
-     * Sets the listRefreshMethod value for this CustomApplication.
+     * Sets the value of the listRefreshMethod property.
      * 
-     * @param listRefreshMethod
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setListRefreshMethod(java.lang.String listRefreshMethod) {
-        this.listRefreshMethod = listRefreshMethod;
+    public void setListRefreshMethod(String value) {
+        this.listRefreshMethod = value;
     }
 
-
     /**
-     * Gets the liveAgentConfig value for this CustomApplication.
+     * Gets the value of the liveAgentConfig property.
      * 
-     * @return liveAgentConfig
+     * @return
+     *     possible object is
+     *     {@link LiveAgentConfig }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LiveAgentConfig getLiveAgentConfig() {
+    public LiveAgentConfig getLiveAgentConfig() {
         return liveAgentConfig;
     }
 
-
     /**
-     * Sets the liveAgentConfig value for this CustomApplication.
+     * Sets the value of the liveAgentConfig property.
      * 
-     * @param liveAgentConfig
+     * @param value
+     *     allowed object is
+     *     {@link LiveAgentConfig }
+     *     
      */
-    public void setLiveAgentConfig(com.sforce.soap._2006._04.metadata.LiveAgentConfig liveAgentConfig) {
-        this.liveAgentConfig = liveAgentConfig;
+    public void setLiveAgentConfig(LiveAgentConfig value) {
+        this.liveAgentConfig = value;
     }
 
-
     /**
-     * Gets the logo value for this CustomApplication.
+     * Gets the value of the logo property.
      * 
-     * @return logo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLogo() {
+    public String getLogo() {
         return logo;
     }
 
-
     /**
-     * Sets the logo value for this CustomApplication.
+     * Sets the value of the logo property.
      * 
-     * @param logo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLogo(java.lang.String logo) {
-        this.logo = logo;
+    public void setLogo(String value) {
+        this.logo = value;
     }
 
-
     /**
-     * Gets the pushNotifications value for this CustomApplication.
+     * Gets the value of the pushNotifications property.
      * 
-     * @return pushNotifications
+     * @return
+     *     possible object is
+     *     {@link PushNotifications }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.PushNotification[] getPushNotifications() {
+    public PushNotifications getPushNotifications() {
         return pushNotifications;
     }
 
-
     /**
-     * Sets the pushNotifications value for this CustomApplication.
+     * Sets the value of the pushNotifications property.
      * 
-     * @param pushNotifications
+     * @param value
+     *     allowed object is
+     *     {@link PushNotifications }
+     *     
      */
-    public void setPushNotifications(com.sforce.soap._2006._04.metadata.PushNotification[] pushNotifications) {
-        this.pushNotifications = pushNotifications;
+    public void setPushNotifications(PushNotifications value) {
+        this.pushNotifications = value;
     }
 
-
     /**
-     * Gets the saveUserSessions value for this CustomApplication.
+     * Gets the value of the saveUserSessions property.
      * 
-     * @return saveUserSessions
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getSaveUserSessions() {
+    public Boolean isSaveUserSessions() {
         return saveUserSessions;
     }
 
+    /**
+     * Sets the value of the saveUserSessions property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSaveUserSessions(Boolean value) {
+        this.saveUserSessions = value;
+    }
 
     /**
-     * Sets the saveUserSessions value for this CustomApplication.
+     * Gets the value of the tab property.
      * 
-     * @param saveUserSessions
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the tab property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getTab().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public void setSaveUserSessions(java.lang.Boolean saveUserSessions) {
-        this.saveUserSessions = saveUserSessions;
+    public List<String> getTab() {
+        if (tab == null) {
+            tab = new ArrayList<String>();
+        }
+        return this.tab;
     }
-
 
     /**
-     * Gets the tab value for this CustomApplication.
+     * Gets the value of the workspaceMappings property.
      * 
-     * @return tab
+     * @return
+     *     possible object is
+     *     {@link WorkspaceMappings }
+     *     
      */
-    public java.lang.String[] getTab() {
-        return tab;
-    }
-
-
-    /**
-     * Sets the tab value for this CustomApplication.
-     * 
-     * @param tab
-     */
-    public void setTab(java.lang.String[] tab) {
-        this.tab = tab;
-    }
-
-    public java.lang.String getTab(int i) {
-        return this.tab[i];
-    }
-
-    public void setTab(int i, java.lang.String _value) {
-        this.tab[i] = _value;
-    }
-
-
-    /**
-     * Gets the workspaceMappings value for this CustomApplication.
-     * 
-     * @return workspaceMappings
-     */
-    public com.sforce.soap._2006._04.metadata.WorkspaceMapping[] getWorkspaceMappings() {
+    public WorkspaceMappings getWorkspaceMappings() {
         return workspaceMappings;
     }
 
-
     /**
-     * Sets the workspaceMappings value for this CustomApplication.
+     * Sets the value of the workspaceMappings property.
      * 
-     * @param workspaceMappings
+     * @param value
+     *     allowed object is
+     *     {@link WorkspaceMappings }
+     *     
      */
-    public void setWorkspaceMappings(com.sforce.soap._2006._04.metadata.WorkspaceMapping[] workspaceMappings) {
-        this.workspaceMappings = workspaceMappings;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomApplication)) return false;
-        CustomApplication other = (CustomApplication) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.customApplicationComponents==null && other.getCustomApplicationComponents()==null) || 
-             (this.customApplicationComponents!=null &&
-              this.customApplicationComponents.equals(other.getCustomApplicationComponents()))) &&
-            ((this.defaultLandingTab==null && other.getDefaultLandingTab()==null) || 
-             (this.defaultLandingTab!=null &&
-              this.defaultLandingTab.equals(other.getDefaultLandingTab()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.detailPageRefreshMethod==null && other.getDetailPageRefreshMethod()==null) || 
-             (this.detailPageRefreshMethod!=null &&
-              this.detailPageRefreshMethod.equals(other.getDetailPageRefreshMethod()))) &&
-            ((this.domainWhitelist==null && other.getDomainWhitelist()==null) || 
-             (this.domainWhitelist!=null &&
-              java.util.Arrays.equals(this.domainWhitelist, other.getDomainWhitelist()))) &&
-            ((this.enableKeyboardShortcuts==null && other.getEnableKeyboardShortcuts()==null) || 
-             (this.enableKeyboardShortcuts!=null &&
-              this.enableKeyboardShortcuts.equals(other.getEnableKeyboardShortcuts()))) &&
-            ((this.isServiceCloudConsole==null && other.getIsServiceCloudConsole()==null) || 
-             (this.isServiceCloudConsole!=null &&
-              this.isServiceCloudConsole.equals(other.getIsServiceCloudConsole()))) &&
-            ((this.keyboardShortcuts==null && other.getKeyboardShortcuts()==null) || 
-             (this.keyboardShortcuts!=null &&
-              this.keyboardShortcuts.equals(other.getKeyboardShortcuts()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.listPlacement==null && other.getListPlacement()==null) || 
-             (this.listPlacement!=null &&
-              this.listPlacement.equals(other.getListPlacement()))) &&
-            ((this.listRefreshMethod==null && other.getListRefreshMethod()==null) || 
-             (this.listRefreshMethod!=null &&
-              this.listRefreshMethod.equals(other.getListRefreshMethod()))) &&
-            ((this.liveAgentConfig==null && other.getLiveAgentConfig()==null) || 
-             (this.liveAgentConfig!=null &&
-              this.liveAgentConfig.equals(other.getLiveAgentConfig()))) &&
-            ((this.logo==null && other.getLogo()==null) || 
-             (this.logo!=null &&
-              this.logo.equals(other.getLogo()))) &&
-            ((this.pushNotifications==null && other.getPushNotifications()==null) || 
-             (this.pushNotifications!=null &&
-              java.util.Arrays.equals(this.pushNotifications, other.getPushNotifications()))) &&
-            ((this.saveUserSessions==null && other.getSaveUserSessions()==null) || 
-             (this.saveUserSessions!=null &&
-              this.saveUserSessions.equals(other.getSaveUserSessions()))) &&
-            ((this.tab==null && other.getTab()==null) || 
-             (this.tab!=null &&
-              java.util.Arrays.equals(this.tab, other.getTab()))) &&
-            ((this.workspaceMappings==null && other.getWorkspaceMappings()==null) || 
-             (this.workspaceMappings!=null &&
-              java.util.Arrays.equals(this.workspaceMappings, other.getWorkspaceMappings())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCustomApplicationComponents() != null) {
-            _hashCode += getCustomApplicationComponents().hashCode();
-        }
-        if (getDefaultLandingTab() != null) {
-            _hashCode += getDefaultLandingTab().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getDetailPageRefreshMethod() != null) {
-            _hashCode += getDetailPageRefreshMethod().hashCode();
-        }
-        if (getDomainWhitelist() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDomainWhitelist());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDomainWhitelist(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getEnableKeyboardShortcuts() != null) {
-            _hashCode += getEnableKeyboardShortcuts().hashCode();
-        }
-        if (getIsServiceCloudConsole() != null) {
-            _hashCode += getIsServiceCloudConsole().hashCode();
-        }
-        if (getKeyboardShortcuts() != null) {
-            _hashCode += getKeyboardShortcuts().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getListPlacement() != null) {
-            _hashCode += getListPlacement().hashCode();
-        }
-        if (getListRefreshMethod() != null) {
-            _hashCode += getListRefreshMethod().hashCode();
-        }
-        if (getLiveAgentConfig() != null) {
-            _hashCode += getLiveAgentConfig().hashCode();
-        }
-        if (getLogo() != null) {
-            _hashCode += getLogo().hashCode();
-        }
-        if (getPushNotifications() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPushNotifications());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPushNotifications(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSaveUserSessions() != null) {
-            _hashCode += getSaveUserSessions().hashCode();
-        }
-        if (getTab() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTab());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTab(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getWorkspaceMappings() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getWorkspaceMappings());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getWorkspaceMappings(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomApplication.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomApplication"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customApplicationComponents");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customApplicationComponents"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CustomApplicationComponents"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultLandingTab");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultLandingTab"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("detailPageRefreshMethod");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "detailPageRefreshMethod"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("domainWhitelist");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "domainWhitelist"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "domain"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableKeyboardShortcuts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableKeyboardShortcuts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isServiceCloudConsole");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isServiceCloudConsole"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("keyboardShortcuts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "keyboardShortcuts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KeyboardShortcuts"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("listPlacement");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "listPlacement"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ListPlacement"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("listRefreshMethod");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "listRefreshMethod"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("liveAgentConfig");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "liveAgentConfig"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveAgentConfig"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("logo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "logo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("pushNotifications");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "pushNotifications"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "PushNotification"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "pushNotification"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("saveUserSessions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "saveUserSessions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tab");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "tab"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("workspaceMappings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "workspaceMappings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WorkspaceMapping"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "mapping"));
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWorkspaceMappings(WorkspaceMappings value) {
+        this.workspaceMappings = value;
     }
 
 }

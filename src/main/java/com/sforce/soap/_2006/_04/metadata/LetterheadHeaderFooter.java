@@ -1,262 +1,166 @@
-/**
- * LetterheadHeaderFooter.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class LetterheadHeaderFooter  implements java.io.Serializable {
-    private java.lang.String backgroundColor;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private int height;
 
-    private com.sforce.soap._2006._04.metadata.LetterheadHorizontalAlignment horizontalAlignment;
+/**
+ * <p>Java class for LetterheadHeaderFooter complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="LetterheadHeaderFooter">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="backgroundColor" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="height" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="horizontalAlignment" type="{http://soap.sforce.com/2006/04/metadata}LetterheadHorizontalAlignment" minOccurs="0"/>
+ *         &lt;element name="logo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="verticalAlignment" type="{http://soap.sforce.com/2006/04/metadata}LetterheadVerticalAlignment" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "LetterheadHeaderFooter", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "backgroundColor",
+    "height",
+    "horizontalAlignment",
+    "logo",
+    "verticalAlignment"
+})
+public class LetterheadHeaderFooter {
 
-    private java.lang.String logo;
-
-    private com.sforce.soap._2006._04.metadata.LetterheadVerticalAlignment verticalAlignment;
-
-    public LetterheadHeaderFooter() {
-    }
-
-    public LetterheadHeaderFooter(
-           java.lang.String backgroundColor,
-           int height,
-           com.sforce.soap._2006._04.metadata.LetterheadHorizontalAlignment horizontalAlignment,
-           java.lang.String logo,
-           com.sforce.soap._2006._04.metadata.LetterheadVerticalAlignment verticalAlignment) {
-           this.backgroundColor = backgroundColor;
-           this.height = height;
-           this.horizontalAlignment = horizontalAlignment;
-           this.logo = logo;
-           this.verticalAlignment = verticalAlignment;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String backgroundColor;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected int height;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LetterheadHorizontalAlignment horizontalAlignment;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String logo;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LetterheadVerticalAlignment verticalAlignment;
 
     /**
-     * Gets the backgroundColor value for this LetterheadHeaderFooter.
+     * Gets the value of the backgroundColor property.
      * 
-     * @return backgroundColor
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBackgroundColor() {
+    public String getBackgroundColor() {
         return backgroundColor;
     }
 
-
     /**
-     * Sets the backgroundColor value for this LetterheadHeaderFooter.
+     * Sets the value of the backgroundColor property.
      * 
-     * @param backgroundColor
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBackgroundColor(java.lang.String backgroundColor) {
-        this.backgroundColor = backgroundColor;
+    public void setBackgroundColor(String value) {
+        this.backgroundColor = value;
     }
 
-
     /**
-     * Gets the height value for this LetterheadHeaderFooter.
+     * Gets the value of the height property.
      * 
-     * @return height
      */
     public int getHeight() {
         return height;
     }
 
-
     /**
-     * Sets the height value for this LetterheadHeaderFooter.
+     * Sets the value of the height property.
      * 
-     * @param height
      */
-    public void setHeight(int height) {
-        this.height = height;
+    public void setHeight(int value) {
+        this.height = value;
     }
 
-
     /**
-     * Gets the horizontalAlignment value for this LetterheadHeaderFooter.
+     * Gets the value of the horizontalAlignment property.
      * 
-     * @return horizontalAlignment
+     * @return
+     *     possible object is
+     *     {@link LetterheadHorizontalAlignment }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LetterheadHorizontalAlignment getHorizontalAlignment() {
+    public LetterheadHorizontalAlignment getHorizontalAlignment() {
         return horizontalAlignment;
     }
 
-
     /**
-     * Sets the horizontalAlignment value for this LetterheadHeaderFooter.
+     * Sets the value of the horizontalAlignment property.
      * 
-     * @param horizontalAlignment
+     * @param value
+     *     allowed object is
+     *     {@link LetterheadHorizontalAlignment }
+     *     
      */
-    public void setHorizontalAlignment(com.sforce.soap._2006._04.metadata.LetterheadHorizontalAlignment horizontalAlignment) {
-        this.horizontalAlignment = horizontalAlignment;
+    public void setHorizontalAlignment(LetterheadHorizontalAlignment value) {
+        this.horizontalAlignment = value;
     }
 
-
     /**
-     * Gets the logo value for this LetterheadHeaderFooter.
+     * Gets the value of the logo property.
      * 
-     * @return logo
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLogo() {
+    public String getLogo() {
         return logo;
     }
 
-
     /**
-     * Sets the logo value for this LetterheadHeaderFooter.
+     * Sets the value of the logo property.
      * 
-     * @param logo
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLogo(java.lang.String logo) {
-        this.logo = logo;
+    public void setLogo(String value) {
+        this.logo = value;
     }
 
-
     /**
-     * Gets the verticalAlignment value for this LetterheadHeaderFooter.
+     * Gets the value of the verticalAlignment property.
      * 
-     * @return verticalAlignment
+     * @return
+     *     possible object is
+     *     {@link LetterheadVerticalAlignment }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LetterheadVerticalAlignment getVerticalAlignment() {
+    public LetterheadVerticalAlignment getVerticalAlignment() {
         return verticalAlignment;
     }
 
-
     /**
-     * Sets the verticalAlignment value for this LetterheadHeaderFooter.
+     * Sets the value of the verticalAlignment property.
      * 
-     * @param verticalAlignment
+     * @param value
+     *     allowed object is
+     *     {@link LetterheadVerticalAlignment }
+     *     
      */
-    public void setVerticalAlignment(com.sforce.soap._2006._04.metadata.LetterheadVerticalAlignment verticalAlignment) {
-        this.verticalAlignment = verticalAlignment;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof LetterheadHeaderFooter)) return false;
-        LetterheadHeaderFooter other = (LetterheadHeaderFooter) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.backgroundColor==null && other.getBackgroundColor()==null) || 
-             (this.backgroundColor!=null &&
-              this.backgroundColor.equals(other.getBackgroundColor()))) &&
-            this.height == other.getHeight() &&
-            ((this.horizontalAlignment==null && other.getHorizontalAlignment()==null) || 
-             (this.horizontalAlignment!=null &&
-              this.horizontalAlignment.equals(other.getHorizontalAlignment()))) &&
-            ((this.logo==null && other.getLogo()==null) || 
-             (this.logo!=null &&
-              this.logo.equals(other.getLogo()))) &&
-            ((this.verticalAlignment==null && other.getVerticalAlignment()==null) || 
-             (this.verticalAlignment!=null &&
-              this.verticalAlignment.equals(other.getVerticalAlignment())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getBackgroundColor() != null) {
-            _hashCode += getBackgroundColor().hashCode();
-        }
-        _hashCode += getHeight();
-        if (getHorizontalAlignment() != null) {
-            _hashCode += getHorizontalAlignment().hashCode();
-        }
-        if (getLogo() != null) {
-            _hashCode += getLogo().hashCode();
-        }
-        if (getVerticalAlignment() != null) {
-            _hashCode += getVerticalAlignment().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(LetterheadHeaderFooter.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LetterheadHeaderFooter"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("backgroundColor");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "backgroundColor"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("height");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "height"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("horizontalAlignment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "horizontalAlignment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LetterheadHorizontalAlignment"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("logo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "logo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("verticalAlignment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "verticalAlignment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LetterheadVerticalAlignment"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setVerticalAlignment(LetterheadVerticalAlignment value) {
+        this.verticalAlignment = value;
     }
 
 }

@@ -1,527 +1,370 @@
-/**
- * LayoutItem.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class LayoutItem  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.UiBehavior behavior;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String component;
 
-    private java.lang.String customLink;
+/**
+ * <p>Java class for LayoutItem complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="LayoutItem">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="behavior" type="{http://soap.sforce.com/2006/04/metadata}UiBehavior" minOccurs="0"/>
+ *         &lt;element name="component" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="customLink" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="emptySpace" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="field" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="height" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="page" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="reportChartComponent" type="{http://soap.sforce.com/2006/04/metadata}ReportChartComponentLayoutItem" minOccurs="0"/>
+ *         &lt;element name="scontrol" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="showLabel" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showScrollbars" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="width" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "LayoutItem", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "behavior",
+    "component",
+    "customLink",
+    "emptySpace",
+    "field",
+    "height",
+    "page",
+    "reportChartComponent",
+    "scontrol",
+    "showLabel",
+    "showScrollbars",
+    "width"
+})
+public class LayoutItem {
 
-    private java.lang.Boolean emptySpace;
-
-    private java.lang.String field;
-
-    private java.lang.Integer height;
-
-    private java.lang.String page;
-
-    private com.sforce.soap._2006._04.metadata.ReportChartComponentLayoutItem reportChartComponent;
-
-    private java.lang.String scontrol;
-
-    private java.lang.Boolean showLabel;
-
-    private java.lang.Boolean showScrollbars;
-
-    private java.lang.String width;
-
-    public LayoutItem() {
-    }
-
-    public LayoutItem(
-           com.sforce.soap._2006._04.metadata.UiBehavior behavior,
-           java.lang.String component,
-           java.lang.String customLink,
-           java.lang.Boolean emptySpace,
-           java.lang.String field,
-           java.lang.Integer height,
-           java.lang.String page,
-           com.sforce.soap._2006._04.metadata.ReportChartComponentLayoutItem reportChartComponent,
-           java.lang.String scontrol,
-           java.lang.Boolean showLabel,
-           java.lang.Boolean showScrollbars,
-           java.lang.String width) {
-           this.behavior = behavior;
-           this.component = component;
-           this.customLink = customLink;
-           this.emptySpace = emptySpace;
-           this.field = field;
-           this.height = height;
-           this.page = page;
-           this.reportChartComponent = reportChartComponent;
-           this.scontrol = scontrol;
-           this.showLabel = showLabel;
-           this.showScrollbars = showScrollbars;
-           this.width = width;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected UiBehavior behavior;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String component;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customLink;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean emptySpace;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String field;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer height;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String page;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportChartComponentLayoutItem reportChartComponent;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String scontrol;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showScrollbars;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String width;
 
     /**
-     * Gets the behavior value for this LayoutItem.
+     * Gets the value of the behavior property.
      * 
-     * @return behavior
+     * @return
+     *     possible object is
+     *     {@link UiBehavior }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.UiBehavior getBehavior() {
+    public UiBehavior getBehavior() {
         return behavior;
     }
 
-
     /**
-     * Sets the behavior value for this LayoutItem.
+     * Sets the value of the behavior property.
      * 
-     * @param behavior
+     * @param value
+     *     allowed object is
+     *     {@link UiBehavior }
+     *     
      */
-    public void setBehavior(com.sforce.soap._2006._04.metadata.UiBehavior behavior) {
-        this.behavior = behavior;
+    public void setBehavior(UiBehavior value) {
+        this.behavior = value;
     }
 
-
     /**
-     * Gets the component value for this LayoutItem.
+     * Gets the value of the component property.
      * 
-     * @return component
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getComponent() {
+    public String getComponent() {
         return component;
     }
 
-
     /**
-     * Sets the component value for this LayoutItem.
+     * Sets the value of the component property.
      * 
-     * @param component
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setComponent(java.lang.String component) {
-        this.component = component;
+    public void setComponent(String value) {
+        this.component = value;
     }
 
-
     /**
-     * Gets the customLink value for this LayoutItem.
+     * Gets the value of the customLink property.
      * 
-     * @return customLink
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomLink() {
+    public String getCustomLink() {
         return customLink;
     }
 
-
     /**
-     * Sets the customLink value for this LayoutItem.
+     * Sets the value of the customLink property.
      * 
-     * @param customLink
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomLink(java.lang.String customLink) {
-        this.customLink = customLink;
+    public void setCustomLink(String value) {
+        this.customLink = value;
     }
 
-
     /**
-     * Gets the emptySpace value for this LayoutItem.
+     * Gets the value of the emptySpace property.
      * 
-     * @return emptySpace
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEmptySpace() {
+    public Boolean isEmptySpace() {
         return emptySpace;
     }
 
-
     /**
-     * Sets the emptySpace value for this LayoutItem.
+     * Sets the value of the emptySpace property.
      * 
-     * @param emptySpace
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEmptySpace(java.lang.Boolean emptySpace) {
-        this.emptySpace = emptySpace;
+    public void setEmptySpace(Boolean value) {
+        this.emptySpace = value;
     }
 
-
     /**
-     * Gets the field value for this LayoutItem.
+     * Gets the value of the field property.
      * 
-     * @return field
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getField() {
+    public String getField() {
         return field;
     }
 
-
     /**
-     * Sets the field value for this LayoutItem.
+     * Sets the value of the field property.
      * 
-     * @param field
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setField(java.lang.String field) {
-        this.field = field;
+    public void setField(String value) {
+        this.field = value;
     }
 
-
     /**
-     * Gets the height value for this LayoutItem.
+     * Gets the value of the height property.
      * 
-     * @return height
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
-
     /**
-     * Sets the height value for this LayoutItem.
+     * Sets the value of the height property.
      * 
-     * @param height
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setHeight(java.lang.Integer height) {
-        this.height = height;
+    public void setHeight(Integer value) {
+        this.height = value;
     }
 
-
     /**
-     * Gets the page value for this LayoutItem.
+     * Gets the value of the page property.
      * 
-     * @return page
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPage() {
+    public String getPage() {
         return page;
     }
 
-
     /**
-     * Sets the page value for this LayoutItem.
+     * Sets the value of the page property.
      * 
-     * @param page
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPage(java.lang.String page) {
-        this.page = page;
+    public void setPage(String value) {
+        this.page = value;
     }
 
-
     /**
-     * Gets the reportChartComponent value for this LayoutItem.
+     * Gets the value of the reportChartComponent property.
      * 
-     * @return reportChartComponent
+     * @return
+     *     possible object is
+     *     {@link ReportChartComponentLayoutItem }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportChartComponentLayoutItem getReportChartComponent() {
+    public ReportChartComponentLayoutItem getReportChartComponent() {
         return reportChartComponent;
     }
 
-
     /**
-     * Sets the reportChartComponent value for this LayoutItem.
+     * Sets the value of the reportChartComponent property.
      * 
-     * @param reportChartComponent
+     * @param value
+     *     allowed object is
+     *     {@link ReportChartComponentLayoutItem }
+     *     
      */
-    public void setReportChartComponent(com.sforce.soap._2006._04.metadata.ReportChartComponentLayoutItem reportChartComponent) {
-        this.reportChartComponent = reportChartComponent;
+    public void setReportChartComponent(ReportChartComponentLayoutItem value) {
+        this.reportChartComponent = value;
     }
 
-
     /**
-     * Gets the scontrol value for this LayoutItem.
+     * Gets the value of the scontrol property.
      * 
-     * @return scontrol
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getScontrol() {
+    public String getScontrol() {
         return scontrol;
     }
 
-
     /**
-     * Sets the scontrol value for this LayoutItem.
+     * Sets the value of the scontrol property.
      * 
-     * @param scontrol
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setScontrol(java.lang.String scontrol) {
-        this.scontrol = scontrol;
+    public void setScontrol(String value) {
+        this.scontrol = value;
     }
 
-
     /**
-     * Gets the showLabel value for this LayoutItem.
+     * Gets the value of the showLabel property.
      * 
-     * @return showLabel
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowLabel() {
+    public Boolean isShowLabel() {
         return showLabel;
     }
 
-
     /**
-     * Sets the showLabel value for this LayoutItem.
+     * Sets the value of the showLabel property.
      * 
-     * @param showLabel
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowLabel(java.lang.Boolean showLabel) {
-        this.showLabel = showLabel;
+    public void setShowLabel(Boolean value) {
+        this.showLabel = value;
     }
 
-
     /**
-     * Gets the showScrollbars value for this LayoutItem.
+     * Gets the value of the showScrollbars property.
      * 
-     * @return showScrollbars
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowScrollbars() {
+    public Boolean isShowScrollbars() {
         return showScrollbars;
     }
 
-
     /**
-     * Sets the showScrollbars value for this LayoutItem.
+     * Sets the value of the showScrollbars property.
      * 
-     * @param showScrollbars
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowScrollbars(java.lang.Boolean showScrollbars) {
-        this.showScrollbars = showScrollbars;
+    public void setShowScrollbars(Boolean value) {
+        this.showScrollbars = value;
     }
 
-
     /**
-     * Gets the width value for this LayoutItem.
+     * Gets the value of the width property.
      * 
-     * @return width
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getWidth() {
+    public String getWidth() {
         return width;
     }
 
-
     /**
-     * Sets the width value for this LayoutItem.
+     * Sets the value of the width property.
      * 
-     * @param width
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setWidth(java.lang.String width) {
-        this.width = width;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof LayoutItem)) return false;
-        LayoutItem other = (LayoutItem) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.behavior==null && other.getBehavior()==null) || 
-             (this.behavior!=null &&
-              this.behavior.equals(other.getBehavior()))) &&
-            ((this.component==null && other.getComponent()==null) || 
-             (this.component!=null &&
-              this.component.equals(other.getComponent()))) &&
-            ((this.customLink==null && other.getCustomLink()==null) || 
-             (this.customLink!=null &&
-              this.customLink.equals(other.getCustomLink()))) &&
-            ((this.emptySpace==null && other.getEmptySpace()==null) || 
-             (this.emptySpace!=null &&
-              this.emptySpace.equals(other.getEmptySpace()))) &&
-            ((this.field==null && other.getField()==null) || 
-             (this.field!=null &&
-              this.field.equals(other.getField()))) &&
-            ((this.height==null && other.getHeight()==null) || 
-             (this.height!=null &&
-              this.height.equals(other.getHeight()))) &&
-            ((this.page==null && other.getPage()==null) || 
-             (this.page!=null &&
-              this.page.equals(other.getPage()))) &&
-            ((this.reportChartComponent==null && other.getReportChartComponent()==null) || 
-             (this.reportChartComponent!=null &&
-              this.reportChartComponent.equals(other.getReportChartComponent()))) &&
-            ((this.scontrol==null && other.getScontrol()==null) || 
-             (this.scontrol!=null &&
-              this.scontrol.equals(other.getScontrol()))) &&
-            ((this.showLabel==null && other.getShowLabel()==null) || 
-             (this.showLabel!=null &&
-              this.showLabel.equals(other.getShowLabel()))) &&
-            ((this.showScrollbars==null && other.getShowScrollbars()==null) || 
-             (this.showScrollbars!=null &&
-              this.showScrollbars.equals(other.getShowScrollbars()))) &&
-            ((this.width==null && other.getWidth()==null) || 
-             (this.width!=null &&
-              this.width.equals(other.getWidth())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getBehavior() != null) {
-            _hashCode += getBehavior().hashCode();
-        }
-        if (getComponent() != null) {
-            _hashCode += getComponent().hashCode();
-        }
-        if (getCustomLink() != null) {
-            _hashCode += getCustomLink().hashCode();
-        }
-        if (getEmptySpace() != null) {
-            _hashCode += getEmptySpace().hashCode();
-        }
-        if (getField() != null) {
-            _hashCode += getField().hashCode();
-        }
-        if (getHeight() != null) {
-            _hashCode += getHeight().hashCode();
-        }
-        if (getPage() != null) {
-            _hashCode += getPage().hashCode();
-        }
-        if (getReportChartComponent() != null) {
-            _hashCode += getReportChartComponent().hashCode();
-        }
-        if (getScontrol() != null) {
-            _hashCode += getScontrol().hashCode();
-        }
-        if (getShowLabel() != null) {
-            _hashCode += getShowLabel().hashCode();
-        }
-        if (getShowScrollbars() != null) {
-            _hashCode += getShowScrollbars().hashCode();
-        }
-        if (getWidth() != null) {
-            _hashCode += getWidth().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(LayoutItem.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LayoutItem"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("behavior");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "behavior"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "UiBehavior"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("component");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "component"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customLink");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customLink"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emptySpace");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emptySpace"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("field");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "field"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("height");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "height"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("page");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "page"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("reportChartComponent");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "reportChartComponent"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportChartComponentLayoutItem"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scontrol");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scontrol"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showScrollbars");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showScrollbars"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("width");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "width"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWidth(String value) {
+        this.width = value;
     }
 
 }

@@ -1,657 +1,463 @@
-/**
- * QuickAction.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class QuickAction  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String canvas;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String description;
 
-    private com.sforce.soap._2006._04.metadata.FieldOverride[] fieldOverrides;
+/**
+ * <p>Java class for QuickAction complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="QuickAction">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="canvas" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="fieldOverrides" type="{http://soap.sforce.com/2006/04/metadata}FieldOverride" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="height" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="icon" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="isProtected" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="page" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="quickActionLayout" type="{http://soap.sforce.com/2006/04/metadata}QuickActionLayout" minOccurs="0"/>
+ *         &lt;element name="standardLabel" type="{http://soap.sforce.com/2006/04/metadata}QuickActionLabel" minOccurs="0"/>
+ *         &lt;element name="targetObject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="targetParentField" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="targetRecordType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="type" type="{http://soap.sforce.com/2006/04/metadata}QuickActionType"/>
+ *         &lt;element name="width" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "QuickAction", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "canvas",
+    "description",
+    "fieldOverrides",
+    "height",
+    "icon",
+    "isProtected",
+    "label",
+    "page",
+    "quickActionLayout",
+    "standardLabel",
+    "targetObject",
+    "targetParentField",
+    "targetRecordType",
+    "type",
+    "width"
+})
+public class QuickAction
+    extends Metadata
+{
 
-    private java.lang.Integer height;
-
-    private java.lang.String icon;
-
-    private java.lang.Boolean isProtected;
-
-    private java.lang.String label;
-
-    private java.lang.String page;
-
-    private com.sforce.soap._2006._04.metadata.QuickActionLayout quickActionLayout;
-
-    private com.sforce.soap._2006._04.metadata.QuickActionLabel standardLabel;
-
-    private java.lang.String targetObject;
-
-    private java.lang.String targetParentField;
-
-    private java.lang.String targetRecordType;
-
-    private com.sforce.soap._2006._04.metadata.QuickActionType type;
-
-    private java.lang.Integer width;
-
-    public QuickAction() {
-    }
-
-    public QuickAction(
-           java.lang.String fullName,
-           java.lang.String canvas,
-           java.lang.String description,
-           com.sforce.soap._2006._04.metadata.FieldOverride[] fieldOverrides,
-           java.lang.Integer height,
-           java.lang.String icon,
-           java.lang.Boolean isProtected,
-           java.lang.String label,
-           java.lang.String page,
-           com.sforce.soap._2006._04.metadata.QuickActionLayout quickActionLayout,
-           com.sforce.soap._2006._04.metadata.QuickActionLabel standardLabel,
-           java.lang.String targetObject,
-           java.lang.String targetParentField,
-           java.lang.String targetRecordType,
-           com.sforce.soap._2006._04.metadata.QuickActionType type,
-           java.lang.Integer width) {
-        super(
-            fullName);
-        this.canvas = canvas;
-        this.description = description;
-        this.fieldOverrides = fieldOverrides;
-        this.height = height;
-        this.icon = icon;
-        this.isProtected = isProtected;
-        this.label = label;
-        this.page = page;
-        this.quickActionLayout = quickActionLayout;
-        this.standardLabel = standardLabel;
-        this.targetObject = targetObject;
-        this.targetParentField = targetParentField;
-        this.targetRecordType = targetRecordType;
-        this.type = type;
-        this.width = width;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String canvas;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FieldOverride> fieldOverrides;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer height;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String icon;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isProtected;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String page;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected QuickActionLayout quickActionLayout;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected QuickActionLabel standardLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String targetObject;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String targetParentField;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String targetRecordType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected QuickActionType type;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer width;
 
     /**
-     * Gets the canvas value for this QuickAction.
+     * Gets the value of the canvas property.
      * 
-     * @return canvas
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCanvas() {
+    public String getCanvas() {
         return canvas;
     }
 
-
     /**
-     * Sets the canvas value for this QuickAction.
+     * Sets the value of the canvas property.
      * 
-     * @param canvas
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCanvas(java.lang.String canvas) {
-        this.canvas = canvas;
+    public void setCanvas(String value) {
+        this.canvas = value;
     }
 
-
     /**
-     * Gets the description value for this QuickAction.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
+    /**
+     * Sets the value of the description property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescription(String value) {
+        this.description = value;
+    }
 
     /**
-     * Sets the description value for this QuickAction.
+     * Gets the value of the fieldOverrides property.
      * 
-     * @param description
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the fieldOverrides property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFieldOverrides().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FieldOverride }
+     * 
+     * 
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public List<FieldOverride> getFieldOverrides() {
+        if (fieldOverrides == null) {
+            fieldOverrides = new ArrayList<FieldOverride>();
+        }
+        return this.fieldOverrides;
     }
-
 
     /**
-     * Gets the fieldOverrides value for this QuickAction.
+     * Gets the value of the height property.
      * 
-     * @return fieldOverrides
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FieldOverride[] getFieldOverrides() {
-        return fieldOverrides;
-    }
-
-
-    /**
-     * Sets the fieldOverrides value for this QuickAction.
-     * 
-     * @param fieldOverrides
-     */
-    public void setFieldOverrides(com.sforce.soap._2006._04.metadata.FieldOverride[] fieldOverrides) {
-        this.fieldOverrides = fieldOverrides;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FieldOverride getFieldOverrides(int i) {
-        return this.fieldOverrides[i];
-    }
-
-    public void setFieldOverrides(int i, com.sforce.soap._2006._04.metadata.FieldOverride _value) {
-        this.fieldOverrides[i] = _value;
-    }
-
-
-    /**
-     * Gets the height value for this QuickAction.
-     * 
-     * @return height
-     */
-    public java.lang.Integer getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
-
     /**
-     * Sets the height value for this QuickAction.
+     * Sets the value of the height property.
      * 
-     * @param height
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setHeight(java.lang.Integer height) {
-        this.height = height;
+    public void setHeight(Integer value) {
+        this.height = value;
     }
 
-
     /**
-     * Gets the icon value for this QuickAction.
+     * Gets the value of the icon property.
      * 
-     * @return icon
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIcon() {
+    public String getIcon() {
         return icon;
     }
 
-
     /**
-     * Sets the icon value for this QuickAction.
+     * Sets the value of the icon property.
      * 
-     * @param icon
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIcon(java.lang.String icon) {
-        this.icon = icon;
+    public void setIcon(String value) {
+        this.icon = value;
     }
 
-
     /**
-     * Gets the isProtected value for this QuickAction.
+     * Gets the value of the isProtected property.
      * 
-     * @return isProtected
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsProtected() {
+    public Boolean isIsProtected() {
         return isProtected;
     }
 
-
     /**
-     * Sets the isProtected value for this QuickAction.
+     * Sets the value of the isProtected property.
      * 
-     * @param isProtected
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsProtected(java.lang.Boolean isProtected) {
-        this.isProtected = isProtected;
+    public void setIsProtected(Boolean value) {
+        this.isProtected = value;
     }
 
-
     /**
-     * Gets the label value for this QuickAction.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this QuickAction.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the page value for this QuickAction.
+     * Gets the value of the page property.
      * 
-     * @return page
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPage() {
+    public String getPage() {
         return page;
     }
 
-
     /**
-     * Sets the page value for this QuickAction.
+     * Sets the value of the page property.
      * 
-     * @param page
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPage(java.lang.String page) {
-        this.page = page;
+    public void setPage(String value) {
+        this.page = value;
     }
 
-
     /**
-     * Gets the quickActionLayout value for this QuickAction.
+     * Gets the value of the quickActionLayout property.
      * 
-     * @return quickActionLayout
+     * @return
+     *     possible object is
+     *     {@link QuickActionLayout }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.QuickActionLayout getQuickActionLayout() {
+    public QuickActionLayout getQuickActionLayout() {
         return quickActionLayout;
     }
 
-
     /**
-     * Sets the quickActionLayout value for this QuickAction.
+     * Sets the value of the quickActionLayout property.
      * 
-     * @param quickActionLayout
+     * @param value
+     *     allowed object is
+     *     {@link QuickActionLayout }
+     *     
      */
-    public void setQuickActionLayout(com.sforce.soap._2006._04.metadata.QuickActionLayout quickActionLayout) {
-        this.quickActionLayout = quickActionLayout;
+    public void setQuickActionLayout(QuickActionLayout value) {
+        this.quickActionLayout = value;
     }
 
-
     /**
-     * Gets the standardLabel value for this QuickAction.
+     * Gets the value of the standardLabel property.
      * 
-     * @return standardLabel
+     * @return
+     *     possible object is
+     *     {@link QuickActionLabel }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.QuickActionLabel getStandardLabel() {
+    public QuickActionLabel getStandardLabel() {
         return standardLabel;
     }
 
-
     /**
-     * Sets the standardLabel value for this QuickAction.
+     * Sets the value of the standardLabel property.
      * 
-     * @param standardLabel
+     * @param value
+     *     allowed object is
+     *     {@link QuickActionLabel }
+     *     
      */
-    public void setStandardLabel(com.sforce.soap._2006._04.metadata.QuickActionLabel standardLabel) {
-        this.standardLabel = standardLabel;
+    public void setStandardLabel(QuickActionLabel value) {
+        this.standardLabel = value;
     }
 
-
     /**
-     * Gets the targetObject value for this QuickAction.
+     * Gets the value of the targetObject property.
      * 
-     * @return targetObject
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTargetObject() {
+    public String getTargetObject() {
         return targetObject;
     }
 
-
     /**
-     * Sets the targetObject value for this QuickAction.
+     * Sets the value of the targetObject property.
      * 
-     * @param targetObject
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTargetObject(java.lang.String targetObject) {
-        this.targetObject = targetObject;
+    public void setTargetObject(String value) {
+        this.targetObject = value;
     }
 
-
     /**
-     * Gets the targetParentField value for this QuickAction.
+     * Gets the value of the targetParentField property.
      * 
-     * @return targetParentField
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTargetParentField() {
+    public String getTargetParentField() {
         return targetParentField;
     }
 
-
     /**
-     * Sets the targetParentField value for this QuickAction.
+     * Sets the value of the targetParentField property.
      * 
-     * @param targetParentField
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTargetParentField(java.lang.String targetParentField) {
-        this.targetParentField = targetParentField;
+    public void setTargetParentField(String value) {
+        this.targetParentField = value;
     }
 
-
     /**
-     * Gets the targetRecordType value for this QuickAction.
+     * Gets the value of the targetRecordType property.
      * 
-     * @return targetRecordType
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTargetRecordType() {
+    public String getTargetRecordType() {
         return targetRecordType;
     }
 
-
     /**
-     * Sets the targetRecordType value for this QuickAction.
+     * Sets the value of the targetRecordType property.
      * 
-     * @param targetRecordType
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTargetRecordType(java.lang.String targetRecordType) {
-        this.targetRecordType = targetRecordType;
+    public void setTargetRecordType(String value) {
+        this.targetRecordType = value;
     }
 
-
     /**
-     * Gets the type value for this QuickAction.
+     * Gets the value of the type property.
      * 
-     * @return type
+     * @return
+     *     possible object is
+     *     {@link QuickActionType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.QuickActionType getType() {
+    public QuickActionType getType() {
         return type;
     }
 
-
     /**
-     * Sets the type value for this QuickAction.
+     * Sets the value of the type property.
      * 
-     * @param type
+     * @param value
+     *     allowed object is
+     *     {@link QuickActionType }
+     *     
      */
-    public void setType(com.sforce.soap._2006._04.metadata.QuickActionType type) {
-        this.type = type;
+    public void setType(QuickActionType value) {
+        this.type = value;
     }
 
-
     /**
-     * Gets the width value for this QuickAction.
+     * Gets the value of the width property.
      * 
-     * @return width
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getWidth() {
+    public Integer getWidth() {
         return width;
     }
 
-
     /**
-     * Sets the width value for this QuickAction.
+     * Sets the value of the width property.
      * 
-     * @param width
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setWidth(java.lang.Integer width) {
-        this.width = width;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof QuickAction)) return false;
-        QuickAction other = (QuickAction) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.canvas==null && other.getCanvas()==null) || 
-             (this.canvas!=null &&
-              this.canvas.equals(other.getCanvas()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.fieldOverrides==null && other.getFieldOverrides()==null) || 
-             (this.fieldOverrides!=null &&
-              java.util.Arrays.equals(this.fieldOverrides, other.getFieldOverrides()))) &&
-            ((this.height==null && other.getHeight()==null) || 
-             (this.height!=null &&
-              this.height.equals(other.getHeight()))) &&
-            ((this.icon==null && other.getIcon()==null) || 
-             (this.icon!=null &&
-              this.icon.equals(other.getIcon()))) &&
-            ((this.isProtected==null && other.getIsProtected()==null) || 
-             (this.isProtected!=null &&
-              this.isProtected.equals(other.getIsProtected()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.page==null && other.getPage()==null) || 
-             (this.page!=null &&
-              this.page.equals(other.getPage()))) &&
-            ((this.quickActionLayout==null && other.getQuickActionLayout()==null) || 
-             (this.quickActionLayout!=null &&
-              this.quickActionLayout.equals(other.getQuickActionLayout()))) &&
-            ((this.standardLabel==null && other.getStandardLabel()==null) || 
-             (this.standardLabel!=null &&
-              this.standardLabel.equals(other.getStandardLabel()))) &&
-            ((this.targetObject==null && other.getTargetObject()==null) || 
-             (this.targetObject!=null &&
-              this.targetObject.equals(other.getTargetObject()))) &&
-            ((this.targetParentField==null && other.getTargetParentField()==null) || 
-             (this.targetParentField!=null &&
-              this.targetParentField.equals(other.getTargetParentField()))) &&
-            ((this.targetRecordType==null && other.getTargetRecordType()==null) || 
-             (this.targetRecordType!=null &&
-              this.targetRecordType.equals(other.getTargetRecordType()))) &&
-            ((this.type==null && other.getType()==null) || 
-             (this.type!=null &&
-              this.type.equals(other.getType()))) &&
-            ((this.width==null && other.getWidth()==null) || 
-             (this.width!=null &&
-              this.width.equals(other.getWidth())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCanvas() != null) {
-            _hashCode += getCanvas().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getFieldOverrides() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFieldOverrides());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFieldOverrides(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getHeight() != null) {
-            _hashCode += getHeight().hashCode();
-        }
-        if (getIcon() != null) {
-            _hashCode += getIcon().hashCode();
-        }
-        if (getIsProtected() != null) {
-            _hashCode += getIsProtected().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getPage() != null) {
-            _hashCode += getPage().hashCode();
-        }
-        if (getQuickActionLayout() != null) {
-            _hashCode += getQuickActionLayout().hashCode();
-        }
-        if (getStandardLabel() != null) {
-            _hashCode += getStandardLabel().hashCode();
-        }
-        if (getTargetObject() != null) {
-            _hashCode += getTargetObject().hashCode();
-        }
-        if (getTargetParentField() != null) {
-            _hashCode += getTargetParentField().hashCode();
-        }
-        if (getTargetRecordType() != null) {
-            _hashCode += getTargetRecordType().hashCode();
-        }
-        if (getType() != null) {
-            _hashCode += getType().hashCode();
-        }
-        if (getWidth() != null) {
-            _hashCode += getWidth().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(QuickAction.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuickAction"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("canvas");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "canvas"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("fieldOverrides");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "fieldOverrides"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FieldOverride"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("height");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "height"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("icon");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "icon"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isProtected");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isProtected"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("page");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "page"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("quickActionLayout");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "quickActionLayout"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuickActionLayout"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("standardLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "standardLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuickActionLabel"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("targetObject");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "targetObject"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("targetParentField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "targetParentField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("targetRecordType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "targetRecordType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("type");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "type"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "QuickActionType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("width");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "width"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWidth(Integer value) {
+        this.width = value;
     }
 
 }

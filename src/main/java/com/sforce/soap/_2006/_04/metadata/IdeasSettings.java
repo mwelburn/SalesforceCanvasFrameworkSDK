@@ -1,308 +1,204 @@
-/**
- * IdeasSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class IdeasSettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.Boolean enableChatterProfile;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.Boolean enableIdeaThemes;
 
-    private java.lang.Boolean enableIdeas;
+/**
+ * <p>Java class for IdeasSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="IdeasSettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="enableChatterProfile" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableIdeaThemes" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableIdeas" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableIdeasReputation" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="halfLife" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
+ *         &lt;element name="ideasProfilePage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "IdeasSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "enableChatterProfile",
+    "enableIdeaThemes",
+    "enableIdeas",
+    "enableIdeasReputation",
+    "halfLife",
+    "ideasProfilePage"
+})
+public class IdeasSettings
+    extends Metadata
+{
 
-    private java.lang.Boolean enableIdeasReputation;
-
-    private java.lang.Double halfLife;
-
-    private java.lang.String ideasProfilePage;
-
-    public IdeasSettings() {
-    }
-
-    public IdeasSettings(
-           java.lang.String fullName,
-           java.lang.Boolean enableChatterProfile,
-           java.lang.Boolean enableIdeaThemes,
-           java.lang.Boolean enableIdeas,
-           java.lang.Boolean enableIdeasReputation,
-           java.lang.Double halfLife,
-           java.lang.String ideasProfilePage) {
-        super(
-            fullName);
-        this.enableChatterProfile = enableChatterProfile;
-        this.enableIdeaThemes = enableIdeaThemes;
-        this.enableIdeas = enableIdeas;
-        this.enableIdeasReputation = enableIdeasReputation;
-        this.halfLife = halfLife;
-        this.ideasProfilePage = ideasProfilePage;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableChatterProfile;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableIdeaThemes;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableIdeas;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableIdeasReputation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Double halfLife;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String ideasProfilePage;
 
     /**
-     * Gets the enableChatterProfile value for this IdeasSettings.
+     * Gets the value of the enableChatterProfile property.
      * 
-     * @return enableChatterProfile
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableChatterProfile() {
+    public Boolean isEnableChatterProfile() {
         return enableChatterProfile;
     }
 
-
     /**
-     * Sets the enableChatterProfile value for this IdeasSettings.
+     * Sets the value of the enableChatterProfile property.
      * 
-     * @param enableChatterProfile
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableChatterProfile(java.lang.Boolean enableChatterProfile) {
-        this.enableChatterProfile = enableChatterProfile;
+    public void setEnableChatterProfile(Boolean value) {
+        this.enableChatterProfile = value;
     }
 
-
     /**
-     * Gets the enableIdeaThemes value for this IdeasSettings.
+     * Gets the value of the enableIdeaThemes property.
      * 
-     * @return enableIdeaThemes
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableIdeaThemes() {
+    public Boolean isEnableIdeaThemes() {
         return enableIdeaThemes;
     }
 
-
     /**
-     * Sets the enableIdeaThemes value for this IdeasSettings.
+     * Sets the value of the enableIdeaThemes property.
      * 
-     * @param enableIdeaThemes
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableIdeaThemes(java.lang.Boolean enableIdeaThemes) {
-        this.enableIdeaThemes = enableIdeaThemes;
+    public void setEnableIdeaThemes(Boolean value) {
+        this.enableIdeaThemes = value;
     }
 
-
     /**
-     * Gets the enableIdeas value for this IdeasSettings.
+     * Gets the value of the enableIdeas property.
      * 
-     * @return enableIdeas
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableIdeas() {
+    public Boolean isEnableIdeas() {
         return enableIdeas;
     }
 
-
     /**
-     * Sets the enableIdeas value for this IdeasSettings.
+     * Sets the value of the enableIdeas property.
      * 
-     * @param enableIdeas
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableIdeas(java.lang.Boolean enableIdeas) {
-        this.enableIdeas = enableIdeas;
+    public void setEnableIdeas(Boolean value) {
+        this.enableIdeas = value;
     }
 
-
     /**
-     * Gets the enableIdeasReputation value for this IdeasSettings.
+     * Gets the value of the enableIdeasReputation property.
      * 
-     * @return enableIdeasReputation
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableIdeasReputation() {
+    public Boolean isEnableIdeasReputation() {
         return enableIdeasReputation;
     }
 
-
     /**
-     * Sets the enableIdeasReputation value for this IdeasSettings.
+     * Sets the value of the enableIdeasReputation property.
      * 
-     * @param enableIdeasReputation
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableIdeasReputation(java.lang.Boolean enableIdeasReputation) {
-        this.enableIdeasReputation = enableIdeasReputation;
+    public void setEnableIdeasReputation(Boolean value) {
+        this.enableIdeasReputation = value;
     }
 
-
     /**
-     * Gets the halfLife value for this IdeasSettings.
+     * Gets the value of the halfLife property.
      * 
-     * @return halfLife
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
      */
-    public java.lang.Double getHalfLife() {
+    public Double getHalfLife() {
         return halfLife;
     }
 
-
     /**
-     * Sets the halfLife value for this IdeasSettings.
+     * Sets the value of the halfLife property.
      * 
-     * @param halfLife
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
      */
-    public void setHalfLife(java.lang.Double halfLife) {
-        this.halfLife = halfLife;
+    public void setHalfLife(Double value) {
+        this.halfLife = value;
     }
 
-
     /**
-     * Gets the ideasProfilePage value for this IdeasSettings.
+     * Gets the value of the ideasProfilePage property.
      * 
-     * @return ideasProfilePage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIdeasProfilePage() {
+    public String getIdeasProfilePage() {
         return ideasProfilePage;
     }
 
-
     /**
-     * Sets the ideasProfilePage value for this IdeasSettings.
+     * Sets the value of the ideasProfilePage property.
      * 
-     * @param ideasProfilePage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIdeasProfilePage(java.lang.String ideasProfilePage) {
-        this.ideasProfilePage = ideasProfilePage;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof IdeasSettings)) return false;
-        IdeasSettings other = (IdeasSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.enableChatterProfile==null && other.getEnableChatterProfile()==null) || 
-             (this.enableChatterProfile!=null &&
-              this.enableChatterProfile.equals(other.getEnableChatterProfile()))) &&
-            ((this.enableIdeaThemes==null && other.getEnableIdeaThemes()==null) || 
-             (this.enableIdeaThemes!=null &&
-              this.enableIdeaThemes.equals(other.getEnableIdeaThemes()))) &&
-            ((this.enableIdeas==null && other.getEnableIdeas()==null) || 
-             (this.enableIdeas!=null &&
-              this.enableIdeas.equals(other.getEnableIdeas()))) &&
-            ((this.enableIdeasReputation==null && other.getEnableIdeasReputation()==null) || 
-             (this.enableIdeasReputation!=null &&
-              this.enableIdeasReputation.equals(other.getEnableIdeasReputation()))) &&
-            ((this.halfLife==null && other.getHalfLife()==null) || 
-             (this.halfLife!=null &&
-              this.halfLife.equals(other.getHalfLife()))) &&
-            ((this.ideasProfilePage==null && other.getIdeasProfilePage()==null) || 
-             (this.ideasProfilePage!=null &&
-              this.ideasProfilePage.equals(other.getIdeasProfilePage())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getEnableChatterProfile() != null) {
-            _hashCode += getEnableChatterProfile().hashCode();
-        }
-        if (getEnableIdeaThemes() != null) {
-            _hashCode += getEnableIdeaThemes().hashCode();
-        }
-        if (getEnableIdeas() != null) {
-            _hashCode += getEnableIdeas().hashCode();
-        }
-        if (getEnableIdeasReputation() != null) {
-            _hashCode += getEnableIdeasReputation().hashCode();
-        }
-        if (getHalfLife() != null) {
-            _hashCode += getHalfLife().hashCode();
-        }
-        if (getIdeasProfilePage() != null) {
-            _hashCode += getIdeasProfilePage().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(IdeasSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "IdeasSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableChatterProfile");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableChatterProfile"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableIdeaThemes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableIdeaThemes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableIdeas");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableIdeas"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableIdeasReputation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableIdeasReputation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("halfLife");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "halfLife"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ideasProfilePage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ideasProfilePage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setIdeasProfilePage(String value) {
+        this.ideasProfilePage = value;
     }
 
 }

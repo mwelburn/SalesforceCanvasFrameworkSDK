@@ -1,222 +1,127 @@
-/**
- * FlowDecision.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class FlowDecision  extends com.sforce.soap._2006._04.metadata.FlowNode  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.FlowConnector defaultConnector;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String defaultConnectorLabel;
 
-    private com.sforce.soap._2006._04.metadata.FlowRule[] rules;
+/**
+ * <p>Java class for FlowDecision complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="FlowDecision">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}FlowNode">
+ *       &lt;sequence>
+ *         &lt;element name="defaultConnector" type="{http://soap.sforce.com/2006/04/metadata}FlowConnector" minOccurs="0"/>
+ *         &lt;element name="defaultConnectorLabel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="rules" type="{http://soap.sforce.com/2006/04/metadata}FlowRule" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "FlowDecision", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "defaultConnector",
+    "defaultConnectorLabel",
+    "rules"
+})
+public class FlowDecision
+    extends FlowNode
+{
 
-    public FlowDecision() {
-    }
-
-    public FlowDecision(
-           java.lang.String description,
-           java.lang.String name,
-           java.lang.String label,
-           int locationX,
-           int locationY,
-           com.sforce.soap._2006._04.metadata.FlowConnector defaultConnector,
-           java.lang.String defaultConnectorLabel,
-           com.sforce.soap._2006._04.metadata.FlowRule[] rules) {
-        super(
-            description,
-            name,
-            label,
-            locationX,
-            locationY);
-        this.defaultConnector = defaultConnector;
-        this.defaultConnectorLabel = defaultConnectorLabel;
-        this.rules = rules;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected FlowConnector defaultConnector;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultConnectorLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowRule> rules;
 
     /**
-     * Gets the defaultConnector value for this FlowDecision.
+     * Gets the value of the defaultConnector property.
      * 
-     * @return defaultConnector
+     * @return
+     *     possible object is
+     *     {@link FlowConnector }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowConnector getDefaultConnector() {
+    public FlowConnector getDefaultConnector() {
         return defaultConnector;
     }
 
-
     /**
-     * Sets the defaultConnector value for this FlowDecision.
+     * Sets the value of the defaultConnector property.
      * 
-     * @param defaultConnector
+     * @param value
+     *     allowed object is
+     *     {@link FlowConnector }
+     *     
      */
-    public void setDefaultConnector(com.sforce.soap._2006._04.metadata.FlowConnector defaultConnector) {
-        this.defaultConnector = defaultConnector;
+    public void setDefaultConnector(FlowConnector value) {
+        this.defaultConnector = value;
     }
 
-
     /**
-     * Gets the defaultConnectorLabel value for this FlowDecision.
+     * Gets the value of the defaultConnectorLabel property.
      * 
-     * @return defaultConnectorLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultConnectorLabel() {
+    public String getDefaultConnectorLabel() {
         return defaultConnectorLabel;
     }
 
-
     /**
-     * Sets the defaultConnectorLabel value for this FlowDecision.
+     * Sets the value of the defaultConnectorLabel property.
      * 
-     * @param defaultConnectorLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultConnectorLabel(java.lang.String defaultConnectorLabel) {
-        this.defaultConnectorLabel = defaultConnectorLabel;
+    public void setDefaultConnectorLabel(String value) {
+        this.defaultConnectorLabel = value;
     }
 
-
     /**
-     * Gets the rules value for this FlowDecision.
+     * Gets the value of the rules property.
      * 
-     * @return rules
-     */
-    public com.sforce.soap._2006._04.metadata.FlowRule[] getRules() {
-        return rules;
-    }
-
-
-    /**
-     * Sets the rules value for this FlowDecision.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the rules property.
      * 
-     * @param rules
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRules().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowRule }
+     * 
+     * 
      */
-    public void setRules(com.sforce.soap._2006._04.metadata.FlowRule[] rules) {
-        this.rules = rules;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowRule getRules(int i) {
-        return this.rules[i];
-    }
-
-    public void setRules(int i, com.sforce.soap._2006._04.metadata.FlowRule _value) {
-        this.rules[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof FlowDecision)) return false;
-        FlowDecision other = (FlowDecision) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<FlowRule> getRules() {
+        if (rules == null) {
+            rules = new ArrayList<FlowRule>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.defaultConnector==null && other.getDefaultConnector()==null) || 
-             (this.defaultConnector!=null &&
-              this.defaultConnector.equals(other.getDefaultConnector()))) &&
-            ((this.defaultConnectorLabel==null && other.getDefaultConnectorLabel()==null) || 
-             (this.defaultConnectorLabel!=null &&
-              this.defaultConnectorLabel.equals(other.getDefaultConnectorLabel()))) &&
-            ((this.rules==null && other.getRules()==null) || 
-             (this.rules!=null &&
-              java.util.Arrays.equals(this.rules, other.getRules())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getDefaultConnector() != null) {
-            _hashCode += getDefaultConnector().hashCode();
-        }
-        if (getDefaultConnectorLabel() != null) {
-            _hashCode += getDefaultConnectorLabel().hashCode();
-        }
-        if (getRules() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRules());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRules(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FlowDecision.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDecision"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultConnector");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultConnector"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowConnector"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultConnectorLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultConnectorLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rules");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rules"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRule"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.rules;
     }
 
 }

@@ -1,194 +1,104 @@
-/**
- * OpportunitySharingRules.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class OpportunitySharingRules  extends com.sforce.soap._2006._04.metadata.SharingRules  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.OpportunityCriteriaBasedSharingRule[] criteriaBasedRules;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.OpportunityOwnerSharingRule[] ownerRules;
 
-    public OpportunitySharingRules() {
-    }
+/**
+ * <p>Java class for OpportunitySharingRules complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="OpportunitySharingRules">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}SharingRules">
+ *       &lt;sequence>
+ *         &lt;element name="criteriaBasedRules" type="{http://soap.sforce.com/2006/04/metadata}OpportunityCriteriaBasedSharingRule" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="ownerRules" type="{http://soap.sforce.com/2006/04/metadata}OpportunityOwnerSharingRule" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "OpportunitySharingRules", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "criteriaBasedRules",
+    "ownerRules"
+})
+public class OpportunitySharingRules
+    extends SharingRules
+{
 
-    public OpportunitySharingRules(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.OpportunityCriteriaBasedSharingRule[] criteriaBasedRules,
-           com.sforce.soap._2006._04.metadata.OpportunityOwnerSharingRule[] ownerRules) {
-        super(
-            fullName);
-        this.criteriaBasedRules = criteriaBasedRules;
-        this.ownerRules = ownerRules;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<OpportunityCriteriaBasedSharingRule> criteriaBasedRules;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<OpportunityOwnerSharingRule> ownerRules;
 
     /**
-     * Gets the criteriaBasedRules value for this OpportunitySharingRules.
+     * Gets the value of the criteriaBasedRules property.
      * 
-     * @return criteriaBasedRules
-     */
-    public com.sforce.soap._2006._04.metadata.OpportunityCriteriaBasedSharingRule[] getCriteriaBasedRules() {
-        return criteriaBasedRules;
-    }
-
-
-    /**
-     * Sets the criteriaBasedRules value for this OpportunitySharingRules.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the criteriaBasedRules property.
      * 
-     * @param criteriaBasedRules
-     */
-    public void setCriteriaBasedRules(com.sforce.soap._2006._04.metadata.OpportunityCriteriaBasedSharingRule[] criteriaBasedRules) {
-        this.criteriaBasedRules = criteriaBasedRules;
-    }
-
-    public com.sforce.soap._2006._04.metadata.OpportunityCriteriaBasedSharingRule getCriteriaBasedRules(int i) {
-        return this.criteriaBasedRules[i];
-    }
-
-    public void setCriteriaBasedRules(int i, com.sforce.soap._2006._04.metadata.OpportunityCriteriaBasedSharingRule _value) {
-        this.criteriaBasedRules[i] = _value;
-    }
-
-
-    /**
-     * Gets the ownerRules value for this OpportunitySharingRules.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCriteriaBasedRules().add(newItem);
+     * </pre>
      * 
-     * @return ownerRules
-     */
-    public com.sforce.soap._2006._04.metadata.OpportunityOwnerSharingRule[] getOwnerRules() {
-        return ownerRules;
-    }
-
-
-    /**
-     * Sets the ownerRules value for this OpportunitySharingRules.
      * 
-     * @param ownerRules
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link OpportunityCriteriaBasedSharingRule }
+     * 
+     * 
      */
-    public void setOwnerRules(com.sforce.soap._2006._04.metadata.OpportunityOwnerSharingRule[] ownerRules) {
-        this.ownerRules = ownerRules;
-    }
-
-    public com.sforce.soap._2006._04.metadata.OpportunityOwnerSharingRule getOwnerRules(int i) {
-        return this.ownerRules[i];
-    }
-
-    public void setOwnerRules(int i, com.sforce.soap._2006._04.metadata.OpportunityOwnerSharingRule _value) {
-        this.ownerRules[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof OpportunitySharingRules)) return false;
-        OpportunitySharingRules other = (OpportunitySharingRules) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<OpportunityCriteriaBasedSharingRule> getCriteriaBasedRules() {
+        if (criteriaBasedRules == null) {
+            criteriaBasedRules = new ArrayList<OpportunityCriteriaBasedSharingRule>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.criteriaBasedRules==null && other.getCriteriaBasedRules()==null) || 
-             (this.criteriaBasedRules!=null &&
-              java.util.Arrays.equals(this.criteriaBasedRules, other.getCriteriaBasedRules()))) &&
-            ((this.ownerRules==null && other.getOwnerRules()==null) || 
-             (this.ownerRules!=null &&
-              java.util.Arrays.equals(this.ownerRules, other.getOwnerRules())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCriteriaBasedRules() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCriteriaBasedRules());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCriteriaBasedRules(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getOwnerRules() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getOwnerRules());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getOwnerRules(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(OpportunitySharingRules.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "OpportunitySharingRules"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("criteriaBasedRules");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "criteriaBasedRules"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "OpportunityCriteriaBasedSharingRule"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("ownerRules");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ownerRules"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "OpportunityOwnerSharingRule"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
+        return this.criteriaBasedRules;
     }
 
     /**
-     * Return type metadata object
+     * Gets the value of the ownerRules property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the ownerRules property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getOwnerRules().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link OpportunityOwnerSharingRule }
+     * 
+     * 
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public List<OpportunityOwnerSharingRule> getOwnerRules() {
+        if (ownerRules == null) {
+            ownerRules = new ArrayList<OpportunityOwnerSharingRule>();
+        }
+        return this.ownerRules;
     }
 
 }

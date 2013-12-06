@@ -1,1318 +1,895 @@
-/**
- * Report.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Report  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ReportAggregate[] aggregates;
-
-    private com.sforce.soap._2006._04.metadata.Report[] block;
-
-    private com.sforce.soap._2006._04.metadata.ReportBlockInfo blockInfo;
-
-    private com.sforce.soap._2006._04.metadata.ReportBucketField[] buckets;
-
-    private com.sforce.soap._2006._04.metadata.ReportChart chart;
-
-    private com.sforce.soap._2006._04.metadata.ReportColorRange[] colorRanges;
-
-    private com.sforce.soap._2006._04.metadata.ReportColumn[] columns;
-
-    private com.sforce.soap._2006._04.metadata.ReportCrossFilter[] crossFilters;
-
-    private com.sforce.soap._2006._04.metadata.CurrencyIsoCode currency;
-
-    private java.lang.String description;
-
-    private java.lang.String division;
-
-    private com.sforce.soap._2006._04.metadata.ReportFilter filter;
-
-    private com.sforce.soap._2006._04.metadata.ReportFormat format;
-
-    private com.sforce.soap._2006._04.metadata.ReportGrouping[] groupingsAcross;
-
-    private com.sforce.soap._2006._04.metadata.ReportGrouping[] groupingsDown;
-
-    private java.lang.String[] historicalSelector;
-
-    private java.lang.String name;
-
-    private com.sforce.soap._2006._04.metadata.ReportParam[] params;
-
-    private java.lang.String reportType;
-
-    private java.lang.String roleHierarchyFilter;
-
-    private java.lang.Integer rowLimit;
-
-    private java.lang.String scope;
-
-    private java.lang.Boolean showCurrentDate;
-
-    private java.lang.Boolean showDetails;
-
-    private java.lang.String sortColumn;
-
-    private com.sforce.soap._2006._04.metadata.SortOrder sortOrder;
-
-    private java.lang.String territoryHierarchyFilter;
-
-    private com.sforce.soap._2006._04.metadata.ReportTimeFrameFilter timeFrameFilter;
-
-    private java.lang.String userFilter;
-
-    public Report() {
-    }
-
-    public Report(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.ReportAggregate[] aggregates,
-           com.sforce.soap._2006._04.metadata.Report[] block,
-           com.sforce.soap._2006._04.metadata.ReportBlockInfo blockInfo,
-           com.sforce.soap._2006._04.metadata.ReportBucketField[] buckets,
-           com.sforce.soap._2006._04.metadata.ReportChart chart,
-           com.sforce.soap._2006._04.metadata.ReportColorRange[] colorRanges,
-           com.sforce.soap._2006._04.metadata.ReportColumn[] columns,
-           com.sforce.soap._2006._04.metadata.ReportCrossFilter[] crossFilters,
-           com.sforce.soap._2006._04.metadata.CurrencyIsoCode currency,
-           java.lang.String description,
-           java.lang.String division,
-           com.sforce.soap._2006._04.metadata.ReportFilter filter,
-           com.sforce.soap._2006._04.metadata.ReportFormat format,
-           com.sforce.soap._2006._04.metadata.ReportGrouping[] groupingsAcross,
-           com.sforce.soap._2006._04.metadata.ReportGrouping[] groupingsDown,
-           java.lang.String[] historicalSelector,
-           java.lang.String name,
-           com.sforce.soap._2006._04.metadata.ReportParam[] params,
-           java.lang.String reportType,
-           java.lang.String roleHierarchyFilter,
-           java.lang.Integer rowLimit,
-           java.lang.String scope,
-           java.lang.Boolean showCurrentDate,
-           java.lang.Boolean showDetails,
-           java.lang.String sortColumn,
-           com.sforce.soap._2006._04.metadata.SortOrder sortOrder,
-           java.lang.String territoryHierarchyFilter,
-           com.sforce.soap._2006._04.metadata.ReportTimeFrameFilter timeFrameFilter,
-           java.lang.String userFilter) {
-        super(
-            fullName);
-        this.aggregates = aggregates;
-        this.block = block;
-        this.blockInfo = blockInfo;
-        this.buckets = buckets;
-        this.chart = chart;
-        this.colorRanges = colorRanges;
-        this.columns = columns;
-        this.crossFilters = crossFilters;
-        this.currency = currency;
-        this.description = description;
-        this.division = division;
-        this.filter = filter;
-        this.format = format;
-        this.groupingsAcross = groupingsAcross;
-        this.groupingsDown = groupingsDown;
-        this.historicalSelector = historicalSelector;
-        this.name = name;
-        this.params = params;
-        this.reportType = reportType;
-        this.roleHierarchyFilter = roleHierarchyFilter;
-        this.rowLimit = rowLimit;
-        this.scope = scope;
-        this.showCurrentDate = showCurrentDate;
-        this.showDetails = showDetails;
-        this.sortColumn = sortColumn;
-        this.sortOrder = sortOrder;
-        this.territoryHierarchyFilter = territoryHierarchyFilter;
-        this.timeFrameFilter = timeFrameFilter;
-        this.userFilter = userFilter;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the aggregates value for this Report.
-     * 
-     * @return aggregates
-     */
-    public com.sforce.soap._2006._04.metadata.ReportAggregate[] getAggregates() {
-        return aggregates;
-    }
+/**
+ * <p>Java class for Report complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Report">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="aggregates" type="{http://soap.sforce.com/2006/04/metadata}ReportAggregate" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="block" type="{http://soap.sforce.com/2006/04/metadata}Report" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="blockInfo" type="{http://soap.sforce.com/2006/04/metadata}ReportBlockInfo" minOccurs="0"/>
+ *         &lt;element name="buckets" type="{http://soap.sforce.com/2006/04/metadata}ReportBucketField" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="chart" type="{http://soap.sforce.com/2006/04/metadata}ReportChart" minOccurs="0"/>
+ *         &lt;element name="colorRanges" type="{http://soap.sforce.com/2006/04/metadata}ReportColorRange" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="columns" type="{http://soap.sforce.com/2006/04/metadata}ReportColumn" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="crossFilters" type="{http://soap.sforce.com/2006/04/metadata}ReportCrossFilter" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="currency" type="{http://soap.sforce.com/2006/04/metadata}CurrencyIsoCode" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="division" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="filter" type="{http://soap.sforce.com/2006/04/metadata}ReportFilter" minOccurs="0"/>
+ *         &lt;element name="format" type="{http://soap.sforce.com/2006/04/metadata}ReportFormat"/>
+ *         &lt;element name="groupingsAcross" type="{http://soap.sforce.com/2006/04/metadata}ReportGrouping" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="groupingsDown" type="{http://soap.sforce.com/2006/04/metadata}ReportGrouping" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="historicalSelector" type="{http://soap.sforce.com/2006/04/metadata}ReportHistoricalSelector" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="params" type="{http://soap.sforce.com/2006/04/metadata}ReportParam" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="reportType" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="roleHierarchyFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="rowLimit" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="scope" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="showCurrentDate" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showDetails" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="sortColumn" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="sortOrder" type="{http://soap.sforce.com/2006/04/metadata}SortOrder" minOccurs="0"/>
+ *         &lt;element name="territoryHierarchyFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="timeFrameFilter" type="{http://soap.sforce.com/2006/04/metadata}ReportTimeFrameFilter" minOccurs="0"/>
+ *         &lt;element name="userFilter" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Report", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "aggregates",
+    "block",
+    "blockInfo",
+    "buckets",
+    "chart",
+    "colorRanges",
+    "columns",
+    "crossFilters",
+    "currency",
+    "description",
+    "division",
+    "filter",
+    "format",
+    "groupingsAcross",
+    "groupingsDown",
+    "historicalSelector",
+    "name",
+    "params",
+    "reportType",
+    "roleHierarchyFilter",
+    "rowLimit",
+    "scope",
+    "showCurrentDate",
+    "showDetails",
+    "sortColumn",
+    "sortOrder",
+    "territoryHierarchyFilter",
+    "timeFrameFilter",
+    "userFilter"
+})
+public class Report
+    extends Metadata
+{
 
-
-    /**
-     * Sets the aggregates value for this Report.
-     * 
-     * @param aggregates
-     */
-    public void setAggregates(com.sforce.soap._2006._04.metadata.ReportAggregate[] aggregates) {
-        this.aggregates = aggregates;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportAggregate getAggregates(int i) {
-        return this.aggregates[i];
-    }
-
-    public void setAggregates(int i, com.sforce.soap._2006._04.metadata.ReportAggregate _value) {
-        this.aggregates[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportAggregate> aggregates;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<Report> block;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportBlockInfo blockInfo;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportBucketField> buckets;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportChart chart;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportColorRange> colorRanges;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportColumn> columns;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportCrossFilter> crossFilters;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected CurrencyIsoCode currency;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String division;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportFilter filter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected ReportFormat format;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportGrouping> groupingsAcross;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportGrouping> groupingsDown;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportHistoricalSelector historicalSelector;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportParam> params;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String reportType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String roleHierarchyFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer rowLimit;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String scope;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showCurrentDate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showDetails;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String sortColumn;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected SortOrder sortOrder;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String territoryHierarchyFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportTimeFrameFilter timeFrameFilter;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String userFilter;
 
     /**
-     * Gets the block value for this Report.
+     * Gets the value of the aggregates property.
      * 
-     * @return block
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the aggregates property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAggregates().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportAggregate }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.Report[] getBlock() {
-        return block;
+    public List<ReportAggregate> getAggregates() {
+        if (aggregates == null) {
+            aggregates = new ArrayList<ReportAggregate>();
+        }
+        return this.aggregates;
     }
-
 
     /**
-     * Sets the block value for this Report.
+     * Gets the value of the block property.
      * 
-     * @param block
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the block property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getBlock().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Report }
+     * 
+     * 
      */
-    public void setBlock(com.sforce.soap._2006._04.metadata.Report[] block) {
-        this.block = block;
+    public List<Report> getBlock() {
+        if (block == null) {
+            block = new ArrayList<Report>();
+        }
+        return this.block;
     }
-
-    public com.sforce.soap._2006._04.metadata.Report getBlock(int i) {
-        return this.block[i];
-    }
-
-    public void setBlock(int i, com.sforce.soap._2006._04.metadata.Report _value) {
-        this.block[i] = _value;
-    }
-
 
     /**
-     * Gets the blockInfo value for this Report.
+     * Gets the value of the blockInfo property.
      * 
-     * @return blockInfo
+     * @return
+     *     possible object is
+     *     {@link ReportBlockInfo }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportBlockInfo getBlockInfo() {
+    public ReportBlockInfo getBlockInfo() {
         return blockInfo;
     }
 
+    /**
+     * Sets the value of the blockInfo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ReportBlockInfo }
+     *     
+     */
+    public void setBlockInfo(ReportBlockInfo value) {
+        this.blockInfo = value;
+    }
 
     /**
-     * Sets the blockInfo value for this Report.
+     * Gets the value of the buckets property.
      * 
-     * @param blockInfo
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the buckets property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getBuckets().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportBucketField }
+     * 
+     * 
      */
-    public void setBlockInfo(com.sforce.soap._2006._04.metadata.ReportBlockInfo blockInfo) {
-        this.blockInfo = blockInfo;
+    public List<ReportBucketField> getBuckets() {
+        if (buckets == null) {
+            buckets = new ArrayList<ReportBucketField>();
+        }
+        return this.buckets;
     }
-
 
     /**
-     * Gets the buckets value for this Report.
+     * Gets the value of the chart property.
      * 
-     * @return buckets
+     * @return
+     *     possible object is
+     *     {@link ReportChart }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportBucketField[] getBuckets() {
-        return buckets;
-    }
-
-
-    /**
-     * Sets the buckets value for this Report.
-     * 
-     * @param buckets
-     */
-    public void setBuckets(com.sforce.soap._2006._04.metadata.ReportBucketField[] buckets) {
-        this.buckets = buckets;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportBucketField getBuckets(int i) {
-        return this.buckets[i];
-    }
-
-    public void setBuckets(int i, com.sforce.soap._2006._04.metadata.ReportBucketField _value) {
-        this.buckets[i] = _value;
-    }
-
-
-    /**
-     * Gets the chart value for this Report.
-     * 
-     * @return chart
-     */
-    public com.sforce.soap._2006._04.metadata.ReportChart getChart() {
+    public ReportChart getChart() {
         return chart;
     }
 
+    /**
+     * Sets the value of the chart property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ReportChart }
+     *     
+     */
+    public void setChart(ReportChart value) {
+        this.chart = value;
+    }
 
     /**
-     * Sets the chart value for this Report.
+     * Gets the value of the colorRanges property.
      * 
-     * @param chart
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the colorRanges property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getColorRanges().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportColorRange }
+     * 
+     * 
      */
-    public void setChart(com.sforce.soap._2006._04.metadata.ReportChart chart) {
-        this.chart = chart;
+    public List<ReportColorRange> getColorRanges() {
+        if (colorRanges == null) {
+            colorRanges = new ArrayList<ReportColorRange>();
+        }
+        return this.colorRanges;
     }
-
 
     /**
-     * Gets the colorRanges value for this Report.
+     * Gets the value of the columns property.
      * 
-     * @return colorRanges
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the columns property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getColumns().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportColumn }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ReportColorRange[] getColorRanges() {
-        return colorRanges;
+    public List<ReportColumn> getColumns() {
+        if (columns == null) {
+            columns = new ArrayList<ReportColumn>();
+        }
+        return this.columns;
     }
-
 
     /**
-     * Sets the colorRanges value for this Report.
+     * Gets the value of the crossFilters property.
      * 
-     * @param colorRanges
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the crossFilters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCrossFilters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportCrossFilter }
+     * 
+     * 
      */
-    public void setColorRanges(com.sforce.soap._2006._04.metadata.ReportColorRange[] colorRanges) {
-        this.colorRanges = colorRanges;
+    public List<ReportCrossFilter> getCrossFilters() {
+        if (crossFilters == null) {
+            crossFilters = new ArrayList<ReportCrossFilter>();
+        }
+        return this.crossFilters;
     }
-
-    public com.sforce.soap._2006._04.metadata.ReportColorRange getColorRanges(int i) {
-        return this.colorRanges[i];
-    }
-
-    public void setColorRanges(int i, com.sforce.soap._2006._04.metadata.ReportColorRange _value) {
-        this.colorRanges[i] = _value;
-    }
-
 
     /**
-     * Gets the columns value for this Report.
+     * Gets the value of the currency property.
      * 
-     * @return columns
+     * @return
+     *     possible object is
+     *     {@link CurrencyIsoCode }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportColumn[] getColumns() {
-        return columns;
-    }
-
-
-    /**
-     * Sets the columns value for this Report.
-     * 
-     * @param columns
-     */
-    public void setColumns(com.sforce.soap._2006._04.metadata.ReportColumn[] columns) {
-        this.columns = columns;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportColumn getColumns(int i) {
-        return this.columns[i];
-    }
-
-    public void setColumns(int i, com.sforce.soap._2006._04.metadata.ReportColumn _value) {
-        this.columns[i] = _value;
-    }
-
-
-    /**
-     * Gets the crossFilters value for this Report.
-     * 
-     * @return crossFilters
-     */
-    public com.sforce.soap._2006._04.metadata.ReportCrossFilter[] getCrossFilters() {
-        return crossFilters;
-    }
-
-
-    /**
-     * Sets the crossFilters value for this Report.
-     * 
-     * @param crossFilters
-     */
-    public void setCrossFilters(com.sforce.soap._2006._04.metadata.ReportCrossFilter[] crossFilters) {
-        this.crossFilters = crossFilters;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportCrossFilter getCrossFilters(int i) {
-        return this.crossFilters[i];
-    }
-
-    public void setCrossFilters(int i, com.sforce.soap._2006._04.metadata.ReportCrossFilter _value) {
-        this.crossFilters[i] = _value;
-    }
-
-
-    /**
-     * Gets the currency value for this Report.
-     * 
-     * @return currency
-     */
-    public com.sforce.soap._2006._04.metadata.CurrencyIsoCode getCurrency() {
+    public CurrencyIsoCode getCurrency() {
         return currency;
     }
 
-
     /**
-     * Sets the currency value for this Report.
+     * Sets the value of the currency property.
      * 
-     * @param currency
+     * @param value
+     *     allowed object is
+     *     {@link CurrencyIsoCode }
+     *     
      */
-    public void setCurrency(com.sforce.soap._2006._04.metadata.CurrencyIsoCode currency) {
-        this.currency = currency;
+    public void setCurrency(CurrencyIsoCode value) {
+        this.currency = value;
     }
 
-
     /**
-     * Gets the description value for this Report.
+     * Gets the value of the description property.
      * 
-     * @return description
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-
     /**
-     * Sets the description value for this Report.
+     * Sets the value of the description property.
      * 
-     * @param description
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public void setDescription(String value) {
+        this.description = value;
     }
 
-
     /**
-     * Gets the division value for this Report.
+     * Gets the value of the division property.
      * 
-     * @return division
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDivision() {
+    public String getDivision() {
         return division;
     }
 
-
     /**
-     * Sets the division value for this Report.
+     * Sets the value of the division property.
      * 
-     * @param division
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDivision(java.lang.String division) {
-        this.division = division;
+    public void setDivision(String value) {
+        this.division = value;
     }
 
-
     /**
-     * Gets the filter value for this Report.
+     * Gets the value of the filter property.
      * 
-     * @return filter
+     * @return
+     *     possible object is
+     *     {@link ReportFilter }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportFilter getFilter() {
+    public ReportFilter getFilter() {
         return filter;
     }
 
-
     /**
-     * Sets the filter value for this Report.
+     * Sets the value of the filter property.
      * 
-     * @param filter
+     * @param value
+     *     allowed object is
+     *     {@link ReportFilter }
+     *     
      */
-    public void setFilter(com.sforce.soap._2006._04.metadata.ReportFilter filter) {
-        this.filter = filter;
+    public void setFilter(ReportFilter value) {
+        this.filter = value;
     }
 
-
     /**
-     * Gets the format value for this Report.
+     * Gets the value of the format property.
      * 
-     * @return format
+     * @return
+     *     possible object is
+     *     {@link ReportFormat }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportFormat getFormat() {
+    public ReportFormat getFormat() {
         return format;
     }
 
+    /**
+     * Sets the value of the format property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ReportFormat }
+     *     
+     */
+    public void setFormat(ReportFormat value) {
+        this.format = value;
+    }
 
     /**
-     * Sets the format value for this Report.
+     * Gets the value of the groupingsAcross property.
      * 
-     * @param format
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the groupingsAcross property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getGroupingsAcross().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportGrouping }
+     * 
+     * 
      */
-    public void setFormat(com.sforce.soap._2006._04.metadata.ReportFormat format) {
-        this.format = format;
+    public List<ReportGrouping> getGroupingsAcross() {
+        if (groupingsAcross == null) {
+            groupingsAcross = new ArrayList<ReportGrouping>();
+        }
+        return this.groupingsAcross;
     }
-
 
     /**
-     * Gets the groupingsAcross value for this Report.
+     * Gets the value of the groupingsDown property.
      * 
-     * @return groupingsAcross
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the groupingsDown property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getGroupingsDown().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportGrouping }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.ReportGrouping[] getGroupingsAcross() {
-        return groupingsAcross;
+    public List<ReportGrouping> getGroupingsDown() {
+        if (groupingsDown == null) {
+            groupingsDown = new ArrayList<ReportGrouping>();
+        }
+        return this.groupingsDown;
     }
-
 
     /**
-     * Sets the groupingsAcross value for this Report.
+     * Gets the value of the historicalSelector property.
      * 
-     * @param groupingsAcross
+     * @return
+     *     possible object is
+     *     {@link ReportHistoricalSelector }
+     *     
      */
-    public void setGroupingsAcross(com.sforce.soap._2006._04.metadata.ReportGrouping[] groupingsAcross) {
-        this.groupingsAcross = groupingsAcross;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportGrouping getGroupingsAcross(int i) {
-        return this.groupingsAcross[i];
-    }
-
-    public void setGroupingsAcross(int i, com.sforce.soap._2006._04.metadata.ReportGrouping _value) {
-        this.groupingsAcross[i] = _value;
-    }
-
-
-    /**
-     * Gets the groupingsDown value for this Report.
-     * 
-     * @return groupingsDown
-     */
-    public com.sforce.soap._2006._04.metadata.ReportGrouping[] getGroupingsDown() {
-        return groupingsDown;
-    }
-
-
-    /**
-     * Sets the groupingsDown value for this Report.
-     * 
-     * @param groupingsDown
-     */
-    public void setGroupingsDown(com.sforce.soap._2006._04.metadata.ReportGrouping[] groupingsDown) {
-        this.groupingsDown = groupingsDown;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportGrouping getGroupingsDown(int i) {
-        return this.groupingsDown[i];
-    }
-
-    public void setGroupingsDown(int i, com.sforce.soap._2006._04.metadata.ReportGrouping _value) {
-        this.groupingsDown[i] = _value;
-    }
-
-
-    /**
-     * Gets the historicalSelector value for this Report.
-     * 
-     * @return historicalSelector
-     */
-    public java.lang.String[] getHistoricalSelector() {
+    public ReportHistoricalSelector getHistoricalSelector() {
         return historicalSelector;
     }
 
-
     /**
-     * Sets the historicalSelector value for this Report.
+     * Sets the value of the historicalSelector property.
      * 
-     * @param historicalSelector
+     * @param value
+     *     allowed object is
+     *     {@link ReportHistoricalSelector }
+     *     
      */
-    public void setHistoricalSelector(java.lang.String[] historicalSelector) {
-        this.historicalSelector = historicalSelector;
+    public void setHistoricalSelector(ReportHistoricalSelector value) {
+        this.historicalSelector = value;
     }
 
-
     /**
-     * Gets the name value for this Report.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
+    /**
+     * Sets the value of the name property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setName(String value) {
+        this.name = value;
+    }
 
     /**
-     * Sets the name value for this Report.
+     * Gets the value of the params property.
      * 
-     * @param name
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the params property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getParams().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportParam }
+     * 
+     * 
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public List<ReportParam> getParams() {
+        if (params == null) {
+            params = new ArrayList<ReportParam>();
+        }
+        return this.params;
     }
-
 
     /**
-     * Gets the params value for this Report.
+     * Gets the value of the reportType property.
      * 
-     * @return params
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportParam[] getParams() {
-        return params;
-    }
-
-
-    /**
-     * Sets the params value for this Report.
-     * 
-     * @param params
-     */
-    public void setParams(com.sforce.soap._2006._04.metadata.ReportParam[] params) {
-        this.params = params;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportParam getParams(int i) {
-        return this.params[i];
-    }
-
-    public void setParams(int i, com.sforce.soap._2006._04.metadata.ReportParam _value) {
-        this.params[i] = _value;
-    }
-
-
-    /**
-     * Gets the reportType value for this Report.
-     * 
-     * @return reportType
-     */
-    public java.lang.String getReportType() {
+    public String getReportType() {
         return reportType;
     }
 
-
     /**
-     * Sets the reportType value for this Report.
+     * Sets the value of the reportType property.
      * 
-     * @param reportType
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReportType(java.lang.String reportType) {
-        this.reportType = reportType;
+    public void setReportType(String value) {
+        this.reportType = value;
     }
 
-
     /**
-     * Gets the roleHierarchyFilter value for this Report.
+     * Gets the value of the roleHierarchyFilter property.
      * 
-     * @return roleHierarchyFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRoleHierarchyFilter() {
+    public String getRoleHierarchyFilter() {
         return roleHierarchyFilter;
     }
 
-
     /**
-     * Sets the roleHierarchyFilter value for this Report.
+     * Sets the value of the roleHierarchyFilter property.
      * 
-     * @param roleHierarchyFilter
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRoleHierarchyFilter(java.lang.String roleHierarchyFilter) {
-        this.roleHierarchyFilter = roleHierarchyFilter;
+    public void setRoleHierarchyFilter(String value) {
+        this.roleHierarchyFilter = value;
     }
 
-
     /**
-     * Gets the rowLimit value for this Report.
+     * Gets the value of the rowLimit property.
      * 
-     * @return rowLimit
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getRowLimit() {
+    public Integer getRowLimit() {
         return rowLimit;
     }
 
-
     /**
-     * Sets the rowLimit value for this Report.
+     * Sets the value of the rowLimit property.
      * 
-     * @param rowLimit
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setRowLimit(java.lang.Integer rowLimit) {
-        this.rowLimit = rowLimit;
+    public void setRowLimit(Integer value) {
+        this.rowLimit = value;
     }
 
-
     /**
-     * Gets the scope value for this Report.
+     * Gets the value of the scope property.
      * 
-     * @return scope
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getScope() {
+    public String getScope() {
         return scope;
     }
 
-
     /**
-     * Sets the scope value for this Report.
+     * Sets the value of the scope property.
      * 
-     * @param scope
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setScope(java.lang.String scope) {
-        this.scope = scope;
+    public void setScope(String value) {
+        this.scope = value;
     }
 
-
     /**
-     * Gets the showCurrentDate value for this Report.
+     * Gets the value of the showCurrentDate property.
      * 
-     * @return showCurrentDate
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowCurrentDate() {
+    public Boolean isShowCurrentDate() {
         return showCurrentDate;
     }
 
-
     /**
-     * Sets the showCurrentDate value for this Report.
+     * Sets the value of the showCurrentDate property.
      * 
-     * @param showCurrentDate
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowCurrentDate(java.lang.Boolean showCurrentDate) {
-        this.showCurrentDate = showCurrentDate;
+    public void setShowCurrentDate(Boolean value) {
+        this.showCurrentDate = value;
     }
 
-
     /**
-     * Gets the showDetails value for this Report.
+     * Gets the value of the showDetails property.
      * 
-     * @return showDetails
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowDetails() {
+    public Boolean isShowDetails() {
         return showDetails;
     }
 
-
     /**
-     * Sets the showDetails value for this Report.
+     * Sets the value of the showDetails property.
      * 
-     * @param showDetails
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowDetails(java.lang.Boolean showDetails) {
-        this.showDetails = showDetails;
+    public void setShowDetails(Boolean value) {
+        this.showDetails = value;
     }
 
-
     /**
-     * Gets the sortColumn value for this Report.
+     * Gets the value of the sortColumn property.
      * 
-     * @return sortColumn
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSortColumn() {
+    public String getSortColumn() {
         return sortColumn;
     }
 
-
     /**
-     * Sets the sortColumn value for this Report.
+     * Sets the value of the sortColumn property.
      * 
-     * @param sortColumn
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSortColumn(java.lang.String sortColumn) {
-        this.sortColumn = sortColumn;
+    public void setSortColumn(String value) {
+        this.sortColumn = value;
     }
 
-
     /**
-     * Gets the sortOrder value for this Report.
+     * Gets the value of the sortOrder property.
      * 
-     * @return sortOrder
+     * @return
+     *     possible object is
+     *     {@link SortOrder }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SortOrder getSortOrder() {
+    public SortOrder getSortOrder() {
         return sortOrder;
     }
 
-
     /**
-     * Sets the sortOrder value for this Report.
+     * Sets the value of the sortOrder property.
      * 
-     * @param sortOrder
+     * @param value
+     *     allowed object is
+     *     {@link SortOrder }
+     *     
      */
-    public void setSortOrder(com.sforce.soap._2006._04.metadata.SortOrder sortOrder) {
-        this.sortOrder = sortOrder;
+    public void setSortOrder(SortOrder value) {
+        this.sortOrder = value;
     }
 
-
     /**
-     * Gets the territoryHierarchyFilter value for this Report.
+     * Gets the value of the territoryHierarchyFilter property.
      * 
-     * @return territoryHierarchyFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTerritoryHierarchyFilter() {
+    public String getTerritoryHierarchyFilter() {
         return territoryHierarchyFilter;
     }
 
-
     /**
-     * Sets the territoryHierarchyFilter value for this Report.
+     * Sets the value of the territoryHierarchyFilter property.
      * 
-     * @param territoryHierarchyFilter
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTerritoryHierarchyFilter(java.lang.String territoryHierarchyFilter) {
-        this.territoryHierarchyFilter = territoryHierarchyFilter;
+    public void setTerritoryHierarchyFilter(String value) {
+        this.territoryHierarchyFilter = value;
     }
 
-
     /**
-     * Gets the timeFrameFilter value for this Report.
+     * Gets the value of the timeFrameFilter property.
      * 
-     * @return timeFrameFilter
+     * @return
+     *     possible object is
+     *     {@link ReportTimeFrameFilter }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportTimeFrameFilter getTimeFrameFilter() {
+    public ReportTimeFrameFilter getTimeFrameFilter() {
         return timeFrameFilter;
     }
 
-
     /**
-     * Sets the timeFrameFilter value for this Report.
+     * Sets the value of the timeFrameFilter property.
      * 
-     * @param timeFrameFilter
+     * @param value
+     *     allowed object is
+     *     {@link ReportTimeFrameFilter }
+     *     
      */
-    public void setTimeFrameFilter(com.sforce.soap._2006._04.metadata.ReportTimeFrameFilter timeFrameFilter) {
-        this.timeFrameFilter = timeFrameFilter;
+    public void setTimeFrameFilter(ReportTimeFrameFilter value) {
+        this.timeFrameFilter = value;
     }
 
-
     /**
-     * Gets the userFilter value for this Report.
+     * Gets the value of the userFilter property.
      * 
-     * @return userFilter
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getUserFilter() {
+    public String getUserFilter() {
         return userFilter;
     }
 
-
     /**
-     * Sets the userFilter value for this Report.
+     * Sets the value of the userFilter property.
      * 
-     * @param userFilter
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setUserFilter(java.lang.String userFilter) {
-        this.userFilter = userFilter;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Report)) return false;
-        Report other = (Report) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.aggregates==null && other.getAggregates()==null) || 
-             (this.aggregates!=null &&
-              java.util.Arrays.equals(this.aggregates, other.getAggregates()))) &&
-            ((this.block==null && other.getBlock()==null) || 
-             (this.block!=null &&
-              java.util.Arrays.equals(this.block, other.getBlock()))) &&
-            ((this.blockInfo==null && other.getBlockInfo()==null) || 
-             (this.blockInfo!=null &&
-              this.blockInfo.equals(other.getBlockInfo()))) &&
-            ((this.buckets==null && other.getBuckets()==null) || 
-             (this.buckets!=null &&
-              java.util.Arrays.equals(this.buckets, other.getBuckets()))) &&
-            ((this.chart==null && other.getChart()==null) || 
-             (this.chart!=null &&
-              this.chart.equals(other.getChart()))) &&
-            ((this.colorRanges==null && other.getColorRanges()==null) || 
-             (this.colorRanges!=null &&
-              java.util.Arrays.equals(this.colorRanges, other.getColorRanges()))) &&
-            ((this.columns==null && other.getColumns()==null) || 
-             (this.columns!=null &&
-              java.util.Arrays.equals(this.columns, other.getColumns()))) &&
-            ((this.crossFilters==null && other.getCrossFilters()==null) || 
-             (this.crossFilters!=null &&
-              java.util.Arrays.equals(this.crossFilters, other.getCrossFilters()))) &&
-            ((this.currency==null && other.getCurrency()==null) || 
-             (this.currency!=null &&
-              this.currency.equals(other.getCurrency()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.division==null && other.getDivision()==null) || 
-             (this.division!=null &&
-              this.division.equals(other.getDivision()))) &&
-            ((this.filter==null && other.getFilter()==null) || 
-             (this.filter!=null &&
-              this.filter.equals(other.getFilter()))) &&
-            ((this.format==null && other.getFormat()==null) || 
-             (this.format!=null &&
-              this.format.equals(other.getFormat()))) &&
-            ((this.groupingsAcross==null && other.getGroupingsAcross()==null) || 
-             (this.groupingsAcross!=null &&
-              java.util.Arrays.equals(this.groupingsAcross, other.getGroupingsAcross()))) &&
-            ((this.groupingsDown==null && other.getGroupingsDown()==null) || 
-             (this.groupingsDown!=null &&
-              java.util.Arrays.equals(this.groupingsDown, other.getGroupingsDown()))) &&
-            ((this.historicalSelector==null && other.getHistoricalSelector()==null) || 
-             (this.historicalSelector!=null &&
-              java.util.Arrays.equals(this.historicalSelector, other.getHistoricalSelector()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.params==null && other.getParams()==null) || 
-             (this.params!=null &&
-              java.util.Arrays.equals(this.params, other.getParams()))) &&
-            ((this.reportType==null && other.getReportType()==null) || 
-             (this.reportType!=null &&
-              this.reportType.equals(other.getReportType()))) &&
-            ((this.roleHierarchyFilter==null && other.getRoleHierarchyFilter()==null) || 
-             (this.roleHierarchyFilter!=null &&
-              this.roleHierarchyFilter.equals(other.getRoleHierarchyFilter()))) &&
-            ((this.rowLimit==null && other.getRowLimit()==null) || 
-             (this.rowLimit!=null &&
-              this.rowLimit.equals(other.getRowLimit()))) &&
-            ((this.scope==null && other.getScope()==null) || 
-             (this.scope!=null &&
-              this.scope.equals(other.getScope()))) &&
-            ((this.showCurrentDate==null && other.getShowCurrentDate()==null) || 
-             (this.showCurrentDate!=null &&
-              this.showCurrentDate.equals(other.getShowCurrentDate()))) &&
-            ((this.showDetails==null && other.getShowDetails()==null) || 
-             (this.showDetails!=null &&
-              this.showDetails.equals(other.getShowDetails()))) &&
-            ((this.sortColumn==null && other.getSortColumn()==null) || 
-             (this.sortColumn!=null &&
-              this.sortColumn.equals(other.getSortColumn()))) &&
-            ((this.sortOrder==null && other.getSortOrder()==null) || 
-             (this.sortOrder!=null &&
-              this.sortOrder.equals(other.getSortOrder()))) &&
-            ((this.territoryHierarchyFilter==null && other.getTerritoryHierarchyFilter()==null) || 
-             (this.territoryHierarchyFilter!=null &&
-              this.territoryHierarchyFilter.equals(other.getTerritoryHierarchyFilter()))) &&
-            ((this.timeFrameFilter==null && other.getTimeFrameFilter()==null) || 
-             (this.timeFrameFilter!=null &&
-              this.timeFrameFilter.equals(other.getTimeFrameFilter()))) &&
-            ((this.userFilter==null && other.getUserFilter()==null) || 
-             (this.userFilter!=null &&
-              this.userFilter.equals(other.getUserFilter())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAggregates() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getAggregates());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getAggregates(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getBlock() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getBlock());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getBlock(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getBlockInfo() != null) {
-            _hashCode += getBlockInfo().hashCode();
-        }
-        if (getBuckets() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getBuckets());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getBuckets(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getChart() != null) {
-            _hashCode += getChart().hashCode();
-        }
-        if (getColorRanges() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getColorRanges());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getColorRanges(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getColumns() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getColumns());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getColumns(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getCrossFilters() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCrossFilters());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCrossFilters(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getCurrency() != null) {
-            _hashCode += getCurrency().hashCode();
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getDivision() != null) {
-            _hashCode += getDivision().hashCode();
-        }
-        if (getFilter() != null) {
-            _hashCode += getFilter().hashCode();
-        }
-        if (getFormat() != null) {
-            _hashCode += getFormat().hashCode();
-        }
-        if (getGroupingsAcross() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getGroupingsAcross());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getGroupingsAcross(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getGroupingsDown() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getGroupingsDown());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getGroupingsDown(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getHistoricalSelector() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getHistoricalSelector());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getHistoricalSelector(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getParams() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getParams());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getParams(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getReportType() != null) {
-            _hashCode += getReportType().hashCode();
-        }
-        if (getRoleHierarchyFilter() != null) {
-            _hashCode += getRoleHierarchyFilter().hashCode();
-        }
-        if (getRowLimit() != null) {
-            _hashCode += getRowLimit().hashCode();
-        }
-        if (getScope() != null) {
-            _hashCode += getScope().hashCode();
-        }
-        if (getShowCurrentDate() != null) {
-            _hashCode += getShowCurrentDate().hashCode();
-        }
-        if (getShowDetails() != null) {
-            _hashCode += getShowDetails().hashCode();
-        }
-        if (getSortColumn() != null) {
-            _hashCode += getSortColumn().hashCode();
-        }
-        if (getSortOrder() != null) {
-            _hashCode += getSortOrder().hashCode();
-        }
-        if (getTerritoryHierarchyFilter() != null) {
-            _hashCode += getTerritoryHierarchyFilter().hashCode();
-        }
-        if (getTimeFrameFilter() != null) {
-            _hashCode += getTimeFrameFilter().hashCode();
-        }
-        if (getUserFilter() != null) {
-            _hashCode += getUserFilter().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Report.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Report"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("aggregates");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "aggregates"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportAggregate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("block");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "block"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Report"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("blockInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "blockInfo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportBlockInfo"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("buckets");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "buckets"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportBucketField"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chart");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chart"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportChart"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("colorRanges");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "colorRanges"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportColorRange"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("columns");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "columns"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportColumn"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("crossFilters");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "crossFilters"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportCrossFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("currency");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "currency"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CurrencyIsoCode"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("division");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "division"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("filter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "filter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("format");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "format"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportFormat"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("groupingsAcross");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "groupingsAcross"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportGrouping"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("groupingsDown");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "groupingsDown"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportGrouping"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("historicalSelector");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "historicalSelector"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "snapshot"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("params");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "params"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportParam"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("reportType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "reportType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("roleHierarchyFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "roleHierarchyFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("rowLimit");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "rowLimit"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("scope");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "scope"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showCurrentDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showCurrentDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showDetails");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showDetails"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortColumn");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortColumn"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sortOrder");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sortOrder"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SortOrder"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("territoryHierarchyFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "territoryHierarchyFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("timeFrameFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "timeFrameFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportTimeFrameFilter"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userFilter");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "userFilter"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setUserFilter(String value) {
+        this.userFilter = value;
     }
 
 }

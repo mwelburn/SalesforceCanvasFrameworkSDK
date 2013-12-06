@@ -1,392 +1,265 @@
-/**
- * ReportBucketField.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ReportBucketField  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ReportBucketFieldType bucketType;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String developerName;
 
-    private java.lang.String masterLabel;
+/**
+ * <p>Java class for ReportBucketField complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ReportBucketField">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="bucketType" type="{http://soap.sforce.com/2006/04/metadata}ReportBucketFieldType"/>
+ *         &lt;element name="developerName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="masterLabel" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="nullTreatment" type="{http://soap.sforce.com/2006/04/metadata}ReportBucketFieldNullTreatment" minOccurs="0"/>
+ *         &lt;element name="otherBucketLabel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="sourceColumnName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="useOther" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="values" type="{http://soap.sforce.com/2006/04/metadata}ReportBucketFieldValue" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ReportBucketField", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "bucketType",
+    "developerName",
+    "masterLabel",
+    "nullTreatment",
+    "otherBucketLabel",
+    "sourceColumnName",
+    "useOther",
+    "values"
+})
+public class ReportBucketField {
 
-    private com.sforce.soap._2006._04.metadata.ReportBucketFieldNullTreatment nullTreatment;
-
-    private java.lang.String otherBucketLabel;
-
-    private java.lang.String sourceColumnName;
-
-    private java.lang.Boolean useOther;
-
-    private com.sforce.soap._2006._04.metadata.ReportBucketFieldValue[] values;
-
-    public ReportBucketField() {
-    }
-
-    public ReportBucketField(
-           com.sforce.soap._2006._04.metadata.ReportBucketFieldType bucketType,
-           java.lang.String developerName,
-           java.lang.String masterLabel,
-           com.sforce.soap._2006._04.metadata.ReportBucketFieldNullTreatment nullTreatment,
-           java.lang.String otherBucketLabel,
-           java.lang.String sourceColumnName,
-           java.lang.Boolean useOther,
-           com.sforce.soap._2006._04.metadata.ReportBucketFieldValue[] values) {
-           this.bucketType = bucketType;
-           this.developerName = developerName;
-           this.masterLabel = masterLabel;
-           this.nullTreatment = nullTreatment;
-           this.otherBucketLabel = otherBucketLabel;
-           this.sourceColumnName = sourceColumnName;
-           this.useOther = useOther;
-           this.values = values;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected ReportBucketFieldType bucketType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String developerName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String masterLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ReportBucketFieldNullTreatment nullTreatment;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String otherBucketLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String sourceColumnName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean useOther;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<ReportBucketFieldValue> values;
 
     /**
-     * Gets the bucketType value for this ReportBucketField.
+     * Gets the value of the bucketType property.
      * 
-     * @return bucketType
+     * @return
+     *     possible object is
+     *     {@link ReportBucketFieldType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportBucketFieldType getBucketType() {
+    public ReportBucketFieldType getBucketType() {
         return bucketType;
     }
 
-
     /**
-     * Sets the bucketType value for this ReportBucketField.
+     * Sets the value of the bucketType property.
      * 
-     * @param bucketType
+     * @param value
+     *     allowed object is
+     *     {@link ReportBucketFieldType }
+     *     
      */
-    public void setBucketType(com.sforce.soap._2006._04.metadata.ReportBucketFieldType bucketType) {
-        this.bucketType = bucketType;
+    public void setBucketType(ReportBucketFieldType value) {
+        this.bucketType = value;
     }
 
-
     /**
-     * Gets the developerName value for this ReportBucketField.
+     * Gets the value of the developerName property.
      * 
-     * @return developerName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDeveloperName() {
+    public String getDeveloperName() {
         return developerName;
     }
 
-
     /**
-     * Sets the developerName value for this ReportBucketField.
+     * Sets the value of the developerName property.
      * 
-     * @param developerName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDeveloperName(java.lang.String developerName) {
-        this.developerName = developerName;
+    public void setDeveloperName(String value) {
+        this.developerName = value;
     }
 
-
     /**
-     * Gets the masterLabel value for this ReportBucketField.
+     * Gets the value of the masterLabel property.
      * 
-     * @return masterLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMasterLabel() {
+    public String getMasterLabel() {
         return masterLabel;
     }
 
-
     /**
-     * Sets the masterLabel value for this ReportBucketField.
+     * Sets the value of the masterLabel property.
      * 
-     * @param masterLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMasterLabel(java.lang.String masterLabel) {
-        this.masterLabel = masterLabel;
+    public void setMasterLabel(String value) {
+        this.masterLabel = value;
     }
 
-
     /**
-     * Gets the nullTreatment value for this ReportBucketField.
+     * Gets the value of the nullTreatment property.
      * 
-     * @return nullTreatment
+     * @return
+     *     possible object is
+     *     {@link ReportBucketFieldNullTreatment }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ReportBucketFieldNullTreatment getNullTreatment() {
+    public ReportBucketFieldNullTreatment getNullTreatment() {
         return nullTreatment;
     }
 
-
     /**
-     * Sets the nullTreatment value for this ReportBucketField.
+     * Sets the value of the nullTreatment property.
      * 
-     * @param nullTreatment
+     * @param value
+     *     allowed object is
+     *     {@link ReportBucketFieldNullTreatment }
+     *     
      */
-    public void setNullTreatment(com.sforce.soap._2006._04.metadata.ReportBucketFieldNullTreatment nullTreatment) {
-        this.nullTreatment = nullTreatment;
+    public void setNullTreatment(ReportBucketFieldNullTreatment value) {
+        this.nullTreatment = value;
     }
 
-
     /**
-     * Gets the otherBucketLabel value for this ReportBucketField.
+     * Gets the value of the otherBucketLabel property.
      * 
-     * @return otherBucketLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOtherBucketLabel() {
+    public String getOtherBucketLabel() {
         return otherBucketLabel;
     }
 
-
     /**
-     * Sets the otherBucketLabel value for this ReportBucketField.
+     * Sets the value of the otherBucketLabel property.
      * 
-     * @param otherBucketLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOtherBucketLabel(java.lang.String otherBucketLabel) {
-        this.otherBucketLabel = otherBucketLabel;
+    public void setOtherBucketLabel(String value) {
+        this.otherBucketLabel = value;
     }
 
-
     /**
-     * Gets the sourceColumnName value for this ReportBucketField.
+     * Gets the value of the sourceColumnName property.
      * 
-     * @return sourceColumnName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSourceColumnName() {
+    public String getSourceColumnName() {
         return sourceColumnName;
     }
 
-
     /**
-     * Sets the sourceColumnName value for this ReportBucketField.
+     * Sets the value of the sourceColumnName property.
      * 
-     * @param sourceColumnName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSourceColumnName(java.lang.String sourceColumnName) {
-        this.sourceColumnName = sourceColumnName;
+    public void setSourceColumnName(String value) {
+        this.sourceColumnName = value;
     }
 
-
     /**
-     * Gets the useOther value for this ReportBucketField.
+     * Gets the value of the useOther property.
      * 
-     * @return useOther
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getUseOther() {
+    public Boolean isUseOther() {
         return useOther;
     }
 
-
     /**
-     * Sets the useOther value for this ReportBucketField.
+     * Sets the value of the useOther property.
      * 
-     * @param useOther
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setUseOther(java.lang.Boolean useOther) {
-        this.useOther = useOther;
+    public void setUseOther(Boolean value) {
+        this.useOther = value;
     }
 
-
     /**
-     * Gets the values value for this ReportBucketField.
+     * Gets the value of the values property.
      * 
-     * @return values
-     */
-    public com.sforce.soap._2006._04.metadata.ReportBucketFieldValue[] getValues() {
-        return values;
-    }
-
-
-    /**
-     * Sets the values value for this ReportBucketField.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the values property.
      * 
-     * @param values
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getValues().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ReportBucketFieldValue }
+     * 
+     * 
      */
-    public void setValues(com.sforce.soap._2006._04.metadata.ReportBucketFieldValue[] values) {
-        this.values = values;
-    }
-
-    public com.sforce.soap._2006._04.metadata.ReportBucketFieldValue getValues(int i) {
-        return this.values[i];
-    }
-
-    public void setValues(int i, com.sforce.soap._2006._04.metadata.ReportBucketFieldValue _value) {
-        this.values[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ReportBucketField)) return false;
-        ReportBucketField other = (ReportBucketField) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<ReportBucketFieldValue> getValues() {
+        if (values == null) {
+            values = new ArrayList<ReportBucketFieldValue>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.bucketType==null && other.getBucketType()==null) || 
-             (this.bucketType!=null &&
-              this.bucketType.equals(other.getBucketType()))) &&
-            ((this.developerName==null && other.getDeveloperName()==null) || 
-             (this.developerName!=null &&
-              this.developerName.equals(other.getDeveloperName()))) &&
-            ((this.masterLabel==null && other.getMasterLabel()==null) || 
-             (this.masterLabel!=null &&
-              this.masterLabel.equals(other.getMasterLabel()))) &&
-            ((this.nullTreatment==null && other.getNullTreatment()==null) || 
-             (this.nullTreatment!=null &&
-              this.nullTreatment.equals(other.getNullTreatment()))) &&
-            ((this.otherBucketLabel==null && other.getOtherBucketLabel()==null) || 
-             (this.otherBucketLabel!=null &&
-              this.otherBucketLabel.equals(other.getOtherBucketLabel()))) &&
-            ((this.sourceColumnName==null && other.getSourceColumnName()==null) || 
-             (this.sourceColumnName!=null &&
-              this.sourceColumnName.equals(other.getSourceColumnName()))) &&
-            ((this.useOther==null && other.getUseOther()==null) || 
-             (this.useOther!=null &&
-              this.useOther.equals(other.getUseOther()))) &&
-            ((this.values==null && other.getValues()==null) || 
-             (this.values!=null &&
-              java.util.Arrays.equals(this.values, other.getValues())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getBucketType() != null) {
-            _hashCode += getBucketType().hashCode();
-        }
-        if (getDeveloperName() != null) {
-            _hashCode += getDeveloperName().hashCode();
-        }
-        if (getMasterLabel() != null) {
-            _hashCode += getMasterLabel().hashCode();
-        }
-        if (getNullTreatment() != null) {
-            _hashCode += getNullTreatment().hashCode();
-        }
-        if (getOtherBucketLabel() != null) {
-            _hashCode += getOtherBucketLabel().hashCode();
-        }
-        if (getSourceColumnName() != null) {
-            _hashCode += getSourceColumnName().hashCode();
-        }
-        if (getUseOther() != null) {
-            _hashCode += getUseOther().hashCode();
-        }
-        if (getValues() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getValues());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getValues(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ReportBucketField.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportBucketField"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("bucketType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "bucketType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportBucketFieldType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("developerName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "developerName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("masterLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "masterLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("nullTreatment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "nullTreatment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportBucketFieldNullTreatment"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("otherBucketLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "otherBucketLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sourceColumnName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sourceColumnName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("useOther");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "useOther"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("values");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "values"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ReportBucketFieldValue"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.values;
     }
 
 }

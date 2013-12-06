@@ -1,1048 +1,764 @@
-/**
- * CaseSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CaseSettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String caseAssignNotificationTemplate;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String caseCloseNotificationTemplate;
 
-    private java.lang.String caseCommentNotificationTemplate;
+/**
+ * <p>Java class for CaseSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CaseSettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="caseAssignNotificationTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="caseCloseNotificationTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="caseCommentNotificationTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="caseCreateNotificationTemplate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="closeCaseThroughStatusChange" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="defaultCaseOwner" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="defaultCaseOwnerType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="defaultCaseUser" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="emailToCase" type="{http://soap.sforce.com/2006/04/metadata}EmailToCaseSettings" minOccurs="0"/>
+ *         &lt;element name="enableCaseFeed" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableDraftEmails" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableEarlyEscalationRuleTriggers" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableNewEmailDefaultTemplate" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableSuggestedArticlesApplication" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableSuggestedArticlesCustomerPortal" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableSuggestedArticlesPartnerPortal" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableSuggestedSolutions" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="keepRecordTypeOnAssignmentRule" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="newEmailDefaultTemplateClass" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="notifyContactOnCaseComment" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="notifyDefaultCaseOwner" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="notifyOwnerOnCaseComment" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="notifyOwnerOnCaseOwnerChange" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showFewerCloseActions" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="useSystemEmailAddress" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="webToCase" type="{http://soap.sforce.com/2006/04/metadata}WebToCaseSettings" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CaseSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "caseAssignNotificationTemplate",
+    "caseCloseNotificationTemplate",
+    "caseCommentNotificationTemplate",
+    "caseCreateNotificationTemplate",
+    "closeCaseThroughStatusChange",
+    "defaultCaseOwner",
+    "defaultCaseOwnerType",
+    "defaultCaseUser",
+    "emailToCase",
+    "enableCaseFeed",
+    "enableDraftEmails",
+    "enableEarlyEscalationRuleTriggers",
+    "enableNewEmailDefaultTemplate",
+    "enableSuggestedArticlesApplication",
+    "enableSuggestedArticlesCustomerPortal",
+    "enableSuggestedArticlesPartnerPortal",
+    "enableSuggestedSolutions",
+    "keepRecordTypeOnAssignmentRule",
+    "newEmailDefaultTemplateClass",
+    "notifyContactOnCaseComment",
+    "notifyDefaultCaseOwner",
+    "notifyOwnerOnCaseComment",
+    "notifyOwnerOnCaseOwnerChange",
+    "showFewerCloseActions",
+    "useSystemEmailAddress",
+    "webToCase"
+})
+public class CaseSettings
+    extends Metadata
+{
 
-    private java.lang.String caseCreateNotificationTemplate;
-
-    private java.lang.Boolean closeCaseThroughStatusChange;
-
-    private java.lang.String defaultCaseOwner;
-
-    private java.lang.String defaultCaseOwnerType;
-
-    private java.lang.String defaultCaseUser;
-
-    private com.sforce.soap._2006._04.metadata.EmailToCaseSettings emailToCase;
-
-    private java.lang.Boolean enableCaseFeed;
-
-    private java.lang.Boolean enableDraftEmails;
-
-    private java.lang.Boolean enableEarlyEscalationRuleTriggers;
-
-    private java.lang.Boolean enableNewEmailDefaultTemplate;
-
-    private java.lang.Boolean enableSuggestedArticlesApplication;
-
-    private java.lang.Boolean enableSuggestedArticlesCustomerPortal;
-
-    private java.lang.Boolean enableSuggestedArticlesPartnerPortal;
-
-    private java.lang.Boolean enableSuggestedSolutions;
-
-    private java.lang.Boolean keepRecordTypeOnAssignmentRule;
-
-    private java.lang.String newEmailDefaultTemplateClass;
-
-    private java.lang.Boolean notifyContactOnCaseComment;
-
-    private java.lang.Boolean notifyDefaultCaseOwner;
-
-    private java.lang.Boolean notifyOwnerOnCaseComment;
-
-    private java.lang.Boolean notifyOwnerOnCaseOwnerChange;
-
-    private java.lang.Boolean showFewerCloseActions;
-
-    private java.lang.Boolean useSystemEmailAddress;
-
-    private com.sforce.soap._2006._04.metadata.WebToCaseSettings webToCase;
-
-    public CaseSettings() {
-    }
-
-    public CaseSettings(
-           java.lang.String fullName,
-           java.lang.String caseAssignNotificationTemplate,
-           java.lang.String caseCloseNotificationTemplate,
-           java.lang.String caseCommentNotificationTemplate,
-           java.lang.String caseCreateNotificationTemplate,
-           java.lang.Boolean closeCaseThroughStatusChange,
-           java.lang.String defaultCaseOwner,
-           java.lang.String defaultCaseOwnerType,
-           java.lang.String defaultCaseUser,
-           com.sforce.soap._2006._04.metadata.EmailToCaseSettings emailToCase,
-           java.lang.Boolean enableCaseFeed,
-           java.lang.Boolean enableDraftEmails,
-           java.lang.Boolean enableEarlyEscalationRuleTriggers,
-           java.lang.Boolean enableNewEmailDefaultTemplate,
-           java.lang.Boolean enableSuggestedArticlesApplication,
-           java.lang.Boolean enableSuggestedArticlesCustomerPortal,
-           java.lang.Boolean enableSuggestedArticlesPartnerPortal,
-           java.lang.Boolean enableSuggestedSolutions,
-           java.lang.Boolean keepRecordTypeOnAssignmentRule,
-           java.lang.String newEmailDefaultTemplateClass,
-           java.lang.Boolean notifyContactOnCaseComment,
-           java.lang.Boolean notifyDefaultCaseOwner,
-           java.lang.Boolean notifyOwnerOnCaseComment,
-           java.lang.Boolean notifyOwnerOnCaseOwnerChange,
-           java.lang.Boolean showFewerCloseActions,
-           java.lang.Boolean useSystemEmailAddress,
-           com.sforce.soap._2006._04.metadata.WebToCaseSettings webToCase) {
-        super(
-            fullName);
-        this.caseAssignNotificationTemplate = caseAssignNotificationTemplate;
-        this.caseCloseNotificationTemplate = caseCloseNotificationTemplate;
-        this.caseCommentNotificationTemplate = caseCommentNotificationTemplate;
-        this.caseCreateNotificationTemplate = caseCreateNotificationTemplate;
-        this.closeCaseThroughStatusChange = closeCaseThroughStatusChange;
-        this.defaultCaseOwner = defaultCaseOwner;
-        this.defaultCaseOwnerType = defaultCaseOwnerType;
-        this.defaultCaseUser = defaultCaseUser;
-        this.emailToCase = emailToCase;
-        this.enableCaseFeed = enableCaseFeed;
-        this.enableDraftEmails = enableDraftEmails;
-        this.enableEarlyEscalationRuleTriggers = enableEarlyEscalationRuleTriggers;
-        this.enableNewEmailDefaultTemplate = enableNewEmailDefaultTemplate;
-        this.enableSuggestedArticlesApplication = enableSuggestedArticlesApplication;
-        this.enableSuggestedArticlesCustomerPortal = enableSuggestedArticlesCustomerPortal;
-        this.enableSuggestedArticlesPartnerPortal = enableSuggestedArticlesPartnerPortal;
-        this.enableSuggestedSolutions = enableSuggestedSolutions;
-        this.keepRecordTypeOnAssignmentRule = keepRecordTypeOnAssignmentRule;
-        this.newEmailDefaultTemplateClass = newEmailDefaultTemplateClass;
-        this.notifyContactOnCaseComment = notifyContactOnCaseComment;
-        this.notifyDefaultCaseOwner = notifyDefaultCaseOwner;
-        this.notifyOwnerOnCaseComment = notifyOwnerOnCaseComment;
-        this.notifyOwnerOnCaseOwnerChange = notifyOwnerOnCaseOwnerChange;
-        this.showFewerCloseActions = showFewerCloseActions;
-        this.useSystemEmailAddress = useSystemEmailAddress;
-        this.webToCase = webToCase;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String caseAssignNotificationTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String caseCloseNotificationTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String caseCommentNotificationTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String caseCreateNotificationTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean closeCaseThroughStatusChange;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultCaseOwner;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultCaseOwnerType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultCaseUser;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected EmailToCaseSettings emailToCase;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableCaseFeed;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableDraftEmails;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableEarlyEscalationRuleTriggers;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableNewEmailDefaultTemplate;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableSuggestedArticlesApplication;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableSuggestedArticlesCustomerPortal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableSuggestedArticlesPartnerPortal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableSuggestedSolutions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean keepRecordTypeOnAssignmentRule;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String newEmailDefaultTemplateClass;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean notifyContactOnCaseComment;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean notifyDefaultCaseOwner;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean notifyOwnerOnCaseComment;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean notifyOwnerOnCaseOwnerChange;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showFewerCloseActions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean useSystemEmailAddress;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected WebToCaseSettings webToCase;
 
     /**
-     * Gets the caseAssignNotificationTemplate value for this CaseSettings.
+     * Gets the value of the caseAssignNotificationTemplate property.
      * 
-     * @return caseAssignNotificationTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCaseAssignNotificationTemplate() {
+    public String getCaseAssignNotificationTemplate() {
         return caseAssignNotificationTemplate;
     }
 
-
     /**
-     * Sets the caseAssignNotificationTemplate value for this CaseSettings.
+     * Sets the value of the caseAssignNotificationTemplate property.
      * 
-     * @param caseAssignNotificationTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCaseAssignNotificationTemplate(java.lang.String caseAssignNotificationTemplate) {
-        this.caseAssignNotificationTemplate = caseAssignNotificationTemplate;
+    public void setCaseAssignNotificationTemplate(String value) {
+        this.caseAssignNotificationTemplate = value;
     }
 
-
     /**
-     * Gets the caseCloseNotificationTemplate value for this CaseSettings.
+     * Gets the value of the caseCloseNotificationTemplate property.
      * 
-     * @return caseCloseNotificationTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCaseCloseNotificationTemplate() {
+    public String getCaseCloseNotificationTemplate() {
         return caseCloseNotificationTemplate;
     }
 
-
     /**
-     * Sets the caseCloseNotificationTemplate value for this CaseSettings.
+     * Sets the value of the caseCloseNotificationTemplate property.
      * 
-     * @param caseCloseNotificationTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCaseCloseNotificationTemplate(java.lang.String caseCloseNotificationTemplate) {
-        this.caseCloseNotificationTemplate = caseCloseNotificationTemplate;
+    public void setCaseCloseNotificationTemplate(String value) {
+        this.caseCloseNotificationTemplate = value;
     }
 
-
     /**
-     * Gets the caseCommentNotificationTemplate value for this CaseSettings.
+     * Gets the value of the caseCommentNotificationTemplate property.
      * 
-     * @return caseCommentNotificationTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCaseCommentNotificationTemplate() {
+    public String getCaseCommentNotificationTemplate() {
         return caseCommentNotificationTemplate;
     }
 
-
     /**
-     * Sets the caseCommentNotificationTemplate value for this CaseSettings.
+     * Sets the value of the caseCommentNotificationTemplate property.
      * 
-     * @param caseCommentNotificationTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCaseCommentNotificationTemplate(java.lang.String caseCommentNotificationTemplate) {
-        this.caseCommentNotificationTemplate = caseCommentNotificationTemplate;
+    public void setCaseCommentNotificationTemplate(String value) {
+        this.caseCommentNotificationTemplate = value;
     }
 
-
     /**
-     * Gets the caseCreateNotificationTemplate value for this CaseSettings.
+     * Gets the value of the caseCreateNotificationTemplate property.
      * 
-     * @return caseCreateNotificationTemplate
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCaseCreateNotificationTemplate() {
+    public String getCaseCreateNotificationTemplate() {
         return caseCreateNotificationTemplate;
     }
 
-
     /**
-     * Sets the caseCreateNotificationTemplate value for this CaseSettings.
+     * Sets the value of the caseCreateNotificationTemplate property.
      * 
-     * @param caseCreateNotificationTemplate
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCaseCreateNotificationTemplate(java.lang.String caseCreateNotificationTemplate) {
-        this.caseCreateNotificationTemplate = caseCreateNotificationTemplate;
+    public void setCaseCreateNotificationTemplate(String value) {
+        this.caseCreateNotificationTemplate = value;
     }
 
-
     /**
-     * Gets the closeCaseThroughStatusChange value for this CaseSettings.
+     * Gets the value of the closeCaseThroughStatusChange property.
      * 
-     * @return closeCaseThroughStatusChange
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getCloseCaseThroughStatusChange() {
+    public Boolean isCloseCaseThroughStatusChange() {
         return closeCaseThroughStatusChange;
     }
 
-
     /**
-     * Sets the closeCaseThroughStatusChange value for this CaseSettings.
+     * Sets the value of the closeCaseThroughStatusChange property.
      * 
-     * @param closeCaseThroughStatusChange
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setCloseCaseThroughStatusChange(java.lang.Boolean closeCaseThroughStatusChange) {
-        this.closeCaseThroughStatusChange = closeCaseThroughStatusChange;
+    public void setCloseCaseThroughStatusChange(Boolean value) {
+        this.closeCaseThroughStatusChange = value;
     }
 
-
     /**
-     * Gets the defaultCaseOwner value for this CaseSettings.
+     * Gets the value of the defaultCaseOwner property.
      * 
-     * @return defaultCaseOwner
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultCaseOwner() {
+    public String getDefaultCaseOwner() {
         return defaultCaseOwner;
     }
 
-
     /**
-     * Sets the defaultCaseOwner value for this CaseSettings.
+     * Sets the value of the defaultCaseOwner property.
      * 
-     * @param defaultCaseOwner
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultCaseOwner(java.lang.String defaultCaseOwner) {
-        this.defaultCaseOwner = defaultCaseOwner;
+    public void setDefaultCaseOwner(String value) {
+        this.defaultCaseOwner = value;
     }
 
-
     /**
-     * Gets the defaultCaseOwnerType value for this CaseSettings.
+     * Gets the value of the defaultCaseOwnerType property.
      * 
-     * @return defaultCaseOwnerType
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultCaseOwnerType() {
+    public String getDefaultCaseOwnerType() {
         return defaultCaseOwnerType;
     }
 
-
     /**
-     * Sets the defaultCaseOwnerType value for this CaseSettings.
+     * Sets the value of the defaultCaseOwnerType property.
      * 
-     * @param defaultCaseOwnerType
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultCaseOwnerType(java.lang.String defaultCaseOwnerType) {
-        this.defaultCaseOwnerType = defaultCaseOwnerType;
+    public void setDefaultCaseOwnerType(String value) {
+        this.defaultCaseOwnerType = value;
     }
 
-
     /**
-     * Gets the defaultCaseUser value for this CaseSettings.
+     * Gets the value of the defaultCaseUser property.
      * 
-     * @return defaultCaseUser
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultCaseUser() {
+    public String getDefaultCaseUser() {
         return defaultCaseUser;
     }
 
-
     /**
-     * Sets the defaultCaseUser value for this CaseSettings.
+     * Sets the value of the defaultCaseUser property.
      * 
-     * @param defaultCaseUser
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultCaseUser(java.lang.String defaultCaseUser) {
-        this.defaultCaseUser = defaultCaseUser;
+    public void setDefaultCaseUser(String value) {
+        this.defaultCaseUser = value;
     }
 
-
     /**
-     * Gets the emailToCase value for this CaseSettings.
+     * Gets the value of the emailToCase property.
      * 
-     * @return emailToCase
+     * @return
+     *     possible object is
+     *     {@link EmailToCaseSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.EmailToCaseSettings getEmailToCase() {
+    public EmailToCaseSettings getEmailToCase() {
         return emailToCase;
     }
 
-
     /**
-     * Sets the emailToCase value for this CaseSettings.
+     * Sets the value of the emailToCase property.
      * 
-     * @param emailToCase
+     * @param value
+     *     allowed object is
+     *     {@link EmailToCaseSettings }
+     *     
      */
-    public void setEmailToCase(com.sforce.soap._2006._04.metadata.EmailToCaseSettings emailToCase) {
-        this.emailToCase = emailToCase;
+    public void setEmailToCase(EmailToCaseSettings value) {
+        this.emailToCase = value;
     }
 
-
     /**
-     * Gets the enableCaseFeed value for this CaseSettings.
+     * Gets the value of the enableCaseFeed property.
      * 
-     * @return enableCaseFeed
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableCaseFeed() {
+    public Boolean isEnableCaseFeed() {
         return enableCaseFeed;
     }
 
-
     /**
-     * Sets the enableCaseFeed value for this CaseSettings.
+     * Sets the value of the enableCaseFeed property.
      * 
-     * @param enableCaseFeed
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableCaseFeed(java.lang.Boolean enableCaseFeed) {
-        this.enableCaseFeed = enableCaseFeed;
+    public void setEnableCaseFeed(Boolean value) {
+        this.enableCaseFeed = value;
     }
 
-
     /**
-     * Gets the enableDraftEmails value for this CaseSettings.
+     * Gets the value of the enableDraftEmails property.
      * 
-     * @return enableDraftEmails
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableDraftEmails() {
+    public Boolean isEnableDraftEmails() {
         return enableDraftEmails;
     }
 
-
     /**
-     * Sets the enableDraftEmails value for this CaseSettings.
+     * Sets the value of the enableDraftEmails property.
      * 
-     * @param enableDraftEmails
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableDraftEmails(java.lang.Boolean enableDraftEmails) {
-        this.enableDraftEmails = enableDraftEmails;
+    public void setEnableDraftEmails(Boolean value) {
+        this.enableDraftEmails = value;
     }
 
-
     /**
-     * Gets the enableEarlyEscalationRuleTriggers value for this CaseSettings.
+     * Gets the value of the enableEarlyEscalationRuleTriggers property.
      * 
-     * @return enableEarlyEscalationRuleTriggers
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableEarlyEscalationRuleTriggers() {
+    public Boolean isEnableEarlyEscalationRuleTriggers() {
         return enableEarlyEscalationRuleTriggers;
     }
 
-
     /**
-     * Sets the enableEarlyEscalationRuleTriggers value for this CaseSettings.
+     * Sets the value of the enableEarlyEscalationRuleTriggers property.
      * 
-     * @param enableEarlyEscalationRuleTriggers
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableEarlyEscalationRuleTriggers(java.lang.Boolean enableEarlyEscalationRuleTriggers) {
-        this.enableEarlyEscalationRuleTriggers = enableEarlyEscalationRuleTriggers;
+    public void setEnableEarlyEscalationRuleTriggers(Boolean value) {
+        this.enableEarlyEscalationRuleTriggers = value;
     }
 
-
     /**
-     * Gets the enableNewEmailDefaultTemplate value for this CaseSettings.
+     * Gets the value of the enableNewEmailDefaultTemplate property.
      * 
-     * @return enableNewEmailDefaultTemplate
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableNewEmailDefaultTemplate() {
+    public Boolean isEnableNewEmailDefaultTemplate() {
         return enableNewEmailDefaultTemplate;
     }
 
-
     /**
-     * Sets the enableNewEmailDefaultTemplate value for this CaseSettings.
+     * Sets the value of the enableNewEmailDefaultTemplate property.
      * 
-     * @param enableNewEmailDefaultTemplate
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableNewEmailDefaultTemplate(java.lang.Boolean enableNewEmailDefaultTemplate) {
-        this.enableNewEmailDefaultTemplate = enableNewEmailDefaultTemplate;
+    public void setEnableNewEmailDefaultTemplate(Boolean value) {
+        this.enableNewEmailDefaultTemplate = value;
     }
 
-
     /**
-     * Gets the enableSuggestedArticlesApplication value for this CaseSettings.
+     * Gets the value of the enableSuggestedArticlesApplication property.
      * 
-     * @return enableSuggestedArticlesApplication
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableSuggestedArticlesApplication() {
+    public Boolean isEnableSuggestedArticlesApplication() {
         return enableSuggestedArticlesApplication;
     }
 
-
     /**
-     * Sets the enableSuggestedArticlesApplication value for this CaseSettings.
+     * Sets the value of the enableSuggestedArticlesApplication property.
      * 
-     * @param enableSuggestedArticlesApplication
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableSuggestedArticlesApplication(java.lang.Boolean enableSuggestedArticlesApplication) {
-        this.enableSuggestedArticlesApplication = enableSuggestedArticlesApplication;
+    public void setEnableSuggestedArticlesApplication(Boolean value) {
+        this.enableSuggestedArticlesApplication = value;
     }
 
-
     /**
-     * Gets the enableSuggestedArticlesCustomerPortal value for this CaseSettings.
+     * Gets the value of the enableSuggestedArticlesCustomerPortal property.
      * 
-     * @return enableSuggestedArticlesCustomerPortal
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableSuggestedArticlesCustomerPortal() {
+    public Boolean isEnableSuggestedArticlesCustomerPortal() {
         return enableSuggestedArticlesCustomerPortal;
     }
 
-
     /**
-     * Sets the enableSuggestedArticlesCustomerPortal value for this CaseSettings.
+     * Sets the value of the enableSuggestedArticlesCustomerPortal property.
      * 
-     * @param enableSuggestedArticlesCustomerPortal
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableSuggestedArticlesCustomerPortal(java.lang.Boolean enableSuggestedArticlesCustomerPortal) {
-        this.enableSuggestedArticlesCustomerPortal = enableSuggestedArticlesCustomerPortal;
+    public void setEnableSuggestedArticlesCustomerPortal(Boolean value) {
+        this.enableSuggestedArticlesCustomerPortal = value;
     }
 
-
     /**
-     * Gets the enableSuggestedArticlesPartnerPortal value for this CaseSettings.
+     * Gets the value of the enableSuggestedArticlesPartnerPortal property.
      * 
-     * @return enableSuggestedArticlesPartnerPortal
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableSuggestedArticlesPartnerPortal() {
+    public Boolean isEnableSuggestedArticlesPartnerPortal() {
         return enableSuggestedArticlesPartnerPortal;
     }
 
-
     /**
-     * Sets the enableSuggestedArticlesPartnerPortal value for this CaseSettings.
+     * Sets the value of the enableSuggestedArticlesPartnerPortal property.
      * 
-     * @param enableSuggestedArticlesPartnerPortal
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableSuggestedArticlesPartnerPortal(java.lang.Boolean enableSuggestedArticlesPartnerPortal) {
-        this.enableSuggestedArticlesPartnerPortal = enableSuggestedArticlesPartnerPortal;
+    public void setEnableSuggestedArticlesPartnerPortal(Boolean value) {
+        this.enableSuggestedArticlesPartnerPortal = value;
     }
 
-
     /**
-     * Gets the enableSuggestedSolutions value for this CaseSettings.
+     * Gets the value of the enableSuggestedSolutions property.
      * 
-     * @return enableSuggestedSolutions
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableSuggestedSolutions() {
+    public Boolean isEnableSuggestedSolutions() {
         return enableSuggestedSolutions;
     }
 
-
     /**
-     * Sets the enableSuggestedSolutions value for this CaseSettings.
+     * Sets the value of the enableSuggestedSolutions property.
      * 
-     * @param enableSuggestedSolutions
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableSuggestedSolutions(java.lang.Boolean enableSuggestedSolutions) {
-        this.enableSuggestedSolutions = enableSuggestedSolutions;
+    public void setEnableSuggestedSolutions(Boolean value) {
+        this.enableSuggestedSolutions = value;
     }
 
-
     /**
-     * Gets the keepRecordTypeOnAssignmentRule value for this CaseSettings.
+     * Gets the value of the keepRecordTypeOnAssignmentRule property.
      * 
-     * @return keepRecordTypeOnAssignmentRule
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getKeepRecordTypeOnAssignmentRule() {
+    public Boolean isKeepRecordTypeOnAssignmentRule() {
         return keepRecordTypeOnAssignmentRule;
     }
 
-
     /**
-     * Sets the keepRecordTypeOnAssignmentRule value for this CaseSettings.
+     * Sets the value of the keepRecordTypeOnAssignmentRule property.
      * 
-     * @param keepRecordTypeOnAssignmentRule
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setKeepRecordTypeOnAssignmentRule(java.lang.Boolean keepRecordTypeOnAssignmentRule) {
-        this.keepRecordTypeOnAssignmentRule = keepRecordTypeOnAssignmentRule;
+    public void setKeepRecordTypeOnAssignmentRule(Boolean value) {
+        this.keepRecordTypeOnAssignmentRule = value;
     }
 
-
     /**
-     * Gets the newEmailDefaultTemplateClass value for this CaseSettings.
+     * Gets the value of the newEmailDefaultTemplateClass property.
      * 
-     * @return newEmailDefaultTemplateClass
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNewEmailDefaultTemplateClass() {
+    public String getNewEmailDefaultTemplateClass() {
         return newEmailDefaultTemplateClass;
     }
 
-
     /**
-     * Sets the newEmailDefaultTemplateClass value for this CaseSettings.
+     * Sets the value of the newEmailDefaultTemplateClass property.
      * 
-     * @param newEmailDefaultTemplateClass
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNewEmailDefaultTemplateClass(java.lang.String newEmailDefaultTemplateClass) {
-        this.newEmailDefaultTemplateClass = newEmailDefaultTemplateClass;
+    public void setNewEmailDefaultTemplateClass(String value) {
+        this.newEmailDefaultTemplateClass = value;
     }
 
-
     /**
-     * Gets the notifyContactOnCaseComment value for this CaseSettings.
+     * Gets the value of the notifyContactOnCaseComment property.
      * 
-     * @return notifyContactOnCaseComment
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getNotifyContactOnCaseComment() {
+    public Boolean isNotifyContactOnCaseComment() {
         return notifyContactOnCaseComment;
     }
 
-
     /**
-     * Sets the notifyContactOnCaseComment value for this CaseSettings.
+     * Sets the value of the notifyContactOnCaseComment property.
      * 
-     * @param notifyContactOnCaseComment
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setNotifyContactOnCaseComment(java.lang.Boolean notifyContactOnCaseComment) {
-        this.notifyContactOnCaseComment = notifyContactOnCaseComment;
+    public void setNotifyContactOnCaseComment(Boolean value) {
+        this.notifyContactOnCaseComment = value;
     }
 
-
     /**
-     * Gets the notifyDefaultCaseOwner value for this CaseSettings.
+     * Gets the value of the notifyDefaultCaseOwner property.
      * 
-     * @return notifyDefaultCaseOwner
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getNotifyDefaultCaseOwner() {
+    public Boolean isNotifyDefaultCaseOwner() {
         return notifyDefaultCaseOwner;
     }
 
-
     /**
-     * Sets the notifyDefaultCaseOwner value for this CaseSettings.
+     * Sets the value of the notifyDefaultCaseOwner property.
      * 
-     * @param notifyDefaultCaseOwner
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setNotifyDefaultCaseOwner(java.lang.Boolean notifyDefaultCaseOwner) {
-        this.notifyDefaultCaseOwner = notifyDefaultCaseOwner;
+    public void setNotifyDefaultCaseOwner(Boolean value) {
+        this.notifyDefaultCaseOwner = value;
     }
 
-
     /**
-     * Gets the notifyOwnerOnCaseComment value for this CaseSettings.
+     * Gets the value of the notifyOwnerOnCaseComment property.
      * 
-     * @return notifyOwnerOnCaseComment
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getNotifyOwnerOnCaseComment() {
+    public Boolean isNotifyOwnerOnCaseComment() {
         return notifyOwnerOnCaseComment;
     }
 
-
     /**
-     * Sets the notifyOwnerOnCaseComment value for this CaseSettings.
+     * Sets the value of the notifyOwnerOnCaseComment property.
      * 
-     * @param notifyOwnerOnCaseComment
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setNotifyOwnerOnCaseComment(java.lang.Boolean notifyOwnerOnCaseComment) {
-        this.notifyOwnerOnCaseComment = notifyOwnerOnCaseComment;
+    public void setNotifyOwnerOnCaseComment(Boolean value) {
+        this.notifyOwnerOnCaseComment = value;
     }
 
-
     /**
-     * Gets the notifyOwnerOnCaseOwnerChange value for this CaseSettings.
+     * Gets the value of the notifyOwnerOnCaseOwnerChange property.
      * 
-     * @return notifyOwnerOnCaseOwnerChange
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getNotifyOwnerOnCaseOwnerChange() {
+    public Boolean isNotifyOwnerOnCaseOwnerChange() {
         return notifyOwnerOnCaseOwnerChange;
     }
 
-
     /**
-     * Sets the notifyOwnerOnCaseOwnerChange value for this CaseSettings.
+     * Sets the value of the notifyOwnerOnCaseOwnerChange property.
      * 
-     * @param notifyOwnerOnCaseOwnerChange
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setNotifyOwnerOnCaseOwnerChange(java.lang.Boolean notifyOwnerOnCaseOwnerChange) {
-        this.notifyOwnerOnCaseOwnerChange = notifyOwnerOnCaseOwnerChange;
+    public void setNotifyOwnerOnCaseOwnerChange(Boolean value) {
+        this.notifyOwnerOnCaseOwnerChange = value;
     }
 
-
     /**
-     * Gets the showFewerCloseActions value for this CaseSettings.
+     * Gets the value of the showFewerCloseActions property.
      * 
-     * @return showFewerCloseActions
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowFewerCloseActions() {
+    public Boolean isShowFewerCloseActions() {
         return showFewerCloseActions;
     }
 
-
     /**
-     * Sets the showFewerCloseActions value for this CaseSettings.
+     * Sets the value of the showFewerCloseActions property.
      * 
-     * @param showFewerCloseActions
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowFewerCloseActions(java.lang.Boolean showFewerCloseActions) {
-        this.showFewerCloseActions = showFewerCloseActions;
+    public void setShowFewerCloseActions(Boolean value) {
+        this.showFewerCloseActions = value;
     }
 
-
     /**
-     * Gets the useSystemEmailAddress value for this CaseSettings.
+     * Gets the value of the useSystemEmailAddress property.
      * 
-     * @return useSystemEmailAddress
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getUseSystemEmailAddress() {
+    public Boolean isUseSystemEmailAddress() {
         return useSystemEmailAddress;
     }
 
-
     /**
-     * Sets the useSystemEmailAddress value for this CaseSettings.
+     * Sets the value of the useSystemEmailAddress property.
      * 
-     * @param useSystemEmailAddress
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setUseSystemEmailAddress(java.lang.Boolean useSystemEmailAddress) {
-        this.useSystemEmailAddress = useSystemEmailAddress;
+    public void setUseSystemEmailAddress(Boolean value) {
+        this.useSystemEmailAddress = value;
     }
 
-
     /**
-     * Gets the webToCase value for this CaseSettings.
+     * Gets the value of the webToCase property.
      * 
-     * @return webToCase
+     * @return
+     *     possible object is
+     *     {@link WebToCaseSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.WebToCaseSettings getWebToCase() {
+    public WebToCaseSettings getWebToCase() {
         return webToCase;
     }
 
-
     /**
-     * Sets the webToCase value for this CaseSettings.
+     * Sets the value of the webToCase property.
      * 
-     * @param webToCase
+     * @param value
+     *     allowed object is
+     *     {@link WebToCaseSettings }
+     *     
      */
-    public void setWebToCase(com.sforce.soap._2006._04.metadata.WebToCaseSettings webToCase) {
-        this.webToCase = webToCase;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CaseSettings)) return false;
-        CaseSettings other = (CaseSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.caseAssignNotificationTemplate==null && other.getCaseAssignNotificationTemplate()==null) || 
-             (this.caseAssignNotificationTemplate!=null &&
-              this.caseAssignNotificationTemplate.equals(other.getCaseAssignNotificationTemplate()))) &&
-            ((this.caseCloseNotificationTemplate==null && other.getCaseCloseNotificationTemplate()==null) || 
-             (this.caseCloseNotificationTemplate!=null &&
-              this.caseCloseNotificationTemplate.equals(other.getCaseCloseNotificationTemplate()))) &&
-            ((this.caseCommentNotificationTemplate==null && other.getCaseCommentNotificationTemplate()==null) || 
-             (this.caseCommentNotificationTemplate!=null &&
-              this.caseCommentNotificationTemplate.equals(other.getCaseCommentNotificationTemplate()))) &&
-            ((this.caseCreateNotificationTemplate==null && other.getCaseCreateNotificationTemplate()==null) || 
-             (this.caseCreateNotificationTemplate!=null &&
-              this.caseCreateNotificationTemplate.equals(other.getCaseCreateNotificationTemplate()))) &&
-            ((this.closeCaseThroughStatusChange==null && other.getCloseCaseThroughStatusChange()==null) || 
-             (this.closeCaseThroughStatusChange!=null &&
-              this.closeCaseThroughStatusChange.equals(other.getCloseCaseThroughStatusChange()))) &&
-            ((this.defaultCaseOwner==null && other.getDefaultCaseOwner()==null) || 
-             (this.defaultCaseOwner!=null &&
-              this.defaultCaseOwner.equals(other.getDefaultCaseOwner()))) &&
-            ((this.defaultCaseOwnerType==null && other.getDefaultCaseOwnerType()==null) || 
-             (this.defaultCaseOwnerType!=null &&
-              this.defaultCaseOwnerType.equals(other.getDefaultCaseOwnerType()))) &&
-            ((this.defaultCaseUser==null && other.getDefaultCaseUser()==null) || 
-             (this.defaultCaseUser!=null &&
-              this.defaultCaseUser.equals(other.getDefaultCaseUser()))) &&
-            ((this.emailToCase==null && other.getEmailToCase()==null) || 
-             (this.emailToCase!=null &&
-              this.emailToCase.equals(other.getEmailToCase()))) &&
-            ((this.enableCaseFeed==null && other.getEnableCaseFeed()==null) || 
-             (this.enableCaseFeed!=null &&
-              this.enableCaseFeed.equals(other.getEnableCaseFeed()))) &&
-            ((this.enableDraftEmails==null && other.getEnableDraftEmails()==null) || 
-             (this.enableDraftEmails!=null &&
-              this.enableDraftEmails.equals(other.getEnableDraftEmails()))) &&
-            ((this.enableEarlyEscalationRuleTriggers==null && other.getEnableEarlyEscalationRuleTriggers()==null) || 
-             (this.enableEarlyEscalationRuleTriggers!=null &&
-              this.enableEarlyEscalationRuleTriggers.equals(other.getEnableEarlyEscalationRuleTriggers()))) &&
-            ((this.enableNewEmailDefaultTemplate==null && other.getEnableNewEmailDefaultTemplate()==null) || 
-             (this.enableNewEmailDefaultTemplate!=null &&
-              this.enableNewEmailDefaultTemplate.equals(other.getEnableNewEmailDefaultTemplate()))) &&
-            ((this.enableSuggestedArticlesApplication==null && other.getEnableSuggestedArticlesApplication()==null) || 
-             (this.enableSuggestedArticlesApplication!=null &&
-              this.enableSuggestedArticlesApplication.equals(other.getEnableSuggestedArticlesApplication()))) &&
-            ((this.enableSuggestedArticlesCustomerPortal==null && other.getEnableSuggestedArticlesCustomerPortal()==null) || 
-             (this.enableSuggestedArticlesCustomerPortal!=null &&
-              this.enableSuggestedArticlesCustomerPortal.equals(other.getEnableSuggestedArticlesCustomerPortal()))) &&
-            ((this.enableSuggestedArticlesPartnerPortal==null && other.getEnableSuggestedArticlesPartnerPortal()==null) || 
-             (this.enableSuggestedArticlesPartnerPortal!=null &&
-              this.enableSuggestedArticlesPartnerPortal.equals(other.getEnableSuggestedArticlesPartnerPortal()))) &&
-            ((this.enableSuggestedSolutions==null && other.getEnableSuggestedSolutions()==null) || 
-             (this.enableSuggestedSolutions!=null &&
-              this.enableSuggestedSolutions.equals(other.getEnableSuggestedSolutions()))) &&
-            ((this.keepRecordTypeOnAssignmentRule==null && other.getKeepRecordTypeOnAssignmentRule()==null) || 
-             (this.keepRecordTypeOnAssignmentRule!=null &&
-              this.keepRecordTypeOnAssignmentRule.equals(other.getKeepRecordTypeOnAssignmentRule()))) &&
-            ((this.newEmailDefaultTemplateClass==null && other.getNewEmailDefaultTemplateClass()==null) || 
-             (this.newEmailDefaultTemplateClass!=null &&
-              this.newEmailDefaultTemplateClass.equals(other.getNewEmailDefaultTemplateClass()))) &&
-            ((this.notifyContactOnCaseComment==null && other.getNotifyContactOnCaseComment()==null) || 
-             (this.notifyContactOnCaseComment!=null &&
-              this.notifyContactOnCaseComment.equals(other.getNotifyContactOnCaseComment()))) &&
-            ((this.notifyDefaultCaseOwner==null && other.getNotifyDefaultCaseOwner()==null) || 
-             (this.notifyDefaultCaseOwner!=null &&
-              this.notifyDefaultCaseOwner.equals(other.getNotifyDefaultCaseOwner()))) &&
-            ((this.notifyOwnerOnCaseComment==null && other.getNotifyOwnerOnCaseComment()==null) || 
-             (this.notifyOwnerOnCaseComment!=null &&
-              this.notifyOwnerOnCaseComment.equals(other.getNotifyOwnerOnCaseComment()))) &&
-            ((this.notifyOwnerOnCaseOwnerChange==null && other.getNotifyOwnerOnCaseOwnerChange()==null) || 
-             (this.notifyOwnerOnCaseOwnerChange!=null &&
-              this.notifyOwnerOnCaseOwnerChange.equals(other.getNotifyOwnerOnCaseOwnerChange()))) &&
-            ((this.showFewerCloseActions==null && other.getShowFewerCloseActions()==null) || 
-             (this.showFewerCloseActions!=null &&
-              this.showFewerCloseActions.equals(other.getShowFewerCloseActions()))) &&
-            ((this.useSystemEmailAddress==null && other.getUseSystemEmailAddress()==null) || 
-             (this.useSystemEmailAddress!=null &&
-              this.useSystemEmailAddress.equals(other.getUseSystemEmailAddress()))) &&
-            ((this.webToCase==null && other.getWebToCase()==null) || 
-             (this.webToCase!=null &&
-              this.webToCase.equals(other.getWebToCase())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getCaseAssignNotificationTemplate() != null) {
-            _hashCode += getCaseAssignNotificationTemplate().hashCode();
-        }
-        if (getCaseCloseNotificationTemplate() != null) {
-            _hashCode += getCaseCloseNotificationTemplate().hashCode();
-        }
-        if (getCaseCommentNotificationTemplate() != null) {
-            _hashCode += getCaseCommentNotificationTemplate().hashCode();
-        }
-        if (getCaseCreateNotificationTemplate() != null) {
-            _hashCode += getCaseCreateNotificationTemplate().hashCode();
-        }
-        if (getCloseCaseThroughStatusChange() != null) {
-            _hashCode += getCloseCaseThroughStatusChange().hashCode();
-        }
-        if (getDefaultCaseOwner() != null) {
-            _hashCode += getDefaultCaseOwner().hashCode();
-        }
-        if (getDefaultCaseOwnerType() != null) {
-            _hashCode += getDefaultCaseOwnerType().hashCode();
-        }
-        if (getDefaultCaseUser() != null) {
-            _hashCode += getDefaultCaseUser().hashCode();
-        }
-        if (getEmailToCase() != null) {
-            _hashCode += getEmailToCase().hashCode();
-        }
-        if (getEnableCaseFeed() != null) {
-            _hashCode += getEnableCaseFeed().hashCode();
-        }
-        if (getEnableDraftEmails() != null) {
-            _hashCode += getEnableDraftEmails().hashCode();
-        }
-        if (getEnableEarlyEscalationRuleTriggers() != null) {
-            _hashCode += getEnableEarlyEscalationRuleTriggers().hashCode();
-        }
-        if (getEnableNewEmailDefaultTemplate() != null) {
-            _hashCode += getEnableNewEmailDefaultTemplate().hashCode();
-        }
-        if (getEnableSuggestedArticlesApplication() != null) {
-            _hashCode += getEnableSuggestedArticlesApplication().hashCode();
-        }
-        if (getEnableSuggestedArticlesCustomerPortal() != null) {
-            _hashCode += getEnableSuggestedArticlesCustomerPortal().hashCode();
-        }
-        if (getEnableSuggestedArticlesPartnerPortal() != null) {
-            _hashCode += getEnableSuggestedArticlesPartnerPortal().hashCode();
-        }
-        if (getEnableSuggestedSolutions() != null) {
-            _hashCode += getEnableSuggestedSolutions().hashCode();
-        }
-        if (getKeepRecordTypeOnAssignmentRule() != null) {
-            _hashCode += getKeepRecordTypeOnAssignmentRule().hashCode();
-        }
-        if (getNewEmailDefaultTemplateClass() != null) {
-            _hashCode += getNewEmailDefaultTemplateClass().hashCode();
-        }
-        if (getNotifyContactOnCaseComment() != null) {
-            _hashCode += getNotifyContactOnCaseComment().hashCode();
-        }
-        if (getNotifyDefaultCaseOwner() != null) {
-            _hashCode += getNotifyDefaultCaseOwner().hashCode();
-        }
-        if (getNotifyOwnerOnCaseComment() != null) {
-            _hashCode += getNotifyOwnerOnCaseComment().hashCode();
-        }
-        if (getNotifyOwnerOnCaseOwnerChange() != null) {
-            _hashCode += getNotifyOwnerOnCaseOwnerChange().hashCode();
-        }
-        if (getShowFewerCloseActions() != null) {
-            _hashCode += getShowFewerCloseActions().hashCode();
-        }
-        if (getUseSystemEmailAddress() != null) {
-            _hashCode += getUseSystemEmailAddress().hashCode();
-        }
-        if (getWebToCase() != null) {
-            _hashCode += getWebToCase().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CaseSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CaseSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("caseAssignNotificationTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "caseAssignNotificationTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("caseCloseNotificationTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "caseCloseNotificationTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("caseCommentNotificationTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "caseCommentNotificationTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("caseCreateNotificationTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "caseCreateNotificationTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("closeCaseThroughStatusChange");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "closeCaseThroughStatusChange"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultCaseOwner");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultCaseOwner"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultCaseOwnerType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultCaseOwnerType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultCaseUser");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultCaseUser"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailToCase");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "emailToCase"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "EmailToCaseSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableCaseFeed");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableCaseFeed"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableDraftEmails");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableDraftEmails"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableEarlyEscalationRuleTriggers");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableEarlyEscalationRuleTriggers"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableNewEmailDefaultTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableNewEmailDefaultTemplate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableSuggestedArticlesApplication");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableSuggestedArticlesApplication"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableSuggestedArticlesCustomerPortal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableSuggestedArticlesCustomerPortal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableSuggestedArticlesPartnerPortal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableSuggestedArticlesPartnerPortal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableSuggestedSolutions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableSuggestedSolutions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("keepRecordTypeOnAssignmentRule");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "keepRecordTypeOnAssignmentRule"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("newEmailDefaultTemplateClass");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "newEmailDefaultTemplateClass"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyContactOnCaseComment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyContactOnCaseComment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyDefaultCaseOwner");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyDefaultCaseOwner"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyOwnerOnCaseComment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyOwnerOnCaseComment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("notifyOwnerOnCaseOwnerChange");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "notifyOwnerOnCaseOwnerChange"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showFewerCloseActions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showFewerCloseActions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("useSystemEmailAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "useSystemEmailAddress"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("webToCase");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "webToCase"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "WebToCaseSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWebToCase(WebToCaseSettings value) {
+        this.webToCase = value;
     }
 
 }

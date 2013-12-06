@@ -1,188 +1,110 @@
-/**
- * ObjectRelationship.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class ObjectRelationship  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.ObjectRelationship join;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private boolean outerJoin;
 
-    private java.lang.String relationship;
+/**
+ * <p>Java class for ObjectRelationship complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ObjectRelationship">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="join" type="{http://soap.sforce.com/2006/04/metadata}ObjectRelationship" minOccurs="0"/>
+ *         &lt;element name="outerJoin" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="relationship" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ObjectRelationship", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "join",
+    "outerJoin",
+    "relationship"
+})
+public class ObjectRelationship {
 
-    public ObjectRelationship() {
-    }
-
-    public ObjectRelationship(
-           com.sforce.soap._2006._04.metadata.ObjectRelationship join,
-           boolean outerJoin,
-           java.lang.String relationship) {
-           this.join = join;
-           this.outerJoin = outerJoin;
-           this.relationship = relationship;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected ObjectRelationship join;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected boolean outerJoin;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String relationship;
 
     /**
-     * Gets the join value for this ObjectRelationship.
+     * Gets the value of the join property.
      * 
-     * @return join
+     * @return
+     *     possible object is
+     *     {@link ObjectRelationship }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.ObjectRelationship getJoin() {
+    public ObjectRelationship getJoin() {
         return join;
     }
 
-
     /**
-     * Sets the join value for this ObjectRelationship.
+     * Sets the value of the join property.
      * 
-     * @param join
+     * @param value
+     *     allowed object is
+     *     {@link ObjectRelationship }
+     *     
      */
-    public void setJoin(com.sforce.soap._2006._04.metadata.ObjectRelationship join) {
-        this.join = join;
+    public void setJoin(ObjectRelationship value) {
+        this.join = value;
     }
 
-
     /**
-     * Gets the outerJoin value for this ObjectRelationship.
+     * Gets the value of the outerJoin property.
      * 
-     * @return outerJoin
      */
     public boolean isOuterJoin() {
         return outerJoin;
     }
 
-
     /**
-     * Sets the outerJoin value for this ObjectRelationship.
+     * Sets the value of the outerJoin property.
      * 
-     * @param outerJoin
      */
-    public void setOuterJoin(boolean outerJoin) {
-        this.outerJoin = outerJoin;
+    public void setOuterJoin(boolean value) {
+        this.outerJoin = value;
     }
 
-
     /**
-     * Gets the relationship value for this ObjectRelationship.
+     * Gets the value of the relationship property.
      * 
-     * @return relationship
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRelationship() {
+    public String getRelationship() {
         return relationship;
     }
 
-
     /**
-     * Sets the relationship value for this ObjectRelationship.
+     * Sets the value of the relationship property.
      * 
-     * @param relationship
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRelationship(java.lang.String relationship) {
-        this.relationship = relationship;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ObjectRelationship)) return false;
-        ObjectRelationship other = (ObjectRelationship) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.join==null && other.getJoin()==null) || 
-             (this.join!=null &&
-              this.join.equals(other.getJoin()))) &&
-            this.outerJoin == other.isOuterJoin() &&
-            ((this.relationship==null && other.getRelationship()==null) || 
-             (this.relationship!=null &&
-              this.relationship.equals(other.getRelationship())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getJoin() != null) {
-            _hashCode += getJoin().hashCode();
-        }
-        _hashCode += (isOuterJoin() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        if (getRelationship() != null) {
-            _hashCode += getRelationship().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ObjectRelationship.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ObjectRelationship"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("join");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "join"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "ObjectRelationship"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("outerJoin");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "outerJoin"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("relationship");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "relationship"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setRelationship(String value) {
+        this.relationship = value;
     }
 
 }

@@ -1,671 +1,484 @@
-/**
- * SamlSsoConfig.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class SamlSsoConfig  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String attributeName;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String attributeNameIdFormat;
 
-    private java.lang.String errorUrl;
+/**
+ * <p>Java class for SamlSsoConfig complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="SamlSsoConfig">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="attributeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="attributeNameIdFormat" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="errorUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="identityLocation" type="{http://soap.sforce.com/2006/04/metadata}SamlIdentityLocationType"/>
+ *         &lt;element name="identityMapping" type="{http://soap.sforce.com/2006/04/metadata}SamlIdentityType"/>
+ *         &lt;element name="issuer" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="loginUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="logoutUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="oauthTokenEndpoint" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="redirectBinding" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="salesforceLoginUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="samlEntityId" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="samlVersion" type="{http://soap.sforce.com/2006/04/metadata}SamlType"/>
+ *         &lt;element name="userProvisioning" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="validationCert" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SamlSsoConfig", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "attributeName",
+    "attributeNameIdFormat",
+    "errorUrl",
+    "identityLocation",
+    "identityMapping",
+    "issuer",
+    "loginUrl",
+    "logoutUrl",
+    "name",
+    "oauthTokenEndpoint",
+    "redirectBinding",
+    "salesforceLoginUrl",
+    "samlEntityId",
+    "samlVersion",
+    "userProvisioning",
+    "validationCert"
+})
+public class SamlSsoConfig
+    extends Metadata
+{
 
-    private com.sforce.soap._2006._04.metadata.SamlIdentityLocationType identityLocation;
-
-    private com.sforce.soap._2006._04.metadata.SamlIdentityType identityMapping;
-
-    private java.lang.String issuer;
-
-    private java.lang.String loginUrl;
-
-    private java.lang.String logoutUrl;
-
-    private java.lang.String name;
-
-    private java.lang.String oauthTokenEndpoint;
-
-    private java.lang.Boolean redirectBinding;
-
-    private java.lang.String salesforceLoginUrl;
-
-    private java.lang.String samlEntityId;
-
-    private com.sforce.soap._2006._04.metadata.SamlType samlVersion;
-
-    private java.lang.Boolean userProvisioning;
-
-    private java.lang.String validationCert;
-
-    public SamlSsoConfig() {
-    }
-
-    public SamlSsoConfig(
-           java.lang.String fullName,
-           java.lang.String attributeName,
-           java.lang.String attributeNameIdFormat,
-           java.lang.String errorUrl,
-           com.sforce.soap._2006._04.metadata.SamlIdentityLocationType identityLocation,
-           com.sforce.soap._2006._04.metadata.SamlIdentityType identityMapping,
-           java.lang.String issuer,
-           java.lang.String loginUrl,
-           java.lang.String logoutUrl,
-           java.lang.String name,
-           java.lang.String oauthTokenEndpoint,
-           java.lang.Boolean redirectBinding,
-           java.lang.String salesforceLoginUrl,
-           java.lang.String samlEntityId,
-           com.sforce.soap._2006._04.metadata.SamlType samlVersion,
-           java.lang.Boolean userProvisioning,
-           java.lang.String validationCert) {
-        super(
-            fullName);
-        this.attributeName = attributeName;
-        this.attributeNameIdFormat = attributeNameIdFormat;
-        this.errorUrl = errorUrl;
-        this.identityLocation = identityLocation;
-        this.identityMapping = identityMapping;
-        this.issuer = issuer;
-        this.loginUrl = loginUrl;
-        this.logoutUrl = logoutUrl;
-        this.name = name;
-        this.oauthTokenEndpoint = oauthTokenEndpoint;
-        this.redirectBinding = redirectBinding;
-        this.salesforceLoginUrl = salesforceLoginUrl;
-        this.samlEntityId = samlEntityId;
-        this.samlVersion = samlVersion;
-        this.userProvisioning = userProvisioning;
-        this.validationCert = validationCert;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String attributeName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String attributeNameIdFormat;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String errorUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SamlIdentityLocationType identityLocation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SamlIdentityType identityMapping;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String issuer;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String loginUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String logoutUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String name;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String oauthTokenEndpoint;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean redirectBinding;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String salesforceLoginUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String samlEntityId;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected SamlType samlVersion;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean userProvisioning;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String validationCert;
 
     /**
-     * Gets the attributeName value for this SamlSsoConfig.
+     * Gets the value of the attributeName property.
      * 
-     * @return attributeName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAttributeName() {
+    public String getAttributeName() {
         return attributeName;
     }
 
-
     /**
-     * Sets the attributeName value for this SamlSsoConfig.
+     * Sets the value of the attributeName property.
      * 
-     * @param attributeName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAttributeName(java.lang.String attributeName) {
-        this.attributeName = attributeName;
+    public void setAttributeName(String value) {
+        this.attributeName = value;
     }
 
-
     /**
-     * Gets the attributeNameIdFormat value for this SamlSsoConfig.
+     * Gets the value of the attributeNameIdFormat property.
      * 
-     * @return attributeNameIdFormat
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAttributeNameIdFormat() {
+    public String getAttributeNameIdFormat() {
         return attributeNameIdFormat;
     }
 
-
     /**
-     * Sets the attributeNameIdFormat value for this SamlSsoConfig.
+     * Sets the value of the attributeNameIdFormat property.
      * 
-     * @param attributeNameIdFormat
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAttributeNameIdFormat(java.lang.String attributeNameIdFormat) {
-        this.attributeNameIdFormat = attributeNameIdFormat;
+    public void setAttributeNameIdFormat(String value) {
+        this.attributeNameIdFormat = value;
     }
 
-
     /**
-     * Gets the errorUrl value for this SamlSsoConfig.
+     * Gets the value of the errorUrl property.
      * 
-     * @return errorUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getErrorUrl() {
+    public String getErrorUrl() {
         return errorUrl;
     }
 
-
     /**
-     * Sets the errorUrl value for this SamlSsoConfig.
+     * Sets the value of the errorUrl property.
      * 
-     * @param errorUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setErrorUrl(java.lang.String errorUrl) {
-        this.errorUrl = errorUrl;
+    public void setErrorUrl(String value) {
+        this.errorUrl = value;
     }
 
-
     /**
-     * Gets the identityLocation value for this SamlSsoConfig.
+     * Gets the value of the identityLocation property.
      * 
-     * @return identityLocation
+     * @return
+     *     possible object is
+     *     {@link SamlIdentityLocationType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SamlIdentityLocationType getIdentityLocation() {
+    public SamlIdentityLocationType getIdentityLocation() {
         return identityLocation;
     }
 
-
     /**
-     * Sets the identityLocation value for this SamlSsoConfig.
+     * Sets the value of the identityLocation property.
      * 
-     * @param identityLocation
+     * @param value
+     *     allowed object is
+     *     {@link SamlIdentityLocationType }
+     *     
      */
-    public void setIdentityLocation(com.sforce.soap._2006._04.metadata.SamlIdentityLocationType identityLocation) {
-        this.identityLocation = identityLocation;
+    public void setIdentityLocation(SamlIdentityLocationType value) {
+        this.identityLocation = value;
     }
 
-
     /**
-     * Gets the identityMapping value for this SamlSsoConfig.
+     * Gets the value of the identityMapping property.
      * 
-     * @return identityMapping
+     * @return
+     *     possible object is
+     *     {@link SamlIdentityType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SamlIdentityType getIdentityMapping() {
+    public SamlIdentityType getIdentityMapping() {
         return identityMapping;
     }
 
-
     /**
-     * Sets the identityMapping value for this SamlSsoConfig.
+     * Sets the value of the identityMapping property.
      * 
-     * @param identityMapping
+     * @param value
+     *     allowed object is
+     *     {@link SamlIdentityType }
+     *     
      */
-    public void setIdentityMapping(com.sforce.soap._2006._04.metadata.SamlIdentityType identityMapping) {
-        this.identityMapping = identityMapping;
+    public void setIdentityMapping(SamlIdentityType value) {
+        this.identityMapping = value;
     }
 
-
     /**
-     * Gets the issuer value for this SamlSsoConfig.
+     * Gets the value of the issuer property.
      * 
-     * @return issuer
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIssuer() {
+    public String getIssuer() {
         return issuer;
     }
 
-
     /**
-     * Sets the issuer value for this SamlSsoConfig.
+     * Sets the value of the issuer property.
      * 
-     * @param issuer
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIssuer(java.lang.String issuer) {
-        this.issuer = issuer;
+    public void setIssuer(String value) {
+        this.issuer = value;
     }
 
-
     /**
-     * Gets the loginUrl value for this SamlSsoConfig.
+     * Gets the value of the loginUrl property.
      * 
-     * @return loginUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLoginUrl() {
+    public String getLoginUrl() {
         return loginUrl;
     }
 
-
     /**
-     * Sets the loginUrl value for this SamlSsoConfig.
+     * Sets the value of the loginUrl property.
      * 
-     * @param loginUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLoginUrl(java.lang.String loginUrl) {
-        this.loginUrl = loginUrl;
+    public void setLoginUrl(String value) {
+        this.loginUrl = value;
     }
 
-
     /**
-     * Gets the logoutUrl value for this SamlSsoConfig.
+     * Gets the value of the logoutUrl property.
      * 
-     * @return logoutUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLogoutUrl() {
+    public String getLogoutUrl() {
         return logoutUrl;
     }
 
-
     /**
-     * Sets the logoutUrl value for this SamlSsoConfig.
+     * Sets the value of the logoutUrl property.
      * 
-     * @param logoutUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLogoutUrl(java.lang.String logoutUrl) {
-        this.logoutUrl = logoutUrl;
+    public void setLogoutUrl(String value) {
+        this.logoutUrl = value;
     }
 
-
     /**
-     * Gets the name value for this SamlSsoConfig.
+     * Gets the value of the name property.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this SamlSsoConfig.
+     * Sets the value of the name property.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the oauthTokenEndpoint value for this SamlSsoConfig.
+     * Gets the value of the oauthTokenEndpoint property.
      * 
-     * @return oauthTokenEndpoint
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOauthTokenEndpoint() {
+    public String getOauthTokenEndpoint() {
         return oauthTokenEndpoint;
     }
 
-
     /**
-     * Sets the oauthTokenEndpoint value for this SamlSsoConfig.
+     * Sets the value of the oauthTokenEndpoint property.
      * 
-     * @param oauthTokenEndpoint
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOauthTokenEndpoint(java.lang.String oauthTokenEndpoint) {
-        this.oauthTokenEndpoint = oauthTokenEndpoint;
+    public void setOauthTokenEndpoint(String value) {
+        this.oauthTokenEndpoint = value;
     }
 
-
     /**
-     * Gets the redirectBinding value for this SamlSsoConfig.
+     * Gets the value of the redirectBinding property.
      * 
-     * @return redirectBinding
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getRedirectBinding() {
+    public Boolean isRedirectBinding() {
         return redirectBinding;
     }
 
-
     /**
-     * Sets the redirectBinding value for this SamlSsoConfig.
+     * Sets the value of the redirectBinding property.
      * 
-     * @param redirectBinding
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setRedirectBinding(java.lang.Boolean redirectBinding) {
-        this.redirectBinding = redirectBinding;
+    public void setRedirectBinding(Boolean value) {
+        this.redirectBinding = value;
     }
 
-
     /**
-     * Gets the salesforceLoginUrl value for this SamlSsoConfig.
+     * Gets the value of the salesforceLoginUrl property.
      * 
-     * @return salesforceLoginUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSalesforceLoginUrl() {
+    public String getSalesforceLoginUrl() {
         return salesforceLoginUrl;
     }
 
-
     /**
-     * Sets the salesforceLoginUrl value for this SamlSsoConfig.
+     * Sets the value of the salesforceLoginUrl property.
      * 
-     * @param salesforceLoginUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSalesforceLoginUrl(java.lang.String salesforceLoginUrl) {
-        this.salesforceLoginUrl = salesforceLoginUrl;
+    public void setSalesforceLoginUrl(String value) {
+        this.salesforceLoginUrl = value;
     }
 
-
     /**
-     * Gets the samlEntityId value for this SamlSsoConfig.
+     * Gets the value of the samlEntityId property.
      * 
-     * @return samlEntityId
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSamlEntityId() {
+    public String getSamlEntityId() {
         return samlEntityId;
     }
 
-
     /**
-     * Sets the samlEntityId value for this SamlSsoConfig.
+     * Sets the value of the samlEntityId property.
      * 
-     * @param samlEntityId
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSamlEntityId(java.lang.String samlEntityId) {
-        this.samlEntityId = samlEntityId;
+    public void setSamlEntityId(String value) {
+        this.samlEntityId = value;
     }
 
-
     /**
-     * Gets the samlVersion value for this SamlSsoConfig.
+     * Gets the value of the samlVersion property.
      * 
-     * @return samlVersion
+     * @return
+     *     possible object is
+     *     {@link SamlType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.SamlType getSamlVersion() {
+    public SamlType getSamlVersion() {
         return samlVersion;
     }
 
-
     /**
-     * Sets the samlVersion value for this SamlSsoConfig.
+     * Sets the value of the samlVersion property.
      * 
-     * @param samlVersion
+     * @param value
+     *     allowed object is
+     *     {@link SamlType }
+     *     
      */
-    public void setSamlVersion(com.sforce.soap._2006._04.metadata.SamlType samlVersion) {
-        this.samlVersion = samlVersion;
+    public void setSamlVersion(SamlType value) {
+        this.samlVersion = value;
     }
 
-
     /**
-     * Gets the userProvisioning value for this SamlSsoConfig.
+     * Gets the value of the userProvisioning property.
      * 
-     * @return userProvisioning
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getUserProvisioning() {
+    public Boolean isUserProvisioning() {
         return userProvisioning;
     }
 
-
     /**
-     * Sets the userProvisioning value for this SamlSsoConfig.
+     * Sets the value of the userProvisioning property.
      * 
-     * @param userProvisioning
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setUserProvisioning(java.lang.Boolean userProvisioning) {
-        this.userProvisioning = userProvisioning;
+    public void setUserProvisioning(Boolean value) {
+        this.userProvisioning = value;
     }
 
-
     /**
-     * Gets the validationCert value for this SamlSsoConfig.
+     * Gets the value of the validationCert property.
      * 
-     * @return validationCert
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getValidationCert() {
+    public String getValidationCert() {
         return validationCert;
     }
 
-
     /**
-     * Sets the validationCert value for this SamlSsoConfig.
+     * Sets the value of the validationCert property.
      * 
-     * @param validationCert
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setValidationCert(java.lang.String validationCert) {
-        this.validationCert = validationCert;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SamlSsoConfig)) return false;
-        SamlSsoConfig other = (SamlSsoConfig) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.attributeName==null && other.getAttributeName()==null) || 
-             (this.attributeName!=null &&
-              this.attributeName.equals(other.getAttributeName()))) &&
-            ((this.attributeNameIdFormat==null && other.getAttributeNameIdFormat()==null) || 
-             (this.attributeNameIdFormat!=null &&
-              this.attributeNameIdFormat.equals(other.getAttributeNameIdFormat()))) &&
-            ((this.errorUrl==null && other.getErrorUrl()==null) || 
-             (this.errorUrl!=null &&
-              this.errorUrl.equals(other.getErrorUrl()))) &&
-            ((this.identityLocation==null && other.getIdentityLocation()==null) || 
-             (this.identityLocation!=null &&
-              this.identityLocation.equals(other.getIdentityLocation()))) &&
-            ((this.identityMapping==null && other.getIdentityMapping()==null) || 
-             (this.identityMapping!=null &&
-              this.identityMapping.equals(other.getIdentityMapping()))) &&
-            ((this.issuer==null && other.getIssuer()==null) || 
-             (this.issuer!=null &&
-              this.issuer.equals(other.getIssuer()))) &&
-            ((this.loginUrl==null && other.getLoginUrl()==null) || 
-             (this.loginUrl!=null &&
-              this.loginUrl.equals(other.getLoginUrl()))) &&
-            ((this.logoutUrl==null && other.getLogoutUrl()==null) || 
-             (this.logoutUrl!=null &&
-              this.logoutUrl.equals(other.getLogoutUrl()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.oauthTokenEndpoint==null && other.getOauthTokenEndpoint()==null) || 
-             (this.oauthTokenEndpoint!=null &&
-              this.oauthTokenEndpoint.equals(other.getOauthTokenEndpoint()))) &&
-            ((this.redirectBinding==null && other.getRedirectBinding()==null) || 
-             (this.redirectBinding!=null &&
-              this.redirectBinding.equals(other.getRedirectBinding()))) &&
-            ((this.salesforceLoginUrl==null && other.getSalesforceLoginUrl()==null) || 
-             (this.salesforceLoginUrl!=null &&
-              this.salesforceLoginUrl.equals(other.getSalesforceLoginUrl()))) &&
-            ((this.samlEntityId==null && other.getSamlEntityId()==null) || 
-             (this.samlEntityId!=null &&
-              this.samlEntityId.equals(other.getSamlEntityId()))) &&
-            ((this.samlVersion==null && other.getSamlVersion()==null) || 
-             (this.samlVersion!=null &&
-              this.samlVersion.equals(other.getSamlVersion()))) &&
-            ((this.userProvisioning==null && other.getUserProvisioning()==null) || 
-             (this.userProvisioning!=null &&
-              this.userProvisioning.equals(other.getUserProvisioning()))) &&
-            ((this.validationCert==null && other.getValidationCert()==null) || 
-             (this.validationCert!=null &&
-              this.validationCert.equals(other.getValidationCert())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAttributeName() != null) {
-            _hashCode += getAttributeName().hashCode();
-        }
-        if (getAttributeNameIdFormat() != null) {
-            _hashCode += getAttributeNameIdFormat().hashCode();
-        }
-        if (getErrorUrl() != null) {
-            _hashCode += getErrorUrl().hashCode();
-        }
-        if (getIdentityLocation() != null) {
-            _hashCode += getIdentityLocation().hashCode();
-        }
-        if (getIdentityMapping() != null) {
-            _hashCode += getIdentityMapping().hashCode();
-        }
-        if (getIssuer() != null) {
-            _hashCode += getIssuer().hashCode();
-        }
-        if (getLoginUrl() != null) {
-            _hashCode += getLoginUrl().hashCode();
-        }
-        if (getLogoutUrl() != null) {
-            _hashCode += getLogoutUrl().hashCode();
-        }
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getOauthTokenEndpoint() != null) {
-            _hashCode += getOauthTokenEndpoint().hashCode();
-        }
-        if (getRedirectBinding() != null) {
-            _hashCode += getRedirectBinding().hashCode();
-        }
-        if (getSalesforceLoginUrl() != null) {
-            _hashCode += getSalesforceLoginUrl().hashCode();
-        }
-        if (getSamlEntityId() != null) {
-            _hashCode += getSamlEntityId().hashCode();
-        }
-        if (getSamlVersion() != null) {
-            _hashCode += getSamlVersion().hashCode();
-        }
-        if (getUserProvisioning() != null) {
-            _hashCode += getUserProvisioning().hashCode();
-        }
-        if (getValidationCert() != null) {
-            _hashCode += getValidationCert().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SamlSsoConfig.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SamlSsoConfig"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("attributeName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "attributeName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("attributeNameIdFormat");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "attributeNameIdFormat"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "errorUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("identityLocation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "identityLocation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SamlIdentityLocationType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("identityMapping");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "identityMapping"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SamlIdentityType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("issuer");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "issuer"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("loginUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "loginUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("logoutUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "logoutUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("oauthTokenEndpoint");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "oauthTokenEndpoint"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("redirectBinding");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "redirectBinding"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("salesforceLoginUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "salesforceLoginUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("samlEntityId");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "samlEntityId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("samlVersion");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "samlVersion"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SamlType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("userProvisioning");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "userProvisioning"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("validationCert");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "validationCert"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setValidationCert(String value) {
+        this.validationCert = value;
     }
 
 }

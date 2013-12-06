@@ -1,569 +1,333 @@
-/**
- * SearchLayouts.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class SearchLayouts  implements java.io.Serializable {
-    private java.lang.String[] customTabListAdditionalFields;
-
-    private java.lang.String[] excludedStandardButtons;
-
-    private java.lang.String[] listViewButtons;
-
-    private java.lang.String[] lookupDialogsAdditionalFields;
-
-    private java.lang.String[] lookupFilterFields;
-
-    private java.lang.String[] lookupPhoneDialogsAdditionalFields;
-
-    private java.lang.String[] searchFilterFields;
-
-    private java.lang.String[] searchResultsAdditionalFields;
-
-    private java.lang.String[] searchResultsCustomButtons;
-
-    public SearchLayouts() {
-    }
-
-    public SearchLayouts(
-           java.lang.String[] customTabListAdditionalFields,
-           java.lang.String[] excludedStandardButtons,
-           java.lang.String[] listViewButtons,
-           java.lang.String[] lookupDialogsAdditionalFields,
-           java.lang.String[] lookupFilterFields,
-           java.lang.String[] lookupPhoneDialogsAdditionalFields,
-           java.lang.String[] searchFilterFields,
-           java.lang.String[] searchResultsAdditionalFields,
-           java.lang.String[] searchResultsCustomButtons) {
-           this.customTabListAdditionalFields = customTabListAdditionalFields;
-           this.excludedStandardButtons = excludedStandardButtons;
-           this.listViewButtons = listViewButtons;
-           this.lookupDialogsAdditionalFields = lookupDialogsAdditionalFields;
-           this.lookupFilterFields = lookupFilterFields;
-           this.lookupPhoneDialogsAdditionalFields = lookupPhoneDialogsAdditionalFields;
-           this.searchFilterFields = searchFilterFields;
-           this.searchResultsAdditionalFields = searchResultsAdditionalFields;
-           this.searchResultsCustomButtons = searchResultsCustomButtons;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the customTabListAdditionalFields value for this SearchLayouts.
-     * 
-     * @return customTabListAdditionalFields
-     */
-    public java.lang.String[] getCustomTabListAdditionalFields() {
-        return customTabListAdditionalFields;
-    }
+/**
+ * <p>Java class for SearchLayouts complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="SearchLayouts">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customTabListAdditionalFields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="excludedStandardButtons" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="listViewButtons" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="lookupDialogsAdditionalFields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="lookupFilterFields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="lookupPhoneDialogsAdditionalFields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="searchFilterFields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="searchResultsAdditionalFields" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="searchResultsCustomButtons" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "SearchLayouts", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "customTabListAdditionalFields",
+    "excludedStandardButtons",
+    "listViewButtons",
+    "lookupDialogsAdditionalFields",
+    "lookupFilterFields",
+    "lookupPhoneDialogsAdditionalFields",
+    "searchFilterFields",
+    "searchResultsAdditionalFields",
+    "searchResultsCustomButtons"
+})
+public class SearchLayouts {
 
-
-    /**
-     * Sets the customTabListAdditionalFields value for this SearchLayouts.
-     * 
-     * @param customTabListAdditionalFields
-     */
-    public void setCustomTabListAdditionalFields(java.lang.String[] customTabListAdditionalFields) {
-        this.customTabListAdditionalFields = customTabListAdditionalFields;
-    }
-
-    public java.lang.String getCustomTabListAdditionalFields(int i) {
-        return this.customTabListAdditionalFields[i];
-    }
-
-    public void setCustomTabListAdditionalFields(int i, java.lang.String _value) {
-        this.customTabListAdditionalFields[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> customTabListAdditionalFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> excludedStandardButtons;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> listViewButtons;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> lookupDialogsAdditionalFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> lookupFilterFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> lookupPhoneDialogsAdditionalFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> searchFilterFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> searchResultsAdditionalFields;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<String> searchResultsCustomButtons;
 
     /**
-     * Gets the excludedStandardButtons value for this SearchLayouts.
+     * Gets the value of the customTabListAdditionalFields property.
      * 
-     * @return excludedStandardButtons
-     */
-    public java.lang.String[] getExcludedStandardButtons() {
-        return excludedStandardButtons;
-    }
-
-
-    /**
-     * Sets the excludedStandardButtons value for this SearchLayouts.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the customTabListAdditionalFields property.
      * 
-     * @param excludedStandardButtons
-     */
-    public void setExcludedStandardButtons(java.lang.String[] excludedStandardButtons) {
-        this.excludedStandardButtons = excludedStandardButtons;
-    }
-
-    public java.lang.String getExcludedStandardButtons(int i) {
-        return this.excludedStandardButtons[i];
-    }
-
-    public void setExcludedStandardButtons(int i, java.lang.String _value) {
-        this.excludedStandardButtons[i] = _value;
-    }
-
-
-    /**
-     * Gets the listViewButtons value for this SearchLayouts.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCustomTabListAdditionalFields().add(newItem);
+     * </pre>
      * 
-     * @return listViewButtons
-     */
-    public java.lang.String[] getListViewButtons() {
-        return listViewButtons;
-    }
-
-
-    /**
-     * Sets the listViewButtons value for this SearchLayouts.
      * 
-     * @param listViewButtons
-     */
-    public void setListViewButtons(java.lang.String[] listViewButtons) {
-        this.listViewButtons = listViewButtons;
-    }
-
-    public java.lang.String getListViewButtons(int i) {
-        return this.listViewButtons[i];
-    }
-
-    public void setListViewButtons(int i, java.lang.String _value) {
-        this.listViewButtons[i] = _value;
-    }
-
-
-    /**
-     * Gets the lookupDialogsAdditionalFields value for this SearchLayouts.
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
      * 
-     * @return lookupDialogsAdditionalFields
-     */
-    public java.lang.String[] getLookupDialogsAdditionalFields() {
-        return lookupDialogsAdditionalFields;
-    }
-
-
-    /**
-     * Sets the lookupDialogsAdditionalFields value for this SearchLayouts.
      * 
-     * @param lookupDialogsAdditionalFields
      */
-    public void setLookupDialogsAdditionalFields(java.lang.String[] lookupDialogsAdditionalFields) {
-        this.lookupDialogsAdditionalFields = lookupDialogsAdditionalFields;
-    }
-
-    public java.lang.String getLookupDialogsAdditionalFields(int i) {
-        return this.lookupDialogsAdditionalFields[i];
-    }
-
-    public void setLookupDialogsAdditionalFields(int i, java.lang.String _value) {
-        this.lookupDialogsAdditionalFields[i] = _value;
-    }
-
-
-    /**
-     * Gets the lookupFilterFields value for this SearchLayouts.
-     * 
-     * @return lookupFilterFields
-     */
-    public java.lang.String[] getLookupFilterFields() {
-        return lookupFilterFields;
-    }
-
-
-    /**
-     * Sets the lookupFilterFields value for this SearchLayouts.
-     * 
-     * @param lookupFilterFields
-     */
-    public void setLookupFilterFields(java.lang.String[] lookupFilterFields) {
-        this.lookupFilterFields = lookupFilterFields;
-    }
-
-    public java.lang.String getLookupFilterFields(int i) {
-        return this.lookupFilterFields[i];
-    }
-
-    public void setLookupFilterFields(int i, java.lang.String _value) {
-        this.lookupFilterFields[i] = _value;
-    }
-
-
-    /**
-     * Gets the lookupPhoneDialogsAdditionalFields value for this SearchLayouts.
-     * 
-     * @return lookupPhoneDialogsAdditionalFields
-     */
-    public java.lang.String[] getLookupPhoneDialogsAdditionalFields() {
-        return lookupPhoneDialogsAdditionalFields;
-    }
-
-
-    /**
-     * Sets the lookupPhoneDialogsAdditionalFields value for this SearchLayouts.
-     * 
-     * @param lookupPhoneDialogsAdditionalFields
-     */
-    public void setLookupPhoneDialogsAdditionalFields(java.lang.String[] lookupPhoneDialogsAdditionalFields) {
-        this.lookupPhoneDialogsAdditionalFields = lookupPhoneDialogsAdditionalFields;
-    }
-
-    public java.lang.String getLookupPhoneDialogsAdditionalFields(int i) {
-        return this.lookupPhoneDialogsAdditionalFields[i];
-    }
-
-    public void setLookupPhoneDialogsAdditionalFields(int i, java.lang.String _value) {
-        this.lookupPhoneDialogsAdditionalFields[i] = _value;
-    }
-
-
-    /**
-     * Gets the searchFilterFields value for this SearchLayouts.
-     * 
-     * @return searchFilterFields
-     */
-    public java.lang.String[] getSearchFilterFields() {
-        return searchFilterFields;
-    }
-
-
-    /**
-     * Sets the searchFilterFields value for this SearchLayouts.
-     * 
-     * @param searchFilterFields
-     */
-    public void setSearchFilterFields(java.lang.String[] searchFilterFields) {
-        this.searchFilterFields = searchFilterFields;
-    }
-
-    public java.lang.String getSearchFilterFields(int i) {
-        return this.searchFilterFields[i];
-    }
-
-    public void setSearchFilterFields(int i, java.lang.String _value) {
-        this.searchFilterFields[i] = _value;
-    }
-
-
-    /**
-     * Gets the searchResultsAdditionalFields value for this SearchLayouts.
-     * 
-     * @return searchResultsAdditionalFields
-     */
-    public java.lang.String[] getSearchResultsAdditionalFields() {
-        return searchResultsAdditionalFields;
-    }
-
-
-    /**
-     * Sets the searchResultsAdditionalFields value for this SearchLayouts.
-     * 
-     * @param searchResultsAdditionalFields
-     */
-    public void setSearchResultsAdditionalFields(java.lang.String[] searchResultsAdditionalFields) {
-        this.searchResultsAdditionalFields = searchResultsAdditionalFields;
-    }
-
-    public java.lang.String getSearchResultsAdditionalFields(int i) {
-        return this.searchResultsAdditionalFields[i];
-    }
-
-    public void setSearchResultsAdditionalFields(int i, java.lang.String _value) {
-        this.searchResultsAdditionalFields[i] = _value;
-    }
-
-
-    /**
-     * Gets the searchResultsCustomButtons value for this SearchLayouts.
-     * 
-     * @return searchResultsCustomButtons
-     */
-    public java.lang.String[] getSearchResultsCustomButtons() {
-        return searchResultsCustomButtons;
-    }
-
-
-    /**
-     * Sets the searchResultsCustomButtons value for this SearchLayouts.
-     * 
-     * @param searchResultsCustomButtons
-     */
-    public void setSearchResultsCustomButtons(java.lang.String[] searchResultsCustomButtons) {
-        this.searchResultsCustomButtons = searchResultsCustomButtons;
-    }
-
-    public java.lang.String getSearchResultsCustomButtons(int i) {
-        return this.searchResultsCustomButtons[i];
-    }
-
-    public void setSearchResultsCustomButtons(int i, java.lang.String _value) {
-        this.searchResultsCustomButtons[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof SearchLayouts)) return false;
-        SearchLayouts other = (SearchLayouts) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<String> getCustomTabListAdditionalFields() {
+        if (customTabListAdditionalFields == null) {
+            customTabListAdditionalFields = new ArrayList<String>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customTabListAdditionalFields==null && other.getCustomTabListAdditionalFields()==null) || 
-             (this.customTabListAdditionalFields!=null &&
-              java.util.Arrays.equals(this.customTabListAdditionalFields, other.getCustomTabListAdditionalFields()))) &&
-            ((this.excludedStandardButtons==null && other.getExcludedStandardButtons()==null) || 
-             (this.excludedStandardButtons!=null &&
-              java.util.Arrays.equals(this.excludedStandardButtons, other.getExcludedStandardButtons()))) &&
-            ((this.listViewButtons==null && other.getListViewButtons()==null) || 
-             (this.listViewButtons!=null &&
-              java.util.Arrays.equals(this.listViewButtons, other.getListViewButtons()))) &&
-            ((this.lookupDialogsAdditionalFields==null && other.getLookupDialogsAdditionalFields()==null) || 
-             (this.lookupDialogsAdditionalFields!=null &&
-              java.util.Arrays.equals(this.lookupDialogsAdditionalFields, other.getLookupDialogsAdditionalFields()))) &&
-            ((this.lookupFilterFields==null && other.getLookupFilterFields()==null) || 
-             (this.lookupFilterFields!=null &&
-              java.util.Arrays.equals(this.lookupFilterFields, other.getLookupFilterFields()))) &&
-            ((this.lookupPhoneDialogsAdditionalFields==null && other.getLookupPhoneDialogsAdditionalFields()==null) || 
-             (this.lookupPhoneDialogsAdditionalFields!=null &&
-              java.util.Arrays.equals(this.lookupPhoneDialogsAdditionalFields, other.getLookupPhoneDialogsAdditionalFields()))) &&
-            ((this.searchFilterFields==null && other.getSearchFilterFields()==null) || 
-             (this.searchFilterFields!=null &&
-              java.util.Arrays.equals(this.searchFilterFields, other.getSearchFilterFields()))) &&
-            ((this.searchResultsAdditionalFields==null && other.getSearchResultsAdditionalFields()==null) || 
-             (this.searchResultsAdditionalFields!=null &&
-              java.util.Arrays.equals(this.searchResultsAdditionalFields, other.getSearchResultsAdditionalFields()))) &&
-            ((this.searchResultsCustomButtons==null && other.getSearchResultsCustomButtons()==null) || 
-             (this.searchResultsCustomButtons!=null &&
-              java.util.Arrays.equals(this.searchResultsCustomButtons, other.getSearchResultsCustomButtons())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomTabListAdditionalFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCustomTabListAdditionalFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getCustomTabListAdditionalFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getExcludedStandardButtons() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getExcludedStandardButtons());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getExcludedStandardButtons(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getListViewButtons() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getListViewButtons());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getListViewButtons(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLookupDialogsAdditionalFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLookupDialogsAdditionalFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLookupDialogsAdditionalFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLookupFilterFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLookupFilterFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLookupFilterFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLookupPhoneDialogsAdditionalFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLookupPhoneDialogsAdditionalFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLookupPhoneDialogsAdditionalFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSearchFilterFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSearchFilterFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSearchFilterFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSearchResultsAdditionalFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSearchResultsAdditionalFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSearchResultsAdditionalFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSearchResultsCustomButtons() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSearchResultsCustomButtons());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSearchResultsCustomButtons(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SearchLayouts.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "SearchLayouts"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customTabListAdditionalFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customTabListAdditionalFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("excludedStandardButtons");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "excludedStandardButtons"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("listViewButtons");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "listViewButtons"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("lookupDialogsAdditionalFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "lookupDialogsAdditionalFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("lookupFilterFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "lookupFilterFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("lookupPhoneDialogsAdditionalFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "lookupPhoneDialogsAdditionalFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("searchFilterFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "searchFilterFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("searchResultsAdditionalFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "searchResultsAdditionalFields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("searchResultsCustomButtons");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "searchResultsCustomButtons"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
+        return this.customTabListAdditionalFields;
     }
 
     /**
-     * Return type metadata object
+     * Gets the value of the excludedStandardButtons property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the excludedStandardButtons property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getExcludedStandardButtons().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public List<String> getExcludedStandardButtons() {
+        if (excludedStandardButtons == null) {
+            excludedStandardButtons = new ArrayList<String>();
+        }
+        return this.excludedStandardButtons;
     }
 
     /**
-     * Get Custom Serializer
+     * Gets the value of the listViewButtons property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the listViewButtons property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getListViewButtons().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+    public List<String> getListViewButtons() {
+        if (listViewButtons == null) {
+            listViewButtons = new ArrayList<String>();
+        }
+        return this.listViewButtons;
     }
 
     /**
-     * Get Custom Deserializer
+     * Gets the value of the lookupDialogsAdditionalFields property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the lookupDialogsAdditionalFields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLookupDialogsAdditionalFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public List<String> getLookupDialogsAdditionalFields() {
+        if (lookupDialogsAdditionalFields == null) {
+            lookupDialogsAdditionalFields = new ArrayList<String>();
+        }
+        return this.lookupDialogsAdditionalFields;
+    }
+
+    /**
+     * Gets the value of the lookupFilterFields property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the lookupFilterFields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLookupFilterFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getLookupFilterFields() {
+        if (lookupFilterFields == null) {
+            lookupFilterFields = new ArrayList<String>();
+        }
+        return this.lookupFilterFields;
+    }
+
+    /**
+     * Gets the value of the lookupPhoneDialogsAdditionalFields property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the lookupPhoneDialogsAdditionalFields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLookupPhoneDialogsAdditionalFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getLookupPhoneDialogsAdditionalFields() {
+        if (lookupPhoneDialogsAdditionalFields == null) {
+            lookupPhoneDialogsAdditionalFields = new ArrayList<String>();
+        }
+        return this.lookupPhoneDialogsAdditionalFields;
+    }
+
+    /**
+     * Gets the value of the searchFilterFields property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the searchFilterFields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSearchFilterFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getSearchFilterFields() {
+        if (searchFilterFields == null) {
+            searchFilterFields = new ArrayList<String>();
+        }
+        return this.searchFilterFields;
+    }
+
+    /**
+     * Gets the value of the searchResultsAdditionalFields property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the searchResultsAdditionalFields property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSearchResultsAdditionalFields().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getSearchResultsAdditionalFields() {
+        if (searchResultsAdditionalFields == null) {
+            searchResultsAdditionalFields = new ArrayList<String>();
+        }
+        return this.searchResultsAdditionalFields;
+    }
+
+    /**
+     * Gets the value of the searchResultsCustomButtons property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the searchResultsCustomButtons property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSearchResultsCustomButtons().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
+     */
+    public List<String> getSearchResultsCustomButtons() {
+        if (searchResultsCustomButtons == null) {
+            searchResultsCustomButtons = new ArrayList<String>();
+        }
+        return this.searchResultsCustomButtons;
     }
 
 }

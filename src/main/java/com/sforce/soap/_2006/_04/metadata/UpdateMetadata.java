@@ -1,155 +1,90 @@
-/**
- * UpdateMetadata.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class UpdateMetadata  implements java.io.Serializable {
-    private java.lang.String currentName;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.Metadata metadata;
 
-    public UpdateMetadata() {
-    }
+/**
+ * <p>Java class for UpdateMetadata complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="UpdateMetadata">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="currentName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="metadata" type="{http://soap.sforce.com/2006/04/metadata}Metadata"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "UpdateMetadata", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "currentName",
+    "metadata"
+})
+public class UpdateMetadata {
 
-    public UpdateMetadata(
-           java.lang.String currentName,
-           com.sforce.soap._2006._04.metadata.Metadata metadata) {
-           this.currentName = currentName;
-           this.metadata = metadata;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String currentName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected Metadata metadata;
 
     /**
-     * Gets the currentName value for this UpdateMetadata.
+     * Gets the value of the currentName property.
      * 
-     * @return currentName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCurrentName() {
+    public String getCurrentName() {
         return currentName;
     }
 
-
     /**
-     * Sets the currentName value for this UpdateMetadata.
+     * Sets the value of the currentName property.
      * 
-     * @param currentName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCurrentName(java.lang.String currentName) {
-        this.currentName = currentName;
+    public void setCurrentName(String value) {
+        this.currentName = value;
     }
 
-
     /**
-     * Gets the metadata value for this UpdateMetadata.
+     * Gets the value of the metadata property.
      * 
-     * @return metadata
+     * @return
+     *     possible object is
+     *     {@link Metadata }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.Metadata getMetadata() {
+    public Metadata getMetadata() {
         return metadata;
     }
 
-
     /**
-     * Sets the metadata value for this UpdateMetadata.
+     * Sets the value of the metadata property.
      * 
-     * @param metadata
+     * @param value
+     *     allowed object is
+     *     {@link Metadata }
+     *     
      */
-    public void setMetadata(com.sforce.soap._2006._04.metadata.Metadata metadata) {
-        this.metadata = metadata;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof UpdateMetadata)) return false;
-        UpdateMetadata other = (UpdateMetadata) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.currentName==null && other.getCurrentName()==null) || 
-             (this.currentName!=null &&
-              this.currentName.equals(other.getCurrentName()))) &&
-            ((this.metadata==null && other.getMetadata()==null) || 
-             (this.metadata!=null &&
-              this.metadata.equals(other.getMetadata())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCurrentName() != null) {
-            _hashCode += getCurrentName().hashCode();
-        }
-        if (getMetadata() != null) {
-            _hashCode += getMetadata().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(UpdateMetadata.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "UpdateMetadata"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("currentName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "currentName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("metadata");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "metadata"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Metadata"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setMetadata(Metadata value) {
+        this.metadata = value;
     }
 
 }

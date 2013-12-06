@@ -1,1174 +1,848 @@
-/**
- * LiveChatButton.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class LiveChatButton  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.LiveChatButtonPresentation animation;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String autoGreeting;
 
-    private java.lang.String chatPage;
+/**
+ * <p>Java class for LiveChatButton complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="LiveChatButton">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="animation" type="{http://soap.sforce.com/2006/04/metadata}LiveChatButtonPresentation" minOccurs="0"/>
+ *         &lt;element name="autoGreeting" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="chatPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="customAgentName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="deployments" type="{http://soap.sforce.com/2006/04/metadata}LiveChatButtonDeployments" minOccurs="0"/>
+ *         &lt;element name="enableQueue" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="inviteEndPosition" type="{http://soap.sforce.com/2006/04/metadata}LiveChatButtonInviteEndPosition" minOccurs="0"/>
+ *         &lt;element name="inviteImage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="inviteStartPosition" type="{http://soap.sforce.com/2006/04/metadata}LiveChatButtonInviteStartPosition" minOccurs="0"/>
+ *         &lt;element name="isActive" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="offlineImage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="onlineImage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="optionsHasInviteAfterAccept" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="optionsHasInviteAfterReject" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="optionsIsInviteAutoRemove" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="overallQueueLength" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="perAgentQueueLength" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="postChatPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="postChatUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="preChatFormPage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="preChatFormUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="pushTimeOut" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="routingType" type="{http://soap.sforce.com/2006/04/metadata}LiveChatButtonRoutingType"/>
+ *         &lt;element name="site" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="skills" type="{http://soap.sforce.com/2006/04/metadata}LiveChatButtonSkills" minOccurs="0"/>
+ *         &lt;element name="timeToRemoveInvite" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="type" type="{http://soap.sforce.com/2006/04/metadata}LiveChatButtonType"/>
+ *         &lt;element name="windowLanguage" type="{http://soap.sforce.com/2006/04/metadata}Language" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "LiveChatButton", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "animation",
+    "autoGreeting",
+    "chatPage",
+    "customAgentName",
+    "deployments",
+    "enableQueue",
+    "inviteEndPosition",
+    "inviteImage",
+    "inviteStartPosition",
+    "isActive",
+    "label",
+    "offlineImage",
+    "onlineImage",
+    "optionsHasInviteAfterAccept",
+    "optionsHasInviteAfterReject",
+    "optionsIsInviteAutoRemove",
+    "overallQueueLength",
+    "perAgentQueueLength",
+    "postChatPage",
+    "postChatUrl",
+    "preChatFormPage",
+    "preChatFormUrl",
+    "pushTimeOut",
+    "routingType",
+    "site",
+    "skills",
+    "timeToRemoveInvite",
+    "type",
+    "windowLanguage"
+})
+public class LiveChatButton
+    extends Metadata
+{
 
-    private java.lang.String customAgentName;
-
-    private java.lang.String[] deployments;
-
-    private java.lang.Boolean enableQueue;
-
-    private com.sforce.soap._2006._04.metadata.LiveChatButtonInviteEndPosition inviteEndPosition;
-
-    private java.lang.String inviteImage;
-
-    private com.sforce.soap._2006._04.metadata.LiveChatButtonInviteStartPosition inviteStartPosition;
-
-    private java.lang.Boolean isActive;
-
-    private java.lang.String label;
-
-    private java.lang.String offlineImage;
-
-    private java.lang.String onlineImage;
-
-    private java.lang.Boolean optionsHasInviteAfterAccept;
-
-    private java.lang.Boolean optionsHasInviteAfterReject;
-
-    private java.lang.Boolean optionsIsInviteAutoRemove;
-
-    private java.lang.Integer overallQueueLength;
-
-    private java.lang.Integer perAgentQueueLength;
-
-    private java.lang.String postChatPage;
-
-    private java.lang.String postChatUrl;
-
-    private java.lang.String preChatFormPage;
-
-    private java.lang.String preChatFormUrl;
-
-    private java.lang.Integer pushTimeOut;
-
-    private com.sforce.soap._2006._04.metadata.LiveChatButtonRoutingType routingType;
-
-    private java.lang.String site;
-
-    private java.lang.String[] skills;
-
-    private java.lang.Integer timeToRemoveInvite;
-
-    private com.sforce.soap._2006._04.metadata.LiveChatButtonType type;
-
-    private com.sforce.soap._2006._04.metadata.Language windowLanguage;
-
-    public LiveChatButton() {
-    }
-
-    public LiveChatButton(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.LiveChatButtonPresentation animation,
-           java.lang.String autoGreeting,
-           java.lang.String chatPage,
-           java.lang.String customAgentName,
-           java.lang.String[] deployments,
-           java.lang.Boolean enableQueue,
-           com.sforce.soap._2006._04.metadata.LiveChatButtonInviteEndPosition inviteEndPosition,
-           java.lang.String inviteImage,
-           com.sforce.soap._2006._04.metadata.LiveChatButtonInviteStartPosition inviteStartPosition,
-           java.lang.Boolean isActive,
-           java.lang.String label,
-           java.lang.String offlineImage,
-           java.lang.String onlineImage,
-           java.lang.Boolean optionsHasInviteAfterAccept,
-           java.lang.Boolean optionsHasInviteAfterReject,
-           java.lang.Boolean optionsIsInviteAutoRemove,
-           java.lang.Integer overallQueueLength,
-           java.lang.Integer perAgentQueueLength,
-           java.lang.String postChatPage,
-           java.lang.String postChatUrl,
-           java.lang.String preChatFormPage,
-           java.lang.String preChatFormUrl,
-           java.lang.Integer pushTimeOut,
-           com.sforce.soap._2006._04.metadata.LiveChatButtonRoutingType routingType,
-           java.lang.String site,
-           java.lang.String[] skills,
-           java.lang.Integer timeToRemoveInvite,
-           com.sforce.soap._2006._04.metadata.LiveChatButtonType type,
-           com.sforce.soap._2006._04.metadata.Language windowLanguage) {
-        super(
-            fullName);
-        this.animation = animation;
-        this.autoGreeting = autoGreeting;
-        this.chatPage = chatPage;
-        this.customAgentName = customAgentName;
-        this.deployments = deployments;
-        this.enableQueue = enableQueue;
-        this.inviteEndPosition = inviteEndPosition;
-        this.inviteImage = inviteImage;
-        this.inviteStartPosition = inviteStartPosition;
-        this.isActive = isActive;
-        this.label = label;
-        this.offlineImage = offlineImage;
-        this.onlineImage = onlineImage;
-        this.optionsHasInviteAfterAccept = optionsHasInviteAfterAccept;
-        this.optionsHasInviteAfterReject = optionsHasInviteAfterReject;
-        this.optionsIsInviteAutoRemove = optionsIsInviteAutoRemove;
-        this.overallQueueLength = overallQueueLength;
-        this.perAgentQueueLength = perAgentQueueLength;
-        this.postChatPage = postChatPage;
-        this.postChatUrl = postChatUrl;
-        this.preChatFormPage = preChatFormPage;
-        this.preChatFormUrl = preChatFormUrl;
-        this.pushTimeOut = pushTimeOut;
-        this.routingType = routingType;
-        this.site = site;
-        this.skills = skills;
-        this.timeToRemoveInvite = timeToRemoveInvite;
-        this.type = type;
-        this.windowLanguage = windowLanguage;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LiveChatButtonPresentation animation;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String autoGreeting;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String chatPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customAgentName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LiveChatButtonDeployments deployments;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableQueue;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LiveChatButtonInviteEndPosition inviteEndPosition;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String inviteImage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LiveChatButtonInviteStartPosition inviteStartPosition;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean isActive;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String offlineImage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String onlineImage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean optionsHasInviteAfterAccept;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean optionsHasInviteAfterReject;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean optionsIsInviteAutoRemove;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer overallQueueLength;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer perAgentQueueLength;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String postChatPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String postChatUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String preChatFormPage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String preChatFormUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer pushTimeOut;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected LiveChatButtonRoutingType routingType;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String site;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected LiveChatButtonSkills skills;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Integer timeToRemoveInvite;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected LiveChatButtonType type;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Language windowLanguage;
 
     /**
-     * Gets the animation value for this LiveChatButton.
+     * Gets the value of the animation property.
      * 
-     * @return animation
+     * @return
+     *     possible object is
+     *     {@link LiveChatButtonPresentation }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LiveChatButtonPresentation getAnimation() {
+    public LiveChatButtonPresentation getAnimation() {
         return animation;
     }
 
-
     /**
-     * Sets the animation value for this LiveChatButton.
+     * Sets the value of the animation property.
      * 
-     * @param animation
+     * @param value
+     *     allowed object is
+     *     {@link LiveChatButtonPresentation }
+     *     
      */
-    public void setAnimation(com.sforce.soap._2006._04.metadata.LiveChatButtonPresentation animation) {
-        this.animation = animation;
+    public void setAnimation(LiveChatButtonPresentation value) {
+        this.animation = value;
     }
 
-
     /**
-     * Gets the autoGreeting value for this LiveChatButton.
+     * Gets the value of the autoGreeting property.
      * 
-     * @return autoGreeting
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAutoGreeting() {
+    public String getAutoGreeting() {
         return autoGreeting;
     }
 
-
     /**
-     * Sets the autoGreeting value for this LiveChatButton.
+     * Sets the value of the autoGreeting property.
      * 
-     * @param autoGreeting
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAutoGreeting(java.lang.String autoGreeting) {
-        this.autoGreeting = autoGreeting;
+    public void setAutoGreeting(String value) {
+        this.autoGreeting = value;
     }
 
-
     /**
-     * Gets the chatPage value for this LiveChatButton.
+     * Gets the value of the chatPage property.
      * 
-     * @return chatPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getChatPage() {
+    public String getChatPage() {
         return chatPage;
     }
 
-
     /**
-     * Sets the chatPage value for this LiveChatButton.
+     * Sets the value of the chatPage property.
      * 
-     * @param chatPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setChatPage(java.lang.String chatPage) {
-        this.chatPage = chatPage;
+    public void setChatPage(String value) {
+        this.chatPage = value;
     }
 
-
     /**
-     * Gets the customAgentName value for this LiveChatButton.
+     * Gets the value of the customAgentName property.
      * 
-     * @return customAgentName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomAgentName() {
+    public String getCustomAgentName() {
         return customAgentName;
     }
 
-
     /**
-     * Sets the customAgentName value for this LiveChatButton.
+     * Sets the value of the customAgentName property.
      * 
-     * @param customAgentName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomAgentName(java.lang.String customAgentName) {
-        this.customAgentName = customAgentName;
+    public void setCustomAgentName(String value) {
+        this.customAgentName = value;
     }
 
-
     /**
-     * Gets the deployments value for this LiveChatButton.
+     * Gets the value of the deployments property.
      * 
-     * @return deployments
+     * @return
+     *     possible object is
+     *     {@link LiveChatButtonDeployments }
+     *     
      */
-    public java.lang.String[] getDeployments() {
+    public LiveChatButtonDeployments getDeployments() {
         return deployments;
     }
 
-
     /**
-     * Sets the deployments value for this LiveChatButton.
+     * Sets the value of the deployments property.
      * 
-     * @param deployments
+     * @param value
+     *     allowed object is
+     *     {@link LiveChatButtonDeployments }
+     *     
      */
-    public void setDeployments(java.lang.String[] deployments) {
-        this.deployments = deployments;
+    public void setDeployments(LiveChatButtonDeployments value) {
+        this.deployments = value;
     }
 
-
     /**
-     * Gets the enableQueue value for this LiveChatButton.
+     * Gets the value of the enableQueue property.
      * 
-     * @return enableQueue
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableQueue() {
+    public Boolean isEnableQueue() {
         return enableQueue;
     }
 
-
     /**
-     * Sets the enableQueue value for this LiveChatButton.
+     * Sets the value of the enableQueue property.
      * 
-     * @param enableQueue
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableQueue(java.lang.Boolean enableQueue) {
-        this.enableQueue = enableQueue;
+    public void setEnableQueue(Boolean value) {
+        this.enableQueue = value;
     }
 
-
     /**
-     * Gets the inviteEndPosition value for this LiveChatButton.
+     * Gets the value of the inviteEndPosition property.
      * 
-     * @return inviteEndPosition
+     * @return
+     *     possible object is
+     *     {@link LiveChatButtonInviteEndPosition }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LiveChatButtonInviteEndPosition getInviteEndPosition() {
+    public LiveChatButtonInviteEndPosition getInviteEndPosition() {
         return inviteEndPosition;
     }
 
-
     /**
-     * Sets the inviteEndPosition value for this LiveChatButton.
+     * Sets the value of the inviteEndPosition property.
      * 
-     * @param inviteEndPosition
+     * @param value
+     *     allowed object is
+     *     {@link LiveChatButtonInviteEndPosition }
+     *     
      */
-    public void setInviteEndPosition(com.sforce.soap._2006._04.metadata.LiveChatButtonInviteEndPosition inviteEndPosition) {
-        this.inviteEndPosition = inviteEndPosition;
+    public void setInviteEndPosition(LiveChatButtonInviteEndPosition value) {
+        this.inviteEndPosition = value;
     }
 
-
     /**
-     * Gets the inviteImage value for this LiveChatButton.
+     * Gets the value of the inviteImage property.
      * 
-     * @return inviteImage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getInviteImage() {
+    public String getInviteImage() {
         return inviteImage;
     }
 
-
     /**
-     * Sets the inviteImage value for this LiveChatButton.
+     * Sets the value of the inviteImage property.
      * 
-     * @param inviteImage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setInviteImage(java.lang.String inviteImage) {
-        this.inviteImage = inviteImage;
+    public void setInviteImage(String value) {
+        this.inviteImage = value;
     }
 
-
     /**
-     * Gets the inviteStartPosition value for this LiveChatButton.
+     * Gets the value of the inviteStartPosition property.
      * 
-     * @return inviteStartPosition
+     * @return
+     *     possible object is
+     *     {@link LiveChatButtonInviteStartPosition }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LiveChatButtonInviteStartPosition getInviteStartPosition() {
+    public LiveChatButtonInviteStartPosition getInviteStartPosition() {
         return inviteStartPosition;
     }
 
-
     /**
-     * Sets the inviteStartPosition value for this LiveChatButton.
+     * Sets the value of the inviteStartPosition property.
      * 
-     * @param inviteStartPosition
+     * @param value
+     *     allowed object is
+     *     {@link LiveChatButtonInviteStartPosition }
+     *     
      */
-    public void setInviteStartPosition(com.sforce.soap._2006._04.metadata.LiveChatButtonInviteStartPosition inviteStartPosition) {
-        this.inviteStartPosition = inviteStartPosition;
+    public void setInviteStartPosition(LiveChatButtonInviteStartPosition value) {
+        this.inviteStartPosition = value;
     }
 
-
     /**
-     * Gets the isActive value for this LiveChatButton.
+     * Gets the value of the isActive property.
      * 
-     * @return isActive
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getIsActive() {
+    public Boolean isIsActive() {
         return isActive;
     }
 
-
     /**
-     * Sets the isActive value for this LiveChatButton.
+     * Sets the value of the isActive property.
      * 
-     * @param isActive
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setIsActive(java.lang.Boolean isActive) {
-        this.isActive = isActive;
+    public void setIsActive(Boolean value) {
+        this.isActive = value;
     }
 
-
     /**
-     * Gets the label value for this LiveChatButton.
+     * Gets the value of the label property.
      * 
-     * @return label
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
-
     /**
-     * Sets the label value for this LiveChatButton.
+     * Sets the value of the label property.
      * 
-     * @param label
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public void setLabel(String value) {
+        this.label = value;
     }
 
-
     /**
-     * Gets the offlineImage value for this LiveChatButton.
+     * Gets the value of the offlineImage property.
      * 
-     * @return offlineImage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOfflineImage() {
+    public String getOfflineImage() {
         return offlineImage;
     }
 
-
     /**
-     * Sets the offlineImage value for this LiveChatButton.
+     * Sets the value of the offlineImage property.
      * 
-     * @param offlineImage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOfflineImage(java.lang.String offlineImage) {
-        this.offlineImage = offlineImage;
+    public void setOfflineImage(String value) {
+        this.offlineImage = value;
     }
 
-
     /**
-     * Gets the onlineImage value for this LiveChatButton.
+     * Gets the value of the onlineImage property.
      * 
-     * @return onlineImage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOnlineImage() {
+    public String getOnlineImage() {
         return onlineImage;
     }
 
-
     /**
-     * Sets the onlineImage value for this LiveChatButton.
+     * Sets the value of the onlineImage property.
      * 
-     * @param onlineImage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOnlineImage(java.lang.String onlineImage) {
-        this.onlineImage = onlineImage;
+    public void setOnlineImage(String value) {
+        this.onlineImage = value;
     }
 
-
     /**
-     * Gets the optionsHasInviteAfterAccept value for this LiveChatButton.
+     * Gets the value of the optionsHasInviteAfterAccept property.
      * 
-     * @return optionsHasInviteAfterAccept
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getOptionsHasInviteAfterAccept() {
+    public Boolean isOptionsHasInviteAfterAccept() {
         return optionsHasInviteAfterAccept;
     }
 
-
     /**
-     * Sets the optionsHasInviteAfterAccept value for this LiveChatButton.
+     * Sets the value of the optionsHasInviteAfterAccept property.
      * 
-     * @param optionsHasInviteAfterAccept
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setOptionsHasInviteAfterAccept(java.lang.Boolean optionsHasInviteAfterAccept) {
-        this.optionsHasInviteAfterAccept = optionsHasInviteAfterAccept;
+    public void setOptionsHasInviteAfterAccept(Boolean value) {
+        this.optionsHasInviteAfterAccept = value;
     }
 
-
     /**
-     * Gets the optionsHasInviteAfterReject value for this LiveChatButton.
+     * Gets the value of the optionsHasInviteAfterReject property.
      * 
-     * @return optionsHasInviteAfterReject
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getOptionsHasInviteAfterReject() {
+    public Boolean isOptionsHasInviteAfterReject() {
         return optionsHasInviteAfterReject;
     }
 
-
     /**
-     * Sets the optionsHasInviteAfterReject value for this LiveChatButton.
+     * Sets the value of the optionsHasInviteAfterReject property.
      * 
-     * @param optionsHasInviteAfterReject
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setOptionsHasInviteAfterReject(java.lang.Boolean optionsHasInviteAfterReject) {
-        this.optionsHasInviteAfterReject = optionsHasInviteAfterReject;
+    public void setOptionsHasInviteAfterReject(Boolean value) {
+        this.optionsHasInviteAfterReject = value;
     }
 
-
     /**
-     * Gets the optionsIsInviteAutoRemove value for this LiveChatButton.
+     * Gets the value of the optionsIsInviteAutoRemove property.
      * 
-     * @return optionsIsInviteAutoRemove
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getOptionsIsInviteAutoRemove() {
+    public Boolean isOptionsIsInviteAutoRemove() {
         return optionsIsInviteAutoRemove;
     }
 
-
     /**
-     * Sets the optionsIsInviteAutoRemove value for this LiveChatButton.
+     * Sets the value of the optionsIsInviteAutoRemove property.
      * 
-     * @param optionsIsInviteAutoRemove
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setOptionsIsInviteAutoRemove(java.lang.Boolean optionsIsInviteAutoRemove) {
-        this.optionsIsInviteAutoRemove = optionsIsInviteAutoRemove;
+    public void setOptionsIsInviteAutoRemove(Boolean value) {
+        this.optionsIsInviteAutoRemove = value;
     }
 
-
     /**
-     * Gets the overallQueueLength value for this LiveChatButton.
+     * Gets the value of the overallQueueLength property.
      * 
-     * @return overallQueueLength
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getOverallQueueLength() {
+    public Integer getOverallQueueLength() {
         return overallQueueLength;
     }
 
-
     /**
-     * Sets the overallQueueLength value for this LiveChatButton.
+     * Sets the value of the overallQueueLength property.
      * 
-     * @param overallQueueLength
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setOverallQueueLength(java.lang.Integer overallQueueLength) {
-        this.overallQueueLength = overallQueueLength;
+    public void setOverallQueueLength(Integer value) {
+        this.overallQueueLength = value;
     }
 
-
     /**
-     * Gets the perAgentQueueLength value for this LiveChatButton.
+     * Gets the value of the perAgentQueueLength property.
      * 
-     * @return perAgentQueueLength
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getPerAgentQueueLength() {
+    public Integer getPerAgentQueueLength() {
         return perAgentQueueLength;
     }
 
-
     /**
-     * Sets the perAgentQueueLength value for this LiveChatButton.
+     * Sets the value of the perAgentQueueLength property.
      * 
-     * @param perAgentQueueLength
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPerAgentQueueLength(java.lang.Integer perAgentQueueLength) {
-        this.perAgentQueueLength = perAgentQueueLength;
+    public void setPerAgentQueueLength(Integer value) {
+        this.perAgentQueueLength = value;
     }
 
-
     /**
-     * Gets the postChatPage value for this LiveChatButton.
+     * Gets the value of the postChatPage property.
      * 
-     * @return postChatPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPostChatPage() {
+    public String getPostChatPage() {
         return postChatPage;
     }
 
-
     /**
-     * Sets the postChatPage value for this LiveChatButton.
+     * Sets the value of the postChatPage property.
      * 
-     * @param postChatPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPostChatPage(java.lang.String postChatPage) {
-        this.postChatPage = postChatPage;
+    public void setPostChatPage(String value) {
+        this.postChatPage = value;
     }
 
-
     /**
-     * Gets the postChatUrl value for this LiveChatButton.
+     * Gets the value of the postChatUrl property.
      * 
-     * @return postChatUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPostChatUrl() {
+    public String getPostChatUrl() {
         return postChatUrl;
     }
 
-
     /**
-     * Sets the postChatUrl value for this LiveChatButton.
+     * Sets the value of the postChatUrl property.
      * 
-     * @param postChatUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPostChatUrl(java.lang.String postChatUrl) {
-        this.postChatUrl = postChatUrl;
+    public void setPostChatUrl(String value) {
+        this.postChatUrl = value;
     }
 
-
     /**
-     * Gets the preChatFormPage value for this LiveChatButton.
+     * Gets the value of the preChatFormPage property.
      * 
-     * @return preChatFormPage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPreChatFormPage() {
+    public String getPreChatFormPage() {
         return preChatFormPage;
     }
 
-
     /**
-     * Sets the preChatFormPage value for this LiveChatButton.
+     * Sets the value of the preChatFormPage property.
      * 
-     * @param preChatFormPage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPreChatFormPage(java.lang.String preChatFormPage) {
-        this.preChatFormPage = preChatFormPage;
+    public void setPreChatFormPage(String value) {
+        this.preChatFormPage = value;
     }
 
-
     /**
-     * Gets the preChatFormUrl value for this LiveChatButton.
+     * Gets the value of the preChatFormUrl property.
      * 
-     * @return preChatFormUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPreChatFormUrl() {
+    public String getPreChatFormUrl() {
         return preChatFormUrl;
     }
 
-
     /**
-     * Sets the preChatFormUrl value for this LiveChatButton.
+     * Sets the value of the preChatFormUrl property.
      * 
-     * @param preChatFormUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPreChatFormUrl(java.lang.String preChatFormUrl) {
-        this.preChatFormUrl = preChatFormUrl;
+    public void setPreChatFormUrl(String value) {
+        this.preChatFormUrl = value;
     }
 
-
     /**
-     * Gets the pushTimeOut value for this LiveChatButton.
+     * Gets the value of the pushTimeOut property.
      * 
-     * @return pushTimeOut
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getPushTimeOut() {
+    public Integer getPushTimeOut() {
         return pushTimeOut;
     }
 
-
     /**
-     * Sets the pushTimeOut value for this LiveChatButton.
+     * Sets the value of the pushTimeOut property.
      * 
-     * @param pushTimeOut
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setPushTimeOut(java.lang.Integer pushTimeOut) {
-        this.pushTimeOut = pushTimeOut;
+    public void setPushTimeOut(Integer value) {
+        this.pushTimeOut = value;
     }
 
-
     /**
-     * Gets the routingType value for this LiveChatButton.
+     * Gets the value of the routingType property.
      * 
-     * @return routingType
+     * @return
+     *     possible object is
+     *     {@link LiveChatButtonRoutingType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LiveChatButtonRoutingType getRoutingType() {
+    public LiveChatButtonRoutingType getRoutingType() {
         return routingType;
     }
 
-
     /**
-     * Sets the routingType value for this LiveChatButton.
+     * Sets the value of the routingType property.
      * 
-     * @param routingType
+     * @param value
+     *     allowed object is
+     *     {@link LiveChatButtonRoutingType }
+     *     
      */
-    public void setRoutingType(com.sforce.soap._2006._04.metadata.LiveChatButtonRoutingType routingType) {
-        this.routingType = routingType;
+    public void setRoutingType(LiveChatButtonRoutingType value) {
+        this.routingType = value;
     }
 
-
     /**
-     * Gets the site value for this LiveChatButton.
+     * Gets the value of the site property.
      * 
-     * @return site
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSite() {
+    public String getSite() {
         return site;
     }
 
-
     /**
-     * Sets the site value for this LiveChatButton.
+     * Sets the value of the site property.
      * 
-     * @param site
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSite(java.lang.String site) {
-        this.site = site;
+    public void setSite(String value) {
+        this.site = value;
     }
 
-
     /**
-     * Gets the skills value for this LiveChatButton.
+     * Gets the value of the skills property.
      * 
-     * @return skills
+     * @return
+     *     possible object is
+     *     {@link LiveChatButtonSkills }
+     *     
      */
-    public java.lang.String[] getSkills() {
+    public LiveChatButtonSkills getSkills() {
         return skills;
     }
 
-
     /**
-     * Sets the skills value for this LiveChatButton.
+     * Sets the value of the skills property.
      * 
-     * @param skills
+     * @param value
+     *     allowed object is
+     *     {@link LiveChatButtonSkills }
+     *     
      */
-    public void setSkills(java.lang.String[] skills) {
-        this.skills = skills;
+    public void setSkills(LiveChatButtonSkills value) {
+        this.skills = value;
     }
 
-
     /**
-     * Gets the timeToRemoveInvite value for this LiveChatButton.
+     * Gets the value of the timeToRemoveInvite property.
      * 
-     * @return timeToRemoveInvite
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getTimeToRemoveInvite() {
+    public Integer getTimeToRemoveInvite() {
         return timeToRemoveInvite;
     }
 
-
     /**
-     * Sets the timeToRemoveInvite value for this LiveChatButton.
+     * Sets the value of the timeToRemoveInvite property.
      * 
-     * @param timeToRemoveInvite
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setTimeToRemoveInvite(java.lang.Integer timeToRemoveInvite) {
-        this.timeToRemoveInvite = timeToRemoveInvite;
+    public void setTimeToRemoveInvite(Integer value) {
+        this.timeToRemoveInvite = value;
     }
 
-
     /**
-     * Gets the type value for this LiveChatButton.
+     * Gets the value of the type property.
      * 
-     * @return type
+     * @return
+     *     possible object is
+     *     {@link LiveChatButtonType }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.LiveChatButtonType getType() {
+    public LiveChatButtonType getType() {
         return type;
     }
 
-
     /**
-     * Sets the type value for this LiveChatButton.
+     * Sets the value of the type property.
      * 
-     * @param type
+     * @param value
+     *     allowed object is
+     *     {@link LiveChatButtonType }
+     *     
      */
-    public void setType(com.sforce.soap._2006._04.metadata.LiveChatButtonType type) {
-        this.type = type;
+    public void setType(LiveChatButtonType value) {
+        this.type = value;
     }
 
-
     /**
-     * Gets the windowLanguage value for this LiveChatButton.
+     * Gets the value of the windowLanguage property.
      * 
-     * @return windowLanguage
+     * @return
+     *     possible object is
+     *     {@link Language }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.Language getWindowLanguage() {
+    public Language getWindowLanguage() {
         return windowLanguage;
     }
 
-
     /**
-     * Sets the windowLanguage value for this LiveChatButton.
+     * Sets the value of the windowLanguage property.
      * 
-     * @param windowLanguage
+     * @param value
+     *     allowed object is
+     *     {@link Language }
+     *     
      */
-    public void setWindowLanguage(com.sforce.soap._2006._04.metadata.Language windowLanguage) {
-        this.windowLanguage = windowLanguage;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof LiveChatButton)) return false;
-        LiveChatButton other = (LiveChatButton) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.animation==null && other.getAnimation()==null) || 
-             (this.animation!=null &&
-              this.animation.equals(other.getAnimation()))) &&
-            ((this.autoGreeting==null && other.getAutoGreeting()==null) || 
-             (this.autoGreeting!=null &&
-              this.autoGreeting.equals(other.getAutoGreeting()))) &&
-            ((this.chatPage==null && other.getChatPage()==null) || 
-             (this.chatPage!=null &&
-              this.chatPage.equals(other.getChatPage()))) &&
-            ((this.customAgentName==null && other.getCustomAgentName()==null) || 
-             (this.customAgentName!=null &&
-              this.customAgentName.equals(other.getCustomAgentName()))) &&
-            ((this.deployments==null && other.getDeployments()==null) || 
-             (this.deployments!=null &&
-              java.util.Arrays.equals(this.deployments, other.getDeployments()))) &&
-            ((this.enableQueue==null && other.getEnableQueue()==null) || 
-             (this.enableQueue!=null &&
-              this.enableQueue.equals(other.getEnableQueue()))) &&
-            ((this.inviteEndPosition==null && other.getInviteEndPosition()==null) || 
-             (this.inviteEndPosition!=null &&
-              this.inviteEndPosition.equals(other.getInviteEndPosition()))) &&
-            ((this.inviteImage==null && other.getInviteImage()==null) || 
-             (this.inviteImage!=null &&
-              this.inviteImage.equals(other.getInviteImage()))) &&
-            ((this.inviteStartPosition==null && other.getInviteStartPosition()==null) || 
-             (this.inviteStartPosition!=null &&
-              this.inviteStartPosition.equals(other.getInviteStartPosition()))) &&
-            ((this.isActive==null && other.getIsActive()==null) || 
-             (this.isActive!=null &&
-              this.isActive.equals(other.getIsActive()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.offlineImage==null && other.getOfflineImage()==null) || 
-             (this.offlineImage!=null &&
-              this.offlineImage.equals(other.getOfflineImage()))) &&
-            ((this.onlineImage==null && other.getOnlineImage()==null) || 
-             (this.onlineImage!=null &&
-              this.onlineImage.equals(other.getOnlineImage()))) &&
-            ((this.optionsHasInviteAfterAccept==null && other.getOptionsHasInviteAfterAccept()==null) || 
-             (this.optionsHasInviteAfterAccept!=null &&
-              this.optionsHasInviteAfterAccept.equals(other.getOptionsHasInviteAfterAccept()))) &&
-            ((this.optionsHasInviteAfterReject==null && other.getOptionsHasInviteAfterReject()==null) || 
-             (this.optionsHasInviteAfterReject!=null &&
-              this.optionsHasInviteAfterReject.equals(other.getOptionsHasInviteAfterReject()))) &&
-            ((this.optionsIsInviteAutoRemove==null && other.getOptionsIsInviteAutoRemove()==null) || 
-             (this.optionsIsInviteAutoRemove!=null &&
-              this.optionsIsInviteAutoRemove.equals(other.getOptionsIsInviteAutoRemove()))) &&
-            ((this.overallQueueLength==null && other.getOverallQueueLength()==null) || 
-             (this.overallQueueLength!=null &&
-              this.overallQueueLength.equals(other.getOverallQueueLength()))) &&
-            ((this.perAgentQueueLength==null && other.getPerAgentQueueLength()==null) || 
-             (this.perAgentQueueLength!=null &&
-              this.perAgentQueueLength.equals(other.getPerAgentQueueLength()))) &&
-            ((this.postChatPage==null && other.getPostChatPage()==null) || 
-             (this.postChatPage!=null &&
-              this.postChatPage.equals(other.getPostChatPage()))) &&
-            ((this.postChatUrl==null && other.getPostChatUrl()==null) || 
-             (this.postChatUrl!=null &&
-              this.postChatUrl.equals(other.getPostChatUrl()))) &&
-            ((this.preChatFormPage==null && other.getPreChatFormPage()==null) || 
-             (this.preChatFormPage!=null &&
-              this.preChatFormPage.equals(other.getPreChatFormPage()))) &&
-            ((this.preChatFormUrl==null && other.getPreChatFormUrl()==null) || 
-             (this.preChatFormUrl!=null &&
-              this.preChatFormUrl.equals(other.getPreChatFormUrl()))) &&
-            ((this.pushTimeOut==null && other.getPushTimeOut()==null) || 
-             (this.pushTimeOut!=null &&
-              this.pushTimeOut.equals(other.getPushTimeOut()))) &&
-            ((this.routingType==null && other.getRoutingType()==null) || 
-             (this.routingType!=null &&
-              this.routingType.equals(other.getRoutingType()))) &&
-            ((this.site==null && other.getSite()==null) || 
-             (this.site!=null &&
-              this.site.equals(other.getSite()))) &&
-            ((this.skills==null && other.getSkills()==null) || 
-             (this.skills!=null &&
-              java.util.Arrays.equals(this.skills, other.getSkills()))) &&
-            ((this.timeToRemoveInvite==null && other.getTimeToRemoveInvite()==null) || 
-             (this.timeToRemoveInvite!=null &&
-              this.timeToRemoveInvite.equals(other.getTimeToRemoveInvite()))) &&
-            ((this.type==null && other.getType()==null) || 
-             (this.type!=null &&
-              this.type.equals(other.getType()))) &&
-            ((this.windowLanguage==null && other.getWindowLanguage()==null) || 
-             (this.windowLanguage!=null &&
-              this.windowLanguage.equals(other.getWindowLanguage())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAnimation() != null) {
-            _hashCode += getAnimation().hashCode();
-        }
-        if (getAutoGreeting() != null) {
-            _hashCode += getAutoGreeting().hashCode();
-        }
-        if (getChatPage() != null) {
-            _hashCode += getChatPage().hashCode();
-        }
-        if (getCustomAgentName() != null) {
-            _hashCode += getCustomAgentName().hashCode();
-        }
-        if (getDeployments() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDeployments());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDeployments(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getEnableQueue() != null) {
-            _hashCode += getEnableQueue().hashCode();
-        }
-        if (getInviteEndPosition() != null) {
-            _hashCode += getInviteEndPosition().hashCode();
-        }
-        if (getInviteImage() != null) {
-            _hashCode += getInviteImage().hashCode();
-        }
-        if (getInviteStartPosition() != null) {
-            _hashCode += getInviteStartPosition().hashCode();
-        }
-        if (getIsActive() != null) {
-            _hashCode += getIsActive().hashCode();
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getOfflineImage() != null) {
-            _hashCode += getOfflineImage().hashCode();
-        }
-        if (getOnlineImage() != null) {
-            _hashCode += getOnlineImage().hashCode();
-        }
-        if (getOptionsHasInviteAfterAccept() != null) {
-            _hashCode += getOptionsHasInviteAfterAccept().hashCode();
-        }
-        if (getOptionsHasInviteAfterReject() != null) {
-            _hashCode += getOptionsHasInviteAfterReject().hashCode();
-        }
-        if (getOptionsIsInviteAutoRemove() != null) {
-            _hashCode += getOptionsIsInviteAutoRemove().hashCode();
-        }
-        if (getOverallQueueLength() != null) {
-            _hashCode += getOverallQueueLength().hashCode();
-        }
-        if (getPerAgentQueueLength() != null) {
-            _hashCode += getPerAgentQueueLength().hashCode();
-        }
-        if (getPostChatPage() != null) {
-            _hashCode += getPostChatPage().hashCode();
-        }
-        if (getPostChatUrl() != null) {
-            _hashCode += getPostChatUrl().hashCode();
-        }
-        if (getPreChatFormPage() != null) {
-            _hashCode += getPreChatFormPage().hashCode();
-        }
-        if (getPreChatFormUrl() != null) {
-            _hashCode += getPreChatFormUrl().hashCode();
-        }
-        if (getPushTimeOut() != null) {
-            _hashCode += getPushTimeOut().hashCode();
-        }
-        if (getRoutingType() != null) {
-            _hashCode += getRoutingType().hashCode();
-        }
-        if (getSite() != null) {
-            _hashCode += getSite().hashCode();
-        }
-        if (getSkills() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSkills());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSkills(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getTimeToRemoveInvite() != null) {
-            _hashCode += getTimeToRemoveInvite().hashCode();
-        }
-        if (getType() != null) {
-            _hashCode += getType().hashCode();
-        }
-        if (getWindowLanguage() != null) {
-            _hashCode += getWindowLanguage().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(LiveChatButton.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatButton"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("animation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "animation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatButtonPresentation"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("autoGreeting");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "autoGreeting"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("chatPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "chatPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customAgentName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customAgentName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deployments");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "deployments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "deployment"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableQueue");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableQueue"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("inviteEndPosition");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "inviteEndPosition"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatButtonInviteEndPosition"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("inviteImage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "inviteImage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("inviteStartPosition");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "inviteStartPosition"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatButtonInviteStartPosition"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("isActive");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "isActive"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("offlineImage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "offlineImage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("onlineImage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "onlineImage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("optionsHasInviteAfterAccept");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "optionsHasInviteAfterAccept"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("optionsHasInviteAfterReject");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "optionsHasInviteAfterReject"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("optionsIsInviteAutoRemove");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "optionsIsInviteAutoRemove"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("overallQueueLength");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "overallQueueLength"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("perAgentQueueLength");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "perAgentQueueLength"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postChatPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "postChatPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postChatUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "postChatUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("preChatFormPage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "preChatFormPage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("preChatFormUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "preChatFormUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("pushTimeOut");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "pushTimeOut"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("routingType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "routingType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatButtonRoutingType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("site");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "site"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("skills");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "skills"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "skill"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("timeToRemoveInvite");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "timeToRemoveInvite"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("type");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "type"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "LiveChatButtonType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("windowLanguage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "windowLanguage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Language"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setWindowLanguage(Language value) {
+        this.windowLanguage = value;
     }
 
 }

@@ -1,1060 +1,650 @@
-/**
- * Flow.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class Flow  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.FlowApexPluginCall[] apexPluginCalls;
-
-    private com.sforce.soap._2006._04.metadata.FlowAssignment[] assignments;
-
-    private com.sforce.soap._2006._04.metadata.FlowChoice[] choices;
-
-    private com.sforce.soap._2006._04.metadata.FlowConstant[] constants;
-
-    private com.sforce.soap._2006._04.metadata.FlowDecision[] decisions;
-
-    private java.lang.String description;
-
-    private com.sforce.soap._2006._04.metadata.FlowDynamicChoiceSet[] dynamicChoiceSets;
-
-    private com.sforce.soap._2006._04.metadata.FlowFormula[] formulas;
-
-    private java.lang.String label;
-
-    private com.sforce.soap._2006._04.metadata.FlowRecordCreate[] recordCreates;
-
-    private com.sforce.soap._2006._04.metadata.FlowRecordDelete[] recordDeletes;
-
-    private com.sforce.soap._2006._04.metadata.FlowRecordLookup[] recordLookups;
-
-    private com.sforce.soap._2006._04.metadata.FlowRecordUpdate[] recordUpdates;
-
-    private com.sforce.soap._2006._04.metadata.FlowScreen[] screens;
-
-    private java.lang.String startElementReference;
-
-    private com.sforce.soap._2006._04.metadata.FlowStep[] steps;
-
-    private com.sforce.soap._2006._04.metadata.FlowSubflow[] subflows;
-
-    private com.sforce.soap._2006._04.metadata.FlowTextTemplate[] textTemplates;
-
-    private com.sforce.soap._2006._04.metadata.FlowVariable[] variables;
-
-    public Flow() {
-    }
-
-    public Flow(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.FlowApexPluginCall[] apexPluginCalls,
-           com.sforce.soap._2006._04.metadata.FlowAssignment[] assignments,
-           com.sforce.soap._2006._04.metadata.FlowChoice[] choices,
-           com.sforce.soap._2006._04.metadata.FlowConstant[] constants,
-           com.sforce.soap._2006._04.metadata.FlowDecision[] decisions,
-           java.lang.String description,
-           com.sforce.soap._2006._04.metadata.FlowDynamicChoiceSet[] dynamicChoiceSets,
-           com.sforce.soap._2006._04.metadata.FlowFormula[] formulas,
-           java.lang.String label,
-           com.sforce.soap._2006._04.metadata.FlowRecordCreate[] recordCreates,
-           com.sforce.soap._2006._04.metadata.FlowRecordDelete[] recordDeletes,
-           com.sforce.soap._2006._04.metadata.FlowRecordLookup[] recordLookups,
-           com.sforce.soap._2006._04.metadata.FlowRecordUpdate[] recordUpdates,
-           com.sforce.soap._2006._04.metadata.FlowScreen[] screens,
-           java.lang.String startElementReference,
-           com.sforce.soap._2006._04.metadata.FlowStep[] steps,
-           com.sforce.soap._2006._04.metadata.FlowSubflow[] subflows,
-           com.sforce.soap._2006._04.metadata.FlowTextTemplate[] textTemplates,
-           com.sforce.soap._2006._04.metadata.FlowVariable[] variables) {
-        super(
-            fullName);
-        this.apexPluginCalls = apexPluginCalls;
-        this.assignments = assignments;
-        this.choices = choices;
-        this.constants = constants;
-        this.decisions = decisions;
-        this.description = description;
-        this.dynamicChoiceSets = dynamicChoiceSets;
-        this.formulas = formulas;
-        this.label = label;
-        this.recordCreates = recordCreates;
-        this.recordDeletes = recordDeletes;
-        this.recordLookups = recordLookups;
-        this.recordUpdates = recordUpdates;
-        this.screens = screens;
-        this.startElementReference = startElementReference;
-        this.steps = steps;
-        this.subflows = subflows;
-        this.textTemplates = textTemplates;
-        this.variables = variables;
-    }
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
-    /**
-     * Gets the apexPluginCalls value for this Flow.
-     * 
-     * @return apexPluginCalls
-     */
-    public com.sforce.soap._2006._04.metadata.FlowApexPluginCall[] getApexPluginCalls() {
-        return apexPluginCalls;
-    }
+/**
+ * <p>Java class for Flow complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Flow">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="apexPluginCalls" type="{http://soap.sforce.com/2006/04/metadata}FlowApexPluginCall" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="assignments" type="{http://soap.sforce.com/2006/04/metadata}FlowAssignment" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="choices" type="{http://soap.sforce.com/2006/04/metadata}FlowChoice" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="constants" type="{http://soap.sforce.com/2006/04/metadata}FlowConstant" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="decisions" type="{http://soap.sforce.com/2006/04/metadata}FlowDecision" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dynamicChoiceSets" type="{http://soap.sforce.com/2006/04/metadata}FlowDynamicChoiceSet" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="formulas" type="{http://soap.sforce.com/2006/04/metadata}FlowFormula" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="label" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="recordCreates" type="{http://soap.sforce.com/2006/04/metadata}FlowRecordCreate" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="recordDeletes" type="{http://soap.sforce.com/2006/04/metadata}FlowRecordDelete" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="recordLookups" type="{http://soap.sforce.com/2006/04/metadata}FlowRecordLookup" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="recordUpdates" type="{http://soap.sforce.com/2006/04/metadata}FlowRecordUpdate" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="screens" type="{http://soap.sforce.com/2006/04/metadata}FlowScreen" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="startElementReference" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="steps" type="{http://soap.sforce.com/2006/04/metadata}FlowStep" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="subflows" type="{http://soap.sforce.com/2006/04/metadata}FlowSubflow" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="textTemplates" type="{http://soap.sforce.com/2006/04/metadata}FlowTextTemplate" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="variables" type="{http://soap.sforce.com/2006/04/metadata}FlowVariable" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Flow", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "apexPluginCalls",
+    "assignments",
+    "choices",
+    "constants",
+    "decisions",
+    "description",
+    "dynamicChoiceSets",
+    "formulas",
+    "label",
+    "recordCreates",
+    "recordDeletes",
+    "recordLookups",
+    "recordUpdates",
+    "screens",
+    "startElementReference",
+    "steps",
+    "subflows",
+    "textTemplates",
+    "variables"
+})
+public class Flow
+    extends Metadata
+{
 
-
-    /**
-     * Sets the apexPluginCalls value for this Flow.
-     * 
-     * @param apexPluginCalls
-     */
-    public void setApexPluginCalls(com.sforce.soap._2006._04.metadata.FlowApexPluginCall[] apexPluginCalls) {
-        this.apexPluginCalls = apexPluginCalls;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowApexPluginCall getApexPluginCalls(int i) {
-        return this.apexPluginCalls[i];
-    }
-
-    public void setApexPluginCalls(int i, com.sforce.soap._2006._04.metadata.FlowApexPluginCall _value) {
-        this.apexPluginCalls[i] = _value;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowApexPluginCall> apexPluginCalls;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowAssignment> assignments;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowChoice> choices;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowConstant> constants;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowDecision> decisions;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String description;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowDynamicChoiceSet> dynamicChoiceSets;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowFormula> formulas;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String label;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowRecordCreate> recordCreates;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowRecordDelete> recordDeletes;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowRecordLookup> recordLookups;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowRecordUpdate> recordUpdates;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowScreen> screens;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String startElementReference;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowStep> steps;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowSubflow> subflows;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowTextTemplate> textTemplates;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<FlowVariable> variables;
 
     /**
-     * Gets the assignments value for this Flow.
+     * Gets the value of the apexPluginCalls property.
      * 
-     * @return assignments
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the apexPluginCalls property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getApexPluginCalls().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowApexPluginCall }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FlowAssignment[] getAssignments() {
-        return assignments;
+    public List<FlowApexPluginCall> getApexPluginCalls() {
+        if (apexPluginCalls == null) {
+            apexPluginCalls = new ArrayList<FlowApexPluginCall>();
+        }
+        return this.apexPluginCalls;
     }
-
 
     /**
-     * Sets the assignments value for this Flow.
+     * Gets the value of the assignments property.
      * 
-     * @param assignments
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the assignments property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAssignments().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowAssignment }
+     * 
+     * 
      */
-    public void setAssignments(com.sforce.soap._2006._04.metadata.FlowAssignment[] assignments) {
-        this.assignments = assignments;
+    public List<FlowAssignment> getAssignments() {
+        if (assignments == null) {
+            assignments = new ArrayList<FlowAssignment>();
+        }
+        return this.assignments;
     }
-
-    public com.sforce.soap._2006._04.metadata.FlowAssignment getAssignments(int i) {
-        return this.assignments[i];
-    }
-
-    public void setAssignments(int i, com.sforce.soap._2006._04.metadata.FlowAssignment _value) {
-        this.assignments[i] = _value;
-    }
-
 
     /**
-     * Gets the choices value for this Flow.
+     * Gets the value of the choices property.
      * 
-     * @return choices
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the choices property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getChoices().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowChoice }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FlowChoice[] getChoices() {
-        return choices;
+    public List<FlowChoice> getChoices() {
+        if (choices == null) {
+            choices = new ArrayList<FlowChoice>();
+        }
+        return this.choices;
     }
-
 
     /**
-     * Sets the choices value for this Flow.
+     * Gets the value of the constants property.
      * 
-     * @param choices
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the constants property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getConstants().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowConstant }
+     * 
+     * 
      */
-    public void setChoices(com.sforce.soap._2006._04.metadata.FlowChoice[] choices) {
-        this.choices = choices;
+    public List<FlowConstant> getConstants() {
+        if (constants == null) {
+            constants = new ArrayList<FlowConstant>();
+        }
+        return this.constants;
     }
-
-    public com.sforce.soap._2006._04.metadata.FlowChoice getChoices(int i) {
-        return this.choices[i];
-    }
-
-    public void setChoices(int i, com.sforce.soap._2006._04.metadata.FlowChoice _value) {
-        this.choices[i] = _value;
-    }
-
 
     /**
-     * Gets the constants value for this Flow.
+     * Gets the value of the decisions property.
      * 
-     * @return constants
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the decisions property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDecisions().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowDecision }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FlowConstant[] getConstants() {
-        return constants;
+    public List<FlowDecision> getDecisions() {
+        if (decisions == null) {
+            decisions = new ArrayList<FlowDecision>();
+        }
+        return this.decisions;
     }
-
 
     /**
-     * Sets the constants value for this Flow.
+     * Gets the value of the description property.
      * 
-     * @param constants
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public void setConstants(com.sforce.soap._2006._04.metadata.FlowConstant[] constants) {
-        this.constants = constants;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowConstant getConstants(int i) {
-        return this.constants[i];
-    }
-
-    public void setConstants(int i, com.sforce.soap._2006._04.metadata.FlowConstant _value) {
-        this.constants[i] = _value;
-    }
-
-
-    /**
-     * Gets the decisions value for this Flow.
-     * 
-     * @return decisions
-     */
-    public com.sforce.soap._2006._04.metadata.FlowDecision[] getDecisions() {
-        return decisions;
-    }
-
-
-    /**
-     * Sets the decisions value for this Flow.
-     * 
-     * @param decisions
-     */
-    public void setDecisions(com.sforce.soap._2006._04.metadata.FlowDecision[] decisions) {
-        this.decisions = decisions;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowDecision getDecisions(int i) {
-        return this.decisions[i];
-    }
-
-    public void setDecisions(int i, com.sforce.soap._2006._04.metadata.FlowDecision _value) {
-        this.decisions[i] = _value;
-    }
-
-
-    /**
-     * Gets the description value for this Flow.
-     * 
-     * @return description
-     */
-    public java.lang.String getDescription() {
+    public String getDescription() {
         return description;
     }
 
+    /**
+     * Sets the value of the description property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDescription(String value) {
+        this.description = value;
+    }
 
     /**
-     * Sets the description value for this Flow.
+     * Gets the value of the dynamicChoiceSets property.
      * 
-     * @param description
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the dynamicChoiceSets property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDynamicChoiceSets().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowDynamicChoiceSet }
+     * 
+     * 
      */
-    public void setDescription(java.lang.String description) {
-        this.description = description;
+    public List<FlowDynamicChoiceSet> getDynamicChoiceSets() {
+        if (dynamicChoiceSets == null) {
+            dynamicChoiceSets = new ArrayList<FlowDynamicChoiceSet>();
+        }
+        return this.dynamicChoiceSets;
     }
-
 
     /**
-     * Gets the dynamicChoiceSets value for this Flow.
+     * Gets the value of the formulas property.
      * 
-     * @return dynamicChoiceSets
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the formulas property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFormulas().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowFormula }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FlowDynamicChoiceSet[] getDynamicChoiceSets() {
-        return dynamicChoiceSets;
+    public List<FlowFormula> getFormulas() {
+        if (formulas == null) {
+            formulas = new ArrayList<FlowFormula>();
+        }
+        return this.formulas;
     }
-
 
     /**
-     * Sets the dynamicChoiceSets value for this Flow.
+     * Gets the value of the label property.
      * 
-     * @param dynamicChoiceSets
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public void setDynamicChoiceSets(com.sforce.soap._2006._04.metadata.FlowDynamicChoiceSet[] dynamicChoiceSets) {
-        this.dynamicChoiceSets = dynamicChoiceSets;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowDynamicChoiceSet getDynamicChoiceSets(int i) {
-        return this.dynamicChoiceSets[i];
-    }
-
-    public void setDynamicChoiceSets(int i, com.sforce.soap._2006._04.metadata.FlowDynamicChoiceSet _value) {
-        this.dynamicChoiceSets[i] = _value;
-    }
-
-
-    /**
-     * Gets the formulas value for this Flow.
-     * 
-     * @return formulas
-     */
-    public com.sforce.soap._2006._04.metadata.FlowFormula[] getFormulas() {
-        return formulas;
-    }
-
-
-    /**
-     * Sets the formulas value for this Flow.
-     * 
-     * @param formulas
-     */
-    public void setFormulas(com.sforce.soap._2006._04.metadata.FlowFormula[] formulas) {
-        this.formulas = formulas;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowFormula getFormulas(int i) {
-        return this.formulas[i];
-    }
-
-    public void setFormulas(int i, com.sforce.soap._2006._04.metadata.FlowFormula _value) {
-        this.formulas[i] = _value;
-    }
-
-
-    /**
-     * Gets the label value for this Flow.
-     * 
-     * @return label
-     */
-    public java.lang.String getLabel() {
+    public String getLabel() {
         return label;
     }
 
+    /**
+     * Sets the value of the label property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLabel(String value) {
+        this.label = value;
+    }
 
     /**
-     * Sets the label value for this Flow.
+     * Gets the value of the recordCreates property.
      * 
-     * @param label
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the recordCreates property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRecordCreates().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowRecordCreate }
+     * 
+     * 
      */
-    public void setLabel(java.lang.String label) {
-        this.label = label;
+    public List<FlowRecordCreate> getRecordCreates() {
+        if (recordCreates == null) {
+            recordCreates = new ArrayList<FlowRecordCreate>();
+        }
+        return this.recordCreates;
     }
-
 
     /**
-     * Gets the recordCreates value for this Flow.
+     * Gets the value of the recordDeletes property.
      * 
-     * @return recordCreates
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the recordDeletes property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRecordDeletes().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowRecordDelete }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FlowRecordCreate[] getRecordCreates() {
-        return recordCreates;
+    public List<FlowRecordDelete> getRecordDeletes() {
+        if (recordDeletes == null) {
+            recordDeletes = new ArrayList<FlowRecordDelete>();
+        }
+        return this.recordDeletes;
     }
-
 
     /**
-     * Sets the recordCreates value for this Flow.
+     * Gets the value of the recordLookups property.
      * 
-     * @param recordCreates
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the recordLookups property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRecordLookups().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowRecordLookup }
+     * 
+     * 
      */
-    public void setRecordCreates(com.sforce.soap._2006._04.metadata.FlowRecordCreate[] recordCreates) {
-        this.recordCreates = recordCreates;
+    public List<FlowRecordLookup> getRecordLookups() {
+        if (recordLookups == null) {
+            recordLookups = new ArrayList<FlowRecordLookup>();
+        }
+        return this.recordLookups;
     }
-
-    public com.sforce.soap._2006._04.metadata.FlowRecordCreate getRecordCreates(int i) {
-        return this.recordCreates[i];
-    }
-
-    public void setRecordCreates(int i, com.sforce.soap._2006._04.metadata.FlowRecordCreate _value) {
-        this.recordCreates[i] = _value;
-    }
-
 
     /**
-     * Gets the recordDeletes value for this Flow.
+     * Gets the value of the recordUpdates property.
      * 
-     * @return recordDeletes
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the recordUpdates property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getRecordUpdates().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowRecordUpdate }
+     * 
+     * 
      */
-    public com.sforce.soap._2006._04.metadata.FlowRecordDelete[] getRecordDeletes() {
-        return recordDeletes;
+    public List<FlowRecordUpdate> getRecordUpdates() {
+        if (recordUpdates == null) {
+            recordUpdates = new ArrayList<FlowRecordUpdate>();
+        }
+        return this.recordUpdates;
     }
-
 
     /**
-     * Sets the recordDeletes value for this Flow.
+     * Gets the value of the screens property.
      * 
-     * @param recordDeletes
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the screens property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getScreens().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowScreen }
+     * 
+     * 
      */
-    public void setRecordDeletes(com.sforce.soap._2006._04.metadata.FlowRecordDelete[] recordDeletes) {
-        this.recordDeletes = recordDeletes;
+    public List<FlowScreen> getScreens() {
+        if (screens == null) {
+            screens = new ArrayList<FlowScreen>();
+        }
+        return this.screens;
     }
-
-    public com.sforce.soap._2006._04.metadata.FlowRecordDelete getRecordDeletes(int i) {
-        return this.recordDeletes[i];
-    }
-
-    public void setRecordDeletes(int i, com.sforce.soap._2006._04.metadata.FlowRecordDelete _value) {
-        this.recordDeletes[i] = _value;
-    }
-
 
     /**
-     * Gets the recordLookups value for this Flow.
+     * Gets the value of the startElementReference property.
      * 
-     * @return recordLookups
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.FlowRecordLookup[] getRecordLookups() {
-        return recordLookups;
-    }
-
-
-    /**
-     * Sets the recordLookups value for this Flow.
-     * 
-     * @param recordLookups
-     */
-    public void setRecordLookups(com.sforce.soap._2006._04.metadata.FlowRecordLookup[] recordLookups) {
-        this.recordLookups = recordLookups;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowRecordLookup getRecordLookups(int i) {
-        return this.recordLookups[i];
-    }
-
-    public void setRecordLookups(int i, com.sforce.soap._2006._04.metadata.FlowRecordLookup _value) {
-        this.recordLookups[i] = _value;
-    }
-
-
-    /**
-     * Gets the recordUpdates value for this Flow.
-     * 
-     * @return recordUpdates
-     */
-    public com.sforce.soap._2006._04.metadata.FlowRecordUpdate[] getRecordUpdates() {
-        return recordUpdates;
-    }
-
-
-    /**
-     * Sets the recordUpdates value for this Flow.
-     * 
-     * @param recordUpdates
-     */
-    public void setRecordUpdates(com.sforce.soap._2006._04.metadata.FlowRecordUpdate[] recordUpdates) {
-        this.recordUpdates = recordUpdates;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowRecordUpdate getRecordUpdates(int i) {
-        return this.recordUpdates[i];
-    }
-
-    public void setRecordUpdates(int i, com.sforce.soap._2006._04.metadata.FlowRecordUpdate _value) {
-        this.recordUpdates[i] = _value;
-    }
-
-
-    /**
-     * Gets the screens value for this Flow.
-     * 
-     * @return screens
-     */
-    public com.sforce.soap._2006._04.metadata.FlowScreen[] getScreens() {
-        return screens;
-    }
-
-
-    /**
-     * Sets the screens value for this Flow.
-     * 
-     * @param screens
-     */
-    public void setScreens(com.sforce.soap._2006._04.metadata.FlowScreen[] screens) {
-        this.screens = screens;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowScreen getScreens(int i) {
-        return this.screens[i];
-    }
-
-    public void setScreens(int i, com.sforce.soap._2006._04.metadata.FlowScreen _value) {
-        this.screens[i] = _value;
-    }
-
-
-    /**
-     * Gets the startElementReference value for this Flow.
-     * 
-     * @return startElementReference
-     */
-    public java.lang.String getStartElementReference() {
+    public String getStartElementReference() {
         return startElementReference;
     }
 
-
     /**
-     * Sets the startElementReference value for this Flow.
+     * Sets the value of the startElementReference property.
      * 
-     * @param startElementReference
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStartElementReference(java.lang.String startElementReference) {
-        this.startElementReference = startElementReference;
+    public void setStartElementReference(String value) {
+        this.startElementReference = value;
     }
 
-
     /**
-     * Gets the steps value for this Flow.
+     * Gets the value of the steps property.
      * 
-     * @return steps
-     */
-    public com.sforce.soap._2006._04.metadata.FlowStep[] getSteps() {
-        return steps;
-    }
-
-
-    /**
-     * Sets the steps value for this Flow.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the steps property.
      * 
-     * @param steps
-     */
-    public void setSteps(com.sforce.soap._2006._04.metadata.FlowStep[] steps) {
-        this.steps = steps;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowStep getSteps(int i) {
-        return this.steps[i];
-    }
-
-    public void setSteps(int i, com.sforce.soap._2006._04.metadata.FlowStep _value) {
-        this.steps[i] = _value;
-    }
-
-
-    /**
-     * Gets the subflows value for this Flow.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSteps().add(newItem);
+     * </pre>
      * 
-     * @return subflows
-     */
-    public com.sforce.soap._2006._04.metadata.FlowSubflow[] getSubflows() {
-        return subflows;
-    }
-
-
-    /**
-     * Sets the subflows value for this Flow.
      * 
-     * @param subflows
-     */
-    public void setSubflows(com.sforce.soap._2006._04.metadata.FlowSubflow[] subflows) {
-        this.subflows = subflows;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowSubflow getSubflows(int i) {
-        return this.subflows[i];
-    }
-
-    public void setSubflows(int i, com.sforce.soap._2006._04.metadata.FlowSubflow _value) {
-        this.subflows[i] = _value;
-    }
-
-
-    /**
-     * Gets the textTemplates value for this Flow.
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowStep }
      * 
-     * @return textTemplates
-     */
-    public com.sforce.soap._2006._04.metadata.FlowTextTemplate[] getTextTemplates() {
-        return textTemplates;
-    }
-
-
-    /**
-     * Sets the textTemplates value for this Flow.
      * 
-     * @param textTemplates
      */
-    public void setTextTemplates(com.sforce.soap._2006._04.metadata.FlowTextTemplate[] textTemplates) {
-        this.textTemplates = textTemplates;
+    public List<FlowStep> getSteps() {
+        if (steps == null) {
+            steps = new ArrayList<FlowStep>();
+        }
+        return this.steps;
     }
-
-    public com.sforce.soap._2006._04.metadata.FlowTextTemplate getTextTemplates(int i) {
-        return this.textTemplates[i];
-    }
-
-    public void setTextTemplates(int i, com.sforce.soap._2006._04.metadata.FlowTextTemplate _value) {
-        this.textTemplates[i] = _value;
-    }
-
 
     /**
-     * Gets the variables value for this Flow.
+     * Gets the value of the subflows property.
      * 
-     * @return variables
-     */
-    public com.sforce.soap._2006._04.metadata.FlowVariable[] getVariables() {
-        return variables;
-    }
-
-
-    /**
-     * Sets the variables value for this Flow.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the subflows property.
      * 
-     * @param variables
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSubflows().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowSubflow }
+     * 
+     * 
      */
-    public void setVariables(com.sforce.soap._2006._04.metadata.FlowVariable[] variables) {
-        this.variables = variables;
-    }
-
-    public com.sforce.soap._2006._04.metadata.FlowVariable getVariables(int i) {
-        return this.variables[i];
-    }
-
-    public void setVariables(int i, com.sforce.soap._2006._04.metadata.FlowVariable _value) {
-        this.variables[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof Flow)) return false;
-        Flow other = (Flow) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<FlowSubflow> getSubflows() {
+        if (subflows == null) {
+            subflows = new ArrayList<FlowSubflow>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.apexPluginCalls==null && other.getApexPluginCalls()==null) || 
-             (this.apexPluginCalls!=null &&
-              java.util.Arrays.equals(this.apexPluginCalls, other.getApexPluginCalls()))) &&
-            ((this.assignments==null && other.getAssignments()==null) || 
-             (this.assignments!=null &&
-              java.util.Arrays.equals(this.assignments, other.getAssignments()))) &&
-            ((this.choices==null && other.getChoices()==null) || 
-             (this.choices!=null &&
-              java.util.Arrays.equals(this.choices, other.getChoices()))) &&
-            ((this.constants==null && other.getConstants()==null) || 
-             (this.constants!=null &&
-              java.util.Arrays.equals(this.constants, other.getConstants()))) &&
-            ((this.decisions==null && other.getDecisions()==null) || 
-             (this.decisions!=null &&
-              java.util.Arrays.equals(this.decisions, other.getDecisions()))) &&
-            ((this.description==null && other.getDescription()==null) || 
-             (this.description!=null &&
-              this.description.equals(other.getDescription()))) &&
-            ((this.dynamicChoiceSets==null && other.getDynamicChoiceSets()==null) || 
-             (this.dynamicChoiceSets!=null &&
-              java.util.Arrays.equals(this.dynamicChoiceSets, other.getDynamicChoiceSets()))) &&
-            ((this.formulas==null && other.getFormulas()==null) || 
-             (this.formulas!=null &&
-              java.util.Arrays.equals(this.formulas, other.getFormulas()))) &&
-            ((this.label==null && other.getLabel()==null) || 
-             (this.label!=null &&
-              this.label.equals(other.getLabel()))) &&
-            ((this.recordCreates==null && other.getRecordCreates()==null) || 
-             (this.recordCreates!=null &&
-              java.util.Arrays.equals(this.recordCreates, other.getRecordCreates()))) &&
-            ((this.recordDeletes==null && other.getRecordDeletes()==null) || 
-             (this.recordDeletes!=null &&
-              java.util.Arrays.equals(this.recordDeletes, other.getRecordDeletes()))) &&
-            ((this.recordLookups==null && other.getRecordLookups()==null) || 
-             (this.recordLookups!=null &&
-              java.util.Arrays.equals(this.recordLookups, other.getRecordLookups()))) &&
-            ((this.recordUpdates==null && other.getRecordUpdates()==null) || 
-             (this.recordUpdates!=null &&
-              java.util.Arrays.equals(this.recordUpdates, other.getRecordUpdates()))) &&
-            ((this.screens==null && other.getScreens()==null) || 
-             (this.screens!=null &&
-              java.util.Arrays.equals(this.screens, other.getScreens()))) &&
-            ((this.startElementReference==null && other.getStartElementReference()==null) || 
-             (this.startElementReference!=null &&
-              this.startElementReference.equals(other.getStartElementReference()))) &&
-            ((this.steps==null && other.getSteps()==null) || 
-             (this.steps!=null &&
-              java.util.Arrays.equals(this.steps, other.getSteps()))) &&
-            ((this.subflows==null && other.getSubflows()==null) || 
-             (this.subflows!=null &&
-              java.util.Arrays.equals(this.subflows, other.getSubflows()))) &&
-            ((this.textTemplates==null && other.getTextTemplates()==null) || 
-             (this.textTemplates!=null &&
-              java.util.Arrays.equals(this.textTemplates, other.getTextTemplates()))) &&
-            ((this.variables==null && other.getVariables()==null) || 
-             (this.variables!=null &&
-              java.util.Arrays.equals(this.variables, other.getVariables())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getApexPluginCalls() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getApexPluginCalls());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getApexPluginCalls(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getAssignments() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getAssignments());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getAssignments(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getChoices() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getChoices());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getChoices(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getConstants() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getConstants());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getConstants(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDecisions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDecisions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDecisions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getDescription() != null) {
-            _hashCode += getDescription().hashCode();
-        }
-        if (getDynamicChoiceSets() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDynamicChoiceSets());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDynamicChoiceSets(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFormulas() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFormulas());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFormulas(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getLabel() != null) {
-            _hashCode += getLabel().hashCode();
-        }
-        if (getRecordCreates() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRecordCreates());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRecordCreates(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRecordDeletes() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRecordDeletes());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRecordDeletes(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRecordLookups() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRecordLookups());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRecordLookups(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getRecordUpdates() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRecordUpdates());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRecordUpdates(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getScreens() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getScreens());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getScreens(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getStartElementReference() != null) {
-            _hashCode += getStartElementReference().hashCode();
-        }
-        if (getSteps() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSteps());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSteps(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSubflows() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSubflows());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSubflows(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getTextTemplates() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTextTemplates());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTextTemplates(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getVariables() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getVariables());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getVariables(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Flow.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "Flow"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("apexPluginCalls");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "apexPluginCalls"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowApexPluginCall"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assignments");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "assignments"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowAssignment"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("choices");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "choices"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowChoice"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("constants");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "constants"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowConstant"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("decisions");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "decisions"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDecision"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "description"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("dynamicChoiceSets");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "dynamicChoiceSets"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowDynamicChoiceSet"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("formulas");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "formulas"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowFormula"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("label");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "label"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordCreates");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordCreates"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordCreate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordDeletes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordDeletes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordDelete"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordLookups");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordLookups"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordLookup"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("recordUpdates");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "recordUpdates"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowRecordUpdate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("screens");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "screens"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowScreen"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("startElementReference");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "startElementReference"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("steps");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "steps"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowStep"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("subflows");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "subflows"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowSubflow"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("textTemplates");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "textTemplates"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowTextTemplate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("variables");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "variables"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "FlowVariable"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
+        return this.subflows;
     }
 
     /**
-     * Return type metadata object
+     * Gets the value of the textTemplates property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the textTemplates property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getTextTemplates().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowTextTemplate }
+     * 
+     * 
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
+    public List<FlowTextTemplate> getTextTemplates() {
+        if (textTemplates == null) {
+            textTemplates = new ArrayList<FlowTextTemplate>();
+        }
+        return this.textTemplates;
     }
 
     /**
-     * Get Custom Serializer
+     * Gets the value of the variables property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the variables property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getVariables().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link FlowVariable }
+     * 
+     * 
      */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public List<FlowVariable> getVariables() {
+        if (variables == null) {
+            variables = new ArrayList<FlowVariable>();
+        }
+        return this.variables;
     }
 
 }

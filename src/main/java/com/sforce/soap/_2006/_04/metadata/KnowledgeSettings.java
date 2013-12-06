@@ -1,502 +1,344 @@
-/**
- * KnowledgeSettings.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class KnowledgeSettings  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private com.sforce.soap._2006._04.metadata.KnowledgeAnswerSettings answers;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private com.sforce.soap._2006._04.metadata.KnowledgeCaseSettings cases;
 
-    private java.lang.String defaultLanguage;
+/**
+ * <p>Java class for KnowledgeSettings complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="KnowledgeSettings">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="answers" type="{http://soap.sforce.com/2006/04/metadata}KnowledgeAnswerSettings" minOccurs="0"/>
+ *         &lt;element name="cases" type="{http://soap.sforce.com/2006/04/metadata}KnowledgeCaseSettings" minOccurs="0"/>
+ *         &lt;element name="defaultLanguage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="enableCreateEditOnArticlesTab" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableExternalMediaContent" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="enableKnowledge" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="languages" type="{http://soap.sforce.com/2006/04/metadata}KnowledgeLanguageSettings" minOccurs="0"/>
+ *         &lt;element name="showArticleSummariesCustomerPortal" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showArticleSummariesInternalApp" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showArticleSummariesPartnerPortal" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="showValidationStatusField" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "KnowledgeSettings", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "answers",
+    "cases",
+    "defaultLanguage",
+    "enableCreateEditOnArticlesTab",
+    "enableExternalMediaContent",
+    "enableKnowledge",
+    "languages",
+    "showArticleSummariesCustomerPortal",
+    "showArticleSummariesInternalApp",
+    "showArticleSummariesPartnerPortal",
+    "showValidationStatusField"
+})
+public class KnowledgeSettings
+    extends Metadata
+{
 
-    private java.lang.Boolean enableCreateEditOnArticlesTab;
-
-    private java.lang.Boolean enableExternalMediaContent;
-
-    private java.lang.Boolean enableKnowledge;
-
-    private com.sforce.soap._2006._04.metadata.KnowledgeLanguage[] languages;
-
-    private java.lang.Boolean showArticleSummariesCustomerPortal;
-
-    private java.lang.Boolean showArticleSummariesInternalApp;
-
-    private java.lang.Boolean showArticleSummariesPartnerPortal;
-
-    private java.lang.Boolean showValidationStatusField;
-
-    public KnowledgeSettings() {
-    }
-
-    public KnowledgeSettings(
-           java.lang.String fullName,
-           com.sforce.soap._2006._04.metadata.KnowledgeAnswerSettings answers,
-           com.sforce.soap._2006._04.metadata.KnowledgeCaseSettings cases,
-           java.lang.String defaultLanguage,
-           java.lang.Boolean enableCreateEditOnArticlesTab,
-           java.lang.Boolean enableExternalMediaContent,
-           java.lang.Boolean enableKnowledge,
-           com.sforce.soap._2006._04.metadata.KnowledgeLanguage[] languages,
-           java.lang.Boolean showArticleSummariesCustomerPortal,
-           java.lang.Boolean showArticleSummariesInternalApp,
-           java.lang.Boolean showArticleSummariesPartnerPortal,
-           java.lang.Boolean showValidationStatusField) {
-        super(
-            fullName);
-        this.answers = answers;
-        this.cases = cases;
-        this.defaultLanguage = defaultLanguage;
-        this.enableCreateEditOnArticlesTab = enableCreateEditOnArticlesTab;
-        this.enableExternalMediaContent = enableExternalMediaContent;
-        this.enableKnowledge = enableKnowledge;
-        this.languages = languages;
-        this.showArticleSummariesCustomerPortal = showArticleSummariesCustomerPortal;
-        this.showArticleSummariesInternalApp = showArticleSummariesInternalApp;
-        this.showArticleSummariesPartnerPortal = showArticleSummariesPartnerPortal;
-        this.showValidationStatusField = showValidationStatusField;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected KnowledgeAnswerSettings answers;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected KnowledgeCaseSettings cases;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String defaultLanguage;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableCreateEditOnArticlesTab;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableExternalMediaContent;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean enableKnowledge;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected KnowledgeLanguageSettings languages;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showArticleSummariesCustomerPortal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showArticleSummariesInternalApp;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showArticleSummariesPartnerPortal;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected Boolean showValidationStatusField;
 
     /**
-     * Gets the answers value for this KnowledgeSettings.
+     * Gets the value of the answers property.
      * 
-     * @return answers
+     * @return
+     *     possible object is
+     *     {@link KnowledgeAnswerSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.KnowledgeAnswerSettings getAnswers() {
+    public KnowledgeAnswerSettings getAnswers() {
         return answers;
     }
 
-
     /**
-     * Sets the answers value for this KnowledgeSettings.
+     * Sets the value of the answers property.
      * 
-     * @param answers
+     * @param value
+     *     allowed object is
+     *     {@link KnowledgeAnswerSettings }
+     *     
      */
-    public void setAnswers(com.sforce.soap._2006._04.metadata.KnowledgeAnswerSettings answers) {
-        this.answers = answers;
+    public void setAnswers(KnowledgeAnswerSettings value) {
+        this.answers = value;
     }
 
-
     /**
-     * Gets the cases value for this KnowledgeSettings.
+     * Gets the value of the cases property.
      * 
-     * @return cases
+     * @return
+     *     possible object is
+     *     {@link KnowledgeCaseSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.KnowledgeCaseSettings getCases() {
+    public KnowledgeCaseSettings getCases() {
         return cases;
     }
 
-
     /**
-     * Sets the cases value for this KnowledgeSettings.
+     * Sets the value of the cases property.
      * 
-     * @param cases
+     * @param value
+     *     allowed object is
+     *     {@link KnowledgeCaseSettings }
+     *     
      */
-    public void setCases(com.sforce.soap._2006._04.metadata.KnowledgeCaseSettings cases) {
-        this.cases = cases;
+    public void setCases(KnowledgeCaseSettings value) {
+        this.cases = value;
     }
 
-
     /**
-     * Gets the defaultLanguage value for this KnowledgeSettings.
+     * Gets the value of the defaultLanguage property.
      * 
-     * @return defaultLanguage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDefaultLanguage() {
+    public String getDefaultLanguage() {
         return defaultLanguage;
     }
 
-
     /**
-     * Sets the defaultLanguage value for this KnowledgeSettings.
+     * Sets the value of the defaultLanguage property.
      * 
-     * @param defaultLanguage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDefaultLanguage(java.lang.String defaultLanguage) {
-        this.defaultLanguage = defaultLanguage;
+    public void setDefaultLanguage(String value) {
+        this.defaultLanguage = value;
     }
 
-
     /**
-     * Gets the enableCreateEditOnArticlesTab value for this KnowledgeSettings.
+     * Gets the value of the enableCreateEditOnArticlesTab property.
      * 
-     * @return enableCreateEditOnArticlesTab
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableCreateEditOnArticlesTab() {
+    public Boolean isEnableCreateEditOnArticlesTab() {
         return enableCreateEditOnArticlesTab;
     }
 
-
     /**
-     * Sets the enableCreateEditOnArticlesTab value for this KnowledgeSettings.
+     * Sets the value of the enableCreateEditOnArticlesTab property.
      * 
-     * @param enableCreateEditOnArticlesTab
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableCreateEditOnArticlesTab(java.lang.Boolean enableCreateEditOnArticlesTab) {
-        this.enableCreateEditOnArticlesTab = enableCreateEditOnArticlesTab;
+    public void setEnableCreateEditOnArticlesTab(Boolean value) {
+        this.enableCreateEditOnArticlesTab = value;
     }
 
-
     /**
-     * Gets the enableExternalMediaContent value for this KnowledgeSettings.
+     * Gets the value of the enableExternalMediaContent property.
      * 
-     * @return enableExternalMediaContent
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableExternalMediaContent() {
+    public Boolean isEnableExternalMediaContent() {
         return enableExternalMediaContent;
     }
 
-
     /**
-     * Sets the enableExternalMediaContent value for this KnowledgeSettings.
+     * Sets the value of the enableExternalMediaContent property.
      * 
-     * @param enableExternalMediaContent
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableExternalMediaContent(java.lang.Boolean enableExternalMediaContent) {
-        this.enableExternalMediaContent = enableExternalMediaContent;
+    public void setEnableExternalMediaContent(Boolean value) {
+        this.enableExternalMediaContent = value;
     }
 
-
     /**
-     * Gets the enableKnowledge value for this KnowledgeSettings.
+     * Gets the value of the enableKnowledge property.
      * 
-     * @return enableKnowledge
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getEnableKnowledge() {
+    public Boolean isEnableKnowledge() {
         return enableKnowledge;
     }
 
-
     /**
-     * Sets the enableKnowledge value for this KnowledgeSettings.
+     * Sets the value of the enableKnowledge property.
      * 
-     * @param enableKnowledge
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setEnableKnowledge(java.lang.Boolean enableKnowledge) {
-        this.enableKnowledge = enableKnowledge;
+    public void setEnableKnowledge(Boolean value) {
+        this.enableKnowledge = value;
     }
 
-
     /**
-     * Gets the languages value for this KnowledgeSettings.
+     * Gets the value of the languages property.
      * 
-     * @return languages
+     * @return
+     *     possible object is
+     *     {@link KnowledgeLanguageSettings }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.KnowledgeLanguage[] getLanguages() {
+    public KnowledgeLanguageSettings getLanguages() {
         return languages;
     }
 
-
     /**
-     * Sets the languages value for this KnowledgeSettings.
+     * Sets the value of the languages property.
      * 
-     * @param languages
+     * @param value
+     *     allowed object is
+     *     {@link KnowledgeLanguageSettings }
+     *     
      */
-    public void setLanguages(com.sforce.soap._2006._04.metadata.KnowledgeLanguage[] languages) {
-        this.languages = languages;
+    public void setLanguages(KnowledgeLanguageSettings value) {
+        this.languages = value;
     }
 
-
     /**
-     * Gets the showArticleSummariesCustomerPortal value for this KnowledgeSettings.
+     * Gets the value of the showArticleSummariesCustomerPortal property.
      * 
-     * @return showArticleSummariesCustomerPortal
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowArticleSummariesCustomerPortal() {
+    public Boolean isShowArticleSummariesCustomerPortal() {
         return showArticleSummariesCustomerPortal;
     }
 
-
     /**
-     * Sets the showArticleSummariesCustomerPortal value for this KnowledgeSettings.
+     * Sets the value of the showArticleSummariesCustomerPortal property.
      * 
-     * @param showArticleSummariesCustomerPortal
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowArticleSummariesCustomerPortal(java.lang.Boolean showArticleSummariesCustomerPortal) {
-        this.showArticleSummariesCustomerPortal = showArticleSummariesCustomerPortal;
+    public void setShowArticleSummariesCustomerPortal(Boolean value) {
+        this.showArticleSummariesCustomerPortal = value;
     }
 
-
     /**
-     * Gets the showArticleSummariesInternalApp value for this KnowledgeSettings.
+     * Gets the value of the showArticleSummariesInternalApp property.
      * 
-     * @return showArticleSummariesInternalApp
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowArticleSummariesInternalApp() {
+    public Boolean isShowArticleSummariesInternalApp() {
         return showArticleSummariesInternalApp;
     }
 
-
     /**
-     * Sets the showArticleSummariesInternalApp value for this KnowledgeSettings.
+     * Sets the value of the showArticleSummariesInternalApp property.
      * 
-     * @param showArticleSummariesInternalApp
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowArticleSummariesInternalApp(java.lang.Boolean showArticleSummariesInternalApp) {
-        this.showArticleSummariesInternalApp = showArticleSummariesInternalApp;
+    public void setShowArticleSummariesInternalApp(Boolean value) {
+        this.showArticleSummariesInternalApp = value;
     }
 
-
     /**
-     * Gets the showArticleSummariesPartnerPortal value for this KnowledgeSettings.
+     * Gets the value of the showArticleSummariesPartnerPortal property.
      * 
-     * @return showArticleSummariesPartnerPortal
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowArticleSummariesPartnerPortal() {
+    public Boolean isShowArticleSummariesPartnerPortal() {
         return showArticleSummariesPartnerPortal;
     }
 
-
     /**
-     * Sets the showArticleSummariesPartnerPortal value for this KnowledgeSettings.
+     * Sets the value of the showArticleSummariesPartnerPortal property.
      * 
-     * @param showArticleSummariesPartnerPortal
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowArticleSummariesPartnerPortal(java.lang.Boolean showArticleSummariesPartnerPortal) {
-        this.showArticleSummariesPartnerPortal = showArticleSummariesPartnerPortal;
+    public void setShowArticleSummariesPartnerPortal(Boolean value) {
+        this.showArticleSummariesPartnerPortal = value;
     }
 
-
     /**
-     * Gets the showValidationStatusField value for this KnowledgeSettings.
+     * Gets the value of the showValidationStatusField property.
      * 
-     * @return showValidationStatusField
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getShowValidationStatusField() {
+    public Boolean isShowValidationStatusField() {
         return showValidationStatusField;
     }
 
-
     /**
-     * Sets the showValidationStatusField value for this KnowledgeSettings.
+     * Sets the value of the showValidationStatusField property.
      * 
-     * @param showValidationStatusField
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setShowValidationStatusField(java.lang.Boolean showValidationStatusField) {
-        this.showValidationStatusField = showValidationStatusField;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof KnowledgeSettings)) return false;
-        KnowledgeSettings other = (KnowledgeSettings) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.answers==null && other.getAnswers()==null) || 
-             (this.answers!=null &&
-              this.answers.equals(other.getAnswers()))) &&
-            ((this.cases==null && other.getCases()==null) || 
-             (this.cases!=null &&
-              this.cases.equals(other.getCases()))) &&
-            ((this.defaultLanguage==null && other.getDefaultLanguage()==null) || 
-             (this.defaultLanguage!=null &&
-              this.defaultLanguage.equals(other.getDefaultLanguage()))) &&
-            ((this.enableCreateEditOnArticlesTab==null && other.getEnableCreateEditOnArticlesTab()==null) || 
-             (this.enableCreateEditOnArticlesTab!=null &&
-              this.enableCreateEditOnArticlesTab.equals(other.getEnableCreateEditOnArticlesTab()))) &&
-            ((this.enableExternalMediaContent==null && other.getEnableExternalMediaContent()==null) || 
-             (this.enableExternalMediaContent!=null &&
-              this.enableExternalMediaContent.equals(other.getEnableExternalMediaContent()))) &&
-            ((this.enableKnowledge==null && other.getEnableKnowledge()==null) || 
-             (this.enableKnowledge!=null &&
-              this.enableKnowledge.equals(other.getEnableKnowledge()))) &&
-            ((this.languages==null && other.getLanguages()==null) || 
-             (this.languages!=null &&
-              java.util.Arrays.equals(this.languages, other.getLanguages()))) &&
-            ((this.showArticleSummariesCustomerPortal==null && other.getShowArticleSummariesCustomerPortal()==null) || 
-             (this.showArticleSummariesCustomerPortal!=null &&
-              this.showArticleSummariesCustomerPortal.equals(other.getShowArticleSummariesCustomerPortal()))) &&
-            ((this.showArticleSummariesInternalApp==null && other.getShowArticleSummariesInternalApp()==null) || 
-             (this.showArticleSummariesInternalApp!=null &&
-              this.showArticleSummariesInternalApp.equals(other.getShowArticleSummariesInternalApp()))) &&
-            ((this.showArticleSummariesPartnerPortal==null && other.getShowArticleSummariesPartnerPortal()==null) || 
-             (this.showArticleSummariesPartnerPortal!=null &&
-              this.showArticleSummariesPartnerPortal.equals(other.getShowArticleSummariesPartnerPortal()))) &&
-            ((this.showValidationStatusField==null && other.getShowValidationStatusField()==null) || 
-             (this.showValidationStatusField!=null &&
-              this.showValidationStatusField.equals(other.getShowValidationStatusField())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAnswers() != null) {
-            _hashCode += getAnswers().hashCode();
-        }
-        if (getCases() != null) {
-            _hashCode += getCases().hashCode();
-        }
-        if (getDefaultLanguage() != null) {
-            _hashCode += getDefaultLanguage().hashCode();
-        }
-        if (getEnableCreateEditOnArticlesTab() != null) {
-            _hashCode += getEnableCreateEditOnArticlesTab().hashCode();
-        }
-        if (getEnableExternalMediaContent() != null) {
-            _hashCode += getEnableExternalMediaContent().hashCode();
-        }
-        if (getEnableKnowledge() != null) {
-            _hashCode += getEnableKnowledge().hashCode();
-        }
-        if (getLanguages() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLanguages());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLanguages(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getShowArticleSummariesCustomerPortal() != null) {
-            _hashCode += getShowArticleSummariesCustomerPortal().hashCode();
-        }
-        if (getShowArticleSummariesInternalApp() != null) {
-            _hashCode += getShowArticleSummariesInternalApp().hashCode();
-        }
-        if (getShowArticleSummariesPartnerPortal() != null) {
-            _hashCode += getShowArticleSummariesPartnerPortal().hashCode();
-        }
-        if (getShowValidationStatusField() != null) {
-            _hashCode += getShowValidationStatusField().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(KnowledgeSettings.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KnowledgeSettings"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("answers");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "answers"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KnowledgeAnswerSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("cases");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "cases"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KnowledgeCaseSettings"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("defaultLanguage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "defaultLanguage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableCreateEditOnArticlesTab");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableCreateEditOnArticlesTab"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableExternalMediaContent");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableExternalMediaContent"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("enableKnowledge");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "enableKnowledge"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("languages");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "languages"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "KnowledgeLanguage"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "language"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showArticleSummariesCustomerPortal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showArticleSummariesCustomerPortal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showArticleSummariesInternalApp");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showArticleSummariesInternalApp"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showArticleSummariesPartnerPortal");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showArticleSummariesPartnerPortal"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("showValidationStatusField");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "showValidationStatusField"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setShowValidationStatusField(Boolean value) {
+        this.showValidationStatusField = value;
     }
 
 }

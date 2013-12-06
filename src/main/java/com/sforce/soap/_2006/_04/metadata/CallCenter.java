@@ -1,359 +1,239 @@
-/**
- * CallCenter.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
 
 package com.sforce.soap._2006._04.metadata;
 
-public class CallCenter  extends com.sforce.soap._2006._04.metadata.Metadata  implements java.io.Serializable {
-    private java.lang.String adapterUrl;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-    private java.lang.String customSettings;
 
-    private java.lang.String displayName;
+/**
+ * <p>Java class for CallCenter complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CallCenter">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://soap.sforce.com/2006/04/metadata}Metadata">
+ *       &lt;sequence>
+ *         &lt;element name="adapterUrl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="customSettings" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="displayName" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="displayNameLabel" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="internalNameLabel" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="sections" type="{http://soap.sforce.com/2006/04/metadata}CallCenterSection" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="version" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CallCenter", namespace = "http://soap.sforce.com/2006/04/metadata", propOrder = {
+    "adapterUrl",
+    "customSettings",
+    "displayName",
+    "displayNameLabel",
+    "internalNameLabel",
+    "sections",
+    "version"
+})
+public class CallCenter
+    extends Metadata
+{
 
-    private java.lang.String displayNameLabel;
-
-    private java.lang.String internalNameLabel;
-
-    private com.sforce.soap._2006._04.metadata.CallCenterSection[] sections;
-
-    private java.lang.String version;
-
-    public CallCenter() {
-    }
-
-    public CallCenter(
-           java.lang.String fullName,
-           java.lang.String adapterUrl,
-           java.lang.String customSettings,
-           java.lang.String displayName,
-           java.lang.String displayNameLabel,
-           java.lang.String internalNameLabel,
-           com.sforce.soap._2006._04.metadata.CallCenterSection[] sections,
-           java.lang.String version) {
-        super(
-            fullName);
-        this.adapterUrl = adapterUrl;
-        this.customSettings = customSettings;
-        this.displayName = displayName;
-        this.displayNameLabel = displayNameLabel;
-        this.internalNameLabel = internalNameLabel;
-        this.sections = sections;
-        this.version = version;
-    }
-
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String adapterUrl;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String customSettings;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String displayName;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String displayNameLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata", required = true)
+    protected String internalNameLabel;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected List<CallCenterSection> sections;
+    @XmlElement(namespace = "http://soap.sforce.com/2006/04/metadata")
+    protected String version;
 
     /**
-     * Gets the adapterUrl value for this CallCenter.
+     * Gets the value of the adapterUrl property.
      * 
-     * @return adapterUrl
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAdapterUrl() {
+    public String getAdapterUrl() {
         return adapterUrl;
     }
 
-
     /**
-     * Sets the adapterUrl value for this CallCenter.
+     * Sets the value of the adapterUrl property.
      * 
-     * @param adapterUrl
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAdapterUrl(java.lang.String adapterUrl) {
-        this.adapterUrl = adapterUrl;
+    public void setAdapterUrl(String value) {
+        this.adapterUrl = value;
     }
 
-
     /**
-     * Gets the customSettings value for this CallCenter.
+     * Gets the value of the customSettings property.
      * 
-     * @return customSettings
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomSettings() {
+    public String getCustomSettings() {
         return customSettings;
     }
 
-
     /**
-     * Sets the customSettings value for this CallCenter.
+     * Sets the value of the customSettings property.
      * 
-     * @param customSettings
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomSettings(java.lang.String customSettings) {
-        this.customSettings = customSettings;
+    public void setCustomSettings(String value) {
+        this.customSettings = value;
     }
 
-
     /**
-     * Gets the displayName value for this CallCenter.
+     * Gets the value of the displayName property.
      * 
-     * @return displayName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDisplayName() {
+    public String getDisplayName() {
         return displayName;
     }
 
-
     /**
-     * Sets the displayName value for this CallCenter.
+     * Sets the value of the displayName property.
      * 
-     * @param displayName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDisplayName(java.lang.String displayName) {
-        this.displayName = displayName;
+    public void setDisplayName(String value) {
+        this.displayName = value;
     }
 
-
     /**
-     * Gets the displayNameLabel value for this CallCenter.
+     * Gets the value of the displayNameLabel property.
      * 
-     * @return displayNameLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDisplayNameLabel() {
+    public String getDisplayNameLabel() {
         return displayNameLabel;
     }
 
-
     /**
-     * Sets the displayNameLabel value for this CallCenter.
+     * Sets the value of the displayNameLabel property.
      * 
-     * @param displayNameLabel
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDisplayNameLabel(java.lang.String displayNameLabel) {
-        this.displayNameLabel = displayNameLabel;
+    public void setDisplayNameLabel(String value) {
+        this.displayNameLabel = value;
     }
 
-
     /**
-     * Gets the internalNameLabel value for this CallCenter.
+     * Gets the value of the internalNameLabel property.
      * 
-     * @return internalNameLabel
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getInternalNameLabel() {
+    public String getInternalNameLabel() {
         return internalNameLabel;
     }
 
+    /**
+     * Sets the value of the internalNameLabel property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setInternalNameLabel(String value) {
+        this.internalNameLabel = value;
+    }
 
     /**
-     * Sets the internalNameLabel value for this CallCenter.
+     * Gets the value of the sections property.
      * 
-     * @param internalNameLabel
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the sections property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getSections().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CallCenterSection }
+     * 
+     * 
      */
-    public void setInternalNameLabel(java.lang.String internalNameLabel) {
-        this.internalNameLabel = internalNameLabel;
+    public List<CallCenterSection> getSections() {
+        if (sections == null) {
+            sections = new ArrayList<CallCenterSection>();
+        }
+        return this.sections;
     }
-
 
     /**
-     * Gets the sections value for this CallCenter.
+     * Gets the value of the version property.
      * 
-     * @return sections
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.sforce.soap._2006._04.metadata.CallCenterSection[] getSections() {
-        return sections;
-    }
-
-
-    /**
-     * Sets the sections value for this CallCenter.
-     * 
-     * @param sections
-     */
-    public void setSections(com.sforce.soap._2006._04.metadata.CallCenterSection[] sections) {
-        this.sections = sections;
-    }
-
-    public com.sforce.soap._2006._04.metadata.CallCenterSection getSections(int i) {
-        return this.sections[i];
-    }
-
-    public void setSections(int i, com.sforce.soap._2006._04.metadata.CallCenterSection _value) {
-        this.sections[i] = _value;
-    }
-
-
-    /**
-     * Gets the version value for this CallCenter.
-     * 
-     * @return version
-     */
-    public java.lang.String getVersion() {
+    public String getVersion() {
         return version;
     }
 
-
     /**
-     * Sets the version value for this CallCenter.
+     * Sets the value of the version property.
      * 
-     * @param version
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setVersion(java.lang.String version) {
-        this.version = version;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CallCenter)) return false;
-        CallCenter other = (CallCenter) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = super.equals(obj) && 
-            ((this.adapterUrl==null && other.getAdapterUrl()==null) || 
-             (this.adapterUrl!=null &&
-              this.adapterUrl.equals(other.getAdapterUrl()))) &&
-            ((this.customSettings==null && other.getCustomSettings()==null) || 
-             (this.customSettings!=null &&
-              this.customSettings.equals(other.getCustomSettings()))) &&
-            ((this.displayName==null && other.getDisplayName()==null) || 
-             (this.displayName!=null &&
-              this.displayName.equals(other.getDisplayName()))) &&
-            ((this.displayNameLabel==null && other.getDisplayNameLabel()==null) || 
-             (this.displayNameLabel!=null &&
-              this.displayNameLabel.equals(other.getDisplayNameLabel()))) &&
-            ((this.internalNameLabel==null && other.getInternalNameLabel()==null) || 
-             (this.internalNameLabel!=null &&
-              this.internalNameLabel.equals(other.getInternalNameLabel()))) &&
-            ((this.sections==null && other.getSections()==null) || 
-             (this.sections!=null &&
-              java.util.Arrays.equals(this.sections, other.getSections()))) &&
-            ((this.version==null && other.getVersion()==null) || 
-             (this.version!=null &&
-              this.version.equals(other.getVersion())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = super.hashCode();
-        if (getAdapterUrl() != null) {
-            _hashCode += getAdapterUrl().hashCode();
-        }
-        if (getCustomSettings() != null) {
-            _hashCode += getCustomSettings().hashCode();
-        }
-        if (getDisplayName() != null) {
-            _hashCode += getDisplayName().hashCode();
-        }
-        if (getDisplayNameLabel() != null) {
-            _hashCode += getDisplayNameLabel().hashCode();
-        }
-        if (getInternalNameLabel() != null) {
-            _hashCode += getInternalNameLabel().hashCode();
-        }
-        if (getSections() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSections());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSections(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getVersion() != null) {
-            _hashCode += getVersion().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CallCenter.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CallCenter"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("adapterUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "adapterUrl"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customSettings");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "customSettings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("displayName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "displayName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("displayNameLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "displayNameLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("internalNameLabel");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "internalNameLabel"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sections");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "sections"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "CallCenterSection"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("version");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soap.sforce.com/2006/04/metadata", "version"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setVersion(String value) {
+        this.version = value;
     }
 
 }
